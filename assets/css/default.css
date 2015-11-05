@@ -1,0 +1,77 @@
+@import url("reset.css");
+
+/* ------ layout
+-----------------------------------------------*/
+
+html, body {
+margin:0;
+padding:0;
+}
+
+body {
+background:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#333;
+line-height:18px;
+}
+
+
+
+.skills {
+float:left;
+clear:both;
+width:100%;
+}
+
+.skills ul,
+.skills li {
+display:block;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.skills li {
+float:right;
+clear:both;
+padding:0 15px;
+height:35px;
+line-height:35px;
+color:#fff;
+margin-bottom:1px;
+font-size:18px;
+}
+
+.skills .jq {
+background:#79c485;
+}
+
+.skills .css {
+background:#79c485;
+}
+
+.skills .html {
+background:#79c485;
+}
+
+.skills .php {
+background:#79c485
+}
+
+.skills .sql {
+background:#79c485
+}
+
+
+
+#diagram {
+float:right;
+width:600px;
+height:600px;
+}
+
+.get {
+display:none;
+}
+
