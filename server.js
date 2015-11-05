@@ -1,6 +1,7 @@
 ﻿var express = require("express");
 var app = express();
 
+app.use(express.basicAuth('avasis', 'demo'));
 app.use(express.logger());
 app.use(express.static('www'));
 
