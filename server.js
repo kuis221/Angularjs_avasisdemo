@@ -2,7 +2,7 @@
 var app = express();
 
 app.use(express.logger());
-app.use(express.static('public'));
+app.use(express.static('www'));
 
 var port = process.env.PORT || 5000;
 
