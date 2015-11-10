@@ -1,0 +1,7 @@
+.per > div {
+    position: relative !important;
+}
+
+.page-heading h2 {
+    font-weight: 600;
+}

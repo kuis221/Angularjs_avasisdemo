@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html ng-app="avasis" ng-controller="AppCtrl">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demo</title>
+
+    <link href="bower_components/angular/angular-csp.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="content/css/style.css" rel="stylesheet">
+
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/raphael.js" type="text/javascript"></script>
+
+    <link href="bower_components/ng-table/dist/ng-table.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" src="assets/img/profile_small.png"/>
+                            </span>
+                        <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                              </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                             <li><a href="profile.html">Profile</a></li>
+                             <li><a href="contacts.html">Contacts</a></li>
+                             <li><a href="mailbox.html">Mailbox</a></li>
+                             <li class="divider"></li>
+                             <li><a href="login.html">Logout</a></li>
+                         </ul>-->
+                    </div>
+                    <div class="logo-element">
+                        A
+                    </div>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="dashboards"><i class="fa fa-home"></i> <span class="nav-label">Dashboards</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="projects"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Projects</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="action-items"><i class="fa fa-flag"></i> <span class="nav-label">Action Items</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="team-members"><i class="fa fa-users"></i> <span class="nav-label">Team Members</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="communication"><i class="fa fa-comment"></i> <span class="nav-label">Communication</span> </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="schedule"><i class="fa fa-calendar"></i> <span class="nav-label">Schedule</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="financials.main"><i class="fa fa-bar-chart"></i> <span class="nav-label">Financials</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="bids"><i class="fa fa-files-o"></i> <span class="nav-label">Bids</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="procurement"><i class="fa fa-check-square"></i> <span class="nav-label">Procurement</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="photos"><i class="fa fa-picture-o"></i> <span class="nav-label">Photos</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="documents"><i class="fa fa-file-text"></i> <span class="nav-label">Documents</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="drawings"><i class="fa fa-pencil"></i> <span class="nav-label">Drawings</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="reporting"><i class="fa fa-inbox"></i> <span class="nav-label">Reporting</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <ui-view></ui-view>
+</div>
+
+<!-- Mainly scripts -->
+<script src="assets/js/jquery-2.1.1.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Peity -->
+<script src="assets/js/plugins/peity/jquery.peity.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="assets/js/inspinia.js"></script>
+<script src="assets/js/plugins/pace/pace.min.js"></script>
+
+<!-- iCheck -->
+<script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Peity -->
+<script src="assets/js/demo/peity-demo.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green'
+        });
+    });
+</script>
+
+<script src="bower_components/lodash/lodash.min.js"></script>
+<script src="bower_components/angular-loader/angular-loader.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-touch/angular-touch.min.js"></script>
+<script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+
+<script src="content/js/app.js"></script>
+<script src="partials/dashboards/dashboards.js"></script>
+<script src="partials/financials/financials.js"></script>
+<script src="partials/financials/bank-draw/bank-draw.js"></script>
+
+</body>
+
+</html>

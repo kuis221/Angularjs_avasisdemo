@@ -1,36 +1,13 @@
-﻿@font-face {
-    font-family: 'AvenirNextLTPro-MediumCn';
-    src: url('../fonts/AvenirNextLTPro-MediumCn_gdi.eot');
-    src: url('../fonts/AvenirNextLTPro-MediumCn_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNextLTPro-MediumCn_gdi.woff') format('woff'), url('../fonts/AvenirNextLTPro-MediumCn_gdi.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-MediumCn_gdi.svg#AvenirNextLTPro-MediumCn') format('svg');
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'AvenirNextLTPro-Regular';
-    src: url('../fonts/AvenirNextLTPro-Regular_gdi.eot');
-    src: url('../fonts/AvenirNextLTPro-Regular_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNextLTPro-Regular_gdi.woff') format('woff'), url('../fonts/AvenirNextLTPro-Regular_gdi.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Regular_gdi.svg#AvenirNextLTPro-Regular') format('svg');
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: 'AvenirNextLTPro-Bold';
-    src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot');
-    src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot?#iefix') format('embedded-opentype'), 
-	url('../fonts/AvenirNextLTPro-Bold_gdi.woff') format('woff'), 
-	url('../fonts/AvenirNextLTPro-Bold_gdi.ttf') format('truetype'), 
-	url('../fonts/AvenirNextLTPro-Bold_gdi.svg#AvenirNextLTPro-Bold') format('svg');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0-10FFFF;
-}
-
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+/*
+ *
+ *   INSPINIA - Responsive Admin Theme
+ *   version 2.0
+ *
+*/
 h1,
 h2,
+h3,
 h4,
 h5,
 h6 {
@@ -61,36 +38,34 @@ h6 {
     font-size: 10px;
 }
 
-
+h3,
 h4,
 h5 {
     margin-top: 5px;
     font-weight: 600;
 }
 
-a:focus {
-    border: none;
+.mt12 {
+    margin-top: 12px;
 }
-/******* margin top*******/
-.mt15 { margin-top: 15px;}
-.mt12 {margin-top: 12px;}
-.mt25 { margin-top: 25px;}
-.mt35 {margin-top: 35px;}
-/******* Padding top*******/
-.noPdingLeft{padding-left:0px !important}
-.noPdingRight{padding-right:0px !important}
 
-.pb20 {
-    padding-bottom: 20px;
+.mt25 {
+    margin-top: 25px;
 }
+
+.mt35 {
+    margin-top: 35px;
+}
+
 .pt20 {
+    padding-bottom: 20px;
     padding-top: 20px;
 }
-.table > tbody + tbody{border:none;}
-.lightgry{background:#f9f9f9 !important}
 
-/******* left menu*******/
-.posRelative{position:relative}
+.bordermiddle {
+    border-right: 1px solid #cccccc;
+    padding: 25px 0;
+}
 
 .nav > li > a {
     color: #c3c6cd;
@@ -729,17 +704,6 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     padding: 10px 15px 10px 20px;
 }
 
-.per > div {
-    position: absolute;
-    right: 24px;
-    top: -10px;
-}
-
-.bordermiddle {
-    border-right: 1px solid #cccccc;
-    padding: 25px 0;
-}
-
 @media (max-width: 768px) {
     .top-navigation .navbar-header {
         display: block;
@@ -852,7 +816,6 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     font-size: 21px;
 }
 
-/*Top Nav*/
 .navbar-header i.fa-caret-left {
     float: left;
     margin: 21px -18px 0 22px;
@@ -1234,20 +1197,23 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 
 .custom-panel-body {
-    padding: 0 !important;
-    position: relative
+    padding-top: 0 !important;
+    position: relative;
+    top: -3px;
 }
-.custom-panel-body p.hding{font-size:22px}
-.custom-panel-body thead tr {
+
+    .custom-panel-body thead tr {
         background: #fff;
     }
 
     .custom-panel-body tr td, .custom-panel-body tr th {
         padding: 15px !important;
+        border-right: 1px solid #d7d7d7;
     }
 
     .custom-panel-body td span.sky {
         color: #3aabd5;
+        font-weight: 600;
         word-wrap: break-word;
     }
 
@@ -2320,10 +2286,10 @@ table.dataTable thead .sorting:after {
     border-left: 1px solid #dedede;
 }
 
-/*.form-control:focus,
+.form-control:focus,
 .single-line:focus {
     border-color: #1ab394 !important;
-}*/
+}
 
 .has-success .form-control {
     border-color: #1ab394;
@@ -3720,7 +3686,6 @@ a {
         text-decoration: none;
     }
 
-/*Top Nav*/
 .border-bottom {
     border-bottom: 1px solid #e7eaec !important;
 }
@@ -7833,257 +7798,6 @@ body.skin-3 {
     background: transparent;
 }
 
-/**************** Bank_Draw-v2-Finalize@2x *******************/
-    .finalizeBox {
-    border-bottom: 1px solid #ccc;
-    padding: 31px 0;
-    }
-   .finalizeBox span.grey{font-size:18px}
-   .finalizeBox p.black{font-size:24px}
-   .finalizeBox span.reds{font-size:18px; color:#e25c5c}
-   .finalizeBox p.reds{font-size:24px;color:#e25c5c}
-
-   .finalizeGraf{ border-bottom:1px solid #ccc; padding:14px 0 0 0}
-   .finalizeGraf .per #diagram{ position:relative}
-   .finalizeGraf .left1 span.middlebold p{margin:0px;float: right;}
-   .finalizeGraf .left1 p.price{font-size:20px}
-
-   table.finalizeTable p {
-    color: #4a4a4a;
-    font-size: 17px;
-    font-weight: normal;
-}
-   table.finalizeTable p span{color:#808080; font-size:15px}
-   table.finalizeTable p.blk{color:#000}
-
-   table.tableTabs th p{ color:#8b8b8b; font-size:17px; font-weight:normal}
-   table.tableTabs tbody td input.customBtn{ background:#fbfbfb; border:1px solid #d7d7d7; border-radius:5px; padding:12px 20px; font-size:16px}
-
-/**************** Bank_Draw-v2-Finalize@2x End *******************/
-
-.text1 h2 { font-weight: normal; font-family: 'AvenirNextLTPro-Regular'}
-.text1 h4 { font-weight: normal; margin: 10px 0 8px 0; padding: 0px;  font-size: 16px;  font-family: 'AvenirNextLTPro-Regular'; text-transform: uppercase;}
-.text1 h5 {margin: 3px 0; color: #8b8b8b;}
-
-.text1 span { display: block; font-size: 14px;}
-.label.label-info1 {background: #2a2d33; color: #FFF;}
-.prog-inner {background-color: #f9f9f9; padding: 0px 15px;}
-
-.customScroll { overflow-y:scroll; height:670px}
-
-.inner-page-wrapper{ background:#f9f9f9;}
-.inner-page-wrapper .white-bg{ background: #fff none repeat scroll 0 0;box-shadow: 1px 0 4px #d8d8d8;}
-.inner-page-wrapper .prog-inner{ background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px; width: 97.999%;}
-
-.closeBox{ background:#000; width:100%; padding: 109px 0; }
-.closeBox p , .closeBox p a{
-    color: #fff;
-    text-align: center;
-    font-size:15px;
-}
-.closeBox p i{ font-size:15px; margin-left:5px; position:relative; top:1px}
-.lightgry th{color:#808080; font-size:15px}
-
-/* Smart Wizard */
-.bs-wizard {margin-top: 5px;}
-
-/*************************Form Wizard*****************************************/
-.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
-.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
-.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
-
-.greenTxt{color:#79c485; font-size:16px}
-.bigTxt{font-size:18px;}
-.table-custom1 span {font-size: 16px;}
-.bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
-.complete .text-center { color:#e75c5b !important;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
-    background: #f6cece none repeat scroll 0 0;
-    border-radius: 50%;
-    display: block;
-    height: 35px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-    position: absolute;
-    top: 23px;
-    width: 35px;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot::after {
-    background: #e25c5c none repeat scroll 0 0;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    content: " ";
-    height: 20px;
-    left: 7px;
-    position: absolute;
-    top: 8px;
-    width: 20px;
-}
-.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
-.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #f5f5f5;}
-.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
-.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
-.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
-.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
-.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
-.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
-.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
-.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
-.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
-/*************************************** END Form Wizard **************************************/
-
-table.tableTopRight tr td {border: none;padding: 4px 0;}
-.table.daterange tr td b{color:#4a4a4a}
-table.tableTopRight tr td span { font-size: 16px; font-family: 'AvenirNextLTPro-Bold'; text-transform: uppercase; color: #2a2d33; }
-table.tableTopRight tr td span.noBtn {font-size: 14px;background: #44474b; padding: 3px 10px; border-radius: 4px; color: #fff; font-family: 'AvenirNextLTPro-Regular';}
-table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
-.table.tableTopRight tr td p.greenClr {color: #79c485;}
-.prog-inner .progressBar { padding-bottom: 27px; padding: 15px 0; }
-.table.daterange p{color:#4a4a4a; font-size:16px}
-.table.daterange span{color:#3aabd5;font-size:16px}
-.table.daterange tr td{border:none; padding:3px;}
-.table.daterange input {margin-top: 35px;}
-.table.daterange tr{border-bottom:1px solid #dddddd}
-.table.daterange tr td { padding: 13px 8px;}
-.table.daterange .filterDetails {text-align:left; padding-left:10px}
-.table.daterange .filterDetails strong{ color:#3aabd5; font-size:18px; }
-.table.daterange .filterDetails p{color:#4a4a4a; font-size:16px; margin:0;font-family: 'AvenirNextLTPro-Regular'}
-.table.daterange .filterDetails span{color:#545454; font-size:24px;}
-
-.dateRangeBox {
-    background: #fff none repeat scroll 0 0;
-    box-shadow: 2px 1px 7px #d4d4d4;
-    height: 80px;
-    left: 79px;
-    position: absolute;
-    top: 71px;
-    width: 473px;
-    z-index: 999;
-    border:1px solid #efefef;
-    display:none;
-}
-.dateRangeBox::after {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: transparent transparent #efefef transparent;
-    border-image: none;
-    border-style: solid;
-    border-width: 29px 12px 13px 11px;
-    content: "";
-    height: 0;
-    left: 53px;
-    position: absolute;
-    top: -44px;
-    width: 0;
-}
-
-
-.breadcrumb1 { background-color: #ffffff; margin-bottom: 0; padding: 0;}
-.breadcrumb1 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
-.breadcrumb1 > li:last-child{ border-right:none} 
-.breadcrumb1 li a {color: #7f8a90 !important;}
-.TableDetails {  max-width: 100%; min-width: 172px;}
-.TableDetails span{font-size:16px; color:#3aabd5;}
-.TableDetails p {margin: 3px 0;}
-.btn-w-n{min-width:89px; padding:10px 6px}
-.savedraft {position: relative; top: 10px;}
-
-label {display: inline-block; font-weight: 700;  margin-bottom: 5px; max-width: 100%;}
-.icheckbox_square-green { background-position: 0 0;}
-.icheckbox_square-green, .iradio_square-green {  border: medium none; cursor: pointer; display: inline-block; height: 22px; margin: 0;  padding: 0;  vertical-align: middle; width: 22px;}
-.table.daterange label{margin-top:27px;}
-
-
-
-/**************** Bank_Draw-v2-drawdetails@2x *******************/
-
-.drawdetail tr{border:1px solid #e7eaec;}
-.table.table-striped.drawdetail span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.table-striped.drawdetail th{color:#808080; font-size:13px; font-weight:600; padding:14px; }
-.table.table-striped.drawdetail td{padding:10px;  font-family: "AvenirNextLTPro-Regular";}
-.table.table-striped.drawdetail span.sky3{color:#3aabd5; font-weight:600; font-size:13px;}
-
-/****************Bank draw-v2-documents@2x*******************/
-.simpletable tr{border:1px solid #e7eaec;}
-.table.table-striped.simpletable span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.table-striped.simpletable th{color:#808080; font-size:13px; font-weight:600; padding:14px;}
-.table.table-striped.simpletable td{padding:10px;  font-family: "AvenirNextLTPro-Regular";}
-.btn-upload {background-color: #2a2d33;border-color: #2a2d33;color: #ffffff;}
-.btn-w-u {min-width: 89px;}
-.btn.focus, .btn:focus, .btn:hover{color:#FFF}
-
-/****************Bank_Draw-v2-Compliance@2x*******************/
-.Compliance tr{border:1px solid #e7eaec;}
-.table.Compliance span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.Compliance th{color:#808080; font-size:13px; font-weight:600; padding:14px; }
-.table.Compliance td{padding:10px 20px;  font-family: "AvenirNextLTPro-Regular";}
-.table.Compliance span.sky3{color:#3aabd5; font-weight:600; font-size:13px;}
-.breadcrumb2 li a{display: inline-block;}
-.breadcrumb2{background-color: #none; margin-bottom: 0; padding: 0;}
-.breadcrumb2 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
-.breadcrumb2 li a{ color: #7f8a90 !important;}
-.feed-Compliance > .pull-left {margin-right: 5px;}
-.table.Compliance span {font-size: 14px;}
-.table.Compliance p {font-size: 12px;  margin: 0;  padding: 0; white-space: nowrap;}
-.table.Compliance .sky4{color: #79c485; font-size: 13px; font-weight: 600;}
-.table.Compliance .sky5{color: #e25c5c; font-size: 13px; font-weight: 600;}
-.feed-Compliance{padding-bottom:0px}
-.buy1 {float: left;}
-.btn-dangersort {background-color:#transparent;border-color: #79c485; color: #808080; border:1px solid #aaaaaa; padding:7px 10px; white-space:nowrap;}
-.btn1 {border-radius: 40px;}
-.buy1 a.btn1 i{ vertical-align: middle; font-size:19px;}
-.media-Compliance{margin: 3px;}
-.breadcrumb2 > li:last-child{border:none;}
-.media-Compliance strong{color:#3aabd5;}
-.table.Compliance td{vertical-align:middle;}
-.TableDetails{width:205px;}
-.table.Compliance .ibox-tools i{font-size:18px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {  background: #c1e6f1 none repeat scroll 0 0;  border-radius: 50%; display: block;  height: 35px;  left: 50%;   margin-left: -15px; margin-top: -15px;  position: absolute;  top: 23px;width: 35px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {background: #19aad2 none repeat scroll 0 0;border: 3px solid #fff; border-radius: 50px; content: " ";  height: 20px;  left: 7px; position: absolute; top: 8px; width: 20px;}
-.bs-wizard-info.text-blue{text-align:center; color:#19aad2 !important;}
-
-
-/****************Payment-Details@2x*******************/
-Payment tr{border:1px solid #e7eaec;}
-.table.Payment span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.Payment th{color:#808080; font-size:13px; font-weight:600; padding:14px; }
-.table.Payment td{padding:10px 20px;  font-family: "AvenirNextLTPro-Regular";}
-.table.Payment span.sky3{color:#3aabd5; font-weight:600; font-size:13px;}
-.breadcrumb2 li a{display: inline-block;}
-.breadcrumb2{background-color: #none; margin-bottom: 0; padding: 0;}
-.breadcrumb2 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
-.breadcrumb2 li a{ color: #7f8a90 !important;}
-.feed-Payment > .pull-left {margin-right: 5px;}
-.table.Payment span {font-size: 14px;}
-.table.Payment p {font-size: 12px;  margin: 0;  padding: 0; white-space: nowrap;}
-.table.Payment .sky4{color: #79c485; font-size: 13px; font-weight: 600;}
-.table.Payment .sky5{color: #e25c5c; font-size: 13px; font-weight: 600;}
-.feed-Payment{padding-bottom:0px}
-.buy1 {float: left;}
-.btn-dangersort {background-color:#transparent;border-color: #79c485; color: #808080; border:1px solid #aaaaaa; padding:7px 10px; white-space:nowrap;}
-.btn1 {border-radius: 40px;}
-.buy1 a.btn1 i{ vertical-align: middle; font-size:19px;}
-.media-Payment{margin: 3px;}
-.breadcrumb2 > li:last-child{border:none;}
-.media-Payment strong{color:#3aabd5;}
-.table.Payment td{vertical-align:middle;}
-.TableDetails{width:205px;}
-.table.Payment .ibox-tools i{font-size:18px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {  background: #c1e6f1 none repeat scroll 0 0;  border-radius: 50%; display: block;  height: 35px;  left: 50%;   margin-left: -15px; margin-top: -15px;  position: absolute;  top: 23px;width: 35px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {background: #19aad2 none repeat scroll 0 0;border: 3px solid #fff; border-radius: 50px; content: " ";  height: 20px;  left: 7px; position: absolute; top: 8px; width: 20px;}
-.bs-wizard-info.text-blue{text-align:center; color:#19aad2 !important;}
-strong.red{color:#e75c5b !important}
-strong.blue{color:#42b6d8 !important}
-.media-Payment .fa-angle-down{color:#e75c5b !important; font-size:18px;}
-
-
-
-
-
-/* RESPONSIVE STYLE START HERE */
 @media (min-width: 768px) {
     #page-wrapper {
         position: inherit;
@@ -8103,9 +7817,6 @@ strong.blue{color:#42b6d8 !important}
         margin-left: auto;
     }
 }
-
-
-
 
 @media (max-width: 768px) {
     #page-wrapper {
@@ -8214,48 +7925,22 @@ strong.blue{color:#42b6d8 !important}
 
 
 @media screen and (min-device-width: 320px) and (max-device-width: 640px) {
-    .per > div {
-        position: relative !important;
-        top: -17px !important;
-    }
-
-    .bordermiddle {
-        border-right: none !important;
-    }
-
-    .bordermiddle {
-        border-right: none !important;
-    }
+    .per > div { position: relative !important; top: -17px !important; }
+    .bordermiddle { border-right: none !important; }
+    .bordermiddle { border-right: none !important;}
 }
-
-
-@media (max-width: 1199px) {
-    .savedraft {
-    top: 0px;
-}
-}
-
-
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .per > div {
-        position: relative !important;
-        top: 0px !important;
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .per > div {position: relative !important;  top: 0px !important; }
+        .bordermiddle { border-right: none !important; }
     }
 
-    .bordermiddle {
-        border-right: none !important;
-        padding-top: 0px;
-    }
-}
-
-@media screen and (min-device-width: 2700px) and (max-device-width: 2900px) {
-    .per {
-        text-align: center;
+    @media screen and (min-device-width: 2700px) and (max-device-width: 2900px) {
+        .per { text-align: center;}
+        .per > div { position: absolute; right: 59px !important; top: -41px;}
     }
 
-        .per > div {
-            position: absolute;
-            right: 59px !important;
-            top: -41px;
-        }
-}
+ .per > div {
+        position: absolute;
+        right: 24px;
+        top: -10px;
+    }
