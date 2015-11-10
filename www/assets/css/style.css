@@ -7936,11 +7936,13 @@ body.skin-3 {
 
     @media screen and (min-device-width: 2700px) and (max-device-width: 2900px) {
         .per { text-align: center;}
-        .per > div { position: absolute; right: 59px !important; top: -41px;}
+        /*.per > div { position: absolute; right: 59px !important; top: -41px;}*/
     }
 
+/*
  .per > div {
         position: absolute;
         right: 24px;
         top: -10px;
     }
+*/
