@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!------meta tag------>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank_Draw-v2-Compliance@2x</title>
+
+    <!------css------>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!------schedule round js------>
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/raphael.js" type="text/javascript"></script>
+    <script src="assets/js/init.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!------Left Side Menu Panel------>
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <a href=""><img alt="image" src="assets/img/profile_small.png" /></a>
+                            </span>
+                            <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                                  </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                 <li><a href="profile.html">Profile</a></li>
+                                 <li><a href="contacts.html">Contacts</a></li>
+                                 <li><a href="mailbox.html">Mailbox</a></li>
+                                 <li class="divider"></li>
+                                 <li><a href="login.html">Logout</a></li>
+                             </ul>-->
+                        </div>
+                        <div class="logo-element">
+                            A
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> <span class="nav-label">Dashboards</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Projects</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flag"></i> <span class="nav-label">Action items</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Team Members</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-comment"></i> <span class="nav-label">Communication</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Schedule</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label">Financials</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Bids</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-check-square"></i> <span class="nav-label">Procurement</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Photos</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#l"><i class="fa fa-file-text"></i> <span class="nav-label">Documents</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil"></i> <span class="nav-label">Drawings</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-inbox"></i> <span class="nav-label">Reporting</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!------Left Side End------>
+        <!------Right Side Panel------>
+        <div id="page-wrapper" class="inner-page-wrapper">
+            <!------Top Nav Bar------>
+
+               <!------Top Nav Bar------>
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <i class="fa fa-caret-left"></i>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                                <input type="text" placeholder="Search your projects " class="form-control search" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="light-blue open">
+                            <a href="">
+                                <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo">
+                                <span class="user-info">
+                                    Eric Hoffman
+                                </span>
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+                        </li>
+
+                        <li class="orange">
+                            <a href="#">
+                                <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                                <span class="badge badge-important">8</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!------Top Nav Bar End------>
+            </div>
+
+			  <div class="row wrapper border-bottom white-bg page-heading overview">
+                <div class="col-sm-6 col-lg-3">
+                    <h2 class="hding">Project Overview</h2>
+                    <ul class="topSubtitle">
+                        <li>
+                            <a href="#">Anderson Perkins LTD Shipping Center <i class="ace-icon fa fa-angle-down"></i></a>
+                        </li>
+                        <li><span>1796 Prospector AvenuePark City, Utah 84605</span></li>
+                    </ul>
+                </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="assets/img/overview.png" alt="image">
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="left1">
+                            <h3 class="label label-primary">5</h3>
+                            <span class="middlebold">Schedule</span>
+                            <p>Estimated Completion   <b>Apr 20, 2016</b></p>
+                            <p>Original Completion Date   <b>Nov 12, 2014</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-6 col-lg-3">
+                   <div class="left1">
+                       <h3 class="label progress-bar-success">5</h3>
+                            <span class="middlebold">Finance</span>
+                            <p>Funds Disbursed to Date <b>$325,000</b></p>
+                            <p>Estimated Cost at Completion  <b>$1,000,000</b></p> 
+                   </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="addNew">
+                        <a href="/theme/lander-v2-webapp-dashboard-B5FC6F4" class="btn btn-danger btn-sm">
+                            <i class="fa fa-plus"></i> Add New
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!------Middle Content------>
+            <div class="row prog-inner mt35">
+                    <div class="row progressBar">
+                            <!-- START DEFAULT WIZARD -->
+                            <div class="col-lg-6">
+                            <div class="ibox">
+                                <div class="Schedules">
+                                    <p><i class="fa fa-calendar"></i>Jun 23 2015, Today’s Schedules<a href="#">View All</a></p>
+                                </div>
+                                <div class="project">
+							        <div class="feed-element">
+                                                    <a class="pull-left" href="#">
+                                                        <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                                    </a>
+                                                    <div class="media-body">                                               
+                                                        <strong>Zoning permit for South Entrance</strong><br>
+                                                        <div class="clearfix mt10"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-3"><p class="progrsTxt"><span><img src="assets/img/red-flag-simple.png" class="img-circle" alt="image">Suspended</span></p></div>
+                                                            <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
+                                                            <div class="col-md-4">
+                                                                <div class="progress progress-small">
+                                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>  
+                                                        <p><span>assigned to:</span>    Eric Hoffman, Joe Sloan, Clark Anderson, Michael Kovac</p>                            
+                                                    </div>
+                                        </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="feed-element">
+                                        <a class="pull-left" href="#">
+                                            <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                        </a>
+                                        <div class="media-body">
+                                            <strong>Zoning permit for South Entrance</strong><br>
+                                            <div class="clearfix mt10"></div>
+                                            <div class="row">
+                                                <div class="col-md-3"><p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
+                                                <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
+                                                <div class="col-md-4">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p><span>assigned to:</span>    Eric Hoffman, Joe Sloan, Clark Anderson, Michael Kovac</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="feed-element">
+                                        <a class="pull-left" href="#">
+                                            <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                        </a>
+                                        <div class="media-body">
+                                            <strong>Zoning permit for South Entrance</strong><br>
+                                            <div class="clearfix mt10"></div>
+                                            <div class="row">
+                                                <div class="col-md-3"><p class="progrsTxt"><span><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
+                                                <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
+                                                <div class="col-md-4">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p><span>assigned to:</span>    Eric Hoffman, Joe Sloan, Clark Anderson, Michael Kovac</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="feed-element">
+                                        <a class="pull-left" href="#">
+                                            <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                        </a>
+                                        <div class="media-body">
+                                            <strong>Zoning permit for South Entrance</strong><br>
+                                            <div class="clearfix mt10"></div>
+                                            <div class="row">
+                                                <div class="col-md-3"><p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
+                                                <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
+                                                <div class="col-md-4">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p><span>assigned to:</span>    Eric Hoffman, Joe Sloan, Clark Anderson, Michael Kovac</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="feed-element">
+                                        <a class="pull-left" href="#">
+                                            <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                        </a>
+                                        <div class="media-body">
+                                            <strong>Zoning permit for South Entrance</strong><br>
+                                            <div class="clearfix mt10"></div>
+                                            <div class="row">
+                                                <div class="col-md-3"><p class="progrsTxt"><span><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
+                                                <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
+                                                <div class="col-md-4">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p><span>assigned to:</span>    Eric Hoffman, Joe Sloan, Clark Anderson, Michael Kovac</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> 
+                        </div>
+				      <div class="col-lg-6">
+                       <h3 class="proStatus"><i class="fa fa-info-circle"></i>  Project Status </h3>
+                          <div class="itmDueToday">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th colspan="2">Items Due Today</th>
+                                              <th>
+                                                  19 of 25 completed
+                                                  <div class="progress progress-small">
+                                                      <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                  </div>
+                                              </th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td><a href="#">RFI #145</a></td>
+                                              <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span>Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a href="#">RFI #145</a></td>
+                                              <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span>Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a href="#">RFI #145</a></td>
+                                              <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span>Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a href="#">RFI #145</a></td>
+                                              <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span>Eric Hoffman</span></td>
+                                          </tr> 
+                                          <tr>
+                                              <td><a href="#">RFI #145</a></td>
+                                              <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span>Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a class="strock" href="#">RFI #145</a></td>
+                                              <td><p class="strock">Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span class="strock">Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a class="strock" href="#">RFI #145</a></td>
+                                              <td><p class="strock">Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span class="strock">Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a class="strock" href="#">RFI #145</a></td>
+                                              <td><p class="strock">Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span class="strock">Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a class="strock" href="#">RFI #145</a></td>
+                                              <td><p class="strock">Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span class="strock">Eric Hoffman</span></td>
+                                          </tr>
+                                          <tr>
+                                              <td><a class="strock" href="#">RFI #145</a></td>
+                                              <td><p class="strock">Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                              <td><span class="strock">Eric Hoffman</span></td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              </div> 
+                        </div>
+                        </div>
+                    </div>
+                
+            <div class="row pb35">
+                <div class="col-xs-12 col-lg-4">
+                    <div class="whiteBox">
+                        <div class="hdingTopBox">
+                            <p><img alt="image" src="assets/img/alert-flag.png">Jun 23 2015, Today’s Schedules<a href="#">View All</a></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-xs-3 col-md-3">
+                                <img class="cus-circle" alt="image" src="assets/img/mine-circle.png">
+                            </div>
+                            <div class="col-xs-3 col-md-3 space">
+                                <span class="smlhding">314 Alerts</span>
+                                <div class="left1">
+                                    <h3 class="label progress-bar-danger">5</h3>
+                                    <span class="middlebold">78</span>
+                                    <p class="price">25%</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 space">
+                                <div class="left1">
+                                    <span>&nbsp;</span>
+                                    <h3 class="label progress-bar-warning">5</h3>
+                                    <span class="middlebold">78</span>
+                                    <p class="price">25%</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 space">
+                                <div class="left1">
+                                    <span>&nbsp;</span>
+                                    <h3 class="label progress-bar-success">5</h3>
+                                    <span class="middlebold">78</span>
+                                    <p class="price">25%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="col-lg-12">
+                            <div class="col-xs-3 col-md-3">
+                                <img src="assets/img/team-circle.png" alt="image" class="cus-circle">
+                            </div>
+                            <div class="col-xs-3 col-md-3 space">
+                                <span class="smlhding">519 Alerts</span>
+                                <div class="left1">
+                                    <h3 class="label progress-bar-danger">5</h3>
+                                    <span class="middlebold">176</span>
+                                    <p class="price">34%</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 space">
+                                <div class="left1">
+                                    <span>&nbsp;</span>
+                                    <h3 class="label progress-bar-warning">5</h3>
+                                    <span class="middlebold">161</span>
+                                    <p class="price">30%</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-md-3 space">
+                                <div class="left1">
+                                    <span>&nbsp;</span>
+                                    <h3 class="label progress-bar-success">5</h3>
+                                    <span class="middlebold">182</span>
+                                    <p class="price">36%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div> <!-- Flag Aleart End-->
+
+                    <div class="whiteBox mt30">
+                        <div class="hdingTopBox">
+                            <p><img alt="image" src="assets/img/talkiii.png">Communication</p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table community">
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-flag-o"></i></td>
+                                        <td><p>Items Requiring Approval</p></td>
+                                        <td><button class="btn btn-w-m btn-pink pull-right" type="button">11 Iteams</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-envelope-o"></i></td>
+                                        <td><p>Unread Messages</p></td>
+                                        <td><button class="btn btn-w-m btn-warning pull-right" type="button">7 Iteams</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-file-o"></i></td>
+                                        <td><p>Recently Updated Documents</p></td>
+                                        <td><button class="btn btn-w-m btn-danger pull-right" type="button">1 Iteams</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- Communication Box End -->
+
+                </div>
+
+                <div class="col-xs-12 col-lg-4">
+                    <div class="whiteBox">
+                        <div class="hdingTopBox">
+                            <p><img src="assets/img/team-member.png" alt="image">Team Members<a href="#">View All</a></p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-xs-4 col-md-3 space2">
+                                <img alt="image" src="assets/img/overview.png">
+                            </div>
+                            <div class="col-xs-8 col-md-9 space2">
+                                <div class="left1">
+                                    <h3 class="label progress-bar-success">5</h3>
+                                    <span class="middlebold">Total Project Team Members</span>
+                                    <p class="price">78 Members</p>
+                                    <h3 class="label progress-bar-primary">5</h3>
+                                    <span class="middlebold">Members Sched. On Site today</span>
+                                    <p class="price">46 Members</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="table-responsive">
+                            <table class="table mt20 team">
+                                <tbody>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="image" class="img-circle" src="assets/img/user1.png"></td>
+                                        <td>
+                                            <span class="sky">Jim Stevens</span>
+                                            <p>Sub-Contractor</p>
+                                        </td>
+                                        <td>
+                                            <ul class="breadcrumb2">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-lg-4">
+                    <div class="whiteBox">
+                        <div class="hdingTopBox">
+                            <p><img alt="image" src="assets/img/latest-photo.png">Latest Photos<a href="#">View All</a></p>
+                        </div>
+
+                        <div class="row gallery mt10">
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic1.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic2.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic3.jpg"> </div>
+                        </div>
+                        <div class="row gallery">
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic4.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic2.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic1.jpg"> </div>
+                        </div>
+                        <div class="row gallery">
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic4.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic2.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic1.jpg"> </div>
+                        </div>
+                        <div class="row gallery">
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic2.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic4.jpg"> </div>
+                            <div class="col-xs-4 col-md-4 col-lg-4"><img class="img-responsive" alt="image" src="assets/img/latest-pic3.jpg"> </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+                <!-- END DEFAULT WIZARD -->
+             
+
+
+			<div>
+			     </div>
+ 
+        
+        </div><!----Wrapper End----->
+        <!-- Mainly scripts -->
+    <script src="assets/js/jquery-2.1.1.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- Peity -->
+    <script src="assets/js/plugins/peity/jquery.peity.min.js"></script>
+
+        <!-- Custom and plugin javascript -->
+    <script src="assets/js/inspinia.js"></script>
+    <script src="assets/js/plugins/pace/pace.min.js"></script>
+        <!-- iCheck -->
+    <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="assets/js/inspinia.js"></script>
+    <script src="assets/js/plugins/pace/pace.min.js"></script>
+
+    <!-- blueimp gallery -->
+    <script src="assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+    <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+</body>
+</html>

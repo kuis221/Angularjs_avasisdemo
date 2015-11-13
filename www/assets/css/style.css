@@ -71,10 +71,16 @@ h5 {
 a:focus {
     border: none;
 }
+.mb25 { margin-bottom: 25px;}
+.mb30 { margin-bottom: 30px;}
+.mb35 {margin-bottom: 35px;}
 /******* margin top*******/
+.mt10 { margin-top: 10px;}
 .mt15 { margin-top: 15px;}
 .mt12 {margin-top: 12px;}
+.mt20 {margin-top: 20px;}
 .mt25 { margin-top: 25px;}
+.mt30 { margin-top: 30px;}
 .mt35 {margin-top: 35px;}
 /******* Padding top*******/
 .noPdingLeft{padding-left:0px !important}
@@ -83,8 +89,14 @@ a:focus {
 .pb20 {
     padding-bottom: 20px;
 }
+.pb30 { padding-bottom: 30px;}
+.pb35 {padding-bottom: 35px;}
+
 .pt20 {
     padding-top: 20px;
+}
+.pt10{
+    padding-top: 10px;
 }
 .table > tbody + tbody{border:none;}
 .lightgry{background:#f9f9f9 !important}
@@ -5417,12 +5429,6 @@ a.compose-mail {
         margin-right: 10px;
     }
 
-    .feed-element img.img-circle,
-    .dropdown-messages-box img.img-circle {
-        width: 38px;
-        height: 38px;
-    }
-
     .feed-element .well {
         border: 1px solid #e7eaec;
         box-shadow: none;
@@ -7873,7 +7879,7 @@ body.skin-3 {
 
 .inner-page-wrapper{ background:#f9f9f9;}
 .inner-page-wrapper .white-bg{ background: #fff none repeat scroll 0 0;box-shadow: 1px 0 4px #d8d8d8;}
-.inner-page-wrapper .prog-inner{ background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px; width: 97.999%;}
+.inner-page-wrapper .prog-inner{ background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px;}
 
 .closeBox{ background:#000; width:100%; padding: 109px 0; }
 .closeBox p , .closeBox p a{
@@ -7939,7 +7945,7 @@ table.tableTopRight tr td span { font-size: 16px; font-family: 'AvenirNextLTPro-
 table.tableTopRight tr td span.noBtn {font-size: 14px;background: #44474b; padding: 3px 10px; border-radius: 4px; color: #fff; font-family: 'AvenirNextLTPro-Regular';}
 table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
 .table.tableTopRight tr td p.greenClr {color: #79c485;}
-.prog-inner .progressBar { padding-bottom: 27px; padding: 15px 0; }
+.prog-inner .progressBar { padding-bottom: 27px; padding: 0 15px }
 .table.daterange p{color:#4a4a4a; font-size:16px}
 .table.daterange span{color:#3aabd5;font-size:16px}
 .table.daterange tr td{border:none; padding:3px;}
@@ -7980,6 +7986,115 @@ table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
     width: 0;
 }
 
+/*---Avasis-projectDetails-v12@2x---*/
+.overview{padding:20px 0}
+.overview h2.hding{ font-size:28px; margin:0 0 10px 0; color:#4a4a4a}
+.overview ul.topSubtitle{ list-style:none; margin:0; padding:0}
+.overview ul.topSubtitle li a{ font-size:16px; }
+.overview ul.topSubtitle li span{color:#8b8b8b}
+.overview .addNew a{ font-size: 17px;
+    margin: 0;
+    padding: 10px;}
+.progressBar .ibox {
+    border-right: 1px solid #ccc;
+    padding: 0 14px 0 0;
+}
+
+.ibox-title {-moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;
+    background-color: #ffffff; border-color: #e7eaec; border-image: none; border-style: solid solid none; border-width: 4px 0 0;
+    color: inherit; margin-bottom: 0; min-height: 48px; padding: 14px 15px 7px;}
+span.project{background:#2a2d33; padding:4px 7px; border-radius:3px; color:#FFF}
+
+.ibox .Schedules{ border-bottom:1px solid #eeeeee; padding:23px 0 15px}
+.ibox .Schedules p i{color:#ccc; font-size:20px; color:#555555;margin-right: 12px;}
+.ibox .Schedules p{ font-size:18px;}
+.ibox .Schedules p a{float:right}
+
+.ibox .project{ border-bottom:1px solid #eeeeee; padding:20px 0}
+.ibox .project .feed-element{padding:0;}
+
+.ibox .project .media-body strong {
+    color: #3aabd5;
+    float: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 6px;
+    width: 100%;
+
+}
+.ibox .project .media-body p.progrsTxt{ color:#4a4a4a; font-size:14px; margin:0}
+.ibox .project .media-body p.progrsTxt span{color:#e25c5c; margin-right:8px}
+.ibox .project .media-body p.progrsTxt span.green{color:#79c485}
+
+.ibox .project .media-body .progress-small{margin:0}
+.ibox .project .media-body p{ font-size:14px}
+.ibox .project .media-body p span{color:#8b8b8b}
+
+h3.proStatus{ font-size:22px; color:#4a4a4a; font-weight:normal}
+h3.proStatus i {
+   font-size:18px;
+}
+
+.itmDueToday {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    height: 628px;
+    margin-top: 26px;
+    overflow-y: scroll;
+}
+.itmDueToday td a{color:#fff; background:#2a2d33; border-radius:5px; font-weight:normal;padding: 5px 8px; }
+.itmDueToday .table td {
+    padding: 23px 10px 15px;
+}
+.itmDueToday .table td span{color:#3aabd5}
+.itmDueToday .table td .strock{ text-decoration: line-through; position:relative; opacity:0.4}
+
+
+.whiteBox{border:1px solid #ececec; border-radius:5px; background:#fff; padding:0 0 15px 0}
+.whiteBox .hdingTopBox{ border-bottom:1px solid #eeeeee; padding:23px 0 5px}
+.hdingTopBox p {
+    font-size: 16px;
+    padding: 0 10px;
+}
+.hdingTopBox a{ float:right}
+.hdingTopBox > p i {
+    margin-right: 10px;
+}
+
+.whiteBox .space{padding:30px 0 5px 31px; position:relative}
+.whiteBox .space2{padding:30px 0 5px 5px; position:relative}
+.whiteBox .space span.smlhding {
+    font-size: 14px;
+    position: absolute;
+    top: 13px;
+    width:100%; 
+}
+.whiteBox .space .left1{padding:10px 0}
+.whiteBox p.price{margin:0px}
+.whiteBox img.cus-circle{margin:12px 0 0 -8px}
+.whiteBox hr {
+    float: left;
+    width: 100%;
+    margin: 15px 0 4px;
+}
+.btn-pink {background-color: #ed5565; color:#fff}
+.whiteBox table.community{margin-bottom:0px !important}
+.whiteBox table.community td{vertical-align:middle; padding: 12px;}
+.whiteBox table.community td i{font-size:18px}
+.whiteBox table.community td p{font-size:16px}
+.whiteBox .progress-bar-primary{background:#3aabd5; color:#3aabd5}
+.whiteBox span.sky{ color:#3aabd5}
+
+.whiteBox table.team{margin-bottom:0px !important}
+.whiteBox table.team td{vertical-align:middle; padding: 9px 5px}
+.whiteBox table.team td ul.breadcrumb2{float:right}
+
+.whiteBox .gallery{ padding:0 13px}
+.gallery img {
+    margin: 10px 0;
+}
+
+/*---Avasis-projectDetails-v12@2x ---*/
 
 .breadcrumb1 { background-color: #ffffff; margin-bottom: 0; padding: 0;}
 .breadcrumb1 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
@@ -8234,14 +8349,19 @@ strong.blue{color:#42b6d8 !important}
     top: 0px;
 }
 }
-
-
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)  {
+    .navbar-static-side {
+        float: left;
+        position: relative;
+        width: 100%;
+        z-index: 2001;
+    }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px)  {
     .per > div {
         position: relative !important;
         top: 0px !important;
     }
-
     .bordermiddle {
         border-right: none !important;
         padding-top: 0px;
