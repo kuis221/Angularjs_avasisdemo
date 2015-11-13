@@ -7849,7 +7849,7 @@ body.skin-3 {
    .finalizeBox span.reds{font-size:18px; color:#e25c5c}
    .finalizeBox p.reds{font-size:24px;color:#e25c5c}
 
-   .finalizeGraf{ border-bottom:1px solid #ccc; padding:14px 0 0 0}
+   .finalizeGraf{ border-bottom:1px solid #ccc; padding:23px 0 17px;}
    .finalizeGraf .per #diagram{ position:relative}
    .finalizeGraf .left1 span.middlebold p{margin:0px;float: right;}
    .finalizeGraf .left1 p.price{font-size:20px}
@@ -7956,19 +7956,7 @@ table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
 .table.daterange .filterDetails strong{ color:#3aabd5; font-size:18px; }
 .table.daterange .filterDetails p{color:#4a4a4a; font-size:16px; margin:0;font-family: 'AvenirNextLTPro-Regular'}
 .table.daterange .filterDetails span{color:#545454; font-size:24px;}
-
-.dateRangeBox {
-    background: #fff none repeat scroll 0 0;
-    box-shadow: 2px 1px 7px #d4d4d4;
-    height: 80px;
-    left: 79px;
-    position: absolute;
-    top: 71px;
-    width: 473px;
-    z-index: 999;
-    border:1px solid #efefef;
-    display:none;
-}
+.dateRangeBox { background: #fff none repeat scroll 0 0;  box-shadow: 2px 1px 7px #d4d4d4; height: 80px; left: 79px; position: absolute;  top: 71px;  width: 473px;  z-index: 999;  border:1px solid #efefef; display:none;}
 .dateRangeBox::after {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -7992,91 +7980,44 @@ table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
 .overview ul.topSubtitle{ list-style:none; margin:0; padding:0}
 .overview ul.topSubtitle li a{ font-size:16px; }
 .overview ul.topSubtitle li span{color:#8b8b8b}
-.overview .addNew a{ font-size: 17px;
-    margin: 0;
-    padding: 10px;}
-.progressBar .ibox {
-    border-right: 1px solid #ccc;
-    padding: 0 14px 0 0;
-}
-
+.overview .addNew a{ font-size: 17px; margin: 0; padding: 10px;}
+.progressBar .ibox {border-right: 1px solid #ccc; padding: 0 14px 0 0;}
 .ibox-title {-moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;
-    background-color: #ffffff; border-color: #e7eaec; border-image: none; border-style: solid solid none; border-width: 4px 0 0;
-    color: inherit; margin-bottom: 0; min-height: 48px; padding: 14px 15px 7px;}
+ background-color: #ffffff; border-color: #e7eaec; border-image: none; border-style: solid solid none; border-width: 4px 0 0;
+ color: inherit; margin-bottom: 0; min-height: 48px; padding: 14px 15px 7px;}
 span.project{background:#2a2d33; padding:4px 7px; border-radius:3px; color:#FFF}
-
 .ibox .Schedules{ border-bottom:1px solid #eeeeee; padding:23px 0 15px}
 .ibox .Schedules p i{color:#ccc; font-size:20px; color:#555555;margin-right: 12px;}
 .ibox .Schedules p{ font-size:18px;}
 .ibox .Schedules p a{float:right}
-
 .ibox .project{ border-bottom:1px solid #eeeeee; padding:20px 0}
 .ibox .project .feed-element{padding:0;}
-
-.ibox .project .media-body strong {
-    color: #3aabd5;
-    float: left;
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 6px;
-    width: 100%;
-
-}
+.ibox .project .media-body strong {  color: #3aabd5; float: left; font-size: 18px;  font-weight: normal;  margin-bottom: 6px; width: 100%;}
 .ibox .project .media-body p.progrsTxt{ color:#4a4a4a; font-size:14px; margin:0}
 .ibox .project .media-body p.progrsTxt span{color:#e25c5c; margin-right:8px}
 .ibox .project .media-body p.progrsTxt span.green{color:#79c485}
-
 .ibox .project .media-body .progress-small{margin:0}
 .ibox .project .media-body p{ font-size:14px}
 .ibox .project .media-body p span{color:#8b8b8b}
-
 h3.proStatus{ font-size:22px; color:#4a4a4a; font-weight:normal}
-h3.proStatus i {
-   font-size:18px;
-}
-
-.itmDueToday {
-    border: 1px solid #ececec;
-    border-radius: 5px;
-    height: 628px;
-    margin-top: 26px;
-    overflow-y: scroll;
-}
+h3.proStatus i { font-size:18px;}
+.itmDueToday { border: 1px solid #ececec;  border-radius: 5px; height: 628px;  margin-top: 26px;  overflow-y: scroll;}
 .itmDueToday td a{color:#fff; background:#2a2d33; border-radius:5px; font-weight:normal;padding: 5px 8px; }
-.itmDueToday .table td {
-    padding: 23px 10px 15px;
-}
+.itmDueToday .table td { padding: 23px 10px 15px;}
 .itmDueToday .table td span{color:#3aabd5}
 .itmDueToday .table td .strock{ text-decoration: line-through; position:relative; opacity:0.4}
-
-
 .whiteBox{border:1px solid #ececec; border-radius:5px; background:#fff; padding:0 0 15px 0}
 .whiteBox .hdingTopBox{ border-bottom:1px solid #eeeeee; padding:23px 0 5px}
-.hdingTopBox p {
-    font-size: 16px;
-    padding: 0 10px;
-}
+.hdingTopBox p { font-size: 16px; padding: 0 10px;}
 .hdingTopBox a{ float:right}
-.hdingTopBox > p i {
-    margin-right: 10px;
-}
-
+.hdingTopBox > p i { margin-right: 10px;}
 .whiteBox .space{padding:30px 0 5px 31px; position:relative}
 .whiteBox .space2{padding:30px 0 5px 5px; position:relative}
-.whiteBox .space span.smlhding {
-    font-size: 14px;
-    position: absolute;
-    top: 13px;
-    width:100%; 
-}
+.whiteBox .space span.smlhding { font-size: 14px; position: absolute; top: 13px; width:100%; }
 .whiteBox .space .left1{padding:10px 0}
 .whiteBox p.price{margin:0px}
 .whiteBox img.cus-circle{margin:12px 0 0 -8px}
-.whiteBox hr {
-    float: left;
-    width: 100%;
-    margin: 15px 0 4px;
-}
+.whiteBox hr {  float: left; width: 100%; margin: 15px 0 4px;}
 .btn-pink {background-color: #ed5565; color:#fff}
 .whiteBox table.community{margin-bottom:0px !important}
 .whiteBox table.community td{vertical-align:middle; padding: 12px;}
@@ -8084,15 +8025,11 @@ h3.proStatus i {
 .whiteBox table.community td p{font-size:16px}
 .whiteBox .progress-bar-primary{background:#3aabd5; color:#3aabd5}
 .whiteBox span.sky{ color:#3aabd5}
-
 .whiteBox table.team{margin-bottom:0px !important}
 .whiteBox table.team td{vertical-align:middle; padding: 9px 5px}
 .whiteBox table.team td ul.breadcrumb2{float:right}
-
 .whiteBox .gallery{ padding:0 13px}
-.gallery img {
-    margin: 10px 0;
-}
+.gallery img { margin: 10px 0;}
 
 /*---Avasis-projectDetails-v12@2x ---*/
 
@@ -8105,7 +8042,6 @@ h3.proStatus i {
 .TableDetails p {margin: 3px 0;}
 .btn-w-n{min-width:89px; padding:10px 6px}
 .savedraft {position: relative; top: 10px;}
-
 label {display: inline-block; font-weight: 700;  margin-bottom: 5px; max-width: 100%;}
 .icheckbox_square-green { background-position: 0 0;}
 .icheckbox_square-green, .iradio_square-green {  border: medium none; cursor: pointer; display: inline-block; height: 22px; margin: 0;  padding: 0;  vertical-align: middle; width: 22px;}
@@ -8159,7 +8095,11 @@ label {display: inline-block; font-weight: 700;  margin-bottom: 5px; max-width: 
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {  background: #c1e6f1 none repeat scroll 0 0;  border-radius: 50%; display: block;  height: 35px;  left: 50%;   margin-left: -15px; margin-top: -15px;  position: absolute;  top: 23px;width: 35px;}
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {background: #19aad2 none repeat scroll 0 0;border: 3px solid #fff; border-radius: 50px; content: " ";  height: 20px;  left: 7px; position: absolute; top: 8px; width: 20px;}
 .bs-wizard-info.text-blue{text-align:center; color:#19aad2 !important;}
-
+.outcompliance{color:#e7595a; font-weight:600}
+.creditalert{float: right; margin: 0 8px;}
+date-muted{color:#44474b;}
+.flag{margin-top:2px}
+.table.Compliance th img{margin:0 9px;}
 
 /****************Payment-Details@2x*******************/
 Payment tr{border:1px solid #e7eaec;}
