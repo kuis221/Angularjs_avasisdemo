@@ -85,6 +85,8 @@ a:focus {
 /******* Padding top*******/
 .noPdingLeft{padding-left:0px !important}
 .noPdingRight{padding-right:0px !important}
+.paddingLR{padding-left:0px !important; padding-right:0px !important;}
+
 
 .pb20 {
     padding-bottom: 20px;
@@ -4404,7 +4406,8 @@ table.table-mail tr td {
 
 .progress-small,
 .progress-small .progress-bar {
-    height: 18px;
+   border-radius: 21px;
+    height: 9px;
 }
 
 .progress-small,
@@ -7870,26 +7873,17 @@ body.skin-3 {
 .text1 h2 { font-weight: normal; font-family: 'AvenirNextLTPro-Regular'}
 .text1 h4 { font-weight: normal; margin: 10px 0 8px 0; padding: 0px;  font-size: 16px;  font-family: 'AvenirNextLTPro-Regular'; text-transform: uppercase;}
 .text1 h5 {margin: 3px 0; color: #8b8b8b;}
-
 .text1 span { display: block; font-size: 14px;}
 .label.label-info1 {background: #2a2d33; color: #FFF;}
 .prog-inner {background-color: #f9f9f9; padding: 0px 15px;}
-
 .customScroll { overflow-y:scroll; height:670px}
-
 .inner-page-wrapper{ background:#f9f9f9;}
 .inner-page-wrapper .white-bg{ background: #fff none repeat scroll 0 0;box-shadow: 1px 0 4px #d8d8d8;}
 .inner-page-wrapper .prog-inner{ background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px;}
-
 .closeBox{ background:#000; width:100%; padding: 109px 0; }
-.closeBox p , .closeBox p a{
-    color: #fff;
-    text-align: center;
-    font-size:15px;
-}
+.closeBox p , .closeBox p a{ color: #fff;  text-align: center;  font-size:15px;}
 .closeBox p i{ font-size:15px; margin-left:5px; position:relative; top:1px}
 .lightgry th{color:#808080; font-size:15px}
-
 /* Smart Wizard */
 .bs-wizard {margin-top: 5px;}
 
@@ -7897,35 +7891,15 @@ body.skin-3 {
 .bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
 .bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
 .bs-wizard > .bs-wizard-step + .bs-wizard-step {}
-
 .greenTxt{color:#79c485; font-size:16px}
 .bigTxt{font-size:18px;}
 .table-custom1 span {font-size: 16px;}
 .bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
 .complete .text-center { color:#e75c5b !important;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
-    background: #f6cece none repeat scroll 0 0;
-    border-radius: 50%;
-    display: block;
-    height: 35px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-    position: absolute;
-    top: 23px;
-    width: 35px;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot::after {
-    background: #e25c5c none repeat scroll 0 0;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    content: " ";
-    height: 20px;
-    left: 7px;
-    position: absolute;
-    top: 8px;
-    width: 20px;
-}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot { background: #f6cece none repeat scroll 0 0; border-radius: 50%; display: block;  height: 35px; left: 50%;margin-left: -15px;  margin-top: -15px;
+    position: absolute; top: 23px; width: 35px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot::after { background: #e25c5c none repeat scroll 0 0; border: 3px solid #fff; border-radius: 50px;  content: " ";  height: 20px;  left: 7px;
+    position: absolute; top: 8px; width: 20px;}
 .bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
 .bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #f5f5f5;}
 .bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
@@ -7956,7 +7930,7 @@ table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
 .table.daterange .filterDetails strong{ color:#3aabd5; font-size:18px; }
 .table.daterange .filterDetails p{color:#4a4a4a; font-size:16px; margin:0;font-family: 'AvenirNextLTPro-Regular'}
 .table.daterange .filterDetails span{color:#545454; font-size:24px;}
-.dateRangeBox { background: #fff none repeat scroll 0 0;  box-shadow: 2px 1px 7px #d4d4d4; height: 80px; left: 79px; position: absolute;  top: 71px;  width: 473px;  z-index: 999;  border:1px solid #efefef; display:none;}
+.dateRangeBox { background: #fff none repeat scroll 0 0;  box-shadow: 2px 1px 7px #d4d4d4; height: 80px; left: 79px; position: absolute;  top: 71px;  width: 473px;  z-index: 999;  border:1px solid #efefef; display:block;}
 .dateRangeBox::after {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -7976,7 +7950,7 @@ table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
 
 /*---Avasis-projectDetails-v12@2x---*/
 .overview{padding:20px 0}
-.overview h2.hding{ font-size:28px; margin:0 0 10px 0; color:#4a4a4a}
+.overview h2.hding{ font-size:28px; margin:0 0 10px 0; color:#4a4a4a; font-weight:500;}
 .overview ul.topSubtitle{ list-style:none; margin:0; padding:0}
 .overview ul.topSubtitle li a{ font-size:16px; }
 .overview ul.topSubtitle li span{color:#8b8b8b}
@@ -7989,7 +7963,7 @@ span.project{background:#2a2d33; padding:4px 7px; border-radius:3px; color:#FFF}
 .ibox .Schedules{ border-bottom:1px solid #eeeeee; padding:23px 0 15px}
 .ibox .Schedules p i{color:#ccc; font-size:20px; color:#555555;margin-right: 12px;}
 .ibox .Schedules p{ font-size:18px;}
-.ibox .Schedules p a{float:right}
+.ibox .Schedules p a{float:right;   font-size: 14px; font-weight: 600;  margin: 0 21px; color:#3aabd5;}
 .ibox .project{ border-bottom:1px solid #eeeeee; padding:20px 0}
 .ibox .project .feed-element{padding:0;}
 .ibox .project .media-body strong {  color: #3aabd5; float: left; font-size: 18px;  font-weight: normal;  margin-bottom: 6px; width: 100%;}
@@ -7999,17 +7973,17 @@ span.project{background:#2a2d33; padding:4px 7px; border-radius:3px; color:#FFF}
 .ibox .project .media-body .progress-small{margin:0}
 .ibox .project .media-body p{ font-size:14px}
 .ibox .project .media-body p span{color:#8b8b8b}
-h3.proStatus{ font-size:22px; color:#4a4a4a; font-weight:normal}
+h3.proStatus{ font-size:20px; color:#4a4a4a; font-weight:normal;}
 h3.proStatus i { font-size:18px;}
-.itmDueToday { border: 1px solid #ececec;  border-radius: 5px; height: 628px;  margin-top: 26px;  overflow-y: scroll;}
-.itmDueToday td a{color:#fff; background:#2a2d33; border-radius:5px; font-weight:normal;padding: 5px 8px; }
-.itmDueToday .table td { padding: 23px 10px 15px;}
+.itmDueToday { border: 1px solid #ececec;  border-radius: 5px; height: 510px;  margin-top: 26px;  overflow-y: scroll;}
+.itmDueToday td a{color:#fff; background:#2a2d33; border-radius:5px; font-weight:normal;padding: 3px 8px; white-space:nowrap;}
+.itmDueToday .table td { padding: 20px 10px 9px}
 .itmDueToday .table td span{color:#3aabd5}
 .itmDueToday .table td .strock{ text-decoration: line-through; position:relative; opacity:0.4}
 .whiteBox{border:1px solid #ececec; border-radius:5px; background:#fff; padding:0 0 15px 0}
 .whiteBox .hdingTopBox{ border-bottom:1px solid #eeeeee; padding:23px 0 5px}
 .hdingTopBox p { font-size: 16px; padding: 0 10px;}
-.hdingTopBox a{ float:right}
+.hdingTopBox a{ float:right; margin:0 21px; color:#3aabd5; font-size:14px; font-weight:600;}
 .hdingTopBox > p i { margin-right: 10px;}
 .whiteBox .space{padding:30px 0 5px 31px; position:relative}
 .whiteBox .space2{padding:30px 0 5px 5px; position:relative}
@@ -8030,6 +8004,8 @@ h3.proStatus i { font-size:18px;}
 .whiteBox table.team td ul.breadcrumb2{float:right}
 .whiteBox .gallery{ padding:0 13px}
 .gallery img { margin: 10px 0;}
+.left1 p b.Lspace {  left: 60%;  position: absolute;}
+.Schedules p img{margin-bottom:5px;}
 
 /*---Avasis-projectDetails-v12@2x ---*/
 
@@ -8101,6 +8077,14 @@ date-muted{color:#44474b;}
 .flag{margin-top:2px}
 .table.Compliance th img{margin:0 9px;}
 
+
+/****************Bank_Draw-v2-Compliance-drop@2x*******************/
+
+
+
+/****************Bank_Draw-v2-Compliance-drop@2x End*******************/
+
+
 /****************Payment-Details@2x*******************/
 Payment tr{border:1px solid #e7eaec;}
 .table.Payment span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
@@ -8135,6 +8119,63 @@ strong.blue{color:#42b6d8 !important}
 .media-Payment .fa-angle-down{color:#e75c5b !important; font-size:18px;}
 
 
+/****************Payment-Details-YES@2x*******************/
+
+
+/****************team-members-main(empty state)@2x *******************/
+	h2.TeamHding{ color:#4a4a4a;font-size:26px;margin: 15px 0;}
+	.whitebg{background:url("../img/arrowUp.png") no-repeat top right #fff; padding:15px 0}
+	.whitebg h1{font-size: 48px;}
+	.green{color:#61c571;text-align:center}
+	.green p{font-size:18px; font-weight:600;}
+	.sky{color:#3aabd5;text-align:center}
+	.sky p{font-size:18px; font-weight:600;}
+	.orangeColor{color:#fdae46;text-align:center}
+	.orangeColor p{font-size:18px; font-weight:600;}	
+	.assign{width:66.444%; margin:18% auto; text-align:center}
+	.assign > p { font-size: 22px; font-weight: 500; color:#4a4a4a;}
+	.assign > span {font-size:18px; font-weight:500; color:#808080}
+
+/****************team-members-main(empty state)@2x *******************/
+
+
+/**************** teamMembers-main@2x *******************/
+	h2.TeamHding{ color:#4a4a4a;font-size:26px;margin: 15px 0;}
+	.whitebg2{background:#fff; padding:15px 0}
+	.whitebg2 .green p{font-size:20px;font-weight:bold}
+	.whitebg2 .sky p{font-size:20px;font-weight:bold}
+	.whitebg2 .orangeColor p{font-size:20px;font-weight:bold}
+	.whitebg2 .feed-Compliance > .pull-left {margin-right: 5px;min-height: 67px;}
+	.whitebg2 .TableDetails .fa { margin: 0 2px;}
+	.whitebg2 .media-Compliance p.pink {color: #e25c5c;}
+	.Compliance p.light-big{color:#737578; font-size:16px}	
+	.flag-alert p{color:#e25c5c;}
+	.flag-alert p span{color:#fdae46}
+	.flag-alert p img,.flag-alert p span img{margin:0 5px}
+/**************** teamMembers-main@2x End *******************/
+.checkred{color:#e25c5c; font-size:14px; font-family: "AvenirNextLTPro-Regular"; font-weight:600; border-bottom:1px solid #dedede }
+.checkgreen{color:#79c485; font-size:14px; font-family: "AvenirNextLTPro-Regular"; font-weight:600; }
+
+
+/****************RiskManagement@2x*******************/
+.riskresports{padding:10px;}
+.riskresports .ibox .Schedules p img { margin: 0 6px 3px 0;}
+.riskresports .searchround{ background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;border: 1px solid #f3f3f3;  border-radius: 100px; box-shadow: none; color: #fff;  padding: 0px 5px 0 30px; transition: all 0.3s ease 0s; width:100%; color:#666666;}
+.riskresports h3.riskheading{margin-top:14px; color: #4a4a4a; font-size: 20px; font-weight: normal;}
+.riskresports .searchdown {  list-style: outside none none;  margin: 10px;}
+.riskresports .btn1.btn-dangersort.btn-sm.sort{padding:7px 27px;}
+/****************RiskManagement@2x End*******************/
+
+/****************RiskManagement-hover@2x*******************/
+.check{color:#3aabd5; font-size:14px; font-family: "AvenirNextLTPro-Regular"; font-weight:600; }
+.popover{box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);}
+/****************RiskManagement-hover@2x End*******************/
+
+
+/****************RiskManagement-settings@2x/****************/
+.popover-content.check {  border-bottom: 1px solid #dedede;}
+.popover-content.check:last-child{border-bottom:none;}
+/****************RiskManagement-settings@2x End/****************/
 
 
 
