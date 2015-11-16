@@ -47,6 +47,36 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/financials/bank-draw/main.html",
             controller: "BankDrawCtrl"
         })
+        .state('financials.bankdraw.payment-application', {
+            url: '/payment-application',
+            templateUrl: "partials/financials/bank-draw/payment-application.html",
+            controller: "BankDrawCtrl"
+        })
+        .state('financials.bankdraw.draw-details', {
+            url: '/draw-details',
+            templateUrl: "partials/financials/bank-draw/draw-details.html",
+            controller: "BankDrawCtrl"
+        })
+        .state('financials.bankdraw.compliance', {
+            url: '/compliance',
+            templateUrl: "partials/financials/bank-draw/compliance.html",
+            controller: "BankDrawCtrl"
+        })
+        .state('financials.bankdraw.documents', {
+            url: '/documents',
+            templateUrl: "partials/financials/bank-draw/documents.html",
+            controller: "BankDrawCtrl"
+        })
+        .state('financials.bankdraw.payment-details', {
+            url: '/payment-details',
+            templateUrl: "partials/financials/bank-draw/payment-details.html",
+            controller: "BankDrawCtrl"
+        })
+        .state('financials.bankdraw.finalize', {
+            url: '/finalize',
+            templateUrl: "partials/financials/bank-draw/finalize.html",
+            controller: "BankDrawCtrl"
+        })
         .state('team-members', {
             url: '/team-members',
             templateUrl: "partials/team-members/team-members.html",
