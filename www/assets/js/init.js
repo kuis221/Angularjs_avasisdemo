@@ -49,7 +49,7 @@ var o = {
 				text = t.find('.text').text();
 
             rad += 20;
-            var z = r.path().attr({ arc: [value, color, rad], 'stroke-width': 15 });
+            var z = r.path().attr({ arc: [value, color, rad], 'stroke-width': t.find('.width').val() });
 
             z.mouseover(function () {
                 this.animate({ 'stroke-width': 10, opacity: .75 }, 1000, 'elastic');

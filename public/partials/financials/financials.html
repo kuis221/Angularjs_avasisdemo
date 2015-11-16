@@ -49,9 +49,15 @@
         </div>
         <div class="col-lg-2 mt35">
             <div class="buy">
-                <a href="/theme/lander-v2-webapp-dashboard-B5FC6F4" class="btn btn-danger btn-lg">
-                    <i class="fa fa-plus"></i> Add New Payment
-                </a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-plus"></i> Add New <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Add New Payment</a></li>
+                        <li><a href="#">Add Direct Invoice</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -67,11 +73,13 @@
                             <span class="text"></span>
                             <input type="hidden" class="percent" value="61" />
                             <input type="hidden" class="color" value="#79c485" />
+                            <input type="hidden" class="width" value="20" />
                         </div>
                         <div class="arc">
                             <span class="text"></span>
                             <input type="hidden" class="percent" value="76" />
                             <input type="hidden" class="color" value="#3aabd5" />
+                            <input type="hidden" class="width" value="15" />
                         </div>
 
                     </div>
@@ -196,7 +204,7 @@
                                     <tr>
                                         <td><div class="space1"><span class="sky">General Condition<i class="fa fa-chevron-up"></i></span></div></td>
                                         <td>Est.Budget</td>
-                                        <td>Under Contract</td>
+                                        <td>Bids Under Contract</td>
                                         <td>Approved Purchase Orders</td>
                                         <td>Approved Change Orders</td>
                                         <td>Direct Costs</td>
