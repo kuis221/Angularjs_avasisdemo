@@ -28,9 +28,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "DashboardsCtrl"
         })
         .state('financials', {
-            abstract: true,
             url: '/financials',
-            template: '<ui-view/>'
+            abstract: true,
+            template: '<ui-view></ui-view>'
         })
         .state('financials.main', {
             url: '/main',
@@ -39,7 +39,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('financials.bankdraw', {
             url: '/bankdraw',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('financials.bankdraw.main', {
+            url: '/main',
             templateUrl: "partials/financials/bank-draw/main.html",
             controller: "BankDrawCtrl"
+        })
+        .state('team-members', {
+            url: '/team-members',
+            templateUrl: "partials/team-members/team-members.html",
+            controller: "TeamMembersCtrl"
         })
 }]);
