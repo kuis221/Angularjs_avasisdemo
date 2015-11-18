@@ -8,13 +8,13 @@ app.controller('FinancialsCtrl',
                     percent: 76,
                     color: '#3aabd5',
                     width: 15,
-                    radius: 50
+                    radius: 70
                 },
                 {
                     percent: 61,
                     color: '#79c485',
                     width: 20,
-                    radius: 35
+                    radius: 55
                 }
             ]
         };

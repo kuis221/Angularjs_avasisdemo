@@ -1,16 +1,26 @@
 app.directive('ngRaphaelArc', ['$compile', '$parse', '$q', '$timeout', function ($compile, $parse, $q, $timeout) {
-    var arcFn = function (value, color, rad) {
-        var v = 3.6 * value,
-            alpha = v == 360 ? 359.99 : v,
-            startDegree = 90,
-            a = (startDegree - alpha) * Math.PI / 180,
-            b = startDegree * Math.PI / 180,
-            sx = 100 + rad * Math.cos(b),
-            sy = 100 - rad * Math.sin(b),
-            x = 100 + rad * Math.cos(a),
-            y = 100 - rad * Math.sin(a),
-            path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-        return {path: path, stroke: color}
+
+    var arcFn = function (value, R) {
+        var xloc = 100, yloc = 100, total = 100;
+        var alpha = 360 / total * value,
+            a = (90 - alpha) * Math.PI / 180,
+            x = xloc + R * Math.cos(a),
+            y = yloc - R * Math.sin(a),
+            path;
+        if (total == value) {
+            path = [
+                ["M", xloc, yloc - R],
+                ["A", R, R, 0, 1, 1, xloc - 0.01, yloc - R]
+            ];
+        } else {
+            path = [
+                ["M", xloc, yloc - R],
+                ["A", R, R, 0, +(alpha > 180), 1, x, y]
+            ];
+        }
+        return {
+            path: path
+        };
     };
 
     return {
@@ -24,8 +34,6 @@ app.directive('ngRaphaelArc', ['$compile', '$parse', '$q', '$timeout', function 
 
             r.setViewBox(0, 0, config.size, config.size, true);
 
-            r.circle(40, 40, 5).attr({stroke: 'none', fill: '#FFF'});
-
             r.customAttributes.arc = arcFn;
 
             var st = r.set();
@@ -38,7 +46,11 @@ app.directive('ngRaphaelArc', ['$compile', '$parse', '$q', '$timeout', function 
                     value = arc.percent,
                     speed = 250;
 
-                var z = r.path().attr({arc: [value, arc.color, rad + 20], 'stroke-width': arc.width});
+                var z = r.path().attr({arc: [0, rad], stroke: arc.color, 'stroke-width': arc.width});
+
+                z.animate({
+                    arc: [value, rad]
+                }, 1500, "bounce");
 
                 var title = r.text(100, textY + idx * 25, '%').attr({
                     font: '23px Arial',
@@ -51,7 +63,7 @@ app.directive('ngRaphaelArc', ['$compile', '$parse', '$q', '$timeout', function 
 
                 z
                     .mouseover(function () {
-                        this.animate({'stroke-width': arc.width + 10, opacity: 1}, 1000, 'elastic');
+                        this.animate({'stroke-width': arc.width + 10, opacity: 1}, 1000);
 
                         title.animate({y: textCenterY}, speed, '>');
 
