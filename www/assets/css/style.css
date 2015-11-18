@@ -19,15 +19,15 @@
 @font-face {
     font-family: 'AvenirNextLTPro-Bold';
     src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot');
-    src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot?#iefix') format('embedded-opentype'), 
-	url('../fonts/AvenirNextLTPro-Bold_gdi.woff') format('woff'), 
-	url('../fonts/AvenirNextLTPro-Bold_gdi.ttf') format('truetype'), 
-	url('../fonts/AvenirNextLTPro-Bold_gdi.svg#AvenirNextLTPro-Bold') format('svg');
+    src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNextLTPro-Bold_gdi.woff') format('woff'), url('../fonts/AvenirNextLTPro-Bold_gdi.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Bold_gdi.svg#AvenirNextLTPro-Bold') format('svg');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
     unicode-range: U+0-10FFFF;
 }
+
+/************Comman Class ***********/
+.skyColor{color:#3aabd5}
 
 h1,
 h2,
@@ -68,43 +68,93 @@ h5 {
     font-weight: 600;
 }
 
-a:focus {
-    border: none;
+
+.mb25 {
+    margin-bottom: 25px;
 }
-.mb25 { margin-bottom: 25px;}
-.mb30 { margin-bottom: 30px;}
-.mb35 {margin-bottom: 35px;}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb35 {
+    margin-bottom: 35px;
+}
 /******* margin top*******/
-.mt10 { margin-top: 10px;}
-.mt15 { margin-top: 15px;}
-.mt12 {margin-top: 12px;}
-.mt20 {margin-top: 20px;}
-.mt25 { margin-top: 25px;}
-.mt30 { margin-top: 30px;}
-.mt35 {margin-top: 35px;}
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt12 {
+    margin-top: 12px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt35 {
+    margin-top: 35px;
+}
 /******* Padding top*******/
-.noPdingLeft{padding-left:0px !important}
-.noPdingRight{padding-right:0px !important}
-.paddingLR{padding-left:0px !important; padding-right:0px !important;}
+.noPdingLeft {
+    padding-left: 0px !important;
+}
+
+.noPdingRight {
+    padding-right: 0px !important;
+}
+
+.paddingLR {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 
 
 .pb20 {
     padding-bottom: 20px;
 }
-.pb30 { padding-bottom: 30px;}
-.pb35 {padding-bottom: 35px;}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.pb35 {
+    padding-bottom: 35px;
+}
 
 .pt20 {
     padding-top: 20px;
 }
-.pt10{
+
+.pt10 {
     padding-top: 10px;
 }
-.table > tbody + tbody{border:none;}
-.lightgry{background:#f9f9f9 !important}
+
+.table > tbody + tbody {
+    border: none;
+}
+
+.lightgry {
+    background: #f9f9f9 !important;
+}
 
 /******* left menu*******/
-.posRelative{position:relative}
+.posRelative {
+    position: relative;
+}
 
 .nav > li > a {
     color: #c3c6cd;
@@ -140,6 +190,7 @@ a:focus {
 .nav > li > a i {
     margin-right: 6px;
     font-size: 20px;
+    vertical-align:middle;
 }
 
     .nav > li > a i.ace-icon.fa.fa-bell.icon-animated-bell {
@@ -1249,10 +1300,14 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 
 .custom-panel-body {
     padding: 0 !important;
-    position: relative
+    position: relative;
 }
-.custom-panel-body p.hding{font-size:22px}
-.custom-panel-body thead tr {
+
+    .custom-panel-body p.hding {
+        font-size: 22px;
+    }
+
+    .custom-panel-body thead tr {
         background: #fff;
     }
 
@@ -2330,9 +2385,7 @@ table.dataTable thead .sorting:after {
     font-size: 14px;
 }
 
-.form-group #top-search {
-    border-left: 1px solid #dedede;
-}
+.form-group #top-search {border-left: 1px solid #dedede; }
 
 /*.form-control:focus,
 .single-line:focus {
@@ -4406,7 +4459,7 @@ table.table-mail tr td {
 
 .progress-small,
 .progress-small .progress-bar {
-   border-radius: 21px;
+    border-radius: 21px;
     height: 9px;
 }
 
@@ -7843,48 +7896,891 @@ body.skin-3 {
 }
 
 /**************** Bank_Draw-v2-Finalize@2x *******************/
-    .finalizeBox {
+.finalizeBox {
     border-bottom: 1px solid #ccc;
     padding: 31px 0;
+}
+
+    .finalizeBox span.grey {
+        font-size: 18px;
     }
-   .finalizeBox span.grey{font-size:18px}
-   .finalizeBox p.black{font-size:24px}
-   .finalizeBox span.reds{font-size:18px; color:#e25c5c}
-   .finalizeBox p.reds{font-size:24px;color:#e25c5c}
 
-   .finalizeGraf{ border-bottom:1px solid #ccc; padding:23px 0 17px;}
-   .finalizeGraf .per #diagram{ position:relative}
-   .finalizeGraf .left1 span.middlebold p{margin:0px;float: right;}
-   .finalizeGraf .left1 p.price{font-size:20px}
+    .finalizeBox p.black {
+        font-size: 24px;
+    }
 
-   table.finalizeTable p {
+    .finalizeBox span.reds {
+        font-size: 18px;
+        color: #e25c5c;
+    }
+
+    .finalizeBox p.reds {
+        font-size: 24px;
+        color: #e25c5c;
+    }
+
+.finalizeGraf {
+    border-bottom: 1px solid #ccc;
+    padding: 23px 0 17px;
+}
+
+    .finalizeGraf .per #diagram {
+        position: relative;
+    }
+
+    .finalizeGraf .left1 span.middlebold p {
+        margin: 0px;
+        float: right;
+    }
+
+    .finalizeGraf .left1 p.price {
+        font-size: 20px;
+    }
+
+table.finalizeTable p {
     color: #4a4a4a;
     font-size: 17px;
     font-weight: normal;
 }
-   table.finalizeTable p span{color:#808080; font-size:15px}
-   table.finalizeTable p.blk{color:#000}
 
-   table.tableTabs th p{ color:#8b8b8b; font-size:17px; font-weight:normal}
-   table.tableTabs tbody td input.customBtn{ background:#fbfbfb; border:1px solid #d7d7d7; border-radius:5px; padding:12px 20px; font-size:16px}
+    table.finalizeTable p span {
+        color: #808080;
+        font-size: 15px;
+    }
+
+    table.finalizeTable p.blk {
+        color: #000;
+    }
+
+table.tableTabs th p {
+    color: #8b8b8b;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+table.tableTabs tbody td input.customBtn {
+    background: #fbfbfb;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
 
 /**************** Bank_Draw-v2-Finalize@2x End *******************/
 
-.text1 h2 { font-weight: normal; font-family: 'AvenirNextLTPro-Regular'}
-.text1 h4 { font-weight: normal; margin: 10px 0 8px 0; padding: 0px;  font-size: 16px;  font-family: 'AvenirNextLTPro-Regular'; text-transform: uppercase;}
-.text1 h5 {margin: 3px 0; color: #8b8b8b;}
-.text1 span { display: block; font-size: 14px;}
-.label.label-info1 {background: #2a2d33; color: #FFF;}
-.prog-inner {background-color: #f9f9f9; padding: 0px 15px;}
-.customScroll { overflow-y:scroll; height:670px}
-.inner-page-wrapper{ background:#f9f9f9;}
-.inner-page-wrapper .white-bg{ background: #fff none repeat scroll 0 0;box-shadow: 1px 0 4px #d8d8d8;}
-.inner-page-wrapper .prog-inner{ background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px;}
-.closeBox{ background:#000; width:100%; padding: 109px 0; }
-.closeBox p , .closeBox p a{ color: #fff;  text-align: center;  font-size:15px;}
-.closeBox p i{ font-size:15px; margin-left:5px; position:relative; top:1px}
-.lightgry th{color:#808080; font-size:15px}
-/* Smart Wizard */
+.text1 h2 {
+    font-weight: normal;
+    font-family: 'AvenirNextLTPro-Regular';
+}
+
+.text1 h4 {
+    font-weight: normal;
+    margin: 10px 0 8px 0;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'AvenirNextLTPro-Regular';
+    text-transform: uppercase;
+}
+
+.text1 h5 {
+    margin: 3px 0;
+    color: #8b8b8b;
+}
+
+.text1 span {
+    display: block;
+    font-size: 14px;
+}
+
+.label.label-info1 {
+    background: #2a2d33;
+    color: #FFF;
+}
+
+.prog-inner {
+    background-color: #f9f9f9;
+    padding: 0px 15px;
+}
+
+.customScroll {
+    overflow-y: scroll;
+    height: 670px;
+}
+
+.inner-page-wrapper {
+    background: #f9f9f9;
+}
+
+    .inner-page-wrapper .white-bg {
+        background: #fff none repeat scroll 0 0;
+        box-shadow: 1px 0 4px #d8d8d8;
+    }
+
+    .inner-page-wrapper .prog-inner {
+        background-color: #fff;
+        border: 1px solid #d7d7d7;
+        border-radius: 4px;
+        margin: 51px auto;
+        padding: 0 15px;
+    }
+
+.closeBox {
+    background: #000;
+    width: 100%;
+    padding: 109px 0;
+}
+
+    .closeBox p, .closeBox p a {
+        color: #fff;
+        text-align: center;
+        font-size: 15px;
+    }
+
+        .closeBox p i {
+            font-size: 15px;
+            margin-left: 5px;
+            position: relative;
+            top: 1px;
+        }
+
+.lightgry th {
+    color: #808080;
+    font-size: 15px;
+}
+
+
+table.tableTopRight tr td {
+    border: none;
+    padding: 4px 0;
+}
+
+.table.daterange tr td b {
+    color: #4a4a4a;
+}
+
+table.tableTopRight tr td span {
+    font-size: 16px;
+    font-family: 'AvenirNextLTPro-Bold';
+    text-transform: uppercase;
+    color: #2a2d33;
+}
+
+    table.tableTopRight tr td span.noBtn {
+        font-size: 14px;
+        background: #44474b;
+        padding: 3px 10px;
+        border-radius: 4px;
+        color: #fff;
+        font-family: 'AvenirNextLTPro-Regular';
+    }
+
+table.tableTopRight tr td p {
+    font-size: 14px;
+    margin: 0px;
+}
+
+.table.tableTopRight tr td p.greenClr {
+    color: #79c485;
+}
+
+.prog-inner .progressBar {
+    padding-bottom: 27px;
+    padding: 0 15px;
+}
+
+.table.daterange p {
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.table.daterange span {
+    color: #3aabd5;
+    font-size: 16px;
+}
+
+.table.daterange tr td {
+    border: none;
+    padding: 3px;
+}
+
+.table.daterange input {
+    margin-top: 35px;
+}
+
+.table.daterange tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+    .table.daterange tr td {
+        padding: 13px 8px;
+    }
+
+.table.daterange .filterDetails {
+    text-align: left;
+    padding-left: 10px;
+}
+
+    .table.daterange .filterDetails strong {
+        color: #3aabd5;
+        font-size: 18px;
+    }
+
+    .table.daterange .filterDetails p {
+        color: #4a4a4a;
+        font-size: 16px;
+        margin: 0;
+        font-family: 'AvenirNextLTPro-Regular';
+    }
+
+    .table.daterange .filterDetails span {
+        color: #545454;
+        font-size: 24px;
+    }
+
+.dateRangeBox {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 2px 1px 7px #d4d4d4;
+    height: 80px;
+    left: 79px;
+    position: absolute;
+    top: 71px;
+    width: 473px;
+    z-index: 999;
+    border: 1px solid #efefef;
+    display: block;
+}
+
+    .dateRangeBox::after {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: transparent transparent #efefef transparent;
+        border-image: none;
+        border-style: solid;
+        border-width: 29px 12px 13px 11px;
+        content: "";
+        height: 0;
+        left: 53px;
+        position: absolute;
+        top: -44px;
+        width: 0;
+    }
+
+/*---Avasis-projectDetails-v12@2x---*/
+.overview {
+    padding: 20px 0;
+}
+
+    .overview h2.hding {
+        font-size: 28px;
+        margin: 0 0 10px 0;
+        color: #4a4a4a;
+        font-weight: 500;
+    }
+
+    .overview ul.topSubtitle {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .overview ul.topSubtitle li a {
+            font-size: 16px;
+        }
+
+        .overview ul.topSubtitle li span {
+            color: #8b8b8b;
+        }
+
+    .overview .addNew a {
+        font-size: 17px;
+        margin: 0;
+        padding: 10px;
+    }
+
+.progressBar .ibox {
+    border-right: 1px solid #ccc;
+    padding: 0 14px 0 0;
+}
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    min-height: 48px;
+    padding: 14px 15px 7px;
+}
+
+span.project {
+    background: #2a2d33;
+    padding: 4px 7px;
+    border-radius: 3px;
+    color: #FFF;
+}
+
+.ibox .Schedules {
+    border-bottom: 1px solid #eeeeee;
+    padding: 23px 0 15px;
+}
+
+    .ibox .Schedules p i {
+        color: #ccc;
+        font-size: 20px;
+        color: #555555;
+        margin-right: 12px;
+    }
+
+    .ibox .Schedules p {
+        font-size: 18px;
+    }
+
+        .ibox .Schedules p a {
+            float: right;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 21px;
+            color: #3aabd5;
+        }
+
+.ibox .project {
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 0;
+}
+
+    .ibox .project .feed-element {
+        padding: 0;
+    }
+
+    .ibox .project .media-body strong {
+        color: #3aabd5;
+        float: left;
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 6px;
+        width: 100%;
+    }
+
+    .ibox .project .media-body p.progrsTxt {
+        color: #4a4a4a;
+        font-size: 14px;
+        margin: 0;
+    }
+
+        .ibox .project .media-body p.progrsTxt span {
+            color: #e25c5c;
+            margin-right: 8px;
+        }
+
+            .ibox .project .media-body p.progrsTxt span.green {
+                color: #79c485;
+            }
+
+    .ibox .project .media-body .progress-small {
+        margin: 0;
+    }
+
+    .ibox .project .media-body p {
+        font-size: 14px;
+    }
+
+        .ibox .project .media-body p span {
+            color: #8b8b8b;
+        }
+
+h3.proStatus {
+    font-size: 20px;
+    color: #4a4a4a;
+    font-weight: normal;
+}
+
+    h3.proStatus i {
+        font-size: 18px;
+    }
+
+.itmDueToday {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    height: 510px;
+    margin-top: 26px;
+    overflow-y: scroll;
+}
+
+    .itmDueToday td a {
+        color: #fff;
+        background: #2a2d33;
+        border-radius: 5px;
+        font-weight: normal;
+        padding: 3px 8px;
+        white-space: nowrap;
+    }
+
+    .itmDueToday .table td {
+        padding: 20px 10px 9px;
+    }
+
+        .itmDueToday .table td span {
+            color: #3aabd5;
+        }
+
+        .itmDueToday .table td .strock {
+            text-decoration: line-through;
+            position: relative;
+            opacity: 0.4;
+        }
+
+.whiteBox {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 0 15px 0;
+}
+
+    .whiteBox .hdingTopBox {
+        border-bottom: 1px solid #eeeeee;
+        padding: 23px 0 5px;
+    }
+
+.hdingTopBox p {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.hdingTopBox a {
+    float: right;
+    margin: 0 21px;
+    color: #3aabd5;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hdingTopBox > p i {
+    margin-right: 10px;
+}
+
+.whiteBox .space {
+    padding: 30px 0 5px 31px;
+    position: relative;
+}
+
+.whiteBox .space2 {
+    padding: 30px 0 5px 5px;
+    position: relative;
+}
+
+.whiteBox .space span.smlhding {
+    font-size: 14px;
+    position: absolute;
+    top: 13px;
+    width: 100%;
+}
+
+.whiteBox .space .left1 {
+    padding: 10px 0;
+}
+
+.whiteBox p.price {
+    margin: 0px;
+}
+
+.whiteBox img.cus-circle {
+    margin: 12px 0 0 -8px;
+}
+
+.whiteBox hr {
+    float: left;
+    width: 100%;
+    margin: 15px 0 4px;
+}
+
+.btn-pink {
+    background-color: #ed5565;
+    color: #fff;
+}
+
+.whiteBox table.community {
+    margin-bottom: 0px !important;
+}
+
+    .whiteBox table.community td {
+        vertical-align: middle;
+        padding: 12px;
+    }
+
+        .whiteBox table.community td i {
+            font-size: 18px;
+        }
+
+        .whiteBox table.community td p {
+            font-size: 16px;
+        }
+
+.whiteBox .progress-bar-primary {
+    background: #3aabd5;
+    color: #3aabd5;
+}
+
+.whiteBox span.sky {
+    color: #3aabd5;
+}
+
+.whiteBox table.team {
+    margin-bottom: 0px !important;
+}
+
+    .whiteBox table.team td {
+        vertical-align: middle;
+        padding: 9px 5px;
+    }
+
+        .whiteBox table.team td ul.breadcrumb2 {
+            float: right;
+        }
+
+.whiteBox .gallery {
+    padding: 0 13px;
+}
+
+.gallery img {
+    margin: 10px 0;
+}
+
+.left1 p b.Lspace {
+    left: 60%;
+    position: absolute;
+}
+
+.Schedules p img {
+    margin-bottom: 5px;
+}
+
+/*---Avasis-projectDetails-v12@2x ---*/
+
+.breadcrumb1 {
+    background-color: #ffffff;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .breadcrumb1 > li {
+        border-right: 1px solid #ccc;
+        display: inline-block;
+        padding: 0 8px 0 0;
+    }
+
+        .breadcrumb1 > li:last-child {
+            border-right: none;
+        }
+
+    .breadcrumb1 li a {
+        color: #7f8a90 !important;
+    }
+
+.TableDetails {
+    max-width: 100%;
+    min-width: 172px;
+}
+
+    .TableDetails span {
+        font-size: 16px;
+        color: #3aabd5;
+    }
+
+    .TableDetails p {
+        margin: 3px 0;
+    }
+
+.btn-w-n {
+    min-width: 89px;
+    padding: 10px 6px;
+}
+
+.savedraft {
+    position: relative;
+    top: 10px;
+}
+
+label {
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+.icheckbox_square-green {
+    background-position: 0 0;
+}
+
+.icheckbox_square-green, .iradio_square-green {
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 22px;
+}
+
+.table.daterange label {
+    margin-top: 27px;
+}
+
+
+
+/**************** Bank_Draw-v2-drawdetails@2x *******************/
+
+.drawdetail tr {
+    border: 1px solid #e7eaec;
+}
+
+.table.table-striped.drawdetail span.sky1 {
+    color: #3aabd5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.table.table-striped.drawdetail th {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px;
+}
+
+.table.table-striped.drawdetail td {
+    padding: 10px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table.table-striped.drawdetail span.sky3 {
+    color: #3aabd5;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/****************Bank draw-v2-documents@2x*******************/
+.simpletable tr {
+    border: 1px solid #e7eaec;
+}
+
+.table.table-striped.simpletable span.sky1 {
+    color: #3aabd5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.table.table-striped.simpletable th {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px;
+}
+
+.table.table-striped.simpletable td {
+    padding: 10px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.btn-upload {
+    background-color: #2a2d33;
+    border-color: #2a2d33;
+    color: #ffffff;
+}
+
+.btn-w-u {
+    min-width: 89px;
+}
+
+
+
+/****************Bank_Draw-v2-Compliance@2x*******************/
+.Compliance tr {
+    border: 1px solid #e7eaec;
+}
+
+.table.Compliance span.sky1 {
+    color: #3aabd5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.table.Compliance th {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px;
+}
+
+.table.Compliance td {
+    padding: 10px 20px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table.Compliance span.sky3 {
+    color: #3aabd5;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.breadcrumb2 li a {
+    display: inline-block;
+}
+
+.breadcrumb2 {
+    background-color: #none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .breadcrumb2 > li {
+        border-right: 1px solid #ccc;
+        display: inline-block;
+        padding: 0 8px 0 0;
+    }
+
+    .breadcrumb2 li a {
+        color: #7f8a90 !important;
+    }
+
+.feed-Compliance > .pull-left {
+    margin-right: 5px;
+}
+
+.table.Compliance span {
+    font-size: 14px;
+}
+
+.table.Compliance p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.table.Compliance .sky4 {
+    color: #79c485;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.table.Compliance .sky5 {
+    color: #e25c5c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.feed-Compliance {
+    padding-bottom: 0px;
+}
+
+.buy1 {
+    float: left;
+}
+
+.btn-dangersort {
+    background-color: #transparent;
+    border-color: #79c485;
+    color: #808080;
+    border: 1px solid #aaaaaa;
+    padding: 7px 10px;
+    white-space: nowrap;
+}
+
+.btn1 {
+    border-radius: 40px;
+}
+
+.buy1 a.btn1 i {
+    vertical-align: middle;
+    font-size: 19px;
+}
+
+.media-Compliance {
+    margin: 3px;
+}
+
+.breadcrumb2 > li:last-child {
+    border: none;
+}
+
+.media-Compliance strong {
+    color: #3aabd5;
+}
+
+.table.Compliance td {
+    vertical-align: middle;
+}
+
+.TableDetails {
+    width: 205px;
+}
+
+.table.Compliance .ibox-tools i {
+    font-size: 18px;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {
+    background: #c1e6f1 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    top: 23px;
+    width: 35px;
+}
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {
+        background: #19aad2 none repeat scroll 0 0;
+        border: 3px solid #fff;
+        border-radius: 50px;
+        content: " ";
+        height: 20px;
+        left: 7px;
+        position: absolute;
+        top: 8px;
+        width: 20px;
+    }
+
+.bs-wizard-info.text-blue {
+    text-align: center;
+    color: #19aad2 !important;
+}
+
+.outcompliance {
+    color: #e7595a;
+    font-weight: 600;
+}
+
+.creditalert {
+    float: right;
+    margin: 0 8px;
+}
+
+date-muted {
+    color: #44474b;
+}
+
+.flag {
+    margin-top: 2px;
+}
+
+.table.Compliance th img {
+    margin: 0 9px;
+}
+
+
+/****************Bank_Draw-v2-Compliance-drop@2x*******************/
 .bs-wizard {margin-top: 5px;}
 
 /*************************Form Wizard*****************************************/
@@ -7913,268 +8809,243 @@ body.skin-3 {
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
 /*************************************** END Form Wizard **************************************/
 
-table.tableTopRight tr td {border: none;padding: 4px 0;}
-.table.daterange tr td b{color:#4a4a4a}
-table.tableTopRight tr td span { font-size: 16px; font-family: 'AvenirNextLTPro-Bold'; text-transform: uppercase; color: #2a2d33; }
-table.tableTopRight tr td span.noBtn {font-size: 14px;background: #44474b; padding: 3px 10px; border-radius: 4px; color: #fff; font-family: 'AvenirNextLTPro-Regular';}
-table.tableTopRight tr td p { font-size: 14px; margin: 0px;}
-.table.tableTopRight tr td p.greenClr {color: #79c485;}
-.prog-inner .progressBar { padding-bottom: 27px; padding: 0 15px }
-.table.daterange p{color:#4a4a4a; font-size:16px}
-.table.daterange span{color:#3aabd5;font-size:16px}
-.table.daterange tr td{border:none; padding:3px;}
-.table.daterange input {margin-top: 35px;}
-.table.daterange tr{border-bottom:1px solid #dddddd}
-.table.daterange tr td { padding: 13px 8px;}
-.table.daterange .filterDetails {text-align:left; padding-left:10px}
-.table.daterange .filterDetails strong{ color:#3aabd5; font-size:18px; }
-.table.daterange .filterDetails p{color:#4a4a4a; font-size:16px; margin:0;font-family: 'AvenirNextLTPro-Regular'}
-.table.daterange .filterDetails span{color:#545454; font-size:24px;}
-.dateRangeBox { background: #fff none repeat scroll 0 0;  box-shadow: 2px 1px 7px #d4d4d4; height: 80px; left: 79px; position: absolute;  top: 71px;  width: 473px;  z-index: 999;  border:1px solid #efefef; display:block;}
-.dateRangeBox::after {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: transparent transparent #efefef transparent;
-    border-image: none;
-    border-style: solid;
-    border-width: 29px 12px 13px 11px;
-    content: "";
-    height: 0;
-    left: 53px;
-    position: absolute;
-    top: -44px;
-    width: 0;
-}
-
-/*---Avasis-projectDetails-v12@2x---*/
-.overview{padding:20px 0}
-.overview h2.hding{ font-size:28px; margin:0 0 10px 0; color:#4a4a4a; font-weight:500;}
-.overview ul.topSubtitle{ list-style:none; margin:0; padding:0}
-.overview ul.topSubtitle li a{ font-size:16px; }
-.overview ul.topSubtitle li span{color:#8b8b8b}
-.overview .addNew a{ font-size: 17px; margin: 0; padding: 10px;}
-.progressBar .ibox {border-right: 1px solid #ccc; padding: 0 14px 0 0;}
-.ibox-title {-moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;
- background-color: #ffffff; border-color: #e7eaec; border-image: none; border-style: solid solid none; border-width: 4px 0 0;
- color: inherit; margin-bottom: 0; min-height: 48px; padding: 14px 15px 7px;}
-span.project{background:#2a2d33; padding:4px 7px; border-radius:3px; color:#FFF}
-.ibox .Schedules{ border-bottom:1px solid #eeeeee; padding:23px 0 15px}
-.ibox .Schedules p i{color:#ccc; font-size:20px; color:#555555;margin-right: 12px;}
-.ibox .Schedules p{ font-size:18px;}
-.ibox .Schedules p a{float:right;   font-size: 14px; font-weight: 600;  margin: 0 21px; color:#3aabd5;}
-.ibox .project{ border-bottom:1px solid #eeeeee; padding:20px 0}
-.ibox .project .feed-element{padding:0;}
-.ibox .project .media-body strong {  color: #3aabd5; float: left; font-size: 18px;  font-weight: normal;  margin-bottom: 6px; width: 100%;}
-.ibox .project .media-body p.progrsTxt{ color:#4a4a4a; font-size:14px; margin:0}
-.ibox .project .media-body p.progrsTxt span{color:#e25c5c; margin-right:8px}
-.ibox .project .media-body p.progrsTxt span.green{color:#79c485}
-.ibox .project .media-body .progress-small{margin:0}
-.ibox .project .media-body p{ font-size:14px}
-.ibox .project .media-body p span{color:#8b8b8b}
-h3.proStatus{ font-size:20px; color:#4a4a4a; font-weight:normal;}
-h3.proStatus i { font-size:18px;}
-.itmDueToday { border: 1px solid #ececec;  border-radius: 5px; height: 510px;  margin-top: 26px;  overflow-y: scroll;}
-.itmDueToday td a{color:#fff; background:#2a2d33; border-radius:5px; font-weight:normal;padding: 3px 8px; white-space:nowrap;}
-.itmDueToday .table td { padding: 20px 10px 9px}
-.itmDueToday .table td span{color:#3aabd5}
-.itmDueToday .table td .strock{ text-decoration: line-through; position:relative; opacity:0.4}
-.whiteBox{border:1px solid #ececec; border-radius:5px; background:#fff; padding:0 0 15px 0}
-.whiteBox .hdingTopBox{ border-bottom:1px solid #eeeeee; padding:23px 0 5px}
-.hdingTopBox p { font-size: 16px; padding: 0 10px;}
-.hdingTopBox a{ float:right; margin:0 21px; color:#3aabd5; font-size:14px; font-weight:600;}
-.hdingTopBox > p i { margin-right: 10px;}
-.whiteBox .space{padding:30px 0 5px 31px; position:relative}
-.whiteBox .space2{padding:30px 0 5px 5px; position:relative}
-.whiteBox .space span.smlhding { font-size: 14px; position: absolute; top: 13px; width:100%; }
-.whiteBox .space .left1{padding:10px 0}
-.whiteBox p.price{margin:0px}
-.whiteBox img.cus-circle{margin:12px 0 0 -8px}
-.whiteBox hr {  float: left; width: 100%; margin: 15px 0 4px;}
-.btn-pink {background-color: #ed5565; color:#fff}
-.whiteBox table.community{margin-bottom:0px !important}
-.whiteBox table.community td{vertical-align:middle; padding: 12px;}
-.whiteBox table.community td i{font-size:18px}
-.whiteBox table.community td p{font-size:16px}
-.whiteBox .progress-bar-primary{background:#3aabd5; color:#3aabd5}
-.whiteBox span.sky{ color:#3aabd5}
-.whiteBox table.team{margin-bottom:0px !important}
-.whiteBox table.team td{vertical-align:middle; padding: 9px 5px}
-.whiteBox table.team td ul.breadcrumb2{float:right}
-.whiteBox .gallery{ padding:0 13px}
-.gallery img { margin: 10px 0;}
-.left1 p b.Lspace {  left: 60%;  position: absolute;}
-.Schedules p img{margin-bottom:5px;}
-
-/*---Avasis-projectDetails-v12@2x ---*/
-
-.breadcrumb1 { background-color: #ffffff; margin-bottom: 0; padding: 0;}
-.breadcrumb1 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
-.breadcrumb1 > li:last-child{ border-right:none} 
-.breadcrumb1 li a {color: #7f8a90 !important;}
-.TableDetails {  max-width: 100%; min-width: 172px;}
-.TableDetails span{font-size:16px; color:#3aabd5;}
-.TableDetails p {margin: 3px 0;}
-.btn-w-n{min-width:89px; padding:10px 6px}
-.savedraft {position: relative; top: 10px;}
-label {display: inline-block; font-weight: 700;  margin-bottom: 5px; max-width: 100%;}
-.icheckbox_square-green { background-position: 0 0;}
-.icheckbox_square-green, .iradio_square-green {  border: medium none; cursor: pointer; display: inline-block; height: 22px; margin: 0;  padding: 0;  vertical-align: middle; width: 22px;}
-.table.daterange label{margin-top:27px;}
-
-
-
-/**************** Bank_Draw-v2-drawdetails@2x *******************/
-
-.drawdetail tr{border:1px solid #e7eaec;}
-.table.table-striped.drawdetail span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.table-striped.drawdetail th{color:#808080; font-size:13px; font-weight:600; padding:14px; }
-.table.table-striped.drawdetail td{padding:10px;  font-family: "AvenirNextLTPro-Regular";}
-.table.table-striped.drawdetail span.sky3{color:#3aabd5; font-weight:600; font-size:13px;}
-
-/****************Bank draw-v2-documents@2x*******************/
-.simpletable tr{border:1px solid #e7eaec;}
-.table.table-striped.simpletable span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.table-striped.simpletable th{color:#808080; font-size:13px; font-weight:600; padding:14px;}
-.table.table-striped.simpletable td{padding:10px;  font-family: "AvenirNextLTPro-Regular";}
-.btn-upload {background-color: #2a2d33;border-color: #2a2d33;color: #ffffff;}
-.btn-w-u {min-width: 89px;}
-.btn.focus, .btn:focus, .btn:hover{color:#FFF}
-
-/****************Bank_Draw-v2-Compliance@2x*******************/
-.Compliance tr{border:1px solid #e7eaec;}
-.table.Compliance span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.Compliance th{color:#808080; font-size:13px; font-weight:600; padding:14px; }
-.table.Compliance td{padding:10px 20px;  font-family: "AvenirNextLTPro-Regular";}
-.table.Compliance span.sky3{color:#3aabd5; font-weight:600; font-size:13px;}
-.breadcrumb2 li a{display: inline-block;}
-.breadcrumb2{background-color: #none; margin-bottom: 0; padding: 0;}
-.breadcrumb2 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
-.breadcrumb2 li a{ color: #7f8a90 !important;}
-.feed-Compliance > .pull-left {margin-right: 5px;}
-.table.Compliance span {font-size: 14px;}
-.table.Compliance p {font-size: 12px;  margin: 0;  padding: 0; white-space: nowrap;}
-.table.Compliance .sky4{color: #79c485; font-size: 13px; font-weight: 600;}
-.table.Compliance .sky5{color: #e25c5c; font-size: 13px; font-weight: 600;}
-.feed-Compliance{padding-bottom:0px}
-.buy1 {float: left;}
-.btn-dangersort {background-color:#transparent;border-color: #79c485; color: #808080; border:1px solid #aaaaaa; padding:7px 10px; white-space:nowrap;}
-.btn1 {border-radius: 40px;}
-.buy1 a.btn1 i{ vertical-align: middle; font-size:19px;}
-.media-Compliance{margin: 3px;}
-.breadcrumb2 > li:last-child{border:none;}
-.media-Compliance strong{color:#3aabd5;}
-.table.Compliance td{vertical-align:middle;}
-.TableDetails{width:205px;}
-.table.Compliance .ibox-tools i{font-size:18px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {  background: #c1e6f1 none repeat scroll 0 0;  border-radius: 50%; display: block;  height: 35px;  left: 50%;   margin-left: -15px; margin-top: -15px;  position: absolute;  top: 23px;width: 35px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {background: #19aad2 none repeat scroll 0 0;border: 3px solid #fff; border-radius: 50px; content: " ";  height: 20px;  left: 7px; position: absolute; top: 8px; width: 20px;}
-.bs-wizard-info.text-blue{text-align:center; color:#19aad2 !important;}
-.outcompliance{color:#e7595a; font-weight:600}
-.creditalert{float: right; margin: 0 8px;}
-date-muted{color:#44474b;}
-.flag{margin-top:2px}
-.table.Compliance th img{margin:0 9px;}
-
-
-/****************Bank_Draw-v2-Compliance-drop@2x*******************/
-
-
 
 /****************Bank_Draw-v2-Compliance-drop@2x End*******************/
 
 
 /****************Payment-Details@2x*******************/
-Payment tr{border:1px solid #e7eaec;}
-.table.Payment span.sky1{color:#3aabd5; font-size:13px; font-weight:600;}
-.table.Payment th{color:#808080; font-size:13px; font-weight:600; padding:14px; }
-.table.Payment td{padding:10px 20px;  font-family: "AvenirNextLTPro-Regular";}
-.table.Payment span.sky3{color:#3aabd5; font-weight:600; font-size:13px;}
-.breadcrumb2 li a{display: inline-block;}
-.breadcrumb2{background-color: #none; margin-bottom: 0; padding: 0;}
-.breadcrumb2 > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
-.breadcrumb2 li a{ color: #7f8a90 !important;}
-.feed-Payment > .pull-left {margin-right: 5px;}
-.table.Payment span {font-size: 14px;}
-.table.Payment p {font-size: 12px;  margin: 0;  padding: 0; white-space: nowrap;}
-.table.Payment .sky4{color: #79c485; font-size: 13px; font-weight: 600;}
-.table.Payment .sky5{color: #e25c5c; font-size: 13px; font-weight: 600;}
-.feed-Payment{padding-bottom:0px}
-.buy1 {float: left;}
-.btn-dangersort {background-color:#transparent;border-color: #79c485; color: #808080; border:1px solid #aaaaaa; padding:7px 10px; white-space:nowrap;}
-.btn1 {border-radius: 40px;}
-.buy1 a.btn1 i{ vertical-align: middle; font-size:19px;}
-.media-Payment{margin: 3px;}
-.breadcrumb2 > li:last-child{border:none;}
-.media-Payment strong{color:#3aabd5;}
-.table.Payment td{vertical-align:middle;}
-.TableDetails{width:205px;}
-.table.Payment .ibox-tools i{font-size:18px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {  background: #c1e6f1 none repeat scroll 0 0;  border-radius: 50%; display: block;  height: 35px;  left: 50%;   margin-left: -15px; margin-top: -15px;  position: absolute;  top: 23px;width: 35px;}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {background: #19aad2 none repeat scroll 0 0;border: 3px solid #fff; border-radius: 50px; content: " ";  height: 20px;  left: 7px; position: absolute; top: 8px; width: 20px;}
-.bs-wizard-info.text-blue{text-align:center; color:#19aad2 !important;}
-strong.red{color:#e75c5b !important}
-strong.blue{color:#42b6d8 !important}
-.media-Payment .fa-angle-down{color:#e75c5b !important; font-size:18px;}
+Payment tr {
+    border: 1px solid #e7eaec;
+}
 
+.table.Payment span.sky1 {
+    color: #3aabd5;
+    font-size: 13px;
+    font-weight: 600;
+}
 
+.table.Payment th {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px;
+}
+
+.table.Payment td {
+    padding: 10px 20px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table.Payment span.sky3 {
+    color: #3aabd5;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.breadcrumb2 li a {
+    display: inline-block;
+}
+
+.breadcrumb2 {
+    background-color: #none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .breadcrumb2 > li {
+        border-right: 1px solid #ccc;
+        display: inline-block;
+        padding: 0 8px 0 0;
+    }
+
+    .breadcrumb2 li a {
+        color: #7f8a90 !important;
+    }
+
+.feed-Payment > .pull-left {
+    margin-right: 5px;
+}
+
+.table.Payment span {
+    font-size: 14px;
+}
+
+.table.Payment p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.table.Payment .sky4 {
+    color: #79c485;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.table.Payment .sky5 {
+    color: #e25c5c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.feed-Payment {
+    padding-bottom: 0px;
+}
+
+.buy1 {
+    float: left;
+}
+
+.btn-dangersort {
+    background-color: #transparent;
+    border-color: #79c485;
+    color: #808080;
+    border: 1px solid #aaaaaa;
+    padding: 7px 10px;
+    white-space: nowrap;
+}
+
+.btn1 {
+    border-radius: 40px;
+}
+
+.buy1 a.btn1 i {
+    vertical-align: middle;
+    font-size: 19px;
+}
+
+.media-Payment {
+    margin: 3px;
+}
+
+.breadcrumb2 > li:last-child {
+    border: none;
+}
+
+.media-Payment strong {
+    color: #3aabd5;
+}
+
+.table.Payment td {
+    vertical-align: middle;
+}
+
+.TableDetails {
+    width: 205px;
+}
+
+.table.Payment .ibox-tools i {
+    font-size: 18px;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {
+    background: #c1e6f1 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    top: 23px;
+    width: 35px;
+}
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {
+        background: #19aad2 none repeat scroll 0 0;
+        border: 3px solid #fff;
+        border-radius: 50px;
+        content: " ";
+        height: 20px;
+        left: 7px;
+        position: absolute;
+        top: 8px;
+        width: 20px;
+    }
+
+.bs-wizard-info.text-blue {
+    text-align: center;
+    color: #19aad2 !important;
+}
+
+strong.red {
+    color: #e75c5b !important;
+}
+
+strong.blue {
+    color: #42b6d8 !important;
+}
+
+.media-Payment .fa-angle-down {
+    color: #e75c5b !important;
+    font-size: 18px;
+}
 /****************Payment-Details-YES@2x*******************/
 
 
-/****************team-members-main(empty state)@2x *******************/
-	h2.TeamHding{ color:#4a4a4a;font-size:26px;margin: 15px 0;}
-	.whitebg{background:url("../img/arrowUp.png") no-repeat top right #fff; padding:15px 0}
-	.whitebg h1{font-size: 48px;}
-	.green{color:#61c571;text-align:center}
-	.green p{font-size:18px; font-weight:600;}
-	.sky{color:#3aabd5;text-align:center}
-	.sky p{font-size:18px; font-weight:600;}
-	.orangeColor{color:#fdae46;text-align:center}
-	.orangeColor p{font-size:18px; font-weight:600;}	
-	.assign{width:66.444%; margin:18% auto; text-align:center}
-	.assign > p { font-size: 22px; font-weight: 500; color:#4a4a4a;}
-	.assign > span {font-size:18px; font-weight:500; color:#808080}
-
-/****************team-members-main(empty state)@2x *******************/
-
-
-/**************** teamMembers-main@2x *******************/
-	h2.TeamHding{ color:#4a4a4a;font-size:26px;margin: 15px 0;}
-	.whitebg2{background:#fff; padding:15px 0}
-	.whitebg2 .green p{font-size:20px;font-weight:bold}
-	.whitebg2 .sky p{font-size:20px;font-weight:bold}
-	.whitebg2 .orangeColor p{font-size:20px;font-weight:bold}
-	.whitebg2 .feed-Compliance > .pull-left {margin-right: 5px;min-height: 67px;}
-	.whitebg2 .TableDetails .fa { margin: 0 2px;}
-	.whitebg2 .media-Compliance p.pink {color: #e25c5c;}
-	.Compliance p.light-big{color:#737578; font-size:16px}	
-	.flag-alert p{color:#e25c5c;}
-	.flag-alert p span{color:#fdae46}
-	.flag-alert p img,.flag-alert p span img{margin:0 5px}
-/**************** teamMembers-main@2x End *******************/
-.checkred{color:#e25c5c; font-size:14px; font-family: "AvenirNextLTPro-Regular"; font-weight:600; border-bottom:1px solid #dedede }
-.checkgreen{color:#79c485; font-size:14px; font-family: "AvenirNextLTPro-Regular"; font-weight:600; }
 
 
 /****************RiskManagement@2x*******************/
-.riskresports{padding:10px;}
-.riskresports .ibox .Schedules p img { margin: 0 6px 3px 0;}
-.riskresports .searchround{ background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;border: 1px solid #f3f3f3;  border-radius: 100px; box-shadow: none; color: #fff;  padding: 0px 5px 0 30px; transition: all 0.3s ease 0s; width:100%; color:#666666;}
-.riskresports h3.riskheading{margin-top:14px; color: #4a4a4a; font-size: 20px; font-weight: normal;}
-.riskresports .searchdown {  list-style: outside none none;  margin: 10px;}
-.riskresports .btn1.btn-dangersort.btn-sm.sort{padding:7px 27px;}
+.riskresports {
+    padding: 10px;
+}
+
+    .riskresports .ibox .Schedules p img {
+        margin: 0 6px 3px 0;
+    }
+
+    .riskresports .searchround {
+        background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;
+        border: 1px solid #f3f3f3;
+        border-radius: 100px;
+        box-shadow: none;
+        color: #fff;
+        padding: 0px 5px 0 30px;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        color: #666666;
+    }
+
+    .riskresports h3.riskheading {
+        margin-top: 14px;
+        color: #4a4a4a;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .riskresports .searchdown {
+        list-style: outside none none;
+        margin: 10px;
+    }
+
+    .riskresports .btn1.btn-dangersort.btn-sm.sort {
+        padding: 7px 27px;
+    }
 /****************RiskManagement@2x End*******************/
 
 /****************RiskManagement-hover@2x*******************/
-.check{color:#3aabd5; font-size:14px; font-family: "AvenirNextLTPro-Regular"; font-weight:600; }
-.popover{box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);}
+.check {
+    color: #3aabd5;
+    font-size: 14px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-weight: 600;
+}
+
+.popover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 /****************RiskManagement-hover@2x End*******************/
 
 
 /****************RiskManagement-settings@2x/****************/
-.popover-content.check {  border-bottom: 1px solid #dedede;}
-.popover-content.check:last-child{border-bottom:none;}
+.popover-content.check {
+    border-bottom: 1px solid #dedede;
+}
+
+    .popover-content.check:last-child {
+        border-bottom: none;
+    }
 /****************RiskManagement-settings@2x End/****************/
 
 
@@ -8326,11 +9197,12 @@ strong.blue{color:#42b6d8 !important}
 
 
 @media (max-width: 1199px) {
-    .savedraft {
-    top: 0px;
+    .bankdraw-inner-page .savedraft {
+        top: 0px;
+    }
 }
-}
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)  {
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .navbar-static-side {
         float: left;
         position: relative;
@@ -8338,11 +9210,13 @@ strong.blue{color:#42b6d8 !important}
         z-index: 2001;
     }
 }
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .per > div {
         position: relative !important;
         top: 0px !important;
     }
+
     .bordermiddle {
         border-right: none !important;
         padding-top: 0px;
