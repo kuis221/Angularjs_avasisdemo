@@ -1,7 +1,8 @@
 var app = angular.module('avasis',
     [
         'ui.router',
-        'ngTable'
+        'ngTable',
+        'ngAnimate'
     ]);
 
 app.controller('AppCtrl', [

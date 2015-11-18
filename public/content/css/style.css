@@ -5,3 +5,11 @@
 .page-heading h2 {
     font-weight: 600;
 }
+
+.panel.blank-panel .panel-heading {
+    padding: 10px 0px;
+}
+
+.bg-gray {
+    background-color: #eee;
+}
