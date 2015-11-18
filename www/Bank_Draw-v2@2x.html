@@ -1,21 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <!------meta tag------>
+    <!-----==================META TAG==================----->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bank_Draw-v2@2x</title>
 
-    <!------css------>
+    <!----==================CSS==================----->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/bank-draw.css" rel="stylesheet">
 
 
-    <!------schedule round js------>
+    <!---==================SCHEDULE ROUND JS==================---->
     <script src="assets/js/jquery.js" type="text/javascript"></script>
     <script src="assets/js/raphael.js" type="text/javascript"></script>
     <script src="assets/js/init.js" type="text/javascript"></script>
@@ -25,7 +26,8 @@
 <body>
 
     <div id="wrapper">
-        <!------Left Side Menu Panel------>
+        <!----==================OUT WRAPPER==================---->
+        <!-----==================LEFT SIDE MENU==================---->
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="side-menu">
@@ -34,7 +36,7 @@
                             <span>
                                 <a href=""><img alt="image" src="assets/img/profile_small.png" /></a>
                             </span>
-                            
+
                         </div>
                         <div class="logo-element">
                             A
@@ -84,17 +86,17 @@
 
             </div>
         </nav>
-        <!------Left Side End------>
-        <!------Right Side Panel------>
-        <div id="page-wrapper" class="inner-page-wrapper">
-            <!------Top Nav Bar------>
+        <!----==================LEFT SIDE MENU END==================---->
+        <!----==================RIGHT SIDE PANEL==================---->
+        <div id="page-wrapper" class="bankdraw-inner-page">
+            <!----==================TOP NAV BAR==================---->
             <div class="row white-bg">
                 <div class="col-md-1 noPdingLeft">
-                        <div class="closeBox">
-                                <p><a href="#">Close <i class="fa fa-caret-right"></i></a></p>
-                        </div>
+                    <div class="closeBox">
+                        <p><a href="#">Close <i class="fa fa-caret-right"></i></a></p>
+                    </div>
                 </div>
-                <div class="col-sm-7 text1">
+                <div class="col-sm-7 heading">
                     <h2>New Bank Draw Request</h2>
                     <h2 class="label label-info1">OWNER</h2>
                     <h4>Enclave at Sun Canyon Lots 34 and 35, LLC</h4>
@@ -129,13 +131,13 @@
                     </table>
                 </div>
             </div>
-            <!------Middle Content------>
+            <!----==================MIDDLE CONTENT==================---->
             <div class="row prog-inner mt35">
-                <div class="row progressBar">
-                    <!-- START DEFAULT WIZARD -->
+                <div class="row progressBar mt15">
+                    <!----================== START DEFAULT WIZARD==================---->
                     <div class="col-lg-9">
                         <div class="row bs-wizard" style="border-bottom:0;">
-
+                            <!-- active -->
                             <div class="col-xs-12 col-md-2 bs-wizard-step complete">
                                 <div class="progress"><div class="progress-bar"></div></div>
                                 <a href="#" class="bs-wizard-dot"></a>
@@ -143,34 +145,29 @@
                             </div>
 
                             <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                                <!-- complete -->
                                 <div class="progress"><div class="progress-bar"></div></div>
                                 <a href="#" class="bs-wizard-dot"></a>
                                 <div class="bs-wizard-info text-center">Draw Details</div>
                             </div>
 
                             <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                                <!-- complete -->
                                 <div class="progress"><div class="progress-bar"></div></div>
                                 <a href="#" class="bs-wizard-dot"></a>
                                 <div class="bs-wizard-info text-center">Compliance</div>
                             </div>
 
                             <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                                <!-- active -->
                                 <div class="progress"><div class="progress-bar"></div></div>
                                 <a href="#" class="bs-wizard-dot"></a>
                                 <div class="bs-wizard-info text-center">Documents</div>
                             </div>
 
                             <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                                <!-- active -->
                                 <div class="progress"><div class="progress-bar"></div></div>
                                 <a href="#" class="bs-wizard-dot"></a>
                                 <div class="bs-wizard-info text-center">Payment Details</div>
                             </div>
                             <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                                <!-- active -->
                                 <div class="progress"><div class="progress-bar"></div></div>
                                 <a href="#" class="bs-wizard-dot"></a>
                                 <div class="bs-wizard-info text-center">Finalize</div>
@@ -189,7 +186,7 @@
                     </div>
                 </div>
                 <!-- END DEFAULT WIZARD -->
-                <!-- Date Range and summary of selected -->
+                <!----================== DATE RANGE AND SUMMARY OF SELECTED LEFT SIDE==================----->
                 <div class="row pt20">
                     <div class="col-md-4 customScroll">
                         <div class="table-responsive">
@@ -281,157 +278,143 @@
                             </table>
                         </div>
                     </div>
-
-                        <div class="col-md-8">
-                            <div class="panel-body custom-panel-body">
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="tab-1">
-                                        <div class="table-responsive">
-                                            <p class="hding">Summary of Selected Pay Applications</p>
-                                            <table class="table table-custom1">
-                                                <thead>
-                                                    <tr class="lightgry">
-                                                        <th>Info</th>
-                                                        <th width="150px">Sched / Est<br /> Completion Date</th>
-                                                        <th>Construction</th>
-                                                        <th>SOW</th>
-                                                        <th>Amount</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="TableDetails">
-                                                                <span>Bob Jones</span>
-                                                                <p>Flora Corp.</p>
-                                                                <ul class="breadcrumb1">
-                                                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </td>
-                                                        <td width="150px">
-                                                            <span class="greenTxt">sched</span>
-                                                            <p class="bigTxt">Jun 23, 2016</p>
-                                                            <span class="greenTxt">sched</span>
-                                                            <p class="bigTxt">Jun 23, 2016</p>
-                                                        </td>
-                                                        <td>
-                                                            <span class="greenTxt">completed</span>
-                                                            <p class="bigTxt">84%</p>
-                                                            <span class="greenTxt">cost</span>
-                                                            <p class="bigTxt">$1,450,000</p>
-                                                        </td>
-                                                        <td>
-                                                            <span>
-                                                                Master bathroom cabinetry,
-                                                                Carpet, Kitchen Something, Another
-                                                                something.
-                                                            </span>
-                                                        </td>
-                                                        <td>
-                                                            <h2>$150,000</h2>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="TableDetails">
-                                                                <span>Bob Jones</span>
-                                                                <p>Flora Corp.</p>
-                                                                <ul class="breadcrumb1">
-                                                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </td>
-                                                        <td width="150px">
-                                                            <span class="greenTxt">sched</span>
-                                                            <p class="bigTxt">Jun 23, 2016</p>
-                                                            <span class="greenTxt">sched</span>
-                                                            <p class="bigTxt">Jun 23, 2016</p>
-                                                        </td>
-                                                        <td>
-                                                            <span class="greenTxt">completed</span>
-                                                            <p class="bigTxt">84%</p>
-                                                            <span class="greenTxt">cost</span>
-                                                            <p class="bigTxt">$1,450,000</p>
-                                                        </td>
-                                                        <td>
-                                                            <span>
-                                                                Master bathroom cabinetry,
-                                                                Carpet, Kitchen Something, Another
-                                                                something.
-                                                            </span>
-                                                        </td>
-                                                        <td>
-                                                            <h2>$150,000</h2>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
+                    <!----================== DATE RANGE AND SUMMARY OF SELECTED LEFT SIDE END==================----->
+                    <!----================== SUMMARY OF SELECTED PAY APPLICATIONS RIGHT SIDE==================----->
+                    <div class="col-md-8">
+                        <div class="panel-body custom-panel-body ">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab-1">
+                                    <div class="table-responsive">
+                                        <p class="hding">Summary of Selected Pay Applications</p>
+                                        <table class="table table-custom1">
+                                            <thead>
+                                                <tr class="lightgry">
+                                                    <th>Info</th>
+                                                    <th width="150px">Sched / Est<br /> Completion Date</th>
+                                                    <th>Construction</th>
+                                                    <th>SOW</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="TableDetails">
+                                                            <span>Bob Jones</span>
+                                                            <p>Flora Corp.</p>
+                                                            <ul class="breadcrumb1">
+                                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td width="150px">
+                                                        <span class="greenTxt">sched</span>
+                                                        <p class="bigTxt">Jun 23, 2016</p>
+                                                        <span class="greenTxt">sched</span>
+                                                        <p class="bigTxt">Jun 23, 2016</p>
+                                                    </td>
+                                                    <td>
+                                                        <span class="greenTxt">completed</span>
+                                                        <p class="bigTxt">84%</p>
+                                                        <span class="greenTxt">cost</span>
+                                                        <p class="bigTxt">$1,450,000</p>
+                                                    </td>
+                                                    <td>
+                                                        <span>
+                                                            Master bathroom cabinetry,
+                                                            Carpet, Kitchen Something, Another
+                                                            something.
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <h2>$150,000</h2>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="TableDetails">
+                                                            <span>David Anderson</span>
+                                                            <p>Company Name Here</p>
+                                                            <ul class="breadcrumb1">
+                                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td width="150px">
+                                                        <span class="greenTxt">sched</span>
+                                                        <p class="bigTxt">Jun 23, 2016</p>
+                                                        <span class="greenTxt">sched</span>
+                                                        <p class="bigTxt">Jun 23, 2016</p>
+                                                    </td>
+                                                    <td>
+                                                        <span class="greenTxt">completed</span>
+                                                        <p class="bigTxt">84%</p>
+                                                        <span class="greenTxt">cost</span>
+                                                        <p class="bigTxt">$1,450,000</p>
+                                                    </td>
+                                                    <td>
+                                                        <span>
+                                                            Master bathroom cabinetry,
+                                                            Carpet, Kitchen Something, Another
+                                                            something.
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <h2>$150,000</h2>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-
-                                    <div class="tab-pane" id="tab-2">
-                                        <b>Tab2 Data</b>
-                                    </div>
-                                    <div class="tab-pane" id="tab-3">
-                                        <b>Tab3 Data</b>
-                                    </div>
-                                    <div class="tab-pane" id="tab-4">
-                                        <b>Tab4 Data</b>
-                                    </div>
-                                    <div class="tab-pane" id="tab-5">
-                                        <b>Tab5 Data</b>
-                                    </div>
-                                    <div class="tab-pane" id="tab-6">
-                                        <b>Tab6 Data</b>
-                                    </div>
-
+                                </div>
+                                <div class="tab-pane" id="tab-2">
+                                    <b>Tab2 Data</b>
+                                </div>
+                                <div class="tab-pane" id="tab-3">
+                                    <b>Tab3 Data</b>
+                                </div>
+                                <div class="tab-pane" id="tab-4">
+                                    <b>Tab4 Data</b>
+                                </div>
+                                <div class="tab-pane" id="tab-5">
+                                    <b>Tab5 Data</b>
+                                </div>
+                                <div class="tab-pane" id="tab-6">
+                                    <b>Tab6 Data</b>
                                 </div>
                             </div>
-
                         </div>
-                        <!-- End Range and summary of selected -->
-
                     </div>
-                <!------Middle Content End------>
-
-
+                </div>
 
             </div>
-        </div><!----Wrapper End----->
-        <!-- Mainly scripts -->
-        <script src="assets/js/jquery-2.1.1.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-        <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+            <!----==================MIDDLE CONTENT END==================---->
+        </div>
+        <!----==================INNER PAGE WRAPPER END================== ---->
+    </div>
+    <!----==================OUT WRAPPER END================== ---->
 
-        <!-- Peity -->
-        <script src="assets/js/plugins/peity/jquery.peity.min.js"></script>
+    <!----==================BOOTSTRAP JS================== ---->
+    <script src="assets/js/jquery-2.1.1.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>  
 
-        <!-- Custom and plugin javascript -->
-        <script src="assets/js/inspinia.js"></script>
-        <script src="assets/js/plugins/pace/pace.min.js"></script>
+    <!----==================I-CHECK================== ---->
+    <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
 
-        <!-- iCheck -->
-        <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
-
-        <!-- Peity -->
-        <script src="assets/js/demo/peity-demo.js"></script>
-
-        <script>
-            $(document).ready(function () {
-                $('.i-checks').iCheck({
-                    checkboxClass: 'icheckbox_square-green',
-                    radioClass: 'iradio_square-green',
-                });
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
             });
-        </script>
+        });
+    </script>
 
 </body>
 
