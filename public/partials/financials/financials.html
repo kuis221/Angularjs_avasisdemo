@@ -72,18 +72,22 @@
 
                     <div id="diagram"></div>
                     <div class="get">
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="61"/>
-                            <input type="hidden" class="color" value="#79c485"/>
-                            <input type="hidden" class="width" value="20"/>
+
+                        <div ng-raphael-arc="arcConfig">
                         </div>
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="76"/>
-                            <input type="hidden" class="color" value="#3aabd5"/>
-                            <input type="hidden" class="width" value="15"/>
-                        </div>
+
+                        <!--       <div class="arc">
+                                   <span class="text"></span>
+                                   <input type="hidden" class="percent" value="61"/>
+                                   <input type="hidden" class="color" value="#79c485"/>
+                                   <input type="hidden" class="width" value="20"/>
+                               </div>
+                               <div class="arc">
+                                   <span class="text"></span>
+                                   <input type="hidden" class="percent" value="76"/>
+                                   <input type="hidden" class="color" value="#3aabd5"/>
+                                   <input type="hidden" class="width" value="15"/>
+                               </div>-->
 
                     </div>
                 </div>
@@ -221,9 +225,11 @@
                                     <tr class="bg-gray">
                                         <td>
                                             <div class="space1">
-                                                <span class="sky" ng-click="general_condition_toggle = !general_condition_toggle">
+                                                <span class="sky"
+                                                      ng-click="general_condition_toggle = !general_condition_toggle">
                                                     General Condition
-                                                    <i class="fa" ng-class="{ 'fa-chevron-up': general_condition_toggle, 'fa-chevron-down': !general_condition_toggle }"></i>
+                                                    <i class="fa"
+                                                       ng-class="{ 'fa-chevron-up': general_condition_toggle, 'fa-chevron-down': !general_condition_toggle }"></i>
                                                 </span>
                                             </div>
                                         </td>
@@ -370,8 +376,11 @@
                                     <tbody>
                                     <tr class="bg-gray">
                                         <td>
-                                            <div class="space1"><span class="sky" ng-click="site_work_toggle = !site_work_toggle">Site Work
-                                                <i class="fa fa-chevron-up" ng-class="{ 'fa-chevron-up': site_work_toggle, 'fa-chevron-down': !site_work_toggle }"></i></span></div>
+                                            <div class="space1"><span class="sky"
+                                                                      ng-click="site_work_toggle = !site_work_toggle">Site Work
+                                                <i class="fa fa-chevron-up"
+                                                   ng-class="{ 'fa-chevron-up': site_work_toggle, 'fa-chevron-down': !site_work_toggle }"></i></span>
+                                            </div>
                                         </td>
                                         <td>Est.Budget</td>
                                         <td>Under Contract</td>
@@ -504,5 +513,3 @@
      </div>-->
 
 </div>
-
-<script src="assets/js/init.js" type="text/javascript"></script>

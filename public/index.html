@@ -16,8 +16,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="content/css/style.css" rel="stylesheet">
 
-    <script src="assets/js/jquery.js" type="text/javascript"></script>
-    <script src="assets/js/raphael.js" type="text/javascript"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="bower_components/raphael/raphael-min.js"></script>
 
     <link href="bower_components/ng-table/dist/ng-table.min.css" rel="stylesheet">
     <link href="bower_components/angular-animate-css/build/nga.all.min.css" rel="stylesheet">
@@ -53,28 +53,33 @@
                     <a ui-sref="dashboards"><i class="fa fa-home"></i> <span class="nav-label">Dashboards</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="projects"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Projects</span></a>
+                    <a ui-sref="projects"><i class="fa fa-graduation-cap"></i> <span
+                            class="nav-label">Projects</span></a>
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="action-items"><i class="fa fa-flag"></i> <span class="nav-label">Action Items</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="team-members"><i class="fa fa-users"></i> <span class="nav-label">Team Members</span></a>
+                    <a ui-sref="team-members"><i class="fa fa-users"></i> <span
+                            class="nav-label">Team Members</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="communication"><i class="fa fa-comment"></i> <span class="nav-label">Communication</span> </a>
+                    <a ui-sref="communication"><i class="fa fa-comment"></i> <span
+                            class="nav-label">Communication</span> </a>
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="schedule"><i class="fa fa-calendar"></i> <span class="nav-label">Schedule</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="financials.main"><i class="fa fa-bar-chart"></i> <span class="nav-label">Financials</span></a>
+                    <a ui-sref="financials.main"><i class="fa fa-bar-chart"></i> <span
+                            class="nav-label">Financials</span></a>
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="bids"><i class="fa fa-files-o"></i> <span class="nav-label">Bids</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="procurement"><i class="fa fa-check-square"></i> <span class="nav-label">Procurement</span></a>
+                    <a ui-sref="procurement"><i class="fa fa-check-square"></i> <span
+                            class="nav-label">Procurement</span></a>
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="photos"><i class="fa fa-picture-o"></i> <span class="nav-label">Photos</span></a>
@@ -134,6 +139,7 @@
 <script src="bower_components/moment/min/moment.min.js"></script>
 
 <script src="content/js/app.js"></script>
+<script src="content/js/directives.js"></script>
 <script src="partials/dashboards/dashboards.js"></script>
 <script src="partials/financials/financials.js"></script>
 <script src="partials/financials/bank-draw/bank-draw.js"></script>

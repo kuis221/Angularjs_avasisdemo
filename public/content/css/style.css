@@ -13,3 +13,7 @@
 .bg-gray {
     background-color: #eee;
 }
+
+svg tspan {
+    font-weight: 700;
+}
