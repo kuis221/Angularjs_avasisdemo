@@ -83,33 +83,38 @@
 
 .btn.focus, .btn:focus, .btn:hover{border:none; outline:none; outline-offset:none;}
 
-/*==================================================
-                                        Bank_Draw-v2@2x        
-==================================================*/
+
+/*----ToBrak Draw Common classes----*/
 .bankdraw-inner-page { background: #f9f9f9;}
-.bankdraw-inner-page .white-bg {  background: #fff none repeat scroll 0 0; box-shadow: 1px 0 4px #d8d8d8; }
-.bankdraw-inner-page .prog-inner {background-color: #fff;  border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px;}
-.bankdraw-inner-page .heading h2 {  font-weight: normal;  font-family: 'AvenirNextLTPro-Regular';}
-.bankdraw-inner-page .heading h4 { font-weight: normal; margin: 10px 0 8px 0;  padding: 0px;  font-size: 16px; font-family: 'AvenirNextLTPro-Regular';  text-transform: uppercase;}
-.bankdraw-inner-page .heading h5 { margin: 3px 0; color: #8b8b8b;}
-.bankdraw-inner-page .heading span { display: block; font-size: 14px;}
-.bankdraw-inner-page .label.label-info1 { background: #2a2d33; color: #FFF;}
-.bankdraw-inner-page .customScroll {  overflow-y: scroll; height: 670px;}
+.bankdraw-inner-page .bankbg {  background: #fff none repeat scroll 0 0; box-shadow: 1px 0 4px #d8d8d8; }
 .bankdraw-inner-page .closeBox { background: #000; width: 100%; padding: 109px 0;}
 .bankdraw-inner-page .closeBox p, .closeBox p a { color: #fff; text-align: center; font-size: 15px; }
 .bankdraw-inner-page .closeBox p i { font-size: 15px; margin-left: 5px;  position: relative;  top: 1px; }
+.bankdraw-inner-page .heading h2 {  font-weight: normal;  font-family: 'AvenirNextLTPro-Regular';}
+.bankdraw-inner-page .heading span { display: block; font-size: 14px;}
+.bankdraw-inner-page .heading h5 { margin: 3px 0; color: #8b8b8b;}
+.bankdraw-inner-page .heading h4 { font-weight: normal; margin: 10px 0 8px 0;  padding: 0px;  font-size: 16px; font-family: 'AvenirNextLTPro-Regular';  text-transform: uppercase;}
+table.tablebankTopRight tr td { border: none; padding: 4px 0;}
+table.tablebankTopRight tr td span { color: #2a2d33;  font-family: "AvenirNextLTPro-Demi";  font-size: 16px; text-transform: uppercase;}
+table.tablebankTopRight tr td span.noBtn { background: #44474b none repeat scroll 0 0; border-radius: 4px; color: #fff; font-family: "AvenirNextLTPro-Regular"; font-size: 14px; padding: 3px 10px;}
+table.tablebankTopRight tr td p {font-size: 14px; margin: 0;}
+.table.tablebankTopRight tr td p.greenClr{color:#79c485;}
+/*==================================================
+                                        Bank_Draw-v2@2x        
+==================================================*/
+.bankdraw-inner-page .prog-inner {background-color: #fff;  border: 1px solid #d7d7d7; border-radius: 4px; margin: 51px auto; padding: 0 15px;}
+.bankdraw-inner-page .label.label-info1 { background: #2a2d33; color: #FFF;}
+.bankdraw-inner-page .customScroll {  overflow-y: scroll; height: 670px;}
 .bankdraw-inner-page .lightgry th { color: #808080; font-size: 15px;}
 .bankdraw-inner-page .table.daterange label { margin-top: 27px;}
 .bankdraw-inner-page label {display: inline-block; font-weight: 700; margin-bottom: 5px;  max-width: 100%;}
 .bankdraw-inner-page .savedraft { position: relative; top: 10px;  font-family: "AvenirNextLTPro-Demi";}
+
 /**************************START WIZARD**************************/
 .bs-wizard { margin-top: 5px;}
 .bs-wizard { border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
 .bs-wizard > .bs-wizard-step { padding: 0; position: relative;}
 .bs-wizard > .bs-wizard-step + .bs-wizard-step { }
-.greenTxt { color: #79c485; font-size: 16px;}
-.bigTxt {font-size: 18px;}
-.table-custom1 span {font-size: 16px;}
 .bs-wizard > .bs-wizard-step .bs-wizard-info {color: #4a4a4a; font-family:'AvenirNextLTPro-Demi'; font-size: 14px;}
 .complete .text-center { color: #e75c5b !important;}
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot {background: #f6cece none repeat scroll 0 0; border-radius: 50%; display: block; height: 35px; left: 50%; margin-left: -15px; margin-top: -15px; position: absolute; top: 23px; width: 35px;}
@@ -127,24 +132,22 @@
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {pointer-events: none;}
 
 /*************************** END Form Wizard **********************************/
-
-table.tableTopRight tr td {border: none;  padding: 4px 0;}
-.table.daterange tr td b { color: #4a4a4a;}
-table.tableTopRight tr td span {font-size: 16px;font-family: 'AvenirNextLTPro-Bold'; text-transform: uppercase; color: #44474b;}
-table.tableTopRight tr td span.noBtn { font-size: 14px; background: #44474b; padding: 3px 10px; border-radius: 4px; color: #fff; font-family: 'AvenirNextLTPro-Regular'; }
-table.tableTopRight tr td p { font-size: 14px; margin: 0px}
-.table.tableTopRight tr td p.greenClr {color: #79c485;}
+.greenTxt { color: #79c485; font-size: 16px;}
+.bigTxt {font-size: 18px;}
+.table-bankright span {font-size: 16px; }
+.table-bankright{ border: 1px solid #d7d7d7;}
 .prog-inner .progressBar { padding-bottom: 27px; padding: 0 15px;}
-.table.daterange p { color: #4a4a4a; font-size: 16px;}
-.table.daterange span { color: #3aabd5; font-size: 16px;}
-.table.daterange tr td { border: none; padding: 3px;}
-.table.daterange input { margin-top: 35px;}
-.table.daterange tr { border-bottom: 1px solid #dddddd;}
-.table.daterange tr td { padding: 13px 8px;}
-.table.daterange .filterDetails { text-align: left; padding-left: 10px;}
-.table.daterange .filterDetails strong {color: #3aabd5; font-size: 18px;}
-.table.daterange .filterDetails p { color: #4a4a4a; font-size: 16px; margin: 0; font-family: 'AvenirNextLTPro-Regular'; }
-.table.daterange .filterDetails span {color: #545454; font-size: 24px; }
+.daterange tr td b { color: #4a4a4a;}
+.daterange p { color: #4a4a4a; font-size: 16px;}
+.daterange span { color: #3aabd5; font-size: 16px; font-family:'AvenirNextLTPro-Demi';}
+.daterange tr td { border: none; padding: 3px;}
+.daterange input { margin-top: 35px;}
+.daterange tr { border-bottom: 1px solid #dddddd;}
+.daterange tr td { padding: 13px 8px;}
+.daterange .filterDetails { text-align: left; padding-left: 10px;}
+.daterange .filterDetails strong {color: #3aabd5; font-size: 18px; font-family:'AvenirNextLTPro-Demi';}
+.daterange .filterDetails p { color: #4a4a4a; font-size: 16px; margin: 0; font-family: 'AvenirNextLTPro-Regular'; }
+.daterange .filterDetails span {color: #545454; font-size: 24px; }
 .dateRangeBox { background: #fff none repeat scroll 0 0;  box-shadow: 2px 1px 7px #d4d4d4; height: 80px; left: 79px; position: absolute; top: 71px; width: 473px; z-index: 999;
  border: 1px solid #efefef; display: block;}
  .dateRangeBox::after {-moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;  
@@ -153,4 +156,54 @@ table.tableTopRight tr td p { font-size: 14px; margin: 0px}
  .icheckbox_square-green {background-position: 0 0;}
 .icheckbox_square-green, .iradio_square-green { border: medium none; cursor: pointer;  display: inline-block; height: 22px; margin: 0;  padding: 0; vertical-align: middle; width: 22px;}
 
+/*==================================================
+                                        Bank_Draw-v2-Compliance@2x
+==================================================*/
+.bankCompliance tr { border: 1px solid #e7eaec;}
+.table.bankCompliance th { color: #808080;font-size: 13px; font-weight: 600; padding: 14px;}
+.bankCompliance td { padding: 10px 20px; font-family: "AvenirNextLTPro-Regular";}
+.bankCompliance span { font-size: 14px; font-family: avenirnextltpro-demi;}
+.bankCompliance p { font-size: 12px; margin: 0; padding: 0; white-space: nowrap; font-family: avenirnextltpro-demi;}
+.bankCompliance span.sky1 { color: #3aabd5;  font-size: 13px; font-weight: 600;}
+.bankCompliance span.sky3 { color: #3aabd5; font-weight: 600; font-size: 13px;}
+.bankCompliance .sky4 { color: #79c485; font-size: 13px; font-weight: 600;}
+.bankCompliance .sky5 {color: #e25c5c; font-size: 13px; font-weight: 600;}
+.breadcrumb2 { background-color: #none; margin-bottom: 0; padding: 0;}
+.breadcrumb2 > li {border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
+.breadcrumb2 li a { display: inline-block; color: #7f8a90 !important; }
+.feed-Compliance > .pull-left {margin-right: 5px;}
+.feed-Compliance { padding-bottom: 0px;}
+.buy1 {float: left;}
+.btn-dangersort { background-color: #transparent; border-color: #79c485; color: #808080;  border: 1px solid #aaaaaa;  padding: 7px 10px;  white-space: nowrap;}
+.btn1 { border-radius: 40px;}
+.buy1 a.btn1 i { vertical-align: middle;  font-size: 19px;}
+.media-bankCompliance {  margin: 3px;}
+.breadcrumb2 > li:last-child {  border: none;}
+.media-bankCompliance strong {color: #3aabd5;}
+.table.bankCompliance td { vertical-align: middle;padding:10px 20px;}
+.TableDetails { width: 205px;}
+.table.bankCompliance .ibox-tools i { font-size: 18px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 { background: #c1e6f1 none repeat scroll 0 0; border-radius: 50%; display: block; height: 35px;  left: 50%; margin-left: -15px; margin-top: -15px;
+position: absolute; top: 23px;  width: 35px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after { background: #19aad2 none repeat scroll 0 0;  border: 3px solid #fff;  border-radius: 50px;  content: " ";  height: 20px;  left: 7px;
+position: absolute; top: 8px; width: 20px;}
+.bs-wizard-info.text-blue { text-align: center;color: #19aad2 !important;}
+.outcompliance {color: #e7595a;  font-weight: 600;}
+.creditalert {float: right;margin: 0 8px;}
+date-muted { color: #44474b;}
+.flag { margin-top: 2px;}
+.table.bankCompliance th img { margin: 0 9px;}
 
+
+
+
+
+/*==================================================
+                                     Bank_Draw-v2-Documents@2x
+==================================================*/
+.bankdocument tr { border: 1px solid #e7eaec;}
+.table.table-striped.bankdocument span.sky1 { color: #3aabd5; font-size: 13px; font-weight: 600;}
+.table.table-striped.bankdocument th { color: #808080; font-size: 13px; font-weight: 600; padding: 14px;}
+.table.table-striped.bankdocument td { padding: 10px; font-family: "AvenirNextLTPro-Regular";}
+.btn-upload {background-color: #2a2d33; border-color: #2a2d33; color: #ffffff;}
+.btn-w-u {min-width: 89px;}

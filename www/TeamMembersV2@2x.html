@@ -176,12 +176,21 @@
                                     <th>Scheduled</th>
                                     <th>Project/Role</th>
                                     <th>Scope Of Work</th>
-                                    <th>Flag Alerts</th>
+                                    <th>Flag Alert</th>
                                     <th>
                                         <div class="buy1 pull-left">
-                                            <a class="btn1 btn-dangersort btn-sm" href="#">
-                                                Sort by  <i class="fa fa-angle-down"></i>
-                                            </a>
+                                            <a class="btn1 btn-dangerteam btn-sm" href="#"
+                                                <a class="#"
+                                                   data-html="true"
+                                                   data-placement="bottom"
+                                                   data-content="
+                                                    <div class='popover-content check'>Name</div><div class='popover-content check'>Company</div><div class='popover-content check'>Next Scheduled</div><div class='popover-content check'>Flag Alerts</div>"
+                                                    data-placement="top"
+                                                    data-toggle="popover"
+                                                    data-container="body"
+                                                    data-original-title="">
+                                                    Sort by <i class="fa fa-angle-down"></i>
+                                                </a>
                                         </div>
                                     </th>
                                 </tr>
@@ -195,13 +204,13 @@
                                             </a>
                                             <div class="media-Compliance">
                                                 <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
                                                     <br>
                                                     <b>Flora Corp.</b>
                                                     <ul class="breadcrumbv22x">
                                                         <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                         <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -209,7 +218,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                                 <img alt="image" class="img-circle" src="assets/img/map_icon.png">
                                             </div>
                                             <div class="media-Compliance">
@@ -221,7 +230,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -232,7 +241,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -245,7 +254,7 @@
                                     </td>
                                     <td>
                                         <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
+                                            <div class="mapflag-alert">
                                                 <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
                                             </div>
                                         </div>
@@ -271,7 +280,7 @@
                                                     <ul class="breadcrumbv22x">
                                                         <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                         <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -279,7 +288,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                                 <img alt="image" class="img-circle" src="assets/img/map_icon.png">
                                             </div>
                                             <div class="media-Compliance">
@@ -291,18 +300,18 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
+                                                <p class="multipalepro">Multiple Projects</p>
+                                                <b class="multipal">Multiple Roles</b>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -315,7 +324,77 @@
                                     </td>
                                     <td>
                                         <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
+                                            <div class="mapflag-alert">
+                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <a class="#"><i class="fa fa-cog"></i></a>
+                                            <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content gear2x'>Add Notes</div><div class='popover-content gear2x'>Permissions</div><div class='popover-content gear2xred'>Remove From Project</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-angle-down"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td width="220px">
+                                        <div class="feed-Compliance">
+                                            <a class="pull-left" href="#">
+                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="MemberTableDetails">
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <br>
+                                                    <b>Flora Corp.</b>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
+                                                <p class="light-big">next sched. 24 Jun, 2015</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">Parking Level A</p>
+                                                <b>Senior Director</b>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">
+                                                    Master bathroom cabinetry, Carpet,<br>
+                                                    Kitchen Something, Another something som...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="mapflag-alert">
                                                 <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
                                             </div>
                                         </div>
@@ -335,13 +414,13 @@
                                             </a>
                                             <div class="media-Compliance">
                                                 <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
                                                     <br>
                                                     <b>Flora Corp.</b>
                                                     <ul class="breadcrumbv22x">
                                                         <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                         <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -349,7 +428,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                                 <img alt="image" class="img-circle" src="assets/img/map_icon.png">
                                             </div>
                                             <div class="media-Compliance">
@@ -361,7 +440,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -372,7 +451,7 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -385,7 +464,7 @@
                                     </td>
                                     <td>
                                         <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
+                                            <div class="mapflag-alert">
                                                 <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
                                             </div>
                                         </div>
@@ -405,13 +484,13 @@
                                             </a>
                                             <div class="media-Compliance">
                                                 <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
                                                     <br>
                                                     <b>Flora Corp.</b>
                                                     <ul class="breadcrumbv22x">
                                                         <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                         <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -419,511 +498,19 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Bob Jones <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user_5.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Aaron Cravers <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                                 <img alt="image" class="img-circle" src="assets/img/map_icon.png">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
                                                 <p class="pink"><span class="sky4">On Site</span></p>
-                                                <p class="light-big">next sched. N/A</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br />
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user_6.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Jim Stevens <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Lights and fixtures etc.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">ON SITE</span> No Show</p>
                                                 <p class="light-big">next sched. 24 Jun, 2015</p>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -934,12 +521,12 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
                                                 <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br />
+                                                    Master bathroom cabinetry, Carpet,<br>
                                                     Kitchen Something, Another something som...
                                                 </p>
                                             </div>
@@ -947,7 +534,7 @@
                                     </td>
                                     <td>
                                         <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
+                                            <div class="mapflag-alert">
                                                 <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
                                             </div>
                                         </div>
@@ -959,148 +546,6 @@
                                         </div>
                                     </td>
                                 </tr>
-
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user_7.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Jessica Sawyer <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Lights and fixtures etc.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br />
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user_7.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span>Jessica Sawyer <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Lights and fixtures etc.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br />
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-tools pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-
                                 <tr class="whiteBgColor">
                                     <td width="220px">
                                         <div class="feed-Compliance">
@@ -1109,13 +554,13 @@
                                             </a>
                                             <div class="media-Compliance">
                                                 <div class="MemberTableDetails">
-                                                    <span>Jessica Sawyer <img src="assets/img/alert_small.png"></span>
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
                                                     <br>
-                                                    <b>Lights and fixtures etc.</b>
+                                                    <b>Flora Corp.</b>
                                                     <ul class="breadcrumbv22x">
                                                         <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                         <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>	415 123 3456</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1123,19 +568,19 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon-gry.png">
+                                            <div class="mapflag pull-left">
+                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
-                                                <p class="light-big">OFF SITE </p>
+                                                <p class="pink"><span class="sky4">On Site</span></p>
                                                 <p class="light-big">next sched. 24 Jun, 2015</p>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
@@ -1146,12 +591,12 @@
                                     </td>
                                     <td>
                                         <div class="feed-Compliance">
-                                            <div class="flag pull-left">
+                                            <div class="mapflag pull-left">
                                             </div>
                                             <div class="media-Compliance">
                                                 <small class="pull-right"></small>
                                                 <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br />
+                                                    Master bathroom cabinetry, Carpet,<br>
                                                     Kitchen Something, Another something som...
                                                 </p>
                                             </div>
@@ -1159,7 +604,7 @@
                                     </td>
                                     <td>
                                         <div class="ibox-tools pull-left">
-                                            <div class="flag-alert">
+                                            <div class="mapflag-alert">
                                                 <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
                                             </div>
                                         </div>
@@ -1171,6 +616,287 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <tr class="whiteBgColor">
+                                    <td width="220px">
+                                        <div class="feed-Compliance">
+                                            <a class="pull-left" href="#">
+                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="MemberTableDetails">
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <br>
+                                                    <b>Flora Corp.</b>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
+                                                <p class="light-big">next sched. 24 Jun, 2015</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">Parking Level A</p>
+                                                <b>Senior Director</b>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">
+                                                    Master bathroom cabinetry, Carpet,<br>
+                                                    Kitchen Something, Another something som...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="mapflag-alert">
+                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <a class="#"><i class="fa fa-cog"></i></a>
+                                            <a href="#"><i class="fa fa-angle-down"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td width="220px">
+                                        <div class="feed-Compliance">
+                                            <a class="pull-left" href="#">
+                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="MemberTableDetails">
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <br>
+                                                    <b>Flora Corp.</b>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                                <img alt="image" class="img-circle" src="assets/img/map_icon-gry.png">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="pink"><span class="offsite">OFF SITE</span></p>
+                                                <p class="light-big">next sched. 24 Jun, 2015</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">Parking Level A</p>
+                                                <b>Senior Director</b>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">
+                                                    Master bathroom cabinetry, Carpet,<br>
+                                                    Kitchen Something, Another something som...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="mapflag-alert">
+                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <a class="#"><i class="fa fa-cog"></i></a>
+                                            <a href="#"><i class="fa fa-angle-down"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td width="220px">
+                                        <div class="feed-Compliance">
+                                            <a class="pull-left" href="#">
+                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="MemberTableDetails">
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <br>
+                                                    <b>Flora Corp.</b>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                                <img alt="image" class="img-circle" src="assets/img/map_icon-gry.png">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="pink"><span class="offsite">OFF SITE</span></p>
+                                                <p class="light-big">next sched. 24 Jun, 2015</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">Parking Level A</p>
+                                                <b>Senior Director</b>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">
+                                                    Master bathroom cabinetry, Carpet,<br>
+                                                    Kitchen Something, Another something som...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="mapflag-alert">
+                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <a class="#"><i class="fa fa-cog"></i></a>
+                                            <a href="#"><i class="fa fa-angle-down"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td width="220px">
+                                        <div class="feed-Compliance">
+                                            <a class="pull-left" href="#">
+                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="MemberTableDetails">
+                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                                    <br>
+                                                    <b>Flora Corp.</b>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                                <img alt="image" class="img-circle" src="assets/img/map_icon-gry.png">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="pink"><span class="offsite">OFF SITE</span></p>
+                                                <p class="light-big">next sched. 24 Jun, 2015</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">Parking Level A</p>
+                                                <b>Senior Director</b>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="mapflag pull-left">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <p class="light-big">
+                                                    Master bathroom cabinetry, Carpet,<br>
+                                                    Kitchen Something, Another something som...
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="mapflag-alert">
+                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <a class="#"><i class="fa fa-cog"></i></a>
+                                            <a href="#"><i class="fa fa-angle-down"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -1181,10 +907,68 @@
         </div>
         <!----==================OUT WRAPPER END================== ---->
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header customModalHeader">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Projects Assigned to Bob Jones</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-cutome">
+                            <thead>
+                                <tr class="lightgry">
+                                    <th>Projects</th>
+                                    <th>Role</th>
+                                    <th colspan="2">SOW</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="skyColor">Project Title Goes Here</span></td>
+                                    <td>Contractor</td>
+                                    <td>Sollicitudin Cursus Euismod</td>
+                                    <td>
+                                        <ul class="breadcrumbv22x">
+                                            <li><a href="#"><i class="fa fa-trash-o"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="skyColor">Project Title Goes Here</span></td>
+                                    <td>Subcontractor</td>
+                                    <td>Vivamus sagittis lacus vel augue laoreet rutrum </td>
+                                    <td>
+                                        <ul class="breadcrumbv22x">
+                                            <li><a href="#"><i class="fa fa-trash-o"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!----==================BOOTSTRAP JS================== ---->
     <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("[data-toggle=popover]").popover();
+        });
+    </script>
+
 </body>
 </html>

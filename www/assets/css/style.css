@@ -26,6 +26,20 @@
     unicode-range: U+0-10FFFF;
 }
 
+@font-face {
+	font-family:'AvenirNextLTPro-Demi';
+	src: url('../fonts/AvenirNextLTPro-Demi_gdi.eot');
+	src: url('../fonts/AvenirNextLTPro-Demi_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirNextLTPro-Demi_gdi.woff') format('woff'),
+		url('../fonts/AvenirNextLTPro-Demi_gdi.ttf') format('truetype'),
+		url('../fonts/AvenirNextLTPro-Demi_gdi.svg#AvenirNextLTPro-Demi') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0-10FFFF;
+}
+
+
 /************Comman Class ***********/
 .skyColor{color:#3aabd5}
 
@@ -8060,7 +8074,7 @@ table.tableTopRight tr td {
 
 table.tableTopRight tr td span {
     font-size: 16px;
-    font-family: 'AvenirNextLTPro-Bold';
+    font-family:'AvenirNextLTPro-Demi';
     text-transform: uppercase;
     color: #2a2d33;
 }
