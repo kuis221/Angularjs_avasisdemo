@@ -13,7 +13,7 @@
     <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/bank-draw.css" rel="stylesheet">
+    <link href="assets/css/financial.css" rel="stylesheet">
 
 
     <!---==================SCHEDULE ROUND JS==================---->
@@ -187,10 +187,10 @@
                 </div>
                 <!-- END DEFAULT WIZARD -->
                 <!----================== DATE RANGE AND SUMMARY OF SELECTED LEFT SIDE==================----->
-                <div class="row pt20">
+                <div class="row pt30">
                     <div class="col-md-4 customScroll">
                         <div class="table-responsive">
-                            <table class="table daterange">
+                            <table class="table bankdaterange">
                                 <thead>
                                     <tr>
                                         <th colspan="2"><p>Filter by &nbsp; &nbsp; &nbsp;<span>Date Range</span></p></th>
@@ -201,7 +201,7 @@
                                     <tr>
                                         <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
                                         <td>
-                                            <div class="filterDetails">
+                                            <div class="bankfilterDetails">
                                                 <strong>Bob Jones</strong>
                                                 <p>Project Name Goes Here</p>
                                                 <span>$150,000</span>
@@ -214,7 +214,7 @@
                                     <tr>
                                         <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
                                         <td>
-                                            <div class="filterDetails">
+                                            <div class="bankfilterDetails">
                                                 <strong>Iris Goldman</strong>
                                                 <p>Project Name Goes Here</p>
                                                 <span>$14,000</span>
@@ -227,7 +227,7 @@
                                     <tr>
                                         <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
                                         <td>
-                                            <div class="filterDetails">
+                                            <div class="bankfilterDetails">
                                                 <strong>Bob Jones</strong>
                                                 <p>Project Name Goes Here</p>
                                                 <span>$150,000</span>
@@ -240,7 +240,7 @@
                                     <tr>
                                         <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
                                         <td>
-                                            <div class="filterDetails">
+                                            <div class="bankfilterDetails">
                                                 <strong>David Anderson</strong>
                                                 <p>Project Name Goes Here</p>
                                                 <span>$50,000</span>
@@ -253,7 +253,7 @@
                                     <tr>
                                         <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
                                         <td>
-                                            <div class="filterDetails">
+                                            <div class="bankfilterDetails">
                                                 <strong>Bob Jones</strong>
                                                 <p>Project Name Goes Here</p>
                                                 <span>$150,000</span>
@@ -266,7 +266,7 @@
                                     <tr>
                                         <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
                                         <td>
-                                            <div class="filterDetails">
+                                            <div class="bankfilterDetails">
                                                 <strong>Iris Goldman</strong>
                                                 <p>Project Name Goes Here</p>
                                                 <span>$14,000</span>
@@ -275,8 +275,12 @@
                                         <td><b>Jun 21, 2015</b></td>
                                     </tr>
                                 </tbody>
+                                
                             </table>
+                            
                         </div>
+                        
+
                     </div>
                     <!----================== DATE RANGE AND SUMMARY OF SELECTED LEFT SIDE END==================----->
                     <!----================== SUMMARY OF SELECTED PAY APPLICATIONS RIGHT SIDE==================----->
@@ -299,7 +303,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <div class="TableDetails">
+                                                        <div class="BankTableDetails">
                                                             <span>Bob Jones</span>
                                                             <p>Flora Corp.</p>
                                                             <ul class="breadcrumb1">
@@ -307,6 +311,10 @@
                                                                 <li><a href="#"><i class="fa fa-comments"></i></a></li>
                                                                 <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
                                                             </ul>
+                                                        </div>
+                                                        <div class="col-lg-12 project mt30">
+                                                            <span>Project Name Goes Here</span>
+                                                            <p>Jun 21, 2015</p>
                                                         </div>
                                                     </td>
                                                     <td width="150px">
@@ -334,7 +342,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="TableDetails">
+                                                        <div class="BankTableDetails">
                                                             <span>David Anderson</span>
                                                             <p>Company Name Here</p>
                                                             <ul class="breadcrumb1">
@@ -342,6 +350,10 @@
                                                                 <li><a href="#"><i class="fa fa-comments"></i></a></li>
                                                                 <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
                                                             </ul>
+                                                        </div>
+                                                        <div class="col-lg-12 project mt30">
+                                                            <span>Project Name Goes Here</span>
+                                                            <p>Jun 21, 2015</p>
                                                         </div>
                                                     </td>
                                                     <td width="150px">
@@ -364,12 +376,19 @@
                                                         </span>
                                                     </td>
                                                     <td>
-                                                        <h2>$150,000</h2>
+                                                        <h2>$50,000</h2>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div class="col-lg-12">
+                                            <div class="total pull-right">
+                                                <h3>total</h3>
+                                                <h1>$200,000</h1>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="tab-pane" id="tab-2">
                                     <b>Tab2 Data</b>
@@ -390,19 +409,18 @@
                         </div>
                     </div>
                 </div>
-
+            
             </div>
             <!----==================MIDDLE CONTENT END==================---->
         </div>
         <!----==================INNER PAGE WRAPPER END================== ---->
     </div>
     <!----==================OUT WRAPPER END================== ---->
-
     <!----==================BOOTSTRAP JS================== ---->
     <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>  
+    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!----==================I-CHECK================== ---->
     <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
