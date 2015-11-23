@@ -1,14 +1,17 @@
 ﻿body {  width: 100%; height: 100%;  margin: 0px; padding: 0px;  overflow-x: hidden; }
 
 @font-face {
-    font-family: 'AvenirNextLTPro-MediumCn';
-    src: url('../fonts/AvenirNextLTPro-MediumCn_gdi.eot');
-    src: url('../fonts/AvenirNextLTPro-MediumCn_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNextLTPro-MediumCn_gdi.woff') format('woff'), url('../fonts/AvenirNextLTPro-MediumCn_gdi.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-MediumCn_gdi.svg#AvenirNextLTPro-MediumCn') format('svg');
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
+	font-family:'AvenirNextLTPro-MediumCn';
+	src: url('../fonts/AvenirNextLTPro-MediumCn_gdi.eot');
+	src: url('../fonts/AvenirNextLTPro-MediumCn_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirNextLTPro-MediumCn_gdi.woff') format('woff'),
+		url('../fonts/AvenirNextLTPro-MediumCn_gdi.ttf') format('truetype'),
+		url('../fonts/AvenirNextLTPro-MediumCn_gdi.svg#AvenirNextLTPro-MediumCn') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0-10FFFF;
 }
-
 @font-face {
     font-family: 'AvenirNextLTPro-Regular';
     src: url('../fonts/AvenirNextLTPro-Regular_gdi.eot');
@@ -82,21 +85,6 @@
 .mr70{ margin-right:70px !important;}
 
 .btn.focus, .btn:focus, .btn:hover{border:none; outline:none; outline-offset:none;}
-/*==================================================
-                                     Team Members V2-Empty@2x         
-==================================================*/
-.teammembers{ padding: 20px 0;}
-.teammembers ul.topSubtitle { list-style: outside none none; margin: 0; padding: 0;}
-.teammembers h2.hding { color: #4a4a4a;  font-size: 28px; margin: 0 0 10px;  font-family: 'AvenirNextLTPro-Regular';}
-.teammembers .teaminvite{margin:5px 11px;}
-.teammembers .teaminvite a { font-size: 17px; margin: 0; padding: 10px; font-family:'AvenirNextLTPro-Demi'; }
-.user-info{font-family:'AvenirNextLTPro-Demi';}
- .teammembers .topSubtitle li a{ font-size:14px; font-weight:600 }
-.teammembers .topSubtitle li a i { margin-left: 5px;}
-.teamarrow{ background: url("../img/arrowUp.png") no-repeat scroll right center; padding: 15px 0; width:100%; }
-.teamarrow .assign { width: 66.444%; margin: 18% auto; text-align: center;}
-.teamarrow .assign > p {  font-size: 22px; font-weight: 500; color: #4a4a4a;  font-family: 'AvenirNextLTPro-Regular'; }
-.teamarrow .assign > span {  font-size: 18px; font-weight: 500; color: #808080;}
 
 
 /*==================================================

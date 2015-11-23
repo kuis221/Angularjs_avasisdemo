@@ -12,7 +12,7 @@ app.use('/content', express.static('public/content'));
 app.use('/partials', express.static('public/partials'));
 app.use(slashes());
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5001;
 
 app.listen(port, function () {
     console.log("Listening on " + port);
