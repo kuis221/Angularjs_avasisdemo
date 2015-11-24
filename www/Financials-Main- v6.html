@@ -13,7 +13,7 @@
     <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    
+
 
     <!---==================SCHEDULE ROUND JS==================---->
     <script src="assets/js/jquery.js" type="text/javascript"></script>
@@ -34,7 +34,7 @@
                         <div class="dropdown profile-element">
                             <span>
                                 <img alt="image" src="assets/img/profile_small.png" />
-                            </span>                            
+                            </span>
                         </div>
                         <div class="logo-element">
                             A
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-lg-2 mt35">
                     <div class="buy">
-                        <a href="#" class="btn btn-danger btn-sm">
+                        <a href="/theme/lander-v2-webapp-dashboard-B5FC6F4" class="btn btn-danger btn-sm">
                             <i class="fa fa-plus"></i> Add New Payment
                         </a>
                     </div>
@@ -235,16 +235,19 @@
 
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
+
                     <div class="panel blank-panel">
                         <div class="panel-heading">
                             <div class="panel-options">
                                 <ul class="nav nav-tabs custom-tabs1">
                                     <li class="active"><a data-toggle="tab" href="#tab-1">Main</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-2">Budget</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-3">Purchase Orders</a></li>                               
+                                    <li class=""><a data-toggle="tab" href="#tab-2">Construction Loan</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-3">Change Orders</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-4">Purchase Orders</a></li>
                                     <li class=""><a data-toggle="tab" href="#tab-5">Payment Applications</a></li>
                                     <li class=""><a data-toggle="tab" href="#tab-6">Bank Draws</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-7"> Construction Loan</a></li>                                 
+                                    <li class=""><a data-toggle="tab" href="#tab-7">Cash Requirements</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-7">Timline Budget</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -492,17 +495,41 @@
                     </div>
                 </div>
 
-            </div>          
+            </div>
 
         </div>
     </div>
+
+
 
     <!----==================BOOTSTRAP JS================== ---->
     <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    
+
+    <!-- Peity -->
+    <script src="assets/js/plugins/peity/jquery.peity.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="assets/js/inspinia.js"></script>
+    <script src="assets/js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Peity -->
+    <script src="assets/js/demo/peity-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
 
 </body>
+
 </html>
