@@ -5379,6 +5379,22 @@ strong.blue { color: #42b6d8 !important;}
 *=======*=========*=========*=========*=========== */
 
 /****************RiskManagement@2x*******************/
+
+.inner-page-wrapper .prog-inner1 { background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;   margin: 51px auto;  padding: 0 15px;}
+.table.riskmanagement th { color: #808080; font-size: 13px; font-weight: 600; padding: 14px;}
+.riskmanagement tr { border: 1px solid #e7eaec;}
+.table.riskmanagement th img { margin: 0 9px;}
+.table.riskmanagement td { vertical-align: middle;}
+.table.riskmanagement td { font-family: "AvenirNextLTPro-Regular"; padding: 10px 20px;}
+.riskmanagement .media-Compliance strong { color: #3aabd5;}
+.riskmanagement .media-Compliance {margin: 3px;}
+.table.riskmanagement span { font-size: 14px; font-family:'AvenirNextLTPro-Demi'; }
+.table.riskmanagement p {font-size: 12px; margin: 0;  padding: 0;  white-space: nowrap;}
+.table.riskmanagement .ibox-tools i { font-size: 18px;}
+.table.riskmanagement .sky4 {color: #79c485; font-size: 13px; font-weight: 600;}
+
+
+
 .riskresports { padding: 10px;}
 .riskresports .ibox .Schedules p img { margin: 0 6px 3px 0;}
 .riskresports .searchround {   background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;  border: 1px solid #f3f3f3;  border-radius: 100px;  box-shadow: none;
@@ -5452,5 +5468,16 @@ color: #fff;  padding: 0px 5px 0 30px; transition: all 0.3s ease 0s; width: 100%
 .per { text-align: center;}
 .per > div { position: absolute; right: 59px !important; top: -41px;}
 }
+
+
+
+
+
+
+ 
+
+
+
+
 
 
