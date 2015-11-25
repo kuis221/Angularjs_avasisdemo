@@ -5147,8 +5147,8 @@ text-shadow: none; right: 14px; text-align: center;  top: -12px;  position: rela
 .bankdraw-inner-page .closeBox p, .closeBox p a { color: #fff; text-align: center; font-size: 15px; }
 .bankdraw-inner-page .closeBox p i { font-size: 15px; margin-left: 5px;  position: relative;  top: 1px; }
 .bankdraw-inner-page .heading h2 {  font-weight: normal;  font-family: 'AvenirNextLTPro-Regular';}
-.bankdraw-inner-page .heading span { display: block; font-size: 14px;}
-.bankdraw-inner-page .heading h5 { margin: 3px 0; color: #8b8b8b;}
+.bankdraw-inner-page .heading span { display: block; font-size: 14px; font-family: 'AvenirNextLTPro-Regular';}
+.bankdraw-inner-page .heading h5 { margin: 3px 0; color: #8b8b8b; font-family: "AvenirNextLTPro-Demi"}
 .bankdraw-inner-page .heading h4 { font-weight: normal; margin: 10px 0 8px 0;  padding: 0px;  font-size: 16px; font-family: 'AvenirNextLTPro-Regular';  text-transform: uppercase;}
 table.tablebankTopRight tr td { border: none; padding: 4px 0;}
 table.tablebankTopRight tr td span { color: #2a2d33;  font-family: "AvenirNextLTPro-Demi";  font-size: 16px; text-transform: uppercase;}
@@ -5330,9 +5330,9 @@ table.tableTabs tbody td input.customBtn {  background: #fbfbfb; border: 1px sol
                                      PAYMENT-DETAILS@2X
 ==================================================*/
 
-Payment tr {border: 1px solid #e7eaec;}
+.table.Payment tr{border-top: 1px solid #e7eaec;}
 .table.Payment span.sky1 { color: #3aabd5; font-size: 13px; font-weight: 600;}
-.table.Payment th { color: #808080;  font-size: 13px; font-weight: 600; padding: 14px;}
+.table.Payment th { color: #808080;  font-size: 13px; font-weight: 600; padding:14px 18px;}
 .table.Payment td { padding: 10px 20px; font-family: "AvenirNextLTPro-Regular";}
 .table.Payment span.sky3 { color: #3aabd5; font-weight: 600; font-size: 13px;}
 .breadcrumb2 li a { display: inline-block;}
@@ -5342,6 +5342,7 @@ Payment tr {border: 1px solid #e7eaec;}
 .feed-Payment > .pull-left {margin-right: 5px;}
 .table.Payment span { font-size: 14px; font-family: avenirnextltpro-demi;}
 .table.Payment p { font-size: 12px; margin: 0;  padding: 0; white-space: nowrap; }
+.table.Payment p.profile_text{font-family: avenirnextltpro-demi; font-size: 12px; margin: 0; padding: 0; white-space: nowrap; } 
 .table.Payment .sky4 { color: #79c485;  font-size: 13px;  font-weight: 600;}
 .table.Payment .sky5 {  color: #e25c5c; font-size: 13px; font-weight: 600;}
 .feed-Payment {padding-bottom: 0px;}
@@ -5380,21 +5381,35 @@ strong.blue { color: #42b6d8 !important;}
 
 /****************RiskManagement@2x*******************/
 
-.inner-page-wrapper .prog-inner1 { background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;   margin: 51px auto;  padding: 0 15px;}
+
+.riskmiddle{margin:65px 0 43px 0;}
+.risk-page-wrapper { background: #f9f9f9;}
+.risk-page-wrapper .bankbg {  background: #fff none repeat scroll 0 0; box-shadow: 1px 0 4px #d8d8d8; }
+.risk-page-wrapper .closeBox { background: #000; width: 100%; padding: 109px 0;}
+.risk-page-wrapper .closeBox p, .closeBox p a { color: #fff; text-align: center; font-size: 15px; }
+.risk-page-wrapper .closeBox p i { font-size: 15px; margin-left: 5px;  position: relative;  top: 1px; }
+.risk-page-wrapper {padding: 20px 0;}
+.risk-page-wrapper h2.hding { font-size: 28px; margin: 0 0 10px 0; color: #4a4a4a; font-weight: 500;}
+.risk-page-wrapper ul.topSubtitle { list-style: none; margin: 0; padding: 0;}
+.risk-page-wrapper ul.topSubtitle li a { font-size: 16px; }
+.risk-page-wrapper ul.topSubtitle li span { color: #8b8b8b;}
+.risk-page-wrapper .addNew a { font-size: 17px; margin: 0; padding: 10px;}
+
+table.table{margin:0; padding:0}
+.risk-page-wrapper .prog-inner1 { background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;   margin: 51px auto;  padding: 0 15px;}
 .table.riskmanagement th { color: #808080; font-size: 13px; font-weight: 600; padding: 14px;}
 .riskmanagement tr { border: 1px solid #e7eaec;}
+.riskmanagement tr:last-child{border:none;}
 .table.riskmanagement th img { margin: 0 9px;}
 .table.riskmanagement td { vertical-align: middle;}
 .table.riskmanagement td { font-family: "AvenirNextLTPro-Regular"; padding: 10px 20px;}
 .riskmanagement .media-Compliance strong { color: #3aabd5;}
 .riskmanagement .media-Compliance {margin: 3px;}
 .table.riskmanagement span { font-size: 14px; font-family:'AvenirNextLTPro-Demi'; }
-.table.riskmanagement p {font-size: 12px; margin: 0;  padding: 0;  white-space: nowrap;}
+.table.riskmanagement p{margin:0; padding:0;}
+.table.riskmanagement p.profile_text {font-size: 12px; margin: 0;  padding: 0;  white-space: nowrap; font-family: avenirnextltpro-demi;}
 .table.riskmanagement .ibox-tools i { font-size: 18px;}
 .table.riskmanagement .sky4 {color: #79c485; font-size: 13px; font-weight: 600;}
-
-
-
 .riskresports { padding: 10px;}
 .riskresports .ibox .Schedules p img { margin: 0 6px 3px 0;}
 .riskresports .searchround {   background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;  border: 1px solid #f3f3f3;  border-radius: 100px;  box-shadow: none;
@@ -5450,6 +5465,8 @@ color: #fff;  padding: 0px 5px 0 30px; transition: all 0.3s ease 0s; width: 100%
  .per > div { position: relative !important; top: -17px !important;}
 .bordermiddle { border-right: none !important;}
 .bordermiddle { border-right: none !important; }
+.riskmiddle{margin:40px 0 43px 0;}
+
 }
 
 @media (max-width: 1199px) { .bankdraw-inner-page .savedraft {top: 0px;}
