@@ -1,0 +1,22 @@
+/* ******************** PHOTOS ***********************/
+/* ******************** No Folder ***********************/
+
+.white {border: 1px solid #d7d7d7; border-radius: 5px}
+.photos h3 {font-family:'AvenirNextLTPro-Demi';}
+.photos a {font-family:'AvenirNextLTPro-Demi'; color: #3aabd5;}
+.photos .filters, .photos .folders{border-bottom: 1px solid #dedede; display: block; overflow: hidden;}
+.photos .searchround {background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;  border: 1px solid #f3f3f3;  border-radius: 100px;  box-shadow: none;}
+.photos .searchdown, .photos .viewall {padding: 0}
+.photos .viewall a { line-height: 34px; }
+.photos .folders {padding-bottom: 50px; position: relative;}
+.photos .folders .arrow {position: absolute; top: 40px; left: 112px; width: 321px; height: 73px;}
+.photos .folders h3 a {font-size: 90%; margin-left: 20px;}
+.photos .folders p {color: #4a4a4a; font-size: 18px; font-family: 'AvenirNextLTPro-Regular';}
+.photos .folders span {color: #4a4a4a; font-size: 14px; font-family: 'AvenirNextLTPro-Regular';}
+
+.photos .panel-body h3 {margin-top: 0; display: inline-block;}
+.photos .panel-body h3 a {color: #4a4a4a; display: inline-block; margin-left: 10px}
+.photos .panel-body h3 a i{margin-left: 10px}
+.photos .panel-body .thumbnail {padding: 0; border-radius: 0; border-color: #fff; border-width: 2px; background-color: #f9f9f9}
+
+@media (max-width: 979px) { .photos .folders .arrow {display: none;}}
