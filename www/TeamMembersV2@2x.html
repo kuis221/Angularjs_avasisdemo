@@ -12,7 +12,7 @@
     <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
- 
+
 
     <!---==================SCHEDULE ROUND JS==================---->
     <script src="assets/js/jquery.js" type="text/javascript"></script>
@@ -98,13 +98,21 @@
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="light-blue open">
-                            <a href="">
-                                <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo">
-                                <span class="user-info">
-                                    Eric Hoffman
+                            <div class="dd wrapper-dropdown-team user">
+                                <span>
+                                    <a href="">
+                                        <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo"><span class="user-info">Eric Hoffman</span>
+                                        <i class="ace-icon fa fa-caret-down"></i>
+                                    </a>
                                 </span>
-                                <i class="ace-icon fa fa-caret-down"></i>
-                            </a>
+                                <ul class="dropdown">
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">Company Profile</a></li>
+                                    <li><a href="#">Project Profile</a></li>
+                                    <li><a href="#" class="gear2xred">Logoff</a></li>
+                                </ul>
+                            </div>
+
                         </li>
                         <li class="orange">
                             <a href="#">
@@ -332,14 +340,14 @@
                                     <td>
                                         <div class="ibox-team pull-left">
                                             <a class="#"><i class="fa fa-cog"></i></a>
-                                            <div id="dd" class="wrapper-dropdown-team">
+                                            <div class="dd wrapper-dropdown-team">
                                                 <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
                                                 <ul class="dropdown">
-                                                    <li><a href="#">Invite Team Members</a></li>
-                                                    <li><a href="#">Create General Action Item</a></li>
+                                                    <li><a href="#">Add Notes</a></li>
+                                                    <li><a href="#">Permissions</a></li>
+                                                    <li><a href="#" class="gear2xred">Remove From Project</a></li>
                                                 </ul>
                                             </div>
-                                          
                                         </div>
                                     </td>
                                 </tr>
@@ -409,80 +417,18 @@
                                     <td>
                                         <div class="ibox-team pull-left">
                                             <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
+                                            <div class="dd wrapper-dropdown-team">
+                                                <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Add Notes</a></li>
+                                                    <li><a href="#">Permissions</a></li>
+                                                    <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="whiteBgColor">
-                                    <td width="220px">
-                                        <div class="feed-Compliance">
-                                            <a class="pull-left" href="#">
-                                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                            </a>
-                                            <div class="media-Compliance">
-                                                <div class="MemberTableDetails">
-                                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                                    <br>
-                                                    <b>Flora Corp.</b>
-                                                    <ul class="breadcrumbv22x">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="mapflag pull-left">
-                                                <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                                <p class="light-big">next sched. 24 Jun, 2015</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="mapflag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">Parking Level A</p>
-                                                <b>Senior Director</b>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="feed-Compliance">
-                                            <div class="mapflag pull-left">
-                                            </div>
-                                            <div class="media-Compliance">
-                                                <small class="pull-right"></small>
-                                                <p class="light-big">
-                                                    Master bathroom cabinetry, Carpet,<br>
-                                                    Kitchen Something, Another something som...
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-team pull-left">
-                                            <div class="mapflag-alert">
-                                                <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ibox-team pull-left">
-                                            <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
+
                                 <tr class="whiteBgColor">
                                     <td width="220px">
                                         <div class="feed-Compliance">
@@ -549,7 +495,14 @@
                                     <td>
                                         <div class="ibox-team pull-left">
                                             <a class="#"><i class="fa fa-cog"></i></a>
-                                            <a href="#"><i class="fa fa-angle-down"></i></a>
+                                            <div class="dd wrapper-dropdown-team">
+                                                <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Add Notes</a></li>
+                                                    <li><a href="#">Permissions</a></li>
+                                                    <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -1008,11 +961,11 @@
         }
 
         $(function () {
-            var dd = new DropDown($('#dd'));
+            var dd = new DropDown($('.dd'));
 
             $(document).click(function () {
                 // all dropdowns
-                $('.wrapper-dropdown-3').removeClass('active');
+                $('.wrapper-dropdown-team').removeClass('active');
             });
 
         });

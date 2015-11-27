@@ -100,13 +100,20 @@
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="light-blue open">
-                            <a href="">
-                                <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo">
-                                <span class="user-info">
-                                    Eric Hoffman
+                            <div class="dd wrapper-dropdown-team user">
+                                <span>
+                                    <a href="">
+                                        <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo"><span class="user-info">Eric Hoffman</span>
+                                        <i class="ace-icon fa fa-caret-down"></i>
+                                    </a>
                                 </span>
-                                <i class="ace-icon fa fa-caret-down"></i>
-                            </a>
+                                <ul class="dropdown">
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">Company Profile</a></li>
+                                    <li><a href="#">Project Profile</a></li>
+                                    <li><a href="#" class="gear2xred">Logoff</a></li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li class="orange">
@@ -154,7 +161,7 @@
                         <p>Estimated Cost at Completion  <b class="Lspace">$1,000,000</b></p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-xs-12 col-lg-2">
                     <div class="addNew">
                         <div id="dd" class="wrapper-dropdown-3">
                             <span><i class="fa fa-plus"></i>  Add New</span>
@@ -171,7 +178,7 @@
             <div class="row project-overview mt35">
                 <div class="row progressBar">
                     <!-- START DEFAULT WIZARD -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 border">
                         <div class="ibox">
                             <div class="Schedules">
                                 <p><img src="assets/img/cal.png">  Jun 23 2015, Today's Schedules<a href="#">View All</a></p>
@@ -269,68 +276,73 @@
                     </div>
                     <div class="col-lg-6">
                         <h3 class="proStatus"><img alt="image" class="img-circle" src="assets/img/i-img.png">  Project Status </h3>
+
                         <div class="itmDueToday">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2"><h2>Items Due Today</h2></th>
-                                            <th>
-                                                19 of 25 completed
-                                                <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="#">RFI #145</a></td>
-                                            <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
-                                            <td><span>Eric Hoffman</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">BID #183</a></td>
-                                            <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
-                                            <td><span>Darren Summers</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">RFI #145</a></td>
-                                            <td><p>Kitchen Cabinets</p></td>
-                                            <td><span>Mike Dustin</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">BID #183</a></td>
-                                            <td><p>Zoning permit for South Entrance</p></td>
-                                            <td><span>Eric Hoffman</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">RFI #145</a></td>
-                                            <td><p>Aenean lacinia bibendum nulla sed consectetur.</p></td>
-                                            <td><span>Darren Summers</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="strock" href="#">BID #183</a></td>
-                                            <td><p class="strock">Vivamus sagittis lacus vel augue laoreet rutrum</p></td>
-                                            <td><span class="strock">Mike Dustin</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="strock" href="#">RFI #145</a></td>
-                                            <td><p class="strock">Commodo Adipiscing Ornare</p></td>
-                                            <td><span class="strock">Darren Summers</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="strock" href="#">BID #183</a></td>
-                                            <td><p class="strock">Donec sed odio dui.</p></td>
-                                            <td><span class="strock">Mike Dustin</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="strock" href="#">BID #183</a></td>
-                                            <td><p class="strock">Integer posuere erat a ante venenatis dapibus</p></td>
-                                            <td><span class="strock">Eric Hoffman</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><h2>Items Due Today</h2></th>
+                                        <th>
+                                            19 of 25 completed
+                                            <div class="progress progress-small">
+                                                <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="slimScrollDivContainer">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#">RFI #145</a></td>
+                                                <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                                <td><span>Eric Hoffman</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">BID #183</a></td>
+                                                <td><p>Praking Lots A, B, C need lot survey in order to p...</p></td>
+                                                <td><span>Darren Summers</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">RFI #145</a></td>
+                                                <td><p>Kitchen Cabinets</p></td>
+                                                <td><span>Mike Dustin</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">BID #183</a></td>
+                                                <td><p>Zoning permit for South Entrance</p></td>
+                                                <td><span>Eric Hoffman</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">RFI #145</a></td>
+                                                <td><p>Aenean lacinia bibendum nulla sed consectetur.</p></td>
+                                                <td><span>Darren Summers</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="strock" href="#">BID #183</a></td>
+                                                <td><p class="strock">Vivamus sagittis lacus vel augue laoreet rutrum</p></td>
+                                                <td><span class="strock">Mike Dustin</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="strock" href="#">RFI #145</a></td>
+                                                <td><p class="strock">Commodo Adipiscing Ornare</p></td>
+                                                <td><span class="strock">Darren Summers</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="strock" href="#">BID #183</a></td>
+                                                <td><p class="strock">Donec sed odio dui.</p></td>
+                                                <td><span class="strock">Mike Dustin</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="strock" href="#">BID #183</a></td>
+                                                <td><p class="strock">Integer posuere erat a ante venenatis dapibus</p></td>
+                                                <td><span class="strock">Eric Hoffman</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -593,11 +605,11 @@
     <script src="assets/js/plugins/pace/pace.min.js"></script>
 
 
-    <!----==================SLIM SCROLL================== ---->
+    <!----================== Avasis-projectDetails-v12@2x SLIM SCROLL================== ---->
     <script type="text/javascript">
         $(function () {
-            $('.itmDueToday').slimScroll({
-                height: '510px'
+            $('.slimScrollDivContainer').slimScroll({
+                height:'434px'
             });
         });
     </script>
@@ -635,6 +647,44 @@
             $(document).click(function () {
                 // all dropdowns
                 $('.wrapper-dropdown-3').removeClass('active');
+            });
+
+        });
+    </script>
+
+    <!----==================DROPDOWN TEAM MEMBERS================== ---->
+    <script type="text/javascript">
+        function DropDown(el) {
+            this.dd = el;
+            this.placeholder = this.dd.children('span');
+            this.opts = this.dd.find('ul.dropdown > li');
+            this.val = '';
+            this.index = -1;
+            this.initEvents();
+        }
+        DropDown.prototype = {
+            initEvents: function () {
+                var obj = this;
+
+                obj.dd.on('click', function (event) {
+                    $(this).toggleClass('active');
+                    return false;
+                });
+            },
+            getValue: function () {
+                return this.val;
+            },
+            getIndex: function () {
+                return this.index;
+            }
+        }
+
+        $(function () {
+            var dd = new DropDown($('.dd'));
+
+            $(document).click(function () {
+                // all dropdowns
+                $('.wrapper-dropdown-team').removeClass('active');
             });
 
         });

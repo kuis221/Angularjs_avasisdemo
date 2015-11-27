@@ -6184,6 +6184,7 @@ body.skin-2 #wrapper {
 **************************************************************************************/
 
 .inner-page-wrapper .project-overview {background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;margin: 51px auto;padding: 0 15px;}
+.inner-page-wrapper .project-overview .border { border-right: 1px solid #eeeeee;}
 .project-overview .progressBar{padding:0 15px;}
 .overview { padding: 20px 0;}
 .overview h2.hding {font-size: 28px; margin: 0 0 10px 0; color: #4a4a4a; font-weight: 500; }
@@ -6243,14 +6244,9 @@ h3.proStatus {font-size: 20px; color: #4a4a4a;font-weight: normal; font-family: 
 .left1 p b.Lspace {left: 60%; position: absolute;}
 .Schedules p img { margin-bottom: 5px;}
 .project .feed-element a.pull-left img { position: relative; top: 10px;}
+.teamupper {font-family: avenirnextltpro-demi; font-size: 16px;  text-transform: uppercase; vertical-align: middle; white-space: nowrap;}
 
-.teamupper {
-    font-family: avenirnextltpro-demi;
-    font-size: 16px;  
-    text-transform: uppercase;
-    vertical-align: middle;
-    white-space: nowrap;
-}
+
 /*=======*=========*=========*=========*===========*
  *=======*=========*=========*=========*===========*
  =================== TEAM MEMBERS TAB START HERE=========
@@ -6260,418 +6256,96 @@ h3.proStatus {font-size: 20px; color: #4a4a4a;font-weight: normal; font-family: 
 /*==================================================
                                      Team Members V2-Empty@2x
 ==================================================*/
-.teammembers {
-    padding: 20px 0;
-}
-
-    .teammembers ul.topSubtitle {
-        list-style: outside none none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .teammembers h2.hding {
-        color: #4a4a4a;
-        font-size: 28px;
-        margin: 0 0 10px;
-        font-family: 'AvenirNextLTPro-Regular';
-    }
-
-    .teammembers .teaminvite {
-        margin: 5px 11px;
-    }
-
-        .teammembers .teaminvite a {
-            font-size: 17px;
-            margin: 0;
-            padding: 10px;
-            font-family: 'AvenirNextLTPro-Demi';
-        }
-
-.user-info {
-    font-family: 'AvenirNextLTPro-Demi';
-}
-
-.teammembers .topSubtitle li a {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-    .teammembers .topSubtitle li a i {
-        margin-left: 5px;
-    }
-
-.teamarrow {
-    background: url("../img/arrowUp.png") no-repeat scroll right center;
-    padding: 15px 0;
-    width: 100%;
-}
-
-    .teamarrow .assign {
-        width: 66.444%;
-        margin: 18% auto;
-        text-align: center;
-    }
-
-        .teamarrow .assign > p {
-            font-size: 22px;
-            font-weight: 500;
-            color: #4a4a4a;
-            font-family: 'AvenirNextLTPro-Regular';
-        }
-
-        .teamarrow .assign > span {
-            font-size: 18px;
-            font-weight: 500;
-            color: #808080;
-        }
-
+.teammembers {padding: 20px 0;}
+.teammembers ul.topSubtitle { list-style: outside none none; margin: 0; padding: 0; }
+.teammembers h2.hding { color: #4a4a4a;  font-size: 28px; margin: 0 0 10px; font-family: 'AvenirNextLTPro-Regular';}
+.teammembers .teaminvite {margin: 5px 11px;}
+.teammembers .teaminvite a { font-size: 17px; margin: 0; padding: 10px; font-family: 'AvenirNextLTPro-Demi';}
+.user-info { font-family: 'AvenirNextLTPro-Demi';}
+.teammembers .topSubtitle li a {font-size: 14px;  font-weight: 600;}
+.teammembers .topSubtitle li a i {  margin-left: 5px; }
+.teamarrow {background: url("../img/arrowUp.png") no-repeat scroll right center; padding: 15px 0;  width: 100%;}
+.teamarrow .assign {  width: 66.444%; margin: 18% auto; text-align: center;}
+.teamarrow .assign > p { font-size: 22px; font-weight: 500; color: #4a4a4a; font-family: 'AvenirNextLTPro-Regular';}
+.teamarrow .assign > span { font-size: 18px;  font-weight: 500; color: #808080;}
 
 
 /*==================================================
                                  Team Members V2@2x
 ==================================================*/
 
-.inner-page-wrapper {
-    background: #f9f9f9;
-}
-
-.teamv22x {
-    padding: 20px 0;
-}
-
-    .teamv22x tr {
-        border: 1px solid #e7eaec;
-    }
-
-    .teamv22x ul.topSubtitle {
-        list-style: outside none none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .teamv22x .topSubtitle li a {
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .teamv22x h2.hding {
-        color: #4a4a4a;
-        font-size: 26px;
-        margin: 0 0 10px;
-        font-family: "AvenirNextLTPro-Regular";
-    }
-
-    .teamv22x .topSubtitle li a i {
-        margin-left: 5px;
-    }
-
-    .teamv22x .teaminvite a {
-        font-family: "AvenirNextLTPro-Demi";
-        font-size: 17px;
-        margin: 0;
-        padding: 10px;
-    }
-
-    .teamv22x .teaminvite {
-        margin: 5px 11px;
-    }
-
-.whiteBgColor {
-    background: #fff;
-}
-
-    .whiteBgColor .feed-Compliance .media-Compliance b {
-        font-family: "AvenirNextLTPro-Demi";
-        font-weight: 600 !important;
-    }
-
-    .whiteBgColor .media-Compliance p.pink {
-        color: #e25c5c;
-        font-family: "avenirnextltpro-demi";
-        font-size: 13px;
-    }
-
-.breadcrumbv22x > li {
-    border-right: 1px solid #ccc;
-    display: inline-block;
-    padding: 0 8px 0 0;
-}
-
-.breadcrumbv22x > li {
-    border-right: 1px solid #ccc;
-    display: inline-block;
-    padding: 0 8px 0 0;
-}
-
-.breadcrumbv22x li a {
-    color: #7f8a90 !important;
-}
-
-.breadcrumbv22x > li:last-child {
-    border: none;
-}
-
-.MemberTableDetails {
-    max-width: 100%;
-    width: 205px;
-}
-
-    .MemberTableDetails span {
-        color: #3aabd5;
-        cursor: pointer;
-    }
-
-.memberv22x tr {
-    border: 1px solid #e7eaec;
-}
-
-.table.memberv22x span.sky1 {
-    color: #3aabd5;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.table.memberv22x th {
-    color: #808080;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 14px;
-}
-
-.table.memberv22x td {
-    padding: 15px 20px 11px;
-    font-family: "AvenirNextLTPro-Regular";
-}
-
-.table.memberv22x span.sky3 {
-    color: #3aabd5;
-    font-weight: 600;
-    font-size: 13px;
-}
-
-.table.memberv22x span {
-    font-size: 14px;
-    font-family: "avenirnextltpro-demi";
-}
-
-.table.memberv22x p {
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-}
-
-.table.memberv22x .sky4 {
-    color: #79c485;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.table.memberv22x .sky5 {
-    color: #e25c5c;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.table.memberv22x td {
-    vertical-align: middle;
-}
-
-.table.memberv22x .ibox-team i {
-    font-size: 18px;
-}
-
-
-
-.feed-Compliance {
-    padding-bottom: 0px;
-}
-
-.buy1 {
-    float: left;
-}
-
-.memberv22x p.light-big {
-    color: #737578;
-    font-size: 14px;
-    color: #44474b;
-}
-
-.mapflag-alert p img, .mapflag-alert p span img {
-    margin: 0 5px;
-}
-
-.topMemberContain .green2 {
-    color: #61c571;
-}
-
-    .topMemberContain .green2 img {
-        float: left;
-        margin-bottom: 30px;
-        margin-right: 7px;
-    }
-
-    .topMemberContain .green2 span {
-        font-size: 18px;
-    }
-
-    .topMemberContain .green2 p {
-        font-size: 14px;
-        font-weight: bold;
-        text-transform:uppercase;
-    }
-
-.topMemberContain .sky2 {
-    color: #3aabd5;
-}
-
-    .topMemberContain .sky2 img {
-        float: left;
-        margin-bottom: 30px;
-        margin-right: 7px;
-    }
-
-    .topMemberContain .sky2 span {
-        font-size: 18px;
-    }
-
-    .topMemberContain .sky2 p {
-        font-size: 14px;
-        font-weight: bold;
-        text-transform:uppercase;
-    }
-
-.topMemberContain .orangeColor2 {
-    color: #fdae46;
-}
-
-    .topMemberContain .orangeColor2 img {
-        float: left;
-        margin-bottom: 30px;
-        margin-right: 7px;
-    }
-
-    .topMemberContain .orangeColor2 span {
-        font-size: 18px;
-    }
-
-    .topMemberContain .orangeColor2 p {
-        font-size: 14px;
-        font-weight: bold;
-        text-transform:uppercase;
-        white-space:nowrap;
-    }
-
-.whiteBgColor .feed-Compliance > .pull-left {
-    margin-right: 5px;
-}
-
-.mapflag {
-    position: relative;
-    top: -2px;
-}
-
-.mapflag-alert p {
-    color: #e25c5c;
-    font-weight: 600;
-}
-
-.mapflag-alert > p span {
-    color: #fdae46;
-}
-
-.btn-dangerteam {
-    background-color: #FFF;
-    border: 1px solid #aaaaaa;
-    color: #808080;
-    padding: 7px 10px;
-    white-space: nowrap;
-}
-
-.table.memberv22x .offsite {
-    color: #8b8b8b;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.memberv22x p.multipalepro {
-    color: #3aabd5;
-    font-size: 14px;
-    font-family: "AvenirNextLTPro-Demi";
-}
-
-
-.ibox-team {
-    display: inline-block;
-    float: right;
-    margin-top: 0;
-    padding: 0;
-    position: relative;
-}
-.ibox-team a {
-    color: #c4c4c4;
-    cursor: pointer;
-    margin-left: 5px;
-    float:left;
-}
+.inner-page-wrapper { background: #f9f9f9;}
+.teamv22x { padding: 20px 0;}
+.teamv22x tr { border: 1px solid #e7eaec;}
+.teamv22x ul.topSubtitle { list-style: outside none none; margin: 0;  padding: 0;}
+.teamv22x .topSubtitle li a {  font-size: 14px;  font-weight: 600;}
+.teamv22x h2.hding {color: #4a4a4a; font-size: 26px; margin: 0 0 10px; font-family: "AvenirNextLTPro-Regular";}
+.teamv22x .topSubtitle li a i {  margin-left: 5px;}
+.teamv22x .teaminvite a { font-family: "AvenirNextLTPro-Demi"; font-size: 17px; margin: 0; padding: 10px;}
+.teamv22x .teaminvite {margin: 5px 11px; }
+.whiteBgColor { background: #fff;}
+.whiteBgColor .feed-Compliance .media-Compliance b { font-family: "AvenirNextLTPro-Demi"; font-weight: 600 !important;}
+.whiteBgColor .media-Compliance p.pink { color: #e25c5c; font-family: "avenirnextltpro-demi";font-size: 13px; }
+.breadcrumbv22x > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
+.breadcrumbv22x li a {  color: #7f8a90 !important;}
+.breadcrumbv22x > li:last-child { border: none;}
+.MemberTableDetails { max-width: 100%; width: 205px;}
+.MemberTableDetails span { color: #3aabd5;  cursor: pointer;}
+.memberv22x tr {border: 1px solid #e7eaec;}
+.table.memberv22x span.sky1 {color: #3aabd5; font-size: 13px; font-weight: 600;}
+.table.memberv22x th { color: #808080; font-size: 13px; font-weight: 600;  padding: 14px;}
+.table.memberv22x td { padding: 15px 20px 11px; font-family: "AvenirNextLTPro-Regular";}
+.table.memberv22x span.sky3 { color: #3aabd5; font-weight: 600;  font-size: 13px;}
+.table.memberv22x span { font-size: 13px; font-family: "avenirnextltpro-demi";}
+.table.memberv22x p { font-size: 12px; margin: 0; padding: 0; white-space: nowrap;}
+.table.memberv22x .sky4 {color: #79c485; font-size: 13px; font-weight: 600; text-transform: uppercase;}
+.table.memberv22x .sky5 { color: #e25c5c; font-size: 13px; font-weight: 600;}
+.table.memberv22x td { vertical-align: middle;}
+.table.memberv22x .ibox-team i {font-size: 18px; float: left;  margin-left: 6px;}
+.feed-Compliance {padding-bottom: 0px;}
+.buy1 {  float: left;}
+.memberv22x p.light-big { color: #737578; font-size: 14px; color: #44474b;}
+.mapflag-alert p img, .mapflag-alert p span img { margin: 0 5px;}
+.topMemberContain .green2 { color: #61c571;}
+.topMemberContain .green2 img { float: left; margin-bottom: 30px; margin-right: 7px;}
+.topMemberContain .green2 span { font-size: 18px;}
+.topMemberContain .green2 p { font-size: 14px; font-weight: bold; text-transform:uppercase;}
+.topMemberContain .sky2 {color: #3aabd5;}
+.topMemberContain .sky2 img { float: left; margin-bottom: 30px; margin-right: 7px;}
+.topMemberContain .sky2 span { font-size: 18px; }
+.topMemberContain .sky2 p { font-size: 14px; font-weight: bold; text-transform:uppercase;}
+.topMemberContain .orangeColor2 {color: #fdae46;}
+.topMemberContain .orangeColor2 img { float: left; margin-bottom: 30px; margin-right: 7px;}
+.topMemberContain .orangeColor2 span { font-size: 18px;}
+.topMemberContain .orangeColor2 p { font-size: 14px; font-weight: bold; text-transform:uppercase; white-space:nowrap;}
+.whiteBgColor .feed-Compliance > .pull-left {  margin-right: 5px;}
+.mapflag { position: relative;  top: -2px;}
+.mapflag-alert p { color: #e25c5c; font-weight: 600;}
+.mapflag-alert > p span { color: #fdae46;}
+.btn-dangerteam { background-color: #FFF;  border: 1px solid #aaaaaa;color: #808080; padding: 7px 10px; white-space: nowrap;}
+.table.memberv22x .offsite { color: #8b8b8b; font-size: 13px;  font-weight: 600; text-transform: uppercase;}
+.memberv22x p.multipalepro { color: #3aabd5; font-size: 14px;font-family: "AvenirNextLTPro-Demi";}
+.ibox-team { display: inline-block; float: right; margin-top: 0; padding: 0; position: relative;}
+.ibox-team a {color: #c4c4c4; cursor: pointer; }
+.dd.wrapper-dropdown-team.user span a i{font-size:18px; vertical-align:middle;}
+.dd.wrapper-dropdown-team.user span a {font-size:14px; vertical-align:middle; color:#3aabd5}
 /*=================================================
                               Team Members V2-gear@2x
 ==================================================*/
 
-.popover-content.gear2x {
-    border-bottom: 1px solid #dedede;
-}
-
-.gear2x {
-    color: #3aabd5;
-    font-family: 'AvenirNextLTPro-Demi';
-    font-size: 14px;
-}
-
-.gear2xred {
-    color: #e25c5c;
-    font-family: 'AvenirNextLTPro-Demi';
-}
-
-.whiteBgColor .feed-Compliance .multiproject {
-    color: #3aabd5;
-    font-family: 'AvenirNextLTPro-Demi';
-    font-size: 14px;
-}
+.popover-content.gear2x {  border-bottom: 1px solid #dedede;}
+.gear2x {color: #3aabd5; font-family: 'AvenirNextLTPro-Demi'; font-size: 14px;}
+.gear2xred {color: #e25c5c;  font-family: 'AvenirNextLTPro-Demi';}
+.whiteBgColor .feed-Compliance .multiproject {color: #3aabd5;  font-family: 'AvenirNextLTPro-Demi'; font-size: 14px;}
 
 /*********(Team Members V2-MultiplePR@2x) Modal popUp*********/
-.modal-body .table-cutome {
-    border: 1px solid #eeeeee;
-}
-
-    .modal-body .table-cutome tr td {
-        padding: 20px 2px 9px 15px;
-    }
-
-    .modal-body .table-cutome th {
-        padding: 15px;
-    }
-
-.modal-header {
-    border: none;
-    padding-bottom: 0;
-}
-
-.skyColor {
-    font-family: 'AvenirNextLTPro-Demi';
-}
-
-.customModalHeader h4 {
-    margin-left: 7px;
-    font-size: 16px;
-}
-
-.modal-body .breadcrumbv22x > li {
-    padding: 0px 9px 0 6px;
-}
+.modal-body .table-cutome {border: 1px solid #eeeeee;}
+.modal-body .table-cutome tr td { padding: 20px 2px 9px 15px;}
+.modal-body .table-cutome th { padding: 15px;}
+.modal-header {border: none; padding-bottom: 0;}
+.skyColor {font-family: 'AvenirNextLTPro-Demi';}
+.customModalHeader h4 { margin-left: 7px; font-size: 16px;}
+.modal-body .breadcrumbv22x > li { padding: 0px 9px 0 6px;}
 
 
 
@@ -8212,70 +7886,24 @@ table.table {
     font-size: 18px;
 }
 
-.table.riskmanagement .sky4 {
-    color: #79c485;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.riskresports {
-    padding: 10px;
-}
-
-    .riskresports .ibox .Schedules p img {
-        margin: 0 6px 3px 0;
-    }
-
-    .riskresports .searchround {
-        background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px;
-        border: 1px solid #f3f3f3;
-        border-radius: 100px;
-        box-shadow: none;
-        color: #fff;
-        padding: 0px 5px 0 30px;
-        transition: all 0.3s ease 0s;
-        width: 100%;
-        color: #666666;
-    }
-
-    .riskresports h3.riskheading {
-        margin-top: 14px;
-        color: #4a4a4a;
-        font-size: 20px;
-        font-weight: normal;
-    }
-
-    .riskresports .searchdown {
-        list-style: outside none none;
-        margin: 10px;
-    }
-
-    .riskresports .btn1.btn-dangersort.btn-sm.sort {
-        padding: 7px 27px;
-    }
+.table.riskmanagement .sky4 {color: #79c485;  font-size: 13px; font-weight: 600;}
+.riskresports { padding: 10px;}
+.riskresports .ibox .Schedules p img {margin: 0 6px 3px 0;}
+.riskresports .searchround {  background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 8px; border: 1px solid #f3f3f3; border-radius: 100px;  box-shadow: none;  color: #fff;
+padding: 0px 5px 0 30px;transition: all 0.3s ease 0s; width: 100%;  color: #666666; }
+.riskresports h3.riskheading { margin-top: 14px;color: #4a4a4a; font-size: 20px; font-weight: normal;}
+.riskresports .searchdown { list-style: outside none none;  margin: 10px;}
+.riskresports .btn1.btn-dangersort.btn-sm.sort { padding: 7px 27px; }
 
 
 /****************RiskManagement-hover@2x*******************/
-.check {
-    color: #3aabd5;
-    font-size: 14px;
-    font-family: "AvenirNextLTPro-Regular";
-    font-weight: 600;
-}
-
-.popover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+.check {color: #3aabd5; font-size: 14px; font-family: "AvenirNextLTPro-Regular"; font-weight: 600;}
+.popover { box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);}
 
 
 /****************RiskManagement-settings@2x/****************/
-.popover-content.check {
-    border-bottom: 1px solid #dedede;
-}
-
-    .popover-content.check:last-child {
-        border-bottom: none;
-    }
+.popover-content.check {  border-bottom: 1px solid #dedede;}
+.popover-content.check:last-child { border-bottom: none;}
 
 
 
@@ -8361,124 +7989,51 @@ table.table {
 }
 
 @media (max-width: 350px) {
-    .timeline-item .date {
-        text-align: left;
-        width: 110px;
-        position: relative;
-        padding-top: 30px;
-    }
+.timeline-item .date { text-align: left; width: 110px;position: relative; padding-top: 30px;}
+.timeline-item .date i { position: absolute; top: 0; left: 15px;  padding: 5px;width: 30px;  text-align: center;border: 1px solid #e7eaec;  background: #f8f8f8;}
 
-        .timeline-item .date i {
-            position: absolute;
-            top: 0;
-            left: 15px;
-            padding: 5px;
-            width: 30px;
-            text-align: center;
-            border: 1px solid #e7eaec;
-            background: #f8f8f8;
-        }
+.timeline-item .content {border-left: none; border-top: 1px solid #e7eaec; padding-top: 10px; min-height: 100px;}
+.nav.navbar-top-links li.dropdown { display: none;}
 
-    .timeline-item .content {
-        border-left: none;
-        border-top: 1px solid #e7eaec;
-        padding-top: 10px;
-        min-height: 100px;
-    }
-
-    .nav.navbar-top-links li.dropdown {
-        display: none;
-    }
-
-    .ibox-tools {
-        float: none;
-        text-align: left;
-        display: inline-block;
-    }
-}
+ .ibox-tools { float: none;text-align: left; display: inline-block;}}
 
 
 @media screen and (min-device-width: 320px) and (max-device-width: 640px) {
-    .per > div {
-        position: relative !important;
-        top: -17px !important;
-    }
-
-    .bordermiddle {
-        border-right: none !important;
-    }
-
-    .bordermiddle {
-        border-right: none !important;
-    }
-
-    .riskmiddle {
-        margin: 40px 0 43px 0;
-    }
+.per > div {position: relative !important; top: -17px !important;}
+.bordermiddle { border-right: none !important; }
+.bordermiddle { border-right: none !important;}
+.riskmiddle { margin: 40px 0 43px 0;}
 }
 
 @media (max-width: 1199px) {
-    .bankdraw-inner-page .savedraft {
-        top: 0px;
-    }
+.bankdraw-inner-page .savedraft { top: 0px; }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .navbar-static-side {
-        float: left;
-        position: relative;
-        width: 100%;
-        z-index: 2001;
-    }
+.navbar-static-side {  float: left; position: relative; width: 100%;  z-index: 2001; }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .per > div {
-        position: relative !important;
-        top: 0px !important;
-    }
-
-    .bordermiddle {
-        border-right: none !important;
-        padding-top: 0px;
-    }
+.per > div { position: relative !important; top: 0px !important;}
+.bordermiddle { border-right: none !important; padding-top: 0px;}
 }
 
 @media screen and (min-device-width: 2700px) and (max-device-width: 2900px) {
-    .per {
-        text-align: center;
-    }
-
-        .per > div {
-            position: absolute;
-            right: 59px !important;
-            top: -41px;
-        }
+.per {text-align: center;}
+.per > div { position: absolute;  right: 59px !important; top: -41px;}
 }
 
 
 
 
+/*------------------DROPDOWNMENU------------------*/
 *,
 *:after,
-*:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+*:before {-webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box;  padding: 0; margin: 0;}
+::selection { background: transparent;}
+::-moz-selection { background: transparent;}
 
-::selection {
-    background: transparent;
-}
-
-::-moz-selection {
-    background: transparent;
-}
-
-
-/* AVASIS PROJECT DETAILS V-12 */
+/*------- AVASIS PROJECT DETAILS V-12------- */
 .wrapper-dropdown-3 { /* Size and position */ position: relative;  width: 100%;  max-width:100px; margin: 0 auto; padding: 10px;
 /* Styles */background-color: #79c485;  border-color: #79c485;  color: #ffffff;  border-radius: 4px; box-shadow: 0 1px 1px rgba(50,50,50,0.1);  cursor: pointer; outline: none;  /* Font settings */ font-weight: bold; color: #FFF;}
 .wrapper-dropdown-3 .dropdown { /* Size & position */ position: absolute; top: 140%;  left: 0; right: 0; /* Styles */ background: white;  border-radius: inherit;
@@ -8489,24 +8044,26 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-3 .dropdown li i {float: right; color: inherit;}
 .wrapper-dropdown-3 .dropdown li:first-of-type a {  border-radius: 7px 7px 0 0;}
 .wrapper-dropdown-3 .dropdown li:last-of-type a {border: none;  border-radius: 0 0 7px 7px;}
-/* Hover state */
 .wrapper-dropdown-3 .dropdown li:hover a { background: #f3f8f8;}
-/* Active state */
 .wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
   
-/* TEAM MEMBERSV2@2X*/
-
+/*------- TEAM MEMBERSV2@2X------- */
 .wrapper-dropdown-team{ float:left;}
-.wrapper-dropdown-team .dropdown { /* Size & position */ position: absolute; top: 140%;  left: 0; right: 0; /* Styles */ background: white;  border-radius: inherit;
+.wrapper-dropdown-team .dropdown { /* Size & position */ position: absolute; top: 140%;  left: 0; right: 0; /* Styles */ background: white;  border-radius:5px;
 border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-weight: normal; list-style: none;  /* Hiding */  opacity: 0;pointer-events: none;}
 .wrapper-dropdown-team .dropdown:after { content: "";  width: 0;  height: 0;  position: absolute;  bottom: 100%; right: 15px; border-width: 0 6px 6px 6px;  border-style: solid;  border-color: #fff transparent;}
 .wrapper-dropdown-team .dropdown:before {content: "";  width: 0;  height: 0;  position: absolute;  bottom: 100%; right: 13px; border-width: 0 8px 8px 8px; border-style: solid; border-color: rgba(0,0,0,0.1) transparent; }
 .wrapper-dropdown-team .dropdown li a { display: block; padding: 15px; text-decoration: none; color: #3aabd5; border-bottom: 1px solid #e6e8ea; box-shadow: inset 0 1px 0 rgba(255,255,255,1); font-family: avenirnextltpro-demi;}
+.wrapper-dropdown-team .dropdown li a.gear2xred {color: #e25c5c; font-family: avenirnextltpro-demi; }
 .wrapper-dropdown-team .dropdown li i {float: right; color: inherit;}
 .wrapper-dropdown-team .dropdown li:first-of-type a {  border-radius: 7px 7px 0 0;}
 .wrapper-dropdown-team .dropdown li:last-of-type a {border: none;  border-radius: 0 0 7px 7px;}
-/* Hover state */
 .wrapper-dropdown-team .dropdown li:hover a { background: #f3f8f8;}
-/* Active state */
-.wrapper-dropdown-team.active .dropdown { left: -162px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
+.wrapper-dropdown-team.active .dropdown { left:-177px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
 
+  
+/*------- TEAM MEMBERSV2@2X TOPUSER------- */
+.dd.wrapper-dropdown-team.user{position: relative; right: 9px; top: 10px;}
+.dd.wrapper-dropdown-team.user ul.dropdown { left: -50px;}
+.dd.wrapper-dropdown-team.user ul.dropdown li{width:100%;}
+.wrapper-dropdown-team.user .dropdown{top:120%}
