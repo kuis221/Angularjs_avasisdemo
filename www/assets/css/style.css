@@ -6273,7 +6273,7 @@ h3.proStatus {font-size: 20px; color: #4a4a4a;font-weight: normal; font-family: 
 /*==================================================
                                  Team Members V2@2x
 ==================================================*/
-
+.modal-dialog.top{ margin: 258px auto;}
 .inner-page-wrapper { background: #f9f9f9;}
 .teamv22x { padding: 20px 0;}
 .teamv22x tr { border: 1px solid #e7eaec;}
@@ -6360,198 +6360,50 @@ h3.proStatus {font-size: 20px; color: #4a4a4a;font-weight: normal; font-family: 
                                         Financials-Main- v6
 ==================================================*/
 
-.table-custom1 {
-    font-family: "AvenirNextLTPro-Regular";
-}
-
-.page-heading h2.hding {
-    color: #4a4a4a;
-    font-family: "AvenirNextLTPro-Regular";
-    font-size: 26px;
-}
-
-.buy a {
-    padding: 10px;
-    font-family: "AvenirNextLTPro-Demi";
-    font-size: 17px;
-    margin: 0;
-}
-
-.label.label-Schedule {
-    background-color: #3aabd5;
-    color: #1ab394;
-    font-size: 10px;
-}
-
-.label.progress-bar-cost {
-    background-color: #79c485;
-    color: #79c485;
-}
-
-.label.progress-bar-contractual {
-    background-color: #f8ac59;
-    color: #f8ac59;
-}
-
-.label.progress-bar-pending {
-    background-color: #ed5565;
-    color: #ed5565;
-}
-
-.label.progress-bar-unbudgeted {
-    background-color: #2a2d33;
-    color: #2a2d33;
-}
-
-.progress.progress-normal {
-    height: 18px;
-    margin: 8px 0 0 0;
-}
+.table-custom1 {font-family: "AvenirNextLTPro-Regular";}
+.page-heading h2.hding { color: #4a4a4a; font-family: "AvenirNextLTPro-Regular"; font-size: 26px;}
+.buy a { padding: 10px; font-family: "AvenirNextLTPro-Demi";  font-size: 17px; margin: 0;}
+.label.label-Schedule {background-color: #3aabd5;  color: #1ab394; font-size: 10px;}
+.label.progress-bar-cost { background-color: #79c485; color: #79c485;}
+.label.progress-bar-contractual { background-color: #f8ac59; color: #f8ac59;}
+.label.progress-bar-pending {  background-color: #ed5565; color: #ed5565;}
+.label.progress-bar-unbudgeted {background-color: #2a2d33; color: #2a2d33;}
+.progress.progress-normal { height: 18px; margin: 8px 0 0 0;}
 
 
 /**** Custom tabs ****/
-.custom-tabs1 {
-    border-top: 1px solid #d7d7d7;
-    border-bottom: none !important;
-}
-
-    .custom-tabs1 li.active {
-        background: #fff !important;
-        border-right: 1px solid #ccc !important;
-    }
-
-    .custom-tabs1 li {
-        padding: 15px 0;
-    }
-
-    .custom-tabs1 > li > a {
-        padding: 10px 20px 10px 25px;
-        border-right: 1px solid #ccc !important;
-    }
-
-        .custom-tabs1 > li > a:hover {
-            padding: none !important;
-        }
-
-    .custom-tabs1 li.active a {
-        border: none !important;
-        color: #e25c5c !important;
-    }
-
-    .custom-tabs1 > li > a:hover, .custom-tabs1 > li > a:focus {
-        background: none !important;
-        border: none;
-    }
-
-.nav-tabs > li > a {
-    padding: none !important;
-}
-
-.nav-tabs > li {
-    margin-bottom: 0px !important;
-}
+.custom-tabs1 { border-top: 1px solid #d7d7d7; border-bottom: none !important;}
+.custom-tabs1 li.active { background: #fff !important; border-right: 1px solid #ccc !important; }
+.custom-tabs1 li {padding: 15px 0; }
+.custom-tabs1 > li > a { padding: 10px 20px 10px 25px; border-right: 1px solid #ccc !important;}
+.custom-tabs1 > li > a:hover {  padding: none !important;}
+.custom-tabs1 li.active a { border: none !important; color: #e25c5c !important;}
+.custom-tabs1 > li > a:hover, .custom-tabs1 > li > a:focus { background: none !important; border: none;}
+.nav-tabs > li > a {padding: none !important;}
+.nav-tabs > li {margin-bottom: 0px !important;}
 
 /**** Custom table ****/
-.table-custom1 {
-    border: 1px solid #d7d7d7;
-}
-
-.custom-panel-body {
-    padding: 0 !important;
-    position: relative;
-}
-
-    .custom-panel-body p.hding {
-        font-size: 22px;
-    }
-
-    .custom-panel-body thead tr {
-        background: #fff;
-    }
-
-    .custom-panel-body tr td, .custom-panel-body tr th {
-        padding: 15px !important;
-    }
-
-    .custom-panel-body td span.sky {
-        color: #3aabd5;
-        word-wrap: break-word;
-    }
-
-        .custom-panel-body td span.sky i {
-            float: right;
-        }
-
-.space1 {
-    width: 210px;
-}
-
-.row.white {
-    background: #fff none repeat scroll 0 0;
-    border: 1px solid #d7d7d7;
-    padding: 19px 8px;
-    border-radius: 6px;
-}
-
-.grey {
-    font-size: 16px;
-    color: #8b8b8b;
-}
-
-.black {
-    font-size: 14px;
-    color: #44474b;
-}
-
-.blue {
-    color: #3aabd5;
-    font-size: 16px;
-}
-
-.blue1 {
-    color: #3aabd5;
-    font-size: 14px;
-}
-
-.sharp {
-    color: #2a2d33;
-    font-size: 16px;
-}
-
-.sharp1 {
-    color: #2a2d33;
-    font-size: 14px;
-}
-
-span.simple {
-    font-size: 16px;
-    font-weight: normal;
-}
-
-h2.up {
-    font-weight: 600;
-    margin: 9px 0 10px;
-}
-
-.btn-outline {
-    color: inherit;
-    background-color: transparent;
-    transition: all .5s;
-}
-
-.btn-rounded {
-    border-radius: 50px;
-}
-
-.btn-large-dim {
-    width: 90px;
-    height: 90px;
-    font-size: 42px;
-}
-
-button.dim {
-    display: inline-block;
-    color: #fff;
+.table-custom1 { border: 1px solid #d7d7d7;}
+.custom-panel-body {padding: 0 !important; position: relative;}
+.custom-panel-body p.hding {  font-size: 22px;}
+.custom-panel-body thead tr { background: #fff;}
+.custom-panel-body tr td, .custom-panel-body tr th {  padding: 15px !important;}
+.custom-panel-body td span.sky { color: #3aabd5; word-wrap: break-word; }
+.custom-panel-body td span.sky i { float: right;}
+.space1 { width: 210px;}
+.row.white { background: #fff none repeat scroll 0 0; border: 1px solid #d7d7d7; padding: 19px 8px; border-radius: 6px;}
+.grey { font-size: 16px;  color: #8b8b8b;}
+.black { font-size: 14px; color: #44474b;}
+.blue { color: #3aabd5; font-size: 16px;}
+.blue1 {color: #3aabd5; font-size: 14px;}
+.sharp {  color: #2a2d33; font-size: 16px;}
+.sharp1 { color: #2a2d33; font-size: 14px;}
+span.simple {font-size: 16px; font-weight: normal;}
+h2.up { font-weight: 600;  margin: 9px 0 10px;}
+.btn-outline {color: inherit;  background-color: transparent; transition: all .5s;}
+.btn-rounded {border-radius: 50px;}
+.btn-large-dim { width: 90px;  height: 90px; font-size: 42px;}
+button.dim {display: inline-block; color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -7070,7 +6922,7 @@ table.tablebankTopRight tr td {
     padding: 0;
 }
 
-    .project p {
+.project p {
         font-family: avenirnextltpro-demi;
         margin: 5px 0;
     }
@@ -7818,6 +7670,7 @@ strong.blue {
 table.table {
     margin: 0;
     padding: 0;
+animation-name:fadeInRight;
 }
 
 .risk-page-wrapper .prog-inner1 {
@@ -8033,7 +7886,7 @@ padding: 0px 5px 0 30px;transition: all 0.3s ease 0s; width: 100%;  color: #6666
 ::selection { background: transparent;}
 ::-moz-selection { background: transparent;}
 
-/*------- AVASIS PROJECT DETAILS V-12------- */
+/*------- AVASIS PROJECT DETAILS V-12 DROPDOWN------- */
 .wrapper-dropdown-3 { /* Size and position */ position: relative;  width: 100%;  max-width:100px; margin: 0 auto; padding: 10px;
 /* Styles */background-color: #79c485;  border-color: #79c485;  color: #ffffff;  border-radius: 4px; box-shadow: 0 1px 1px rgba(50,50,50,0.1);  cursor: pointer; outline: none;  /* Font settings */ font-weight: bold; color: #FFF;}
 .wrapper-dropdown-3 .dropdown { /* Size & position */ position: absolute; top: 140%;  left: 0; right: 0; /* Styles */ background: white;  border-radius: inherit;
@@ -8045,9 +7898,10 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-3 .dropdown li:first-of-type a {  border-radius: 7px 7px 0 0;}
 .wrapper-dropdown-3 .dropdown li:last-of-type a {border: none;  border-radius: 0 0 7px 7px;}
 .wrapper-dropdown-3 .dropdown li:hover a { background: #f3f8f8;}
-.wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
-  
-/*------- TEAM MEMBERSV2@2X------- */
+.wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}  
+
+
+/*------- TEAM MEMBERSV2@2X DROPDOWN------- */
 .wrapper-dropdown-team{ float:left;}
 .wrapper-dropdown-team .dropdown { /* Size & position */ position: absolute; top: 140%;  left: 0; right: 0; /* Styles */ background: white;  border-radius:5px;
 border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-weight: normal; list-style: none;  /* Hiding */  opacity: 0;pointer-events: none;}
@@ -8067,3 +7921,11 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .dd.wrapper-dropdown-team.user ul.dropdown { left: -50px;}
 .dd.wrapper-dropdown-team.user ul.dropdown li{width:100%;}
 .wrapper-dropdown-team.user .dropdown{top:120%}
+
+
+  
+/*------- TEAM MEMBERSV2@2X SORTBY------- */
+.dd.wrapper-dropdown-team.sortby{position: relative; right: 9px; top: 1px;}
+.dd.wrapper-dropdown-team.sortby ul.dropdown { left: -129px;}
+.dd.wrapper-dropdown-team.sortby ul.dropdown li{width:100%;}
+.wrapper-dropdown-team.sortby .dropdown{top:151%}
