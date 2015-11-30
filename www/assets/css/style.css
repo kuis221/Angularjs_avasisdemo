@@ -6187,10 +6187,10 @@ body.skin-2 #wrapper {
 .inner-page-wrapper .project-overview {background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;margin: 51px auto;padding: 0 15px;}
 .inner-page-wrapper .project-overview .border { border-right: 1px solid #eeeeee;}
 .project-overview .progressBar{padding:0 15px;}
-.overview { padding: 20px 0;}
+.overview { padding: 30px 10px;}
 .overview h2.hding {font-size: 28px; margin: 0 0 10px 0; color: #4a4a4a; font-weight: 500; }
 .overview ul.topSubtitle {   list-style: none; margin: 0; padding: 0;}
-.overview ul.topSubtitle li a {font-size: 16px; font-family: avenirnextltpro-demi; color:#3aabd5;}
+.overview ul.topSubtitle li a {font-size: 14px; font-family: avenirnextltpro-demi; color:#3aabd5;}
 .overview ul.topSubtitle li span { color: #8b8b8b;  font-family: avenirnextltpro-demi;}
 .progressBar .ibox { padding: 0 14px 0 0;}
 .ibox-title {  -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none;  -moz-border-top-colors: none; background-color: #ffffff;  border-color: #e7eaec;
@@ -7899,7 +7899,7 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-3 .dropdown li:first-of-type a {  border-radius: 7px 7px 0 0;}
 .wrapper-dropdown-3 .dropdown li:last-of-type a {border: none;  border-radius: 0 0 7px 7px;}
 .wrapper-dropdown-3 .dropdown li:hover a { background: #f3f8f8;}
-.wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}  
+.wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
 
 
 /*------- TEAM MEMBERSV2@2X DROPDOWN------- */
@@ -7916,7 +7916,7 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-team .dropdown li:hover a { background: #f3f8f8;}
 .wrapper-dropdown-team.active .dropdown { left:-177px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
 
-  
+
 /*------- TEAM MEMBERSV2@2X TOPUSER------- */
 .dd.wrapper-dropdown-team.user{position: relative; right: 9px; top: 10px;}
 .dd.wrapper-dropdown-team.user ul.dropdown { left: -50px;}
@@ -7924,7 +7924,7 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-team.user .dropdown{top:120%}
 
 
-  
+
 /*------- TEAM MEMBERSV2@2X SORTBY------- */
 .dd.wrapper-dropdown-team.sortby{position: relative; right: 9px; top: 1px;}
 .dd.wrapper-dropdown-team.sortby ul.dropdown { left: -129px;}

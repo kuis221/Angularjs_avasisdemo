@@ -1,0 +1,146 @@
+/*************************************************************************************
+                             AVASIS-Action-Main-V2@2x
+**************************************************************************************/
+.page-heading h2.heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px;
+    font-weight: 100;
+    color: #4a4a4a;
+    margin: 0 0 10px 0;
+}
+.btn-green {
+    background-color: #79c485;
+    border-color: #79c485;
+    color: #FFFFFF;
+}
+
+.btn-blue {
+    background-color: #3aabd5;
+    border-color: #3aabd5;
+    color: #FFFFFF;
+}
+
+.card {
+    border: 1px solid #e7eaec;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.card-title {
+    padding: 24px 20px 20px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 19px;
+    color: #4a4a4a;
+}
+
+.card-content {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.action-item-text {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+}
+
+.action-item-count-info span:not(.label) {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.action-item-count-info .count {
+    padding-right: 3px;
+}
+
+.action-item-value {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+}
+
+.action-item-of {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+
+}
+
+.label-green {
+    background-color: #79c485;
+    color: #ffffff;
+}
+
+.label-red {
+    background-color: #e25c5c;
+    color: #ffffff;
+}
+
+.label-orange {
+    background-color: #fdae46;
+    color: #ffffff;
+}
+
+.action-item-progress-text {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .action-item-progress-text {
+        margin-left: -15px;
+        margin-top: -6px;
+    }
+}
+
+.btns {
+    float: right;
+}
+
+.btns a {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 14px;
+    padding: 15px;
+    margin: 0;
+}
+
+.action-item .btn a.btn i {
+    font-size: 14px;
+    font-family: "AvenirNextLTPro-Demi";
+    vertical-align: middle;
+}
+
+.action-item .btn-blue {
+    font-family: AvenirNextLTPro-Demi;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.border-right {
+    border-right: 1px solid #eeeeee;
+}
+
+@media (min-width: 768px) {
+    .action-item .btn-blue {
+        margin-top: -3px;
+    }
+}
+
+.progress-medium {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 3px;
+    height: 13px;
+}
+
+.action-completed-chart {
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+@media (min-width: 768px) {
+    .action-completed-chart {
+        margin-top: -4px;
+    }
+}
