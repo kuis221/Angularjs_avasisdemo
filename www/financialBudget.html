@@ -137,7 +137,7 @@
                 <div class="col-lg-2 mt35">
                     <div class="buy">
                         <a href="/theme/lander-v2-webapp-dashboard-B5FC6F4" class="btn btn-danger btn-sm">
-                            <i class="fa fa-plus"></i> Add New Payment
+                            <i class="fa fa-plus"></i> New
                         </a>
                     </div>
                 </div>
@@ -240,14 +240,11 @@
                         <div class="panel-heading">
                             <div class="panel-options">
                                 <ul class="nav nav-tabs custom-tabs1">
-                                    <li class="active"><a data-toggle="tab" href="#tab-1">Main</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-2">Construction Loan</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-3">Change Orders</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-4">Purchase Orders</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-5">Payment Applications</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-6">Bank Draws</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-7">Cash Requirements</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-7">Timline Budget</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-1">Main</a></li>
+                                    <li class="active"><a data-toggle="tab" href="#tab-2">Budget</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-3">Purchase Orders</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-4">Payment Applicarions</a></li>
+                                    <li class=""><a data-toggle="tab" href="#tab-5">Construction Loan</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -452,7 +449,312 @@
                                 </div>
 
                                 <div id="tab-2" class="tab-pane">
-                                    <b>Tab2 Data</b>
+                                    <div class="col-lg-12 whiteBudget">
+                                        <div class="col-lg-6">
+                                            <div class="table-responsive">
+                                                <table class="table budgetTbl">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Square Footage</td>
+                                                            <td><b>5,200</b></td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Goal Cost Per Sqft</td>
+                                                            <td><b>$300.00</b></td>
+                                                            <td> Goal Construction Cost</td>
+                                                            <td><b>$1,560.00</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Current Cost per Sqft</td>
+                                                            <td><b>%309.62</b></td>
+                                                            <td>Current Working Budhet</td>
+                                                            <td><b> $2,345.00</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Variance</td>
+                                                            <td><b class="pink">-$10</b></td>
+                                                            <td>Variance</td>
+                                                            <td><b class="pink"> -$980.00</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="table-responsive">
+                                        <table class=" collaptable table table-hover budgetTbl2">
+                                            <thead>
+                                                <tr class="lightgry" >
+                                                    <th>&nbsp;</th>
+                                                    <th>Labor</th>
+                                                    <th>Materials</th>
+                                                    <th>Equipment</th>
+                                                    <th>Miscellanous</th>
+                                                    <th>Total</th>
+                                                    <th>Items</th>
+                                                    <th>Status</th>
+                                                    <th>CPSF</th>
+                                                    <th>% of Project</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-id="1" data-parent="">
+                                                    <td class="border-right">                                                      
+                                                        <div class="col-md-10 pull-right">
+                                                            <p>DIVISION 1 </p>
+                                                            <span>General Requirements</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr data-id="2" data-parent="1">
+                                                    <td class="border-right">
+                                                        <div class="col-md-10 pull-right">
+                                                            <p>DIVISION 1 </p>
+                                                            <span>General Requirements</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+
+                                                <tr data-id="2" data-parent="1">
+                                                    <td class="border-right">                                                     
+                                                        <div class="col-md-10 pull-right">
+                                                            <p>DIVISION 2 </p>
+                                                            <span>Site Construction</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr data-id="3" data-parent="2">
+                                                    <td class="border-right">
+                                                      
+                                                        <div class="col-md-10 pull-right">
+                                                            <p>DIVISION 3 </p>
+                                                            <span>Concrete</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 4 </p>
+                                                            <span>Masonry</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 5 </p>
+                                                            <span>Metals</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 6 </p>
+                                                            <span>Wood and Plastics</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 7 </p>
+                                                            <span>Thermal and Mosisture Protection</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 8 </p>
+                                                            <span>Doors and Windows</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 9</p>
+                                                            <span>Finishes</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 10 </p>
+                                                            <span>Specialties</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 11 </p>
+                                                            <span>Equipment</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-right">
+                                                        <div class="col-md-2">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <p>DIVISION 3 </p>
+                                                            <span>Concrete</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>$1,000,000 </td>
+                                                    <td>$75,000</td>
+                                                    <td>$11,750 </td>
+                                                    <td>$2,350</td>
+                                                    <td>$131,600</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>25.30</td>
+                                                    <td>8%</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 </div>
                                 <div id="tab-3" class="tab-pane">
                                     <b>Tab3 Data</b>
@@ -513,9 +815,17 @@
     <script src="assets/js/plugins/pace/pace.min.js"></script>
 
 
-    <!-- Peity -->
-    <script src="assets/js/demo/peity-demo.js"></script>
-  
+    <script src="assets/js/jquery.aCollapTable.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.collaptable').aCollapTable({
+                startCollapsed: true,
+                addColumn: false,
+                plusButton: '<span class="i">+</span>',
+                minusButton: '<span class="i">-</span>'
+            });
+        });
+    </script>
 
 </body>
 
