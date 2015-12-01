@@ -94,9 +94,10 @@
 
 .btns {
     float: right;
+    position: relative;
 }
 
-.btns a {
+.btns > a {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 14px;
     padding: 15px;
@@ -143,4 +144,29 @@
     .action-completed-chart {
         margin-top: -4px;
     }
+}
+.action-menu::before{
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #fff;
+    content: "\f0de";
+    position: absolute;
+    right: 20px;
+    top: -11px;
+}
+.action-menu {
+    width: 210px;
+    margin-top: 16px;
+    padding: 0;
+    border: 1px solid rgba(221,221,221,0.1);
+    box-shadow: 0px 0px 25px 0 #ccc;
+}
+.action-menu > li:not(:last-child) {
+    border-bottom: 1px solid #eeeeee;
+}
+.action-menu > li > a {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #3aabd5;
+    padding: 17px;
 }
