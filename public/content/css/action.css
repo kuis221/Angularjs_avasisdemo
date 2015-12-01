@@ -170,3 +170,164 @@
     color: #3aabd5;
     padding: 17px;
 }
+
+
+/*************************************************************************************
+                             AVASIS-Action-Main-GAI-V3@2x
+**************************************************************************************/
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-padding-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-detail-header {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8;
+}
+
+.page-detail-header .closeBox {
+    background: #000;
+    background-color: #1b1e23;
+    width: 100%;
+    padding: 105px 0;
+}
+
+.page-detail-header .closeBox p {
+    text-align: center;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 13px;
+}
+
+.page-detail-header-wrapper {
+    padding: 40px 15px;
+}
+
+.page-detail-header-wrapper h2.heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px;
+}
+
+.page-detail-header-wrapper ul.topSubtitle {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-detail-header-wrapper ul.topSubtitle li a {
+    font-size: 14px;
+    font-family: "AvenirNextLTPro-Demi";
+    color: #3aabd5;
+}
+
+.gai-table {
+    margin-bottom: 25px;
+
+}
+.gai-table h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "AvenirNextLTPro-MediumCn";
+    font-size: 17px;
+}
+
+.gai-table table thead th {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+    color: #808080;
+    border: none;
+}
+
+th.flag {
+    width: 4%;
+}
+
+th.title {
+    width: 30%;
+}
+
+th.due-date {
+    width: 12%;
+}
+
+th.responsible, th.initiator {
+    width: 12%;
+}
+
+th.status {
+    width: 13%;
+}
+
+.gai-table table tbody tr {
+    border-top: 1px solid #eee;
+}
+
+.gai-table table tbody tr td {
+    border: none;
+    vertical-align: middle;
+}
+
+.gai-table table tbody tr td.title {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+    color: #44474b;
+}
+
+.gai-table table tbody tr td.title small {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 11px;
+}
+
+td.sow, td.due-date {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+}
+
+.gai-table table tbody td.responsible a, .gai-table table tbody td.initiator a {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #3aabd5;
+}
+
+.gai-table table tbody td.responsible small, .gai-table table tbody td.initiator small {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    color: #9e9e9e;
+}
+
+.gai-table td.status .label {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    padding: 2px 0px 2px 0px;
+}
+
+.gai-table td.status small {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 11px;
+    color: #44474b;
+}
+
+.gai-table td.status .in-process {
+    color: #61c571;
+}
+
+.gai-table td.status .pending {
+    color: #fdb04a;
+}
+
+.gai-table td.status .draft {
+    color: #2a2d33;
+}
+
+.gai-table td.flag span {
+    margin: 4px;
+}
