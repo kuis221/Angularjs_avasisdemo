@@ -67,6 +67,7 @@
 .mb35 {margin-bottom: 35px;}
 
 .btn.focus, .btn:focus, .btn:hover {border: none; outline: none; outline-offset: none; color: #FFF;}
+a:focus{outline:none}
 
 /************COMMON CLASSES***********/
 .skyColor { color: #3aabd5;}
@@ -2701,8 +2702,12 @@ table.budgetTbl2 tr td.border-right{border-right:1px solid #ccc}
 table.budgetTbl2 tr td.border-right i{color:#3aabd5}
 table.budgetTbl2 tr td.border-right p{font-size:12px; margin:0; font-family: 'AvenirNextLTPro-Regular';}
 table.budgetTbl2 tr td.border-right span{color:#3aabd5; font-size:13px;  font-family: avenirnextltpro-demi;}
+table.budgetTbl2 tr td.border-right span.i{font-size:24px; line-height:16px;}
 #tab-2{background:#fff}
-
+.budgetpadding0{padding:0px;}
+table.budgetTbl2 tr td{vertical-align:middle;}
+table.budgetTbl2 a.extbricklink{background:#000; border-radius:3px; color:#FFF; font-size:10px; font-family: 'AvenirNextLTPro-Regular'; padding:3px 10px;}
+table.budgetTbl2 p.AddBudgetbtn{color:#3aabd5; font-family: avenirnextltpro-demi; font-size: 13px;}
 
 
 /*=======*=========*=========*=========*===========*
