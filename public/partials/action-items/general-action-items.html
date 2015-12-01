@@ -113,176 +113,184 @@
         <div class="row gai-table">
             <div class="col-md-12">
                 <h3>Actions Required by Me</h3>
-                <table class="table table-condensed table-bordered table-striped">
-                    <thead>
-                        <th class="flag"></th>
-                        <th class="title">Title</th>
-                        <th class="due-date">Due Date</th>
-                        <th class="responsible">Responsible</th>
-                        <th class="initiator">Initiator</th>
-                        <th class="sow">SOW</th>
-                        <th class="status">Status</th>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="row in gai.listRequiredByMe">
-                        <td class="flag">
-                            <span>
-                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
-                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
-                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
-                            </span>
-                        </td>
-                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
-                        <td class="due-date">{{ row.due_date }}</td>
-                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
-                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
-                        <td class="sow">{{ row.sow }}</td>
-                        <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
-                                {{ row.status[0] }}
-                            </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
-                        </td>
-                      </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="status">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in gai.listRequiredByMe">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                            <td class="due-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
+                                                               'draft': row.status[0] == 'draft',
+                                                               'pending': row.status[0] == 'pending'}">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <small>{{ row.status[1] }}% Completed</small>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="row gai-table">
             <div class="col-md-12">
                 <h3>Actions Required by Others</h3>
-                <table class="table table-condensed table-bordered table-striped">
-                    <thead>
-                        <th class="flag"></th>
-                        <th class="title">Title</th>
-                        <th class="due-date">Due Date</th>
-                        <th class="responsible">Responsible</th>
-                        <th class="initiator">Initiator</th>
-                        <th class="sow">SOW</th>
-                        <th class="status">Status</th>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="row in gai.listRequiredByOthers">
-                        <td class="flag">
-                            <span>
-                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
-                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
-                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
-                            </span>
-                        </td>
-                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
-                        <td class="due-date">{{ row.due_date }}</td>
-                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
-                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
-                        <td class="sow">{{ row.sow }}</td>
-                        <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
-                                {{ row.status[0] }}
-                            </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
-                        </td>
-                      </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="status">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in gai.listRequiredByOthers">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                            <td class="due-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
+                                                               'draft': row.status[0] == 'draft',
+                                                               'pending': row.status[0] == 'pending'}">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <small>{{ row.status[1] }}% Completed</small>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="row gai-table">
             <div class="col-md-12">
                 <h3>Drafts</h3>
-                <table class="table table-condensed table-bordered table-striped">
-                    <thead>
-                        <th class="flag"></th>
-                        <th class="title">Title</th>
-                        <th class="due-date">Due Date</th>
-                        <th class="responsible">Responsible</th>
-                        <th class="initiator">Initiator</th>
-                        <th class="sow">SOW</th>
-                        <th class="status">Status</th>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="row in gai.listDrafts">
-                        <td class="flag">
-                            <span>
-                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
-                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
-                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
-                            </span>
-                        </td>
-                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
-                        <td class="due-date">{{ row.due_date }}</td>
-                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
-                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
-                        <td class="sow">{{ row.sow }}</td>
-                        <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
-                                {{ row.status[0] }}
-                            </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
-                        </td>
-                      </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="status">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in gai.listDrafts">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                            <td class="due-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
+                                                               'draft': row.status[0] == 'draft',
+                                                               'pending': row.status[0] == 'pending'}">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <small>{{ row.status[1] }}% Completed</small>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="row gai-table">
             <div class="col-md-12">
                 <h3>Completed</h3>
-                <table class="table table-condensed table-bordered table-striped">
-                    <thead>
-                        <th class="flag"></th>
-                        <th class="title">Title</th>
-                        <th class="due-date">Due Date</th>
-                        <th class="responsible">Responsible</th>
-                        <th class="initiator">Initiator</th>
-                        <th class="sow">SOW</th>
-                        <th class="status">Status</th>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="row in gai.listCompleted">
-                        <td class="flag">
-                            <span>
-                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
-                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
-                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
-                            </span>
-                        </td>
-                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
-                        <td class="due-date">{{ row.due_date }}</td>
-                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
-                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
-                        <td class="sow">{{ row.sow }}</td>
-                        <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
-                                {{ row.status[0] }}
-                            </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
-                        </td>
-                      </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="status">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in gai.listCompleted">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                            <td class="due-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
+                                                               'draft': row.status[0] == 'draft',
+                                                               'pending': row.status[0] == 'pending'}">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <small>{{ row.status[1] }}% Completed</small>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
