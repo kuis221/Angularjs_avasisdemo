@@ -83,4 +83,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/team-members/team-members.html",
             controller: "TeamMembersCtrl"
         })
+        .state('action-items', {
+            url: '/action-items',
+            abstract: true,
+            template: "<ui-view></ui-view>"
+        })
+        .state('action-items.main', {
+            url: '/main',
+            templateUrl: "partials/action-items/action-items.html",
+            controller: "ActionItemsCtrl"
+        })
+        .state('action-items.general-action-items', {
+            url: '/general-action-items',
+            templateUrl: "partials/action-items/general-action-items.html",
+            controller: "ActionItemsCtrl"
+        })
 }]);

@@ -2437,6 +2437,1198 @@ background: radial-gradient(ellipse at center, #f6f6f6 20%, #d5d5d5 100%);
                                      AVASIS-PROJECTDETAILS-V12@2X
 *************************************************************************************
 **************************************************************************************/
+<<<<<<< HEAD
+
+.inner-page-wrapper .project-overview {background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;margin: 51px auto;padding: 0 15px;}
+.inner-page-wrapper .project-overview .border { border-right: 1px solid #eeeeee;}
+.project-overview .progressBar{padding:0 15px;}
+.overview { padding: 30px 10px;}
+.overview h2.hding {font-size: 28px; margin: 0 0 10px 0; color: #4a4a4a; font-weight: 500; }
+.overview ul.topSubtitle {   list-style: none; margin: 0; padding: 0;}
+.overview ul.topSubtitle li a {font-size: 14px; font-family: avenirnextltpro-demi; color:#3aabd5;}
+.overview ul.topSubtitle li span { color: #8b8b8b;  font-family: avenirnextltpro-demi;}
+.progressBar .ibox { padding: 0 14px 0 0;}
+.ibox-title {  -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none;  -moz-border-top-colors: none; background-color: #ffffff;  border-color: #e7eaec;
+ border-image: none; border-style: solid solid none;  border-width: 4px 0 0; color: inherit; margin-bottom: 0;  min-height: 48px; padding: 14px 15px 7px;}
+span.project { background: #2a2d33;  padding: 4px 7px;  border-radius: 3px; color: #FFF;}
+.ibox .Schedules { border-bottom: 1px solid #eeeeee;  padding: 23px 0 15px;}
+.ibox .Schedules p i { color: #ccc;  font-size: 20px; color: #555555; margin-right: 12px; }
+.ibox .Schedules p { font-size: 20px; font-family: "AvenirNextLTPro-Regular";}
+ .ibox .Schedules p a {float: right; font-size: 14px; font-weight: 600;  margin: 0 21px;  color: #3aabd5;}
+.ibox .project {border-bottom: 1px solid #eeeeee;  padding: 20px 0;}
+.ibox .project:last-child{border:none;}
+.ibox .project .feed-element {padding: 0;}
+.ibox .project .media-body strong { color: #3aabd5; float: left; font-size: 18px; font-weight: normal; margin-bottom: 6px;width: 100%; font-family: avenirnextltpro-demi; }
+.ibox .project .media-body p.progrsTxt { color: #4a4a4a; font-size: 14px;  margin: 0; white-space:nowrap;}
+.ibox .project .media-body p.progrsTxt span { color: #e25c5c; margin-right: 8px; text-transform: uppercase;}
+.ibox .project .media-body p.progrsTxt span.green {color: #79c485; }
+.ibox .project .media-body .progress-small { margin: 0; }
+.ibox .project .media-body p { font-size: 14px;}
+.ibox .project .media-body p span { color: #8b8b8b; }
+h3.proStatus {font-size: 20px; color: #4a4a4a;font-weight: normal; font-family: "AvenirNextLTPro-Regular";}
+ h3.proStatus i { font-size: 18px; }
+.itmDueToday {border: 1px solid #ececec; border-radius: 5px; height: 510px !important; margin-top: 26px;}
+.itmDueToday td a {color: #fff;  background: #2a2d33;  border-radius: 5px; font-weight: normal; padding: 3px 8px; white-space: nowrap;}
+.itmDueToday h2{ margin: 0; padding: 6px; font-family: "AvenirNextLTPro-Regular"; font-size:20px;}
+.itmDueToday .table td { padding: 20px 10px 9px;}
+.itmDueToday .table td span {color: #3aabd5;}
+.itmDueToday .table td .strock { text-decoration: line-through;  position: relative; opacity: 0.4; }
+.whiteBox {border: 1px solid #ececec; border-radius: 5px; background: #fff;  padding:0}
+.whiteBox .hdingTopBox { border-bottom: 1px solid #eeeeee;  padding: 23px 0 5px;}
+.hdingTopBox p { font-size: 20px; padding: 0 10px; font-family: "AvenirNextLTPro-Regular" }
+.hdingTopBox a { float: right; margin: 0 12px; color: #3aabd5; font-size: 14px; font-weight: 600;  font-family: "AvenirNextLTPro-Regular";}
+.hdingTopBox > p i { margin-right: 10px;}
+.whiteBox .space { padding: 30px 0 5px 31px; position: relative;}
+.whiteBox .space2 {padding: 30px 0 5px 5px; position: relative;}
+.whiteBox .space span.smlhding {  font-size: 14px; position: absolute; top: 13px; width: 100%;}
+.whiteBox .space .left1 { padding: 10px 0;}
+.whiteBox p.price { margin: 0px;}
+.whiteBox img.cus-circle {  margin: 12px 0 0 -8px;}
+.whiteBox hr { float: left; width: 100%; margin: 15px 0 4px;}
+.btn-pink { background-color: #ed5565; color: #fff;}
+.whiteBox table.community {  margin-bottom: 0px !important;}
+.whiteBox table.community td { vertical-align: middle; padding: 12px;}
+.whiteBox table.community td i { font-size: 18px; }
+.whiteBox table.community td p { font-size: 16px;}
+.whiteBox .progress-bar-primary { background: #3aabd5; color: #3aabd5;}
+.whiteBox span.sky { color: #3aabd5; vertical-align:middle;}
+.whiteBox table.team { margin-bottom: 0px !important;}
+.whiteBox table.team td {vertical-align: middle; padding:8px 4px 8px 13px;}
+.whiteBox table.team td ul.breadcrumb2 {float: right;}
+.whiteBox .gallery { padding: 0 13px;}
+.gallery img {margin: 10px 0;}
+.left1 p b.Lspace {left: 60%; position: absolute;}
+.Schedules p img { margin-bottom: 5px;}
+.project .feed-element a.pull-left img { position: relative; top: 10px;}
+.teamupper {font-family: avenirnextltpro-demi; font-size: 16px;  text-transform: uppercase; vertical-align: middle; white-space: nowrap;}
+
+
+/*=======*=========*=========*=========*===========*
+ *=======*=========*=========*=========*===========*
+ =================== TEAM MEMBERS TAB START HERE=========
+*=======*=========*=========*=========*===========*
+*=======*=========*=========*=========*=========== /*
+
+/*==================================================
+                                     Team Members V2-Empty@2x
+==================================================*/
+.teammembers {padding: 20px 0;}
+.teammembers ul.topSubtitle { list-style: outside none none; margin: 0; padding: 0; }
+.teammembers h2.hding { color: #4a4a4a;  font-size: 28px; margin: 0 0 10px; font-family: 'AvenirNextLTPro-Regular';}
+.teammembers .teaminvite {margin: 5px 11px;}
+.teammembers .teaminvite a { font-size: 17px; margin: 0; padding: 10px; font-family: 'AvenirNextLTPro-Demi';}
+.user-info { font-family: 'AvenirNextLTPro-Demi';}
+.teammembers .topSubtitle li a {font-size: 14px;  font-weight: 600;}
+.teammembers .topSubtitle li a i {  margin-left: 5px; }
+.teamarrow {background: url("../img/arrowUp.png") no-repeat scroll right center; padding: 15px 0;  width: 100%;}
+.teamarrow .assign {  width: 66.444%; margin: 18% auto; text-align: center;}
+.teamarrow .assign > p { font-size: 22px; font-weight: 500; color: #4a4a4a; font-family: 'AvenirNextLTPro-Regular';}
+.teamarrow .assign > span { font-size: 18px;  font-weight: 500; color: #808080;}
+
+
+/*==================================================
+                                 Team Members V2@2x
+==================================================*/
+.modal-dialog.top{ margin: 258px auto;}
+.inner-page-wrapper { background: #f9f9f9;}
+.teamv22x { padding: 20px 0;}
+.teamv22x tr { border: 1px solid #e7eaec;}
+.teamv22x ul.topSubtitle { list-style: outside none none; margin: 0;  padding: 0;}
+.teamv22x .topSubtitle li a {  font-size: 14px;  font-weight: 600;}
+.teamv22x h2.hding {color: #4a4a4a; font-size: 26px; margin: 0 0 10px; font-family: "AvenirNextLTPro-Regular";}
+.teamv22x .topSubtitle li a i {  margin-left: 5px;}
+.teamv22x .teaminvite a { font-family: "AvenirNextLTPro-Demi"; font-size: 17px; margin: 0; padding: 10px;}
+.teamv22x .teaminvite {margin: 5px 11px; }
+.whiteBgColor { background: #fff;}
+.whiteBgColor .feed-Compliance .media-Compliance b { font-family: "AvenirNextLTPro-Demi"; font-weight: 600 !important;}
+.whiteBgColor .media-Compliance p.pink { color: #e25c5c; font-family: "avenirnextltpro-demi";font-size: 13px; }
+.breadcrumbv22x > li { border-right: 1px solid #ccc; display: inline-block; padding: 0 8px 0 0;}
+.breadcrumbv22x li a {  color: #7f8a90 !important;}
+.breadcrumbv22x > li:last-child { border: none;}
+.MemberTableDetails { max-width: 100%; width: 205px;}
+.MemberTableDetails span { color: #3aabd5;  cursor: pointer;}
+.memberv22x tr {border: 1px solid #e7eaec;}
+.table.memberv22x span.sky1 {color: #3aabd5; font-size: 13px; font-weight: 600;}
+.table.memberv22x th { color: #808080; font-size: 13px; font-weight: 600;  padding: 14px;}
+.table.memberv22x td { padding: 15px 20px 11px; font-family: "AvenirNextLTPro-Regular";}
+.table.memberv22x span.sky3 { color: #3aabd5; font-weight: 600;  font-size: 13px;}
+.table.memberv22x span { font-size: 13px; font-family: "avenirnextltpro-demi";}
+.table.memberv22x p { font-size: 12px; margin: 0; padding: 0; white-space: nowrap;}
+.table.memberv22x .sky4 {color: #79c485; font-size: 13px; font-weight: 600; text-transform: uppercase;}
+.table.memberv22x .sky5 { color: #e25c5c; font-size: 13px; font-weight: 600;}
+.table.memberv22x td { vertical-align: middle;}
+.table.memberv22x .ibox-team i {font-size: 18px; float: left;  margin-left: 6px;}
+.feed-Compliance {padding-bottom: 0px;}
+.buy1 {  float: left;}
+.memberv22x p.light-big { color: #737578; font-size: 14px; color: #44474b;}
+.mapflag-alert p img, .mapflag-alert p span img { margin: 0 5px;}
+.topMemberContain .green2 { color: #61c571;}
+.topMemberContain .green2 img { float: left; margin-bottom: 30px; margin-right: 7px;}
+.topMemberContain .green2 span { font-size: 18px;}
+.topMemberContain .green2 p { font-size: 14px; font-weight: bold; text-transform:uppercase;}
+.topMemberContain .sky2 {color: #3aabd5;}
+.topMemberContain .sky2 img { float: left; margin-bottom: 30px; margin-right: 7px;}
+.topMemberContain .sky2 span { font-size: 18px; }
+.topMemberContain .sky2 p { font-size: 14px; font-weight: bold; text-transform:uppercase;}
+.topMemberContain .orangeColor2 {color: #fdae46;}
+.topMemberContain .orangeColor2 img { float: left; margin-bottom: 30px; margin-right: 7px;}
+.topMemberContain .orangeColor2 span { font-size: 18px;}
+.topMemberContain .orangeColor2 p { font-size: 14px; font-weight: bold; text-transform:uppercase; white-space:nowrap;}
+.whiteBgColor .feed-Compliance > .pull-left {  margin-right: 5px;}
+.mapflag { position: relative;  top: -2px;}
+.mapflag-alert p { color: #e25c5c; font-weight: 600;}
+.mapflag-alert > p span { color: #fdae46;}
+.btn-dangerteam { background-color: #FFF;  border: 1px solid #aaaaaa;color: #808080; padding: 7px 10px; white-space: nowrap;}
+.table.memberv22x .offsite { color: #8b8b8b; font-size: 13px;  font-weight: 600; text-transform: uppercase;}
+.memberv22x p.multipalepro { color: #3aabd5; font-size: 14px;font-family: "AvenirNextLTPro-Demi";}
+.ibox-team { display: inline-block; float: right; margin-top: 0; padding: 0; position: relative;}
+.ibox-team a {color: #c4c4c4; cursor: pointer; }
+.dd.wrapper-dropdown-team.user span a i{font-size:18px; vertical-align:middle;}
+.dd.wrapper-dropdown-team.user span a {font-size:14px; vertical-align:middle; color:#3aabd5}
+/*=================================================
+                              Team Members V2-gear@2x
+==================================================*/
+
+.popover-content.gear2x {  border-bottom: 1px solid #dedede;}
+.gear2x {color: #3aabd5; font-family: 'AvenirNextLTPro-Demi'; font-size: 14px;}
+.gear2xred {color: #e25c5c;  font-family: 'AvenirNextLTPro-Demi';}
+.whiteBgColor .feed-Compliance .multiproject {color: #3aabd5;  font-family: 'AvenirNextLTPro-Demi'; font-size: 14px;}
+
+/*********(Team Members V2-MultiplePR@2x) Modal popUp*********/
+.modal-body .table-cutome {border: 1px solid #eeeeee;}
+.modal-body .table-cutome tr td { padding: 20px 2px 9px 15px;}
+.modal-body .table-cutome th { padding: 15px;}
+.modal-header {border: none; padding-bottom: 0;}
+.skyColor {font-family: 'AvenirNextLTPro-Demi';}
+.customModalHeader h4 { margin-left: 7px; font-size: 16px;}
+.modal-body .breadcrumbv22x > li { padding: 0px 9px 0 6px;}
+
+
+
+/*=======*=========*=========*=========*===========*
+ *=======*=========*=========*=========*===========*
+ ==================== FINANCIALS ====================
+*=======*=========*=========*=========*===========*
+*=======*=========*=========*=========*=========== /*
+
+
+/*==================================================
+                                        Financials-Main- v6
+==================================================*/
+
+.table-custom1 {font-family: "AvenirNextLTPro-Regular";}
+.page-heading h2.hding { color: #4a4a4a; font-family: "AvenirNextLTPro-Regular"; font-size: 26px;}
+.buy a { padding: 10px; font-family: "AvenirNextLTPro-Demi";  font-size: 17px; margin: 0;}
+.label.label-Schedule {background-color: #3aabd5;  color: #1ab394; font-size: 10px;}
+.label.progress-bar-cost { background-color: #79c485; color: #79c485;}
+.label.progress-bar-contractual { background-color: #f8ac59; color: #f8ac59;}
+.label.progress-bar-pending {  background-color: #ed5565; color: #ed5565;}
+.label.progress-bar-unbudgeted {background-color: #2a2d33; color: #2a2d33;}
+.progress.progress-normal { height: 18px; margin: 8px 0 0 0;}
+
+
+/**** Custom tabs ****/
+.custom-tabs1 { border-top: 1px solid #d7d7d7; border-bottom: none !important;}
+.custom-tabs1 li.active { background: #fff !important; border-right: 1px solid #ccc !important; }
+.custom-tabs1 li {padding: 15px 0; }
+.custom-tabs1 > li > a { padding: 10px 20px 10px 25px; border-right: 1px solid #ccc !important;}
+.custom-tabs1 > li > a:hover {  padding: none !important;}
+.custom-tabs1 li.active a { border: none !important; color: #e25c5c !important;}
+.custom-tabs1 > li > a:hover, .custom-tabs1 > li > a:focus { background: none !important; border: none;}
+.nav-tabs > li > a {padding: none !important;}
+.nav-tabs > li {margin-bottom: 0px !important;}
+
+/**** Custom table ****/
+.table-custom1 { border: 1px solid #d7d7d7;}
+.custom-panel-body {padding: 0 !important; position: relative;}
+.custom-panel-body p.hding {  font-size: 22px;}
+.custom-panel-body thead tr { background: #fff;}
+.custom-panel-body tr td, .custom-panel-body tr th {  padding: 15px !important;}
+.custom-panel-body td span.sky { color: #3aabd5; word-wrap: break-word; }
+.custom-panel-body td span.sky i { float: right;}
+.space1 { width: 210px;}
+.row.white { background: #fff none repeat scroll 0 0; border: 1px solid #d7d7d7; padding: 19px 8px; border-radius: 6px;}
+.grey { font-size: 16px;  color: #8b8b8b;}
+.black { font-size: 14px; color: #44474b;}
+.blue { color: #3aabd5; font-size: 16px;}
+.blue1 {color: #3aabd5; font-size: 14px;}
+.sharp {  color: #2a2d33; font-size: 16px;}
+.sharp1 { color: #2a2d33; font-size: 14px;}
+span.simple {font-size: 16px; font-weight: normal;}
+h2.up { font-weight: 600;  margin: 9px 0 10px;}
+.btn-outline {color: inherit;  background-color: transparent; transition: all .5s;}
+.btn-rounded {border-radius: 50px;}
+.btn-large-dim { width: 90px;  height: 90px; font-size: 42px;}
+button.dim {display: inline-block; color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 6px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 20px !important;
+}
+
+    button.dim:active {
+        top: 3px;
+    }
+
+button.btn-primary.dim {
+    box-shadow: inset 0px 0px 0px #16987e, 0px 5px 0px 0px #16987e, 0px 10px 5px #999999;
+}
+
+    button.btn-primary.dim:active {
+        box-shadow: inset 0px 0px 0px #16987e, 0px 2px 0px 0px #16987e, 0px 5px 3px #999999;
+    }
+
+button.btn-default.dim {
+    box-shadow: inset 0px 0px 0px #b3b3b3, 0px 5px 0px 0px #b3b3b3, 0px 10px 5px #999999;
+}
+
+    button.btn-default.dim:active {
+        box-shadow: inset 0px 0px 0px #b3b3b3, 0px 2px 0px 0px #b3b3b3, 0px 5px 3px #999999;
+    }
+
+button.btn-warning.dim {
+    box-shadow: inset 0px 0px 0px #f79d3c, 0px 5px 0px 0px #f79d3c, 0px 10px 5px #999999;
+}
+
+    button.btn-warning.dim:active {
+        box-shadow: inset 0px 0px 0px #f79d3c, 0px 2px 0px 0px #f79d3c, 0px 5px 3px #999999;
+    }
+
+button.btn-info.dim {
+    box-shadow: inset 0px 0px 0px #1eacae, 0px 5px 0px 0px #1eacae, 0px 10px 5px #999999;
+}
+
+    button.btn-info.dim:active {
+        box-shadow: inset 0px 0px 0px #1eacae, 0px 2px 0px 0px #1eacae, 0px 5px 3px #999999;
+    }
+
+button.btn-success.dim {
+    box-shadow: inset 0px 0px 0px #1872ab, 0px 5px 0px 0px #1872ab, 0px 10px 5px #999999;
+}
+
+    button.btn-success.dim:active {
+        box-shadow: inset 0px 0px 0px #1872ab, 0px 2px 0px 0px #1872ab, 0px 5px 3px #999999;
+    }
+
+button.btn-danger.dim {
+    box-shadow: inset 0px 0px 0px #ea394c, 0px 5px 0px 0px #ea394c, 0px 10px 5px #999999;
+}
+
+    button.btn-danger.dim:active {
+        box-shadow: inset 0px 0px 0px #ea394c, 0px 2px 0px 0px #ea394c, 0px 5px 3px #999999;
+    }
+
+button.dim:before {
+    font-size: 50px;
+    line-height: 1em;
+    font-weight: normal;
+    color: #fff;
+    display: block;
+    padding-top: 10px;
+}
+
+button.dim:active:before {
+    top: 7px;
+    font-size: 50px;
+}
+
+.label {
+    background-color: #d1dade;
+    color: #5e5e5e;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    text-shadow: none;
+}
+
+.badge {
+    background-color: #FFF;
+    border: 2px solid #e25c5c;
+    color: #e25c5c;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-weight: 600;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-shadow: none;
+    right: 14px;
+    text-align: center;
+    top: -12px;
+    position: relative;
+}
+
+.label-primary, .badge-primary {
+    background-color: #1ab394;
+    color: #FFFFFF;
+}
+
+.label-success, .badge-success {
+    background-color: #1c84c6;
+    color: #FFFFFF;
+}
+
+.label-warning, .badge-warning {
+    background-color: #f8ac59;
+    color: #FFFFFF;
+}
+
+.label-warning-light, .badge-warning-light {
+    background-color: #f8ac59;
+    color: #ffffff;
+}
+
+.label-danger, .badge-danger {
+    background-color: #ed5565;
+    color: #FFFFFF;
+}
+
+.label-info, .badge-info {
+    background-color: #23c6c8;
+    color: #FFFFFF;
+}
+
+.label-inverse, .badge-inverse {
+    background-color: #262626;
+    color: #FFFFFF;
+}
+
+.label-white, .badge-white {
+    background-color: #FFFFFF;
+    color: #5E5E5E;
+}
+
+.label-white, .badge-disable {
+    background-color: #2A2E36;
+    color: #8B91A0;
+}
+
+
+
+
+
+
+
+
+/*----ToBrak Draw Common classes----*/
+.bankdraw-inner-page {
+    background: #f9f9f9;
+}
+
+    .bankdraw-inner-page .bankbg {
+        background: #fff none repeat scroll 0 0;
+        box-shadow: 1px 0 4px #d8d8d8;
+    }
+
+    .bankdraw-inner-page .closeBox {
+        background: #000;
+        width: 100%;
+        padding: 109px 0;
+    }
+
+        .bankdraw-inner-page .closeBox p, .closeBox p a {
+            color: #fff;
+            text-align: center;
+            font-size: 15px;
+        }
+
+            .bankdraw-inner-page .closeBox p i {
+                font-size: 15px;
+                margin-left: 5px;
+                position: relative;
+                top: 1px;
+            }
+
+    .bankdraw-inner-page .heading h2 {
+        font-weight: normal;
+        font-family: 'AvenirNextLTPro-Regular';
+    }
+
+    .bankdraw-inner-page .heading span {
+        display: block;
+        font-size: 14px;
+        font-family: 'AvenirNextLTPro-Regular';
+    }
+
+    .bankdraw-inner-page .heading h5 {
+        margin: 3px 0;
+        color: #8b8b8b;
+        font-family: "AvenirNextLTPro-Demi";
+    }
+
+    .bankdraw-inner-page .heading h4 {
+        font-weight: normal;
+        margin: 10px 0 8px 0;
+        padding: 0px;
+        font-size: 16px;
+        font-family: 'AvenirNextLTPro-Regular';
+        text-transform: uppercase;
+    }
+
+table.tablebankTopRight tr td {
+    border: none;
+    padding: 4px 0;
+}
+
+    table.tablebankTopRight tr td span {
+        color: #2a2d33;
+        font-family: "AvenirNextLTPro-Demi";
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+        table.tablebankTopRight tr td span.noBtn {
+            background: #44474b none repeat scroll 0 0;
+            border-radius: 4px;
+            color: #fff;
+            font-family: "AvenirNextLTPro-Regular";
+            font-size: 14px;
+            padding: 3px 10px;
+        }
+
+    table.tablebankTopRight tr td p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+.table.tablebankTopRight tr td p.greenClr {
+    color: #79c485;
+}
+
+.bankdraw-inner-page .label.label-info1 {
+    background: #2a2d33;
+    color: #FFF;
+}
+/*==================================================
+                                        Bank_Draw-v2@2x
+==================================================*/
+.bankdraw-inner-page .prog-inner {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    margin: 51px auto;
+    padding: 0 15px;
+}
+
+.bankdraw-inner-page .customScroll {
+    overflow-y: scroll;
+    height: 670px;
+}
+
+.bankdraw-inner-page .lightgry th {
+    color: #808080;
+    font-size: 15px;
+}
+
+.bankdraw-inner-page .table.bankdaterange label {
+    margin-top: 27px;
+}
+
+.bankdraw-inner-page label {
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+.bankdraw-inner-page .savedraft {
+    position: relative;
+    top: 10px;
+    font-family: "AvenirNextLTPro-Demi";
+}
+
+.prog-inner .progressBar {
+    padding-bottom: 27px;
+    padding: 0 15px;
+}
+/**************************START WIZARD**************************/
+.bs-wizard {
+    margin-top: 5px;
+}
+
+.bs-wizard {
+    border-bottom: solid 1px #e0e0e0;
+    padding: 0 0 10px 0;
+}
+
+    .bs-wizard > .bs-wizard-step {
+        padding: 0;
+        position: relative;
+    }
+
+        .bs-wizard > .bs-wizard-step + .bs-wizard-step {
+        }
+
+        .bs-wizard > .bs-wizard-step .bs-wizard-info {
+            color: #4a4a4a;
+            font-family: 'AvenirNextLTPro-Demi';
+            font-size: 14px;
+        }
+
+.complete .text-center {
+    color: #e75c5b !important;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    background: #f6cece none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    top: 23px;
+    width: 35px;
+}
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot::after {
+        background: #e25c5c none repeat scroll 0 0;
+        border: 3px solid #fff;
+        border-radius: 50px;
+        content: " ";
+        height: 20px;
+        left: 7px;
+        position: absolute;
+        top: 8px;
+        width: 20px;
+    }
+
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative;
+    border-radius: 0px;
+    height: 8px;
+    box-shadow: none;
+    margin: 20px 0;
+}
+
+    .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+        width: 0px;
+        box-shadow: none;
+        background: #f5f5f5;
+    }
+
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: #f5f5f5;
+}
+/*.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after { opacity: 0;}*/
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+    left: 50%;
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: none;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot::after {
+    background-color: #FFF !important;
+}
+/*************************** END Form Wizard **********************************/
+.table-bankright span.greenTxt {
+    color: #79c485;
+    font-size: 16px;
+    font-family: 'AvenirNextLTPro-Demi';
+}
+
+.table-bankright p.bigTxt {
+    font-size: 18px;
+}
+
+.table-bankright span {
+    font-size: 16px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table-bankright {
+    border: 1px solid #d7d7d7;
+}
+
+.table.bankdaterange tr td b {
+    color: #4a4a4a;
+}
+
+.table.bankdaterange p {
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.table.bankdaterange span {
+    color: #3aabd5;
+    font-size: 16px;
+}
+
+.table.bankdaterange tr td {
+    border: none;
+    padding: 3px;
+}
+
+.table.bankdaterange input {
+    margin-top: 35px;
+}
+
+.table.bankdaterange tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+    .table.bankdaterange tr td {
+        padding: 13px 8px;
+    }
+
+.table.bankdaterange .bankfilterDetails {
+    text-align: left;
+    padding-left: 10px;
+}
+
+    .table.bankdaterange .bankfilterDetails strong {
+        color: #3aabd5;
+        font-size: 18px;
+        font-family: 'AvenirNextLTPro-Demi';
+    }
+
+    .table.bankdaterange .bankfilterDetails p {
+        color: #4a4a4a;
+        font-size: 16px;
+        margin: 0;
+        font-family: 'AvenirNextLTPro-Regular';
+    }
+
+    .table.bankdaterange .bankfilterDetails span {
+        color: #545454;
+        font-size: 24px;
+    }
+
+.table.dateRangeBox {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 2px 1px 7px #d4d4d4;
+    height: 80px;
+    left: 79px;
+    position: absolute;
+    top: 71px;
+    width: 473px;
+    z-index: 999;
+    border: 1px solid #efefef;
+    display: block;
+}
+
+.BankTableDetails span {
+    color: #3aabd5;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+}
+
+.BankTableDetails {
+    max-width: 100%;
+    min-width: 205px;
+}
+
+    .BankTableDetails p {
+        margin: 3px 0;
+        font-family: avenirnextltpro-demi;
+    }
+
+.BankTableDetails {
+    margin: 3px 0;
+    color: #44474b;
+}
+
+.icheckbox_square-green {
+    background-position: 0 0;
+}
+
+.icheckbox_square-green, .iradio_square-green {
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 22px;
+}
+
+.project {
+    padding: 0;
+}
+
+.project p {
+        font-family: avenirnextltpro-demi;
+        margin: 5px 0;
+    }
+
+    .project span {
+        font-size: 14px;
+    }
+
+.BankTableDetails span.greenTxt {
+    font-size: 14px;
+}
+
+.total h3 {
+    margin: 0;
+    padding: 0;
+    color: #8b8b8b;
+}
+
+.total h1 {
+    margin: 4px 0;
+    padding: 0;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.breadcrumb1 {
+    background-color: #ffffff;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .breadcrumb1 > li {
+        border-right: 1px solid #ccc;
+        display: inline-block;
+        padding: 0 8px 0 0;
+    }
+
+        .breadcrumb1 > li:last-child {
+            border-right: none;
+        }
+
+    .breadcrumb1 li a {
+        color: #7f8a90 !important;
+    }
+/*==================================================
+                                        Bank_Draw-v2-Compliance@2x
+==================================================*/
+.bankCompliance tr {
+    border: 1px solid #e7eaec;
+}
+
+.table.bankCompliance th {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px;
+}
+
+.bankCompliance td {
+    padding: 10px 20px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.bankCompliance span {
+    font-size: 14px;
+    font-family: avenirnextltpro-demi;
+}
+
+.bankCompliance p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-family: avenirnextltpro-demi;
+}
+
+.bankCompliance span.sky1 {
+    color: #3aabd5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bankCompliance span.sky3 {
+    color: #3aabd5;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.bankCompliance .sky4 {
+    color: #79c485;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bankCompliance .sky5 {
+    color: #e25c5c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.breadcrumb2 {
+    background-color: #none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .breadcrumb2 > li {
+        border-right: 1px solid #ccc;
+        display: inline-block;
+        padding: 0 8px 0 0;
+    }
+
+    .breadcrumb2 li a {
+        display: inline-block;
+        color: #7f8a90 !important;
+    }
+
+.feed-Compliance > .pull-left {
+    margin-right: 5px;
+}
+
+.feed-Compliance {
+    padding-bottom: 0px;
+}
+
+.buy1 {
+    float: left;
+}
+
+.btn-dangersort {
+    background-color: #transparent;
+    border-color: #79c485;
+    color: #808080;
+    border: 1px solid #aaaaaa;
+    padding: 7px 10px;
+    white-space: nowrap;
+}
+
+.btn1 {
+    border-radius: 40px;
+}
+
+.buy1 a.btn1 i {
+    vertical-align: middle;
+    font-size: 19px;
+}
+
+.media-bankCompliance {
+    margin: 3px;
+}
+
+.breadcrumb2 > li:last-child {
+    border: none;
+}
+
+.media-bankCompliance strong {
+    color: #3aabd5;
+    font-family: avenirnextltpro-demi;
+}
+
+.table.bankCompliance td {
+    vertical-align: middle;
+    padding: 10px 20px;
+}
+
+.TableDetails {
+    width: 205px;
+}
+
+.table.bankCompliance .ibox-tools i {
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {
+    background: #c1e6f1 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    top: 23px;
+    width: 35px;
+}
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {
+        background: #19aad2 none repeat scroll 0 0;
+        border: 3px solid #fff;
+        border-radius: 50px;
+        content: " ";
+        height: 20px;
+        left: 7px;
+        position: absolute;
+        top: 8px;
+        width: 20px;
+    }
+
+.bs-wizard-info.text-blue {
+    text-align: center;
+    color: #19aad2 !important;
+}
+
+.outcompliance {
+    color: #e7595a;
+    font-weight: 600;
+}
+
+.creditalert {
+    float: right;
+    margin: 0 8px;
+}
+
+date-muted {
+    color: #44474b;
+}
+
+.flag {
+    margin-top: 2px;
+}
+
+.table.bankCompliance th img {
+    margin: 0 9px;
+}
+
+
+/*==================================================
+                                     Bank_Draw-v2-drawdetails@2x
+==================================================*/
+.drawdetail tr {
+    border: 1px solid #e7eaec;
+}
+
+.table.table-striped.drawdetail span.sky1 {
+    color: #3aabd5;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.table.table-striped.drawdetail th {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px;
+}
+
+.table.table-striped.drawdetail td {
+    padding: 10px 15px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table.table-striped.drawdetail span.sky3 {
+    color: #3aabd5;
+    font-size: 14px;
+    font-family: 'AvenirNextLTPro-Demi';
+}
+
+
+/*==================================================
+                                     Bank_Draw-v2-Finalize@2x
+==================================================*/
+.finalizeBox {
+    border-bottom: 1px solid #ccc;
+    padding: 31px 0;
+}
+
+    .finalizeBox span.grey {
+        font-size: 18px;
+    }
+
+    .finalizeBox p.black {
+        font-size: 24px;
+    }
+
+    .finalizeBox span.reds {
+        font-size: 18px;
+        color: #e25c5c;
+    }
+
+    .finalizeBox p.reds {
+        font-size: 24px;
+        color: #e25c5c;
+    }
+
+.finalizeGraf {
+    border-bottom: 1px solid #ccc;
+    padding: 23px 0 17px;
+}
+
+    .finalizeGraf .per #diagram {
+        position: relative;
+    }
+
+    .finalizeGraf .left1 span.middlebold p {
+        margin: 0px;
+        float: right;
+    }
+
+    .finalizeGraf .left1 p.price {
+        font-size: 20px;
+    }
+
+table.finalizeTable p {
+    color: #4a4a4a;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+    table.finalizeTable p span {
+        color: #808080;
+        font-size: 15px;
+    }
+
+    table.finalizeTable p.blk {
+        color: #000;
+    }
+
+table.tableTabs th p {
+    color: #8b8b8b;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+table.tableTabs tbody td input.customBtn {
+    background: #fbfbfb;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+
+
+/*==================================================
+                                     BANK_DRAW-V2-COMPLIANCE-DROP@2X
+==================================================*/
+
+.bs-wizard {
+    margin-top: 5px;
+}
+/*************************Form Wizard*****************************************/
+.bs-wizard {
+    border-bottom: solid 1px #e0e0e0;
+    padding: 0 0 10px 0;
+}
+
+    .bs-wizard > .bs-wizard-step {
+        padding: 0;
+        position: relative;
+    }
+
+        .bs-wizard > .bs-wizard-step + .bs-wizard-step {
+        }
+
+.greenTxt {
+    color: #79c485;
+    font-size: 16px;
+}
+
+.bigTxt {
+    font-size: 18px;
+}
+
+.table-custom1 span {
+    font-size: 16px;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: #999;
+    font-size: 14px;
+}
+
+.complete .text-center {
+    color: #e75c5b !important;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    background: #f6cece none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    top: 23px;
+    width: 35px;
+}
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot::after {
+        background: #e25c5c none repeat scroll 0 0;
+        border: 3px solid #fff;
+        border-radius: 50px;
+        content: " ";
+        height: 20px;
+        left: 7px;
+        position: absolute;
+        top: 8px;
+        width: 20px;
+    }
+
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative;
+    border-radius: 0px;
+    height: 8px;
+    box-shadow: none;
+    margin: 20px 0;
+}
+
+    .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+        width: 0px;
+        box-shadow: none;
+        background: #f5f5f5;
+    }
+
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: #f5f5f5;
+}
+/*.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}*/
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+    left: 50%;
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: none;
+}
+=======
+>>>>>>> master
 
 .inner-page-wrapper .project-overview {background-color: #fff; border: 1px solid #d7d7d7; border-radius: 4px;margin: 51px auto;padding: 0 15px;}
 .inner-page-wrapper .project-overview .border { border-right: 1px solid #eeeeee;}
@@ -2784,7 +3976,7 @@ table.tablebankTopRight tr td p {font-size: 14px; margin: 0;}
 .table.bankdaterange .bankfilterDetails {text-align: left; padding-left: 10px;}
 .table.bankdaterange .bankfilterDetails strong {color: #3aabd5; font-size: 18px;  font-family: 'AvenirNextLTPro-Demi';}
 .table.bankdaterange .bankfilterDetails p {  color: #4a4a4a;  font-size: 16px;  margin: 0; font-family: 'AvenirNextLTPro-Regular';}
-.table.bankdaterange .bankfilterDetails span { color: #545454; font-size: 24px;} 
+.table.bankdaterange .bankfilterDetails span { color: #545454; font-size: 24px;}
 .table.dateRangeBox { background: #fff none repeat scroll 0 0; box-shadow: 2px 1px 7px #d4d4d4; height: 80px;left: 79px; position: absolute; top: 71px;
 width: 473px; z-index: 999;  border: 1px solid #efefef; display: block;}
 .BankTableDetails span { color: #3aabd5; font-family: "AvenirNextLTPro-Demi"; font-size: 15px;}
@@ -3032,7 +4224,7 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-3 .dropdown li:first-of-type a {  border-radius: 7px 7px 0 0;}
 .wrapper-dropdown-3 .dropdown li:last-of-type a {border: none;  border-radius: 0 0 7px 7px;}
 .wrapper-dropdown-3 .dropdown li:hover a { background: #f3f8f8;}
-.wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}  
+.wrapper-dropdown-3.active .dropdown { left: -112px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
 
 
 /*------- TEAM MEMBERSV2@2X DROPDOWN------- */
@@ -3049,7 +4241,7 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-team .dropdown li:hover a { background: #f3f8f8;}
 .wrapper-dropdown-team.active .dropdown { left:-177px;  opacity: 1; pointer-events: auto; width: 211px; z-index:9999;}
 
-  
+
 /*------- TEAM MEMBERSV2@2X TOPUSER------- */
 .dd.wrapper-dropdown-team.user{position: relative; right: 9px; top: 10px;}
 .dd.wrapper-dropdown-team.user ul.dropdown { left: -50px;}
@@ -3057,7 +4249,7 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .wrapper-dropdown-team.user .dropdown{top:120%}
 
 
-  
+
 /*------- TEAM MEMBERSV2@2X SORTBY------- */
 .dd.wrapper-dropdown-team.sortby{position: relative; right: 9px; top: 1px;}
 .dd.wrapper-dropdown-team.sortby ul.dropdown { left: -129px;}
@@ -3130,5 +4322,3 @@ border: 1px solid rgba(0,0,0,0.17);   box-shadow: 0 0 5px rgba(0,0,0,0.1); font-
 .per {text-align: center;}
 .per > div { position: absolute;  right: 59px !important; top: -41px;}
 }
-
-

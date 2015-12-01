@@ -1,0 +1,334 @@
+/*************************************************************************************
+                             AVASIS-Action-Main-V2@2x
+**************************************************************************************/
+.page-heading h2.heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px;
+    font-weight: 100;
+    color: #4a4a4a;
+    margin: 0 0 10px 0;
+}
+.btn-green {
+    background-color: #79c485;
+    border-color: #79c485;
+    color: #FFFFFF;
+}
+
+.btn-blue {
+    background-color: #3aabd5;
+    border-color: #3aabd5;
+    color: #FFFFFF;
+}
+
+.card {
+    border: 1px solid #e7eaec;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.card-title {
+    padding: 24px 20px 20px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 19px;
+    color: #4a4a4a;
+}
+
+.card-content {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.action-item-text {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+}
+
+.action-item-count-info span:not(.label) {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.action-item-count-info .count {
+    padding-right: 3px;
+}
+
+.action-item-value {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+}
+
+.action-item-of {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+
+}
+
+.label-green {
+    background-color: #79c485;
+    color: #ffffff;
+}
+
+.label-red {
+    background-color: #e25c5c;
+    color: #ffffff;
+}
+
+.label-orange {
+    background-color: #fdae46;
+    color: #ffffff;
+}
+
+.action-item-progress-text {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .action-item-progress-text {
+        margin-left: -15px;
+        margin-top: -6px;
+    }
+}
+
+.btns {
+    float: right;
+    position: relative;
+    margin-right: 10px;
+}
+
+.btns > a {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 14px;
+    padding: 15px;
+    margin: 0;
+}
+
+.action-item .btn a.btn i {
+    font-size: 14px;
+    font-family: "AvenirNextLTPro-Demi";
+    vertical-align: middle;
+}
+
+.action-item .btn-blue {
+    font-family: AvenirNextLTPro-Demi;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.border-right {
+    border-right: 1px solid #eeeeee;
+}
+
+@media (min-width: 768px) {
+    .action-item .btn-blue {
+        margin-top: -3px;
+    }
+}
+
+.progress-medium {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 3px;
+    height: 13px;
+}
+
+.action-completed-chart {
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+@media (min-width: 768px) {
+    .action-completed-chart {
+        margin-top: -4px;
+    }
+}
+.action-menu::before{
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #fff;
+    content: "\f0de";
+    position: absolute;
+    right: 20px;
+    top: -11px;
+}
+.action-menu {
+    width: 210px;
+    margin-top: 16px;
+    padding: 0;
+    border: 1px solid rgba(221,221,221,0.1);
+    box-shadow: 0px 0px 25px 0 #ccc;
+}
+.action-menu > li:not(:last-child) {
+    border-bottom: 1px solid #eeeeee;
+}
+.action-menu > li > a {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #3aabd5;
+    padding: 17px;
+}
+
+
+/*************************************************************************************
+                             AVASIS-Action-Main-GAI-V3@2x
+**************************************************************************************/
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-padding-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-detail-header {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8;
+}
+
+.page-detail-header .closeBox {
+    background: #000;
+    background-color: #1b1e23;
+    width: 100%;
+    padding: 105px 0;
+}
+
+.page-detail-header .closeBox p {
+    text-align: center;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 13px;
+}
+
+.page-detail-header-wrapper {
+    padding: 40px 15px;
+}
+
+.page-detail-header-wrapper h2.heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px;
+}
+
+.page-detail-header-wrapper ul.topSubtitle {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-detail-header-wrapper ul.topSubtitle li a {
+    font-size: 14px;
+    font-family: "AvenirNextLTPro-Demi";
+    color: #3aabd5;
+}
+
+.gai-table {
+    margin-bottom: 25px;
+
+}
+.gai-table h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "AvenirNextLTPro-MediumCn";
+    font-size: 17px;
+}
+
+.gai-table table thead th {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+    color: #808080;
+    border: none;
+}
+
+th.flag {
+    width: 4%;
+}
+
+th.title {
+    width: 30%;
+}
+
+th.due-date {
+    width: 12%;
+}
+
+th.responsible, th.initiator {
+    width: 12%;
+}
+
+th.status {
+    width: 13%;
+}
+
+.gai-table table tbody tr {
+    border-top: 1px solid #eee;
+}
+
+.gai-table table tbody tr td {
+    border: none;
+    vertical-align: middle;
+}
+
+.gai-table table tbody tr td.title {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+    color: #44474b;
+}
+
+.gai-table table tbody tr td.title small {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 11px;
+}
+
+td.sow, td.due-date {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+}
+
+.gai-table table tbody td.responsible a, .gai-table table tbody td.initiator a {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #3aabd5;
+}
+
+.gai-table table tbody td.responsible small, .gai-table table tbody td.initiator small {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    color: #9e9e9e;
+}
+
+.gai-table td.status .label {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    padding: 2px 0px 2px 0px;
+}
+
+.gai-table td.status small {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 11px;
+    color: #44474b;
+}
+
+.gai-table td.status .in-process {
+    color: #61c571;
+}
+
+.gai-table td.status .pending {
+    color: #fdb04a;
+}
+
+.gai-table td.status .draft {
+    color: #2a2d33;
+}
+
+.gai-table td.flag span {
+    margin: 4px;
+}
