@@ -2433,9 +2433,7 @@ background: radial-gradient(ellipse at center, #f6f6f6 20%, #d5d5d5 100%);
 
 
 /*************************************************************************************
- *************************************************************************************
-                                     AVASIS-PROJECTDETAILS-V12@2X
-*************************************************************************************
+                             AVASIS-PROJECTDETAILS-V12@2X
 **************************************************************************************/
 .inner-page-wrapper .project-overview {
     background-color: #fff;
@@ -2713,14 +2711,10 @@ h3.proStatus i {
     vertical-align: middle;
     white-space: nowrap;
 }
-/*=======*=========*=========*=========*===========*
- *=======*=========*=========*=========*===========*
- =================== TEAM MEMBERS TAB START HERE=========
-*=======*=========*=========*=========*===========*
-*=======*=========*=========*=========*=========== /*
+
 
 /*==================================================
-                                     Team Members V2-Empty@2x
+             Team Members V2-Empty@2x
 ==================================================*/
 
 .teammembers {
@@ -3438,13 +3432,11 @@ table.budgetTbl2 p.AddBudgetbtn {
     font-family: avenirnextltpro-demi;
     font-size: 13px;
 }
-/*=======*=========*=========*=========*===========*
- *=======*=========*=========*=========*===========*
- ==================== BANK DRAW ====================
-*=======*=========*=========*=========*===========*
-*=======*=========*=========*=========*=========== /*
 
 
+/*---------------------------------------------------
+                    BANK DRAW
+ -------------------------------------------------- */
 
 /*----ToBrak Draw Common classes----*/
 
@@ -3523,9 +3515,11 @@ table.tablebankTopRight tr td p {
     background: #2a2d33;
     color: #FFF;
 }
-/*==================================================
-                                        Bank_Draw-v2@2x
-==================================================*/
+
+
+/*-----------------------------------------------------
+                    Bank_Draw-v2@2x
+------------------------------------------------------*/
 
 .bankdraw-inner-page .prog-inner {
     background-color: #fff;
@@ -3560,7 +3554,8 @@ table.tablebankTopRight tr td p {
     padding-bottom: 27px;
     padding: 0 15px;
 }
-/**************************START WIZARD**************************/
+
+/*------------------ START WIZARD ------------------*/
 
 .bs-wizard {
     margin-top: 5px;
@@ -3631,7 +3626,6 @@ table.tablebankTopRight tr td p {
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
     background-color: #f5f5f5;
 }
-/*.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after { opacity: 0;}*/
 
 .bs-wizard > .bs-wizard-step:first-child > .progress {
     left: 50%;
@@ -3646,7 +3640,8 @@ table.tablebankTopRight tr td p {
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot::after {
     background-color: #FFF !important;
 }
-/*************************** END Form Wizard **********************************/
+
+/*-------------------------- END Form Wizard --------------------------*/
 
 .table-bankright span.greenTxt {
     color: #79c485;
@@ -3789,9 +3784,11 @@ table.tablebankTopRight tr td p {
 .breadcrumb1 li a {
     color: #7f8a90 !important;
 }
-/*==================================================
-                                        Bank_Draw-v2-Compliance@2x
-==================================================*/
+
+
+/*-----------------------------------------------------------
+                Bank_Draw-v2-Compliance@2x
+-----------------------------------------------------------*/
 
 .bankCompliance tr {
     border: 1px solid #e7eaec;
@@ -3940,9 +3937,11 @@ date-muted {
 .table.bankCompliance th img {
     margin: 0 9px;
 }
-/*==================================================
-                                     Bank_Draw-v2-drawdetails@2x
-==================================================*/
+
+
+/*-------------------------------------------------------------
+                    Bank_Draw-v2-drawdetails@2x
+-------------------------------------------------------------*/
 
 .drawdetail tr {
     border: 1px solid #e7eaec;
@@ -3967,9 +3966,11 @@ date-muted {
     font-size: 14px;
     font-family: 'AvenirNextLTPro-Demi';
 }
-/*==================================================
-                                     Bank_Draw-v2-Finalize@2x
-==================================================*/
+
+
+/*-----------------------------------------------------------
+                    Bank_Draw-v2-Finalize@2x
+-----------------------------------------------------------*/
 
 .finalizeBox {
     border-bottom: 1px solid #ccc;
@@ -4027,14 +4028,17 @@ table.tableTabs tbody td input.customBtn {
     padding: 12px 20px;
     font-size: 16px;
 }
-/*==================================================
-                                     BANK_DRAW-V2-COMPLIANCE-DROP@2X
-==================================================*/
+
+
+/*-----------------------------------------------------------------
+                    BANK_DRAW-V2-COMPLIANCE-DROP@2X
+-----------------------------------------------------------------*/
 
 .bs-wizard {
     margin-top: 5px;
 }
-/*************************Form Wizard*****************************************/
+
+/*------------------- Form Wizard -------------------*/
 
 .bs-wizard {
     border-bottom: solid 1px #e0e0e0;
@@ -4123,9 +4127,11 @@ table.tableTabs tbody td input.customBtn {
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
     pointer-events: none;
 }
-/*==================================================
-                                     PAYMENT-DETAILS@2X
-==================================================*/
+
+
+/*-------------------------------------------------------
+                    PAYMENT-DETAILS@2X
+-------------------------------------------------------*/
 
 .table.Payment tr {
     border-top: 1px solid #e7eaec;
@@ -4303,12 +4309,14 @@ strong.blue {
     min-width: 89px;
     padding: 10px 6px;
 }
-/*=======*=========*=========*=========*===========*
- *=======*=========*=========*=========*===========*
- ===================RISK MANAGEMENT===============
-*=======*=========*=========*=========*===========*
-*=======*=========*=========*=========*=========== */
-/****************RiskManagement@2x*******************/
+
+
+/*----------------------------------------------------
+                    RISK MANAGEMENT
+-----------------------------------------------------*/
+
+
+/* ------------ RiskManagement@2x* ------------ */
 
 .riskmiddle {
     margin: 65px 0 43px 0;
@@ -4455,7 +4463,9 @@ table.table {
 .riskresports .btn1.btn-dangersort.btn-sm.sort {
     padding: 7px 27px;
 }
-/****************RiskManagement-hover@2x*******************/
+
+
+/* ----------------- RiskManagement-hover@2x -----------------*/
 
 .check {
     color: #3aabd5;
@@ -4466,17 +4476,21 @@ table.table {
 .popover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-/****************RiskManagement-settings@2x/****************/
+
+/* ----------------- RiskManagement-settings@2x ----------------- */
 
 .popover-content.check {
     border-bottom: 1px solid #dedede;
 }
+
 .popover-content.check:last-child {
     border-bottom: none;
 }
-/*=======*=========*=========*=========*===========*
- ===================DROPDOWNMENU=================
-*=======*=========*=========*=========*===========*/
+
+
+/*--------------------------------------------------
+                DROPDOWNMENU
+--------------------------------------------------*/
 
 *,
 *:after,
@@ -4493,17 +4507,16 @@ table.table {
 ::-moz-selection {
     background: transparent;
 }
-/*------- AVASIS PROJECT DETAILS V-12 DROPDOWN------- */
+
+
+/* --------- AVASIS PROJECT DETAILS V-12 DROPDOWN --------- */
 
 .wrapper-dropdown-3 {
-    /* Size and position */
-
     position: relative;
     width: 100%;
     max-width: 100px;
     margin: 0 auto;
     padding: 10px;
-    /* Styles */
 
     background-color: #79c485;
     border-color: #79c485;
@@ -4512,19 +4525,16 @@ table.table {
     box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1);
     cursor: pointer;
     outline: none;
-    /* Font settings */
 
     font-weight: bold;
     color: #FFF;
 }
-.wrapper-dropdown-3 .dropdown {
-    /* Size & position */
 
+.wrapper-dropdown-3 .dropdown {
     position: absolute;
     top: 140%;
     left: 0;
     right: 0;
-    /* Styles */
 
     background: white;
     border-radius: inherit;
@@ -4532,7 +4542,6 @@ table.table {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     font-weight: normal;
     list-style: none;
-    /* Hiding */
 
     opacity: 0;
     pointer-events: none;
@@ -4589,19 +4598,18 @@ table.table {
     width: 211px;
     z-index: 9999;
 }
-/*------- TEAM MEMBERSV2@2X DROPDOWN------- */
+
+/* ------- TEAM MEMBERSV2@2X DROPDOWN------- */
 
 .wrapper-dropdown-team {
     float: left;
 }
-.wrapper-dropdown-team .dropdown {
-    /* Size & position */
 
+.wrapper-dropdown-team .dropdown {
     position: absolute;
     top: 140%;
     left: 0;
     right: 0;
-    /* Styles */
 
     background: white;
     border-radius: 5px;
@@ -4609,11 +4617,11 @@ table.table {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     font-weight: normal;
     list-style: none;
-    /* Hiding */
 
     opacity: 0;
     pointer-events: none;
 }
+
 .wrapper-dropdown-team .dropdown:after {
     content: "";
     width: 0;
@@ -4670,7 +4678,8 @@ table.table {
     width: 211px;
     z-index: 9999;
 }
-/*------- TEAM MEMBERSV2@2X TOPUSER------- */
+
+/* ------- TEAM MEMBERSV2@2X TOPUSER ------- */
 
 .dd.wrapper-dropdown-team.user {
     position: relative;
@@ -4686,7 +4695,7 @@ table.table {
 .wrapper-dropdown-team.user .dropdown {
     top: 120%
 }
-/*------- TEAM MEMBERSV2@2X SORTBY------- */
+/* ------- TEAM MEMBERSV2@2X SORTBY ------- */
 
 .dd.wrapper-dropdown-team.sortby {
     position: relative;
@@ -4702,11 +4711,10 @@ table.table {
 .wrapper-dropdown-team.sortby .dropdown {
     top: 151%
 }
-/*=======*=========*=========*=========*===========*
- *=======*=========*=========*=========*===========*
- ===============RESPONSIVE STYLE START HERE=============
-*=======*=========*=========*=========*===========*
-*=======*=========*=========*=========*=========== */
+
+/*--------------------------------------------------
+        RESPONSIVE STYLE START HERE
+---------------------------------------------------*/
 
 @media (min-width: 768px) {
     #page-wrapper {
