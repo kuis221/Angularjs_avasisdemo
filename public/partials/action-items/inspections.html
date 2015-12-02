@@ -1,0 +1,340 @@
+<div id="page-wrapper" class="inner-page-wrapper">
+    <div class="row page-detail-header">
+        <div class="col-md-1 no-padding-horizontal">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="action-items.main">
+                        Close <i class="fa fa-caret-right"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-11">
+            <div class="row page-detail-header-wrapper">
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="heading">Inspections</h2>
+                            <ul class="topSubtitle">
+                                <li>
+                                    <a href="index.html">Project Title Label</a>
+                                    <i class="ace-icon fa fa-angle-down"></i>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt30">
+                        <div class="col-md-3 col-sm-6">
+                            <span class="action-item-text">TOTAL: {{ inspections.total }}</span>
+                            <div class="action-item-count-info">
+                                <span class="label label-green">&nbsp;</span>
+                                <span class="count">{{ inspections.green }}</span>
+                                <span class="label label-orange">&nbsp;</span>
+                                <span class="count">{{ inspections.orange }}</span>
+                                <span class="label label-red">&nbsp;</span>
+                                <span class="count">{{ inspections.red }}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="action-completed-chart">
+                                <div sparkline spark-data="[inspections.completed, inspections.total-inspections.completed]" spark-options="pieOptions"></div>
+                            </div>
+                            <div>
+                                <span class="action-item-text">{{ round(inspections.completed / inspections.total * 100) }}% COMPLETED</span><br>
+                                <span class="action-item-value">{{ inspections.completed }}</span>
+                                <span class="action-item-of">of</span>
+                                <span class="action-item-value">{{ inspections.total }} items</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-5 no-padding-right">
+                                    <div class="">
+                                        <span class="action-item-text">ITEMS ASSIGNED TO ME</span><br>
+                                        <span class="action-item-value">
+                                            {{ inspections.assignedMe.green.total + inspections.assignedMe.orange.total + inspections.assignedMe.red.total }} Items
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-6">
+                                            <div class="progress progress-medium">
+                                                <div class="progress-bar progress-bar-success"
+                                                     style="width: {{inspections.assignedMe.green.done / inspections.assignedMe.green.total * 100}}%;">
+                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                            {{ inspections.assignedMe.green.total }} items
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-6">
+                                            <div class="progress progress-medium">
+                                                <div class="progress-bar progress-bar-warning"
+                                                     style="width: {{inspections.assignedMe.orange.done / inspections.assignedMe.orange.total * 100}}%;">
+                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                            {{ inspections.assignedMe.orange.total }} items
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-6">
+                                            <div class="progress progress-medium">
+                                                <div class="progress-bar progress-bar-danger"
+                                                     style="width: {{inspections.assignedMe.red.done / inspections.assignedMe.red.total * 100}}%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                            {{ inspections.assignedMe.red.total }} items
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="btns mt25">
+                        <a class="btn btn-green">
+                            <i class="fa fa-plus"></i> Add New
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated">
+        <div class="inspections-wrapper">
+            <div class="inspections-charts">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div sparkline spark-data="[inspections.overview.pending, inspections.overview.upcoming, inspections.overview.completed]" spark-options="inspections.pieOptions"></div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="inspections-overview-title">
+                            {{ inspections.overview.total }} Total Inspections
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <span class="label label-completed">&nbsp;</span>
+                                <div class="value">
+                                    Completed <b>{{ round(inspections.overview.completed/inspections.overview.total * 100) }}%</b><br>
+                                    {{ inspections.overview.completed }} Inspections
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <span class="label label-pending">&nbsp;</span>
+                                <div class="value">
+                                    Pending / In Process <b>{{ round(inspections.overview.pending/inspections.overview.total * 100) }}%</b><br>
+                                    {{ inspections.overview.pending }} Inspections
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <span class="label label-upcoming">&nbsp;</span>
+                                <div class="value">
+                                    Upcoming <b>{{ round(inspections.overview.upcoming/inspections.overview.total * 100) }}%</b><br>
+                                    {{ inspections.overview.upcoming }} Inspections
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row inspection-table">
+                <div class="col-md-12">
+                    <h3>Pending Inpections</h3>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered table-striped">
+                            <thead>
+                                <th class="flag"></th>
+                                <th class="title">Inspection Name</th>
+                                <th class="inspector">Inspector</th>
+                                <th class="responsible">Responsible</th>
+                                <th class="status">Status</th>
+                                <th class="documents">Documents</th>
+                                <th class="date-completion">Date Range for Completion</th>
+                                <th class="order-by-date">Order by Date</th>
+                                <th class="next-inspection">Next Inspection</th>
+                                <th class="date-completed">Date Completed</th>
+                                <th class="action"></th>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="row in inspections.pendingList">
+                                <td class="flag">
+                                    <span>
+                                        <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                        <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                        <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                        <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                        <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                        <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                    </span>
+                                </td>
+                                <td class="title"><a href="">{{ row.name }}</></a><br><small>{{ row.type}}</small></td>
+                                <td class="inspector"><a href="">{{ row.inspector.name }}</a><br><small>{{ row.inspector.company }}</small></td>
+                                <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                                <td class="status">{{ row.status }}</td>
+                                <td class="documents">
+                                    <a href="" ng-if="row.documents > 0">{{ row.documents }} attachments</a>
+                                </td>
+                                <td class="date-completion">{{ row.date_completion }}</td>
+                                <td class="order-by-date">{{ row.order_by_date }}</td>
+                                <td class="next-inspection">{{ row.next_inspection }}</td>
+                                <td class="date-completed">{{ row.date_completed }}</td>
+                                <td class="action">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="gear-dropdown">
+                                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-gear"></i>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                            <li><a href="">Schedule Inspection</a></li>
+                                            <li><a href="">View History</a></li>
+                                            <li><a href="">Download</a></li>
+                                            <li><a href="">Share</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row inspection-table">
+                <div class="col-md-12">
+                    <h3>Upcoming Inpections</h3>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered table-striped">
+                            <thead>
+                                <th class="flag"></th>
+                                <th class="title">Inspection Name</th>
+                                <th class="inspector">Inspector</th>
+                                <th class="responsible">Responsible</th>
+                                <th class="status">Status</th>
+                                <th class="documents">Documents</th>
+                                <th class="date-completion">Date Range for Completion</th>
+                                <th class="order-by-date">Order by Date</th>
+                                <th class="next-inspection">Next Inspection</th>
+                                <th class="date-completed">Date Completed</th>
+                                <th class="action"></th>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="row in inspections.upcomingList">
+                                <td class="flag">
+                                    <span>
+                                        <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                        <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                        <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                        <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                        <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                        <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                    </span>
+                                </td>
+                                <td class="title"><a href="">{{ row.name }}</></a><br><small>{{ row.type}}</small></td>
+                                <td class="inspector"><a href="">{{ row.inspector.name }}</a><br><small>{{ row.inspector.company }}</small></td>
+                                <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                                <td class="status">{{ row.status }}</td>
+                                <td class="documents">
+                                    <a href="" ng-if="row.documents > 0">{{ row.documents }} attachments</a>
+                                </td>
+                                <td class="date-completion">{{ row.date_completion }}</td>
+                                <td class="order-by-date">{{ row.order_by_date }}</td>
+                                <td class="next-inspection">{{ row.next_inspection }}</td>
+                                <td class="date-completed">{{ row.date_completed }}</td>
+                                <td class="action">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="gear-dropdown">
+                                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-gear"></i>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                            <li><a href="">Schedule Inspection</a></li>
+                                            <li><a href="">View History</a></li>
+                                            <li><a href="">Download</a></li>
+                                            <li><a href="">Share</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row inspection-table">
+                <div class="col-md-12">
+                    <h3>Completed Inpections</h3>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered table-striped">
+                            <thead>
+                                <th class="flag"></th>
+                                <th class="title">Inspection Name</th>
+                                <th class="inspector">Inspector</th>
+                                <th class="responsible">Responsible</th>
+                                <th class="status">Status</th>
+                                <th class="documents">Documents</th>
+                                <th class="date-completion">Date Range for Completion</th>
+                                <th class="order-by-date">Order by Date</th>
+                                <th class="next-inspection">Next Inspection</th>
+                                <th class="date-completed">Date Completed</th>
+                                <th class="action"></th>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="row in inspections.completedList">
+                                <td class="flag">
+                                    <span>
+                                        <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                        <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                        <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                        <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                        <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                        <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                    </span>
+                                </td>
+                                <td class="title"><a href="">{{ row.name }}</></a><br><small>{{ row.type}}</small></td>
+                                <td class="inspector"><a href="">{{ row.inspector.name }}</a><br><small>{{ row.inspector.company }}</small></td>
+                                <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                                <td class="status">{{ row.status }}</td>
+                                <td class="documents">
+                                    <a href="" ng-if="row.documents > 0">{{ row.documents }} attachments</a>
+                                </td>
+                                <td class="date-completion">{{ row.date_completion }}</td>
+                                <td class="order-by-date">{{ row.order_by_date }}</td>
+                                <td class="next-inspection">{{ row.next_inspection }}</td>
+                                <td class="date-completed">{{ row.date_completed }}</td>
+                                <td class="action">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="gear-dropdown">
+                                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-container="body">
+                                            <i class="fa fa-gear"></i>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                            <li><a href="">Schedule Inspection</a></li>
+                                            <li><a href="">View History</a></li>
+                                            <li><a href="">Download</a></li>
+                                            <li><a href="">Share</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

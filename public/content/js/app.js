@@ -98,4 +98,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/action-items/general-action-items.html",
             controller: "ActionItemsCtrl"
         })
+        .state('action-items.inspections', {
+            url: '/inspections',
+            templateUrl: "partials/action-items/inspections.html",
+            controller: "ActionItemsCtrl"
+        })
 }]);
