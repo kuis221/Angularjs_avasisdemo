@@ -416,14 +416,27 @@ app.controller('ActionItemsCtrl',
             }
         };
 
-        var inspections = {
-            state: '',
+        $scope.inspections = {
+            pieOptions: {
+                type: 'pie',
+                height: '120px',
+                offset: -90,
+                sliceColors: ['#fdae46', '#3aabd5', '#79c485'],
+                disableTooltips: true
+            },
+            state: "action-items.inspections",
             title: "Inspections",
             total: 19,
             green: 4,
             orange: 7,
             red: 8,
             completed: 10,
+            overview: {
+                completed: 59,
+                pending: 36,
+                upcoming: 41,
+                total: 136
+            },
             assignedMe: {
                 green: {
                     total: 5,
@@ -437,7 +450,203 @@ app.controller('ActionItemsCtrl',
                     total: 1,
                     done: 0.1
                 }
-            }
+            },
+            pendingList: [
+                {
+                    flag: 'red',
+                    name: "Donec id elit non mi por",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "scheduled",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'orange',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Needs to be ordered",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'orange',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Ready for Reinspection",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'orange',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                }
+            ],
+            upcomingList: [
+                {
+                    flag: 'orange',
+                    name: "Donec id elit non mi por",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Scheduled",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'green',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Ready for Reinspection",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'green',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Ready for Reinspection",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                }
+            ],
+            completedList: [
+                {
+                    flag: 'completed',
+                    name: "Donec id elit non mi por",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'completed',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'completed',
+                    name: "Egestas Tellus Amet",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                }
+            ]
         };
 
 
@@ -453,7 +662,7 @@ app.controller('ActionItemsCtrl',
         $scope.items.push(rfi);
         $scope.items.push(changeOrder);
         $scope.items.push(punchList);
-        $scope.items.push(inspections);
+        $scope.items.push($scope.inspections);
 
 
         // General Action Items
