@@ -664,6 +664,17 @@ app.controller('ActionItemsCtrl',
         $scope.items.push(punchList);
         $scope.items.push($scope.inspections);
 
+        // Inspection Table Gear Button
+        $('body').on('shown.bs.dropdown', '.gear-dropdown', function () {
+            var offsetRight = $(this).parentsUntil('.inspection-table').last().offset().left +
+                              $(this).parentsUntil('.inspection-table').last().width() -
+                              $(this).find('a.dropdown-toggle').offset().left -
+                              $(this).find('a.dropdown-toggle').width();
+            var offsetTop = $(this).find('a.dropdown-toggle').offset().top - $(this).parentsUntil('.inspection-table').last().offset().top
+
+            $(this).find('ul.dropdown-menu').css('top', offsetTop + 10);
+            $(this).find('ul.dropdown-menu').css('right', offsetRight + 10);
+        });
 
         // General Action Items
 

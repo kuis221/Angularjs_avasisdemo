@@ -515,7 +515,6 @@ th.flag {
 
 .inspection-table td .gear-dropdown {
     width: 30px;
-    position: absolute;
     display: inline-block;
 }
 
