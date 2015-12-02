@@ -4422,18 +4422,6 @@ del {
     transform: rotate(90deg);
 }
 
-.sk-spinner-fading-circle .sk-circle5 {
-    -webkit-transform: rotate(120deg);
-    -ms-transform: rotate(120deg);
-    transform: rotate(120deg);
-}
-
-.sk-spinner-fading-circle .sk-circle6 {
-    -webkit-transform: rotate(150deg);
-    -ms-transform: rotate(150deg);
-    transform: rotate(150deg);
-}
-
 .sk-spinner-fading-circle .sk-circle7 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
