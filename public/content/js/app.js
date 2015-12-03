@@ -97,7 +97,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('action-items.general-action-items', {
             url: '/general-action-items',
             templateUrl: "partials/action-items/general-action-items.html",
-            controller: "ActionItemsCtrl"
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('action-items.inspections', {
             url: '/inspections',
@@ -114,4 +117,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
         });
+}]);
+
+app.run (["$rootScope", function($rootScope) {
+    $rootScope.$on('$stateChangeStart', function(e, to) {
+        if (!_.isUndefined(to.data)) {
+            $rootScope.isHeaderHidden = to.data.isHeaderHidden;
+        }
+    });
 }]);

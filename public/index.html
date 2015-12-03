@@ -32,7 +32,7 @@
     <div ng-include="'partials/shared/sidebar/sidebar.html'"></div>
 
     <div id="page-wrapper" class="inner-page-wrapper">
-        <div ng-include="'partials/shared/topnav/topnav.html'"></div>
+        <div ng-include="'partials/shared/topnav/topnav.html'" ng-hide="isHeaderHidden"></div>
         <ui-view></ui-view>
     </div>
 </div>
@@ -64,7 +64,7 @@
         });
     });
 </script>
-
+<script src="bower_components/lodash/lodash.min.js"></script>
 <script src="bower_components/angular-loader/angular-loader.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
