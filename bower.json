@@ -1,0 +1,16 @@
+{
+  "name": "avasis-demo",
+  "version": "0.0.1",
+  "description": "avasis-demo",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3"
+  }
+}
