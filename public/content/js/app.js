@@ -123,6 +123,8 @@ app.run (["$rootScope", function($rootScope) {
     $rootScope.$on('$stateChangeStart', function(e, to) {
         if (!_.isUndefined(to.data)) {
             $rootScope.isHeaderHidden = to.data.isHeaderHidden;
+        } else {
+            $rootScope.isHeaderHidden = false;
         }
     });
 }]);
