@@ -1,12 +1,4 @@
-
-<!--<div id="page-wrapper" class="inner-page-wrapper">
-    NOT IMPLEMENTED
-    <div class="row white-bg">
-        <a ui-sref="financials.bankdraw.payment-application" class="btn btn-lg">NEXT</a>
-    </div>
-</div>-->
-
-<div class="bankdraw-inner-page">
+﻿<div class="bankdraw-inner-page">
     <!----==================TOP NAV BAR==================---->
     <div class="row bankbg">
         <div class="col-md-1 noPdingLeft">
@@ -103,6 +95,8 @@
                 </div>
             </div>
         </div>
+        <!-- END DEFAULT WIZARD -->
+        <!----================== DATE RANGE AND SUMMARY OF SELECTED LEFT SIDE==================----->
         <div class="row pt30">
             <div class="col-md-4 customScroll">
                 <div class="table-responsive">
@@ -191,14 +185,15 @@
                                 <td><b>Jun 21, 2015</b></td>
                             </tr>
                         </tbody>
-
+                        
                     </table>
-
+                    
                 </div>
-
+                
 
             </div>
-
+            <!----================== DATE RANGE AND SUMMARY OF SELECTED LEFT SIDE END==================----->
+            <!----================== SUMMARY OF SELECTED PAY APPLICATIONS RIGHT SIDE==================----->
             <div class="col-md-8">
                 <div class="panel-body custom-panel-body ">
                     <div class="tab-content">
@@ -303,7 +298,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                         </div>
                         <div class="tab-pane" id="tab-2">
                             <b>Tab2 Data</b>
@@ -324,6 +319,18 @@
                 </div>
             </div>
         </div>
-
+    
     </div>
+    <!----==================MIDDLE CONTENT END==================---->
 </div>
+
+<script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>

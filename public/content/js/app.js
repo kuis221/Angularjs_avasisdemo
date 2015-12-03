@@ -32,7 +32,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('financials', {
             url: '/financials',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
         })
         .state('financials.main', {
             url: '/main',
@@ -47,37 +47,58 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('financials.bankdraw.main', {
             url: '/main',
             templateUrl: "partials/financials/bank-draw/main.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.payment-application', {
             url: '/payment-application',
             templateUrl: "partials/financials/bank-draw/payment-application.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.draw-details', {
             url: '/draw-details',
             templateUrl: "partials/financials/bank-draw/draw-details.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.compliance', {
             url: '/compliance',
             templateUrl: "partials/financials/bank-draw/compliance.html",
-            controller: "BankDrawCtrl"
+            controller: "ComplianceCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.documents', {
             url: '/documents',
             templateUrl: "partials/financials/bank-draw/documents.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.payment-details', {
             url: '/payment-details',
             templateUrl: "partials/financials/bank-draw/payment-details.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.finalize', {
             url: '/finalize',
             templateUrl: "partials/financials/bank-draw/finalize.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('team-members', {
             url: '/team-members',
