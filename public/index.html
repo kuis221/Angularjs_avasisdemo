@@ -31,7 +31,10 @@
 <div id="wrapper">
     <div ng-include="'partials/shared/sidebar/sidebar.html'"></div>
 
-    <ui-view></ui-view>
+    <div id="page-wrapper" class="inner-page-wrapper">
+        <div ng-include="'partials/shared/topnav/topnav.html'"></div>
+        <ui-view></ui-view>
+    </div>
 </div>
 
 <!-- Mainly scripts -->
@@ -62,7 +65,6 @@
     });
 </script>
 
-<script src="bower_components/lodash/lodash.min.js"></script>
 <script src="bower_components/angular-loader/angular-loader.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
