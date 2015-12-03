@@ -29,76 +29,7 @@
 <body>
 
 <div id="wrapper">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav" id="side-menu">
-                <li class="nav-header">
-                    <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" src="assets/img/profile_small.png"/>
-                            </span>
-                        <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                              </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
-                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                             <li><a href="profile.html">Profile</a></li>
-                             <li><a href="contacts.html">Contacts</a></li>
-                             <li><a href="mailbox.html">Mailbox</a></li>
-                             <li class="divider"></li>
-                             <li><a href="login.html">Logout</a></li>
-                         </ul>-->
-                    </div>
-                    <div class="logo-element">
-                        A
-                    </div>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="dashboards"><i class="fa fa-home"></i> <span class="nav-label">Dashboards</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="projects.main"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Projects</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="action-items.main"><i class="fa fa-flag"></i> <span class="nav-label">Action Items</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="team-members"><i class="fa fa-users"></i> <span
-                            class="nav-label">Team Members</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="communication"><i class="fa fa-comment"></i> <span
-                            class="nav-label">Communication</span> </a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="schedule"><i class="fa fa-calendar"></i> <span class="nav-label">Schedule</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="financials.main"><i class="fa fa-bar-chart"></i> <span
-                            class="nav-label">Financials</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="bids"><i class="fa fa-files-o"></i> <span class="nav-label">Bids</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="procurement"><i class="fa fa-check-square"></i> <span
-                            class="nav-label">Procurement</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="photos"><i class="fa fa-picture-o"></i> <span class="nav-label">Photos</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="documents"><i class="fa fa-file-text"></i> <span class="nav-label">Documents</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="drawings"><i class="fa fa-pencil"></i> <span class="nav-label">Drawings</span></a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="reporting"><i class="fa fa-inbox"></i> <span class="nav-label">Reporting</span></a>
-                </li>
-            </ul>
-
-        </div>
-    </nav>
+    <div ng-include="'partials/shared/sidebar/sidebar.html'"></div>
 
     <ui-view></ui-view>
 </div>
