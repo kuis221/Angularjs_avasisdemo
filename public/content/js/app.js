@@ -2,7 +2,8 @@ var app = angular.module('avasis',
     [
         'ui.router',
         'ngTable',
-        'ngAnimate'
+        'ngAnimate',
+        'ui.bootstrap'
     ]);
 
 app.controller('AppCtrl', [
@@ -98,6 +99,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/action-items/general-action-items.html",
             controller: "ActionItemsCtrl"
         })
+        .state('action-items.inspections', {
+            url: '/inspections',
+            templateUrl: "partials/action-items/inspections.html",
+            controller: "ActionItemsCtrl"
+        })
         .state('projects', {
             url: '/projects',
             abstract: true,
@@ -107,5 +113,5 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
-        })
+        });
 }]);

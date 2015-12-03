@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photos</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/plugins/customscroll/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <link href="assets/css/plugins/sly/sly.horizontal.css" rel="stylesheet">
+    <link href="assets/css/style-photos.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" src="assets/img/profile_small.png" />
+                            </span>
+                            <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                                  </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                 <li><a href="profile.html">Profile</a></li>
+                                 <li><a href="contacts.html">Contacts</a></li>
+                                 <li><a href="mailbox.html">Mailbox</a></li>
+                                 <li class="divider"></li>
+                                 <li><a href="login.html">Logout</a></li>
+                             </ul>-->
+                        </div>
+                        <div class="logo-element">
+                            A
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> <span class="nav-label">Dashboards</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Projects</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flag"></i> <span class="nav-label">Action items</span></a>
+
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Team Members</span></a>
+
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-comment"></i> <span class="nav-label">Communication</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Schedule</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label">Financials</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Bids</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-check-square"></i> <span class="nav-label">Procurement</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Photos</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#l"><i class="fa fa-file-text"></i> <span class="nav-label">Documents</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil"></i> <span class="nav-label">Drawings</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-inbox"></i> <span class="nav-label">Reporting</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <i class="fa fa-caret-left"></i>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                                <input type="text" placeholder="Search your projects " class="form-control search" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+
+                        <li class="light-blue open">
+                            <a href="">
+                                <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo">
+                                <span class="user-info">
+                                    Eric Hoffman
+                                </span>
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+                        </li>
+
+
+                        <li class="orange">
+                            <a href="#">
+                                <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                                <span class="badge badge-important">8</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-6 col-lg-10">
+                    <h2>Your Project Photos</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Project Title Label</a>
+                            <i class="ace-icon fa fa-angle-down"></i>
+                        </li>
+
+                    </ol>
+                </div>
+                <div class="col-lg-2 mt35">
+                    <div class="buy">
+                        <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#DragDrop">
+                            <i class="fa fa-plus"></i> Add New Photos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+
+                    <div class="panel white photos">
+                        <div class="panel-heading">
+
+                            <!-- filters -->
+                            <div class="filters mt5">
+                                <div class="col-xs-9 col-sm-8 col-md-4 col-lg-4 searchdown">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <input class="form-control searchround" type="text" placeholder="Search by date, worker, tag, location  or project ">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-8 col-lg-8 text-right viewall">
+                                    <a href="#">View All</a>
+                                </div>
+                            </div> <!-- /filters -->
+
+                            <!-- folders -->
+                            <div class="folders">
+
+                                <h3>Folders <a href="#" class="add">Add Folder</a></h3>
+                                
+                                <button class="backward"><i class="fa fa-chevron-left"></i></button>
+                                <button class="forward"><i class="fa fa-chevron-right"></i></button>
+
+                                <div class="frame" id="basic">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <img src="assets/img/photos/Photos1.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos9.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos8.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos7.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos6.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos5.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos4.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos3.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos2.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos10.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos9.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos8.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos7.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos6.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos5.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos4.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos3.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos2.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/photos/Photos1.jpg" alt="" />
+                                            <div class="mask">
+                                                <div class="folder-name">A Long Long Folder Name</div>
+                                                <div class="folder-date">may 20, 2015</div>
+                                                <div class="folder-number-photos">1 Photo</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="scrollbar">
+                                    <div class="handle">
+                                        <div class="mousearea"></div>
+                                    </div>
+                                </div>
+                                
+                                <!--div class="controls center">
+                                    <button class="btn prevPage"><i class="icon-chevron-left"></i><i class="icon-chevron-left"></i> page</button>
+    
+                                    <div class="btn-group">
+                                        <button class="btn add"><i class="icon-plus-sign"></i></button>
+                                        <button class="btn remove"><i class="icon-minus-sign"></i></button>
+                                    </div>
+
+                                    <button class="btn nextPage">page <i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></button>
+                                </div-->
+
+                            </div><!-- /folders -->
+
+                        </div>
+
+                        <div class="panel-body">
+                            
+                            <h3>Photos Uploaded   
+                                <div class="btn-group">
+                                    <button type="button" class="btn1 btn-dangerteam btn-sm dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    This Week <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu animated fadeInUp">
+                                        <div id="datetimepicker12"></div>
+                                    </div>
+                                </div>                             
+                                
+                            </h3>
+                            <a href="#" class="pull-right options animated fadeIn">Options</a>
+
+                            <ul class="list-unstyled option pull-right animated fadeInLeft">
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-share-square" aria-hidden="true"></i>
+                                        Share
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="btn-group">
+                                        
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-folder"></i>
+                                            Move to Folder 
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                        Copy to Folder
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        Download
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-tag" aria-hidden="true"></i>
+                                        Add Tags
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        Trash
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="row mt20">
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos10.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos2.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos3.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos4.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos5.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos6.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos7.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos8.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos9.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos10.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos2.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos3.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos4.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos5.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos6.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos7.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos8.jpg" alt="" />
+                                    </a>    
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-2">
+                                    <a href="#" class="thumbnail" data-toggle="modal" data-target="#PreviewModal">
+                                        <img src="assets/img/photos/Photos1.jpg" alt="" />
+                                    </a>    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="footer">
+                 <div class="pull-right">
+                     10GB of <strong>250GB</strong> Free.
+                 </div>
+                 <div>
+                     <strong>Copyright</strong> Example Company &copy; 2014-2015
+                 </div>
+             </div>-->
+            
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="PreviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal photos-preview animated fadeInUpBig">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                    <i class="fa fa-times-circle"></i>
+                </button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>
+                            Anderson Perkins LTD Shipping Center
+                            <span>Contrucction_area.jpg</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled text-right">
+                            <li>
+                                <a href=""><i class="fa fa-share-square"></i>Share</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-download"></i>Download</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-trash"></i>Trash</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <img src="assets/img/photo-view.jpg" alt="" />
+                <div class="comments-photo">
+                    <div class="comment-author">
+                        Eric Hoffman <span>May 20, 2015 - 2:34pm</span>
+                    </div>
+                    <div class="comment-description">
+                        This is a description. Integer posuere erat a ante venenatis dapubus posuere velit aliquet.
+                        Nullam id dolor id nubh ultricies vehicula ut id elit.
+                    </div>
+                    <div class="comment-tags">
+                        <ul class="list-unstyled">
+                            <li>Shopping Mall <i class="fa fa-times"></i></li>
+                            <li>Jeff Malon <i class="fa fa-times"></i></li>
+                        </ul>
+                        <a class="add-tags"><i class="fa fa-plus"></i>Add</a>
+                    </div>
+
+                    <div class="comment-users">
+                        <a href="" class="edit-comment"><i class="fa fa-pencil"></i>Edit</a>
+                        <div class="avatar">
+                            <img src="assets/img/user-comment1.png" alt="" />
+                        </div>
+                        <div class="comments">
+                            <div class="author">
+                                Bob Jones <span>May 20, 2015 - 3:40pm</span>
+                            </div>
+                            <p>
+                                This is a comment. Maecenas faucibus mollis interdum. Cum sociis natoque penati bus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment-users">
+                        <a href="" class="edit-comment"><i class="fa fa-pencil"></i>Edit</a>
+                        <div class="avatar">
+                            <img src="assets/img/user-comment.png" alt="" />
+                        </div>
+                        <div class="comments">
+                            <div class="author">
+                                Eric Hoffman <span>May 20, 2015 - 3:40pm</span>
+                            </div>
+                            <p>
+                                This is a comment. Maecenas faucibus mollis interdum. Cum sociis natoque penati bus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form class="" action="" method="POST">
+                        <textarea placeholder="Add Comment..."></textarea>
+                    </form>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="submit" class="btn btn-primary pull-right">post comment</button>
+                <button type="submit" class="btn btn-default pull-right" data-dismiss="modal" aria-label="Close">cancel</button>
+                
+            </div>
+
+        </div>
+      </div>
+    </div><!-- Preview Modal -->
+
+    <!-- Drag & Drop -->
+    <div id="DragDrop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal photos-preview drag-drop animated fadeInUpBig">
+        <div role="document" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                        <i class="fa fa-times-circle"></i>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fa fa-cloud-upload fa-2"></i>
+                    <h6>Drag and drop Photos</h6>
+                    <p>or</p>
+                    <div class="fileUpload btn btn-success">
+                        <span>Browse Files</span>
+                        <input type="file" class="upload" />
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><span class="badge">jpg</span></li>
+                        <li><span class="badge">png</span></li>
+                        <li><span class="badge">gif</span></li>
+                        <li>Max. 50MB</li>
+                    </ul>
+                    <div class="progress-upload">
+                        <ul class="list-unstyled">
+                            <li class="uploaded">
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-2">
+                                        <a class="delete"><i class="fa fa-times-circle"></i></a>
+                                        <img src="assets/img/photos/Photos5.jpg" alt="" />
+                                    </div>
+                                    <div class="col-xs-8 col-md-10 text-left">
+                                        <p>
+                                            Loremipsum.jpg
+                                            <span>uploaded</span>
+                                        </p>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Save to <i class="fa fa-angle-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uploaded">
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-2">
+                                        <a class="delete"><i class="fa fa-times-circle"></i></a>
+                                        <img src="assets/img/photos/Photos1.jpg" alt="" />
+                                    </div>
+                                    <div class="col-xs-8 col-md-10 text-left">
+                                        <p>
+                                            Loremipsum.jpg
+                                            <span>uploaded</span>
+                                        </p>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Save to <i class="fa fa-angle-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uploaded">
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-2">
+                                        <a class="delete"><i class="fa fa-times-circle"></i></a>
+                                        <img src="assets/img/photos/Photos9.jpg" alt="" />
+                                    </div>
+                                    <div class="col-xs-8 col-md-10 text-left">
+                                        <p>
+                                            anotherphoto.png
+                                            <span>uploaded</span>
+                                        </p>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Save to <i class="fa fa-angle-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Drag & Drop -->
+
+    <!-- Mainly scripts -->
+    <script src="assets/js/jquery-2.1.1.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        
+    <script src="assets/js/plugins/customscroll/jquery.mCustomScrollbar.min.js"></script>
+
+    <script src="assets/js/plugins/datapicker/moment.js"></script>
+    <script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <script src="assets/js/plugins/sly/plugins.js"></script>
+    <script src="assets/js/plugins/sly/sly.min.js"></script>
+    <script src="assets/js/demo/sly-demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.photos .options').click(function(e){
+                e.preventDefault();
+                if ($('.photos .frame li').hasClass('active'))
+                {
+                    
+                    if ($('.photos .panel-body .options').html() == 'Done')
+                    {
+                        $('.photos .panel-body .option').slideUp('slow')
+                        $('.photos .panel-body .options').html('Options');
+                    }
+                    else {
+                        $('.photos .panel-body .option').fadeIn('slow')
+                        $('.photos .panel-body .options').html('Done');
+                    }
+
+                }
+                else
+                {
+                    alert('Select an folder Please');
+                }
+                
+            });
+
+            $('#datetimepicker12').datetimepicker({
+                inline: true
+            });
+
+            $('.progress-upload ul').mCustomScrollbar({
+                theme: 'dark'
+            });
+
+        });
+    </script>
+    
+</body>
+
+</html>
