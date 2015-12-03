@@ -1,0 +1,42 @@
+.inner-page-wrapper .project-overview {
+    padding: 0px;
+}
+
+.prj-btn-border:hover {
+    border: 1px solid !important;
+}
+
+.prj-pr-s {
+    padding-right: 5px;
+}
+
+.prj-pr-m {
+    padding-right: 15px;
+}
+
+.prj-pr-l {
+    padding-right: 25px;
+}
+
+.prj-pt-s {
+    padding-top: 5px;
+}
+
+.prj-mr-s {
+    margin-right: 5px;
+}
+.prj-mt-s {
+    margin-top: 8px;
+}
+
+.prj-blue-rect {
+    padding: 0px 8px;
+    background-color: #3aabd5;
+    border-radius: 4px;
+}
+
+.prj-green-rect {
+    padding: 0px 8px;
+    background-color: #79c485;
+    border-radius: 4px;
+}

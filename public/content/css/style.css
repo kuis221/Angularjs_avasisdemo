@@ -22,4 +22,7 @@ svg tspan {
     margin-top: 10px;
 }
 
-
+.no-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+}
