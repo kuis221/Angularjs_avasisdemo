@@ -44,14 +44,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             abstract: true,
             template: '<ui-view></ui-view>'
         })
-        .state('financials.bankdraw.main', {
-            url: '/main',
-            templateUrl: "partials/financials/bank-draw/main.html",
-            controller: "BankDrawCtrl",
-            data: {
-                isHeaderHidden: true
-            }
-        })
         .state('financials.bankdraw.payment-application', {
             url: '/payment-application',
             templateUrl: "partials/financials/bank-draw/payment-application.html",
