@@ -129,6 +129,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
+        })
+        .state('documents', {
+            url: '/documents',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('documents.main', {
+            url: '/main',
+            templateUrl: 'partials/documents/list.html',
+            controller: 'DocumentsCtrl'
         });
 }]);
 
