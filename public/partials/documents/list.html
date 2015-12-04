@@ -15,23 +15,82 @@
         </div>
     </div>
 </div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="inline-action-controls animated fadeIn" ng-show="isDocumentSelected()">
+        <ul>
+            <li>
+                <a class="btn-dark">&times;</a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-share-square"></span>
+                    Share
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-folder-open"></span>
+                    Move to Folder
+                    <span class="fa fa-angle-down"></span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-copy"></span>
+                    Copy to Folder
+                    <span class="fa fa-angle-down"></span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-download"></span>
+                    Download
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-tag"></span>
+                    Add Tags
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-trash"></span>
+                    Trash
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <!-- <ui-select class="text-primary" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select> -->
+    </div>
+    <div class="whiteBox">
+        <div ui-tree data-drag-enabled="false" data-max-depth="3">
+            <ol ui-tree-nodes="" ng-model="documents">
+                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="true" ng-include="'folder-template.html'"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
 <!-- Nested node template -->
 <script type="text/ng-template" id="folder-template.html">
     <div ui-tree-handle class="tree-node tree-node-content">
         <div class="checkbox checkbox-inline">
-            <input type="checkbox">
+            <input type="checkbox" ng-click="selectFolder()">
             <label>&nbsp;</label>
         </div>
-        <span data-nodrag ng-click="toggle(this)" class="text-success">
-            <span class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}"></span>
-            {{folder.title}}
-        </span>
+        <div data-nodrag ng-click="toggle(this)" class="text-primary" style="display: inline-block">
+            <i class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}"></i>
+            <span>{{folder.title}}</span>
+        </div>
         <span class="pull-right small text-default" data-nodrag>{{folder.children.length}} Documents</span>
     </div>
     <ol ui-tree-nodes ng-model="folder.children" ng-class="{hidden: collapsed}" ng-if="!folder.has_files">
         <li ng-repeat="folder in folder.children" data-collapsed="true" ui-tree-node ng-include="'folder-template.html'"></li>
     </ol>
-    <div ng-include="'document-template.html'" ng-if="folder.has_files" ng-class="{hidden: collapsed}"></div>
+    <div class="pl20" ng-include="'document-template.html'" ng-if="folder.has_files" ng-class="{hidden: collapsed}"></div>
 </script>
 <!-- Nested node template -->
 <script type="text/ng-template" id="document-template.html">
@@ -47,31 +106,25 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="document in folder.children">
-                <td class="text-success">{{document.title}}</td>
+            <tr text-class="text-muted" ng-repeat="document in folder.children">
+                <td class="text-primary">
+                    <div class="checkbox checkbox-inline">
+                        <input type="checkbox" ng-click="selectDocument(document)">
+                        <label>&nbsp;</label>
+                    </div>
+                    <a class="text-primary" ng-click="">{{document.title}}</a>
+                </td>
                 <td>{{document.project}}</td>
                 <td class="medium">{{document.scope_of_work}}</td>
                 <td class="medium">
                     <div ng-repeat="member in document.team_members">
-                        <div class="text-success">{{member.name}}</div>
+                        <div class="text-primary">{{member.name}}</div>
                         <span class="small">{{member.job_title}}</span>
                     </div>
                 </td>
-                <td class="medium text-success">{{document.access}}</td>
-                <td><span class="text-muted fa fa-download"></span></td>
+                <td class="medium text-primary">{{document.access}}</td>
+                <td><span class="fa fa-download"></span></td>
             </tr>
         </tbody>
+    </table>
 </script>
-
-<div class="wrapper wrapper-content animated fadeInRight">
-    <div>
-        <ui-select class="text-primary" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select>
-    </div>
-    <div class="whiteBox">
-        <div ui-tree data-drag-enabled="false" data-max-depth="3">
-            <ol ui-tree-nodes="" ng-model="documents">
-                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="true" ng-include="'folder-template.html'"></li>
-            </ol>
-        </div>
-    </div>
-</div>

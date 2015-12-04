@@ -56,15 +56,16 @@ svg tspan {
     font-size: 14px;
 }
 .angular-ui-tree-nodes .fa {
-    font-size: 15px;
+    font-size: 18px;
     padding-right: 15px;
 }
 .angular-ui-tree-handle {
-    padding: 15px;
+    padding: 15px 20px;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
 }
 .angular-ui-tree-nodes .angular-ui-tree-nodes {
-    padding-left: 50px;
+    padding-left: 60px;
 }
 .angular-ui-tree-nodes .angular-ui-tree-nodes li {
     border-left: 1px dashed #ccc;
@@ -80,10 +81,13 @@ svg tspan {
     top: 25px;
     left: 0;
 }
+.angular-ui-tree-nodes .checkbox {
+    margin-top: -5px;
+}
 .angular-ui-tree-node th {
     background-color: #F5F5F6 !important;
     font-size: 15px;
-    color: #777;
+    color: #4a4a4a;
     padding: 12px !important;
 }
 .angular-ui-tree-node td {
@@ -96,8 +100,8 @@ svg tspan {
 .angular-ui-tree-node .medium {
     font-size: 90%;
 }
-.text-success {
-    color: rgb(68, 174, 214);
+.text-primary {
+    color: #3aabd5;
 }
 /******* PADDING BOTTOM*******/
 .pl10 {padding-left: 10px;}
