@@ -26,3 +26,22 @@ svg tspan {
     margin-left: 0px;
     margin-right: 0px;
 }
+
+.modal-dialog button.close {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-top: -50px;
+    background: white;
+    opacity: 1;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0,50%);
+    -ms-transform: translate(0,50%);
+    -o-transform: translate(0,50%);
+    transform: translate(0,50%);
+}

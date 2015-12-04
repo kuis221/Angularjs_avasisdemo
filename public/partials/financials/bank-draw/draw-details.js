@@ -1,4 +1,4 @@
-app.controller('DrawdetailsCtrl',
+app.controller('DrawDetailsCtrl',
     ['$scope', '$stateParams', function ($scope, $stateParams) {
 
     }]);
