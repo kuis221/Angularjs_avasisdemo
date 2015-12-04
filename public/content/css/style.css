@@ -1,3 +1,9 @@
+@import 'checkbox.css';
+
+body {
+    font-family: "AvenirNextLTPro-Regular" !important;
+}
+
 .per > div {
     position: relative !important;
 }

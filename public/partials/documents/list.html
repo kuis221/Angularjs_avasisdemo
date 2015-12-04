@@ -17,12 +17,10 @@
 </div>
 <!-- Nested node template -->
 <script type="text/ng-template" id="folder-template.html">
-    <div ui-tree-handle class="form-inline tree-node tree-node-content">
-        <div class="checkbox m-r-xs">
+    <div ui-tree-handle class="tree-node tree-node-content">
+        <div class="checkbox checkbox-inline">
             <input type="checkbox">
-            <label>
-                &nbsp;
-            </label>
+            <label>&nbsp;</label>
         </div>
         <span data-nodrag ng-click="toggle(this)" class="text-success">
             <span class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}"></span>
