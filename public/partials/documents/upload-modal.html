@@ -1,4 +1,7 @@
 <button type="button" class="close" ng-click="cancel()">&times;</button>
 <div class="modal-body text-center">
+	<form class="dropzone" enctype="multipart/form-data" ng-dropzone dropzone="dropzone" dropzone-config="dropzoneConfig">
+		<input name="file" class="hidden" type="file" multiple />
+	</form>
     <a class="btn btn-green btn-lg">Browse Files</a>
 </div>

@@ -3,7 +3,9 @@ var app = angular.module('avasis',
         'ui.router',
         'ngTable',
         'ngAnimate',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ngDropzone',
+        'ui.tree'
     ]);
 
 app.controller('AppCtrl', [

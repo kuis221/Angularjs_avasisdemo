@@ -1,0 +1,13 @@
+{
+  "name": "angular-tree",
+  "homepage": "https://github.com/dump247/angular.tree",
+  "_release": "ed1f401c22",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ed1f401c22be53a0518bb2f5e59439cfa23878d0"
+  },
+  "_source": "git://github.com/dump247/angular.tree.git",
+  "_target": "*",
+  "_originalSource": "angular-tree"
+}
