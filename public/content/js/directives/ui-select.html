@@ -1,0 +1,11 @@
+<div class="dropdown">
+    <button class="dropdown-toggle" data-toggle="dropdown">
+        <span class="pull-left">{{selectedItem.name}}</span>
+        <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li ng-repeat="item in options track by $index">
+            <a tabindex="-1" data-ng-click="selectVal(item)">{{item.name}}</a>
+        </li>
+    </ul>
+</div>

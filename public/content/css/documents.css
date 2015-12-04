@@ -1,0 +1,30 @@
+.inline-action-controls ul {
+    background: white;
+    list-style: none;
+}
+.inline-action-controls li {
+    display: inline-block;
+    font-weight: 600;
+    border-right: 1px solid #ccc;
+}
+.inline-action-controls li:last-child {
+    border: none;
+}
+.inline-action-controls li a {
+    padding: 10px 40px;
+    color: #777;
+}
+.inline-action-controls li a i {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.inline-action-controls li:first-child {
+    background: black;
+    padding: 10px 20px;
+    border: none;
+}
+.inline-action-controls li:first-child a {
+    color: white;
+    padding: 0;
+}
