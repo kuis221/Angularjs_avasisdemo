@@ -94,8 +94,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('team-members', {
             url: '/team-members',
-            templateUrl: "partials/team-members/team-members.html",
-            controller: "TeamMembersCtrl"
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('team-members.empty', {
+            url: '/empty',
+            templateUrl: 'partials/team-members/team-members-empty.html',
+            controller: 'TeamMembersCtrl'
+        })
+        .state('team-members.list', {
+            url: '/list',
+            templateUrl: 'partials/team-members/team-members-list.html',
+            controller: 'TeamMembersCtrl'
         })
         .state('action-items', {
             url: '/action-items',
