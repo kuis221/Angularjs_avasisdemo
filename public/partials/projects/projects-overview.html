@@ -1,5 +1,5 @@
 <!----==================RIGHT SIDE PANEL==================---->
-<div id="page-wrapper" class="inner-page-wrapper">
+<div id="page-wrapper" class="inner-page-wrapper" ng-init="init_overview_page();">
     <!----==================TOP NAV BAR==================---->
     <div class="row border-bottom">
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -16,12 +16,12 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="light-blue open">
                     <div class="dd wrapper-dropdown-team user">
-                                <span>
-                                    <a href="">
-                                        <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo"><span class="user-info">Eric Hoffman</span>
-                                        <i class="ace-icon fa fa-caret-down"></i>
-                                    </a>
-                                </span>
+                        <span>
+                            <a href="">
+                                <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo"><span class="user-info">Eric Hoffman</span>
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+                        </span>
                         <ul class="dropdown">
                             <li><a href="#">My Profile</a></li>
                             <li><a href="#">Company Profile</a></li>
@@ -151,7 +151,7 @@
                                             <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
                                             <div class="col-md-4">
                                                 <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    <div class="progress-bar progress-bar-success" style="width: {{schedule_completed}}%"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -173,7 +173,7 @@
                                             <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
                                             <div class="col-md-4">
                                                 <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    <div class="progress-bar progress-bar-success" style="width: {{schedule_completed}}%"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -195,7 +195,7 @@
                                             <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
                                             <div class="col-md-4">
                                                 <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    <div class="progress-bar progress-bar-success" style="width: {{schedule_completed}}%"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,7 +217,7 @@
                                             <div class="col-md-3"><p class="progrsTxt"> 32% Completed</p></div>
                                             <div class="col-md-4">
                                                 <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                                    <div class="progress-bar progress-bar-success" style="width: {{schedule_completed}}%"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,7 +240,7 @@
                                     <th>
                                         19 of 25 completed
                                         <div class="progress progress-small">
-                                            <div class="progress-bar progress-bar-success" style="width: 50%;"></div>
+                                            <div class="progress-bar progress-bar-success" style="width: {{project_completed}}%"></div>
                                         </div>
                                     </th>
                                 </tr>

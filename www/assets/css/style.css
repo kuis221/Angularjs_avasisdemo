@@ -1863,7 +1863,9 @@ table.table-mail tr td { padding: 12px;}
 .progress-mini,
 .progress-mini .progress-bar {height: 5px;  margin-bottom: 0px;}
 .progress-bar-navy-light {background-color: #3dc7ab;}
-.progress-bar-success {  background-color: #79c485;  color: #79c485;}
+.progress-bar-success {  background-color: #79c485;  color: #79c485;     -webkit-transition: width 1.6s ease;
+    -o-transition: width 1.6s ease;
+    transition: width 1.6s ease;}
 .progress-bar-info {background-color: #23c6c8;}
 .progress-bar-warning { background-color: #f8ac59; color: #f8ac59;}
 .progress-bar-danger {background-color: #ed5565;  color: #ed5565;}
