@@ -105,7 +105,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('action-items.inspections', {
             url: '/inspections',
             templateUrl: "partials/action-items/inspections.html",
-            controller: "ActionItemsCtrl"
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('projects', {
             url: '/projects',
