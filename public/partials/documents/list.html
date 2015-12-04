@@ -66,6 +66,9 @@
 </script>
 
 <div class="wrapper wrapper-content animated fadeInRight">
+    <div>
+        <ui-select class="text-primary" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select>
+    </div>
     <div class="whiteBox">
         <div ui-tree data-drag-enabled="false" data-max-depth="3">
             <ol ui-tree-nodes="" ng-model="documents">
