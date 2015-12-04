@@ -154,6 +154,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/documents/list.html',
             controller: 'DocumentsCtrl'
+        })
+        .state('sample', {
+            url: '/sample',
+            templateUrl: 'partials/sample/sample.html',
+            controller: 'SampleCtrl'
         });
 }]);
 
