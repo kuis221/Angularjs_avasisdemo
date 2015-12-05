@@ -1,7 +1,7 @@
 @import 'checkbox.css';
 
 body {
-    font-family: "AvenirNextLTPro-Regular" !important;
+    font-family: "AvenirNextLTPro-Demi" !important;
 }
 
 .per > div {
@@ -40,6 +40,7 @@ svg tspan {
     margin-top: -50px;
     background: white;
     opacity: 1;
+    line-height: 0;
 }
 
 .modal.fade .modal-dialog {
@@ -233,6 +234,10 @@ svg tspan {
 }
 .angular-ui-tree-nodes .angular-ui-tree-nodes li {
     border-left: 1px dashed #ccc;
+    padding-left: 20px;
+}
+.angular-ui-tree-nodes .angular-ui-tree-nodes li .angular-ui-tree-handle {
+    padding-left: 0;
 }
 .angular-ui-tree-nodes .angular-ui-tree-nodes li:before {
     border-top: 1px solid #ccc;
@@ -243,7 +248,10 @@ svg tspan {
     width: 20px;
     position: absolute;
     top: 25px;
-    left: 0;
+    left: -1px;
+}
+.angular-ui-tree-nodes .angular-ui-tree-nodes li:last-child:before {
+    border-left: 1px solid white;
 }
 .angular-ui-tree-nodes .checkbox {
     margin-top: -5px;
@@ -264,9 +272,7 @@ svg tspan {
 .angular-ui-tree-node .medium {
     font-size: 90%;
 }
-.text-primary {
-    color: #3aabd5;
-}
+
 /******* PADDING BOTTOM*******/
 .pl10 {padding-left: 10px;}
 .pl15 {padding-left: 15px;}
