@@ -37,20 +37,25 @@ svg tspan {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    margin-top: -50px;
     background: white;
     opacity: 1;
     line-height: 0;
+    margin-top: 12px;
+}
+.modal-dialog .modal-header {
+    margin-top: -70px;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 .modal.fade .modal-dialog {
     -webkit-transition: -webkit-transform .3s ease-out;
     -o-transition: -o-transform .3s ease-out;
     transition: transform .3s ease-out;
-    -webkit-transform: translate(0,50%);
-    -ms-transform: translate(0,50%);
-    -o-transform: translate(0,50%);
-    transform: translate(0,50%);
+    -webkit-transform: translate(0,100px);
+    -ms-transform: translate(0,100px);
+    -o-transform: translate(0,100px);
+    transform: translate(0,100px);
 }
 
 /*************************************************
@@ -108,7 +113,7 @@ svg tspan {
     border: 0;
 }
 
-.btn-cancel {
+.btn-cancel, .btn-transparent {
     background-color: transparent;
     color: #8b8b8b;
     border: 0;

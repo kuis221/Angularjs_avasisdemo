@@ -1,0 +1,49 @@
+<div id="content-section">
+    <div class="modal-header">
+        <button type="button" class="btn btn-success btn-lg">Add Comment</button>
+        <button type="button" class="btn btn-transparent btn-lg text-primary" ng-click="isHiddenComments = !isHiddenComments">View Comments (3)</button>
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <div class="badge badge-danger" ng-class="activeClass(comment)" 
+             style="left: {{comment.pos.x}}px; top: {{comment.pos.y}}px;"
+             ng-click="selectComment(comment)"
+             ng-repeat="comment in comments">{{$index + 1}}</div>
+        <img src="assets/img/documents/pdf_sample.jpg">
+    </div>
+</div>
+<div class="pull-left" id="info-section">
+    <div class="subhead">First Place-Concrete.pdf<span class="fa fa-download pl20"></span></div>
+    
+    <div class="text-muted small mt10">Uploaded By</div>
+    <div class="text-primary">George Biship</div>
+    
+    <div class="text-muted small mt10">Users with Access</div>
+    <div class="text-primary" ng-repeat="user in permittedUsers">{{user.name}}</div>
+    <div class="mt5">Add User +</div>
+
+    <hr>
+
+    <div class="text-muted small">Uploaded Date</div>
+    <p>Jun 23, 2015</p>
+
+    <div class="text-muted small">Last Modified</div>
+    <p>Jun 26, 2015</p>
+
+    <div class="comments" ng-hide="isHiddenComments">
+        <hr>
+        <div>Comments (3)</div>
+        <div class="comment clearfix mt10" ng-click="selectComment(comment)" ng-class="activeClass(comment)" ng-repeat="comment in comments track by $index">
+            <div class="pull-left">
+                <img ng-src="{{comment.avatar}}">
+            </div>
+            <div class="pull-left comment-body">
+                <div class="clearfix">
+                    <div class="text-primary pull-left subhead">{{comment.created_by}}</div>
+                    <div class="text-muted pull-right">{{comment.created_at}}</div>
+                </div>
+                <div>{{comment.body}}</div>
+            </div>
+        </div>
+    </div>
+</div>

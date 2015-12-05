@@ -68,7 +68,7 @@
     <div class="whiteBox">
         <div ui-tree data-drag-enabled="false" data-max-depth="3">
             <ol ui-tree-nodes="" ng-model="documents">
-                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="true" ng-include="'folder-template.html'"></li>
+                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="false" ng-include="'folder-template.html'"></li>
             </ol>
         </div>
     </div>
@@ -112,7 +112,7 @@
                         <input type="checkbox" ng-click="selectDocument(document)">
                         <label>&nbsp;</label>
                     </div>
-                    <a class="text-primary" ng-click="">{{document.title}}</a>
+                    <a class="text-primary" ng-click="showDetailModal(document)">{{document.title}}</a>
                 </td>
                 <td>{{document.project}}</td>
                 <td class="medium">{{document.scope_of_work}}</td>
