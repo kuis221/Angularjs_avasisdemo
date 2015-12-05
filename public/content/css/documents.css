@@ -55,6 +55,12 @@
     padding-left: 10px;
     color: #ccc;
 }
+.comment-modal #info-section hr{
+    width: 100px;
+}
+.comment-modal #info-section .subhead {
+    font-size: 15px;
+}
 .comment-modal #content-section {
     width: 740px;
     float: left;
@@ -77,9 +83,11 @@
 .comment-modal #content-section .badge.active {
     opacity: 1;
 }
-.comment-modal #info-section hr{
-    width: 100px;
+
+.comment-modal .alert {
+    float: left;
+    width: 700px;
 }
-.comment-modal #info-section .subhead {
-    font-size: 15px;
+.comment-modal .popover {
+    max-width: 400px;
 }

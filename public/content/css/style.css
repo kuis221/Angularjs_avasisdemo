@@ -158,7 +158,34 @@ svg tspan {
     font-size: 13px;
     padding:  15px 25px;
 }
+.alert {
+    text-align: center;
+    border: none;
+}
+.alert-primary {
+    background-color: #3aabd5;
+    color: white;
+}
 
+.alert-success {
+    background-color: #79c485;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #e25c5c;
+    color: white;
+}
+
+.alert-warning {
+    background-color: #fdb04a;
+    color: white;
+}
+
+.alert-info {
+    background-color: #2a2d33;
+    color: white;
+}
 
 .text-primary {
     color: #3aabd5;
@@ -275,4 +302,8 @@ ui-select .dropdown-menu {
 }
 ui-select  .dropdown-menu>li>a {
     padding: 15px;
+}
+
+textarea.form-control {
+    padding: 0 5px;
 }

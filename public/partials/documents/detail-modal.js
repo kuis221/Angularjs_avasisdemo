@@ -9,10 +9,10 @@ app.controller('DocumentDetailModalCtrl',
 
         $scope.comments = [
             {
-                id: 1,
+                id: _.uniqueId(),
                 avatar: 'assets/img/user_1.png',
                 created_by: 'Phil Jones',
-                created_at: 'Jun 23, 2015 - 3:40PM',
+                created_at: 'Jun 23, 2015 - 3:40pm',
                 pos: {
                     x: 200,
                     y: 90
@@ -20,10 +20,10 @@ app.controller('DocumentDetailModalCtrl',
                 body: "Will this document be abe to be used in the build.  I want to have it used so we can have a safe fireplace.  If it can not be used let me know."
             },
             {
-                id: 2,
+                id: _.uniqueId(),
                 avatar: 'assets/img/user_3.png',
                 created_by: 'Harry Kane',
-                created_at: 'Oct 23, 2015 - 3:40PM',
+                created_at: 'Oct 23, 2015 - 3:40pm',
                 pos: {
                     x: 300,
                     y: 200
@@ -33,6 +33,7 @@ app.controller('DocumentDetailModalCtrl',
         ];
         $scope.isHiddenComments = true;
         $scope.activeComment = {};
+        $scope.isAddingComment = false;
 
         $scope.selectComment = function(comment) {
             $scope.activeComment = comment;
@@ -40,6 +41,28 @@ app.controller('DocumentDetailModalCtrl',
         }
         $scope.activeClass = function(comment) {
             return $scope.activeComment.id == comment.id ? 'active' : '';
+        }
+        $scope.dropComment = function(evt) {
+            if (!$scope.isAddingComment)
+                return;
+            $scope.isAddingComment = false;
+            var comment = {
+                pos: {
+                    x: evt.offsetX + 20,
+                    y: evt.offsetY + 20
+                }
+            }
+            $scope.comments.push(comment);
+        }
+        $scope.cancelComment = function() {
+            $scope.comments.splice($scope.comments.length - 1, 1);
+        }
+        $scope.createComment = function() {
+            lastComment = _.last($scope.comments);
+            lastComment.avatar = 'assets/img/user_2.png';
+            lastComment.created_by = 'Andrew Klein';
+            lastComment.created_at = 'Dec 8, 2015 - 3:00pm';
+            lastComment.id = _.uniqueId();
         }
         $scope.cancel = function () {
             $uibModalInstance.dismiss('cancel');
