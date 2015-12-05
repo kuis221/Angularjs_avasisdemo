@@ -17,7 +17,7 @@
 </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="inline-action-controls animated fadeIn" ng-show="isDocumentSelected()">
+    <div class="inline-action-controls" ng-show="isDocumentSelected()">
         <ul>
             <li>
                 <a class="btn-dark">&times;</a>
@@ -32,14 +32,14 @@
                 <a>
                     <span class="fa fa-folder-open"></span>
                     Move to Folder
-                    <span class="fa fa-angle-down"></span>
+                    <span class="fa fa-angle-down pl10"></span>
                 </a>
             </li>
             <li>
                 <a>
                     <span class="fa fa-copy"></span>
                     Copy to Folder
-                    <span class="fa fa-angle-down"></span>
+                    <span class="fa fa-angle-down pl10"></span>
                 </a>
             </li>
             <li>
@@ -85,12 +85,12 @@
             <i class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}"></i>
             <span>{{folder.title}}</span>
         </div>
-        <span class="pull-right small text-default" data-nodrag>{{folder.children.length}} Documents</span>
+        <span class="pull-right small text-muted" data-nodrag>{{folder.children.length}} Documents</span>
     </div>
     <ol ui-tree-nodes ng-model="folder.children" ng-class="{hidden: collapsed}" ng-if="!folder.has_files">
         <li ng-repeat="folder in folder.children" data-collapsed="true" ui-tree-node ng-include="'folder-template.html'"></li>
     </ol>
-    <div class="pl20" ng-include="'document-template.html'" ng-if="folder.has_files" ng-class="{hidden: collapsed}"></div>
+    <div ng-include="'document-template.html'" ng-if="folder.has_files" ng-class="{hidden: collapsed}"></div>
 </script>
 <!-- Nested node template -->
 <script type="text/ng-template" id="document-template.html">
@@ -119,11 +119,11 @@
                 <td class="medium">
                     <div ng-repeat="member in document.team_members">
                         <div class="text-primary">{{member.name}}</div>
-                        <span class="small">{{member.job_title}}</span>
+                        <span class="small text-muted">{{member.job_title}}</span>
                     </div>
                 </td>
                 <td class="medium text-primary">{{document.access}}</td>
-                <td><span class="fa fa-download"></span></td>
+                <td><span class="fa fa-download text-muted"></span></td>
             </tr>
         </tbody>
     </table>
