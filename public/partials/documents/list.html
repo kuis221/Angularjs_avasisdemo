@@ -68,7 +68,7 @@
     <div class="whiteBox">
         <div ui-tree data-drag-enabled="false" data-max-depth="3">
             <ol ui-tree-nodes="" ng-model="documents">
-                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="false" ng-include="'folder-template.html'"></li>
+                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="true" ng-include="'folder-template.html'"></li>
             </ol>
         </div>
     </div>
@@ -88,7 +88,7 @@
         <span class="pull-right small text-muted" data-nodrag>{{folder.children.length}} Documents</span>
     </div>
     <ol ui-tree-nodes ng-model="folder.children" ng-class="{hidden: collapsed}" ng-if="!folder.has_files">
-        <li ng-repeat="folder in folder.children" data-collapsed="false" ui-tree-node ng-include="'folder-template.html'"></li>
+        <li ng-repeat="folder in folder.children" data-collapsed="true" ui-tree-node ng-include="'folder-template.html'"></li>
     </ol>
     <div ng-include="'document-template.html'" ng-if="folder.has_files" ng-class="{hidden: collapsed}"></div>
 </script>
