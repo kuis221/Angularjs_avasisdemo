@@ -28,3 +28,66 @@
     color: white;
     padding: 0;
 }
+.modal.comment-modal .modal-dialog{
+    width: 1100px;
+}
+
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+.comment-modal #info-section {
+    color: white;
+    line-height: 22px;
+    word-wrap: break-word;
+    width: 356px;
+    padding-left: 20px;
+}
+.comment-modal #info-section .comment {
+    padding: 10px;
+    padding-left: 2px;
+    border-radius: 4px;
+}
+.comment-modal #info-section .comment.active {
+    background: black;
+}
+.comment-modal #info-section .comment-body {
+    width: 280px;
+    padding-left: 10px;
+    color: #ccc;
+}
+.comment-modal #info-section hr{
+    width: 100px;
+}
+.comment-modal #info-section .subhead {
+    font-size: 15px;
+}
+.comment-modal #content-section {
+    width: 740px;
+    float: left;
+    background-color: white;
+    border-radius: 4px;
+}
+.comment-modal .modal-body {
+    position: relative;
+}
+.comment-modal #content-section .badge {
+    opacity: .7;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.comment-modal #content-section .badge.active {
+    opacity: 1;
+}
+
+.comment-modal .alert {
+    float: left;
+    width: 700px;
+}
+.comment-modal .popover {
+    max-width: 400px;
+}

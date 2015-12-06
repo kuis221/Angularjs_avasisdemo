@@ -154,7 +154,20 @@ app.controller('DocumentsCtrl',
             });
 
             modalInstance.result.then(function (res) {
-                console.log('Document uploaded')
+            }, function () {
+
+            });
+        }
+
+        $scope.showDetailModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/documents/detail-modal.html',
+                controller: 'DocumentDetailModalCtrl',
+                windowClass: 'comment-modal',
+                backdrop: 'static'
+            });
+
+            modalInstance.result.then(function (res) {
             }, function () {
 
             });
