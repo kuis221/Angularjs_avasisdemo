@@ -3,7 +3,9 @@ var app = angular.module('avasis',
         'ui.router',
         'ngTable',
         'ngAnimate',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ngDropzone',
+        'ui.tree'
     ]);
 
 app.controller('AppCtrl', [
@@ -94,8 +96,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('team-members', {
             url: '/team-members',
-            templateUrl: "partials/team-members/team-members.html",
-            controller: "TeamMembersCtrl"
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('team-members.empty', {
+            url: '/empty',
+            templateUrl: 'partials/team-members/team-members-empty.html',
+            controller: 'TeamMembersCtrl'
+        })
+        .state('team-members.list', {
+            url: '/list',
+            templateUrl: 'partials/team-members/team-members-list.html',
+            controller: 'TeamMembersCtrl'
         })
         .state('action-items', {
             url: '/action-items',
@@ -142,6 +154,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/documents/list.html',
             controller: 'DocumentsCtrl'
+        })
+        .state('sample', {
+            url: '/sample',
+            templateUrl: 'partials/sample/sample.html',
+            controller: 'SampleCtrl'
         });
 }]);
 
