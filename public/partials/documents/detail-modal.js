@@ -37,7 +37,6 @@ app.controller('DocumentDetailModalCtrl',
 
         $scope.selectComment = function(comment) {
             $scope.activeComment = comment;
-            $scope.isHiddenComments = false;
         }
         $scope.activeClass = function(comment) {
             return $scope.activeComment.id == comment.id ? 'active' : '';
@@ -46,6 +45,7 @@ app.controller('DocumentDetailModalCtrl',
             if (!$scope.isAddingComment)
                 return;
             $scope.isAddingComment = false;
+            $scope.isHiddenComments = false
             var comment = {
                 pos: {
                     x: evt.offsetX + 20,

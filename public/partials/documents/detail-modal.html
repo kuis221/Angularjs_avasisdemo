@@ -21,6 +21,7 @@
         <div class="badge badge-danger" ng-class="activeClass(comment)" 
              style="left: {{comment.pos.x}}px; top: {{comment.pos.y}}px;"
              ng-click="selectComment(comment)"
+             ng-hide="isHiddenComments"
              ng-repeat="comment in comments"
              uib-popover-template="'comment-form-template.html'"
              popover-trigger="manual"
