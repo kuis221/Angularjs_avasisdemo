@@ -10,7 +10,7 @@
 <div id="content-section">
     <div class="modal-header clearfix">
         <div ng-hide="isAddingComment" class="pull-left">
-            <button type="button" class="btn btn-success btn-lg" ng-click="isAddingComment=true">Add Comment</button>
+            <button type="button" class="btn btn-success btn-lg" ng-click="addComment()">Add Comment</button>
             <button type="button" class="btn btn-transparent btn-lg text-primary" ng-click="isHiddenComments = !isHiddenComments">View Comments ({{comments.length}})</button>
         </div>
         <div class="alert alert-success" ng-show="isAddingComment">Click on the document to drop a comment</div>

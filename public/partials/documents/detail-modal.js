@@ -41,6 +41,12 @@ app.controller('DocumentDetailModalCtrl',
         $scope.activeClass = function(comment) {
             return $scope.activeComment.id == comment.id ? 'active' : '';
         }
+        $scope.addComment = function() {
+            // return if new comment is posted yet.
+            if (!_.last($scope.comments).id)
+                return;
+            $scope.isAddingComment = true
+        }
         $scope.dropComment = function(evt) {
             if (!$scope.isAddingComment)
                 return;
@@ -53,6 +59,7 @@ app.controller('DocumentDetailModalCtrl',
                 }
             }
             $scope.comments.push(comment);
+            angular.element('#comment-body').focus();
         }
         $scope.cancelComment = function() {
             $scope.comments.splice($scope.comments.length - 1, 1);
