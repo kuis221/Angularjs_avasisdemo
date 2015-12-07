@@ -2,21 +2,17 @@
     <button type="button" class="close" ng-click="cancel()">&times;</button>
 </div>
 <div class="modal-body tm-modal-body text-center">
-    <div class="tm-modal-title tm-border-bottom">
-        Invite User
-    </div>
+    <div class="tm-modal-title tm-border-bottom">Invite User</div>
     <div class="row">
-        <div class="col-md-12 tm-form-padding">
+        <div class="col-sm-6 tm-form-padding">
             <div class="row">
-                <div class="col-md-3"><span class="pull-left">Enter Name</span></div>
-                <div class="col-md-3"><span class="pull-left">Email</span></div>
-                <div class="col-md-3"><span class="pull-left">Project Name</span></div>
-                <div class="col-md-3"><span class="pull-left">Role</span></div>
+                <div class="col-sm-6"><span class="pull-left">Enter Name</span></div>
+                <div class="col-sm-6"><span class="pull-left">Email</span></div>
             </div>
-            <div class="row">
-                <div class="col-md-3 form-group">
+            <div class="row" ng-repeat="inviteUser in inviteUserList">
+                <div class="col-sm-6 form-group">
                     <span uib-dropdown>
-                        <div class="tm-user-selection" uib-dropdown-toggle>{{selectedUser.name}}</div>
+                        <div class="tm-user-selection" uib-dropdown-toggle>{{inviteUser.user.name}}</div>
                         <ul class="uib-dropdown-menu" template-url="invite-user-dropdown.html"></ul>
                         <script type="text/ng-template" id="invite-user-dropdown.html">
                             <div class="tm-user-dropdown">
@@ -25,7 +21,7 @@
                                 </div>
                                 <div>
                                     <ul class="dropdown-menu dropdown-menu-left">
-                                        <li ng-repeat="user in users" ng-click="selectUser(user)">
+                                        <li ng-repeat="user in availableUsers" ng-click="selectUser(inviteUser, user)">
                                             <div class="pull-left"><img class="tm-dropdown-photo" ng-src="{{ user.photo }}" /></div>
                                             <div class="pull-left">
                                                 <div class="text-primary">{{ user.name }}</div>
@@ -39,30 +35,63 @@
                         </script>
                     </span>
                 </div>
-                <div class="col-md-3 form-group">
-                    <input class="form-control" type="text" ng-value="selectedUser.email" disabled/>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control tm-input-big" type="text" ng-value="inviteUser.user.email" disabled/>
                 </div>
-                <div class="col-md-3 form-group">
-                    <input class="form-control" type="text"/>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <a ng-click="addAnotherUser()" class="col-md-6 text-primary text-left"><i class="fa fa-plus"></i> Add Another User</a>
+                    </div>
                 </div>
-                <div class="col-md-3 form-group">
-                    <input class="form-control" type="text"/>
+            </div>
+        </div>
+        <div class="col-sm-6 tm-form-padding">
+            <div class="row">
+                <div class="col-sm-6"><span class="pull-left">Project Name</span></div>
+                <div class="col-sm-6"><span class="pull-left">Role</span></div>
+            </div>
+            <div class="row" ng-repeat="invitePrj in inviteProjectsList">
+                <div class="col-sm-6 form-group">
+                    <ui-select selected-item="invitePrj.project" options="availableProjects" class="tm-invite-dropdown"></ui-select>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <div uib-dropdown class="tm-invite-dropdown">
+                        <button class="btn btn-block tm-input-big dropdown-toggle ng-scope" uib-dropdown-toggle>
+                            <span class="pull-left">{{invitePrj.role.name}}</span>
+                            <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="uib-dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><i class="fa fa-plus"></i> Create New Role</a></li>
+                            <li ng-repeat="role in availableRoles" ng-click="selectRole(invitePrj, role);">
+                                <a href="#">{{role.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <a ng-click="addAnotherProject()" class="col-md-6 text-primary text-left"><i class="fa fa-plus"></i> Add Another Project</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <hr class="tm-hr-margin-small">
     <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <a ng-click="createFolder()" class="col-md-6 text-primary text-left"><i class="fa fa-plus"></i> Add Another User</a>
+        <div class="col-sm-6">
+            <div class="pull-left tm-pt10">
+                <a ng-click="addCompanyMember()" class="text-primary text-left"><i class="fa fa-plus"></i> Add Internal Company Members</a>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="row">
-                <a ng-click="createFolder()" class="col-md-6 text-primary text-left"><i class="fa fa-plus"></i> Add Another Project</a>
+        <div class="col-sm-6">
+            <div class="pull-right">
+                <button type="button" class="btn btn-lg btn-cancel" ng-click="cancel()">Cancel</button>
+                <button type="button" class="btn btn-lg btn-success" ng-click="sendInvite()">Send Invite</button>
             </div>
-        </div>
         </div>
     </div>
 </div>

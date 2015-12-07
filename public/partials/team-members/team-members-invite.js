@@ -1,9 +1,9 @@
 app.controller('TeamMembersInviteCtrl',
-    ['$scope', '$uibModalInstance', function($scope, $uibModalInstance) {
-        $scope.inviteUserList = [];
-        $scope.selectedUser = {};
+    ['$scope', '$state', '$uibModalInstance', function($scope, $state, $uibModalInstance) {
+        $scope.inviteUserList = [{}];
+        $scope.inviteProjectsList = [{}];
 
-        $scope.users = [
+        $scope.availableUsers = [
             {
                 id: 1,
                 photo: 'assets/img/1.png',
@@ -41,13 +41,67 @@ app.controller('TeamMembersInviteCtrl',
             }
         ];
 
+        $scope.availableProjects = [
+            {
+                id: 1,
+                name: "Parking Level A"
+            },
+            {
+                id: 2,
+                name: "Parking Level B"
+            },
+            {
+                id: 3,
+                name: "Parking Level C"
+            }
+        ];
+
+        $scope.availableRoles = [
+            {
+                id: 1,
+                name: "Subcontractor"
+            },
+            {
+                id: 2,
+                name: "Contractor"
+            },
+            {
+                id: 3,
+                name: "Another Role"
+            },
+            {
+                id: 4,
+                name: "Some Other Role"
+            }
+        ];
 
         $scope.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
 
-        $scope.selectUser = function(user) {
-            $scope.selectedUser = user;
+        $scope.sendInvite = function() {
+            $uibModalInstance.dismiss('cancel');
+            $state.go('team-members.list');
+        }
+
+        $scope.selectUser = function(inviteUser, selectedUser) {
+            inviteUser.user = selectedUser;
+        }
+
+        $scope.selectProject = function(invitePrj, selectedProject) {
+            invitePrj.project = selectedProject;
+        }
+
+        $scope.selectRole = function(invitePrj, selectedRole) {
+            invitePrj.role = selectedRole;
+        }
+
+        $scope.addAnotherProject = function() {
+            $scope.inviteProjectsList.push(new Object());
+        }
+
+        $scope.addAnotherUser = function() {
+            $scope.inviteUserList.push(new Object());
         }
     }]
 );

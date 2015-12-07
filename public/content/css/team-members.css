@@ -29,13 +29,24 @@
 }
 
 .tm-user-selection {
-    border: 1px solid #ddd;
+    background-color: white;
+    border: 1px solid #eee;
     min-width: 100%;
-    padding: 10px 20px;
+    padding: 15px 15px;
     position: relative;
-    min-height: 35px;
+    min-height: 50px;
     cursor: pointer;
     text-align: left;
+    font-size: 14px;
+}
+
+.tm-input-big {
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 15px 15px;
+    min-height: 50px;
+    text-align: left;
+    font-size: 14px;
 }
 
 .tm-user-dropdown {
@@ -49,6 +60,7 @@
 .tm-user-dropdown ul.dropdown-menu {
     display: inline-block;
     margin-top: 0px;
+    padding: 0px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     position: relative;
@@ -58,6 +70,11 @@
 .tm-user-dropdown ul.dropdown-menu > li {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+}
+
+.tm-user-dropdown ul.dropdown-menu > li:hover,
+.tm-user-dropdown ul.dropdown-menu > li:active {
+    background: #f5f5f5;
 }
 
 .tm-user-dropdown .tm-dropdown-photo {
@@ -75,4 +92,21 @@
     background: white;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+}
+
+.tm-invite-dropdown .uib-dropdown-menu {
+    padding: 0px;
+    width: 100%;
+}
+
+.tm-invite-dropdown .dropdown-menu > li {
+    border-bottom: 1px solid #eee;
+}
+
+.tm-pt10 {
+    padding-top: 10px;
+}
+
+.tm-hr-margin-small {
+    margin-top: 10px;
 }
