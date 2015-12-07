@@ -37,7 +37,9 @@
     
     <div class="text-muted small mt10">Users with Access</div>
     <div class="text-primary" ng-repeat="user in permittedUsers">{{user.name}}</div>
-    <div class="mt5">Add User +</div>
+    <div class="mt5">
+        <ui-select has-filter="true" is-dropdown="true" placeholder="Add User +" search-placeholder="Search Users" multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="users" class="add-user"></ui-select>
+    </div>
 
     <hr>
 

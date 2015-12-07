@@ -31,6 +31,25 @@ app.controller('DocumentDetailModalCtrl',
                 body: "Angular Material provides typography CSS classes you can use to create visual consistency across your application."
             }
         ];
+
+        $scope.users = [
+            {
+                id: 1,
+                name: "Joanna Fankhauser"
+            }, {
+                id: 2,
+                name: "Eric Carlson"
+            }, {
+                id: 3,
+                name: "Bryan Lloyd"
+            }, {
+                id: 4,
+                name: "Darcy Bertrand"
+            }, {
+                id: 5,
+                name: "Andrew Klein"
+            }
+        ];
         $scope.isHiddenComments = true;
         $scope.activeComment = {};
         $scope.isAddingComment = false;

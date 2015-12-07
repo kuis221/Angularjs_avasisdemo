@@ -83,6 +83,9 @@
 .comment-modal #content-section .badge.active {
     opacity: 1;
 }
+.comment-modal .add-user .dropdown-toggle {
+    color: white;
+}
 
 .comment-modal .alert {
     float: left;
