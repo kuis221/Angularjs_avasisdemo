@@ -3,8 +3,10 @@ var app = angular.module('avasis',
         'ui.router',
         'ngTable',
         'ngAnimate',
-        'ui.bootstrap'
-    ]);
+        'ui.bootstrap',
+        'nvd3'
+    ]
+);
 
 app.controller('AppCtrl', [
     '$scope', function ($scope) {
