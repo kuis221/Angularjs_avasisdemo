@@ -685,7 +685,8 @@ app.controller('ActionItemsCtrl',
         $scope.showGaiNewModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'partials/action-items/gai-new-modal.html',
-                controller: 'GAINewModalCtrl'
+                controller: 'GAINewModalCtrl',
+                windowClass: 'gai-modal'
             });
 
             modalInstance.result.then(function(res) {

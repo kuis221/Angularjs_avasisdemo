@@ -4,6 +4,8 @@ var app = angular.module('avasis',
         'ngTable',
         'ngAnimate',
         'ui.bootstrap',
+        'nvd3',
+        'angles',
         'ngDropzone',
         'ui.tree'
     ]);

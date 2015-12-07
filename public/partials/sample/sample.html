@@ -39,25 +39,6 @@
                 <button type="button" class="btn btn-cancel">Cancel</button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Button Sizes</h3>
-                <p>If You want larger or smaller buttons You can add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-md</code> class.</p>
-                <button type="button" class="btn btn-primary btn-lg">Large Button</button>
-                <button type="button" class="btn btn-success btn-lg">Large Button</button><br>
-                <button type="button" class="btn btn-warning btn-md">Medium Button</button>
-                <button type="button" class="btn btn-danger btn-md">Medium Button</button><br>
-                <button type="button" class="btn btn-info btn-sm">Small Button</button>
-                <button type="button" class="btn btn-default btn-sm">Small Button</button>
-                <h3>Disabled Buttons</h3>
-                <button type="button" class="btn btn-primary btn-lg disabled">Disabled Button</button>
-                <button type="button" class="btn btn-success btn-lg disabled">Disabled Button</button>
-                <button type="button" class="btn btn-info btn-lg disabled">Disabled Button</button>
-                <button type="button" class="btn btn-warning btn-lg disabled">Disabled Button</button>
-
-                <!-- <ui-select has-filter="true" multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select> -->
-            </div>
-        </div>
     </div>
     <div class="card-wrapper">
         <div class="row">
@@ -70,7 +51,19 @@
                 <p class="text-warning">This is an example of warning text.</p>
                 <p class="text-danger">This is an example of danger text.</p>
                 <p class="text-gray-lighter">This is an example of gray lighter text.</p>
+                <p class="text-default">This is an example of default text.</p>
             </div>
+        </div>
+    </div>
+    <div class="card-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Single Select</p>
+                <ui-select ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select><br>
+                <p>Multi Select</p>
+                <ui-select multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select><br>
+                <p>Multiple and Searchable</p>
+                <ui-select has-filter="true" multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select>
             </div>
         </div>
     </div>

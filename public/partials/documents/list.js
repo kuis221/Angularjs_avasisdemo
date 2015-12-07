@@ -7,7 +7,7 @@ app.controller('DocumentsCtrl',
               {
                 id: 11,
                 title: 'RFI',
-                has_files: true, 
+                has_files: true,
                 children: [
                   {
                     id: 111,
@@ -111,26 +111,7 @@ app.controller('DocumentsCtrl',
             title: 'Reports',
             children: []
           }];
-        $scope.options = [
-            {
-                id: 1,
-                name: "General Documents"
-            }, {
-                id: 2,
-                name: "RFI"
-            }, {
-                id: 3,
-                name: "Change Order"
-            }, {
-                id: 4,
-                name: "Inspections"
-            }, {
-                id: 5,
-                name: "Punch List"
-            }
-        ];
 
-        $scope.selectedItem = angular.copy($scope.options[0]);
         $scope.selectedDocuments = [];
 
         $scope.isDocumentSelected = function() {

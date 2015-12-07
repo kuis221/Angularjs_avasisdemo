@@ -525,3 +525,116 @@ th.flag {
         margin-left: -25px;
     }
 }
+
+/********************************************
+*       General Item New Modal              *
+********************************************/
+
+.modal.gai-modal .modal-dialog{
+    width: 830px;
+    color: #44474b;
+}
+
+.gai-modal .modal-body {
+    padding: 40px 30px 0 30px;
+}
+
+.gai-modal .modal-footer {
+    padding: 20px 30px 20px;
+    border-top: 0;
+}
+
+.gai-modal .modal-footer .btn + .btn {
+    margin-left: 20px;
+}
+
+.gai-title input {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 17px;
+    padding: 0;
+    border: 0;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.gai-title input.focus, .gai-title input:focus {
+    outline: 0;
+}
+
+.gai-info {
+    border: 0;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    font-family: AvenirNextLTPro-Medium;
+}
+
+.gai-info span {
+    font-family: AvenirNextLTPro-Bold;
+    font-size: 9px;
+}
+
+.gai-modal textarea {
+    padding: 20px
+}
+
+#gai-modal-more-options {
+    padding: 20px 30px 10px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#gai-modal-more-options .row > div {
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    #gai-modal-more-options .row > div:not(:last-child) {
+        border-right: 1px solid #d7d7d7;
+    }
+}
+
+#gai-modal-more-options #assignee-check {
+    margin-top: -2px;
+}
+
+.gai-modal div.due-date {
+    padding: 15px;
+    border: 1px solid #eee;
+    font-size: 14px;
+}
+
+.gai-modal div.inline-calendar {
+    display: inline-block;
+    position: absolute;
+    min-height: 290px;
+    z-index: 9999;
+}
+
+.gai-modal  .more-option {
+    padding: 15px 0;
+}
+
+@media (min-width: 768px) {
+    .gai-modal  .more-option {
+        margin-left: -16px;
+    }
+}
+
+
+.gai-modal  .more-option a {
+    padding: 15px;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #gai-modal-more-options .row > div {
+        text-align: center;
+    }
+
+    .modal.gai-modal .modal-dialog {
+        color: #44474b;
+        width: inherit;
+    }
+}
