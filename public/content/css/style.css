@@ -359,6 +359,7 @@ textarea.form-control {
 }
 .search-field .form-control {
     background-color: #f9f9f9;
+    color: #4a4a4a;
 }
 input {
     font-family: "AvenirNextLTPro-Regular" !important;
