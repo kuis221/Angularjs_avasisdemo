@@ -38,7 +38,10 @@ app.directive('uiSelect', function ($compile) {
                 }
 
             };
-            if (!scope.isDropdown)
+            if (!scope.selectedItem)
+                scope.selectedText = scope.placeholder;
+
+            if (!scope.isDropdown && scope.selectedItem)
                 scope.selectVal(scope.selectedItem, null);
         }
     };
