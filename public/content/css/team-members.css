@@ -1,0 +1,78 @@
+.tm-modal-body {
+    margin-top: 55px;
+}
+
+@media (min-width: 1024px) {
+    .tm-modal-main .modal-dialog {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .tm-modal-main .modal-dialog {
+        width: 90%;
+    }
+}
+
+.tm-modal-title {
+    font-size: 18px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.tm-border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.tm-form-padding {
+    padding-top: 20px;
+}
+
+.tm-user-selection {
+    border: 1px solid #ddd;
+    min-width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    min-height: 35px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.tm-user-dropdown {
+    margin-top: 5px;
+    position: absolute;
+    z-index: 1000;
+    width: 250px;
+    cursor: pointer;
+}
+
+.tm-user-dropdown ul.dropdown-menu {
+    display: inline-block;
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: relative;
+    width: 100%;
+}
+
+.tm-user-dropdown ul.dropdown-menu > li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tm-user-dropdown .tm-dropdown-photo {
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+}
+
+.tm-user-dropdown .add-new-user {
+    border: 1px solid #ddd;
+    border-bottom: 0px;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+    background: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
