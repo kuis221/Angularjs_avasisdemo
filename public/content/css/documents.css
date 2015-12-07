@@ -132,6 +132,20 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    position: relative;
+}
+#upload-files-container .dz-preview .preview .cancel {
+    position: absolute;
+    left: -6px;
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e25c5c;
+    border-radius: 50%;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 20px;
+    line-height: 14px;
+    cursor: pointer;
 }
 #upload-files-container .dz-preview .preview img {
     max-width: 100%;
