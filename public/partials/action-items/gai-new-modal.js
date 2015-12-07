@@ -27,8 +27,6 @@ app.controller('GAINewModalCtrl',
             }
         ];
 
-        $scope.selectedProject = angular.copy($scope.projects[0]);
-
         $scope.assignee = [
             {
                 id: 1,
@@ -42,8 +40,6 @@ app.controller('GAINewModalCtrl',
             }
         ];
 
-        $scope.selectedAssignee = angular.copy($scope.assignee[0]);
-
         $scope.sow = [
             {
                 id: 1,
@@ -56,7 +52,5 @@ app.controller('GAINewModalCtrl',
                 name: "Alberto In"
             }
         ];
-
-        $scope.selectedSow = angular.copy($scope.sow[0]);
 
 }]);

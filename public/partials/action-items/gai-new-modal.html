@@ -37,17 +37,17 @@
     <div class="row">
         <div class="col-lg-6 form-group">
             <label>Select Project</label>
-            <ui-select ng-select="changeOption()" selected-item="selectedProject" options="projects"></ui-select>
+            <ui-select ng-select="changeOption()" placeholder="Project Name Goes Here" options="projects"></ui-select>
         </div>
         <div class="col-lg-6 form-group">
             <label>Assignee</label>
-            <ui-select ng-select="changeOption()" selected-item="selectedAssignee" options="assignee"></ui-select>
+            <ui-select ng-select="changeOption()" placeholder="Myself" options="assignee"></ui-select>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-6 form-group">
             <label>Scope of Work</label>
-            <ui-select has-filter="true" multiple="true" ng-select="changeOption()" selected-item="selectedSow" options="sow"></ui-select>
+            <ui-select has-filter="true" multiple="true" ng-select="changeOption()" options="sow" placeholder="Scope of Work Name Here"></ui-select>
         </div>
         <div class="form-group" ng-class="{'col-lg-6': isMoreOptionsShow, 'col-lg-4': !isMoreOptionsShow}">
             <label>&nbsp;</label>
