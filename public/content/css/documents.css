@@ -91,3 +91,8 @@
 .comment-modal .popover {
     max-width: 400px;
 }
+
+.documents .divider {
+    font-size: 18px;
+    border-left: 1px solid #ccc;
+}

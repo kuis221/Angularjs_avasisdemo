@@ -252,13 +252,21 @@ svg tspan {
 .angular-ui-tree-nodes {
     font-size: 14px;
 }
+.angular-ui-tree-node .angular-ui-tree-nodes:before {
+    position: absolute;
+    height: 14px;
+    border-left: 1px dashed #ccc;
+    top: -14px;
+    left: 60px;
+    content: ' ';
+}
 .angular-ui-tree-nodes .fa {
     font-size: 18px;
     padding-right: 15px;
 }
 .angular-ui-tree-handle {
     padding: 15px 20px;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #eee;
     cursor: pointer;
 }
 .angular-ui-tree-nodes .angular-ui-tree-nodes {
@@ -311,6 +319,15 @@ svg tspan {
 .pl20 {padding-left: 20px;}
 .pl40 {padding-left: 40px;}
 
+.pr10 {padding-right: 10px;}
+.pr15 {padding-right: 15px;}
+.pr20 {padding-right: 20px;}
+.pr30 {padding-right: 30px;}
+
+.p10 {padding: 10px}
+.p15 {padding: 15px}
+.p20 {padding: 20px}
+
 ui-select .dropdown-toggle {
     background-color: white;
     border: 1px solid #eee;
@@ -332,4 +349,25 @@ ui-select  .dropdown-menu>li>a {
 
 textarea.form-control {
     padding: 0 5px;
+}
+
+.search-field i {
+    position: absolute;
+    padding: 10px;
+    color: #8b8b8b;
+}
+.search-field .form-control {
+    background-color: #f9f9f9;
+}
+input {
+    font-family: "AvenirNextLTPro-Regular" !important;
+}
+.round {
+    border-radius: 15px;
+}
+.btn.dropdown-toggle {
+    background: white;
+    border: 1px solid #eee;
+    color: #8b8b8b;
+    margin-bottom: 0;
 }

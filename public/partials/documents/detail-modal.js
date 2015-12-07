@@ -12,7 +12,7 @@ app.controller('DocumentDetailModalCtrl',
                 id: _.uniqueId(),
                 avatar: 'assets/img/user_1.png',
                 created_by: 'Phil Jones',
-                created_at: 'Jun 23, 2015 - 3:40pm',
+                created_at: 'Jun 23, 2015 3:40PM',
                 pos: {
                     x: 200,
                     y: 90
@@ -23,7 +23,7 @@ app.controller('DocumentDetailModalCtrl',
                 id: _.uniqueId(),
                 avatar: 'assets/img/user_3.png',
                 created_by: 'Harry Kane',
-                created_at: 'Oct 23, 2015 - 3:40pm',
+                created_at: 'Oct 23, 2015 3:40PM',
                 pos: {
                     x: 300,
                     y: 200
@@ -41,6 +41,12 @@ app.controller('DocumentDetailModalCtrl',
         $scope.activeClass = function(comment) {
             return $scope.activeComment.id == comment.id ? 'active' : '';
         }
+        $scope.addComment = function() {
+            // return if new comment is posted yet.
+            if (!_.last($scope.comments).id)
+                return;
+            $scope.isAddingComment = true
+        }
         $scope.dropComment = function(evt) {
             if (!$scope.isAddingComment)
                 return;
@@ -53,6 +59,7 @@ app.controller('DocumentDetailModalCtrl',
                 }
             }
             $scope.comments.push(comment);
+            angular.element('#comment-body').focus();
         }
         $scope.cancelComment = function() {
             $scope.comments.splice($scope.comments.length - 1, 1);
@@ -61,7 +68,7 @@ app.controller('DocumentDetailModalCtrl',
             lastComment = _.last($scope.comments);
             lastComment.avatar = 'assets/img/user_2.png';
             lastComment.created_by = 'Andrew Klein';
-            lastComment.created_at = 'Dec 8, 2015 - 3:00pm';
+            lastComment.created_at = moment().format('lll');
             lastComment.id = _.uniqueId();
         }
         $scope.cancel = function () {
