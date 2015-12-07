@@ -338,19 +338,19 @@ input[type=url], input[type=password] {
 }
 
 /******* PADDING BOTTOM*******/
-.pl10 {padding-left: 10px;}
-.pl15 {padding-left: 15px;}
-.pl20 {padding-left: 20px;}
-.pl40 {padding-left: 40px;}
+.pl10 {padding-left: 10px !important;}
+.pl15 {padding-left: 15px !important;}
+.pl20 {padding-left: 20px !important;}
+.pl40 {padding-left: 40px !important;}
 
-.pr10 {padding-right: 10px;}
-.pr15 {padding-right: 15px;}
-.pr20 {padding-right: 20px;}
-.pr30 {padding-right: 30px;}
+.pr10 {padding-right: 10px !important;}
+.pr15 {padding-right: 15px !important;}
+.pr20 {padding-right: 20px !important;}
+.pr30 {padding-right: 30px !important;}
 
-.p10 {padding: 10px}
-.p15 {padding: 15px}
-.p20 {padding: 20px}
+.p10 {padding: 10px !important;}
+.p15 {padding: 15px !important;}
+.p20 {padding: 20px !important;}
 
 ui-select .btn.dropdown-toggle {
     background-color: white;
@@ -385,7 +385,7 @@ textarea.form-control {
 .search-field .form-control {
     background-color: #f9f9f9;
     padding-left: 30px;
-    color: #8b8b8b;
+    color: #4a4a4a;
 }
 input {
     font-family: "AvenirNextLTPro-Regular" !important;
