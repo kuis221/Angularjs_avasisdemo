@@ -291,8 +291,8 @@ color: #fff;}
 
 .btn-primary {background-color: transparent; border-color: #1ab394; color: #FFFFFF; border: 0;}
 .fa.fa-bars i { font-size: 20px;color: #e25c5c;}
-.form-group a {  color: #c4c4cd; position: absolute; margin: 0 10px; top: 20px;}
-.form-group > a .fa-search { font-size: 17px;}
+#top-search-bar a {  color: #c4c4cd; position: absolute; margin: 0 10px; top: 20px;}
+#top-search-bar > a .fa-search { font-size: 17px;}
 
 .btn-primary:hover,
 .btn-primary:focus,
@@ -604,7 +604,7 @@ color: inherit; margin-bottom: 2px; padding: 6px 6px 6px 12px; }
 .form-control,
 .single-line { background-color: #FFFFFF; background-image: none; border: 1px solid #e5e6e7; border-radius: 1px; color: inherit;  display: block;
 padding: 0 10px 0 30px;  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%; font-size: 14px;}
-.form-group #top-search {border-left: 1px solid #dedede;}
+#top-search-bar #top-search {border-left: 1px solid #dedede; padding: 0 10px 0 30px;}
 .has-success .form-control {border-color: #1ab394;}
 .has-warning .form-control { border-color: #f8ac59;}
 .has-error .form-control { border-color: #ed5565;}

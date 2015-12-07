@@ -1,5 +1,5 @@
 app.controller('ActionItemsCtrl',
-    ['$scope', '$state', '$stateParams', function($scope, $state, $stateParams) {
+    ['$scope', '$state', '$stateParams', '$uibModal', function($scope, $state, $stateParams, $uibModal) {
 
         // Action Items Main
         $scope.items = [];
@@ -680,4 +680,34 @@ app.controller('ActionItemsCtrl',
 
 
         // Inspections
+
+        // Action Main GAI New Modal
+        $scope.showGaiNewModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/action-items/gai-new-modal.html',
+                controller: 'GAINewModalCtrl',
+                windowClass: 'gai-modal'
+            });
+
+            modalInstance.result.then(function(res) {
+
+            }, function() {
+
+            });
+        }
+
+        // New Change Oder Modal
+        $scope.showChangeOrderNewModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/action-items/change-order-new-modal.html',
+                controller: 'ChangeOrderNewModalCtrl'
+            });
+
+            modalInstance.result.then(function(res) {
+
+            }, function() {
+
+            });
+        }
+
     }]);

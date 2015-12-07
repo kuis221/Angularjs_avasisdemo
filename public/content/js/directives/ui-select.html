@@ -11,7 +11,7 @@
         <li ng-if="hasFilter" class="p10" ng-click="$event.stopPropagation()">
             <div class="search-field">
                 <i class="fa fa-search"></i>
-                <input type="text" placeholder="{{searchPlaceholder}}" class="form-control round" ng-model="query.name">
+                <input type="text text-default" placeholder="{{searchPlaceholder}}" class="form-control round" ng-model="query.name">
             </div>
         </li>
         <li ng-repeat="item in options | filter: query">
