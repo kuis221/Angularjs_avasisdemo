@@ -328,7 +328,7 @@ svg tspan {
 .p15 {padding: 15px}
 .p20 {padding: 20px}
 
-ui-select .dropdown-toggle {
+ui-select .btn.dropdown-toggle {
     background-color: white;
     border: 1px solid #eee;
     padding: 15px;

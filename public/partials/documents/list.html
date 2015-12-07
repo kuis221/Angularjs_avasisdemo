@@ -154,11 +154,15 @@
         </div>
         <div>
             <div class="text-muted" data-dz-name></div>
+            <!-- <div class="progress progress-small">
+                <div class="progress-bar progress-bar-primary" style="width: 100%"></div>
+            </div> -->
+            <small class="text-success">Uploaded</small>
             <strong class="error text-danger" data-dz-errormessage></strong>
         </div>
         <div width="100px">
             <div class="upload-action">
-                <ui-select has-filter="true" is-dropdown="true" placeholder="Save To" search-placeholder="Search Categories" multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select>
+                <ui-select has-filter="true" is-dropdown="true" placeholder="Save To" search-placeholder="Search Categories" multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="options" class="pull-right"></ui-select>
             </div>
         </div>
     </div>

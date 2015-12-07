@@ -1,5 +1,5 @@
 <div class="dropdown">
-    <button class="dropdown-toggle" ng-if="!isDropdown" data-toggle="dropdown">
+    <button class="btn dropdown-toggle" ng-if="!isDropdown" data-toggle="dropdown">
         <span class="pull-left">{{selectedText}}</span>
         <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
     </button>
@@ -7,7 +7,7 @@
         {{placeholder}}
         <i class="pl10 fa fa-angle-down"></i>
     </a>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu" ng-class="{'dropdown-menu-right': isDropdown}">
         <li ng-if="hasFilter" class="p10" ng-click="$event.stopPropagation()">
             <div class="search-field">
                 <i class="fa fa-search"></i>

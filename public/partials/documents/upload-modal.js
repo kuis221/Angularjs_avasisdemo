@@ -13,7 +13,6 @@ app.controller('UploadDocumentModalCtrl',
                 switch (file.type) {
                     case 'application/pdf':
                         thumbnail.attr('src', "assets/img/documents/icons/pdf_file.png");
-                        // thumbnail.html("<i class='fa fa-file-pdf-o'></i>");
                         $(file.previewElement).find('span.preview').addClass('not-image');
                         break;
                     case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
@@ -27,7 +26,6 @@ app.controller('UploadDocumentModalCtrl',
             addedfile: function(file) {
             },
             thumbnail: function(file, dataUrl) {
-                console.log(file);
             },
         };
         $scope.folders = [
