@@ -96,3 +96,46 @@
     font-size: 18px;
     border-left: 1px solid #ccc;
 }
+
+.dropzone {
+    background: none;
+    min-height: 200px;
+    padding-bottom: 0;
+}
+.dropzone .dz-default.dz-message {
+    background-image: url('/assets/img/documents/upload.png');
+    background-position: center;
+}
+
+#upload-files-container {
+    display: table;
+}
+#upload-files-container .dz-preview {
+    display: table-row;
+}
+#upload-files-container .dz-preview > div {
+    display: table-cell;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    vertical-align: middle;
+}
+#upload-files-container .dz-preview > div:first-child {
+    width: 100px;
+}
+#upload-files-container .dz-preview .preview {
+    background-color: #f3f3f3;
+    width: 80px;
+    height: 55px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#upload-files-container .dz-preview .preview img {
+    max-width: 100%;
+}
+#upload-files-container .dz-preview > div:last-child {
+    width: 150px;
+}
+#upload-files-container .dz-preview .upload-action {
+    position: relative;
+}

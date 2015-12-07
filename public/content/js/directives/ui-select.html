@@ -1,13 +1,17 @@
 <div class="dropdown">
-    <button class="dropdown-toggle" data-toggle="dropdown">
+    <button class="dropdown-toggle" ng-if="!isDropdown" data-toggle="dropdown">
         <span class="pull-left">{{selectedText}}</span>
         <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
     </button>
+    <a class="dropdown-toggle text-primary" ng-if="isDropdown" data-toggle="dropdown">
+        {{placeholder}}
+        <i class="pl10 fa fa-angle-down"></i>
+    </a>
     <ul class="dropdown-menu">
         <li ng-if="hasFilter" class="p10" ng-click="$event.stopPropagation()">
             <div class="search-field">
                 <i class="fa fa-search"></i>
-                <input type="text" placeholder="Search..." class="form-control round" ng-model="query.name">
+                <input type="text" placeholder="{{searchPlaceholder}}" class="form-control round" ng-model="query.name">
             </div>
         </li>
         <li ng-repeat="item in options | filter: query">

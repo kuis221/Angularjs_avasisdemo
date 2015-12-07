@@ -342,8 +342,9 @@ ui-select .dropdown-toggle, ui-select ul {
 ui-select .dropdown-menu {
     padding: 0;
     border-radius: 1px;
+    min-width: 200px;
 }
-ui-select  .dropdown-menu>li>a {
+.dropdown-menu>li>a {
     padding: 15px;
 }
 

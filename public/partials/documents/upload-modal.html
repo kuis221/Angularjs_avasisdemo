@@ -1,13 +1,19 @@
 <div class="modal-header">
     <button type="button" class="close" ng-click="cancel()">&times;</button>
 </div>
-<div class="modal-body text-center">
-    <form class="dropzone" enctype="multipart/form-data">
-        <img class="pt30" src="assets/img/documents/upload.png">
+<div class="modal-body">
+    <form class="mt30 dropzone" 
+          enctype="multipart/form-data"
+          ng-dropzone dropzone="dropzone" 
+          dropzone-config="dropzoneConfig"
+          event-handlers="dropzoneEventHandlers">
         <input name="file" class="hidden" type="file" multiple />
     </form>
-    <a class="mt20 btn btn-green btn-lg">Browse Files</a>
-    <div>
+    <div class="text-center">
+        <a class="mt20 btn btn-green btn-lg btn-file-input">Browse Files</a>
+    </div>
+    <div class="text-center">
         <img class="pt30" src="assets/img/documents/doc_types.png">
     </div>
+    <div id="upload-files-container" class="table pt20"></div>
 </div>
