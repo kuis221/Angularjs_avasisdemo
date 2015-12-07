@@ -5,9 +5,10 @@ var app = angular.module('avasis',
         'ngAnimate',
         'ui.bootstrap',
         'nvd3',
-        'angles'
-    ]
-);
+        'angles',
+        'ngDropzone',
+        'ui.tree'
+    ]);
 
 app.controller('AppCtrl', [
     '$scope', function ($scope) {
@@ -35,7 +36,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('financials', {
             url: '/financials',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
         })
         .state('financials.main', {
             url: '/main',
@@ -47,45 +48,68 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             abstract: true,
             template: '<ui-view></ui-view>'
         })
-        .state('financials.bankdraw.main', {
-            url: '/main',
-            templateUrl: "partials/financials/bank-draw/main.html",
-            controller: "BankDrawCtrl"
-        })
         .state('financials.bankdraw.payment-application', {
             url: '/payment-application',
             templateUrl: "partials/financials/bank-draw/payment-application.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.draw-details', {
             url: '/draw-details',
             templateUrl: "partials/financials/bank-draw/draw-details.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.compliance', {
             url: '/compliance',
             templateUrl: "partials/financials/bank-draw/compliance.html",
-            controller: "BankDrawCtrl"
+            controller: "ComplianceCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.documents', {
             url: '/documents',
             templateUrl: "partials/financials/bank-draw/documents.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.payment-details', {
             url: '/payment-details',
             templateUrl: "partials/financials/bank-draw/payment-details.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('financials.bankdraw.finalize', {
             url: '/finalize',
             templateUrl: "partials/financials/bank-draw/finalize.html",
-            controller: "BankDrawCtrl"
+            controller: "BankDrawCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('team-members', {
             url: '/team-members',
-            templateUrl: "partials/team-members/team-members.html",
-            controller: "TeamMembersCtrl"
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('team-members.empty', {
+            url: '/empty',
+            templateUrl: 'partials/team-members/team-members-empty.html',
+            controller: 'TeamMembersCtrl'
+        })
+        .state('team-members.list', {
+            url: '/list',
+            templateUrl: 'partials/team-members/team-members-list.html',
+            controller: 'TeamMembersCtrl'
         })
         .state('action-items', {
             url: '/action-items',
@@ -100,12 +124,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('action-items.general-action-items', {
             url: '/general-action-items',
             templateUrl: "partials/action-items/general-action-items.html",
-            controller: "ActionItemsCtrl"
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('action-items.inspections', {
             url: '/inspections',
             templateUrl: "partials/action-items/inspections.html",
-            controller: "ActionItemsCtrl"
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('projects', {
             url: '/projects',
@@ -116,5 +146,30 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
+        })
+        .state('documents', {
+            url: '/documents',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('documents.main', {
+            url: '/main',
+            templateUrl: 'partials/documents/list.html',
+            controller: 'DocumentsCtrl'
+        })
+        .state('sample', {
+            url: '/sample',
+            templateUrl: 'partials/sample/sample.html',
+            controller: 'SampleCtrl'
         });
+}]);
+
+app.run (["$rootScope", function($rootScope) {
+    $rootScope.$on('$stateChangeStart', function(e, to) {
+        if (!_.isUndefined(to.data)) {
+            $rootScope.isHeaderHidden = to.data.isHeaderHidden;
+        } else {
+            $rootScope.isHeaderHidden = false;
+        }
+    });
 }]);

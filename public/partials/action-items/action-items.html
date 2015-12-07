@@ -1,118 +1,114 @@
-<div id="page-wrapper" class="inner-page-wrapper">
-    <div ng-include="'partials/shared/topnav/topnav.html'"></div>
+<div class="row wrapper border-bottom white-bg page-heading overview">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">Action Items</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="index.html">Project Title Label</a>
+                <i class="ace-icon fa fa-angle-down"></i>
+            </li>
 
-    <div class="row wrapper border-bottom white-bg page-heading overview">
-        <div class="col-sm-6 col-lg-10">
-            <h2 class="heading">Action Items</h2>
-            <ul class="topSubtitle">
-                <li>
-                    <a href="index.html">Project Title Label</a>
-                    <i class="ace-icon fa fa-angle-down"></i>
-                </li>
-
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2">
+        <div class="btns mr10">
+            <a href="#" class="btn btn-green btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-plus"></i> Create New
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                <li><a href="">General Action Item</a></li>
+                <li><a href="">RFI</a></li>
+                <li><a href="">Change Order</a></li>
+                <li><a href="">Punch List Item</a></li>
+                <li><a href="">Inspections</a></li>
             </ul>
         </div>
-        <div class="col-sm-6 col-lg-2">
-            <div class="btns mr10">
-                <a href="#" class="btn btn-green btn-sm dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-plus"></i> Create New
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                    <li><a href="">General Action Item</a></li>
-                    <li><a href="">RFI</a></li>
-                    <li><a href="">Change Order</a></li>
-                    <li><a href="">Punch List Item</a></li>
-                    <li><a href="">Inspections</a></li>
-                </ul>
-            </div>
-        </div>
     </div>
+</div>
 
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="card action-item" ng-repeat="item in items">
-            <div class="card-title">
-                {{ item.title }}
-            </div>
-            <div class="card-content">
-                <div class="row">
-                    <div class="col-md-2 col-sm-6 border-right">
-                        <span class="action-item-text">TOTAL: {{ item.total }}</span>
-                        <div class="action-item-count-info">
-                            <span class="label label-green">&nbsp;</span>
-                            <span class="count">{{ item.green }}</span>
-                            <span class="label label-orange">&nbsp;</span>
-                            <span class="count">{{ item.orange }}</span>
-                            <span class="label label-red">&nbsp;</span>
-                            <span class="count">{{ item.red }}</span>
-                        </div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="card action-item" ng-repeat="item in items">
+        <div class="card-title">
+            {{ item.title }}
+        </div>
+        <div class="card-content">
+            <div class="row">
+                <div class="col-md-2 col-sm-6 border-right">
+                    <span class="action-item-text">TOTAL: {{ item.total }}</span>
+                    <div class="action-item-count-info">
+                        <span class="label label-green">&nbsp;</span>
+                        <span class="count">{{ item.green }}</span>
+                        <span class="label label-orange">&nbsp;</span>
+                        <span class="count">{{ item.orange }}</span>
+                        <span class="label label-red">&nbsp;</span>
+                        <span class="count">{{ item.red }}</span>
                     </div>
-                    <div class="col-md-3 col-sm-6 border-right">
-                        <div class="action-completed-chart">
-                            <div sparkline spark-data="[item.completed, item.total-item.completed]" spark-options="pieOptions"></div>
-                        </div>
-                        <div>
-                            <span class="action-item-text">{{ round(item.completed / item.total * 100) }}% COMPLETED</span><br>
-                            <span class="action-item-value">{{ item.completed }}</span>
-                            <span class="action-item-of">of</span>
-                            <span class="action-item-value">{{ item.total }} items</span>
-                        </div>
+                </div>
+                <div class="col-md-3 col-sm-6 border-right">
+                    <div class="action-completed-chart">
+                        <div sparkline spark-data="[item.completed, item.total-item.completed]" spark-options="pieOptions"></div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="">
-                                    <span class="action-item-text">ITEMS ASSIGNED TO ME</span><br>
-                                    <span class="action-item-value">
-                                        {{ item.assignedMe.green.total + item.assignedMe.orange.total + item.assignedMe.red.total }} Items
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-6">
-                                        <div class="progress progress-medium">
-                                            <div class="progress-bar progress-bar-success"
-                                                 style="width: {{item.assignedMe.green.done / item.assignedMe.green.total * 100}}%;">
-                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
-                                        {{ item.assignedMe.green.total }} items
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-6">
-                                        <div class="progress progress-medium">
-                                            <div class="progress-bar progress-bar-warning"
-                                                 style="width: {{item.assignedMe.orange.done / item.assignedMe.orange.total * 100}}%;">
-                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
-                                        {{ item.assignedMe.orange.total }} items
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-6">
-                                        <div class="progress progress-medium">
-                                            <div class="progress-bar progress-bar-danger"
-                                                 style="width: {{item.assignedMe.red.done / item.assignedMe.red.total * 100}}%;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
-                                        {{ item.assignedMe.red.total }} items
-                                    </div>
-                                </div>
+                    <div>
+                        <span class="action-item-text">{{ round(item.completed / item.total * 100) }}% COMPLETED</span><br>
+                        <span class="action-item-value">{{ item.completed }}</span>
+                        <span class="action-item-of">of</span>
+                        <span class="action-item-value">{{ item.total }} items</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="">
+                                <span class="action-item-text">ITEMS ASSIGNED TO ME</span><br>
+                                <span class="action-item-value">
+                                    {{ item.assignedMe.green.total + item.assignedMe.orange.total + item.assignedMe.red.total }} Items
+                                </span>
                             </div>
                         </div>
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6">
+                                    <div class="progress progress-medium">
+                                        <div class="progress-bar progress-bar-success"
+                                             style="width: {{item.assignedMe.green.done / item.assignedMe.green.total * 100}}%;">
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                    {{ item.assignedMe.green.total }} items
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6">
+                                    <div class="progress progress-medium">
+                                        <div class="progress-bar progress-bar-warning"
+                                             style="width: {{item.assignedMe.orange.done / item.assignedMe.orange.total * 100}}%;">
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                    {{ item.assignedMe.orange.total }} items
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6">
+                                    <div class="progress progress-medium">
+                                        <div class="progress-bar progress-bar-danger"
+                                             style="width: {{item.assignedMe.red.done / item.assignedMe.red.total * 100}}%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                    {{ item.assignedMe.red.total }} items
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-1">
-                        <button class="btn btn-blue pull-right" ng-click="goDetails(item.state)">See Details</button>
-                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-blue pull-right" ng-click="goDetails(item.state)">See Details</button>
                 </div>
             </div>
         </div>
-
     </div>
+
 </div>

@@ -1,0 +1,148 @@
+<div class="row wrapper border-bottom white-bg page-heading overview">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">Documents</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="index.html">Project Title Label</a>
+                <i class="ace-icon fa fa-angle-down"></i>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2">
+        <div class="btns mr10">
+            <a class="btn btn-green btn-sm" ng-click="showUploadModal()">Upload Documents</a>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="inline-action-controls" ng-show="isDocumentSelected()">
+        <ul>
+            <li>
+                <a class="btn-dark">&times;</a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-share-square"></span>
+                    Share
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-folder-open"></span>
+                    Move to Folder
+                    <span class="fa fa-angle-down pl10"></span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-copy"></span>
+                    Copy to Folder
+                    <span class="fa fa-angle-down pl10"></span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-download"></span>
+                    Download
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-tag"></span>
+                    Add Tags
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="fa fa-trash"></span>
+                    Trash
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="whiteBox documents">
+        <div class="row p20">
+            <div class="search-field col-sm-4">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search by name, project, SOW, role or user" class="form-control round" ng-model="query">
+            </div>
+            <div class="col-sm-5 pull-right text-right">
+                <span class="pr30">Options</span>
+                <span class="divider pr30">&nbsp;</span>
+                <a ng-click="createFolder()" class="text-primary pr30">+ Create Folder</a>
+                <div class="btn-group" uib-dropdown>
+                    <button type="button" class="btn round" uib-dropdown-toggle>
+                      Filter By <span class="fa fa-angle-down"></span>
+                    </button>
+                    <ul class="uib-dropdown-menu" role="menu">
+                        <li role="menuitem"><a href="#">Size</a></li>
+                        <li role="menuitem"><a href="#">Created At</a></li>
+                        <li role="menuitem"><a href="#">Created By</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ui-tree data-drag-enabled="false" data-max-depth="3">
+            <ol ui-tree-nodes="" ng-model="documents">
+                <li ng-repeat="folder in documents" ui-tree-node data-collapsed="true" ng-include="'folder-template.html'"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Nested node template -->
+<script type="text/ng-template" id="folder-template.html">
+    <div ui-tree-handle class="tree-node tree-node-content">
+        <div class="checkbox checkbox-inline">
+            <input type="checkbox" ng-click="selectFolder()">
+            <label>&nbsp;</label>
+        </div>
+        <div data-nodrag ng-click="toggle(this)" class="text-primary" style="display: inline-block">
+            <i class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}"></i>
+            <span>{{folder.title}}</span>
+        </div>
+        <span class="pull-right small text-muted" data-nodrag>{{folder.children.length}} Documents</span>
+    </div>
+    <ol ui-tree-nodes ng-model="folder.children" ng-class="{hidden: collapsed}" ng-if="!folder.has_files">
+        <li ng-repeat="folder in folder.children" data-collapsed="true" ui-tree-node ng-include="'folder-template.html'"></li>
+    </ol>
+    <div ng-include="'document-template.html'" ng-if="folder.has_files" ng-class="{hidden: collapsed}"></div>
+</script>
+<!-- Nested node template -->
+<script type="text/ng-template" id="document-template.html">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Project</th>
+                <th>Scope of Work</th>
+                <th>Team Members</th>
+                <th>Access</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr text-class="text-muted" ng-repeat="document in folder.children">
+                <td class="text-primary">
+                    <div class="checkbox checkbox-inline">
+                        <input type="checkbox" ng-click="selectDocument(document)">
+                        <label>&nbsp;</label>
+                    </div>
+                    <a class="text-primary" ng-click="showDetailModal(document)">{{document.title}}</a>
+                </td>
+                <td>{{document.project}}</td>
+                <td class="medium">{{document.scope_of_work}}</td>
+                <td class="medium">
+                    <div ng-repeat="member in document.team_members">
+                        <div class="text-primary">{{member.name}}</div>
+                        <span class="small text-muted">{{member.job_title}}</span>
+                    </div>
+                </td>
+                <td class="medium text-primary">{{document.access}}</td>
+                <td><span class="fa fa-download text-muted"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</script>
