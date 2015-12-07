@@ -700,7 +700,8 @@ app.controller('ActionItemsCtrl',
         $scope.showChangeOrderNewModal = function() {
             var modalInstance = $uibModal.open({
                 templateUrl: 'partials/action-items/change-order-new-modal.html',
-                controller: 'ChangeOrderNewModalCtrl'
+                controller: 'ChangeOrderNewModalCtrl',
+                windowClass: 'change-order-modal'
             });
 
             modalInstance.result.then(function(res) {
