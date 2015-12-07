@@ -116,7 +116,7 @@ h6 {font-size: 10px;}
 ==================================================*/
 
 .posRelative {position: relative;}
-.nav > li > a { color: #c3c6cd; font-weight: 600; padding: 18px 28px; font-family: "AvenirNextLTPro-Regular";}
+.nav > li > a { color: #c3c6cd; font-weight: 600; padding: 18px 28px; font-family: "AvenirNextLTPro-Medium";}
 .nav.navbar-right > li > a { color: #3aabd5;}
 .nav > li.active > a {color: #ffffff;}
 .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {background-color: #e25c5c; color: white;}
@@ -132,9 +132,16 @@ h6 {font-size: 10px;}
 /*******TOP MENU*******/
 .nav-header {border: 1px solid #171c24;}
 .navbar-default {background-color: #2a2d33; border-color: #2f4050;}
+.navbar-top-links {text-align:right;}
+@media (min-width: 768px) {
+    .navbar-top-links li:last-child { margin-right: 14px;}
+}
 .navbar-top-links li {display: inline-block;}
-.navbar-top-links li:last-child { margin-right: 14px;}
 .navbar-top-links li a { padding: 11px 10px; min-height: 50px; }
+.navbar-top-links .light-blue { padding-right: 15px; }
+.navbar-top-links .light-blue .logoff { color: #ed5565; }
+.navbar-top-links .light-blue  .dropdown-menu { margin-right: -10px; margin-top: 10px;}
+.navbar-top-links li .dropdown-menu > li { width: 100%;}
 .nav-header {padding: 33px 25px;}
 .pace-done .nav-header { transition: all 0.5s;}
 .nav > li.active { border-left: 0px; background: #e25c5c;}
@@ -2754,6 +2761,7 @@ h3.proStatus i {
 }
 .user-info {
     font-family: 'AvenirNextLTPro-Demi';
+    margin-right: 5px;
 }
 .teammembers .topSubtitle li a {
     font-size: 14px;
