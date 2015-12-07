@@ -672,7 +672,7 @@ var financial_chart = {
             radius = radius,
             pen_width = pen_width;
 
-        $('#financial-chart-container .get').find('.arc').each(function (i) {
+        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
             var t = $(this);
             display += t.find('.percent').val() + "%\n";
         });
@@ -705,7 +705,7 @@ var financial_chart = {
             return { path: path }
         }
 
-        $('#financial-chart-container .get').find('.arc').each(function (i) {
+        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
             var t = $(this),
 				color = t.find('.color').val(),
 				value = t.find('.percent').val(),
