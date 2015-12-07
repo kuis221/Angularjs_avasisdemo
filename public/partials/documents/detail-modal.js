@@ -12,7 +12,7 @@ app.controller('DocumentDetailModalCtrl',
                 id: _.uniqueId(),
                 avatar: 'assets/img/user_1.png',
                 created_by: 'Phil Jones',
-                created_at: 'Jun 23, 2015 3:40pm',
+                created_at: 'Jun 23, 2015 3:40PM',
                 pos: {
                     x: 200,
                     y: 90
@@ -23,7 +23,7 @@ app.controller('DocumentDetailModalCtrl',
                 id: _.uniqueId(),
                 avatar: 'assets/img/user_3.png',
                 created_by: 'Harry Kane',
-                created_at: 'Oct 23, 2015 3:40pm',
+                created_at: 'Oct 23, 2015 3:40PM',
                 pos: {
                     x: 300,
                     y: 200
