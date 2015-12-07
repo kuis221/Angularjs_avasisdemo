@@ -48,6 +48,16 @@ app.controller('DocumentDetailModalCtrl',
             }, {
                 id: 5,
                 name: "Andrew Klein"
+            },
+            {
+                id: 6,
+                name: 'Russ Helgeson',
+                checked: true
+            },
+            {
+                id: 7,
+                name: 'Rhonda Barker',
+                checked: true
             }
         ];
         $scope.isHiddenComments = true;
@@ -89,6 +99,11 @@ app.controller('DocumentDetailModalCtrl',
             lastComment.created_by = 'Andrew Klein';
             lastComment.created_at = moment().format('lll');
             lastComment.id = _.uniqueId();
+        }
+        $scope.changePermittedUsers = function(userIds) {
+            $scope.permittedUsers = _.filter($scope.users, function(e){
+                return e.checked;
+            });
         }
         $scope.cancel = function () {
             $uibModalInstance.dismiss('cancel');
