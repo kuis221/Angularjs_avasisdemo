@@ -102,6 +102,10 @@
     padding-top: 15px;
 }
 
+.tm-pb30 {
+    padding-bottom: 30px !important;
+}
+
 .tm-hr-margin-small {
     margin-top: 15px;
 }
@@ -150,4 +154,12 @@
 .tm-flag-td .alert-flag span {
     float: left;
     padding-top: 5px;
+}
+
+.risk-page-wrapper {
+    padding-top: 0px;
+}
+
+.risk-page-wrapper .prog-inner1 {
+    margin-bottom: 0px;
 }
