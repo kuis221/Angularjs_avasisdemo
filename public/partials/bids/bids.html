@@ -1,0 +1,372 @@
+<div class="row wrapper border-bottom white-bg page-heading overview">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">Bids</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="index.html">Project Title Label</a>
+                <i class="ace-icon fa fa-angle-down"></i>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2">
+        <div class="btns mr10">
+            <a href="#" class="btn btn-success btn-lg" data-toggle="dropdown">
+                <i class="fa fa-plus"></i> Add New
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                <li><a href="">Bid Package</a></li>
+                <li><a href="">Quick Bid</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="card action-item">
+        <div class="bids-card-content">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-5 col-lg-5">
+                            <div class="">
+                                <div class="bids-distrib"><b>BIDS DISTRIBUTED</b></div>
+                                <div class="bids-distrib-value">57</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-7 col-lg-7">
+                            <div class="progress progress-bids">
+                                <div style="width: 20%;" class="progress-bar blue"></div>
+                            </div>
+                            <div class="progress progress-bids">
+                                <div style="width: 50%;" class="progress-bar progress-bar-warning orange"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2 col-lg-2">
+                    <div class="bids-group">
+                        <span class="label label-blue">&nbsp;</span>
+                        <span>Bids with Response</span>
+                        <div>
+                            <span><b>35</b></span>
+                            <span>61%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2 col-lg-2">
+                    <div class="bids-group">
+                        <span class="label label-orange">&nbsp;</span>
+                        <span>Bids with Awarded</span>
+                        <div>
+                            <span><b>35</b></span>
+                            <span>61%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="bids-amount">Bids Amount Under Contract</div>
+                    <span>$1,513,986.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body bids-panel-body">
+        <p>Bids to be Awarded</p>        
+        <div class="table-responsive">
+            <table class="table table-bids">
+                <thead>
+                    <tr>
+                        <th>Bid Name</th>
+                        <th>Date Initiated</th>
+                        <th>Initiated By</th>
+                        <th>Dates Distributed</th>
+                        <th>Status</th>
+                        <th>Distributed</th>
+                        <th>Replies</th>
+                        <th>Received</th>
+                        <th>Avg/Final Amount</th>
+                        <th>Documents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="award in awards">
+                        <td class="bid-name">
+                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                        </td>
+                        <td>{{ award.initial_date }}</td>
+                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>{{ award.dates_distributed }}</td>
+                        <td class="bids-status">{{ award.status | uppercase }}</td>
+                        <td>{{ award.distributed }}</td>
+                        <td>{{ award.replies }}</td>
+                        <td>{{ award.received }}%</td>
+                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ award.documents }} docs</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td>
+                            <div>Total</div>
+                            <span>117</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>35</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>53%</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>$987,345,123.00</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="panel-body bids-panel-body">
+        <p>Bid Drafts</p>
+        <div class="table-responsive">
+            <table class="table table-bids">
+                <thead>
+                    <tr>
+                        <th>Bid Name</th>
+                        <th>Date Initiated</th>
+                        <th>Initiated By</th>
+                        <th>Dates Distributed</th>
+                        <th>Status</th>
+                        <th>Distributed</th>
+                        <th>Replies</th>
+                        <th>Received</th>
+                        <th>Avg/Final Amount</th>
+                        <th>Documents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="award in awards">
+                        <td class="bid-name">
+                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                        </td>
+                        <td>{{ award.initial_date }}</td>
+                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>{{ award.dates_distributed }}</td>
+                        <td class="bids-status">{{ award.status | uppercase }}</td>
+                        <td>{{ award.distributed }}</td>
+                        <td>{{ award.replies }}</td>
+                        <td>{{ award.received }}%</td>
+                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ award.documents }} docs</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td>
+                            <div>Total</div>
+                            <span>117</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>35</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>53%</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>$987,345,123.00</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="panel-body bids-panel-body">
+        <p>Bids to be Awarded</p>
+        <div class="table-responsive">
+            <table class="table table-bids">
+                <thead>
+                    <tr>
+                        <th>Bid Name</th>
+                        <th>Date Initiated</th>
+                        <th>Initiated By</th>
+                        <th>Dates Distributed</th>
+                        <th>Status</th>
+                        <th>Distributed</th>
+                        <th>Replies</th>
+                        <th>Received</th>
+                        <th>Avg/Final Amount</th>
+                        <th>Documents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="award in awards">
+                        <td class="bid-name">
+                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                        </td>
+                        <td>{{ award.initial_date }}</td>
+                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>{{ award.dates_distributed }}</td>
+                        <td class="bids-status">{{ award.status | uppercase }}</td>
+                        <td>{{ award.distributed }}</td>
+                        <td>{{ award.replies }}</td>
+                        <td>{{ award.received }}%</td>
+                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ award.documents }} docs</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td>
+                            <div>Total</div>
+                            <span>117</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>35</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>53%</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>$987,345,123.00</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="panel-body bids-panel-body">
+        <p>Bids to be Awarded</p>
+        <div class="table-responsive">
+            <table class="table table-bids">
+                <thead>
+                    <tr>
+                        <th>Bid Name</th>
+                        <th>Date Initiated</th>
+                        <th>Initiated By</th>
+                        <th>Dates Distributed</th>
+                        <th>Status</th>
+                        <th>Distributed</th>
+                        <th>Replies</th>
+                        <th>Received</th>
+                        <th>Avg/Final Amount</th>
+                        <th>Documents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="award in awards">
+                        <td class="bid-name">
+                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                        </td>
+                        <td>{{ award.initial_date }}</td>
+                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>{{ award.dates_distributed }}</td>
+                        <td class="bids-status">{{ award.status | uppercase }}</td>
+                        <td>{{ award.distributed }}</td>
+                        <td>{{ award.replies }}</td>
+                        <td>{{ award.received }}%</td>
+                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ award.documents }} docs</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td>
+                            <div>Total</div>
+                            <span>117</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>35</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>53%</span>
+                        </td>
+                        <td>
+                            <div>Total</div>
+                            <span>$987,345,123.00</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="grand-total">
+                        <td colspan="3"></td>
+                        <td colspan="2" class="grand-left">
+                            Grand Total
+                        </td>
+                        <td class="grand-middle">
+                            <div>Total</div>
+                            <span>117</span>
+                        </td>
+                        <td class="grand-middle">
+                            <div>Total</div>
+                            <span>35</span>
+                        </td>
+                        <td class="grand-middle">
+                            <div>Total</div>
+                            <span>53%</span>
+                        </td>
+                        <td class="grand-middle">
+                            <div>Total</div>
+                            <span>$987,345,123.00</span>
+                        </td>
+                        <td class="grand-right"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="bid-template.html">
+    <div ui-tree-handle class="tree-node tree-node-content">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>check</th>
+                        <th>Bid to Distributed</th>
+                        <th>Company</th>
+                        <th>OpenStatus</th>
+                        <th>Date Submitted</th>
+                        <th>Submitted By</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr text-class="text-muted" ng-repeat="bid in award.children">
+                        <td class="text-primary">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox" ng-click="selectBid(bid)">
+                                <label>&nbsp;</label>
+                            </div>
+                        </td>
+                        <td>{{ bid.distrib_to }}</td>
+                        <td class="medium">{{ bid.company }}</td>
+                        <td class="medium">{{ bid.open_status | uppercase }}</td>
+                        <td class="medium text-primary">{{ bid.date_submitted }}</td>
+                        <td class="medium text-primary">{{ bid.submitted_by }}</td>
+                        <td class="medium text-primary">{{ bid.amount }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</script>

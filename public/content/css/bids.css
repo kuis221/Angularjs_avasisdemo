@@ -1,0 +1,122 @@
+.btn i {
+    margin-right: 5px;
+}
+
+.bids-card-content {
+    padding: 20px;
+}
+
+.bids-distrib {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
+}
+.bids-distrib-value {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+}
+
+.bids-card-content .label-blue {
+    background-color: #3aabd5;
+    font-size: 10px;
+}
+.bids-card-content .label-orange {
+    background-color: #fdae46;
+    font-size: 10px;
+}
+
+.progress.progress-bids {
+    height: 13px;
+    margin: 4px 0 4px 0;
+}
+
+.bids-panel-body {
+    padding: 0;
+    position: relative;
+    font-size: 14px;
+}
+.bids-panel-body p {
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.table-bids {
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table-bids thead, tbody {
+    border: 1px solid #d7d7d7;
+}
+
+.table-bids thead tr th {
+    font-weight: normal;
+}
+.table-bids tbody tr {
+    background: #fff;
+}
+.table-bids .grand-total {
+    height: 90px;
+}
+
+.table-bids .bids-status {
+    font-size: 10px;
+    color: #79c485;
+}
+
+.table-bids thead tr th,
+.table-bids tbody tr td {
+    vertical-align: middle;
+}
+.table-bids tfoot tr td {
+    border: none;
+    vertical-align: middle;
+}
+.table-bids tfoot span {
+    font-weight: 600;
+}
+.table-bids tfoot tr .grand-left {
+    background: #fff;    
+    border-left: 1px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    border-radius: 3px;
+}
+.table-bids tfoot tr .grand-middle {
+    background: #fff;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+}
+.table-bids tfoot tr .grand-right {
+    background: #fff;
+    border-right: 1px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.table-bids tr td,
+.table-bids tr th {
+    padding: 20px !important;
+}
+.table-bids .bid-name {
+    width: 280px;
+    color: #3aabd5;
+    font-weight: bold;
+}
+.table-bids .text-active {
+    color: #3aabd5;
+    font-weight: bold;
+}
+
+.bid-name i {
+    margin-right: 10px;
+}
+
+.bids-group span { font-size: 12px;}
+.bids-group div {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 0 25px;
+    margin: 0px;
+}
+.bids-group span {
+    margin-right: 5px;
+}
