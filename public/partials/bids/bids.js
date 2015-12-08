@@ -96,4 +96,12 @@ app.controller('BidsCtrl',
                 children: []
             }
         ];
+        $scope.showBid = [];
+        $scope.showDraft = [];
+        $scope.toggleBid = function(index) {
+            $scope.showBid[index] = !$scope.showBid[index];
+        };
+        $scope.toggleDraft = function(index) {
+            $scope.showDraft[index] = !$scope.showDraft[index];
+        };
     }]);

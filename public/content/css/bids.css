@@ -9,10 +9,14 @@
 .bids-distrib {
     font-family: "AvenirNextLTPro-Regular";
     font-size: 13px;
+    font-weight: normal;
 }
 .bids-distrib-value {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 15px;
+}
+.bids-amount {
+    font-size: 12px;
 }
 
 .bids-card-content .label-blue {
@@ -44,6 +48,13 @@
 }
 
 .table-bids thead, tbody {
+    border: 1px solid #d7d7d7;
+}
+
+table.table-bids tbody {
+    border: 1px solid #d7d7d7;
+}
+table.table-bids tbody + tbody {
     border: 1px solid #d7d7d7;
 }
 
@@ -124,4 +135,33 @@
 }
 .bids-group span {
     margin-right: 5px;
+}
+
+.detailed-bids {
+    padding: 0px 250px 20px 30px;
+}
+.detailed-bids table thead th {
+    background: #f9f9f9;
+}
+
+.detailed-opt{
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+.detailed-opt span {
+    display: inline-block;
+    padding-right: 20px;
+}
+.detailed-opt .border-right {
+    margin-right: 20px;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.7s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
 }
