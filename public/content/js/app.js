@@ -164,11 +164,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/documents/list.html',
             controller: 'DocumentsCtrl'
         })
+        .state('bids', {
+            url: '/bids',
+            templateUrl: 'partials/bids/bids.html',
+            controller: 'BidsCtrl'
+        })
         .state('sample', {
             url: '/sample',
             templateUrl: 'partials/sample/sample.html',
             controller: 'SampleCtrl'
         });
+
 }]);
 
 app.run (["$rootScope", function($rootScope) {
