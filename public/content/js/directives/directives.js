@@ -160,3 +160,42 @@ app.directive('minimalizaSidebar', ['$timeout', function($timeout) {
         }
     };
 }]);
+
+/**
+ * fullScroll - Directive for slimScroll with 100%
+ */
+app.directive('fullScroll', ['$timeout', function($timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope, element) {
+            $timeout(function(){
+                element.slimscroll({
+                    height: '100%',
+                    railOpacity: 0.9
+                });
+
+            });
+        }
+    };
+}])
+
+/**
+ * slimScroll - Directive for slimScroll with custom height
+ */
+app.directive('slimScroll', ['$timeout', function($timeout) {
+    return {
+        restrict: 'A',
+        scope: {
+            boxHeight: '@'
+        },
+        link: function(scope, element) {
+            $timeout(function(){
+                element.slimscroll({
+                    height: scope.boxHeight,
+                    railOpacity: 0.9
+                });
+
+            });
+        }
+    };
+}]);

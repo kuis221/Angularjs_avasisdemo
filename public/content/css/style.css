@@ -2,7 +2,7 @@
 @import 'tree.css';
 
 body {
-    font-family: "AvenirNextLTPro-Demi" !important;
+    font-family: "AvenirNextLTPro-Demi";
 }
 
 .per > div {
@@ -234,6 +234,9 @@ svg tspan {
 .text-gray-lighter {
     color: #9e9e9e;
 }
+.text-dark {
+    color: black;
+}
 
 textarea {
     padding: 15px;
@@ -337,4 +340,14 @@ input {
 
 input.round {
     border-radius: 20px;
+}
+.font-regular {
+    font-family: "AvenirNextLTPro-Regular";
+    font-weight: normal;
+}
+.font-semibold {
+    font-family: "AvenirNextLTPro-Demi";
+}
+.font-bold {
+    font-family: "AvenirNextLTPro-Bold";
 }

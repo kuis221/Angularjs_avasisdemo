@@ -118,6 +118,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/team-members/team-members-list.html',
             controller: 'TeamMembersCtrl'
         })
+        .state('team-members.risk', {
+            url: '/risk',
+            templateUrl: 'partials/team-members/risk.html',
+            controller: 'RiskCtrl',
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('action-items', {
             url: '/action-items',
             abstract: true,
