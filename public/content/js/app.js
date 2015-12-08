@@ -26,14 +26,14 @@ app.config(['$httpProvider', function ($httpProvider) {
 }]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/projects/main");
 
     return $stateProvider
-        .state('dashboards', {
-            url: '/',
-            templateUrl: "partials/dashboards/dashboards.html",
-            controller: "DashboardsCtrl"
-        })
+        // .state('dashboards', {
+        //     url: '/',
+        //     templateUrl: "partials/dashboards/dashboards.html",
+        //     controller: "DashboardsCtrl"
+        // })
         .state('financials', {
             url: '/financials',
             abstract: true,
