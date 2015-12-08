@@ -37,12 +37,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('financials', {
             url: '/financials',
             abstract: true,
-            template: '<ui-view></ui-view>',
+            controller: "FinancialsCtrl",
+            templateUrl: 'partials/financials/financials.html',
         })
         .state('financials.main', {
             url: '/main',
-            templateUrl: "partials/financials/financials.html",
-            controller: "FinancialsCtrl"
+            templateUrl: "partials/financials/main.html",
+            controller: "FinancialsMainCtrl"
+        })
+        .state('financials.budget', {
+            url: '/budget',
+            templateUrl: "partials/financials/budget.html",
+            controller: "FinancialsBudgetCtrl"
         })
         .state('financials.bankdraw', {
             url: '/bankdraw',
