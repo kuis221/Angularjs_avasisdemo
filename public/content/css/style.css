@@ -234,6 +234,9 @@ svg tspan {
 .text-gray-lighter {
     color: #9e9e9e;
 }
+.text-dark {
+    color: black;
+}
 
 textarea {
     padding: 15px;

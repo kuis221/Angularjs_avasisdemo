@@ -1,19 +1,19 @@
 <table class="table mb20" id="budget-stats">
     <tr>
         <td class="font-normal text-muted">Square footage</td>
-        <td class="">5,200</td>
+        <td class="text-dark">5,200</td>
     </tr>
     <tr>
         <td class="font-normal text-muted">Goal Cost per Sqft</td>
-        <td class="">$300.00</td>
+        <td class="text-dark">$300.00</td>
         <td class="font-normal text-muted">Goal Construction Cost</td>
-        <td class="">$1,560.00</td>
+        <td class="text-dark">$1,560.00</td>
     </tr>
     <tr>
         <td class="font-normal text-muted">Current Cost per Sqft</td>
-        <td class="">$309.00</td>
+        <td class="text-dark">$309.00</td>
         <td class="font-normal text-muted">Current Construction Cost</td>
-        <td class="">$2,345.00</td>
+        <td class="text-dark">$2,345.00</td>
     </tr>
     <tr>
         <td class="font-normal text-muted">Variance</td>
@@ -48,8 +48,11 @@
     <div ui-tree-handle class="tree-node tree-node-content table-tree">
         <div class="text-muted font-regular">
             <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
-                <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children"></i>
-                <span>{{item.name}}</span>
+                <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                <div style="display: inline-block">
+                    <div class="text-gray division">{{item.division}}</div>
+                    <span>{{item.name}}</span>
+                </div>
             </div>
             <div style="width: 100px">{{item.labor | currency:'$':0}}</div>
             <div style="width: 100px">{{item.materials | currency:'$':0}}</div>

@@ -20,6 +20,10 @@
 .budgets {
     border: 1px solid #ccc;
 }
+.budgets .division {
+    font-size: 10px;
+    line-height: 10px;
+}
 #budget-stats {
     width: 50%;
     border: none;
