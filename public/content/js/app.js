@@ -7,7 +7,8 @@ var app = angular.module('avasis',
         'nvd3',
         'angles',
         'ngDropzone',
-        'ui.tree'
+        'ui.tree',
+        'jkuri.slimscroll'
     ]);
 
 app.controller('AppCtrl', [
