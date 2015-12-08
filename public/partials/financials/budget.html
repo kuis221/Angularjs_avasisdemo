@@ -33,8 +33,8 @@
             <div style="width: 100px">Total</div>
             <div style="width: 120px">Items</div>
             <div style="width: 80px">Status</div>
-            <div style="width: 100px">CPSF</div>
-            <div style="width: 100px">% of Project</div>
+            <div style="width: 60px">CPSF</div>
+            <div style="width: 60px">% of Project</div>
         </div>
     </div>
     <div ui-tree data-drag-enabled="false" data-max-depth="3">
@@ -58,8 +58,8 @@
             <div style="width: 100px">{{item.total | currency:'$':0}}</div>
             <div style="width: 120px"><span class="items" ng-if="item.items">{{item.items}}</span></div>
             <div style="width: 80px">{{item.status}}</div>
-            <div style="width: 100px">{{item.cpsf}}</div>
-            <div style="width: 100px">{{item.percent_of_project}}%</div>
+            <div style="width: 60px">{{item.cpsf}}</div>
+            <div style="width: 60px"><span ng-if="item.percent_of_project">{{item.percent_of_project}}%</span></div>
         </div>
     </div>
     <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
