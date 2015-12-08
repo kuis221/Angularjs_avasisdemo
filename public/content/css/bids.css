@@ -98,12 +98,17 @@
 }
 .table-bids .bid-name {
     width: 280px;
-    color: #3aabd5;
-    font-weight: bold;
 }
 .table-bids .text-active {
     color: #3aabd5;
     font-weight: bold;
+    cursor: pointer;
+}
+.table-bids .text-active-sm {
+    color: #3aabd5;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .bid-name i {

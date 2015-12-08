@@ -92,17 +92,23 @@
                 <tbody>
                     <tr ng-repeat="award in awards">
                         <td class="bid-name">
-                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            <span class="text-active">
+                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            </span>
                         </td>
                         <td>{{ award.initial_date }}</td>
-                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>
+                            <span class="text-active">{{ award.initiated_by }}</span>
+                        </td>
                         <td>{{ award.dates_distributed }}</td>
                         <td class="bids-status">{{ award.status | uppercase }}</td>
                         <td>{{ award.distributed }}</td>
                         <td>{{ award.replies }}</td>
                         <td>{{ award.received }}%</td>
                         <td>${{ award.avg_amount | number:2 }}</td>
-                        <td>{{ award.documents }} docs</td>
+                        <td>
+                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -152,17 +158,23 @@
                 <tbody>
                     <tr ng-repeat="award in awards">
                         <td class="bid-name">
-                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            <span class="text-active">
+                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            </span>
                         </td>
                         <td>{{ award.initial_date }}</td>
-                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>
+                            <span class="text-active">{{ award.initiated_by }}</span>
+                        </td>
                         <td>{{ award.dates_distributed }}</td>
                         <td class="bids-status">{{ award.status | uppercase }}</td>
                         <td>{{ award.distributed }}</td>
                         <td>{{ award.replies }}</td>
                         <td>{{ award.received }}%</td>
                         <td>${{ award.avg_amount | number:2 }}</td>
-                        <td>{{ award.documents }} docs</td>
+                        <td>
+                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -192,7 +204,7 @@
     </div>
     <hr>
     <div class="panel-body bids-panel-body">
-        <p>Bids to be Awarded</p>
+        <p>Needing Bid Creation</p>
         <div class="table-responsive">
             <table class="table table-bids">
                 <thead>
@@ -212,17 +224,23 @@
                 <tbody>
                     <tr ng-repeat="award in awards">
                         <td class="bid-name">
-                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            <span class="text-active">
+                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            </span>
                         </td>
                         <td>{{ award.initial_date }}</td>
-                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>
+                            <span class="text-active">{{ award.initiated_by }}</span>
+                        </td>
                         <td>{{ award.dates_distributed }}</td>
                         <td class="bids-status">{{ award.status | uppercase }}</td>
                         <td>{{ award.distributed }}</td>
                         <td>{{ award.replies }}</td>
                         <td>{{ award.received }}%</td>
                         <td>${{ award.avg_amount | number:2 }}</td>
-                        <td>{{ award.documents }} docs</td>
+                        <td>
+                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -252,7 +270,7 @@
     </div>
     <hr>
     <div class="panel-body bids-panel-body">
-        <p>Bids to be Awarded</p>
+        <p>Bids Awarded</p>
         <div class="table-responsive">
             <table class="table table-bids">
                 <thead>
@@ -272,17 +290,23 @@
                 <tbody>
                     <tr ng-repeat="award in awards">
                         <td class="bid-name">
-                            <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            <span class="text-active">
+                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                            </span>
                         </td>
                         <td>{{ award.initial_date }}</td>
-                        <td class="text-active">{{ award.initiated_by }}</td>
+                        <td>
+                            <span class="text-active">{{ award.initiated_by }}</span>
+                        </td>
                         <td>{{ award.dates_distributed }}</td>
                         <td class="bids-status">{{ award.status | uppercase }}</td>
                         <td>{{ award.distributed }}</td>
                         <td>{{ award.replies }}</td>
                         <td>{{ award.received }}%</td>
                         <td>${{ award.avg_amount | number:2 }}</td>
-                        <td>{{ award.documents }} docs</td>
+                        <td>
+                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
