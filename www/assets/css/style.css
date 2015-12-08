@@ -143,7 +143,13 @@ h6 {font-size: 10px;}
 .navbar-top-links .light-blue  .dropdown-menu { margin-right: -10px; margin-top: 10px;}
 .navbar-top-links li .dropdown-menu > li { width: 100%;}
 .nav-header {padding: 33px 25px;}
-.pace-done .nav-header { transition: all 0.5s;}
+.pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done #page-wrapper, .pace-done .footer {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
 .nav > li.active { border-left: 0px; background: #e25c5c;}
 .nav.nav-second-level > li.active { border: none;}
 .nav.nav-second-level.collapse[style] { height: auto !important;}
