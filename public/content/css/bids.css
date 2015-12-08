@@ -47,9 +47,8 @@
 }
 
 .table-bids {
-    font-family: "AvenirNextLTPro-Demi";
+    font-family: "AvenirNextLTPro-Regular";
     font-size: 14px;
-    color: #757575;
 }
 
 .table-bids thead, 
@@ -65,6 +64,7 @@ table.table-bids tbody + tbody {
 }
 
 .table-bids thead tr th {
+    font-family: "AvenirNextLTPro-Demi";
     color: #808080;
     font-size: 12px;
 }
@@ -87,6 +87,7 @@ table.table-bids tbody + tbody {
 .table-bids tfoot tr td {
     border: none;
     vertical-align: middle;
+    font-family: "AvenirNextLTPro-Demi";
     color: #808080;
 }
 .table-bids tfoot span {
