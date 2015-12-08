@@ -12,4 +12,17 @@ app.controller('TeamMembersCtrl',  ['$scope', '$stateParams', '$uibModal', funct
 
         });
     }
+
+    $scope.showProjectModal = function() {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'partials/team-members/project-modal.html',
+            controller: 'TeamMembersProjectCtrl',
+            windowClass: 'tm-modal-main'
+        });
+
+        modalInstance.result.then(function (res) {
+        }, function () {
+
+        });
+    }
 }]);
