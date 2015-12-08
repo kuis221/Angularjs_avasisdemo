@@ -248,6 +248,41 @@ input[type=url], input[type=password] {
     border: 1px solid #d7d7d7;
 }
 
+/*************************************************
+*                  Label & Badge                 *
+*************************************************/
+.label-primary,
+.badge-primary {
+    background-color: #3aabd5;
+    color: #fff;
+}
+.label-success,
+.badge-success {
+    background-color: #79c485;
+    color: #fff;
+}
+.label-warning,
+.badge-warning {
+    background-color: #f6b875;
+    color: #FFFFFF;
+}
+.label-warning-light,
+.badge-warning-light {
+    background-color: #f8ac59;
+    color: #ffffff;
+}
+.label-danger,
+.badge-danger {
+    background-color: #ed5565;
+    color: #FFFFFF;
+}
+.label-info,
+.badge-info {
+    background-color: #2a2d33;
+    color: #FFFFFF;
+}
+
+
 .chevron-down-menu::before{
     font-family: FontAwesome;
     font-size: 20px;
