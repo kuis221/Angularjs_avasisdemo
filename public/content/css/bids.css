@@ -32,6 +32,11 @@
     height: 13px;
     margin: 4px 0 4px 0;
 }
+.progress-bids .progress-bar {
+    -webkit-transition: width 1.6s ease;
+    -o-transition: width 1.6s ease;
+    transition: width 1.6s ease;
+}
 
 .bids-panel-body {
     padding: 0;
