@@ -135,6 +135,9 @@ table.table-bids tbody + tbody {
     margin-right: 10px;
 }
 
+.bids-group {
+    font-family: "AvenirNextLTPro-Demi";
+}
 .bids-group span {
     font-size: 12px;
     margin-right: 5px;
