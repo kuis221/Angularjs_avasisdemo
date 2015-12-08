@@ -2,10 +2,11 @@
     <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <i class="fa fa-caret-left"></i>
-            <a class="navbar-minimalize minimalize-styl-2 btn" href="#"><i class="fa fa-bars"></i> </a>
+            <span minimaliza-sidebar></span>
+            <!-- <a class="navbar-minimalize minimalize-styl-2 btn" href="#"><i class="fa fa-bars"></i> </a> -->
 
             <form role="search" class="navbar-form-custom" action="search_results.html">
-                <div class="form-group">
+                <div id="top-search-bar">
                     <a href="#"><i class="fa fa-search"></i></a>
                     <input type="text" placeholder="Search your projects " class="form-control search"
                            name="top-search" id="top-search">
@@ -13,14 +14,22 @@
             </form>
         </div>
         <ul class="nav navbar-top-links navbar-right">
-            <li class="light-blue open">
-                <a href="">
-                    <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo">
-                            <span class="user-info">
-                                Eric Hoffman
-                            </span>
-                    <i class="ace-icon fa fa-caret-down"></i>
-                </a>
+            <li class="light-blue">
+                <div class="dropdown">
+                    <a href="" class="dropdown-toggle text-primary" data-toggle="dropdown">
+                        <img alt="Jason's Photo" src="assets/img/user.png" class="nav-user-photo">
+                                <span class="user-info">
+                                    Eric Hoffman
+                                </span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right chevron-down-menu" role="menu">
+                        <li><a href="javascript:void(0)">My Profile</a></li>
+                        <li><a href="javascript:void(0)">Company Profile</a></li>
+                        <li><a href="javascript:void(0)">Project Profile</a></li>
+                        <li><a href="javascript:void(0)" class="logoff">Logoff</a></li>
+                    </ul>
+                </div>
             </li>
 
             <li class="orange">
@@ -28,6 +37,7 @@
                     <i class="ace-icon fa fa-bell icon-animated-bell"></i>
                     <span class="badge badge-important">8</span>
                 </a>
+
             </li>
         </ul>
 

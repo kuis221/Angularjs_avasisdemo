@@ -65,7 +65,7 @@
     <div class="whiteBox documents">
         <div class="row p20">
             <div class="search-field col-sm-4">
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search p15"></i>
                 <input type="text" placeholder="Search by name, project, SOW, role or user" class="form-control round" ng-model="query">
             </div>
             <div class="col-sm-5 pull-right text-right">
@@ -74,7 +74,7 @@
                 <a ng-click="createFolder()" class="text-primary pr30">+ Create Folder</a>
                 <div class="btn-group" uib-dropdown>
                     <button type="button" class="btn round" uib-dropdown-toggle>
-                      Filter By <span class="fa fa-angle-down"></span>
+                      <small>Filter By <span class="fa fa-angle-down"></span></small>
                     </button>
                     <ul class="uib-dropdown-menu" role="menu">
                         <li role="menuitem"><a href="#">Size</a></li>
@@ -146,3 +146,27 @@
         </tbody>
     </table>
 </script>
+
+<div class="upload-preview hide">
+    <div class="dz-preview dz-image-preview">
+        <div>
+            <span class="preview">
+                <span class="cancel text-danger" data-dz-remove>&times;</span>
+                <img data-dz-thumbnail />
+            </span>
+        </div>
+        <div>
+            <div class="text-muted" data-dz-name></div>
+            <!-- <div class="progress progress-small">
+                <div class="progress-bar progress-bar-primary" style="width: 100%"></div>
+            </div> -->
+            <small class="text-success">Uploaded</small>
+            <strong class="error text-danger" data-dz-errormessage></strong>
+        </div>
+        <div width="100px">
+            <div class="upload-action">
+                <ui-select has-filter="true" is-dropdown="true" placeholder="Save To" search-placeholder="Search Categories" multiple="true" ng-select="changeOption()" selected-item="selectedItem" options="options" class="pull-right"></ui-select>
+            </div>
+        </div>
+    </div>
+</div>

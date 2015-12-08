@@ -1,5 +1,5 @@
 app.controller('FinancialsCtrl',
-    ['$scope', '$stateParams', function ($scope, $stateParams) {
+    ['$scope', '$rootScope', function ($scope, $rootScope) {
         $scope.arcConfig = {
             size: 200,
             scale: 2,
@@ -18,4 +18,13 @@ app.controller('FinancialsCtrl',
                 }
             ]
         };
+
+        $scope.currentState = 'financials.main';
+        $rootScope.$on('$stateChangeSuccess', function(e, to) {
+            $scope.currentState = to.name;
+        });
+
+        $scope.isActive = function(state) {
+            return $scope.currentState === state;
+        }
     }]);

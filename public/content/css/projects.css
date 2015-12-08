@@ -2,10 +2,6 @@
     padding: 0px;
 }
 
-.prj-btn-border:hover {
-    border: 1px solid !important;
-}
-
 .prj-pr-s {
     padding-right: 5px;
 }
@@ -39,4 +35,14 @@
     padding: 0px 8px;
     background-color: #79c485;
     border-radius: 4px;
+}
+
+.prj-piechart-center-title {
+    position: absolute;
+    top: 53px;
+    left: 50px;
+}
+
+.prj-btn-sm {
+    min-width: 80px;
 }

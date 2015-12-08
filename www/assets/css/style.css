@@ -116,7 +116,7 @@ h6 {font-size: 10px;}
 ==================================================*/
 
 .posRelative {position: relative;}
-.nav > li > a { color: #c3c6cd; font-weight: 600; padding: 18px 28px; font-family: "AvenirNextLTPro-Regular";}
+.nav > li > a { color: #c3c6cd; font-weight: 600; padding: 18px 28px; font-family: "AvenirNextLTPro-Medium";}
 .nav.navbar-right > li > a { color: #3aabd5;}
 .nav > li.active > a {color: #ffffff;}
 .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {background-color: #e25c5c; color: white;}
@@ -132,11 +132,24 @@ h6 {font-size: 10px;}
 /*******TOP MENU*******/
 .nav-header {border: 1px solid #171c24;}
 .navbar-default {background-color: #2a2d33; border-color: #2f4050;}
+.navbar-top-links {text-align:right;}
+@media (min-width: 768px) {
+    .navbar-top-links li:last-child { margin-right: 14px;}
+}
 .navbar-top-links li {display: inline-block;}
-.navbar-top-links li:last-child { margin-right: 14px;}
 .navbar-top-links li a { padding: 11px 10px; min-height: 50px; }
+.navbar-top-links .light-blue { padding-right: 15px; }
+.navbar-top-links .light-blue .logoff { color: #ed5565; }
+.navbar-top-links .light-blue  .dropdown-menu { margin-right: -10px; margin-top: 10px;}
+.navbar-top-links li .dropdown-menu > li { width: 100%;}
 .nav-header {padding: 33px 25px;}
-.pace-done .nav-header { transition: all 0.5s;}
+.pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done #page-wrapper, .pace-done .footer {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
 .nav > li.active { border-left: 0px; background: #e25c5c;}
 .nav.nav-second-level > li.active { border: none;}
 .nav.nav-second-level.collapse[style] { height: auto !important;}
@@ -291,8 +304,8 @@ color: #fff;}
 
 .btn-primary {background-color: transparent; border-color: #1ab394; color: #FFFFFF; border: 0;}
 .fa.fa-bars i { font-size: 20px;color: #e25c5c;}
-.form-group a {  color: #c4c4cd; position: absolute; margin: 0 10px; top: 20px;}
-.form-group > a .fa-search { font-size: 17px;}
+#top-search-bar a {  color: #c4c4cd; position: absolute; margin: 0 10px; top: 20px;}
+#top-search-bar > a .fa-search { font-size: 17px;}
 
 .btn-primary:hover,
 .btn-primary:focus,
@@ -604,7 +617,7 @@ color: inherit; margin-bottom: 2px; padding: 6px 6px 6px 12px; }
 .form-control,
 .single-line { background-color: #FFFFFF; background-image: none; border: 1px solid #e5e6e7; border-radius: 1px; color: inherit;  display: block;
 padding: 0 10px 0 30px;  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%; font-size: 14px;}
-.form-group #top-search {border-left: 1px solid #dedede;}
+#top-search-bar #top-search {border-left: 1px solid #dedede; padding: 0 10px 0 30px;}
 .has-success .form-control {border-color: #1ab394;}
 .has-warning .form-control { border-color: #f8ac59;}
 .has-error .form-control { border-color: #ed5565;}
@@ -1863,7 +1876,9 @@ table.table-mail tr td { padding: 12px;}
 .progress-mini,
 .progress-mini .progress-bar {height: 5px;  margin-bottom: 0px;}
 .progress-bar-navy-light {background-color: #3dc7ab;}
-.progress-bar-success {  background-color: #79c485;  color: #79c485;}
+.progress-bar-success {  background-color: #79c485;  color: #79c485;     -webkit-transition: width 1.6s ease;
+    -o-transition: width 1.6s ease;
+    transition: width 1.6s ease;}
 .progress-bar-info {background-color: #23c6c8;}
 .progress-bar-warning { background-color: #f8ac59; color: #f8ac59;}
 .progress-bar-danger {background-color: #ed5565;  color: #ed5565;}
@@ -2315,6 +2330,10 @@ body.rtls .navbar-top-links li:last-child {   margin-left: 20px;}
 .rtls.fixed-sidebar.body-small.mini-navbar .navbar-static-side {display: block;}
 }
 
+.left-sidebar {}
+.left-sidebar .nav > li > a img { width: 20px; height: 20px;}
+.left-sidebar .nav > li > a span {position: absolute; margin-top: 3px; margin-left: 15px; }
+
 .rtls .ltr-support { direction: ltr;}
 /*
  *
@@ -2752,6 +2771,7 @@ h3.proStatus i {
 }
 .user-info {
     font-family: 'AvenirNextLTPro-Demi';
+    margin-right: 5px;
 }
 .teammembers .topSubtitle li a {
     font-size: 14px;
