@@ -49,8 +49,8 @@
                         <span class="label label-blue">&nbsp;</span>
                         <span>Bids with Response</span>
                         <div>
-                            <span><b>35</b></span>
-                            <span>{{ report.response }}%</span>
+                            <span class="bids-num">35</span>
+                            <span class="bids-per">{{ report.response }}%</span>
                         </div>
                     </div>
                 </div>
@@ -59,14 +59,14 @@
                         <span class="label label-orange">&nbsp;</span>
                         <span>Bids with Awarded</span>
                         <div>
-                            <span><b>35</b></span>
-                            <span>{{ report.response }}%</span>
+                            <span class="bids-num">35</span>
+                            <span class="bids-per">{{ report.response }}%</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-lg-3">
                     <div class="bids-amount">Bids Amount Under Contract</div>
-                    <span>${{ report.amount | number:2 }}</span>
+                    <span class="primary-num">${{ report.amount | number:2 }}</span>
                 </div>
             </div>
         </div>
