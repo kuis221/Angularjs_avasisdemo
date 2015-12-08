@@ -1,5 +1,5 @@
 app.controller('BidsCtrl',
-    ['$scope', '$state', '$stateParams', function($scope, $state, $stateParams) {
+    ['$scope', '$state', '$stateParams', '$timeout', function($scope, $state, $stateParams, $timeout) {
         $scope.awards = [
             {
                 id: 1,
@@ -134,14 +134,16 @@ app.controller('BidsCtrl',
                 ]
             }
         ];
-        $scope.report = {
-            bids_distrib: 57,
-            completed: 100,
-            response: 68,
-            awarded: 61,
-            amount: 1513986
-        };
-        
+        $scope.report = {};
+        $timeout(function(){
+            $scope.report = {
+                bids_distrib: 57,
+                completed: 100,
+                response: 68,
+                awarded: 61,
+                amount: 1513986
+            };
+        }, 500);
         $scope.showBid = [];
         $scope.showDraft = [];
         $scope.showCreate = [];
