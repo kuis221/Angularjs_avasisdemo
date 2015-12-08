@@ -1,29 +1,30 @@
-<div class="table-tree" style="padding: 15px 20px; background: #f3f3f4">
-    <div>
-        <div>&nbsp;</div>
-        <div style="width: 100px">Labor</div>
-        <div style="width: 100px">Materials</div>
-        <div style="width: 100px">Equipment</div>
-        <div style="width: 100px">Miscellanous</div>
-        <div style="width: 100px">Total</div>
-        <div style="width: 100px">Item</div>
-        <div style="width: 100px">Status</div>
-        <div style="width: 100px">CPSF</div>
-        <div style="width: 100px">% of Project</div>
+<div class="budgets">
+    <div class="table-tree" style="padding: 15px 20px; background: #f3f3f4">
+        <div class="text-muted">
+            <div>&nbsp;</div>
+            <div style="width: 100px">Labor</div>
+            <div style="width: 100px">Materials</div>
+            <div style="width: 100px">Equipment</div>
+            <div style="width: 100px">Miscellanous</div>
+            <div style="width: 100px">Total</div>
+            <div style="width: 120px">Items</div>
+            <div style="width: 80px">Status</div>
+            <div style="width: 100px">CPSF</div>
+            <div style="width: 100px">% of Project</div>
+        </div>
+    </div>
+    <div ui-tree data-drag-enabled="false" data-max-depth="3">
+        <ol ui-tree-nodes="" ng-model="budgets">
+            <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
+        </ol>
     </div>
 </div>
-<div ui-tree data-drag-enabled="false" data-max-depth="3">
-    <ol ui-tree-nodes="" ng-model="budgets">
-        <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
-    </ol>
-</div>
-
 <!-- Nested node template -->
 <script type="text/ng-template" id="budget-item-template.html">
     <div ui-tree-handle class="tree-node tree-node-content table-tree">
-        <div>
-            <div data-nodrag ng-click="toggle(this)" class="text-primary">
-                <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}"></i>
+        <div class="text-muted font-regular">
+            <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children"></i>
                 <span>{{item.name}}</span>
             </div>
             <div style="width: 100px">{{item.labor | currency:'$':0}}</div>
@@ -31,13 +32,13 @@
             <div style="width: 100px">{{item.equipment | currency:'$':0}}</div>
             <div style="width: 100px">{{item.misc | currency:'$':0}}</div>
             <div style="width: 100px">{{item.total | currency:'$':0}}</div>
-            <div style="width: 100px">{{item.item}}</div>
-            <div style="width: 100px">{{item.status}}</div>
+            <div style="width: 120px"><span class="items" ng-if="item.items">{{item.items}}</span></div>
+            <div style="width: 80px">{{item.status}}</div>
             <div style="width: 100px">{{item.cpsf}}</div>
             <div style="width: 100px">{{item.percent_of_project}}%</div>
         </div>
     </div>
     <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
-        <li ng-repeat="item in item.children" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
+        <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
     </ol>
 </script>

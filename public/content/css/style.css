@@ -2,7 +2,7 @@
 @import 'tree.css';
 
 body {
-    font-family: "AvenirNextLTPro-Demi" !important;
+    font-family: "AvenirNextLTPro-Demi";
 }
 
 .per > div {
@@ -337,4 +337,11 @@ input {
 
 input.round {
     border-radius: 20px;
+}
+.font-regular {
+    font-family: "AvenirNextLTPro-Regular";
+    font-weight: normal;
+}
+.font-semibold {
+    font-family: "AvenirNextLTPro-Demi";
 }
