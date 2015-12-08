@@ -18,5 +18,12 @@
     font-family: "AvenirNextLTPro-Demi";
 }
 .budgets {
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
+}
+#budget-stats {
+    width: 50%;
+    border: none;
+}
+#budget-stats td, #budget-stats tbody {
+    border: none !important;
 }
