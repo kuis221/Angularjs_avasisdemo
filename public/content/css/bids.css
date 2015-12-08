@@ -14,9 +14,11 @@
 .bids-distrib-value {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 15px;
+    color: #808080;
 }
 .bids-amount {
     font-size: 12px;
+    color: #808080;
 }
 
 .bids-card-content .label-blue {
@@ -39,15 +41,18 @@
     font-size: 14px;
 }
 .bids-panel-body p {
+    font-family: "AvenirNextLTPro-Medium";
     font-size: 17px;
     margin-bottom: 17px;
 }
 
 .table-bids {
     font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
 }
 
-.table-bids thead, tbody {
+.table-bids thead, 
+.table-bids tbody {
     border: 1px solid #d7d7d7;
 }
 
@@ -59,7 +64,9 @@ table.table-bids tbody + tbody {
 }
 
 .table-bids thead tr th {
-    font-weight: normal;
+    font-family: "AvenirNextLTPro-Demi";
+    color: #808080;
+    font-size: 12px;
 }
 .table-bids tbody tr {
     background: #fff;
@@ -69,7 +76,7 @@ table.table-bids tbody + tbody {
 }
 
 .table-bids .bids-status {
-    font-size: 10px;
+    font-size: 9px;
     color: #79c485;
 }
 
@@ -80,9 +87,11 @@ table.table-bids tbody + tbody {
 .table-bids tfoot tr td {
     border: none;
     vertical-align: middle;
+    font-family: "AvenirNextLTPro-Demi";
+    color: #808080;
 }
 .table-bids tfoot span {
-    font-weight: 600;
+    color: #44474b;
 }
 .table-bids tfoot tr .grand-left {
     background: #fff;    
@@ -126,15 +135,28 @@ table.table-bids tbody + tbody {
     margin-right: 10px;
 }
 
-.bids-group span { font-size: 12px;}
+.bids-group span {
+    font-size: 12px;
+    margin-right: 5px;
+    color: #808080;
+}
 .bids-group div {
-    font-size: 9px;
-    font-weight: 600;
     padding: 0 25px;
     margin: 0px;
 }
-.bids-group span {
-    margin-right: 5px;
+
+.primary-num {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.bids-group .bids-num {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+.bids-group .bids-per {
+    font-size: 14px;
+    color: #808080;
 }
 
 .detailed-bids {
