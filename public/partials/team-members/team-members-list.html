@@ -40,17 +40,17 @@
     </div>
     <div class="col-xs-12 col-lg-2">
         <div class="teaminvite pull-right">
-            <a href="#" class="btn btn-success btn-lg">
+            <a class="btn btn-success btn-lg" ng-click="showInviteModal()">
                 <i class="fa fa-plus"></i> Invite Team Members
             </a>
         </div>
     </div>
 </div>
 
-<div class="row mt30">
+<div class="row no-margin mt30 animated fadeInRight">
     <div class="col-lg-12">
         <div class="table-responsive">
-            <table class="table memberv22x">
+            <table class="table memberv22x animated fadeInRight">
                 <thead>
                     <tr>
                         <th width="200px">Name</th>
@@ -60,40 +60,34 @@
                         <th>Flag Alert</th>
                         <th>
                             <div class="buy1 pull-left">
-                                <a class="btn1 btn-dangerteam btn-sm" href="#"
-                                    <a class="#"
-                                       data-html="true"
-                                       data-placement="bottom"
-                                       data-content="
-                                        <div class='popover-content check'>Name</div><div class='popover-content check'>Company</div><div class='popover-content check'>Next Scheduled</div><div class='popover-content check'>Flag Alerts</div>"
-                                        data-placement="top"
-                                        data-toggle="popover"
-                                        data-container="body"
-                                        data-original-title="">
-                                        Sort by <i class="fa fa-angle-down"></i>
-                                    </a>
+                                <div class="dd wrapper-dropdown-team sortby animated fadeInRight">
+                                    <span><a class="btn1 btn-dangerteam btn-sm" href="#">Sort by <i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Name</a></li>
+                                        <li><a href="#">Company</a></li>
+                                        <li><a href="#">Next Scheduled</a></li>
+                                        <li><a href="#">Flag Alerts</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -133,37 +127,49 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a href="#"><i class="fa fa-angle-down"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span>Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -185,7 +191,7 @@
                                 </div>
                                 <div class="media-Compliance">
                                     <small class="pull-right"></small>
-                                    <p class="multipalepro">Multiple Projects</p>
+                                    <p class="multipalepro"><a ng-click="showProjectModal()">Multiple Projects</a></p>
                                     <b class="multipal">Multiple Roles</b>
                                 </div>
                             </div>
@@ -203,37 +209,49 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content gear2x'>Add Notes</div><div class='popover-content gear2x'>Permissions</div><div class='popover-content gear2xred'>Remove From Project</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-angle-down"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -273,107 +291,50 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a href="#"><i class="fa fa-angle-down"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </td>
                     </tr>
+
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="feed-Compliance">
-                                <div class="mapflag pull-left">
-                                    <img alt="image" class="img-circle" src="assets/img/map_icon.png">
-                                </div>
-                                <div class="media-Compliance">
-                                    <small class="pull-right"></small>
-                                    <p class="pink"><span class="sky4">On Site</span> No Show</p>
-                                    <p class="light-big">next sched. 24 Jun, 2015</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="feed-Compliance">
-                                <div class="mapflag pull-left">
-                                </div>
-                                <div class="media-Compliance">
-                                    <small class="pull-right"></small>
-                                    <p class="light-big">Parking Level A</p>
-                                    <b>Senior Director</b>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="feed-Compliance">
-                                <div class="mapflag pull-left">
-                                </div>
-                                <div class="media-Compliance">
-                                    <small class="pull-right"></small>
-                                    <p class="light-big">
-                                        Master bathroom cabinetry, Carpet,<br>
-                                        Kitchen Something, Another something som...
-                                    </p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a href="#"><i class="fa fa-angle-down"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="whiteBgColor">
-                        <td width="220px">
-                            <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -413,37 +374,49 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a href="#"><i class="fa fa-angle-down"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -483,37 +456,42 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                                 <a href="#"><i class="fa fa-angle-down"></i></a>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -553,37 +531,49 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a href="#"><i class="fa fa-angle-down"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -623,37 +613,49 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
-                                <a class="#"><i class="fa fa-cog"></i></a>
-                                <a href="#"><i class="fa fa-angle-down"></i></a>
+                            <div class="ibox-team pull-left">
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-cog"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dd wrapper-dropdown-team">
+                                    <span><a class="#"><i class="fa fa-angle-down"></i></a></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Add Notes</a></li>
+                                        <li><a href="#">Permissions</a></li>
+                                        <li><a href="#" class="gear2xred">Remove From Project</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -693,37 +695,35 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
+                            <div class="ibox-team pull-left">
                                 <a class="#"><i class="fa fa-cog"></i></a>
                                 <a href="#"><i class="fa fa-angle-down"></i></a>
                             </div>
                         </td>
                     </tr>
                     <tr class="whiteBgColor">
-                        <td width="220px">
+                        <td class="MemberTableDetails">
                             <div class="feed-Compliance">
-                                <a class="pull-left" href="#">
-                                    <img src="assets/img/user1.png" class="img-circle" alt="image">
-                                </a>
-                                <div class="media-Compliance">
-                                    <div class="MemberTableDetails">
-                                        <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
-                                        <br>
-                                        <b>Flora Corp.</b>
-                                        <ul class="breadcrumbv22x">
-                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="pull-left">
+                                    <img src="assets/img/user1.png" class="img-circle photo" alt="image">
+                                </div>
+                                <div class="pull-left media-Compliance">
+                                    <span data-toggle="modal" data-target="#myModal">Bob Jones <img src="assets/img/alert_small.png"></span>
+                                    <b>Flora Corp.</b>
+                                    <ul class="breadcrumbv22x">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </td>
@@ -763,15 +763,16 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <div class="ibox-tools pull-left">
-                                <div class="mapflag-alert">
-                                    <p><img src="assets/img/red_icon.png">5<span><img src="assets/img/yellow _icon.png">2</span></p>
-                                </div>
+                        <td class="tm-flag-td">
+                            <div class="pull-left text-danger alert-flag">
+                                <img src="assets/img/red_icon.png"><span>5</span>
+                            </div>
+                            <div class="pull-left text-warning alert-flag">
+                                <img src="assets/img/yellow _icon.png"><span>2</span>
                             </div>
                         </td>
                         <td>
-                            <div class="ibox-tools pull-left">
+                            <div class="ibox-team pull-left">
                                 <a class="#"><i class="fa fa-cog"></i></a>
                                 <a href="#"><i class="fa fa-angle-down"></i></a>
                             </div>
@@ -784,3 +785,40 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+    }
+    DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('click', function (event) {
+                $(this).toggleClass('active');
+                return false;
+            });
+        },
+        getValue: function () {
+            return this.val;
+        },
+        getIndex: function () {
+            return this.index;
+        }
+    }
+
+    $(function () {
+        var dd = new DropDown($('.dd'));
+
+        $(document).click(function () {
+            // all dropdowns
+            $('.wrapper-dropdown-team').removeClass('active');
+        });
+
+    });
+
+</script>

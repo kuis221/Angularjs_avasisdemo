@@ -17,11 +17,6 @@
 .tm-modal-title {
     font-size: 18px;
     text-align: left;
-    padding-bottom: 15px;
-}
-
-.tm-border-bottom {
-    border-bottom: 1px solid #ddd;
 }
 
 .tm-form-padding {
@@ -103,10 +98,56 @@
     border-bottom: 1px solid #eee;
 }
 
-.tm-pt10 {
-    padding-top: 10px;
+.tm-pt15 {
+    padding-top: 15px;
 }
 
 .tm-hr-margin-small {
     margin-top: 15px;
+}
+
+.tm-mb30 {
+    margin-bottom: 30px;
+}
+
+.table.memberv22x span {
+    display: block;
+}
+
+.tm-project-tool {
+    font-size: 17px;
+}
+
+.tm-project-tool li {
+    border: 0 !important;
+    padding-left: 20px !important;
+}
+
+.memberv22x .feed-Compliance .photo {
+    width: 40px;
+    height: 40px;
+}
+
+.memberv22x .MemberTableDetails {
+    width: 250px;
+}
+
+.tm-flag-td {
+    width: 130px;
+}
+
+.tm-flag-td .alert-flag {
+    margin-right: 5px;
+}
+
+.tm-flag-td .alert-flag img {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 2px;
+}
+
+.tm-flag-td .alert-flag span {
+    float: left;
+    padding-top: 5px;
 }
