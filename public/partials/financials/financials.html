@@ -31,6 +31,10 @@
             <li><a ui-sref="financials.main">Cash Requirements</a></li>
             <li ng-class="{true: 'active'}[isActive('financials.budget')]"><a ui-sref="financials.budget">Timline Budget</a></li>
         </ul>
-        <ui-view></ui-view>
+        <div class="panel">
+            <div class="panel-body">
+                <ui-view></ui-view>
+            </div>
+        </div>
     </div>
 </div>
