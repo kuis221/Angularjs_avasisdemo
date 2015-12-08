@@ -2324,6 +2324,10 @@ body.rtls .navbar-top-links li:last-child {   margin-left: 20px;}
 .rtls.fixed-sidebar.body-small.mini-navbar .navbar-static-side {display: block;}
 }
 
+.left-sidebar {}
+.left-sidebar .nav > li > a img { width: 20px; height: 20px;}
+.left-sidebar .nav > li > a span {position: absolute; margin-top: 3px; margin-left: 15px; }
+
 .rtls .ltr-support { direction: ltr;}
 /*
  *
