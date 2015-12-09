@@ -14,7 +14,15 @@
                         </thead>
                         <tbody>
                             <tr class="first-level">
-                                <td><div class="space1"><span class="sky">General Condition<i class="fa fa-chevron-up"></i></span></div></td>
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky" ng-click="genContCollapse = !genContCollapse">
+                                            General Condition
+                                            <i class="fa" ng-class="{'fa-chevron-down': genContCollapse,
+                                                                     'fa-chevron-up': !genContCollapse}"></i>
+                                        </span>
+                                    </div>
+                                </td>
                                 <td>Est.Budget</td>
                                 <td>Under Contract</td>
                                 <td>Approved Purchase Orders</td>
@@ -28,7 +36,7 @@
                                 <td>Payments Made</td>
                                 <td>Cash Required to Complete</td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Donec ullamcorper nulla non metus auctor fringilla.</span></div></td>
                                 <td>$1,000,000</td>
                                 <td>$2,272.85</td>
@@ -43,7 +51,7 @@
                                 <td>$2,272.85</td>
                                 <td>$2,272.85</td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Venenatis Risus Bibendum</span></div></td>
                                 <td>$800.00</td>
                                 <td>$857.50 </td>
@@ -58,7 +66,7 @@
                                 <td>$30,000.00 </td>
                                 <td>$2,000.00 </td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Nulla vitae elit libero, a pharetra augue.</span></div></td>
                                 <td>$30,000.00</td>
                                 <td>$30,000.00</td>
@@ -73,7 +81,7 @@
                                 <td>$30,000.00</td>
                                 <td>$2,000.00 </td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Vivamus sagittis lacus vel augue laoreet rutrum fauci.. dolor auctor.</span></div></td>
                                 <td>$60,000.00 </td>
                                 <td>$60,000.00 </td>
@@ -88,7 +96,7 @@
                                 <td>$60,000.00 </td>
                                 <td>$3,500.00</td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Donec ullamcorper nulla non metus auctor fringilla.</span></div></td>
                                 <td>$10,000.00 </td>
                                 <td>$10,000.00 </td>
@@ -103,7 +111,7 @@
                                 <td>10,000.00</td>
                                 <td>$1,000.00</td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Venenatis Risus Bibendum</span></div></td>
                                 <td>$8,500.00 </td>
                                 <td>$8,500.00 </td>
@@ -118,7 +126,7 @@
                                 <td>85,00.00</td>
                                 <td>$2,000.00 </td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="genContCollapse">
                                 <td><div class="space1"><span class="sky">Nulla vitae elit libero, a pharetra augue.</span></div></td>
                                 <td>$2,000.00</td>
                                 <td>$2,000.00</td>
@@ -134,7 +142,15 @@
                                 <td>85,00.00</td>
                             </tr>
                             <tr class="first-level">
-                                <td><div class="space1"><span class="sky">Site Work<i class="fa fa-chevron-up"></i></span></div></td>
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky" ng-click="siteWorkCollapse = !siteWorkCollapse">
+                                            Site Work
+                                            <i class="fa" ng-class="{'fa-chevron-down': siteWorkCollapse,
+                                                                     'fa-chevron-up': !siteWorkCollapse}"></i>
+                                        </span>
+                                    </div>
+                                </td>
                                 <td>Est.Budget</td>
                                 <td>Under Contract</td>
                                 <td>Approved Purchase Orders</td>
@@ -148,7 +164,7 @@
                                 <td>Payments Made</td>
                                 <td>Cash Required to Complete</td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="siteWorkCollapse">
                                 <td><span class="sky">Donec ullamcorper nulla non metus auctor fringilla.</span></td>
                                 <td>$1,000,000 </td>
                                 <td>$2,272.85</td>
@@ -163,7 +179,7 @@
                                 <td>$2,272.85</td>
                                 <td>$8,500.00 </td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="siteWorkCollapse">
                                 <td><div class="space1"><span class="sky">Venenatis Risus Bibendum</span></div></td>
                                 <td>$8,500.00 </td>
                                 <td>$857.50 </td>
@@ -178,7 +194,7 @@
                                 <td>$857.50 </td>
                                 <td>$2,000.00 </td>
                             </tr>
-                            <tr>
+                            <tr ng-hide="siteWorkCollapse">
                                 <td><div class="space1"><span class="sky">Nulla vitae elit libero, a pharetra augue.</span></div></td>
                                 <td>$30,000.00</td>
                                 <td>$30,000.00</td>

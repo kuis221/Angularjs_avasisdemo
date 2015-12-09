@@ -69,6 +69,9 @@
     background-color: #f9f9f9;
 }
 
+.table-financial-main tbody tr.first-level i:hover {
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .prog .left1 {
         padding: 16px;

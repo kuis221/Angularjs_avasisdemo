@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-md-12 col-lg-5">
         <div class="row">
             <div class="col-xs-12 col-md-4">
-                <div class="pull-left prj-pr-m" id="financial-chart-container">
+                <div class="pull-left prj-pr-m" id="financial-chart-container1">
                     <div id="financial-chart"></div>
                     <div class="chart-data">
                         <div class="arc">
@@ -104,7 +104,7 @@ var financial_chart = {
             radius = radius,
             pen_width = pen_width;
 
-        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
+        $('#financial-chart-container1 .chart-data').find('.arc').each(function (i) {
             var t = $(this);
             display += t.find('.percent').val() + "%\n";
         });
@@ -137,7 +137,7 @@ var financial_chart = {
             return { path: path }
         }
 
-        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
+        $('#financial-chart-container1 .chart-data').find('.arc').each(function (i) {
             var t = $(this),
 				color = t.find('.color').val(),
 				value = t.find('.percent').val(),
