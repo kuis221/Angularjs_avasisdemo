@@ -1,5 +1,5 @@
 app.controller('FinancialsCtrl',
-    ['$scope', '$rootScope', function ($scope, $rootScope) {
+    ['$scope', '$rootScope', '$timeout', function ($scope, $rootScope, $timeout) {
         $scope.arcConfig = {
             size: 200,
             scale: 2,
@@ -27,4 +27,17 @@ app.controller('FinancialsCtrl',
         $scope.isActive = function(state) {
             return $scope.currentState === state;
         }
+
+        $scope.stats = {};
+        // Stats
+        $timeout(function(){
+            $scope.stats = {
+                estimated: 11,
+                contractual: 28,
+                direct: 33,
+                pending: 19,
+                unbudgeted: 9
+            };
+        }, 500);
+
     }]);

@@ -1,3 +1,89 @@
+.financial-wrapper .nav.nav-tabs {
+    border: 1px solid #eee;
+}
+
+.financial-main-panel {
+    border: 1px solid #eee;
+}
+
+.financial-wrapper .panel {
+    margin: 0px;
+}
+
+.row.white.financial-main-bottom {
+    margin: 0px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+}
+
+.financial-main-bottom div > span {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+}
+
+.financial-main-bottom div > p {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
+}
+
+.table-financial-main {
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table-financial-main span {
+    font-size: 12px;
+}
+.table-financial-main.table thead tr th,
+.table-financial-main.table tbody tr td {
+    vertical-align: middle;
+}
+
+.table-financial-main.table tbody tr td {
+    font-size: 11px;
+}
+
+.table-financial-main.table tbody tr td:not(:first-child) {
+    border-left: 1px solid #eee;
+}
+
+.table-financial-main.table thead th {
+    font-family: AvenirNextLTPro-Demi;
+    color: #4a4a4a;
+}
+
+.table-financial-main thead tr th:not(:first-child) {
+    border-left: 1px solid #eee;
+    text-align: center;
+}
+
+.table-financial-main tbody tr td:nth-child(11) {
+    background-color: #fff7ec;
+}
+.table-financial-main tbody tr td:nth-child(10) {
+    background-color: #f5fbfd;
+}
+.table-financial-main tbody tr td:nth-child(7) {
+    background-color: #f5f9f6;
+}
+.table-financial-main tbody tr.first-level td {
+    background-color: #f9f9f9;
+}
+
+.table-financial-main tbody tr.first-level i:hover {
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .prog .left1 {
+        padding: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .prog #financial-chart-container {
+        margin-left: -35px;
+    }
+}
+
 .budgets .angular-ui-tree-node .angular-ui-tree-nodes:before {
     left: 20px;
 }

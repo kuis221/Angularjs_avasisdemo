@@ -1,71 +1,75 @@
-<table class="table mb20" id="budget-stats">
-    <tr>
-        <td class="text-muted">Square footage</td>
-        <td class="font-bold">5,200</td>
-    </tr>
-    <tr>
-        <td class="text-muted">Goal Cost per Sqft</td>
-        <td class="font-bold">$300.00</td>
-        <td class="text-muted">Goal Construction Cost</td>
-        <td class="font-bold">$1,560.00</td>
-    </tr>
-    <tr>
-        <td class="text-muted">Current Cost per Sqft</td>
-        <td class="font-bold">$309.00</td>
-        <td class="text-muted">Current Construction Cost</td>
-        <td class="font-bold">$2,345.00</td>
-    </tr>
-    <tr>
-        <td class="text-muted">Variance</td>
-        <td class="font-bold text-danger">-$10</td>
-        <td class="text-muted">Variance</td>
-        <td class="font-bold text-danger">-$980.00</td>
-    </tr>
-</table>
-<div class="budgets">
-    <div class="table-tree" style="padding: 15px 20px; background: #f3f3f4;">
-        <div class="text-muted">
-            <div>&nbsp;</div>
-            <div style="width: 100px">Labor</div>
-            <div style="width: 100px">Materials</div>
-            <div style="width: 100px">Equipment</div>
-            <div style="width: 100px">Miscellanous</div>
-            <div style="width: 100px">Total</div>
-            <div style="width: 120px">Items</div>
-            <div style="width: 80px">Status</div>
-            <div style="width: 60px">CPSF</div>
-            <div style="width: 60px">% of Project</div>
-        </div>
-    </div>
-    <div ui-tree data-drag-enabled="false" data-max-depth="3">
-        <ol ui-tree-nodes="" ng-model="budgets">
-            <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
-        </ol>
-    </div>
-</div>
-<!-- Nested node template -->
-<script type="text/ng-template" id="budget-item-template.html">
-    <div ui-tree-handle class="tree-node tree-node-content table-tree">
-        <div class="text-muted font-regular">
-            <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
-                <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
-                <div style="display: inline-block">
-                    <div class="text-gray division">{{item.division}}</div>
-                    <span>{{item.name}}</span>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table mb20" id="budget-stats">
+            <tr>
+                <td class="text-muted">Square footage</td>
+                <td class="font-bold">5,200</td>
+            </tr>
+            <tr>
+                <td class="text-muted">Goal Cost per Sqft</td>
+                <td class="font-bold">$300.00</td>
+                <td class="text-muted">Goal Construction Cost</td>
+                <td class="font-bold">$1,560.00</td>
+            </tr>
+            <tr>
+                <td class="text-muted">Current Cost per Sqft</td>
+                <td class="font-bold">$309.00</td>
+                <td class="text-muted">Current Construction Cost</td>
+                <td class="font-bold">$2,345.00</td>
+            </tr>
+            <tr>
+                <td class="text-muted">Variance</td>
+                <td class="font-bold text-danger">-$10</td>
+                <td class="text-muted">Variance</td>
+                <td class="font-bold text-danger">-$980.00</td>
+            </tr>
+        </table>
+        <div class="budgets">
+            <div class="table-tree" style="padding: 15px 20px; background: #f3f3f4;">
+                <div class="text-muted">
+                    <div>&nbsp;</div>
+                    <div style="width: 100px">Labor</div>
+                    <div style="width: 100px">Materials</div>
+                    <div style="width: 100px">Equipment</div>
+                    <div style="width: 100px">Miscellanous</div>
+                    <div style="width: 100px">Total</div>
+                    <div style="width: 120px">Items</div>
+                    <div style="width: 80px">Status</div>
+                    <div style="width: 60px">CPSF</div>
+                    <div style="width: 60px">% of Project</div>
                 </div>
             </div>
-            <div style="width: 100px">{{item.labor | currency:'$':0}}</div>
-            <div style="width: 100px">{{item.materials | currency:'$':0}}</div>
-            <div style="width: 100px">{{item.equipment | currency:'$':0}}</div>
-            <div style="width: 100px">{{item.misc | currency:'$':0}}</div>
-            <div style="width: 100px">{{item.total | currency:'$':0}}</div>
-            <div style="width: 120px"><span class="items" ng-if="item.items">{{item.items}}</span></div>
-            <div style="width: 80px">{{item.status}}</div>
-            <div style="width: 60px">{{item.cpsf}}</div>
-            <div style="width: 60px"><span ng-if="item.percent_of_project">{{item.percent_of_project}}%</span></div>
+            <div ui-tree data-drag-enabled="false" data-max-depth="3">
+                <ol ui-tree-nodes="" ng-model="budgets">
+                    <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
+                </ol>
+            </div>
         </div>
+        <!-- Nested node template -->
+        <script type="text/ng-template" id="budget-item-template.html">
+            <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                <div class="text-muted font-regular">
+                    <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                        <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                        <div style="display: inline-block">
+                            <div class="text-gray division">{{item.division}}</div>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </div>
+                    <div style="width: 100px">{{item.labor | currency:'$':0}}</div>
+                    <div style="width: 100px">{{item.materials | currency:'$':0}}</div>
+                    <div style="width: 100px">{{item.equipment | currency:'$':0}}</div>
+                    <div style="width: 100px">{{item.misc | currency:'$':0}}</div>
+                    <div style="width: 100px">{{item.total | currency:'$':0}}</div>
+                    <div style="width: 120px"><span class="items" ng-if="item.items">{{item.items}}</span></div>
+                    <div style="width: 80px">{{item.status}}</div>
+                    <div style="width: 60px">{{item.cpsf}}</div>
+                    <div style="width: 60px"><span ng-if="item.percent_of_project">{{item.percent_of_project}}%</span></div>
+                </div>
+            </div>
+            <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
+                <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
+            </ol>
+        </script>
     </div>
-    <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
-        <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
-    </ol>
-</script>
+</div>
