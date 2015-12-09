@@ -79,7 +79,7 @@
 }
 
 @media (min-width: 768px) {
-    .prog #financial-chart-container {
+    .prog #financial-chart-container1 {
         margin-left: -35px;
     }
 }
@@ -116,4 +116,15 @@
 }
 #budget-stats td, #budget-stats tbody {
     border: none !important;
+}
+
+
+#bankdraw-stats {}
+
+.bankdraw-main-table {
+    border: 1px solid #eee;
+}
+
+.bankdraw-main-table table thead tr th {
+
 }
