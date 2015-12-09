@@ -74,6 +74,9 @@ table.table-bids tbody + tbody {
 .table-bids .grand-total {
     height: 90px;
 }
+.grand-title {
+    margin-left: 20px;
+}
 
 .table-bids .bids-status {
     font-size: 9px;
