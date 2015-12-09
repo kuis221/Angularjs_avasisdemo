@@ -4,7 +4,7 @@ var gsass = require('gulp-sass');
 var server = require('gulp-express');
 
 var paths = {
-    sass: ['public/content/sass/**/*.scss']
+    sass: ['public/content/sass/**/*.scss', '!public/content/sass/mixins.scss', '!public/content/sass/variables.scss']
 };
 
 gulp.task('sass', function() {
