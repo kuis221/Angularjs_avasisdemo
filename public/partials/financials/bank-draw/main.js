@@ -46,9 +46,14 @@ app.controller('BankDrawCtrl',
         }
         $scope.goNext = function() {
             var index = getStepIndex($scope.currentStep);
-            if (index == $scope.steps.length -1 ) // if final step
-                return;
             $state.go($scope.steps[index + 1].state);
+        }
+        $scope.isFinalStep = function() {
+            var index = getStepIndex($scope.currentStep);
+            return index == $scope.steps.length -1; // if final step
+        }
+        $scope.submit = function() {
+            $state.go('financials.main');
         }
 
         getStepIndex = function(step) {

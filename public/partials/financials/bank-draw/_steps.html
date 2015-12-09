@@ -15,7 +15,8 @@
                 <strong class="savedraft">Save Draft</strong>
             </div>
             <div class="col-lg-4">
-                <button class="btn btn-w-n btn-danger" type="button" ng-click="goNext()">Next</button>
+                <button class="btn btn-w-n btn-danger" type="button" ng-click="goNext()" ng-if="!isFinalStep()">Next</button>
+                <button class="btn btn-w-n btn-danger" type="button" ng-click="submit()" ng-if="isFinalStep()">Submit</button>
             </div>
         </div>
     </div>
