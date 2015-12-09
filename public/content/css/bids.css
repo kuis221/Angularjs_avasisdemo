@@ -180,3 +180,8 @@ table.table-bids tbody + tbody {
 .detailed-opt .border-right {
     margin-right: 20px;
 }
+
+.btn-bids {
+    width: 125px;
+    font-family: "AvenirNextLTPro-Demi";
+}
