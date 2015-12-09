@@ -1,4 +1,4 @@
-app.controller('DocumentsCtrl',
-    ['$scope', '$stateParams', function ($scope, $stateParams) {
-
+app.controller('BankDrawDocumentsCtrl',
+    ['$scope', '$state', function ($scope, $state) {
+        $scope.$parent.setCurrentStep($state.current.name);
     }]);

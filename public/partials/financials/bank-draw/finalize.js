@@ -1,4 +1,5 @@
-app.controller('FinalizeCtrl',
-    ['$scope', '$stateParams', function ($scope, $stateParams) {
+app.controller('BankDrawFinalizeCtrl',
+    ['$scope', '$state', function ($scope, $state) {
+        $scope.$parent.setCurrentStep($state.current.name);
 
     }]);
