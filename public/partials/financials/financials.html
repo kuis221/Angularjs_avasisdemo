@@ -11,9 +11,15 @@
     </div>
     <div class="col-xs-6 col-lg-2 pr20">
         <div class="text-right">
-            <a href="#" class="btn btn-success btn-lg">
-                <i class="fa fa-plus"></i> Add New
+            <a class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-plus"></i> Create New
             </a>
+            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                <li><a href="javascript:void(0)">Budget Estimate</a></li>
+                <li><a href="javascript:void(0)">Purchase Order</a></li>
+                <li><a href="javascript:void(0)">Payment Application</a></li>
+                <li><a ui-sref="bankdraw.payment-application">Bank Draw</a></li>
+            </ul>
         </div>
     </div>
 </div>
