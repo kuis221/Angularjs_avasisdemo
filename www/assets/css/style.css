@@ -3602,16 +3602,8 @@ table.tablebankTopRight tr td p {
     padding: 0;
     position: relative;
 }
-.bs-wizard > .bs-wizard-step + .bs-wizard-step {} .bs-wizard > .bs-wizard-step .bs-wizard-info {
-    color: #4a4a4a;
-    font-family: 'AvenirNextLTPro-Demi';
-    font-size: 14px;
-}
-.complete .text-center {
-    color: #e75c5b !important;
-}
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
-    background: #f6cece none repeat scroll 0 0;
+    background: #c1e6f1 none repeat scroll 0 0;
     border-radius: 50%;
     display: block;
     height: 35px;
@@ -3623,7 +3615,7 @@ table.tablebankTopRight tr td p {
     width: 35px;
 }
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot::after {
-    background: #e25c5c none repeat scroll 0 0;
+    background: #19aad2 none repeat scroll 0 0;
     border: 3px solid #fff;
     border-radius: 50px;
     content: " ";
@@ -3632,6 +3624,12 @@ table.tablebankTopRight tr td p {
     position: absolute;
     top: 8px;
     width: 20px;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot.active {
+    background: #f6cece none repeat scroll 0 0;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot.active::after {
+    background: #e25c5c none repeat scroll 0 0;
 }
 .bs-wizard > .bs-wizard-step > .progress {
     position: relative;
@@ -3927,29 +3925,6 @@ table.tablebankTopRight tr td p {
     font-size: 18px;
     color: #8c8c8c;
 }
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {
-    background: #c1e6f1 none repeat scroll 0 0;
-    border-radius: 50%;
-    display: block;
-    height: 35px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-    position: absolute;
-    top: 23px;
-    width: 35px;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {
-    background: #19aad2 none repeat scroll 0 0;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    content: " ";
-    height: 20px;
-    left: 7px;
-    position: absolute;
-    top: 8px;
-    width: 20px;
-}
 .bs-wizard-info.text-blue {
     text-align: center;
     color: #19aad2 !important;
@@ -4091,36 +4066,6 @@ table.tableTabs tbody td input.customBtn {
 }
 .table-custom1 span {
     font-size: 16px;
-}
-.bs-wizard > .bs-wizard-step .bs-wizard-info {
-    color: #999;
-    font-size: 14px;
-}
-.complete .text-center {
-    color: #e75c5b !important;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
-    background: #f6cece none repeat scroll 0 0;
-    border-radius: 50%;
-    display: block;
-    height: 35px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-    position: absolute;
-    top: 23px;
-    width: 35px;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot::after {
-    background: #e25c5c none repeat scroll 0 0;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    content: " ";
-    height: 20px;
-    left: 7px;
-    position: absolute;
-    top: 8px;
-    width: 20px;
 }
 .bs-wizard > .bs-wizard-step > .progress {
     position: relative;
@@ -4300,33 +4245,6 @@ table.tableTabs tbody td input.customBtn {
 }
 .table.Payment .ibox-tools i {
     font-size: 18px;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1 {
-    background: #c1e6f1 none repeat scroll 0 0;
-    border-radius: 50%;
-    display: block;
-    height: 35px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-    position: absolute;
-    top: 23px;
-    width: 35px;
-}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot1::after {
-    background: #19aad2 none repeat scroll 0 0;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    content: " ";
-    height: 20px;
-    left: 7px;
-    position: absolute;
-    top: 8px;
-    width: 20px;
-}
-.bs-wizard-info.text-blue {
-    text-align: center;
-    color: #19aad2 !important;
 }
 strong.red {
     color: #e75c5b !important;
