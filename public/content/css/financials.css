@@ -1,9 +1,29 @@
-.financial-wrapper {
+.financial-wrapper .nav.nav-tabs {
+    border: 1px solid #eee;
+}
+
+.financial-main-panel {
     border: 1px solid #eee;
 }
 
 .financial-wrapper .panel {
     margin: 0px;
+}
+
+.row.white.financial-main-bottom {
+    margin: 0px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+}
+
+.financial-main-bottom div > span {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+}
+
+.financial-main-bottom div > p {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
 }
 
 .table-financial-main {
@@ -53,4 +73,38 @@
     .prog .left1 {
         padding: 16px;
     }
+}
+
+.budgets .angular-ui-tree-node .angular-ui-tree-nodes:before {
+    left: 20px;
+}
+.budgets .angular-ui-tree-nodes .angular-ui-tree-nodes {
+    padding-left: 20px;
+}
+.budgets span.items {
+    background: #4a4a4a;
+    color: white;
+    border-radius: 3px;
+    font-size: 8px;
+    padding: 1px 10px;
+    min-width: 100px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 16px;
+    font-family: "AvenirNextLTPro-Demi";
+}
+.budgets {
+    border: 1px solid #eee;
+}
+.budgets .division {
+    font-size: 10px;
+    line-height: 10px;
+}
+#budget-stats {
+    width: 50%;
+    border: none;
+}
+#budget-stats td, #budget-stats tbody {
+    border: none !important;
 }

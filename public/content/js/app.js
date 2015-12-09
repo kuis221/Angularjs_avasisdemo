@@ -118,6 +118,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/team-members/team-members-list.html',
             controller: 'TeamMembersCtrl'
         })
+        .state('team-members.risk', {
+            url: '/risk',
+            templateUrl: 'partials/team-members/risk.html',
+            controller: 'RiskCtrl',
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('action-items', {
             url: '/action-items',
             abstract: true,
@@ -164,11 +172,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/documents/list.html',
             controller: 'DocumentsCtrl'
         })
+        .state('bids', {
+            url: '/bids',
+            templateUrl: 'partials/bids/bids.html',
+            controller: 'BidsCtrl'
+        })
         .state('sample', {
             url: '/sample',
             templateUrl: 'partials/sample/sample.html',
             controller: 'SampleCtrl'
         });
+
 }]);
 
 app.run (["$rootScope", function($rootScope) {
