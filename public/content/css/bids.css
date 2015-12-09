@@ -180,13 +180,3 @@ table.table-bids tbody + tbody {
 .detailed-opt .border-right {
     margin-right: 20px;
 }
-
-.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
-  transition: all linear 0.7s;
-}
-
-.animate-show.ng-hide {
-  line-height: 0;
-  opacity: 0;
-  padding: 0 10px;
-}
