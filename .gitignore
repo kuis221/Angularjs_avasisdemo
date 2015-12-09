@@ -1,0 +1,6 @@
+node_modules/gulp
+node_modules/gulp-express
+node_modules/gulp-sass
+node_modules/gulp-util
+
+node_modules/.bin/gulp

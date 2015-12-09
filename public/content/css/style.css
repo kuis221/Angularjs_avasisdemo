@@ -199,6 +199,24 @@ svg tspan {
     color: white;
 }
 
+.text-default {
+    color: #4a4a4a;
+}
+
+.text-muted {
+    color: #8b8b8b;
+}
+
+.text-gray {
+    color: #808080;
+}
+
+.text-gray-lighter {
+    color: #9e9e9e;
+}
+.text-dark {
+    color: black;
+}
 .text-primary {
     color: #3aabd5;
 }
@@ -219,24 +237,6 @@ svg tspan {
     color: #2a2d33;
 }
 
-.text-default {
-    color: #4a4a4a;
-}
-
-.text-muted {
-    color: #8b8b8b;
-}
-
-.text-gray {
-    color: #808080;
-}
-
-.text-gray-lighter {
-    color: #9e9e9e;
-}
-.text-dark {
-    color: black;
-}
 
 textarea {
     padding: 15px;

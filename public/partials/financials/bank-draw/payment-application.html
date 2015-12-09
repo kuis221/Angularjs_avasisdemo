@@ -1,329 +1,221 @@
-
-<!--<div id="page-wrapper" class="inner-page-wrapper">
-    NOT IMPLEMENTED
-    <div class="row white-bg">
-        <a ui-sref="financials.bankdraw.payment-application" class="btn btn-lg">NEXT</a>
-    </div>
-</div>-->
-
-<div class="bankdraw-inner-page">
-    <!----==================TOP NAV BAR==================---->
-    <div class="row bankbg">
-        <div class="col-md-1 noPdingLeft">
-            <div class="closeBox">
-                <p><a href="#">Close <i class="fa fa-caret-right"></i></a></p>
-            </div>
-        </div>
-        <div class="col-sm-7 heading">
-            <h2>New Bank Draw Request</h2>
-            <h2 class="label label-info1">OWNER</h2>
-            <h4>Enclave at Sun Canyon Lots 34 and 35, LLC</h4>
-            <h5>Contractor</h5>
-            <span>Construction Lending Office</span>
-            <h5>Property</h5>
-            <span>2549 & 2555 Enclave Ln., Park City, UT</span>
-            <h5>Loan #</h5>
-            <span>1060524101-26</span>
-        </div>
-        <div class="col-sm-4 text-right mt25">
-            <table class="table table-condensed tablebankTopRight">
+<div class="row pt30">
+    <div class="col-md-4 customScroll">
+        <div class="table-responsive">
+            <table class="table bankdaterange">
+                <thead>
+                    <tr>
+                        <th colspan="2"><p>Filter by &nbsp; &nbsp; &nbsp;<span>Date Range</span></p></th>
+                        <th><span>Amount Range</span></th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td><span>Draw request NUMBER</span></td>
-                        <td width="100px"><span class="noBtn">193</span></td>
-                    </tr>
-                    <tr>
-                        <td><span>Date initiated</span></td>
-                        <td width="100px"><p>8/23/2014</p></td>
-                    </tr>
-                    <tr>
-                        <td><span>Initiated BY</span></td>
-                        <td width="100px">Eric Hoffman</td>
-                    </tr>
-
-                    <tr>
-                        <td><span>Curren Status</span></td>
-                        <td width="100px"><p class="greenClr">Completed</p></td>
+                        <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
+                        <td>
+                            <div class="bankfilterDetails">
+                                <strong>Bob Jones</strong>
+                                <p>Project Name Goes Here</p>
+                                <span>$150,000</span>
+                            </div>
+                        </td>
+                        <td><b>Jun 23, 2015</b></td>
                     </tr>
                 </tbody>
-            </table>
-        </div>
-    </div>
-    <!----==================MIDDLE CONTENT==================---->
-    <div class="row prog-inner mt35">
-        <div class="row progressBar mt15">
-            <!----================== START DEFAULT WIZARD==================---->
-            <div class="col-lg-9">
-                <div class="row bs-wizard" style="border-bottom:0;">
-                    <!-- active -->
-                    <div class="col-xs-12 col-md-2 bs-wizard-step complete">
-                        <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center">Payment Application</div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                        <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center">Draw Details</div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                        <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center">Compliance</div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                        <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center">Documents</div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                        <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center">Payment Details</div>
-                    </div>
-                    <div class="col-xs-12 col-md-2 bs-wizard-step disabled">
-                        <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center">Finalize</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <div class="row mt15">
-                    <div class="col-lg-4 col-lg-offset-2">
-                        <strong class="savedraft">Save Draft</strong>
-                    </div>
-                    <div class="col-lg-4">
-                        <button class="btn btn-w-n btn-danger" type="button">Next</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row pt30">
-            <div class="col-md-4 customScroll">
-                <div class="table-responsive">
-                    <table class="table bankdaterange">
-                        <thead>
-                            <tr>
-                                <th colspan="2"><p>Filter by &nbsp; &nbsp; &nbsp;<span>Date Range</span></p></th>
-                                <th><span>Amount Range</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
-                                <td>
-                                    <div class="bankfilterDetails">
-                                        <strong>Bob Jones</strong>
-                                        <p>Project Name Goes Here</p>
-                                        <span>$150,000</span>
-                                    </div>
-                                </td>
-                                <td><b>Jun 23, 2015</b></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
-                                <td>
-                                    <div class="bankfilterDetails">
-                                        <strong>Iris Goldman</strong>
-                                        <p>Project Name Goes Here</p>
-                                        <span>$14,000</span>
-                                    </div>
-                                </td>
-                                <td><b>Jun 21, 2015</b></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
-                                <td>
-                                    <div class="bankfilterDetails">
-                                        <strong>Bob Jones</strong>
-                                        <p>Project Name Goes Here</p>
-                                        <span>$150,000</span>
-                                    </div>
-                                </td>
-                                <td><b>Jun 23, 2015</b></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
-                                <td>
-                                    <div class="bankfilterDetails">
-                                        <strong>David Anderson</strong>
-                                        <p>Project Name Goes Here</p>
-                                        <span>$50,000</span>
-                                    </div>
-                                </td>
-                                <td><b>Jun 19, 2015</b></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
-                                <td>
-                                    <div class="bankfilterDetails">
-                                        <strong>Bob Jones</strong>
-                                        <p>Project Name Goes Here</p>
-                                        <span>$150,000</span>
-                                    </div>
-                                </td>
-                                <td><b>Jun 23, 2015</b></td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
-                                <td>
-                                    <div class="bankfilterDetails">
-                                        <strong>Iris Goldman</strong>
-                                        <p>Project Name Goes Here</p>
-                                        <span>$14,000</span>
-                                    </div>
-                                </td>
-                                <td><b>Jun 21, 2015</b></td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-
-            </div>
-
-            <div class="col-md-8">
-                <div class="panel-body custom-panel-body ">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="tab-1">
-                            <div class="table-responsive">
-                                <p class="hding">Summary of Selected Pay Applications</p>
-                                <table class="table table-bankright">
-                                    <thead>
-                                        <tr class="lightgry">
-                                            <th>Info</th>
-                                            <th width="150px">Sched / Est<br /> Completion Date</th>
-                                            <th>Construction</th>
-                                            <th>SOW</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="BankTableDetails">
-                                                    <span>Bob Jones</span>
-                                                    <p>Flora Corp.</p>
-                                                    <ul class="breadcrumb1">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-12 project mt30">
-                                                    <span>Project Name Goes Here</span>
-                                                    <p>Jun 21, 2015</p>
-                                                </div>
-                                            </td>
-                                            <td width="150px">
-                                                <span class="greenTxt">sched</span>
-                                                <p class="bigTxt">Jun 23, 2016</p>
-                                                <span class="greenTxt">sched</span>
-                                                <p class="bigTxt">Jun 23, 2016</p>
-                                            </td>
-                                            <td>
-                                                <span class="greenTxt">completed</span>
-                                                <p class="bigTxt">84%</p>
-                                                <span class="greenTxt">cost</span>
-                                                <p class="bigTxt">$1,450,000</p>
-                                            </td>
-                                            <td>
-                                                <span>
-                                                    Master bathroom cabinetry,
-                                                    Carpet, Kitchen Something, Another
-                                                    something.
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <h2>$150,000</h2>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="BankTableDetails">
-                                                    <span>David Anderson</span>
-                                                    <p>Company Name Here</p>
-                                                    <ul class="breadcrumb1">
-                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-12 project mt30">
-                                                    <span>Project Name Goes Here</span>
-                                                    <p>Jun 21, 2015</p>
-                                                </div>
-                                            </td>
-                                            <td width="150px">
-                                                <span class="greenTxt">sched</span>
-                                                <p class="bigTxt">Jun 23, 2016</p>
-                                                <span class="greenTxt">sched</span>
-                                                <p class="bigTxt">Jun 23, 2016</p>
-                                            </td>
-                                            <td>
-                                                <span class="greenTxt">completed</span>
-                                                <p class="bigTxt">84%</p>
-                                                <span class="greenTxt">cost</span>
-                                                <p class="bigTxt">$1,450,000</p>
-                                            </td>
-                                            <td>
-                                                <span>
-                                                    Master bathroom cabinetry,
-                                                    Carpet, Kitchen Something, Another
-                                                    something.
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <h2>$50,000</h2>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="col-lg-12">
-                                    <div class="total pull-right">
-                                        <h3>total</h3>
-                                        <h1>$200,000</h1>
-                                    </div>
-                                </div>
+                <tbody>
+                    <tr>
+                        <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
+                        <td>
+                            <div class="bankfilterDetails">
+                                <strong>Iris Goldman</strong>
+                                <p>Project Name Goes Here</p>
+                                <span>$14,000</span>
                             </div>
+                        </td>
+                        <td><b>Jun 21, 2015</b></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
+                        <td>
+                            <div class="bankfilterDetails">
+                                <strong>Bob Jones</strong>
+                                <p>Project Name Goes Here</p>
+                                <span>$150,000</span>
+                            </div>
+                        </td>
+                        <td><b>Jun 23, 2015</b></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
+                        <td>
+                            <div class="bankfilterDetails">
+                                <strong>David Anderson</strong>
+                                <p>Project Name Goes Here</p>
+                                <span>$50,000</span>
+                            </div>
+                        </td>
+                        <td><b>Jun 19, 2015</b></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
+                        <td>
+                            <div class="bankfilterDetails">
+                                <strong>Bob Jones</strong>
+                                <p>Project Name Goes Here</p>
+                                <span>$150,000</span>
+                            </div>
+                        </td>
+                        <td><b>Jun 23, 2015</b></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><label class=""> <div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" class="i-checks" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></label></td>
+                        <td>
+                            <div class="bankfilterDetails">
+                                <strong>Iris Goldman</strong>
+                                <p>Project Name Goes Here</p>
+                                <span>$14,000</span>
+                            </div>
+                        </td>
+                        <td><b>Jun 21, 2015</b></td>
+                    </tr>
+                </tbody>
 
-                        </div>
-                        <div class="tab-pane" id="tab-2">
-                            <b>Tab2 Data</b>
-                        </div>
-                        <div class="tab-pane" id="tab-3">
-                            <b>Tab3 Data</b>
-                        </div>
-                        <div class="tab-pane" id="tab-4">
-                            <b>Tab4 Data</b>
-                        </div>
-                        <div class="tab-pane" id="tab-5">
-                            <b>Tab5 Data</b>
-                        </div>
-                        <div class="tab-pane" id="tab-6">
-                            <b>Tab6 Data</b>
+            </table>
+
+        </div>
+
+
+    </div>
+
+    <div class="col-md-8">
+        <div class="panel-body custom-panel-body ">
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab-1">
+                    <div class="table-responsive">
+                        <p class="hding">Summary of Selected Pay Applications</p>
+                        <table class="table table-bankright">
+                            <thead>
+                                <tr class="lightgry">
+                                    <th>Info</th>
+                                    <th width="150px">Sched / Est<br /> Completion Date</th>
+                                    <th>Construction</th>
+                                    <th>SOW</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="BankTableDetails">
+                                            <span>Bob Jones</span>
+                                            <p>Flora Corp.</p>
+                                            <ul class="breadcrumb1">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 project mt30">
+                                            <span>Project Name Goes Here</span>
+                                            <p>Jun 21, 2015</p>
+                                        </div>
+                                    </td>
+                                    <td width="150px">
+                                        <span class="greenTxt">sched</span>
+                                        <p class="bigTxt">Jun 23, 2016</p>
+                                        <span class="greenTxt">sched</span>
+                                        <p class="bigTxt">Jun 23, 2016</p>
+                                    </td>
+                                    <td>
+                                        <span class="greenTxt">completed</span>
+                                        <p class="bigTxt">84%</p>
+                                        <span class="greenTxt">cost</span>
+                                        <p class="bigTxt">$1,450,000</p>
+                                    </td>
+                                    <td>
+                                        <span>
+                                            Master bathroom cabinetry,
+                                            Carpet, Kitchen Something, Another
+                                            something.
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <h2>$150,000</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="BankTableDetails">
+                                            <span>David Anderson</span>
+                                            <p>Company Name Here</p>
+                                            <ul class="breadcrumb1">
+                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone"></i>   415 123 3456</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 project mt30">
+                                            <span>Project Name Goes Here</span>
+                                            <p>Jun 21, 2015</p>
+                                        </div>
+                                    </td>
+                                    <td width="150px">
+                                        <span class="greenTxt">sched</span>
+                                        <p class="bigTxt">Jun 23, 2016</p>
+                                        <span class="greenTxt">sched</span>
+                                        <p class="bigTxt">Jun 23, 2016</p>
+                                    </td>
+                                    <td>
+                                        <span class="greenTxt">completed</span>
+                                        <p class="bigTxt">84%</p>
+                                        <span class="greenTxt">cost</span>
+                                        <p class="bigTxt">$1,450,000</p>
+                                    </td>
+                                    <td>
+                                        <span>
+                                            Master bathroom cabinetry,
+                                            Carpet, Kitchen Something, Another
+                                            something.
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <h2>$50,000</h2>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-lg-12">
+                            <div class="total pull-right">
+                                <h3>total</h3>
+                                <h1>$200,000</h1>
+                            </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="tab-pane" id="tab-2">
+                    <b>Tab2 Data</b>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                    <b>Tab3 Data</b>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                    <b>Tab4 Data</b>
+                </div>
+                <div class="tab-pane" id="tab-5">
+                    <b>Tab5 Data</b>
+                </div>
+                <div class="tab-pane" id="tab-6">
+                    <b>Tab6 Data</b>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
