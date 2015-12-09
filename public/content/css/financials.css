@@ -75,6 +75,12 @@
     }
 }
 
+@media (min-width: 768px) {
+    .prog #financial-chart-container {
+        margin-left: -35px;
+    }
+}
+
 .budgets .angular-ui-tree-node .angular-ui-tree-nodes:before {
     left: 20px;
 }
