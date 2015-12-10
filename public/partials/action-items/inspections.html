@@ -333,5 +333,69 @@
             </div>
         </div>
 
+        <div class="row inspection-table">
+            <div class="col-md-12">
+                <h3>Drafts</h3>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Inspection Name</th>
+                            <th class="inspector">Inspector</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="status">Status</th>
+                            <th class="documents">Documents</th>
+                            <th class="date-completion">Date Range for Completion</th>
+                            <th class="order-by-date">Order by Date</th>
+                            <th class="next-inspection">Next Inspection</th>
+                            <th class="date-completed">Date Completed</th>
+                            <th class="action"></th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in inspections.draftsList">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><a href="">{{ row.name }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="inspector"><a href="">{{ row.inspector.name }}</a><br><small>{{ row.inspector.company }}</small></td>
+                            <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="status">{{ row.status }}</td>
+                            <td class="documents">
+                                <a href="" ng-if="row.documents > 0">{{ row.documents }} attachments</a>
+                            </td>
+                            <td class="date-completion">{{ row.date_completion }}</td>
+                            <td class="order-by-date">{{ row.order_by_date }}</td>
+                            <td class="next-inspection">{{ row.next_inspection }}</td>
+                            <td class="date-completed">{{ row.date_completed }}</td>
+                            <td class="action">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="gear-dropdown">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-container="body">
+                                        <i class="fa fa-gear"></i>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                        <li><a href="">Schedule Inspection</a></li>
+                                        <li><a href="">View History</a></li>
+                                        <li><a href="">Download</a></li>
+                                        <li><a href="">Share</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
