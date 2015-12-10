@@ -1,0 +1,18 @@
+#payment-applications .amount {
+  font-size: 20px; }
+
+#payment-applications .title {
+  font-size: 17px; }
+
+#payment-applications .sub-title {
+  font-size: 14px; }
+
+#payment-applications td {
+  vertical-align: middle; }
+
+#payment-applications .data {
+  line-height: 24px; }
+
+#payment-applications .filters > div {
+  padding-right: 10px;
+  display: inline-block; }

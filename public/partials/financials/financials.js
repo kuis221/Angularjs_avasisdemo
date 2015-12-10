@@ -20,9 +20,10 @@ app.controller('FinancialsCtrl',
         };
 
         $scope.currentState = 'financials.main';
-        $rootScope.$on('$stateChangeSuccess', function(e, to) {
-            $scope.currentState = to.name;
-        });
+
+        $scope.setCurrentTab = function(state) {
+            $scope.currentState = state;
+        }
 
         $scope.isActive = function(state) {
             return $scope.currentState === state;

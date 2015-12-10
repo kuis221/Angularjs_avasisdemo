@@ -1,9 +1,9 @@
-﻿<div class="row pt20">
+﻿<div class="row pt20" id="payment-details">
     <div class="table-responsive">
-        <table class="table Payment">
+        <table class="table">
             <thead>
                 <tr>
-                    <th width="200px">Payment Application Initiator</th>
+                    <th colspan="2">Payment Application Initiator</th>
                     <th>Project & Roles</th>
                     <th>Payment Application</th>
                     <th>Split Payments</th>
@@ -15,353 +15,65 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td width="220px">
-                        <div class="feed-Payment">
-                            <a class="pull-left" href="#">
-                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                            </a>
-                            <div class="media-Payment">
-                                <div class="TableDetails">
-                                    <span>Bob Jones</span>
-                                    <p class="profile_text">Flora Corp.</p>
-                                    <ul class="breadcrumb2">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                <tr ng-repeat="item in payment_details">
+                    <td>
+                        <span ng-if="item.role">
+                            <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
+                            <img ng-if="!item.avatar" ng-src="assets/img/user_2.png" class="img-circle" alt="image">
+                        </span>
+                        <div ng-if="!item.role" style="width: 40px; height: 40px; background: #f1f1f1; padding: 12px; border-radius: 50%; text-align: center; color: #888;">
+                            {{item.contact[0]}}
                         </div>
                     </td>
-                    <td>
-                        <p>Parking Level A</p>
-                        <span><b>Senior Director</b></span>
+                    <td style="padding-left: 0">
+                        <div class="sub-title text-primary">{{item.contact}}</div>
+                        <small>{{item.company_name}}</small>
+                        <ul class="list-inline text-muted">
+                            <li><i class="fa fa-envelope"></i></li>
+                            <li><i class="fa fa-comments"></i></li>
+                            <li><i class="fa fa-phone"></i>  {{item.phone_number}}</li>
+                        </ul>
                     </td>
                     <td>
-                        <div class="media-Payment">
-                            <p>$1,000,000</p>
+                        <div class="text-muted">{{item.project_name}}</div>
+                        <div>{{item.role}}</div>
+                    </td>
+                    <td>{{item.payment_application | currency}}</td>
+                    <td>
+                        <div class="btn-group" uib-dropdown>
+                            <button type="button" class="btn round" uib-dropdown-toggle>
+                              <small class="text-danger">{{item.split_payment}} <span class="fa fa-angle-down"></span></small>
+                            </button>
+                            <ul class="uib-dropdown-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a class="text-danger" ng-click="">No</a></li>
+                                <li role="menuitem"><a class="text-success" ng-click="">Yes</a></li>
+                            </ul>
                         </div>
                     </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong class="red">No</strong>
-                            <i class="fa fa-angle-down"></i>
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>$1,000.00</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>Bob Jones</strong>
-                        </div>
-                    </td>
-                    <td>
-
-                        <p>Check</p>
-
-                    </td>
-                    <td><strong class="red">$1,000,000</strong></td>
-                    <td>
-                        <p>
-                            Lorem ipsum dolor sit amet, cons<br />
-                            ectetur adipiscing elit
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="220px">
-                        <div class="feed-Payment">
-                            <a class="pull-left" href="#">
-                                <img src="assets/img/user_5.png" class="img-circle" alt="image">
-                            </a>
-                            <div class="media-Payment">
-                                <div class="TableDetails">
-                                    <span>Aaron Cravers</span>
-                                    <p class="profile_text">Flora Corp.</p>
-                                    <ul class="breadcrumb2">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Parking Level A</p>
-                        <span><b>Senior Director</b></span>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <p>$800.0</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong class="red">No</strong>
-                            <i class="fa fa-angle-down"></i>
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>$800.00</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>Aaron Cravers</strong>
-                        </div>
-                    </td>
-                    <td>
-
-                        <p>Check</p>
-
-                    </td>
-                    <td><strong class="red">$800.00</strong></td>
-                    <td>
-                        <p>
-                            Lorem ipsum dolor sit amet, cons<br />
-                            ectetur adipiscing elit
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="220px">
-                        <div class="feed-Payment">
-                            <a class="pull-left" href="#">
-                                <img src="assets/img/user_6.png" class="img-circle" alt="image">
-                            </a>
-                            <div class="media-Payment">
-                                <div class="TableDetails">
-                                    <span>Jim Stevens</span>
-                                    <p class="profile_text">Flora Corp.</p>
-                                    <ul class="breadcrumb2">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Parking Level A</p>
-                        <span><b>Senior Director</b></span>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <p>$30,000.00</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong class="red">No</strong>
-                            <i class="fa fa-angle-down"></i>
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>$30,000.00</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>Jim Stevens</strong>
-                        </div>
-                    </td>
-                    <td>
-
-                        <p>Check</p>
-
-                    </td>
-                    <td><strong class="red">$30,000.00</strong></td>
-                    <td>
-                        <p>
-                            Lorem ipsum dolor sit amet, cons<br />
-                            ectetur adipiscing elit
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="220px">
-                        <div class="feed-Payment">
-                            <a class="pull-left" href="#">
-                                <img src="assets/img/user_7.png" class="img-circle" alt="image">
-                            </a>
-                            <div class="media-Payment">
-                                <div class="TableDetails">
-                                    <span>Jessica Sawyer</span>
-                                    <p class="profile_text">Flora Corp.</p>
-                                    <ul class="breadcrumb2">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Parking Level A</p>
-                        <span><b>Senior Director</b></span>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <p>$60,000.00</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong class="red">No</strong>
-                            <i class="fa fa-angle-down"></i>
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>$60,000.00</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>Jessica Sawyer</strong>
-                        </div>
-                    </td>
-                    <td>
-
-                        <p>Check</p>
-
-                    </td>
-                    <td><strong class="red">$60,000.00</strong></td>
-                    <td>
-                        <p>
-                            Lorem ipsum dolor sit amet, cons<br />
-                            ectetur adipiscing elit
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="220px">
-                        <div class="feed-Payment">
-                            <a class="pull-left" href="#">
-                                <img src="assets/img/user1.png" class="img-circle" alt="image">
-                            </a>
-                            <div class="media-Payment">
-                                <div class="TableDetails">
-                                    <span>Bob Jones</span>
-                                    <p class="profile_text">Flora Corp.</p>
-                                    <ul class="breadcrumb2">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Parking Level A</p>
-                        <span><b>Senior Director</b></span>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <p>$10,000.00</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong class="red">No</strong>
-                            <i class="fa fa-angle-down"></i>
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>$10,000.00</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>Bob Jones</strong>
-                        </div>
-                    </td>
-                    <td>
-
-                        <p>Check</p>
-
-                    </td>
-                    <td><strong class="red">$10,000.00</strong></td>
-                    <td>
-                        <p>
-                            Lorem ipsum dolor sit amet, cons<br />
-                            ectetur adipiscing elit
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="220px">
-                        <div class="feed-Payment">
-                            <a class="pull-left" href="#">
-                                <img src="assets/img/user_7.png" class="img-circle" alt="image">
-                            </a>
-                            <div class="media-Payment">
-                                <div class="TableDetails">
-                                    <span>Jessica Sawyer</span>
-                                    <p class="profile_text">Flora Corp.</p>
-                                    <ul class="breadcrumb2">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Parking Level A</p>
-                        <span><b>Senior Director</b></span>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <p>$8,500.00</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong class="red">No</strong>
-                            <i class="fa fa-angle-down"></i>
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>$8,500.00</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media-Payment">
-                            <strong>Jessica Sawyer</strong>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Check</p>
-                    </td>
-                    <td><strong class="red">$85,00.00</strong></td>
-                    <td>
-                        <p>
-                            Lorem ipsum dolor sit amet, cons<br />
-                            ectetur adipiscing elit
-                        </p>
-                    </td>
+                    <td class="text-primary">{{item.payment_amount | currency}}</td>
+                    <td class="text-primary">{{item.company_name}}</td>
+                    <td>{{item.payment_form}}</td>
+                    <td>{{item.varience | currency}}</td>
+                    <td>{{item.description}}-</td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2">
+                        <div class="text-muted">Total</div>
+                        {{total_payment_application | currency}}
+                    </td>
+                    <td colspan="3">
+                        <div class="text-muted">Total</div>
+                        {{total_payment_amount | currency}}
+                    </td>
+                    <td colspan="2">
+                        <div class="text-muted">Total</div>
+                        <div class="text-danger">{{total_varience | currency}}</div>
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </div>

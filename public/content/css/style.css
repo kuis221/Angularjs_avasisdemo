@@ -152,6 +152,10 @@ svg tspan {
     color: #fff;
     border: none;
 }
+.btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active {
+    color: #4a4a4a;
+    border: none;
+}
 .btn-default:hover, .btn-hover:focus, .btn-hover:active, .btn-hover.active, .open .dropdown-toggle.btn-hover {
     border: none;
 }
@@ -316,6 +320,7 @@ input[type=url], input[type=password] {
 }
 
 /******* PADDING BOTTOM*******/
+.pl0 {padding-left: 0 !important;}
 .pl10 {padding-left: 10px !important;}
 .pl15 {padding-left: 15px !important;}
 .pl20 {padding-left: 20px !important;}
@@ -386,6 +391,12 @@ input.round {
 .font-semibold {
     font-family: "AvenirNextLTPro-Demi";
 }
+.font-medium {
+    font-family: "AvenirNextLTPro-Medium";
+}
 .font-bold {
     font-family: "AvenirNextLTPro-Bold";
+}
+.inline-block {
+    display: inline-block;
 }

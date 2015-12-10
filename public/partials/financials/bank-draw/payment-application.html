@@ -63,32 +63,28 @@
                                             <ul class="list-inline text-muted">
                                                 <li><i class="fa fa-envelope"></i></li>
                                                 <li><i class="fa fa-comments"></i></li>
-                                                <li><i class="fa fa-phone"></i>  <small>415 123 3456</small></li>
+                                                <li><i class="fa fa-phone"></i>  <small>{{application.phone_number}}</small></li>
                                             </ul>
                                         </div>
                                         <div class="mt10">
-                                            <small>Project Name Goes Here</small>
-                                            <p>Jun 21, 2015</p>
+                                            <small>{{application.project_name}}</small>
+                                            <p>{{application.date}}</p>
                                         </div>
                                     </td>
                                     <td width="150px">
                                         <span class="small text-success">sched</span>
-                                        <p class="subtitle">Jun 23, 2016</p>
+                                        <p class="subtitle">{{application.scheduled_at}}</p>
                                         <span class="small text-success">est</span>
-                                        <p class="sub-title">Jun 23, 2016</p>
+                                        <p class="sub-title">{{application.estimated_at}}</p>
                                     </td>
                                     <td>
                                         <span class="small text-success">completed</span>
-                                        <p class="sub-title">84%</p>
+                                        <p class="sub-title">{{numberToPercentage(application.completed)}}</p>
                                         <span class="small text-success">cost</span>
-                                        <p class="sub-title">{{application.cost | currency}}$8,000</p>
+                                        <p class="sub-title">{{numberToCurrency(application.cost)}}</p>
                                     </td>
                                     <td>
-                                        <small class="text-muted">
-                                            Master bathroom cabinetry,
-                                            Carpet, Kitchen Something, Another
-                                            something.
-                                        </small>
+                                        <small class="text-muted">{{application.sow}}</small>
                                     </td>
                                     <td>
                                         <div class="sub-title">{{application.amount | currency}}</div>

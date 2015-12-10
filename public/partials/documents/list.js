@@ -11,27 +11,27 @@ app.controller('DocumentsCtrl',
                 children: [
                   {
                     id: 111,
-                    title: 'FirePlace Concrete',
-                    project: 'Enclave 14',
+                    title: 'Arthur Contruction RFI',
+                    project: 'Wilmington 47',
                     is_file: true,
-                    scope_of_work: 'Hange the Wall Cabinets, Install Base Cabinets, Measure Base Cabinets',
+                    scope_of_work: 'Dry Wall',
                     team_members: [{
-                        name: 'Bob Jones',
+                        name: 'Brad Harrison',
                         job_title: 'Sub Contractor'
                     }],
-                    access: 'Andrew K., Bryan Lloyd'
+                    access: 'Bruce Wayne'
                   },
                   {
                     id: 112,
-                    title: 'Inceptos',
-                    project: 'Prus Egestas',
+                    title: 'Landscape Grade',
+                    project: 'Wilmington 47',
                     is_file: true,
-                    scope_of_work: 'Estimate the hours how much we need',
+                    scope_of_work: 'Landscaping',
                     team_members: [{
-                        name: 'Bryan Lloyd',
+                        name: 'Torben Moench',
                         job_title: 'Contractor'
                     }],
-                    access: 'Joana, Eric'
+                    access: 'Bruce Wayne, Jane Smith'
                   }
                 ]
               },
@@ -61,16 +61,28 @@ app.controller('DocumentsCtrl',
                 has_files: true,
                 children: [
                   {
-                    id: 211,
-                    title: 'FirePlace Concrete',
-                    project: 'Enclave 14',
+                    id: 111,
+                    title: 'Arthur Contruction RFI',
+                    project: 'Wilmington 47',
                     is_file: true,
-                    scope_of_work: 'Hange the Wall Cabinets, Install Base Cabinets, Measure Base Cabinets',
+                    scope_of_work: 'Dry Wall',
                     team_members: [{
-                        name: 'Bob Jones',
+                        name: 'Brad Harrison',
                         job_title: 'Sub Contractor'
                     }],
-                    access: 'Andrew K., Bryan Lloyd'
+                    access: 'Bruce Wayne'
+                  },
+                  {
+                    id: 112,
+                    title: 'Landscape Grade',
+                    project: 'Wilmington 47',
+                    is_file: true,
+                    scope_of_work: 'Landscaping',
+                    team_members: [{
+                        name: 'Torben Moench',
+                        job_title: 'Contractor'
+                    }],
+                    access: 'Bruce Wayne, Jane Smith'
                   }
                 ]
               },
@@ -159,11 +171,16 @@ app.controller('DocumentsCtrl',
             });
         }
 
-        $scope.showDetailModal = function() {
+        $scope.showDetailModal = function(doc) {
             var modalInstance = $uibModal.open({
                 templateUrl: 'partials/documents/detail-modal.html',
                 controller: 'DocumentDetailModalCtrl',
                 windowClass: 'comment-modal',
+                resolve: {
+                    selectedDoc: function() {
+                        return doc;
+                    }
+                },
                 backdrop: 'static'
             });
 
