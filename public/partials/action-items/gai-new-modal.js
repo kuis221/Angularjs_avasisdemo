@@ -30,13 +30,13 @@ app.controller('GAINewModalCtrl',
         $scope.assignee = [
             {
                 id: 1,
-                name: "Andrew Klein"
+                name: "Joe Sloan"
             }, {
                 id: 2,
-                name: "Bryan Lloyd"
+                name: "Clark Anderson"
             }, {
                 id: 3,
-                name: "Darcy Bertrand"
+                name: "Michael Kovac"
             }
         ];
 
