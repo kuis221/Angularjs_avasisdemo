@@ -59,7 +59,7 @@
                         <span>Bids with Awarded</span>
                         <div>
                             <span class="bids-num">35</span>
-                            <span class="bids-per">{{ report.response }}%</span>
+                            <span class="bids-per">{{ report.awarded }}%</span>
                         </div>
                     </div>
                 </div>
@@ -202,28 +202,28 @@
                         <th>Documents</th>
                     </tr>
                 </thead>
-                <tbody ng-repeat="award in awards track by $index">
+                <tbody ng-repeat="draft in drafts track by $index">
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleDraft($index)">
-                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                                <i class="fa fa-plus"></i>{{ draft.bid_name }}
                             </span>
                         </td>
-                        <td>{{ award.initial_date }}</td>
+                        <td>{{ draft.initial_date }}</td>
                         <td>
-                            <span class="text-active">{{ award.initiated_by }}</span>
+                            <span class="text-active">{{ draft.initiated_by }}</span>
                         </td>
-                        <td>{{ award.dates_distributed }}</td>
-                        <td class="bids-status">{{ award.status | uppercase }}</td>
-                        <td>{{ award.distributed }}</td>
-                        <td>{{ award.replies }}</td>
-                        <td>{{ award.received }}%</td>
-                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ draft.dates_distributed }}</td>
+                        <td class="bids-status">{{ draft.status | uppercase }}</td>
+                        <td>{{ draft.distributed }}</td>
+                        <td>{{ draft.replies }}</td>
+                        <td>{{ draft.received }}%</td>
+                        <td>${{ draft.avg_amount | number:2 }}</td>
                         <td>
-                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                            <span class="text-active-sm">{{ draft.documents }} docs</span>
                         </td>
                     </tr>
-                    <tr ng-show="showDraft[$index]" ng-if="award.children.length > 0" class="animate-show">
+                    <tr ng-show="showDraft[$index]" ng-if="draft.children.length > 0">
                         <td colspan="10">
                             <div class="detailed-bids">
                                 <div class="detailed-opt">
@@ -251,7 +251,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr text-class="text-muted" ng-repeat="bid in award.children">
+                                            <tr text-class="text-muted" ng-repeat="bid in draft.children">
                                                 <td class="text-primary">
                                                     <div class="checkbox checkbox-inline">
                                                         <input type="checkbox" ng-click="selectBid(bid)">
@@ -316,28 +316,28 @@
                         <th>Documents</th>
                     </tr>
                 </thead>
-                <tbody ng-repeat="award in awards track by $index">
+                <tbody ng-repeat="awarded in awardeds track by $index">
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleCreate($index)">
-                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                                <i class="fa fa-plus"></i>{{ awarded.bid_name }}
                             </span>
                         </td>
-                        <td>{{ award.initial_date }}</td>
+                        <td>{{ awarded.initial_date }}</td>
                         <td>
-                            <span class="text-active">{{ award.initiated_by }}</span>
+                            <span class="text-active">{{ awarded.initiated_by }}</span>
                         </td>
-                        <td>{{ award.dates_distributed }}</td>
-                        <td class="bids-status">{{ award.status | uppercase }}</td>
-                        <td>{{ award.distributed }}</td>
-                        <td>{{ award.replies }}</td>
-                        <td>{{ award.received }}%</td>
-                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ awarded.dates_distributed }}</td>
+                        <td class="bids-status">{{ awarded.status | uppercase }}</td>
+                        <td>{{ awarded.distributed }}</td>
+                        <td>{{ awarded.replies }}</td>
+                        <td>{{ awarded.received }}%</td>
+                        <td>${{ awarded.avg_amount | number:2 }}</td>
                         <td>
-                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                            <span class="text-active-sm">{{ awarded.documents }} docs</span>
                         </td>
                     </tr>
-                    <tr ng-show="showCreate[$index]" ng-if="award.children.length > 0" class="animate-show">
+                    <tr ng-show="showCreate[$index]" ng-if="awarded.children.length > 0" class="animate-show">
                         <td colspan="10">
                             <div class="detailed-bids">
                                 <div class="detailed-opt">
@@ -365,7 +365,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr text-class="text-muted" ng-repeat="bid in award.children">
+                                            <tr text-class="text-muted" ng-repeat="bid in awarded.children">
                                                 <td class="text-primary">
                                                     <div class="checkbox checkbox-inline">
                                                         <input type="checkbox" ng-click="selectBid(bid)">
