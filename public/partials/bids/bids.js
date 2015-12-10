@@ -3,337 +3,146 @@ app.controller('BidsCtrl',
         $scope.awards = [
             {
                 id: 1,
-                bid_name: "Steel Framing",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Bob Jones",
-                dates_distributed: "Dec 12, 2015",
-                status: "ready",
-                distributed: "12",
-                replies: 5,
+                bid_name: "Wilmington 47 - Hardwood Flooring",
+                initial_date: "Aug 3, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Aug 4, 2015",
+                status: "not yet awarded",
+                distributed: "3",
+                replies: 2,
                 received: 67,
-                avg_amount: 12435948.00,
+                avg_amount: 70400,
                 documents: 2,
                 children: [
                     {
                         id: 11,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
+                        distrib_to: "David Sokol",
+                        company: "Rocky Mountain Hardwood Floors",
+                        open_status: "opened",
+                        date_submitted: "Aug 6, 2015",
+                        submitted_by: "David Sokol",
+                        amount: 62800
                     },
                     {
                         id: 12,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
-            },
-            {
-                id: 2,
-                bid_name: "Wood Framing",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Eric Hoffman",
-                dates_distributed: "Dec 12, 2015",
-                status: "awarded",
-                distributed: "8",
-                replies: 3,
-                received: 24,
-                avg_amount: 879564.5,
-                documents: 3,
-                children: [
-                    {
-                        id: 21,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
+                        distrib_to: "John Smith",
+                        company: "ABC Hardwood",
+                        open_status: "not yet opened",
+                        date_submitted: "-",
+                        submitted_by: "",
+                        amount: 0
                     },
                     {
-                        id: 22,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
-            },
-            {
-                id: 3,
-                bid_name: "Water Pipes",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "David Hunter",
-                dates_distributed: "Dec 12, 2015",
-                status: "ready",
-                distributed: "16",
-                replies: 12,
-                received: 33,
-                avg_amount: 1098758.89,
-                documents: 1,
-                children: [
-                    {
-                        id: 31,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 32,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
-            },
-            {
-                id: 4,
-                bid_name: "Main Plumbing",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Sam Kovac",
-                dates_distributed: "Dec 12, 2015",
-                status: "awating",
-                distributed: "N/A",
-                replies: 7,
-                received: 9,
-                avg_amount: 12435948,
-                documents: 5,
-                children: [
-                    {
-                        id: 41,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 42,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
+                        id: 13,
+                        distrib_to: "lark Johnson",
+                        company: "Design Flooring",
+                        open_status: "opened",
+                        date_submitted: "Aug 8, 2015",
+                        submitted_by: "Anne Johnson",
+                        amount: 78000
                     }
                 ]
             }
         ];
-        $scope.drafts = [
-            {
-                id: 1,
-                bid_name: "Steel Framing 2nd Floor",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Bob Jones",
-                dates_distributed: "Dec 12, 2015",
-                status: "ready",
-                distributed: "12",
-                replies: 5,
-                received: 67,
-                avg_amount: 12435948.00,
-                documents: 2,
-                children: [
-                    {
-                        id: 11,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 12,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
-            },
-            {
-                id: 2,
-                bid_name: "2nd Floor Windows",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Eric Hoffman",
-                dates_distributed: "Dec 12, 2015",
-                status: "awarded",
-                distributed: "8",
-                replies: 3,
-                received: 24,
-                avg_amount: 879564.5,
-                documents: 3,
-                children: [
-                    {
-                        id: 21,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 22,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
-            }
-        ];
+        $scope.drafts = [];
         $scope.awardeds = [
             {
                 id: 1,
-                bid_name: "Steel Framing 4th Floor",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Bob Jones",
-                dates_distributed: "Dec 12, 2015",
-                status: "ready",
-                distributed: "12",
-                replies: 5,
+                bid_name: "Wilmington 47 - Concrete",
+                initial_date: "Jan 25, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Jan 25, 2015",
+                status: "awarded",
+                distributed: "3",
+                replies: 2,
                 received: 67,
-                avg_amount: 12435948.00,
+                avg_amount: 157808,
                 documents: 2,
-                children: [
-                    {
-                        id: 11,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 12,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
+                children: []
             },
             {
                 id: 2,
-                bid_name: "4th Floor Plumbing",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Eric Hoffman",
-                dates_distributed: "Dec 12, 2015",
+                bid_name: "Wilmington 47 - Structural Metal Framing",
+                initial_date: "Feb 5, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Feb 25, 2015",
                 status: "awarded",
-                distributed: "8",
-                replies: 3,
-                received: 24,
-                avg_amount: 879564.5,
+                distributed: "2",
+                replies: 2,
+                received: 100,
+                avg_amount: 52329,
                 documents: 3,
-                children: [
-                    {
-                        id: 21,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 22,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
+                children: []
             },
             {
                 id: 3,
-                bid_name: "4th Floor Windows",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "David Hunter",
-                dates_distributed: "Dec 12, 2015",
-                status: "ready",
-                distributed: "16",
-                replies: 12,
-                received: 33,
-                avg_amount: 1098758.89,
+                bid_name: "Wilmington 47 - Rough Carpentry",
+                initial_date: "Feb 14, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Feb 15, 2015",
+                status: "awarded",
+                distributed: "4",
+                replies: 2,
+                received: 50,
+                avg_amount: 219615,
                 documents: 1,
-                children: [
-                    {
-                        id: 31,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 32,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
+                children: []
             },
             {
                 id: 4,
-                bid_name: "5th Floor Plumbing",
-                initial_date: "Aug 23, 2015",
-                initiated_by: "Sam Kovac",
-                dates_distributed: "Dec 12, 2015",
-                status: "awating",
-                distributed: "N/A",
-                replies: 7,
-                received: 9,
-                avg_amount: 12435948,
-                documents: 5,
-                children: [
-                    {
-                        id: 41,
-                        distrib_to: "Omare Tristique Vestibulum",
-                        company: "ABC Company",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Mike Mayer",
-                        amount: 879564.5
-                    },
-                    {
-                        id: 42,
-                        distrib_to: "Lorem Dolor",
-                        company: "Flora Corp",
-                        open_status: "ready",
-                        date_submitted: "Aug 23, 2015",
-                        submitted_by: "Jake James",
-                        amount: 1089758.89
-                    }
-                ]
+                bid_name: "Wilmington 47 - Building Service Piping",
+                initial_date: "Mar 18, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Mar 19, 2015",
+                status: "awarded",
+                distributed: "2",
+                replies: 1,
+                received: 50,
+                avg_amount: 17500,
+                documents: 1,
+                children: []
+            },
+            {
+                id: 5,
+                bid_name: "Wilmington 47 - Electrical",
+                initial_date: "Apr 15, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Apr 16, 2015",
+                status: "awarded",
+                distributed: "3",
+                replies: 3,
+                received: 100,
+                avg_amount: 70000,
+                documents: 1,
+                children: []
+            },
+            {
+                id: 6,
+                bid_name: "Wilmington 47 - HVAC",
+                initial_date: "Apr 15, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Apr 15, 2015",
+                status: "awarded",
+                distributed: "5",
+                replies: 3,
+                received: 60,
+                avg_amount: 51030,
+                documents: 2,
+                children: []
+            },
+            {
+                id: 6,
+                bid_name: "Wilmington 47 - Fire Protection",
+                initial_date: "Apr 18, 2015",
+                initiated_by: "Bruce Wayne",
+                dates_distributed: "Apr 18, 2015",
+                status: "awarded",
+                distributed: "2",
+                replies: 2,
+                received: 100,
+                avg_amount: 13337,
+                documents: 1,
+                children: []
             }
         ];
         $scope.report = {};
