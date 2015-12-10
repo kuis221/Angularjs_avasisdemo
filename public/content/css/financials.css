@@ -168,6 +168,15 @@
     padding: 20px !important;
 }
 
+
+#compliance td {
+    padding: 20px 7px;
+    vertical-align: middle !important;
+}
+#compliance img.flag {
+    margin-top: 6px;
+    margin-right: 3px;
+}
 .bankdraw-chart-area div > span:nth-child(2) {
     font-family: AvenirNextLTPro-Demi;
     font-size: 12px;
