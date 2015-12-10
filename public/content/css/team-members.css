@@ -199,3 +199,11 @@ table.tm-scroll-table tbody {
 .outcompliance {
     color: #E42424;
 }
+
+.tm-sortby {
+    border-radius: 30px;
+    font-size: 11px;
+    padding: 7px 14px;
+    border: 1px solid #ccc;
+    color: #888;
+}
