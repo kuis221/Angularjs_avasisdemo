@@ -96,7 +96,17 @@
                     </td>
                     <td><small class="text-success" ng-class="{true: 'text-danger'}[item.status != 'Complaint']">{{item.status}}</small></td>
                     <td class="text-right">
-                        <a class="btn btn-transparent"><i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i></a>
+                        <div class="btn-group" uib-dropdown>
+                            <a class="btn btn-transparent" uib-dropdown-toggle>
+                                <i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i>
+                            </a>
+
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Remove Payment Application From Draw</a></li>
+                                <li role="menuitem"><a ng-click="">Override Compliance Issue</a></li>
+                            </ul>
+                        </div>
+                        
                     </td>
                 </tr>
             </tbody>
