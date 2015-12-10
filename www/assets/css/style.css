@@ -4321,3 +4321,8 @@ table.table {
         top: -41px;
     }
 }
+
+
+#page-wrapper {
+    height: 100%;
+}
