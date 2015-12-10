@@ -299,7 +299,7 @@
     </div>
     <hr>
     <div class="panel-body bids-panel-body">
-        <p>Needing Bid Creation</p>
+        <p>Bids Awarded</p>
         <div class="table-responsive">
             <table class="table table-bids">
                 <thead>
@@ -319,7 +319,7 @@
                 <tbody ng-repeat="awarded in awardeds track by $index">
                     <tr>
                         <td class="bid-name">
-                            <span class="text-active" ng-click="toggleCreate($index)">
+                            <span class="text-active" ng-click="toggleAward($index)">
                                 <i class="fa fa-plus"></i>{{ awarded.bid_name }}
                             </span>
                         </td>
@@ -337,121 +337,7 @@
                             <span class="text-active-sm">{{ awarded.documents }} docs</span>
                         </td>
                     </tr>
-                    <tr ng-show="showCreate[$index]" ng-if="awarded.children.length > 0" class="animate-show">
-                        <td colspan="10">
-                            <div class="detailed-bids">
-                                <div class="detailed-opt">
-                                    <span>Options</span>
-                                    <span class="text-active border-right">Compare Selected Bids</span>
-                                    <span class="text-active border-right">Award</span>
-                                    <span>Archive</span>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div class="checkbox checkbox-inline">
-                                                        <input type="checkbox">
-                                                        <label>&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th>Bid to Distributed</th>
-                                                <th>Company</th>
-                                                <th>OpenStatus</th>
-                                                <th>Date Submitted</th>
-                                                <th>Submitted By</th>
-                                                <th>Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr text-class="text-muted" ng-repeat="bid in awarded.children">
-                                                <td class="text-primary">
-                                                    <div class="checkbox checkbox-inline">
-                                                        <input type="checkbox" ng-click="selectBid(bid)">
-                                                        <label>&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td class="text-active">{{ bid.distrib_to }}</td>
-                                                <td>{{ bid.company }}</td>
-                                                <td class="bids-status">{{ bid.open_status | uppercase }}</td>
-                                                <td>{{ bid.date_submitted }}</td>
-                                                <td class="text-active">{{ bid.submitted_by }}</td>
-                                                <td>${{ bid.amount | number:2 }}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="5"></td>
-                        <td>
-                            <div>Total</div>
-                            <span>36</span>
-                        </td>
-                        <td>
-                            <div>Total</div>
-                            <span>27</span>
-                        </td>
-                        <td>
-                            <div>Total</div>
-                            <span>73%</span>
-                        </td>
-                        <td>
-                            <div>Total</div>
-                            <span>$26,850,219.40</span>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    <hr>
-    <div class="panel-body bids-panel-body">
-        <p>Bids Awarded</p>
-        <div class="table-responsive">
-            <table class="table table-bids">
-                <thead>
-                    <tr>
-                        <th>Bid Name</th>
-                        <th>Date Initiated</th>
-                        <th>Initiated By</th>
-                        <th>Dates Distributed</th>
-                        <th>Status</th>
-                        <th>Distributed</th>
-                        <th>Replies</th>
-                        <th>Received</th>
-                        <th>Avg/Final Amount</th>
-                        <th>Documents</th>
-                    </tr>
-                </thead>
-                <tbody ng-repeat="award in awards track by $index">
-                    <tr>
-                        <td class="bid-name">
-                            <span class="text-active" ng-click="toggleAward($index)">
-                                <i class="fa fa-plus"></i>{{ award.bid_name }}
-                            </span>
-                        </td>
-                        <td>{{ award.initial_date }}</td>
-                        <td>
-                            <span class="text-active">{{ award.initiated_by }}</span>
-                        </td>
-                        <td>{{ award.dates_distributed }}</td>
-                        <td class="bids-status">{{ award.status | uppercase }}</td>
-                        <td>{{ award.distributed }}</td>
-                        <td>{{ award.replies }}</td>
-                        <td>{{ award.received }}%</td>
-                        <td>${{ award.avg_amount | number:2 }}</td>
-                        <td>
-                            <span class="text-active-sm">{{ award.documents }} docs</span>
-                        </td>
-                    </tr>
-                    <tr ng-show="showAward[$index]" ng-if="award.children.length > 0" class="animate-show">
+                    <tr ng-show="showAward[$index]" ng-if="awarded.children.length > 0" class="animate-show">
                         <td colspan="10">
                             <div class="detailed-bids">
                                 <div class="detailed-opt">

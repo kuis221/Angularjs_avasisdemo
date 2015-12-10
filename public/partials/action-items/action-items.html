@@ -3,9 +3,9 @@
         <h2 class="heading">Action Items</h2>
         <ul class="topSubtitle">
             <li>
-                <a href="#">Anderson Perkins LTD Shipping Center <i class="ace-icon fa fa-angle-down"></i></a>
+                <a href="#">Wilmington 47<i class="ace-icon fa fa-angle-down"></i></a>
             </li>
-            <li><span>1796 Prospector AvenuePark City,<br /> Utah 84605</span></li>
+            <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
         </ul>
     </div>
     <div class="col-sm-6 col-lg-2">
@@ -44,13 +44,13 @@
                 </div>
                 <div class="col-md-3 col-sm-6 border-right">
                     <div class="action-completed-chart">
-                        <div sparkline spark-data="[item.completed, item.total-item.completed]" spark-options="pieOptions"></div>
+                        <div sparkline spark-data="[item.completed.done, item.completed.total-item.completed.done]" spark-options="pieOptions"></div>
                     </div>
                     <div>
-                        <span class="action-item-text">{{ round(item.completed / item.total * 100) }}% COMPLETED</span><br>
-                        <span class="action-item-value">{{ item.completed }}</span>
+                        <span class="action-item-text">{{ round(item.completed.done / item.completed.total * 100) }}% COMPLETED</span><br>
+                        <span class="action-item-value">{{ item.completed.done }}</span>
                         <span class="action-item-of">of</span>
-                        <span class="action-item-value">{{ item.total }} items</span>
+                        <span class="action-item-value">{{ item.completed.total }} items</span>
                     </div>
                 </div>
                 <div class="col-md-6">

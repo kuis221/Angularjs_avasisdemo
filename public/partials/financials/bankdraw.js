@@ -2,180 +2,102 @@ app.controller('FinancialsBankdrawCtrl',
     ['$scope', '$state', function($scope, $state) {
 
         $scope.$parent.setCurrentTab($state.current.name);
-        
+
         $scope.bankdraws = [
             {
-                submission_date: 'Jun 23, 2015',
+                submission_date: 'Feb 15, 2015',
                 draw_project: {
-                    name: 'Aenean eu leo quam',
-                    type: 'Aliquam tincidunt mauris eu risus'
+                    name: 'Wilmington 47 Draw #1',
+                    type: ''
                 },
-                submitted_by: 'Eboni Jeffress',
+                submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
                     name: 'Chase',
-                    value: 1250
+                    value: 12613.97
                 },
-                status: 'Awaiting Review',
-                documents: 3,
-                pay_applications: 5
-
-            },
-            {
-                submission_date: 'Jun 21, 2015',
-                draw_project: {
-                    name: 'Euismod Tristique',
-                    type: 'Fusce dapibus, tellus ac cursus co..'
-                },
-                submitted_by: 'Clarissa Spanbauer',
-                bank_draw_amount: {
-                    name: 'Wells Fargo',
-                    value: 1250
-                },
-                status: 'Not Yet Submitted',
+                status: 'Approved - Payment Complete',
                 documents: 1,
-                pay_applications: 3
-
-            },
-            {
-                submission_date: 'Jun 19, 2015',
-                draw_project: {
-                    name: 'Vestibulum Cursus Ultricies',
-                    type: 'Vestibulum Quam'
-                },
-                submitted_by: 'Florentino Hannum',
-                bank_draw_amount: {
-                    name: 'Bank of America',
-                    value: 1250
-                },
-                status: 'Returned With Comments',
-                documents: 5,
-                pay_applications: 14
-
-            },
-            {
-                submission_date: 'Jun 10, 2015',
-                draw_project: {
-                    name: 'Aenean eu leo quam',
-                    type: 'Aliquam tincidunt mauris eu risus'
-                },
-                submitted_by: 'Jutta Welling',
-                bank_draw_amount: {
-                    name: 'Chase',
-                    value: 1250
-                },
-                status: 'Returned With Comments',
-                documents: 2,
                 pay_applications: 1
 
             },
             {
-                submission_date: 'Jun 10, 2015',
+                submission_date: 'Mar 9, 2015',
                 draw_project: {
-                    name: 'Aenean eu leo quam',
-                    type: 'Aliquam tincidunt mauris eu risus'
+                    name: 'Wilmington 47 Draw #2',
+                    type: ''
                 },
-                submitted_by: 'Leopoldo Gordillo',
-                bank_draw_amount: {
-                    name: 'Chase',
-                    value: 1250
-                },
-                status: 'Returned With Comments',
-                documents: 0,
-                pay_applications: 34
-
-            },
-            {
-                submission_date: 'Jun 9, 2015',
-                draw_project: {
-                    name: 'Aenean eu leo quam',
-                    type: 'Aliquam tincidunt mauris eu risus'
-                },
-                submitted_by: 'Brande Wuest',
-                bank_draw_amount: {
-                    name: 'Chase',
-                    value: 1250
-                },
-                status: 'Awaiting Review',
-                documents: 3,
-                pay_applications: 5
-
-            },
-            {
-                submission_date: 'Jun 7, 2015',
-                draw_project: {
-                    name: 'Aenean eu leo quam',
-                    type: 'Aliquam tincidunt mauris eu risus'
-                },
-                submitted_by: 'Deirdre Villanova',
-                bank_draw_amount: {
-                    name: 'Chase',
-                    value: 1250
-                },
-                status: 'Awaiting Review',
-                documents: 1,
-                pay_applications: 3
-
-            },
-            {
-                submission_date: 'Jun 10, 2015',
-                draw_project: {
-                    name: 'Vestibulum Cursus Ultricies',
-                    type: 'Vestibulum Quam'
-                },
-                submitted_by: 'Andrea Alleman',
-                bank_draw_amount: {
-                    name: 'Bank of America',
-                    value: 1250
-                },
-                status: 'Awaiting Review',
-                documents: 5,
-                pay_applications: 14
-
-            },
-            {
-                submission_date: 'Jun 5, 2015',
-                draw_project: {
-                    name: 'Aenean eu leo quam',
-                    type: 'Aliquam tincidunt mauris eu risus'
-                },
-                submitted_by: 'Forest Harten',
-                bank_draw_amount: {
-                    name: 'Chase',
-                    value: 1250
-                },
-                status: 'Awaiting Review',
-                documents: 2,
-                pay_applications: 1
-            },
-            {
-                submission_date: 'Jun 10, 2015',
-                draw_project: {
-                    name: 'Euismod Tristique',
-                    type: 'Aliquam tincidunt mauris eu risus'
-                },
-                submitted_by: 'Yuette Buzard',
+                submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
                     name: 'Wells Fargo',
-                    value: 1250
+                    value: 131560.45
                 },
-                status: 'Awaiting Review',
-                documents: 5,
-                pay_applications: 34
+                status: 'Approved - Payment Complete',
+                documents: 1,
+                pay_applications: 19
+
             },
             {
-                submission_date: 'Jun 1, 2015',
+                submission_date: 'Apr 1, 2015',
                 draw_project: {
-                    name: 'Vestibulum Cursus Ultricies',
-                    type: 'Aliquam tincidunt mauris eu risus'
+                    name: 'Wilmington 47 Draw #3',
+                    type: ''
                 },
-                submitted_by: 'Tokako Obrien',
+                submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
                     name: 'Bank of America',
-                    value: 1250
+                    value: 142741.60
                 },
-                status: 'Awaiting Review',
-                documents: 2,
-                pay_applications: 3
+                status: 'Approved - Payment Complete',
+                documents: 1,
+                pay_applications: 20
+
+            },
+            {
+                submission_date: 'May 15, 2015',
+                draw_project: {
+                    name: 'Wilmington 47 Draw #4',
+                    type: ''
+                },
+                submitted_by: 'Beth Wiseman',
+                bank_draw_amount: {
+                    name: 'Chase',
+                    value: 269400.35
+                },
+                status: 'Approved - Payment Complete',
+                documents: 1,
+                pay_applications: 30
+
+            },
+            {
+                submission_date: 'Jun 15, 2015',
+                draw_project: {
+                    name: 'Wilmington 47 Draw #5',
+                    type: ''
+                },
+                submitted_by: 'Beth Wiseman',
+                bank_draw_amount: {
+                    name: 'Chase',
+                    value: 135233.49
+                },
+                status: 'Approved - Payment Complete',
+                documents: 1,
+                pay_applications: 35
+
+            },
+            {
+                submission_date: 'Jul 10, 2015',
+                draw_project: {
+                    name: 'Wilmington 47 Draw #6',
+                    type: ''
+                },
+                submitted_by: 'Beth Wiseman',
+                bank_draw_amount: {
+                    name: 'Chase',
+                    value: 211797.50
+                },
+                status: 'Approved - Payment Complete',
+                documents: 1,
+                pay_applications: 27
 
             }
         ];

@@ -16,9 +16,9 @@
                         <h2 class="heading">General Action Items</h2>
                             <ul class="topSubtitle">
                                 <li>
-                                    <a href="#">Anderson Perkins LTD Shipping Center <i class="ace-icon fa fa-angle-down"></i></a>
+                                    <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
                                 </li>
-                                <li><span>1796 Prospector AvenuePark City,<br /> Utah 84605</span></li>
+                                <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
                             </ul>
                     </div>
                 </div>
@@ -36,13 +36,13 @@
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="action-completed-chart">
-                            <div sparkline spark-data="[gai.completed, gai.total-gai.completed]" spark-options="pieOptions"></div>
+                            <div sparkline spark-data="[gai.completed.done, gai.completed.total-gai.completed.done]" spark-options="pieOptions"></div>
                         </div>
                         <div>
-                            <span class="action-item-text">{{ round(gai.completed / gai.total * 100) }}% COMPLETED</span><br>
-                            <span class="action-item-value">{{ gai.completed }}</span>
+                            <span class="action-item-text">{{ round(gai.completed.done / gai.completed.total * 100) }}% COMPLETED</span><br>
+                            <span class="action-item-value">{{ gai.completed.done }}</span>
                             <span class="action-item-of">of</span>
-                            <span class="action-item-value">{{ gai.total }} items</span>
+                            <span class="action-item-value">{{ gai.completed.total }} items</span>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -127,11 +127,11 @@
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
                                 <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
                                 <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                             </span>
                         </td>
                         <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
@@ -140,12 +140,12 @@
                         <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
                         <td class="sow">{{ row.sow }}</td>
                         <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
                                                            'pending': row.status[0] == 'pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
@@ -173,11 +173,11 @@
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
                                 <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
                                 <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                             </span>
                         </td>
                         <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
@@ -186,12 +186,12 @@
                         <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
                         <td class="sow">{{ row.sow }}</td>
                         <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'Pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
@@ -219,11 +219,11 @@
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
                                 <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
                                 <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                             </span>
                         </td>
                         <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
@@ -232,12 +232,12 @@
                         <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
                         <td class="sow">{{ row.sow }}</td>
                         <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'Pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
@@ -265,11 +265,11 @@
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
-                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
                                 <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
-                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
                                 <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
-                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                             </span>
                         </td>
                         <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
@@ -278,12 +278,12 @@
                         <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
                         <td class="sow">{{ row.sow }}</td>
                         <td class="status">
-                            <span class="label" ng-class="{'in-process': row.status[0] == 'in process',
-                                                           'draft': row.status[0] == 'draft',
-                                                           'pending': row.status[0] == 'pending'}">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'Pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small>{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
