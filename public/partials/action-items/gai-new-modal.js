@@ -49,7 +49,13 @@ app.controller('GAINewModalCtrl',
                 name: "Elit In Justo"
             }, {
                 id: 3,
-                name: "Alberto In"
+                name: "A Project Name Might Go Here"
+            }, {
+                id : 4,
+                name: "Aenean eu leo quam. Pellentesque"
+            }, {
+                id : 4,
+                name: "Fusce dapibus, tellus ac"
             }
         ];
 
