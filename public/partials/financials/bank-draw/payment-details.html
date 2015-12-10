@@ -17,7 +17,8 @@
             <tbody>
                 <tr ng-repeat="item in payment_details">
                     <td>
-                        <img src="assets/img/user1.png" class="img-circle" alt="image">
+                        <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
+                        <img ng-if="!item.avatar" ng-src="assets/img/user_2.png" class="img-circle" alt="image">
                     </td>
                     <td style="padding-left: 0">
                         <div class="sub-title text-primary">{{item.contact}}</div>
