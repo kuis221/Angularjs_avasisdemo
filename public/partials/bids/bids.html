@@ -3,10 +3,9 @@
         <h2 class="heading">Bids</h2>
         <ul class="topSubtitle">
             <li>
-                <a href="index.html">Project Title Label</a>
-                <i class="ace-icon fa fa-angle-down"></i>
+                <a href="#">Anderson Perkins LTD Shipping Center <i class="ace-icon fa fa-angle-down" ng-click="toggleAddress()"></i></a>
             </li>
-
+            <li><span ng-show="showAddress">1796 Prospector AvenuePark City,<br /> Utah 84605</span></li>
         </ul>
     </div>
     <div class="col-sm-6 col-lg-2">
@@ -60,7 +59,7 @@
                         <span>Bids with Awarded</span>
                         <div>
                             <span class="bids-num">35</span>
-                            <span class="bids-per">{{ report.response }}%</span>
+                            <span class="bids-per">{{ report.awarded }}%</span>
                         </div>
                     </div>
                 </div>
@@ -164,19 +163,19 @@
                         <td colspan="5"></td>
                         <td>
                             <div>Total</div>
-                            <span>117</span>
+                            <span>36</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>35</span>
+                            <span>27</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>53%</span>
+                            <span>83%</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>$987,345,123.00</span>
+                            <span>$26,850,219.40</span>
                         </td>
                         <td></td>
                     </tr>
@@ -203,28 +202,28 @@
                         <th>Documents</th>
                     </tr>
                 </thead>
-                <tbody ng-repeat="award in awards track by $index">
+                <tbody ng-repeat="draft in drafts track by $index">
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleDraft($index)">
-                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                                <i class="fa fa-plus"></i>{{ draft.bid_name }}
                             </span>
                         </td>
-                        <td>{{ award.initial_date }}</td>
+                        <td>{{ draft.initial_date }}</td>
                         <td>
-                            <span class="text-active">{{ award.initiated_by }}</span>
+                            <span class="text-active">{{ draft.initiated_by }}</span>
                         </td>
-                        <td>{{ award.dates_distributed }}</td>
-                        <td class="bids-status">{{ award.status | uppercase }}</td>
-                        <td>{{ award.distributed }}</td>
-                        <td>{{ award.replies }}</td>
-                        <td>{{ award.received }}%</td>
-                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ draft.dates_distributed }}</td>
+                        <td class="bids-status">{{ draft.status | uppercase }}</td>
+                        <td>{{ draft.distributed }}</td>
+                        <td>{{ draft.replies }}</td>
+                        <td>{{ draft.received }}%</td>
+                        <td>${{ draft.avg_amount | number:2 }}</td>
                         <td>
-                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                            <span class="text-active-sm">{{ draft.documents }} docs</span>
                         </td>
                     </tr>
-                    <tr ng-show="showDraft[$index]" ng-if="award.children.length > 0" class="animate-show">
+                    <tr ng-show="showDraft[$index]" ng-if="draft.children.length > 0">
                         <td colspan="10">
                             <div class="detailed-bids">
                                 <div class="detailed-opt">
@@ -252,7 +251,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr text-class="text-muted" ng-repeat="bid in award.children">
+                                            <tr text-class="text-muted" ng-repeat="bid in draft.children">
                                                 <td class="text-primary">
                                                     <div class="checkbox checkbox-inline">
                                                         <input type="checkbox" ng-click="selectBid(bid)">
@@ -278,19 +277,19 @@
                         <td colspan="5"></td>
                         <td>
                             <div>Total</div>
-                            <span>117</span>
+                            <span>20</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>35</span>
+                            <span>8</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>53%</span>
+                            <span>91%</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>$987,345,123.00</span>
+                            <span>$13,315,512.50</span>
                         </td>
                         <td></td>
                     </tr>
@@ -317,28 +316,28 @@
                         <th>Documents</th>
                     </tr>
                 </thead>
-                <tbody ng-repeat="award in awards track by $index">
+                <tbody ng-repeat="awarded in awardeds track by $index">
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleCreate($index)">
-                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                                <i class="fa fa-plus"></i>{{ awarded.bid_name }}
                             </span>
                         </td>
-                        <td>{{ award.initial_date }}</td>
+                        <td>{{ awarded.initial_date }}</td>
                         <td>
-                            <span class="text-active">{{ award.initiated_by }}</span>
+                            <span class="text-active">{{ awarded.initiated_by }}</span>
                         </td>
-                        <td>{{ award.dates_distributed }}</td>
-                        <td class="bids-status">{{ award.status | uppercase }}</td>
-                        <td>{{ award.distributed }}</td>
-                        <td>{{ award.replies }}</td>
-                        <td>{{ award.received }}%</td>
-                        <td>${{ award.avg_amount | number:2 }}</td>
+                        <td>{{ awarded.dates_distributed }}</td>
+                        <td class="bids-status">{{ awarded.status | uppercase }}</td>
+                        <td>{{ awarded.distributed }}</td>
+                        <td>{{ awarded.replies }}</td>
+                        <td>{{ awarded.received }}%</td>
+                        <td>${{ awarded.avg_amount | number:2 }}</td>
                         <td>
-                            <span class="text-active-sm">{{ award.documents }} docs</span>
+                            <span class="text-active-sm">{{ awarded.documents }} docs</span>
                         </td>
                     </tr>
-                    <tr ng-show="showCreate[$index]" ng-if="award.children.length > 0" class="animate-show">
+                    <tr ng-show="showCreate[$index]" ng-if="awarded.children.length > 0" class="animate-show">
                         <td colspan="10">
                             <div class="detailed-bids">
                                 <div class="detailed-opt">
@@ -366,7 +365,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr text-class="text-muted" ng-repeat="bid in award.children">
+                                            <tr text-class="text-muted" ng-repeat="bid in awarded.children">
                                                 <td class="text-primary">
                                                     <div class="checkbox checkbox-inline">
                                                         <input type="checkbox" ng-click="selectBid(bid)">
@@ -392,19 +391,19 @@
                         <td colspan="5"></td>
                         <td>
                             <div>Total</div>
-                            <span>117</span>
+                            <span>36</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>35</span>
+                            <span>27</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>53%</span>
+                            <span>73%</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>$987,345,123.00</span>
+                            <span>$26,850,219.40</span>
                         </td>
                         <td></td>
                     </tr>
@@ -506,42 +505,42 @@
                         <td colspan="5"></td>
                         <td>
                             <div>Total</div>
-                            <span>117</span>
+                            <span>36</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>35</span>
+                            <span>27</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>53%</span>
+                            <span>83%</span>
                         </td>
                         <td>
                             <div>Total</div>
-                            <span>$987,345,123.00</span>
+                            <span>$26,850,219.40</span>
                         </td>
                         <td></td>
                     </tr>
                     <tr class="grand-total">
                         <td colspan="3"></td>
                         <td colspan="2" class="grand-left">
-                            Grand Total
+                            <div class="grand-title">Grand Total</div>
                         </td>
                         <td class="grand-middle">
                             <div>Total</div>
-                            <span>117</span>
+                            <span>128</span>
                         </td>
                         <td class="grand-middle">
                             <div>Total</div>
-                            <span>35</span>
+                            <span>89</span>
                         </td>
                         <td class="grand-middle">
                             <div>Total</div>
-                            <span>53%</span>
+                            <span>92%</span>
                         </td>
                         <td class="grand-middle">
                             <div>Total</div>
-                            <span>$987,345,123.00</span>
+                            <span>$93,866,170.70</span>
                         </td>
                         <td class="grand-right"></td>
                     </tr>
