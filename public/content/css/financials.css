@@ -117,3 +117,50 @@
 #budget-stats td, #budget-stats tbody {
     border: none !important;
 }
+
+#payment-applications .sub-title{
+    font-size: 14px;
+}
+#payment-applications .title{
+    font-size: 17px;
+    line-height: 60px;
+}
+#payment-applications .amount {
+    font-size: 20px;
+}
+#payment-applications td {
+    padding: 15px;
+}
+#payment-applications td.middle-align {
+    vertical-align: middle;
+}
+
+#payment-applications .data {
+    line-height: 24px;
+    font-size: 13px;
+}
+#payment-applications .date {
+    font-size: 12px;
+}
+#payment-applications .filters {
+    padding: 12px 0 10px;
+}
+#payment-applications .filters > div {
+    padding: 7px;
+    display: inline-block;
+}
+#application-list td {
+    padding: 15px 10px;
+}
+.application-summary table {
+    border: 1px solid #dedede;
+}
+.application-summary th {
+    vertical-align: middle !important;
+    background-color: #f9f9f9;
+    padding: 10px 20px !important;
+}
+
+.application-summary td {
+    padding: 20px !important;
+}

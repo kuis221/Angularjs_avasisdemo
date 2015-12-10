@@ -4,7 +4,7 @@ app.controller('BankDrawPaymentApplicationCtrl',
         $scope.isCheckedAll = false;
 
         $scope.payment_applications = [
-            {company_name: 'Synergy Construction', date: '8/5/2015', project_name: 'Wilmington 47', amount: 20358},
+            {company_name: 'Synergy Construction', date: '8/5/2015', checked: true, project_name: 'Wilmington 47', amount: 20358, contact: 'Bob Jones'},
             {company_name: 'Waste Disposal Inc', date: '8/6/2015', project_name: 'Wilmington 47', amount: 1219.55},
             {company_name: 'Summit County', date: '8/10/2015', project_name: 'Wilmington 47', amount: 729.64},
             {company_name: 'Ace Rentals', date: '7/29/2015', project_name: 'Wilmington 47', amount: 2500.3},
@@ -18,5 +18,10 @@ app.controller('BankDrawPaymentApplicationCtrl',
         ];
         $scope.checkAll = function() {
             _.each($scope.payment_applications, function(e) { e.checked = $scope.isCheckedAll; });
+        }
+
+        $scope.checkedTotal = function() {
+            checkedApplications = _.filter($scope.payment_applications, function(e) { return e.checked == true });
+            return _.sum(checkedApplications, function(e) { return e.amount; });
         }
     }]);
