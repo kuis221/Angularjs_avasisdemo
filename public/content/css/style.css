@@ -170,6 +170,9 @@ svg tspan {
     font-size: 14px;
     padding:  15px 25px;
 }
+.btn-round {
+    border-radius: 20px;
+}
 .alert {
     text-align: center;
     border: none;

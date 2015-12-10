@@ -2,7 +2,7 @@
     <div class="table-responsive">
         <table class="table">
             <thead>
-                <tr>
+                <tr class="text-muted">
                     <th>Name</th>
                     <th></th>
                     <th>Project/Role</th>
@@ -12,41 +12,39 @@
                     <th>Judgements</th>
                     <th>Background Check</th>
                     <th>Status</th>
-                    <th>
-                        <div class="pull-left">
-                            <a class="btn1 btn-dangersort btn-sm" href="#">
-                                Sort by  <i class="fa fa-angle-down"></i>
-                            </a>
-                        </div>
+                    <th class="text-right no-padding">
+                        <a class="btn btn-sm dropdown-toggle btn-round">
+                            Sort by  <i class="fa fa-angle-down"></i>
+                        </a>
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr ng-repeat="item in compliances">
                     <td>
                         <img src="assets/img/user1.png" class="img-circle" alt="image">
                     </td>
-                    <td style="padding-left: 0" class="text-muted">
-                        <div class="sub-title text-primary">Bob Jones</div>
-                        <small>Flora Corp.</small>
-                        <ul class="list-inline">
+                    <td style="padding-left: 0">
+                        <div class="sub-title text-primary">{{item.contact}}</div>
+                        <small>{{item.company_name}}</small>
+                        <ul class="list-inline text-muted">
                             <li><i class="fa fa-envelope"></i></li>
                             <li><i class="fa fa-comments"></i></li>
-                            <li><i class="fa fa-phone"></i>  415 123 3456</li>
+                            <li><i class="fa fa-phone"></i>  {{item.phone_number}}</li>
                         </ul>
                     </td>
                     <td>
-                        <div class="text-muted">Parking Level A</div>
-                        <div>Senior Director</div>
+                        <div class="text-muted">{{item.project_name}}</div>
+                        <div>{{item.contract_type}}</div>
                     </td>
                     <td>
                         <div>
                             <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
+                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
-                                <div class="text-muted">Jun 30, 2015</div>
+                                <div class="text-muted small">{{convertDate(item.credit_date)}}</div>
                             </div>
                         </div>
                     </td>
@@ -57,7 +55,18 @@
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
-                                <div class="text-muted">Jun 30, 2015</div>
+                                <div class="text-muted small">{{convertDate(item.insurance_date)}}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="pull-left">
+                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
+                            </div>
+                            <div class="pull-left">
+                                <div class="text-primary small">1 attachment</div>
+                                <div class="text-muted small">{{convertDate(item.license_date)}}</div>
                             </div>
                         </div>
                     </td>
@@ -68,38 +77,24 @@
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
-                                <div class="text-muted">Jun 30, 2015</div>
+                                <div class="text-muted small">{{convertDate(item.judgement_date)}}</div>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div>
                             <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
+                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
-                                <div class="text-muted">Jun 30, 2015</div>
+                                <div class="text-muted small">{{convertDate(item.background_check_date)}}</div>
                             </div>
                         </div>
                     </td>
-                    <td>
-                        <div>
-                            <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
-                            </div>
-                            <div class="pull-left">
-                                <div class="text-primary small">1 attachment</div>
-                                <div class="text-muted">Jun 30, 2015</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td><small class="text-danger">Out of Compliance</small></td>
-                    <td>
-                        <div class="pull-left">
-                            <a class="#"><i class="fa fa-cog"></i></a>
-                            <a href="#"><i class="fa fa-angle-down"></i></a>
-                        </div>
+                    <td><small class="text-success" ng-class="{true: 'text-danger'}[item.status != 'Complaint']">{{item.status}}</small></td>
+                    <td class="text-right">
+                        <a class="btn btn-transparent"><i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i></a>
                     </td>
                 </tr>
             </tbody>
