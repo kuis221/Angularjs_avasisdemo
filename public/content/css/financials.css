@@ -117,3 +117,108 @@
 #budget-stats td, #budget-stats tbody {
     border: none !important;
 }
+
+.bankdraw-chart-area div > span:nth-child(2) {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+    padding-left: 3px;
+    color: #4a4a4a;
+}
+
+.bankdraw-chart-area div > p {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+#bankdraw-stats {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#bankdraw-stats .row .col-lg-6:last-child {
+    border-left: 1px solid #eee;
+}
+
+.bankdraw-chart-area > div:not(:first-child) {
+    padding-top: 20px;
+}
+
+#bankdraw-stats .row h2 {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
+    color: #44474b;
+    margin-top: 0;
+}
+
+#bankdraw-stats .row h3 {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+    color: #8b8b8b;
+}
+
+.bankdraw-main-table {
+    border: 1px solid #eee;
+}
+
+.bankdraw-main-table .table thead tr th {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+    color: #808080;
+}
+
+
+.bankdraw-main-table .table thead tr th,
+.bankdraw-main-table .table tbody tr td {
+    vertical-align: middle;
+    padding: 20px 0 20px 10px
+}
+
+.bankdraw-main-table .table tbody tr td.submission-date {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px;
+    color: #44474b
+}
+
+.bankdraw-main-table .table tbody tr td.draw-project span:first-child {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.draw-project span:last-child {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px
+}
+
+.bankdraw-main-table .table tbody tr td.submitted-by {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.bank-draw-amount span:first-child {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.bank-draw-amount span:last-child {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.status div {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 9px;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+}
+
+.bankdraw-main-table .table tbody tr td.documents {
+    font-size: 13px;
+    font-family: AvenirNextLTPro-Demi;
+}
+
+.bankdraw-main-table .table tbody tr td.pay-application {
+    font-size: 13px;
+    font-family: AvenirNextLTPro-Demi;
+}
