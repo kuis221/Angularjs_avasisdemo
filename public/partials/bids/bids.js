@@ -160,4 +160,8 @@ app.controller('BidsCtrl',
         $scope.toggleAward = function(index) {
             $scope.showAward[index] = !$scope.showAward[index];
         };
+        $scope.showAddress = false;
+        $scope.toggleAddress = function() {
+            $scope.showAddress = !$scope.showAddress;
+        };
     }]);

@@ -3,9 +3,9 @@
         <h2 class="heading">Bids</h2>
         <ul class="topSubtitle">
             <li>
-                <a href="#">Anderson Perkins LTD Shipping Center <i class="ace-icon fa fa-angle-down"></i></a>
+                <a href="#">Anderson Perkins LTD Shipping Center <i class="ace-icon fa fa-angle-down" ng-click="toggleAddress()"></i></a>
             </li>
-            <li><span>1796 Prospector AvenuePark City,<br /> Utah 84605</span></li>
+            <li><span ng-show="showAddress">1796 Prospector AvenuePark City,<br /> Utah 84605</span></li>
         </ul>
     </div>
     <div class="col-sm-6 col-lg-2">
