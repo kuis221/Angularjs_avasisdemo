@@ -177,6 +177,12 @@
     margin-top: 6px;
     margin-right: 3px;
 }
+
+#payment-details tfoot td{
+    background: #f1f1f1;
+    padding-bottom: 30px;
+}
+
 .bankdraw-chart-area div > span:nth-child(2) {
     font-family: AvenirNextLTPro-Demi;
     font-size: 12px;
