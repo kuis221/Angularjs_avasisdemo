@@ -147,7 +147,7 @@ app.controller('BidsCtrl',
         $scope.showBid = [];
         $scope.showDraft = [];
         $scope.showCreate = [];
-        $scope.showAward = [];        
+        $scope.showAward = [];
         $scope.toggleBid = function(index) {
             $scope.showBid[index] = !$scope.showBid[index];
         };
