@@ -13,23 +13,26 @@ app.controller('ActionItemsCtrl',
         $scope.gai = {
             state: "action-items.general-action-items",
             title: "General Action Items",
-            total: 419,
-            green: 171,
-            orange: 155,
-            red: 92,
-            completed: 140,
+            total: 28,
+            green: 6,
+            orange: 12,
+            red: 8,
+            completed: {
+                total: 35,
+                done: 7
+            },
             assignedMe: {
                 green: {
-                    total: 61,
-                    done: 40
+                    total: 3,
+                    done: 1
                 },
                 orange: {
-                    total: 49,
-                    done: 20,
+                    total: 5,
+                    done: 1,
                 },
                 red: {
-                    total: 33,
-                    done: 26
+                    total: 2,
+                    done: 0.5
                 }
             },
             listRequiredByMe: [
@@ -349,60 +352,43 @@ app.controller('ActionItemsCtrl',
 
         var rfi = {
             title: "RFI",
-            total: 19,
-            green: 4,
-            orange: 7,
+            total: 36,
+            green: 15,
+            orange: 13,
             red: 8,
-            completed: 10,
+            completed: {
+                total: 66,
+                done: 30
+            },
             assignedMe: {
                 green: {
-                    total: 5,
+                    total: 7,
                     done: 4
                 },
                 orange: {
-                    total: 2,
-                    done: 0.5,
+                    total: 9,
+                    done: 5,
                 },
                 red: {
-                    total: 1,
-                    done: 0.1
+                    total: 3,
+                    done: 1
                 }
             }
         };
 
         var changeOrder = {
             title: "Change Order",
-            total: 419,
-            green: 171,
-            orange: 155,
-            red: 92,
-            completed: 140,
-            assignedMe: {
-                green: {
-                    total: 61,
-                    done: 40
-                },
-                orange: {
-                    total: 49,
-                    done: 20,
-                },
-                red: {
-                    total: 33,
-                    done: 26
-                }
-            }
-        };
-
-        var punchList = {
-            title: "Punch List",
             total: 19,
-            green: 4,
-            orange: 7,
-            red: 8,
-            completed: 10,
+            green: 8,
+            orange: 5,
+            red: 4,
+            completed: {
+                total: 31,
+                done: 12
+            },
             assignedMe: {
                 green: {
-                    total: 5,
+                    total: 7,
                     done: 4
                 },
                 orange: {
@@ -410,8 +396,34 @@ app.controller('ActionItemsCtrl',
                     done: 0.5,
                 },
                 red: {
+                    total: 3,
+                    done: 1
+                }
+            }
+        };
+
+        var punchList = {
+            title: "Punch List",
+            total: 5,
+            green: 3,
+            orange: 1,
+            red: 1,
+            completed: {
+                total: 5,
+                done: 0
+            },
+            assignedMe: {
+                green: {
                     total: 1,
-                    done: 0.1
+                    done: 0.2
+                },
+                orange: {
+                    total: 1,
+                    done: 0.5,
+                },
+                red: {
+                    total: 1,
+                    done: 0.7
                 }
             }
         };
@@ -425,12 +437,15 @@ app.controller('ActionItemsCtrl',
                 disableTooltips: true
             },
             state: "action-items.inspections",
-            title: "Inspections",
-            total: 19,
-            green: 4,
-            orange: 7,
-            red: 8,
-            completed: 10,
+            title: "Inspection",
+            total: 7,
+            green: 6,
+            orange: 1,
+            red: 0,
+            completed: {
+                total: 8,
+                done: 1
+            },
             overview: {
                 completed: 59,
                 pending: 36,
@@ -439,16 +454,16 @@ app.controller('ActionItemsCtrl',
             },
             assignedMe: {
                 green: {
-                    total: 5,
-                    done: 4
+                    total: 2,
+                    done: 0.4
                 },
                 orange: {
-                    total: 2,
-                    done: 0.5,
+                    total: 1,
+                    done: 0.3,
                 },
                 red: {
-                    total: 1,
-                    done: 0.1
+                    total: 0,
+                    done: 0
                 }
             },
             pendingList: [
