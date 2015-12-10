@@ -25,7 +25,7 @@ app.controller('DocumentDetailModalCtrl',
             },
             {
                 id: _.uniqueId(),
-                avatar: 'assets/img/bruce-wayne.png.png',
+                avatar: 'assets/img/bruce-wayne.png',
                 created_by: 'Bruce Wayne',
                 created_at: 'Aug 8, 2015 3:40PM',
                 pos: {
@@ -110,7 +110,7 @@ app.controller('DocumentDetailModalCtrl',
         }
         $scope.createComment = function() {
             lastComment = _.last($scope.comments);
-            lastComment.avatar = 'assets/img/bruce-wayne.png.png';
+            lastComment.avatar = 'assets/img/bruce-wayne.png';
             lastComment.created_by = 'Bruce Wayne';
             lastComment.created_at = moment().format('lll');
             lastComment.id = _.uniqueId();
