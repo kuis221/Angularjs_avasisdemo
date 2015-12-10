@@ -163,3 +163,36 @@
 .risk-page-wrapper .prog-inner1 {
     margin-bottom: 0px;
 }
+
+table.tm-scroll-table {
+    display: block;
+}
+
+table.tm-scroll-table tbody {
+    display: block;
+}
+
+.memberv22x .td-name {
+    width: 20%;
+    min-width: 250px;
+}
+
+.memberv22x .td-scheduled {
+    width: 15%;
+}
+
+.memberv22x .td-project {
+    width: 12%;
+}
+
+.memberv22x .td-scope {
+    width: 30%;
+}
+
+.memberv22x .td-flag {
+    width: 15%;
+}
+
+.table.memberv22x th {
+    padding-right: 20px;
+}
