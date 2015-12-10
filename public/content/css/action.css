@@ -576,6 +576,7 @@ th.flag {
 }
 
 .gai-modal textarea {
+    min-height: 120px;
     padding: 20px
 }
 
