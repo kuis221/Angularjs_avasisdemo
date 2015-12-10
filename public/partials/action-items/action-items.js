@@ -430,7 +430,7 @@ app.controller('ActionItemsCtrl',
             green: 4,
             orange: 7,
             red: 8,
-            completed: 12,
+            completed: 10,
             overview: {
                 completed: 59,
                 pending: 36,
