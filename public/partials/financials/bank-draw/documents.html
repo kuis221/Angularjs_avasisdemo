@@ -1,121 +1,27 @@
-<div class="row pt20">
+<div class="pt20">
     <div class="table-responsive">
-        <table class="table table-striped bankdocument">
+        <table class="table text-muted">
             <thead>
-            <thead>
-            <tr>
-                <th>Document Name</th>
-                <th>Type</th>
-                <th>Project</th>
-                <th>Scope of Work</th>
-                <th>User</th>
-            </tr>
+                <tr>
+                    <th>Document Name</th>
+                    <th>Type</th>
+                    <th>Project</th>
+                    <th>Scope of Work</th>
+                    <th>User</th>
+                </tr>
             </thead>
             <tbody>
-            <tr>
-                <td><span class="sky1">Pharetra Bibendum</span></td>
-                <td>Payment Application</td>
-                <td>Project Name</td>
-                <td>Hang the Wall Cabinets, Install</td>
-                <td><span class="sky1">Bob Jones</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Vehicula Adipiscing Cras</span></td>
-                <td>Invoice</td>
-                <td>A long long Project Name</td>
-                <td>Base Cabinets, Measure base cabinets </td>
-                <td><span class="sky1">Eric Hoffman</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Integer posuere</span></td>
-                <td>Contract</td>
-                <td>A long Project Name</td>
-                <td>Vestibulum Elit Lorem</td>
-                <td><span class="sky1">Darren Summers</span></td>
-            </tr>
-
-            <tr>
-                <td><span class="sky1">Erat a ante venenatis dapibus posuere</span></td>
-                <td>Photo</td>
-                <td>Project Name</td>
-                <td>Ultricies Justo Aenean Fusce</td>
-                <td><span class="sky1">Mike Ross</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Risus Nullam</span></td>
-                <td>Lien Waiver</td>
-                <td>A long long Project Name</td>
-                <td>Hang the Wall Cabinets, Install</td>
-                <td><span class="sky1">Harvey Spector</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Pharetra Bibendum</span></td>
-                <td>Photo</td>
-                <td>A long Project Name</td>
-                <td>Base Cabinets, Measure base cabinets</td>
-                <td><span class="sky1">Luis Litt</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Vehicula Adipiscing Cras</span></td>
-                <td>Payment Application</td>
-                <td>Project Name</td>
-                <td>Vestibulum Elit Lorem</td>
-                <td><span class="sky1">Bob Jones</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Integer posuere</span></td>
-                <td>Invoice</td>
-                <td>A long long Project Name</td>
-                <td>Ultricies Justo Aenean Fusce</td>
-                <td><span class="sky1">Eric Hoffman</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Erat a ante venenatis dapibus posuere</span></td>
-                <td>Contract</td>
-                <td>A long Project Name</td>
-                <td>Hang the Wall Cabinets, Install</td>
-                <td><span class="sky1">Darren Summers</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Risus Nullam</span></td>
-                <td>Photo</td>
-                <td>Project Name</td>
-                <td>Base Cabinets, Measure base cabinets </td>
-                <td><span class="sky1">Mike Ross</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Pharetra Bibendum</span></td>
-                <td>Lien Waiver</td>
-                <td>A long long Project Name</td>
-                <td>Vestibulum Elit Lorem</td>
-                <td><span class="sky1">Harvey Spector</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Vehicula Adipiscing Cras</span></td>
-                <td>Photo</td>
-                <td>A long Project Name</td>
-                <td>Ultricies Justo Aenean Fusce</td>
-                <td><span class="sky1">Luis Litt</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Integer posuere</span></td>
-                <td>Payment Application</td>
-                <td>Project Name</td>
-                <td>Base Cabinets, Measure base cabinets </td>
-                <td><span class="sky1">Bob Jones</span></td>
-            </tr>
-            <tr>
-                <td><span class="sky1">Erat a ante venenatis dapibus </span></td>
-                <td>Invoice</td>
-                <td>Another Project Name</td>
-                <td>Vestibulum Elit Lorem</td>
-                <td><span class="sky1">Eric Hoffman</span></td>
-
-            </tr>
+                <tr ng-repeat="document in documents">
+                    <td class="text-primary">{{document.name}}</td>
+                    <td>{{document.document_type}}</td>
+                    <td>{{document.project_name}}</td>
+                    <td>{{document.scope_of_work}}</td>
+                    <td class="text-primary">{{document.company_name}}</td>
+                </tr>
             </tbody>
         </table>
-        <div class="col-lg-12 pb20">
-            <button class="btn btn-w-m btn-upload pull-right" type="button">Upload Files</button>
+        <div class="col-lg-12 mt20 pb20">
+            <button class="btn btn-info btn-md pull-right" type="button">Upload Files</button>
         </div>
     </div>
 </div>
