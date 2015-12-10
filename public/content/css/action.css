@@ -210,7 +210,7 @@
 }
 
 .page-detail-header-wrapper {
-    padding: 40px 15px;
+    padding: 20px 15px 25px 15px
 }
 
 .page-detail-header-wrapper h2.heading {
@@ -576,6 +576,7 @@ th.flag {
 }
 
 .gai-modal textarea {
+    min-height: 120px;
     padding: 20px
 }
 

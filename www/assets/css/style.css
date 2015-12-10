@@ -3559,7 +3559,7 @@ table.tablebankTopRight tr td p {
     background-color: #fff;
     border: 1px solid #d7d7d7;
     border-radius: 4px;
-    margin: 51px auto;
+    margin-top: 51px;
     padding: 0 15px;
 }
 /*------------------ START WIZARD ------------------*/
@@ -4199,4 +4199,9 @@ table.table {
         right: 59px !important;
         top: -41px;
     }
+}
+
+
+#page-wrapper {
+    height: 100%;
 }
