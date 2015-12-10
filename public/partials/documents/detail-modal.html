@@ -26,11 +26,11 @@
              uib-popover-template="'comment-form-template.html'"
              popover-trigger="manual"
              popover-is-open="!comment.id">{{$index + 1}}</div>
-        <img src="assets/img/documents/pdf_sample.jpg">
+        <img src="assets/img/documents/pdf_sample.jpg" class="img-responsive">
     </div>
 </div>
 <div class="pull-left" id="info-section">
-    <div class="subhead">First Place-Concrete.pdf<span class="fa fa-download pl20"></span></div>
+    <div class="subhead">{{selectedDoc.title}}.pdf<span class="fa fa-download pl20"></span></div>
     
     <div class="text-muted small mt10">Uploaded By</div>
     <div class="text-primary">George Biship</div>
