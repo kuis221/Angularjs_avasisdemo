@@ -69,7 +69,6 @@
 
 /* ******************** Preview Modal ***********************/
 
-.modal-content {background-color: transparent; box-shadow: none}
 .photos-preview .modal-content .modal-header {padding: 0;}
 .photos-preview .modal-content .modal-header .close {opacity: 1; color: #fff; font-weight: normal; font-size: 30px; margin-top: -12px}
 .photos-preview .modal-content .modal-header h2{font-family: "AvenirNextLTPro-Demi"; color: #fff; font-size: 12px;}
