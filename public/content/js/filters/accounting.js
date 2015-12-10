@@ -3,9 +3,13 @@ app.filter('accounting', ["$filter", function ($filter) {
         var currency = $filter('currency');         
 
         if(amount < 0){
-            return "(" + (-amount) + ")";
+            amount = -amount;
+            if (!_.isUndefined(currencySymbol))
+                amount = currencySymbol + amount;
+            return "(" + amount + ")";
         }
-
+        if (!_.isUndefined(currencySymbol))
+            amount = currencySymbol + amount;
         return amount;
     };
 }]);

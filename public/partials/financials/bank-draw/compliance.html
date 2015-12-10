@@ -51,7 +51,9 @@
                     <td>
                         <div>
                             <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
+
+                                <img alt="image" ng-if="item.status != 'Complaint'" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
+                                <img alt="image" ng-if="item.status == 'Complaint'" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
@@ -73,7 +75,7 @@
                     <td>
                         <div>
                             <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
+                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
