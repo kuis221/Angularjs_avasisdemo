@@ -50,3 +50,21 @@
 .prj-re-col {
     padding-right: 6px;
 }
+
+.prj-comm {
+    float: right;
+}
+.prj-comm a i {
+    color: #808080;
+}
+.prj-comm span {
+    display: inline-block;
+    padding-right: 10px;
+}
+.prj-comm .border-right {
+    margin-right: 10px;
+}
+
+.prj-table-wrapper {
+    padding: 0px 20px;
+}
