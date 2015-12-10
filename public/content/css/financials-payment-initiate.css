@@ -1,0 +1,324 @@
+.pi-page-wrapper {
+    padding-top: 0px;
+}
+
+.pi-page-wrapper .bankbg {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8;
+}
+
+.pi-page-wrapper .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center;
+}
+
+.pi-page-wrapper .closeBox .fa {
+    margin-right: 5px;
+}
+
+.pi-page-title {
+    margin-top: 60px;
+    width: calc(100% - 100px);
+}
+
+.pi-page-title .heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px;
+}
+
+@media (min-width: 768px) {
+    .pi-page-title .pi-app-info {
+        float: right;
+    }
+}
+
+@media (max-width: 767px) {
+    .pi-page-title .pi-app-info {
+        float: left;
+    }
+}
+
+.pi-page-title .pi-app-info {
+    padding-right: 40px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.pi-page-wrapper .mt5 {
+    margin-top: 5px;
+}
+
+.pi-page-wrapper .mb30 {
+    margin-bottom: 30px;
+}
+
+.pi-page-wrapper .pt15 {
+    padding-top: 15px;
+}
+
+.pi-page-wrapper .pi-mt30 {
+    margin-top: 30px;
+}
+
+.pi-page-wrapper .label-black {
+    background: #000;
+    color: #fff;
+    font-family: "AvenirNextLTPro-Demi";
+}
+
+.pi-page-wrapper .app-name-input {
+    width: 100%;
+    border: 0px;
+    background: transparent;
+    color: #CCC;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.pi-page-wrapper .app-name-input:focus{
+    outline: 0 !important;
+}
+
+.pi-page-wrapper .content-section {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.pi-page-wrapper .section-title {
+    margin-top: 10px;
+    color: #4a4a4a;
+}
+
+.pi-number-circle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+
+    background: #fff;
+    border: 2px solid #3aabd5;
+    color: #3aabd5;
+    text-align: center;
+
+    font-family: "AvenirNextLTPro-Demi";
+    margin-right: 5px;
+}
+
+.pi-total-billing-items {
+    width: 150px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.pi-total-billing-items .text-primary {
+    margin-top: 5px;
+}
+
+.pi-page-wrapper table thead th {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #808080;
+    border: none;
+}
+
+.pi-page-wrapper table td {
+    vertical-align: middle !important;
+    border-right: 0px !important;
+    border-left: 0px !important;
+}
+
+.pi-page-wrapper table .pi-normal-row {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #808080;
+}
+
+.pi-page-wrapper table .pi-normal-row input {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.pi-page-wrapper table .pi-normal-row .pi-right-symbol-input input {
+    padding-right: 25px;
+}
+
+.pi-page-wrapper table .pi-normal-row .pi-right-symbol-input span {
+    position: relative;
+    left: -20px;
+}
+
+.pi-page-wrapper table .pi-normal-row .pi-left-symbol-input {
+    margin-left: -10px;
+}
+
+.pi-page-wrapper table .pi-normal-row .pi-left-symbol-input input {
+    padding-left: 25px;
+}
+
+.pi-page-wrapper table .pi-normal-row .pi-left-symbol-input span {
+    position: relative;
+    right: -20px;
+}
+
+.pi-page-wrapper table .pi-total-row {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+    color: #666;
+}
+
+.pi-page-wrapper table .pi-total-row td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pi-page-wrapper .pi-total-table td {
+    border-top: 0px !important;
+}
+
+.pi-total-table .subtotal-value {
+    background: #f3f3f3;
+    padding: 15px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+textarea.pi-textarea {
+    border-radius: 5px;
+    padding: 20px;
+    color: #ccc;
+}
+
+.pi-file-dropzone {
+    border: 1px dashed #3aabd5;
+}
+
+/* Dropzoen CSS */
+.pi-file-dropzone .dropzone {
+    min-height: 80px;
+    margin-top: 0px !important;
+    padding: 0px;
+}
+
+.pi-file-dropzone .dropzone .dz-default.dz-message {
+    background-image: url('/assets/img/financials/dropzone.png');
+    background-position: left;
+    background-size: 45px;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 10%;
+    height: 70px;
+}
+
+.pi-file-dropzone .dropzone-title {
+    margin-left: calc(10% + 55px);
+    top: 35%;
+    position: absolute;
+}
+
+.pi-modal-title {
+    font-size: 18px;
+    text-align: left;
+}
+
+.pi-pt15 {
+    padding-top: 15px;
+}
+
+.pi-payment-title {
+    padding-top: 15px;
+    font-size: 17px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pi-page-wrapper .review-section {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.pi-filter-section {
+    margin-right: 40px;
+}
+
+.pi-page-wrapper table.pi-payment-data .pi-normal-row {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+}
+
+.pi-page-wrapper table.pi-payment-data .pi-total-row {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pi-summary-section {
+    font-size: 15px;
+    margin-right: 50px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-weight: bold;
+}
+
+.pi-summary-section label {
+     color: #bbb;
+     font-size: 14px;
+     margin-bottom: 0px;
+ }
+
+.pi-static-summary {
+    background: #f3f3f3;
+    padding: 15px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.pi-static-summary span {
+    color: #aaa;
+    margin-left: 20px;
+}
+
+input.pi-input-signature {
+    padding: 25px 15px;
+    font-size: 15px;
+}
+
+.summary-total-title {
+    font-size: 10px;
+    line-height: 23px;
+    color: #aaa;
+}
+
+.summary-total-value {
+    font-size: 20px;
+    color: #333;
+}
+
+.pi-footer {
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    border-top: 1px solid #ddd;
+    width: calc(100% - 220px);
+
+    -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+}
+
+.pi-dropdown-top .dropdown-menu {
+    bottom: 100%;
+    box-shadow: none;
+    top: initial;
+}
