@@ -305,16 +305,29 @@ input.pi-input-signature {
     color: #333;
 }
 
-.pi-footer {
-    position: fixed;
-    bottom: 0px;
-    background: white;
-    border-top: 1px solid #ddd;
-    width: calc(100% - 220px);
+@media (min-width: 991px) {
+    .pi-footer {
+        position: fixed;
+        bottom: 0px;
+        background: white;
+        border-top: 1px solid #ddd;
+        width: calc(100% - 220px);
 
-    -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
-    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+    }
+}
+
+@media (max-width: 990px) {
+    .pi-footer {
+        background: white;
+        border-top: 1px solid #ddd;
+
+        -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+    }
 }
 
 .pi-dropdown-top .dropdown-menu {
