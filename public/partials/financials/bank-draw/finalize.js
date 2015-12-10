@@ -2,6 +2,13 @@ app.controller('BankDrawFinalizeCtrl',
     ['$scope', '$state', function ($scope, $state) {
         $scope.$parent.setCurrentStep($state.current.name);
 
+        $scope.pieOptions = {
+            type: 'pie',
+            height: '100px',
+            offset: -90,
+            sliceColors: ['#3aabd5', '#79c485', '#f6b875'],
+            disableTooltips: true
+        };
         $scope.summary_results = [
           {
             "payee": "General Conditions",
