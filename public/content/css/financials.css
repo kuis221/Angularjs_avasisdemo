@@ -177,6 +177,42 @@
     margin-top: 6px;
     margin-right: 3px;
 }
+
+#payment-details tfoot td{
+    background: #f1f1f1;
+    padding-bottom: 30px;
+}
+
+#bankdraw-finalize .title {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 16px;
+}
+#bankdraw-finalize .sub-title {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 16px;
+}
+#bankdraw-finalize .value {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 22px;
+    line-height: 40px;
+}
+#bankdraw-finalize .label {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top: 4px;
+    padding: 1px 5px; 
+}
+#bankdraw-finalize #stats td {
+    padding: 30px;
+}
+#bankdraw-finalize #stats table td {
+    border: none;
+    padding: 0;
+}
+
+#bankdraw-finalize #total-section {
+    padding: 25px 10px;
+}
 .bankdraw-chart-area div > span:nth-child(2) {
     font-family: AvenirNextLTPro-Demi;
     font-size: 12px;
