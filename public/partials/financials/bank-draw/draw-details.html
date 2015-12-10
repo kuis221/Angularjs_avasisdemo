@@ -1,7 +1,6 @@
-﻿<div class="row pt20">
+﻿<div class="pt10">
     <div class="table-responsive">
-        <table class="table table-striped drawdetail">
-            <thead>
+        <table class="table mb20 text-muted">
             <thead>
                 <tr>
                     <th width="200px">Description</th>
@@ -16,217 +15,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td width="200px">Plans</td>
-                    <td>$1,000,000 </td>
-                    <td>$1,272.85</td>
-                    <td>$2,272.85</td>
-                    <td>2,272.85 </td>
-                    <td><span class="sky3">-</span></td>
-                    <td>100.00%</td>                                    
-                    <td>-00</td>
+                <tr ng-repeat="item in drawDetails">
+                    <td width="200px">{{item.description}}</td>
+                    <td>{{numberToCurrency(item.scheduled_value)}}</td>
+                    <td>{{numberToCurrency(item.reallocations)}}</td>
+                    <td>{{numberToCurrency(item.updated_budget)}}</td>
+                    <td>{{numberToCurrency(item.disbursed_to_date)}}</td>
+                    <td class="text-primary">{{numberToCurrency(item.this_draw)}}</td>
+                    <td>{{item.pecent_of_drawn}}%</td>                                    
+                    <td>{{item.balance_to_complete | accounting}}</td>
                 </tr>
-                <tr>
-                    <td width="200px">Engineering</td>
-                    <td>$800.00 </td>
-                    <td>$57,50</td>
-                    <td>$857.50 </td>
-                    <td>$857.50</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>100.00%</td>                                  
-                    <td>-00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Project Manager</td>
-                    <td>$30,000.00 </td>
-                    <td>-</td>
-                    <td>$30,000.00</td>
-                    <td>$15,000.00</td>
-                    <td><span class="sky3">$2,500.00 </span></td>
-                    <td>58.33%</td>                                  
-                    <td>12,500.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Project Manager</td>
-                    <td>$60,000.00</td>
-                    <td>-</td>
-                    <td>$60,000.00</td>
-                    <td>$30,000.00</td>
-                    <td><span class="sky3">$5,000.00 </span></td>
-                    <td>58.33%</td>                                 
-                    <td>25,000.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">General Labor</td>
-                    <td>$10,000.00 </td>
-                    <td>-</td>
-                    <td>$10,000.00 </td>
-                    <td>$4,000.00</td>
-                    <td><span class="sky3">$1,000.00 </span></td>
-                    <td>50.00%</td>                                   
-                    <td>5,000.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Waste Disposal</td>
-                    <td>$8,500.00 </td>
-                    <td>-</td>
-                    <td>$8,500.00 </td>
-                    <td>$459.91</td>
-                    <td><span class="sky3">$615.90</span></td>
-                    <td>12.66%</td>                                    
-                    <td>7,424.19</td>
-                </tr>
-                <tr>
-                    <td width="200px">Temp Sanitary Facility</td>
-                    <td>$2,000.00 </td>
-                    <td>-</td>
-                    <td>$2,000.00 </td>
-                    <td>$1,135.82 </td>
-                    <td><span class="sky3">$603.65</span></td>
-                    <td>86.97%</td>                                    
-                    <td>260.53 </td>
-                </tr>
-                <tr>
-                    <td width="200px">TempOffice</td>
-                    <td>$2,000.00 </td>
-                    <td>-</td>
-                    <td>$2,000.00 </td>
-                    <td>$1,635.55 </td>
-                    <td><span class="sky3">$516.00</span></td>
-                    <td>107.58%</td>                                  
-                    <td>(151.55)</td>
-                </tr>
-                <tr>
-                    <td width="200px">Temp Heat</td>
-                    <td>$3,500.00 </td>
-                    <td>-</td>
-                    <td>$3,500.00</td>
-                    <td>-</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>0.00%</td>                                   
-                    <td>3,500.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Temp Water</td>
-                    <td>$1,000.00 </td>
-                    <td>-</td>
-                    <td>$1,000.00</td>
-                    <td>-</td>
-                    <td><span class="sky3">$213.64 </span></td>
-                    <td>21.36%</td>                                    
-                    <td>786.36</td>
-                </tr>
-                <tr>
-                    <td width="200px">Temp Power</td>
-                    <td>$2,000.00 </td>
-                    <td>-</td>
-                    <td>$2,000.00 </td>
-                    <td>$64.92</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>3.25%</td>                                    
-                    <td>1,935.08</td>
-                </tr>
-                <tr>
-                    <td width="200px">Rental Equipment</td>
-                    <td>$8,500.00 </td>
-                    <td>-</td>
-                    <td>$8,500.00</td>
-                    <td>$8,510.23 </td>
-                    <td><span class="sky3">-</span></td>
-                    <td>100.12%</td>                                
-                    <td>(10.23)</td>
-                </tr>
-                <tr>
-                    <td width="200px">Cold Weather Protection</td>
-                    <td>$10,000.00</td>
-                    <td>-</td>
-                    <td>$10,000.00</td>
-                    <td>$687.02</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>6.87%</td>                                  
-                    <td>9,312.98</td>
-                </tr>
-                <tr>
-                    <td width="200px">Survey / Layout</td>
-                    <td>$2,500.00</td>
-                    <td>-</td>
-                    <td>$2,500.00</td>
-                    <td>$1,320.49</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>52.82%</td>                                 
-                    <td>1,179.51</td>
-                </tr>
-                <tr>
-                    <td width="200px">Testing</td>
-                    <td>$1,000.00</td>
-                    <td>-</td>
-                    <td>$1,000.00 </td>
-                    <td>-</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>0.00%</td>                                    
-                    <td>1,000.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Small tools</td>
-                    <td>$1,500.00</td>
-                    <td>-</td>
-                    <td>$1,500.00 </td>
-                    <td>-</td>
-                    <td><span class="sky3">$853.75</span></td>
-                    <td>56.92%</td>                                    
-                    <td>646.25</td>
-                </tr>
-                <tr>
-                    <td width="200px">Snow Removal</td>
-                    <td>$5,000.00</td>
-                    <td>-</td>
-                    <td>$5,000.00 </td>
-                    <td>-</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>0.00%</td>                                
-                    <td>5,000.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Final Construction Clean Up</td>
-                    <td>$10,000.00 </td>
-                    <td>-</td>
-                    <td>$10,000.00 </td>
-                    <td>-</td>
-                    <td><span class="sky3">-</span></td>
-                    <td>0.00%</td>
-                    <td>10,000.00</td>
-                </tr>
-                <tr>
-                    <td width="200px">Crane</td>
-                    <td>$6,500.00 </td>
-                    <td>-</td>
-                    <td>$6,500.00</td>
-                    <td>-</td>
-                    <td><span class="sky3">$1,134.35</span></td>
-                    <td>40.41%</td>                                 
-                    <td>3,873.17</td>
-                </tr>
-                <tr>
-                    <td width="200px">Material Handling</td>
-                    <td>$8,000.00</td>
-                    <td>-</td>
-                    <td>$8,000.00</td>
-                    <td>-</td>
-                    <td><span class="sky3">$99.58</span></td>
-                    <td>3.47%</td>                              
-                    <td>7,722.26 </td>
-                </tr>
-                <tr>
-                    <td width="200px">Project Materials</td>
-                    <td>$10,000.00</td>
-                    <td>-</td>
-                    <td>$10,000.00</td>
-                    <td>-</td>
-                    <td><span class="sky3">$412.62</span></td>
-                    <td>6.91%</td>                                   
-                    <td>9,309.13</td>
-                </tr>
-
             </tbody>
         </table>
     </div>
