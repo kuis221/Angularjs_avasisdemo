@@ -59,7 +59,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/financials/bankdraw',
             abstract: true,
             controller: "BankDrawCtrl",
-            templateUrl: 'partials/financials/bank-draw/main.html'
+            templateUrl: 'partials/financials/bank-draw/main.html',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('bankdraw.payment-application', {
             url: '/payment-application',
@@ -182,6 +185,27 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/bids',
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
+        })
+        .state('payment-application', {
+            url: '/financials/payment-application',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('payment-application.initiate', {
+            url: '/initiate',
+            templateUrl: "partials/financials/payment-application/payment-initiate.html",
+            controller: "FinancialsPaymentInitiateCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
+        .state('payment-application.finalize', {
+            url: '/finalize',
+            templateUrl: "partials/financials/payment-application/payment-finalize.html",
+            controller: "FinancialsPaymentFinalizeCtrl",
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('photos', {
             url: '/photos',
