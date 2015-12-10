@@ -454,7 +454,7 @@ app.controller('ActionItemsCtrl',
             pendingList: [
                 {
                     flag: 'red',
-                    name: "Donec id elit non mi por",
+                    name: "Main Inspection",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -473,7 +473,7 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'orange',
-                    name: "Egestas Tellus Amet",
+                    name: "First Floor",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -492,7 +492,7 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'orange',
-                    name: "Egestas Tellus Amet",
+                    name: "Lobby",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -511,7 +511,7 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'orange',
-                    name: "Egestas Tellus Amet",
+                    name: "Plumbing",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -532,7 +532,7 @@ app.controller('ActionItemsCtrl',
             upcomingList: [
                 {
                     flag: 'orange',
-                    name: "Donec id elit non mi por",
+                    name: "Structure Inspection",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -551,7 +551,7 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'green',
-                    name: "Egestas Tellus Amet",
+                    name: "Work",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -570,7 +570,7 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'green',
-                    name: "Egestas Tellus Amet",
+                    name: "Power",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -591,7 +591,7 @@ app.controller('ActionItemsCtrl',
             completedList: [
                 {
                     flag: 'completed',
-                    name: "Donec id elit non mi por",
+                    name: "Heat and Cooling",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -610,7 +610,7 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'completed',
-                    name: "Egestas Tellus Amet",
+                    name: "Air Ducts",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
@@ -629,7 +629,66 @@ app.controller('ActionItemsCtrl',
                 },
                 {
                     flag: 'completed',
-                    name: "Egestas Tellus Amet",
+                    name: "Workers",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                }
+            ],
+            draftsList: [
+                {
+                    flag: 'edit',
+                    name: "Heat and Cooling",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'edit',
+                    name: "Air Ducts",
+                    type: "Inspection Type",
+                    inspector: {
+                        name: "Bob Jones",
+                        company: "ABC Inc"
+                    },
+                    responsible: {
+                        name: "Bob Jones",
+                        company: "ABC Inc."
+                    },
+                    status: "Inspection Complete",
+                    documents: 2,
+                    date_completion: "May 23, 2015 / Jun 12 2015",
+                    order_by_date: "Aug 23, 2015",
+                    next_inspection: "Aug 23, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'edit',
+                    name: "Workers",
                     type: "Inspection Type",
                     inspector: {
                         name: "Bob Jones",
