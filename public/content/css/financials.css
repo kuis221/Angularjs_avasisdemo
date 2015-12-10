@@ -131,6 +131,9 @@
 #payment-applications td {
     padding: 15px;
 }
+#payment-applications > table > tbody > tr > td {
+    border-top: none !important;
+}
 #payment-applications td.middle-align {
     vertical-align: middle;
 }
