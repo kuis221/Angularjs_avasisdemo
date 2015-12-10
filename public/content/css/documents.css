@@ -1,3 +1,6 @@
+.documents .angular-ui-tree-nodes .angular-ui-tree-nodes li .angular-ui-tree-handle {
+    padding-left: 0;
+}
 .inline-action-controls ul {
     background: white;
     list-style: none;

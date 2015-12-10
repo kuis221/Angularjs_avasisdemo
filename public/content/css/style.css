@@ -2,7 +2,7 @@
 @import 'tree.css';
 
 body {
-    font-family: "AvenirNextLTPro-Demi" !important;
+    font-family: "AvenirNextLTPro-Demi";
 }
 
 .per > div {
@@ -170,6 +170,9 @@ svg tspan {
     font-size: 14px;
     padding:  15px 25px;
 }
+.btn-round {
+    border-radius: 20px;
+}
 .alert {
     text-align: center;
     border: none;
@@ -199,6 +202,24 @@ svg tspan {
     color: white;
 }
 
+.text-default {
+    color: #4a4a4a;
+}
+
+.text-muted {
+    color: #8b8b8b;
+}
+
+.text-gray {
+    color: #808080;
+}
+
+.text-gray-lighter {
+    color: #9e9e9e;
+}
+.text-dark {
+    color: black;
+}
 .text-primary {
     color: #3aabd5;
 }
@@ -219,21 +240,6 @@ svg tspan {
     color: #2a2d33;
 }
 
-.text-default {
-    color: #4a4a4a;
-}
-
-.text-muted {
-    color: #8b8b8b;
-}
-
-.text-gray {
-    color: #808080;
-}
-
-.text-gray-lighter {
-    color: #9e9e9e;
-}
 
 textarea {
     padding: 15px;
@@ -247,6 +253,41 @@ input[type=url], input[type=password] {
     border-radius: 3px;
     border: 1px solid #d7d7d7;
 }
+
+/*************************************************
+*                  Label & Badge                 *
+*************************************************/
+.label-primary,
+.badge-primary {
+    background-color: #3aabd5;
+    color: #fff;
+}
+.label-success,
+.badge-success {
+    background-color: #79c485;
+    color: #fff;
+}
+.label-warning,
+.badge-warning {
+    background-color: #f6b875;
+    color: #FFFFFF;
+}
+.label-warning-light,
+.badge-warning-light {
+    background-color: #f8ac59;
+    color: #ffffff;
+}
+.label-danger,
+.badge-danger {
+    background-color: #ed5565;
+    color: #FFFFFF;
+}
+.label-info,
+.badge-info {
+    background-color: #2a2d33;
+    color: #FFFFFF;
+}
+
 
 .chevron-down-menu::before{
     font-family: FontAwesome;
@@ -337,4 +378,14 @@ input {
 
 input.round {
     border-radius: 20px;
+}
+.font-regular {
+    font-family: "AvenirNextLTPro-Regular";
+    font-weight: normal;
+}
+.font-semibold {
+    font-family: "AvenirNextLTPro-Demi";
+}
+.font-bold {
+    font-family: "AvenirNextLTPro-Bold";
 }

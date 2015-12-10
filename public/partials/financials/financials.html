@@ -1,40 +1,41 @@
-﻿<div class="gray-bg">
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-sm-6 col-lg-10">
-            <h2 class="hding">Financials</h2>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="index.html">Project Title Label</a>
-                    <i class="ace-icon fa fa-angle-down"></i>
-                </li>
+<div class="row wrapper border-bottom white-bg page-heading overview">
+    <div class="col-xs-6 col-lg-10 pl20">
+        <h2 class="hding">Financials</h2>
+        <ul class="breadcrumb">
+            <li>
+                <a href="index.html">Project Title Label</a>
+                <i class="ace-icon fa fa-angle-down"></i>
+            </li>
 
-            </ol>
-        </div>
-        <div class="col-lg-2 mt35">
-            <div>
-                <a href="#" class="btn btn-success btn-lg">
-                    <i class="fa fa-plus"></i> Add New Payment
-                </a>
-            </div>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-lg-2 pr20">
+        <div class="text-right">
+            <a class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-plus"></i> Create New
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                <li><a href="javascript:void(0)">Budget Estimate</a></li>
+                <li><a href="javascript:void(0)">Purchase Order</a></li>
+                <li><a href="javascript:void(0)">Payment Application</a></li>
+                <li><a ui-sref="bankdraw.payment-application">Bank Draw</a></li>
+            </ul>
         </div>
     </div>
-    <div ng-include="'partials/financials/_stats.html'"></div>
+</div>
+<div ng-include="'partials/financials/_stats.html'"></div>
 
-    <div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="financial-wrapper">
         <ul class="nav nav-tabs custom-tabs1">
             <li ng-class="{true: 'active'}[isActive('financials.main')]"><a ui-sref="financials.main">Main</a></li>
-            <li><a ui-sref="financials.main">Construction Loan</a></li>
-            <li><a ui-sref="financials.main">Change Orders</a></li>
+            <li ng-class="{true: 'active'}[isActive('financials.budget')]"><a ui-sref="financials.budget">Budget</a></li>
             <li><a ui-sref="financials.main">Purchase Orders</a></li>
             <li><a ui-sref="financials.main">Payment Applications</a></li>
-            <li><a ui-sref="financials.main">Bank Draws</a></li>
-            <li><a ui-sref="financials.main">Cash Requirements</a></li>
-            <li ng-class="{true: 'active'}[isActive('financials.budget')]"><a ui-sref="financials.budget">Timline Budget</a></li>
+            <li ng-class="{true: 'active'}[isActive('financials.bankdraw')]"><a ui-sref="financials.bankdraw">Bank Draws</a></li>
+            <li><a ui-sref="financials.main">Construction Loan</a></li>
         </ul>
-        <div class="panel">
-            <div class="panel-body">
-                <ui-view></ui-view>
-            </div>
-        </div>
+
+        <ui-view></ui-view>
     </div>
 </div>

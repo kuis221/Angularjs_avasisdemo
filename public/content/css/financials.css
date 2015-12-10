@@ -1,0 +1,283 @@
+.financial-wrapper .nav.nav-tabs {
+    border: 1px solid #eee;
+}
+
+.financial-main-panel {
+    border: 1px solid #eee;
+}
+
+.financial-wrapper .panel {
+    margin: 0px;
+}
+
+.row.white.financial-main-bottom {
+    margin: 0px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+}
+
+.financial-main-bottom div > span {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+}
+
+.financial-main-bottom div > p {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
+}
+
+.table-financial-main {
+    font-family: "AvenirNextLTPro-Regular";
+}
+
+.table-financial-main span {
+    font-size: 12px;
+}
+.table-financial-main.table thead tr th,
+.table-financial-main.table tbody tr td {
+    vertical-align: middle;
+}
+
+.table-financial-main.table tbody tr td {
+    font-size: 11px;
+}
+
+.table-financial-main.table tbody tr td:not(:first-child) {
+    border-left: 1px solid #eee;
+}
+
+.table-financial-main.table thead th {
+    font-family: AvenirNextLTPro-Demi;
+    color: #4a4a4a;
+}
+
+.table-financial-main thead tr th:not(:first-child) {
+    border-left: 1px solid #eee;
+    text-align: center;
+}
+
+.table-financial-main tbody tr td:nth-child(11) {
+    background-color: #fff7ec;
+}
+.table-financial-main tbody tr td:nth-child(10) {
+    background-color: #f5fbfd;
+}
+.table-financial-main tbody tr td:nth-child(7) {
+    background-color: #f5f9f6;
+}
+.table-financial-main tbody tr.first-level td {
+    background-color: #f9f9f9;
+}
+
+.table-financial-main tbody tr.first-level i:hover {
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .prog .left1 {
+        padding: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .prog #financial-chart-container1 {
+        margin-left: -35px;
+    }
+}
+
+.budgets .angular-ui-tree-node .angular-ui-tree-nodes:before {
+    left: 20px;
+}
+.budgets .angular-ui-tree-nodes .angular-ui-tree-nodes {
+    padding-left: 20px;
+}
+.budgets span.items {
+    background: #4a4a4a;
+    color: white;
+    border-radius: 3px;
+    font-size: 8px;
+    padding: 1px 10px;
+    min-width: 100px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 16px;
+    font-family: "AvenirNextLTPro-Demi";
+}
+.budgets {
+    border: 1px solid #eee;
+}
+.budgets .division {
+    font-size: 10px;
+    line-height: 10px;
+}
+#budget-stats {
+    width: 50%;
+    border: none;
+}
+#budget-stats td, #budget-stats tbody {
+    border: none !important;
+}
+
+#payment-applications .sub-title{
+    font-size: 14px;
+}
+#payment-applications .title{
+    font-size: 17px;
+    line-height: 60px;
+}
+#payment-applications .amount {
+    font-size: 20px;
+}
+#payment-applications td {
+    padding: 15px;
+}
+#payment-applications > table > tbody > tr > td {
+    border-top: none !important;
+}
+#payment-applications td.middle-align {
+    vertical-align: middle;
+}
+
+#payment-applications .data {
+    line-height: 24px;
+    font-size: 13px;
+}
+#payment-applications .date {
+    font-size: 12px;
+}
+#payment-applications .filters {
+    padding: 12px 0 10px;
+}
+#payment-applications .filters > div {
+    padding: 7px;
+    display: inline-block;
+}
+#application-list td {
+    padding: 15px 10px;
+}
+.application-summary table {
+    border: 1px solid #dedede;
+}
+.application-summary th {
+    vertical-align: middle !important;
+    background-color: #f9f9f9;
+    padding: 10px 20px !important;
+}
+
+.application-summary td {
+    padding: 20px !important;
+}
+
+
+#compliance td {
+    padding: 20px 7px;
+    vertical-align: middle !important;
+}
+#compliance img.flag {
+    margin-top: 6px;
+    margin-right: 3px;
+}
+.bankdraw-chart-area div > span:nth-child(2) {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+    padding-left: 3px;
+    color: #4a4a4a;
+}
+
+.bankdraw-chart-area div > p {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+#bankdraw-stats {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#bankdraw-stats .row .col-lg-6:last-child {
+    border-left: 1px solid #eee;
+}
+
+.bankdraw-chart-area > div:not(:first-child) {
+    padding-top: 20px;
+}
+
+#bankdraw-stats .row h2 {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 16px;
+    color: #44474b;
+    margin-top: 0;
+}
+
+#bankdraw-stats .row h3 {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+    color: #8b8b8b;
+}
+
+.bankdraw-main-table {
+    border: 1px solid #eee;
+}
+
+.bankdraw-main-table .table thead tr th {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+    color: #808080;
+}
+
+
+.bankdraw-main-table .table thead tr th,
+.bankdraw-main-table .table tbody tr td {
+    vertical-align: middle;
+    padding: 20px 0 20px 10px
+}
+
+.bankdraw-main-table .table tbody tr td.submission-date {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px;
+    color: #44474b
+}
+
+.bankdraw-main-table .table tbody tr td.draw-project span:first-child {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.draw-project span:last-child {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px
+}
+
+.bankdraw-main-table .table tbody tr td.submitted-by {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.bank-draw-amount span:first-child {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.bank-draw-amount span:last-child {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px;
+}
+
+.bankdraw-main-table .table tbody tr td.status div {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 9px;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+}
+
+.bankdraw-main-table .table tbody tr td.documents {
+    font-size: 13px;
+    font-family: AvenirNextLTPro-Demi;
+}
+
+.bankdraw-main-table .table tbody tr td.pay-application {
+    font-size: 13px;
+    font-family: AvenirNextLTPro-Demi;
+}
