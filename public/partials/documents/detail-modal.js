@@ -1,34 +1,49 @@
 app.controller('DocumentDetailModalCtrl',
-    ['$scope', '$uibModalInstance', function($scope, $uibModalInstance) {
+    ['$scope', '$uibModalInstance', 'selectedDoc', function($scope, $uibModalInstance, selectedDoc) {
+        $scope.selectedDoc = selectedDoc
         $scope.permittedUsers = [{
-            name: 'Russ Helgeson'
+            name: 'Bob Jones'
         },
-        { 
-            name: 'Rhonda Barker'
+        {
+            name: 'Scott Campbell'
+        },
+        {
+            name: 'Erin Sherman'
         }];
 
         $scope.comments = [
             {
                 id: _.uniqueId(),
                 avatar: 'assets/img/user_1.png',
-                created_by: 'Phil Jones',
-                created_at: 'Jun 23, 2015 3:40PM',
+                created_by: 'Brad Harrison',
+                created_at: 'Aug 4, 2015 2:24PM',
                 pos: {
-                    x: 200,
-                    y: 90
+                    x: 615,
+                    y: 85
                 },
-                body: "Will this document be abe to be used in the build.  I want to have it used so we can have a safe fireplace.  If it can not be used let me know."
+                body: "What is this date referring to? Is this the due date?"
             },
             {
                 id: _.uniqueId(),
                 avatar: 'assets/img/user_3.png',
-                created_by: 'Harry Kane',
-                created_at: 'Oct 23, 2015 3:40PM',
+                created_by: 'Bob Jones',
+                created_at: 'Aug 8, 2015 3:40PM',
                 pos: {
-                    x: 300,
-                    y: 200
+                    x: 406,
+                    y: 614
                 },
-                body: "Angular Material provides typography CSS classes you can use to create visual consistency across your application."
+                body: "Will this clip suffice?"
+            },
+            {
+                id: _.uniqueId(),
+                avatar: 'assets/img/user_3.png',
+                created_by: 'Erin Sherman',
+                created_at: 'Aug 10, 2015 - 8:14AM',
+                pos: {
+                    x: 307,
+                    y: 443
+                },
+                body: "Let me know if there is any confusion on the different barriers and walls I'm referring to."
             }
         ];
 
@@ -41,13 +56,13 @@ app.controller('DocumentDetailModalCtrl',
                 name: "Eric Carlson"
             }, {
                 id: 3,
-                name: "Bryan Lloyd"
+                name: "Bob Jones"
             }, {
                 id: 4,
-                name: "Darcy Bertrand"
+                name: "Scott Campbell"
             }, {
                 id: 5,
-                name: "Andrew Klein"
+                name: "Erin Sherman"
             },
             {
                 id: 6,
