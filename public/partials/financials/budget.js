@@ -1,5 +1,8 @@
 app.controller('FinancialsBudgetCtrl',
     ['$scope', '$state', function ($scope, $state) {
+
+        $scope.$parent.setCurrentTab($state.current.name);
+
         $scope.budgets = [{
             id: _.uniqueId(),
             name: 'General Requirements',
@@ -33,7 +36,7 @@ app.controller('FinancialsBudgetCtrl',
                     equipment: 450,
                     misc: 12350,
                     total: 5987,
-    
+
                     status: '',
                     cpsf: 13.46,
                     percent_of_project: 8,
@@ -85,7 +88,7 @@ app.controller('FinancialsBudgetCtrl',
                     equipment: 450,
                     misc: 12350,
                     total: 5987,
-    
+
                     status: '',
                     cpsf: 13.46,
                     percent_of_project: 8,

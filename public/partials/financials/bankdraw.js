@@ -1,5 +1,8 @@
 app.controller('FinancialsBankdrawCtrl',
-    ['$scope', function($scope) {
+    ['$scope', '$state', function($scope, $state) {
+
+        $scope.$parent.setCurrentTab($state.current.name);
+        
         $scope.bankdraws = [
             {
                 submission_date: 'Jun 23, 2015',
