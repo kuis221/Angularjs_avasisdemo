@@ -73,22 +73,18 @@
                                     </td>
                                     <td width="150px">
                                         <span class="small text-success">sched</span>
-                                        <p class="subtitle">Jun 23, 2016</p>
+                                        <p class="subtitle">{{application.scheduled_at}}</p>
                                         <span class="small text-success">est</span>
-                                        <p class="sub-title">Jun 23, 2016</p>
+                                        <p class="sub-title">{{application.estimated_at}}</p>
                                     </td>
                                     <td>
                                         <span class="small text-success">completed</span>
-                                        <p class="sub-title">84%</p>
+                                        <p class="sub-title">{{numberToPercentage(application.completed)}}</p>
                                         <span class="small text-success">cost</span>
                                         <p class="sub-title">{{application.cost | currency}}$8,000</p>
                                     </td>
                                     <td>
-                                        <small class="text-muted">
-                                            Master bathroom cabinetry,
-                                            Carpet, Kitchen Something, Another
-                                            something.
-                                        </small>
+                                        <small class="text-muted">{{application.sow}}</small>
                                     </td>
                                     <td>
                                         <div class="sub-title">{{application.amount | currency}}</div>

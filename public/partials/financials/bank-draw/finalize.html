@@ -1,191 +1,117 @@
-﻿<div class="row finalizeBox">
-    <div class="col-xs-6 col-md-3 col-lg-3">
-        <span class="grey">Working Budget.</span>
-        <p class="black">$12,000,000.00</p>
-    </div>
-    <div class="col-xs-6 col-md-3 col-lg-3">
-        <span class="grey">Pending Costs</span>
-        <p class="black">$3,456,900.00</p>
-    </div>
-    <div class="col-xs-6 col-md-3 col-lg-3">
-        <span class="reds">Unbudgeted Costs</span>
-        <p class="reds">$456,900.00</p>
-    </div>
-    <div class="col-xs-6 col-md-3 col-lg-3">
-        <span class="grey">Estimated Cost at Completion</span>
-        <p class="black">$12,678,900.00</p>
-    </div>
-</div>
-
-<!------Graff Content------>
-<div class="row finalizeGraf">
-    <div class="col-xs-12 col-md-4 col-lg-5">
-        <div class="col-xs-12 col-md-4">
-            <img src="assets/img/graph.png">
+﻿<div id="bankdraw-finalize">
+    <div class="row" id="total-section">
+        <div class="col-xs-6 col-md-3 col-lg-3">
+            <div class="text-muted title">Working Budget.</div>
+            <div class="value">$12,000,000.00</div>
         </div>
-        <div class="col-md-8">
-            <div class="left1">
-                <h2 class="smlHding">Construction Loan Amount </h2>
-                <h3 class="label label-primary">5</h3>
-                <span class="middlebold">Current Draw Amount   <p>27%</p></span>
-                <p class="price">$123,987.00</p>
+        <div class="col-xs-6 col-md-3 col-lg-3">
+            <div class="text-muted title">Pending Costs</div>
+            <div class="value">$3,456,900.00</div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3">
+            <div class="text-danger title">Unbudgeted Costs</div>
+            <div class="text-danger value">$456,900.00</div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3">
+            <div class="text-muted title">Estimated Cost at Completion</div>
+            <div class="value">$12,678,900.00</div>
+        </div>
+    </div>
+
+    <table class="table" id="stats">
+        <tr>
+            <td>
+                <img src="assets/img/graph.png">
+            </td>
+            <td class="sub-title pl0">
+                <div class="value">Construction Loan Amount </div>
+                <table class="table ">
+                    <tr>
+                        <td>
+                            <div class="label label-primary">&nbsp;</div>
+                            <div class="inline-block">
+                                <span class="">Current Draw Amount</span>
+                                <span class="">27%</span>
+                                <div>$123,987.00</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="label label-success">&nbsp;</div>
+                            <div class="inline-block">
+                                <span class="">Amount Drawn To Date</span>
+                                <span class="">44%</span>
+                                <div>$123,987.00</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="label label-warning">&nbsp;</div>
+                            <div class="inline-block">
+                                <span class="">Amount Remaining To be Drawn</span>
+                                <span class="">27%</span>
+                                <div>$123,987.00</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- Date Range and summary of selected -->
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="table-responsive">
+                <div class="value">Summary of Selected Pay Applications</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="middle-align">
+                            <th>PAYEE</th>
+                            <th>
+                                COMPLIANT
+                                <div class="small text-muted">Count  / Amount.</div>
+                            </th>
+                            <th>
+                                NON COMPLIANT
+                                <div class="small text-muted">Count  / Amount.</div>
+                            </th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-muted">
+                        <tr>
+                            <td>
+                                <div>General Conditions</div>
+                            </td>
+                            <td>
+                                <div>123 / $456,789.00</div>
+                            </td>
+                            <td>
+                                <div>123 / $456,789.0</div>
+                            </td>
+                            <td>
+                                456 / $1,987,876.00
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-    </div>
-
-    <div class="col-xs-12 col-md-3 col-lg-3">
-        <div class="left1">
-            <h2 class="smlHding">&nbsp;</h2>
-            <h3 class="label progress-bar-success">5</h3>
-            <span class="middlebold">Amount Drawn  to Date   <p>44%</p></span>
-            <p class="price">$123,987.00</p>
-        </div>
-    </div>
-    <div class="col-xs-12 col-md-4 col-lg-4">
-        <div class="left1">
-            <h2 class="smlHding">&nbsp;</h2>
-            <h3 class="label progress-bar-warning">5</h3>
-            <span class="middlebold">Amount Remaning to be Drawn   <p>29%</p></span>
-            <p class="price">$123,987.00</p>
-        </div>
-    </div>
-</div>
-
-<!-- Date Range and summary of selected -->
-<div class="row pt20">
-        <div class="col-md-11">
-            <div class="panel-body custom-panel-body">
-                <div class="tab-content">
-                    <div class="tab-pane active" id="tab-1">
-                        <div class="table-responsive">
-                            <p class="hding">Summary of Selected Pay Applications</p>
-                            <table class="table finalizeTable table-bordered">
-                                <thead>
-                                    <tr class="lightgry">
-                                        <th><p>PAYEE</p></th>
-                                        <th><p>COMPLIANT<br /><span>Count  / Amount.</span></p></th>
-                                        <th><p>NON COMPLIANT<br /><span>Count  / Amount.</span></p></th>
-                                        <th><p class="blk">TOTAL</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <p>General Conditions</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.00</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">456 / $1,987,876.00</pclass>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <p>SubContractors</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">456 / $1,987,876.00</p>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <p>Suppliers</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">456 / $1,987,876.00</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Miscellaneous</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p>123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">456 / $1,987,876.00</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p class="blk">Total</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">123 / $456,789.0</p>
-                                        </td>
-                                        <td>
-                                            <p class="blk">9786 / 1$67,987,876.00</p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table tableTabs">
-                                <thead>
-                                    <tr>
-                                        <th><p>Draw Reviewed & Appoved by</p></th>
-                                        <th><p>Signature</p></th>
-                                        <th><p>Title</p></th>
-                                        <th><p>Date Submitted</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input class="customBtn" type="text" placeholder="Eric Hoffman" /></td>
-                                        <td><input class="customBtn" type="text" placeholder="Ligula Vehicula" /></td>
-                                        <td><input class="customBtn" type="text" placeholder="Fusce" /></td>
-                                        <td><input class="customBtn" type="text" placeholder="Aug 26, 2015" /></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-
-                    <div class="tab-pane" id="tab-2">
-                        <b>Tab2 Data</b>
-                    </div>
-                    <div class="tab-pane" id="tab-3">
-                        <b>Tab3 Data</b>
-                    </div>
-                    <div class="tab-pane" id="tab-4">
-                        <b>Tab4 Data</b>
-                    </div>
-                    <div class="tab-pane" id="tab-5">
-                        <b>Tab5 Data</b>
-                    </div>
-                    <div class="tab-pane" id="tab-6">
-                        <b>Tab6 Data</b>
-                    </div>
-
+            <div class="row mt30 text-muted">
+                <div class="col-sm-3">
+                    <div>Draw Reviewed & Appoved by</div>
+                    <input type="text" placeholder="Eric Hoffman" />
+                </div>
+                <div class="col-sm-3">
+                    <div>Signature</div>
+                    <input type="text" placeholder="Ligula Vehicula" />
+                </div>
+                <div class="col-sm-3">
+                    <div>Title</div>
+                    <input type="text" placeholder="Fusce" />
+                </div>
+                <div class="col-sm-3">
+                    <div>Date Submitted</div>
+                    <input type="text" placeholder="Aug 26, 2015" />
                 </div>
             </div>
-
         </div>
-        <!-- End Range and summary of selected -->
+    </div>
 </div>

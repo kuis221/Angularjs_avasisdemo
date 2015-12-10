@@ -23,7 +23,7 @@
                     <td>{{numberToCurrency(item.disbursed_to_date)}}</td>
                     <td class="text-primary">{{numberToCurrency(item.this_draw)}}</td>
                     <td>{{item.pecent_of_drawn}}%</td>                                    
-                    <td>{{item.balance_to_complete | accounting}}</td>
+                    <td ng-class="{true: 'text-danger'}[item.balance_to_complete < 0]">{{item.balance_to_complete | accounting}}</td>
                 </tr>
             </tbody>
         </table>
