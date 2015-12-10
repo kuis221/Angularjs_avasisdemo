@@ -199,3 +199,8 @@ table.tm-scroll-table tbody {
 .outcompliance {
     color: #E42424;
 }
+
+.feed-Compliance .photo {
+    width: 40px;
+    height: 40px;
+}
