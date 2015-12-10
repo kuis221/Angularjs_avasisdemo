@@ -220,3 +220,12 @@ textarea.pi-textarea {
     top: 35%;
     position: absolute;
 }
+
+.pi-modal-title {
+    font-size: 18px;
+    text-align: left;
+}
+
+.pi-pt15 {
+    padding-top: 15px;
+}

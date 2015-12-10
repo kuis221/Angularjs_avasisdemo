@@ -187,7 +187,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: 'BidsCtrl'
         })
         .state('payment-initiate', {
-            url: '/payment-initiate',
+            url: '/financials/payment-initiate',
             abstract: true,
             template: '<ui-view></ui-view>'
         })

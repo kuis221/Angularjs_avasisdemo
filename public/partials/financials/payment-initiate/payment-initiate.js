@@ -84,5 +84,18 @@ app.controller('FinancialsPaymentInitiateCtrl',
             thumbnail: function(file, dataUrl) {
             },
         };
+
+        $scope.showBillingItemsModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/financials/payment-initiate/billing-items-modal.html',
+                controller: 'BillingItemsCtrl',
+                windowClass: 'tm-modal-main'
+            });
+
+            modalInstance.result.then(function (res) {
+            }, function () {
+
+            });
+        }
     }]
 );
