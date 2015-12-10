@@ -58,6 +58,10 @@
     padding-top: 15px;
 }
 
+.pi-page-wrapper .pi-mt30 {
+    margin-top: 30px;
+}
+
 .pi-page-wrapper .label-black {
     background: #000;
     color: #fff;
@@ -86,7 +90,7 @@
     padding: 15px;
 }
 
-.pi-page-wrapper .content-section .section-title {
+.pi-page-wrapper .section-title {
     margin-top: 10px;
     color: #4a4a4a;
 }
@@ -228,4 +232,93 @@ textarea.pi-textarea {
 
 .pi-pt15 {
     padding-top: 15px;
+}
+
+.pi-payment-title {
+    padding-top: 15px;
+    font-size: 17px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pi-page-wrapper .review-section {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.pi-filter-section {
+    margin-right: 40px;
+}
+
+.pi-page-wrapper table.pi-payment-data .pi-normal-row {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+}
+
+.pi-page-wrapper table.pi-payment-data .pi-total-row {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pi-summary-section {
+    font-size: 15px;
+    margin-right: 50px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-weight: bold;
+}
+
+.pi-summary-section label {
+     color: #bbb;
+     font-size: 14px;
+     margin-bottom: 0px;
+ }
+
+.pi-static-summary {
+    background: #f3f3f3;
+    padding: 15px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.pi-static-summary span {
+    color: #aaa;
+    margin-left: 20px;
+}
+
+input.pi-input-signature {
+    padding: 25px 15px;
+    font-size: 15px;
+}
+
+.summary-total-title {
+    font-size: 10px;
+    line-height: 23px;
+    color: #aaa;
+}
+
+.summary-total-value {
+    font-size: 20px;
+    color: #333;
+}
+
+.pi-footer {
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    border-top: 1px solid #ddd;
+    width: calc(100% - 220px);
+
+    -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+}
+
+.pi-dropdown-top .dropdown-menu {
+    bottom: 100%;
+    box-shadow: none;
+    top: initial;
 }

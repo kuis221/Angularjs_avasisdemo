@@ -87,7 +87,7 @@ app.controller('FinancialsPaymentInitiateCtrl',
 
         $scope.showBillingItemsModal = function() {
             var modalInstance = $uibModal.open({
-                templateUrl: 'partials/financials/payment-initiate/billing-items-modal.html',
+                templateUrl: 'partials/financials/payment-application/billing-items-modal.html',
                 controller: 'BillingItemsCtrl',
                 windowClass: 'tm-modal-main'
             });

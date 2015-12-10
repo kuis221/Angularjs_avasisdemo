@@ -3,5 +3,10 @@ app.controller('BillingItemsCtrl',
         $scope.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
+
+        $scope.finalize = function() {
+            $uibModalInstance.dismiss('cancel');
+            $state.go('payment-application.finalize');
+        }
     }]
 );
