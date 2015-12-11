@@ -83,7 +83,7 @@
 .items-today {
     border: 1px solid #ececec;
     border-radius: 5px;
-    height: 630px !important;
+    height: 500px;
     margin-top: 26px;
 }
 .items-today td a {
@@ -146,6 +146,7 @@
 .prj-sch-cont {
     float: left;
     margin-right: 10px;
+    width: 105px;
 }
 
 .prj-sch-prog {
