@@ -412,3 +412,6 @@ input.round {
     font-family: "AvenirNextLTPro-Demi" !important;
     min-width: 80px;
 }
+.no-avatar {
+    width: 40px; height: 40px; background: #f1f1f1; border-radius: 50%; text-align: center; color: #888; line-height: 40px;
+}
