@@ -148,11 +148,13 @@ app.controller('BidsCtrl',
         $scope.report = {};
         $timeout(function(){
             $scope.report = {
-                bids_distrib: 57,
+                bids_distrib: 8,
                 completed: 100,
-                response: 68,
-                awarded: 61,
-                amount: 1513986
+                response: 8,
+                response_per: 100,
+                awarded: 7,
+                awarded_per: 88,
+                amount: 581168
             };
         }, 500);
         $scope.showBid = [];
