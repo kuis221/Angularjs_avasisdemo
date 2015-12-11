@@ -26,13 +26,13 @@
 }
 
 .prj-blue-rect {
-    padding: 0px 8px;
+    padding: 0px 7px;
     background-color: #3aabd5;
     border-radius: 4px;
 }
 
 .prj-green-rect {
-    padding: 0px 8px;
+    padding: 0px 7px;
     background-color: #79c485;
     border-radius: 4px;
 }
@@ -70,8 +70,9 @@
 }
 
 .prj-sch-photo {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
 }
 
 .prj-team-photo {
@@ -82,7 +83,7 @@
 .items-today {
     border: 1px solid #ececec;
     border-radius: 5px;
-    height: 630px !important;
+    height: 500px;
     margin-top: 26px;
 }
 .items-today td a {
@@ -109,4 +110,54 @@
     text-decoration: line-through;
     position: relative;
     opacity: 0.4;
+}
+
+.prj-hd-itm {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.prj-itm-title {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13.5px;
+    color: #4a4a4a;
+}
+.prj-itm-cont {
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+.prj-assign {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    font-style: italic;
+    color: #808080;
+}
+.prj-assigner {
+    font-family: "AvenirNextLTPro-Medium";
+}
+.prj-flg-sm {
+    width: 14px;
+}
+
+.prj-sch-cont {
+    float: left;
+    margin-right: 10px;
+    width: 105px;
+}
+
+.prj-sch-prog {
+    padding-top: 5px;
+}
+.prj-sch-prog .progress-small {
+    width: 30%;
+}
+
+@media screen and (max-width: 480px) {
+    .prj-sch-prog .progress-small {
+        width: 100%;
+    }
 }
