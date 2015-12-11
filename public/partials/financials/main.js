@@ -3,9 +3,6 @@ app.controller('FinancialsMainCtrl',
 
         $scope.$parent.setCurrentTab($state.current.name);
 
-        $scope.genContCollapse = false;
-        $scope.siteWorkCollapse = false;
-
         $scope.data = [
             {division_cost_code: 'Division 1 General Requirements', est_budget: 55532, under_contract: 0, approved_purchase_orders: 0, approved_change_orders: 0, direct_costs: 208459.41, working_budget: 263991.41, pending_purchase_orders: 0, pending_change_orders: 0, unbudgeted_costs: 0, est_cost_at_completion: 263991.41, payments_made: 208459.26, cash_required_to_complete: 55532.15,
              children: [
@@ -284,6 +281,6 @@ app.controller('FinancialsMainCtrl',
         ];
 
         _.forEach($scope.data, function (n) {
-            n.isCollapsed = false;
+            n.isCollapsed = true;
         });
     }]);
