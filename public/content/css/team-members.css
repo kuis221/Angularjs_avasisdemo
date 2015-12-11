@@ -133,7 +133,7 @@
 }
 
 .memberv22x .MemberTableDetails {
-    width: 250px;
+    width: 260px;
 }
 
 .tm-flag-td {
@@ -213,3 +213,67 @@ table.tm-scroll-table tbody {
     color: #888;
 }
 
+.riskmanagement .td-name {
+    width: 260px;
+}
+
+.risk-attach-right {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    line-height: 0;
+    border: 0;
+    top: 50%;
+    right: 0%;
+    margin-right: -50px;
+    outline: none;
+}
+
+.risk-attach-left {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    line-height: 0;
+    border: 0;
+    top: 50%;
+    margin-left: -50px;
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    .risk-attach-right {
+        background: #333;
+        color: white;
+        margin-right: 20px;
+    }
+
+    .risk-attach-left {
+        background: #333;
+        color: white;
+        margin-left: 20px;
+    }
+
+    .risk-attach-right.disabled {
+        display: none;
+    }
+
+    .risk-attach-left.disabled {
+        display: none;
+    }
+}
+
+.risk-attach-right.disabled {
+    background: #aaa;
+}
+
+.risk-attach-left.disabled {
+    background: #aaa;
+}
+
+.riskmiddle {
+    margin: 45px 0 43px 0;
+}

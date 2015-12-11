@@ -145,7 +145,7 @@
                                                            'pending': row.status[0] == 'pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100  }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
@@ -191,7 +191,7 @@
                                                            'pending': row.status[0] == 'Pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100 }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
@@ -237,7 +237,7 @@
                                                            'pending': row.status[0] == 'Pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100 }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>
@@ -283,7 +283,7 @@
                                                            'pending': row.status[0] == 'Pending'}">
                                 {{ row.status[0] }}
                             </span><br>
-                            <small ng-show="row.status[1] != '-'">{{ row.status[1] }}% Completed</small>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100 }}% Completed</small>
                         </td>
                       </tr>
                     </tbody>

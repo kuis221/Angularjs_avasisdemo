@@ -1870,7 +1870,7 @@ table.table-mail tr td { padding: 12px;}
 .progress-bar {  background-color: #3aabd5;}
 .progress {border-radius: 0px;}
 .progress-small,
-.progress-small .progress-bar { border-radius: 21px; height: 9px;}
+.progress-small .progress-bar { border-radius: 21px; height: 7px;}
 .progress-small,
 .progress-mini { margin-top: 8px; margin-bottom: 0px;}
 .progress-mini,
@@ -2499,13 +2499,14 @@ background: radial-gradient(ellipse at center, #f6f6f6 20%, #d5d5d5 100%);
     padding: 0;
 }
 .overview ul.topSubtitle li a {
-    font-size: 14px;
-    font-family: avenirnextltpro-demi;
+    font-size: 16px;
+    font-family: "AvenirNextLTPro-Demi";
     color: #3aabd5;
 }
 .overview ul.topSubtitle li span {
     color: #8b8b8b;
-    font-family: avenirnextltpro-demi;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
 }
 .progressBar .ibox {
     padding: 0 14px 0 0;
@@ -2565,15 +2566,14 @@ span.project {
 .ibox .project .media-body strong {
     color: #3aabd5;
     float: left;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: normal;
-    margin-bottom: 6px;
     width: 100%;
     font-family: avenirnextltpro-demi;
 }
 .ibox .project .media-body p.progrsTxt {
     color: #4a4a4a;
-    font-size: 14px;
+    font-size: 13px;
     margin: 0;
     white-space: nowrap;
 }

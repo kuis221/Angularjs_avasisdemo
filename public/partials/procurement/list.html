@@ -1,0 +1,241 @@
+<div class="row wrapper border-bottom white-bg page-heading overview">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">Procurement</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="#">Wilmington 47<i class="ace-icon fa fa-angle-down"></i></a>
+            </li>
+            <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2">
+        <div class="btns mr10">
+            <a href="#" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-plus"></i> Create New
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated">
+    <div class="row procurement-table">
+        <div class="col-md-12">
+            <h3>Actions Required by Me</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <th class="name">Name</th>
+                        <th class="status">Status</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="date_order">Date Required</th>
+                        <th class="date_order">Order Date</th>
+                        <th class="work_scope">Scope of Work</th>
+                        <th class="supplier">Supplier</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in action_list.listRequiredByMe">
+                        <td class="name">
+                            <span class="action_image">
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                            </span>
+                            <span class="action_name">
+                                <a href="#" class="text-primary">{{ row.title }}</a><br><small>{{ row.sTitle }}</small>
+                            </span>
+                        </td>
+                        <td class="status">
+                            <span class="label" ng-class="{'success': row.status == 'completed',
+                                                           'warning': row.status == 'draft',
+                                                           'danger': row.status == 'cancelled'}">
+                                {{ row.status }}
+                            </span>
+                        </td>
+                        <td class="responsible"><a href="#" class="text-primary">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="date_order">{{ row.date_required }}</td>
+                        <td class="date_order">{{ row.date_ordered }}</td>
+                        <td class="work_scope"><a href="#" class="text-primary">{{ row.scope.name }}</a></td>
+                        <td class="supplier">
+                            <span ng-show="row.supplier.name == null" class="no_supplier">No supplier selected</span>
+                            <span ng-hide="row.supplier.name == null">{{ row.supplier.name }}</span><br/>
+                            <img ng-if="row.supplier.file != null" src="assets/img/attach.png">
+                            <img ng-if="row.supplier.email != null" src="assets/img/envelope.png">
+                            <img ng-if="row.supplier.phone != null" class="phone" src="assets/img/phone.png">
+                            <span ng-hide="row.supplier.phone == null" class="phone_detail">{{ row.supplier.phone }}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row procurement-table">
+        <div class="col-md-12">
+            <h3>Actions Required by Others</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <th class="name">Name</th>
+                        <th class="status">Status</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="date_order">Date Required</th>
+                        <th class="date_order">Order Date</th>
+                        <th class="work_scope">Scope of Work</th>
+                        <th class="supplier">Supplier</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in action_list.listRequiredByOthers">
+                        <td class="name">
+                            <span class="action_image">
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                            </span>
+                            <span class="action_name">
+                                <a href="#" class="text-primary">{{ row.title }}</a><br><small>{{ row.sTitle }}</small>
+                            </span>
+                        </td>
+                        <td class="status">
+                            <span class="label" ng-class="{'success': row.status == 'completed',
+                                                           'warning': row.status == 'draft',
+                                                           'danger': row.status == 'cancelled'}">
+                                {{ row.status }}
+                            </span>
+                        </td>
+                        <td class="responsible"><a href="#" class="text-primary">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="date_order">{{ row.date_required }}</td>
+                        <td class="date_order">{{ row.date_ordered }}</td>
+                        <td class="work_scope"><a href="#" class="text-primary">{{ row.scope.name }}</a></td>
+                        <td class="supplier">
+                            <span ng-show="row.supplier.name == null" class="no_supplier">No supplier selected</span>
+                            <span ng-hide="row.supplier.name == null">{{ row.supplier.name }}</span><br/>
+                            <img ng-if="row.supplier.file != null" src="assets/img/attach.png">
+                            <img ng-if="row.supplier.email != null" src="assets/img/envelope.png">
+                            <img ng-if="row.supplier.phone != null" class="phone" src="assets/img/phone.png">
+                            <span ng-hide="row.supplier.phone == null" class="phone_detail">{{ row.supplier.phone }}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row procurement-table">
+        <div class="col-md-12">
+            <h3>Drafts</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <th class="name">Name</th>
+                        <th class="status">Status</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="date_order">Date Required</th>
+                        <th class="date_order">Order Date</th>
+                        <th class="work_scope">Scope of Work</th>
+                        <th class="supplier">Supplier</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in action_list.listDrafts">
+                        <td class="name">
+                            <span class="action_image">
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                            </span>
+                            <span class="action_name">
+                                <a href="#" class="text-primary">{{ row.title }}</a><br><small>{{ row.sTitle }}</small>
+                            </span>
+                        </td>
+                        <td class="status">
+                            <span class="label" ng-class="{'success': row.status == 'completed',
+                                                           'warning': row.status == 'draft',
+                                                           'danger': row.status == 'cancelled'}">
+                                {{ row.status }}
+                            </span>
+                        </td>
+                        <td class="responsible"><a href="#" class="text-primary">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="date_order">{{ row.date_required }}</td>
+                        <td class="date_order">{{ row.date_ordered }}</td>
+                        <td class="work_scope"><a href="#" class="text-primary">{{ row.scope.name }}</a></td>
+                        <td class="supplier">
+                            <span ng-show="row.supplier.name == null" class="no_supplier">No supplier selected</span>
+                            <span ng-hide="row.supplier.name == null">{{ row.supplier.name }}</span><br/>
+                            <img ng-if="row.supplier.file != null" src="assets/img/attach.png">
+                            <img ng-if="row.supplier.email != null" src="assets/img/envelope.png">
+                            <img ng-if="row.supplier.phone != null" class="phone" src="assets/img/phone.png">
+                            <span ng-hide="row.supplier.phone == null" class="phone_detail">{{ row.supplier.phone }}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row procurement-table">
+        <div class="col-md-12">
+            <h3>Completed</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <th class="name">Name</th>
+                        <th class="status">Status</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="date_order">Date Required</th>
+                        <th class="date_order">Order Date</th>
+                        <th class="work_scope">Scope of Work</th>
+                        <th class="supplier">Supplier</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in action_list.listCompleted">
+                        <td class="name">
+                            <span class="action_image">
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                            </span>
+                            <span class="action_name">
+                                <a href="#" class="text-primary">{{ row.title }}</a><br><small>{{ row.sTitle }}</small>
+                            </span>
+                        </td>
+                        <td class="status">
+                            <span class="label" ng-class="{'success': row.status == 'completed',
+                                                           'warning': row.status == 'draft',
+                                                           'danger': row.status == 'cancelled'}">
+                                {{ row.status }}
+                            </span>
+                        </td>
+                        <td class="responsible"><a href="#" class="text-primary">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="date_order">{{ row.date_required }}</td>
+                        <td class="date_order">{{ row.date_ordered }}</td>
+                        <td class="work_scope"><a href="#" class="text-primary">{{ row.scope.name }}</a></td>
+                        <td class="supplier">
+                            <span ng-show="row.supplier.name == null" class="no_supplier">No supplier selected</span>
+                            <span ng-hide="row.supplier.name == null">{{ row.supplier.name }}</span><br/>
+                            <img ng-if="row.supplier.file != null" src="assets/img/attach.png">
+                            <img ng-if="row.supplier.email != null" src="assets/img/envelope.png">
+                            <img ng-if="row.supplier.phone != null" class="phone" src="assets/img/phone.png">
+                            <span ng-hide="row.supplier.phone == null" class="phone_detail">{{ row.supplier.phone }}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
