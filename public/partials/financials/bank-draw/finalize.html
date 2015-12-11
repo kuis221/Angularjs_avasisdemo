@@ -2,26 +2,26 @@
     <div class="row" id="total-section">
         <div class="col-xs-6 col-md-3 col-lg-3">
             <div class="text-muted title">Working Budget.</div>
-            <div class="value">$12,000,000.00</div>
+            <div class="value"> $2,603,284</div>
         </div>
         <div class="col-xs-6 col-md-3 col-lg-3">
             <div class="text-muted title">Pending Costs</div>
-            <div class="value">$3,456,900.00</div>
+            <div class="value">-</div>
         </div>
         <div class="col-xs-6 col-md-3 col-lg-3">
             <div class="text-danger title">Unbudgeted Costs</div>
-            <div class="text-danger value">$456,900.00</div>
+            <div class="text-danger value">-</div>
         </div>
         <div class="col-xs-6 col-md-3 col-lg-3">
             <div class="text-muted title">Estimated Cost at Completion</div>
-            <div class="value">$12,678,900.00</div>
+            <div class="value"> $2,603,284</div>
         </div>
     </div>
 
     <table class="table" id="stats">
         <tr>
             <td>
-                <img src="assets/img/graph.png">
+                <div sparkline spark-data="[6.3, 31.6, 62.1]" spark-options="pieOptions"></div>
             </td>
             <td class="sub-title pl0">
                 <div class="value">Construction Loan Amount </div>
@@ -31,24 +31,24 @@
                             <div class="label label-primary">&nbsp;</div>
                             <div class="inline-block">
                                 <span class="">Current Draw Amount</span>
-                                <span class="">27%</span>
-                                <div>$123,987.00</div>
+                                <span class="pl20 font-bold">6.3%</span>
+                                <div> $181,267</div>
                             </div>
                         </td>
                         <td>
                             <div class="label label-success">&nbsp;</div>
                             <div class="inline-block">
                                 <span class="">Amount Drawn To Date</span>
-                                <span class="">44%</span>
-                                <div>$123,987.00</div>
+                                <span class="pl20 font-bold">31.6%</span>
+                                <div> $903,348 </div>
                             </div>
                         </td>
                         <td>
                             <div class="label label-warning">&nbsp;</div>
                             <div class="inline-block">
                                 <span class="">Amount Remaining To be Drawn</span>
-                                <span class="">27%</span>
-                                <div>$123,987.00</div>
+                                <span class="pl20 font-bold">62.1%</span>
+                                <div> $1,775,894.49 </div>
                             </div>
                         </td>
                     </tr>
@@ -77,39 +77,39 @@
                         </tr>
                     </thead>
                     <tbody class="text-muted">
-                        <tr>
+                        <tr ng-repeat="row in summary_results">
                             <td>
-                                <div>General Conditions</div>
+                                {{row.payee}}
                             </td>
                             <td>
-                                <div>123 / $456,789.00</div>
+                                {{row.complaint_count}} / {{row.complaint_amount}}
                             </td>
                             <td>
-                                <div>123 / $456,789.0</div>
+                                {{row.uncomplaint_count}} / {{row.uncomplaint_amount}}
                             </td>
                             <td>
-                                456 / $1,987,876.00
+                                {{row.total_count}} / {{row.total_amount}}
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="row mt30 text-muted">
+            <div class="row mt30 text-muted mb20">
                 <div class="col-sm-3">
                     <div>Draw Reviewed & Appoved by</div>
-                    <input type="text" placeholder="Eric Hoffman" />
+                    <input type="text" class="input-sm" readonly placeholder="Bruce Wayner" />
                 </div>
                 <div class="col-sm-3">
                     <div>Signature</div>
-                    <input type="text" placeholder="Ligula Vehicula" />
+                    <input type="text" class="input-sm" readonly placeholder="" />
                 </div>
                 <div class="col-sm-3">
                     <div>Title</div>
-                    <input type="text" placeholder="Fusce" />
+                    <input type="text" class="input-sm" readonly placeholder="General Contractor" />
                 </div>
                 <div class="col-sm-3">
                     <div>Date Submitted</div>
-                    <input type="text" placeholder="Aug 26, 2015" />
+                    <input type="text" class="input-sm" readonly placeholder="8/17/2015" />
                 </div>
             </div>
         </div>

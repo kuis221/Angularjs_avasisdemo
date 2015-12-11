@@ -9,23 +9,23 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
     $scope.doughnutOptions = {};
     $scope.doughnutData = [];
 
-    $scope.schedule_completed = 32;
-    $scope.project_completed = 60;
+    $scope.schedule_completed = 60;
+    $scope.project_completed = 33;
 
     /**
      * Data for Doughnut chart
      */
     $scope.mineData = [
         {
-            value: 78,
+            value: 2,
             color:"#ed5565"
         },
         {
-            value: 44,
+            value: 5,
             color: "#f8ac59"
         },
         {
-            value: 192,
+            value: 12,
             color: "#79c485"
         }
     ];
@@ -46,15 +46,15 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
 
     $scope.teamData = [
         {
-            value: 176,
+            value: 23,
             color:"#ed5565"
         },
         {
-            value: 161,
+            value: 32,
             color: "#f8ac59"
         },
         {
-            value: 182,
+            value: 58,
             color: "#79c485"
         }
     ];

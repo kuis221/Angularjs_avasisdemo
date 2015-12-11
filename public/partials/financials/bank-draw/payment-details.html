@@ -17,7 +17,13 @@
             <tbody>
                 <tr ng-repeat="item in payment_details">
                     <td>
-                        <img src="assets/img/user1.png" class="img-circle" alt="image">
+                        <span ng-if="item.role">
+                            <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
+                            <img ng-if="!item.avatar" ng-src="assets/img/user_2.png" class="img-circle" alt="image">
+                        </span>
+                        <div ng-if="!item.role" style="width: 40px; height: 40px; background: #f1f1f1; padding: 12px; border-radius: 50%; text-align: center; color: #888;">
+                            {{item.contact[0]}}
+                        </div>
                     </td>
                     <td style="padding-left: 0">
                         <div class="sub-title text-primary">{{item.contact}}</div>
@@ -47,8 +53,8 @@
                     <td class="text-primary">{{item.payment_amount | currency}}</td>
                     <td class="text-primary">{{item.company_name}}</td>
                     <td>{{item.payment_form}}</td>
-                    <td>{{item.varience | currency}}</td>
-                    <td>{{item.description}}-</td>
+                    <td class="text-danger">{{item.varience | currency}}</td>
+                    <td class="text-muted">{{item.description}}</td>
                 </tr>
             </tbody>
             <tfoot>

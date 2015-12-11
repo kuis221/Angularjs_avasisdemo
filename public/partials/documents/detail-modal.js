@@ -2,7 +2,7 @@ app.controller('DocumentDetailModalCtrl',
     ['$scope', '$uibModalInstance', 'selectedDoc', function($scope, $uibModalInstance, selectedDoc) {
         $scope.selectedDoc = selectedDoc
         $scope.permittedUsers = [{
-            name: 'Bob Jones'
+            name: 'Bruce Wayne'
         },
         {
             name: 'Scott Campbell'
@@ -25,8 +25,8 @@ app.controller('DocumentDetailModalCtrl',
             },
             {
                 id: _.uniqueId(),
-                avatar: 'assets/img/user_3.png',
-                created_by: 'Bob Jones',
+                avatar: 'assets/img/bruce-wayne.png',
+                created_by: 'Bruce Wayne',
                 created_at: 'Aug 8, 2015 3:40PM',
                 pos: {
                     x: 406,
@@ -56,7 +56,7 @@ app.controller('DocumentDetailModalCtrl',
                 name: "Eric Carlson"
             }, {
                 id: 3,
-                name: "Bob Jones"
+                name: "Bruce Wayne"
             }, {
                 id: 4,
                 name: "Scott Campbell"
@@ -110,8 +110,8 @@ app.controller('DocumentDetailModalCtrl',
         }
         $scope.createComment = function() {
             lastComment = _.last($scope.comments);
-            lastComment.avatar = 'assets/img/user_2.png';
-            lastComment.created_by = 'Andrew Klein';
+            lastComment.avatar = 'assets/img/bruce-wayne.png';
+            lastComment.created_by = 'Bruce Wayne';
             lastComment.created_at = moment().format('lll');
             lastComment.id = _.uniqueId();
         }

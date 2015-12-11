@@ -39,10 +39,10 @@
                             <div sparkline spark-data="[inspections.completed, inspections.total-inspections.completed]" spark-options="pieOptions"></div>
                         </div>
                         <div>
-                            <span class="action-item-text">{{ round(inspections.completed / inspections.total * 100) }}% COMPLETED</span><br>
-                            <span class="action-item-value">{{ inspections.completed }}</span>
+                            <span class="action-item-text">{{ round(inspections.completed.done / inspections.completed.total * 100) }}% COMPLETED</span><br>
+                            <span class="action-item-value">{{ inspections.completed.done }}</span>
                             <span class="action-item-of">of</span>
-                            <span class="action-item-value">{{ inspections.total }} items</span>
+                            <span class="action-item-value">{{ inspections.completed.total }} items</span>
                         </div>
                     </div>
                     <div class="col-md-6">

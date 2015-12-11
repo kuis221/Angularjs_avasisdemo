@@ -22,7 +22,8 @@
             <tbody>
                 <tr ng-repeat="item in compliances">
                     <td>
-                        <img src="assets/img/user1.png" class="img-circle" alt="image">
+                        <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
+                        <img ng-if="!item.avatar" ng-src="assets/img/user_2.png" class="img-circle" alt="image">
                     </td>
                     <td style="padding-left: 0">
                         <div class="sub-title text-primary">{{item.contact}}</div>
@@ -51,7 +52,9 @@
                     <td>
                         <div>
                             <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
+
+                                <img alt="image" ng-if="item.status != 'Complaint'" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
+                                <img alt="image" ng-if="item.status == 'Complaint'" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
@@ -73,7 +76,7 @@
                     <td>
                         <div>
                             <div class="pull-left">
-                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_red.png">
+                                <img alt="image" class="img-circle flag" width="20px" src="assets/img/flag_green.png">
                             </div>
                             <div class="pull-left">
                                 <div class="text-primary small">1 attachment</div>
@@ -94,7 +97,17 @@
                     </td>
                     <td><small class="text-success" ng-class="{true: 'text-danger'}[item.status != 'Complaint']">{{item.status}}</small></td>
                     <td class="text-right">
-                        <a class="btn btn-transparent"><i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i></a>
+                        <div class="btn-group" uib-dropdown>
+                            <a class="btn btn-transparent" uib-dropdown-toggle>
+                                <i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i>
+                            </a>
+
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Remove Payment Application From Draw</a></li>
+                                <li role="menuitem"><a ng-click="">Override Compliance Issue</a></li>
+                            </ul>
+                        </div>
+                        
                     </td>
                 </tr>
             </tbody>
