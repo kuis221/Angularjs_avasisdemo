@@ -195,6 +195,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/procurement/list.html',
             controller: 'ProcurementsCtrl'
+        })
         .state('payment-application', {
             url: '/financials/payment-application',
             abstract: true,
