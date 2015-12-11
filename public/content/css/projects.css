@@ -68,3 +68,45 @@
 .prj-table-wrapper {
     padding: 0px 20px;
 }
+
+.prj-sch-photo {
+    width: 60px;
+    height: 60px;
+}
+
+.prj-team-photo {
+    width: 38px;
+    height: 38px;
+}
+
+.items-today {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    height: 630px !important;
+    margin-top: 26px;
+}
+.items-today td a {
+    color: #fff;
+    background: #2a2d33;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 3px 8px;
+    white-space: nowrap;
+}
+.items-today h2 {
+    margin: 0;
+    padding: 6px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 20px;
+}
+.items-today .table td {
+    padding: 20px 10px 9px;
+}
+.items-today .table td span {
+    color: #3aabd5;
+}
+.items-today .table td .strock {
+    text-decoration: line-through;
+    position: relative;
+    opacity: 0.4;
+}
