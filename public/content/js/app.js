@@ -183,6 +183,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
         })
+        .state('procurement', {
+            url: '/procurements',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('procurement.main', {
+            url: '/main',
+            templateUrl: 'partials/procurement/list.html',
+            controller: 'ProcurementsCtrl'
+        })
         .state('photos', {
             url: '/photos',
             templateUrl: 'partials/photos/photos.html',
