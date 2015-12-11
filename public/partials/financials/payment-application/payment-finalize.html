@@ -1,0 +1,216 @@
+<div class="pi-page-wrapper mb30">
+    <!----==================TOP NAV BAR==================---->
+    <div class="row bankbg">
+        <div class="pull-left noPdingLeft noPdingRight">
+            <div class="closeBox">
+                <p><a ui-sref="payment-application.initiate">Close <i class="fa fa-caret-right"></i></a></p>
+            </div>
+        </div>
+        <div class="pull-left pi-page-title">
+            <div class="row no-margin">
+                <div class="col-md-6">
+                    <h2 class="heading">Create New Pay Application</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="pi-app-info">
+                        <div class="row">
+                            <span class="col-xs-8 text-right">Pay App#</span>
+                            <span class="col-xs-4 text-left">
+                                <span class="label label-black">193</span>
+                            </span>
+                        </div>
+                        <div class="row mt5">
+                            <span class="col-xs-8 text-right">INITIATED APPLICATION ON</span>
+                            <span class="col-xs-4 text-left">8/23/15</span>
+                        </div>
+                        <div class="row mt5">
+                            <span class="col-xs-8 text-right">CREATED BY</span>
+                            <span class="col-xs-4 text-left">Eric Hoffman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-margin">
+                <div class="col-lg-12">
+                    <div class="pi-payment-title">Vehicula Aenean Elit Consectetur</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----================== End  TOP NAV BAR==================---->
+
+    <!----================== Start Main content==================---->
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="pi-mt30">
+                <div class="row no-margin">
+                    <h3 class="section-title">Review and Finalize Application (2)</h3>
+                </div>
+            </div>
+
+            <div class="review-section mb30" ng-repeat="payment in payment_application">
+                <div class="row no-margin">
+                    <div class="pull-left pi-filter-section">
+                        <div class="form-group">
+                            <label>Project</label>
+                            <div class="text-primary">{{payment.project}}</div>
+                        </div>
+                    </div>
+                    <div class="pull-left pi-filter-section">
+                        <div class="form-group">
+                            <label>Contract</label>
+                            <div class="text-primary">{{payment.contract}}</div>
+                        </div>
+                    </div>
+                    <div class="pull-left pi-filter-section">
+                        <div class="form-group">
+                            <label>Scope of Work</label>
+                            <div class="text-primary">{{payment.scope}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered pi-payment-data">
+                                <thead>
+                                    <th></th>
+                                    <th>Contracted</th>
+                                    <th>%Completed</th>
+                                    <th>Earned - Retainage</th>
+                                    <th>Previously Paid</th>
+                                    <th>Invoiced</th>
+                                    <th>varience</th>
+                                    <th>Balance to Complete</th>
+                                </thead>
+                                <tbody>
+                                    <tr class="pi-normal-row">
+                                        <td><b>Labor</b></td>
+                                        <td>{{payment.labor.contracted | currency}}</td>
+                                        <td>{{payment.labor.completed}}%</td>
+                                        <td>{{payment.labor.earned | currency}}</td>
+                                        <td>{{payment.labor.previously_paid | currency}}</td>
+                                        <td>{{payment.labor.invoiced | currency}}</td>
+                                        <td class="text-danger">{{payment.labor.varience | currency}}</td>
+                                        <td>{{payment.labor.balance | currency}}</td>
+                                    </tr>
+                                    <tr class="pi-normal-row">
+                                        <td><b>Materials</b></td>
+                                        <td>{{payment.materials.contracted | currency}}</td>
+                                        <td>{{payment.materials.completed}}%</td>
+                                        <td>{{payment.materials.earned | currency}}</td>
+                                        <td>{{payment.materials.previously_paid | currency}}</td>
+                                        <td>{{payment.materials.invoiced | currency}}</td>
+                                        <td class="text-danger">{{payment.materials.varience | currency}}</td>
+                                        <td>{{payment.materials.balance | currency}}</td>
+                                    </tr>
+                                    <tr class="pi-normal-row">
+                                        <td><b>Equipment</b></td>
+                                        <td>{{payment.equipment.contracted | currency}}</td>
+                                        <td>{{payment.equipment.completed}}%</td>
+                                        <td>{{payment.equipment.earned | currency}}</td>
+                                        <td>{{payment.equipment.previously_paid | currency}}</td>
+                                        <td>{{payment.equipment.invoiced | currency}}</td>
+                                        <td class="text-danger">{{payment.equipment.varience | currency}}</td>
+                                        <td>{{payment.equipment.balance | currency}}</td>
+                                    </tr>
+                                    <tr class="pi-total-row">
+                                        <td><b>Totals</b></td>
+                                        <td>{{payment.total.contracted | currency}}</td>
+                                        <td>{{payment.total.completed}}%</td>
+                                        <td>{{payment.total.earned | currency}}</td>
+                                        <td>{{payment.total.previously_paid | currency}}</td>
+                                        <td>{{payment.total.invoiced | currency}}</td>
+                                        <td class="text-danger">{{payment.total.varience | currency}}</td>
+                                        <td>{{payment.total.balance | currency}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row no-margin pt15">
+                    <div class="pull-left pi-summary-section">
+                        <div class="form-group">
+                            <label>Duration</label>
+                            <div>{{payment.summary.duration}} days</div>
+                        </div>
+                    </div>
+                    <div class="pull-left pi-summary-section">
+                        <div class="form-group">
+                            <label>Retainage</label>
+                            <div>{{payment.summary.retainage}} %</div>
+                        </div>
+                    </div>
+                    <div class="pull-left pi-summary-section">
+                        <div class="form-group">
+                            <label>Scheduled Completion</label>
+                            <div>{{payment.summary.scheduled_completion}}</div>
+                        </div>
+                    </div>
+                    <div class="pull-left pi-summary-section">
+                        <div class="form-group">
+                            <label>Estimated Completion</label>
+                            <div>{{payment.summary.estimated_completion}}</div>
+                        </div>
+                    </div>
+                    <div class="pull-left pi-summary-section">
+                        <div class="form-group">
+                            <label>Varience</label>
+                            <div class="text-danger">{{payment.summary.varience}} Days</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================== End Main content==================---->
+</div>
+
+<div class="row pi-footer">
+    <div class="col-md-12 pi-pt15">
+        <div class="row no-margin">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Initator Signature</label>
+                    <input type="text" class="form-control pi-input-signature"></input>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <div class="pi-static-summary">Date<span class="pull-right">Aug 24, 2015</span></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <ui-select class="pi-dropdown-top" selected-item="selectedState" options="stateList" placeholder="State Of"></ui-select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <ui-select class="pi-dropdown-top" selected-item="selectedCountry" options="countryList" placeholder="Country Of"></ui-select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <div class="summary-total-title">TOTAL AMOUNT FOR PAY APPLICATION<div class="summary-total-value">$123,000.00</div></div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <div>
+                        <button type="button" class="btn btn-lg btn-cancel">Cancel</button>
+                        <button type="button" class="btn btn-lg btn-success">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

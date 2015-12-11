@@ -59,7 +59,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/financials/bankdraw',
             abstract: true,
             controller: "BankDrawCtrl",
-            templateUrl: 'partials/financials/bank-draw/main.html'
+            templateUrl: 'partials/financials/bank-draw/main.html',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('bankdraw.payment-application', {
             url: '/payment-application',

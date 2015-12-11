@@ -119,8 +119,17 @@ table.table-bids tbody + tbody {
 .table-bids tr th {
     padding: 20px !important;
 }
+
+p {
+
+}
+
 .table-bids .bid-name {
     width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
 }
 .table-bids .text-active {
     color: #3aabd5;

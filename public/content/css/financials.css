@@ -33,6 +33,22 @@
 .table-financial-main span {
     font-size: 12px;
 }
+
+.table-financial-main.table thead tr:last-child th {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 12px;
+}
+
+.table-financial-main.table tbody tr.first-level td {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 12px;
+}
+
+.table-financial-main.table tbody tr.first-level td:first-child {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 12px;
+}
+
 .table-financial-main.table thead tr th,
 .table-financial-main.table tbody tr td {
     vertical-align: middle;
@@ -198,9 +214,9 @@
 }
 #bankdraw-finalize .label {
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
     margin-top: 4px;
-    padding: 1px 5px; 
+    padding: 1px 5px;
 }
 #bankdraw-finalize #stats td {
     padding: 30px;

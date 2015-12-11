@@ -33,11 +33,11 @@ app.controller('FinancialsCtrl',
         // Stats
         $timeout(function(){
             $scope.stats = {
-                estimated: 11,
-                contractual: 28,
-                direct: 33,
-                pending: 19,
-                unbudgeted: 9
+                estimated: 52,
+                contractual: 30,
+                direct: 12,
+                pending: 0,
+                unbudgeted: 0
             };
         }, 500);
 

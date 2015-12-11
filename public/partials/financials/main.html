@@ -6,210 +6,596 @@
                     <table class="table table-financial-main">
                         <thead>
                             <tr>
-                                <th>Division Cost Code</th>
+                                <th rowspan="2">Division Cost Code</th>
                                 <th colspan="6">Working Budget Section</th>
                                 <th colspan="2">Pending Costs</th>
-                                <th colspan="4"></th>
+                                <th rowspan="2">Unbudgeted Costs</th>
+                                <th rowspan="2">Estimated Cost at Completion</th>
+                                <th rowspan="2">Payments Made</th>
+                                <th rowspan="2">Cash Required to Complete</th>
+                            </tr>
+                            <tr>
+                                <th>Est.Budget</th>
+                                <th>Under Contract</th>
+                                <th>Approved Purchase Orders</th>
+                                <th>Approved Change Orders</th>
+                                <th>Direct Costs</th>
+                                <th>Working Budget</th>
+                                <th>Pending Purchase Orders</th>
+                                <th>Pending Change Orders</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="first-level">
                                 <td>
                                     <div class="space1">
-                                        <span class="sky" ng-click="genContCollapse = !genContCollapse">
-                                            General Condition
-                                            <i class="fa" ng-class="{'fa-chevron-down': genContCollapse,
-                                                                     'fa-chevron-up': !genContCollapse}"></i>
+                                        <span class="sky">{{data[0].division_cost_code}}
+                                            <i class="fa" ng-click="data[0].isCollapsed = !data[0].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[0].isCollapsed,
+                                                           'fa-chevron-up': !data[0].isCollapsed}"></i>
                                         </span>
                                     </div>
                                 </td>
-                                <td>Est.Budget</td>
-                                <td>Under Contract</td>
-                                <td>Approved Purchase Orders</td>
-                                <td>Approved Change Orders</td>
-                                <td>Direct Costs</td>
-                                <td>Working Budget</td>
-                                <td>Pending Purchase Orders</td>
-                                <td>Pending Change Orders</td>
-                                <td>Unbudgeted Costs</td>
-                                <td>Estimated Cost at Completion</td>
-                                <td>Payments Made</td>
-                                <td>Cash Required to Complete</td>
+                                <td>{{data[0].est_budget | currency: '$'}}</td>
+                                <td>{{data[0].under_contract | currency: '$'}}</td>
+                                <td>{{data[0].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[0].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[0].direct_costs | currency: '$'}}</td>
+                                <td>{{data[0].working_budget | currency: '$'}}</td>
+                                <td>{{data[0].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[0].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[0].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[0].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[0].payments_made | currency: '$'}}</td>
+                                <td>{{data[0].cash_required_to_complete | currency: '$'}}</td>
                             </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Donec ullamcorper nulla non metus auctor fringilla.</span></div></td>
-                                <td>$1,000,000</td>
-                                <td>$2,272.85</td>
-                                <td>$8,500.00 </td>
-                                <td>$1,000,000</td>
-                                <td>$2,272.85</td>
-                                <td>$8,500.00 </td>
-                                <td>$8,500.00 </td>
-                                <td>$8,500.00 </td>
-                                <td>$2,272.85</td>
-                                <td>$8,500.00 </td>
-                                <td>$2,272.85</td>
-                                <td>$2,272.85</td>
-                            </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Venenatis Risus Bibendum</span></div></td>
-                                <td>$800.00</td>
-                                <td>$857.50 </td>
-                                <td>$2,000.00</td>
-                                <td>$800.00</td>
-                                <td>$857.50 </td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$30,000.00 </td>
-                                <td>$30,000.00 </td>
-                                <td>$30,000.00 </td>
-                                <td>$2,000.00 </td>
-                            </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Nulla vitae elit libero, a pharetra augue.</span></div></td>
-                                <td>$30,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00 </td>
-                                <td>$30,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00 </td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00 </td>
-                            </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Vivamus sagittis lacus vel augue laoreet rutrum fauci.. dolor auctor.</span></div></td>
-                                <td>$60,000.00 </td>
-                                <td>$60,000.00 </td>
-                                <td>$3,500.00</td>
-                                <td>$60,000.00 </td>
-                                <td>$60,000.00 </td>
-                                <td>$3,500.00</td>
-                                <td>$3,500.00</td>
-                                <td>$3,500.00</td>
-                                <td>$60,000.00 </td>
-                                <td>$3,500.00</td>
-                                <td>$60,000.00 </td>
-                                <td>$3,500.00</td>
-                            </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Donec ullamcorper nulla non metus auctor fringilla.</span></div></td>
-                                <td>$10,000.00 </td>
-                                <td>$10,000.00 </td>
-                                <td>$1,000.00 </td>
-                                <td>$10,000.00 </td>
-                                <td>$10,000.00 </td>
-                                <td>$1,000.00 </td>
-                                <td>$1,000.00 </td>
-                                <td>$1,000.00 </td>
-                                <td>$10,000.00 </td>
-                                <td>$1,000.00 </td>
-                                <td>10,000.00</td>
-                                <td>$1,000.00</td>
-                            </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Venenatis Risus Bibendum</span></div></td>
-                                <td>$8,500.00 </td>
-                                <td>$8,500.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$8,500.00</td>
-                                <td>$8,500.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>85,00.00</td>
-                                <td>$2,000.00 </td>
-                                <td>85,00.00</td>
-                                <td>$2,000.00 </td>
-                            </tr>
-                            <tr ng-hide="genContCollapse">
-                                <td><div class="space1"><span class="sky">Nulla vitae elit libero, a pharetra augue.</span></div></td>
-                                <td>$2,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>85,00.00</td>
-                                <td>$2,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>85,00.00</td>
-                                <td>85,00.00</td>
-                                <td>85,00.00</td>
-                                <td>$2,000.00</td>
-                                <td>85,00.00</td>
-                                <td>$2,000.00</td>
-                                <td>85,00.00</td>
+                            <tr ng-repeat="row in data[0].children" ng-hide="data[0].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
                             </tr>
                             <tr class="first-level">
                                 <td>
                                     <div class="space1">
-                                        <span class="sky" ng-click="siteWorkCollapse = !siteWorkCollapse">
-                                            Site Work
-                                            <i class="fa" ng-class="{'fa-chevron-down': siteWorkCollapse,
-                                                                     'fa-chevron-up': !siteWorkCollapse}"></i>
+                                        <span class="sky">{{data[1].division_cost_code}}
+                                            <i class="fa" ng-click="data[1].isCollapsed = !data[1].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[1].isCollapsed,
+                                                           'fa-chevron-up': !data[1].isCollapsed}"></i>
                                         </span>
                                     </div>
                                 </td>
-                                <td>Est.Budget</td>
-                                <td>Under Contract</td>
-                                <td>Approved Purchase Orders</td>
-                                <td>Approved Change Orders</td>
-                                <td>Direct Costs</td>
-                                <td>Working Budget</td>
-                                <td>Pending Purchase Orders</td>
-                                <td>Pending Change Orders</td>
-                                <td>Unbudgeted Costs</td>
-                                <td>Estimated Cost at Completion</td>
-                                <td>Payments Made</td>
-                                <td>Cash Required to Complete</td>
+                                <td>{{data[1].est_budget | currency: '$'}}</td>
+                                <td>{{data[1].under_contract | currency: '$'}}</td>
+                                <td>{{data[1].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[1].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[1].direct_costs | currency: '$'}}</td>
+                                <td>{{data[1].working_budget | currency: '$'}}</td>
+                                <td>{{data[1].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[1].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[1].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[1].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[1].payments_made | currency: '$'}}</td>
+                                <td>{{data[1].cash_required_to_complete | currency: '$'}}</td>
                             </tr>
-                            <tr ng-hide="siteWorkCollapse">
-                                <td><span class="sky">Donec ullamcorper nulla non metus auctor fringilla.</span></td>
-                                <td>$1,000,000 </td>
-                                <td>$2,272.85</td>
-                                <td>$2,272.85</td>
-                                <td>$1,000,000 </td>
-                                <td>$2,272.85</td>
-                                <td>$8,500.00</td>
-                                <td>$8,500.00</td>
-                                <td>$8,500.00 </td>
-                                <td>$2,272.85</td>
-                                <td>$8,500.00 </td>
-                                <td>$2,272.85</td>
-                                <td>$8,500.00 </td>
+                            <tr ng-repeat="row in data[1].children" ng-hide="data[1].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
                             </tr>
-                            <tr ng-hide="siteWorkCollapse">
-                                <td><div class="space1"><span class="sky">Venenatis Risus Bibendum</span></div></td>
-                                <td>$8,500.00 </td>
-                                <td>$857.50 </td>
-                                <td>$2,000.00 </td>
-                                <td>$800.00 </td>
-                                <td>$857.50 </td>
-                                <td>$2,000.00</td>
-                                <td>$2,000.00 </td>
-                                <td>$2,000.00 </td>
-                                <td>$857.50 </td>
-                                <td>$2,000.00 </td>
-                                <td>$857.50 </td>
-                                <td>$2,000.00 </td>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[2].division_cost_code}}
+                                            <i class="fa" ng-click="data[2].isCollapsed = !data[2].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[2].isCollapsed,
+                                                           'fa-chevron-up': !data[2].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[2].est_budget | currency: '$'}}</td>
+                                <td>{{data[2].under_contract | currency: '$'}}</td>
+                                <td>{{data[2].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[2].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[2].direct_costs | currency: '$'}}</td>
+                                <td>{{data[2].working_budget | currency: '$'}}</td>
+                                <td>{{data[2].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[2].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[2].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[2].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[2].payments_made | currency: '$'}}</td>
+                                <td>{{data[2].cash_required_to_complete | currency: '$'}}</td>
                             </tr>
-                            <tr ng-hide="siteWorkCollapse">
-                                <td><div class="space1"><span class="sky">Nulla vitae elit libero, a pharetra augue.</span></div></td>
-                                <td>$30,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00</td>
-                                <td>$30,000.00</td>
-                                <td>$2,000.00</td>
+                            <tr ng-repeat="row in data[2].children" ng-hide="data[2].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
                             </tr>
-
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[3].division_cost_code}}
+                                            <i class="fa" ng-click="data[3].isCollapsed = !data[3].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[3].isCollapsed,
+                                                           'fa-chevron-up': !data[3].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[3].est_budget | currency: '$'}}</td>
+                                <td>{{data[3].under_contract | currency: '$'}}</td>
+                                <td>{{data[3].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[3].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[3].direct_costs | currency: '$'}}</td>
+                                <td>{{data[3].working_budget | currency: '$'}}</td>
+                                <td>{{data[3].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[3].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[3].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[3].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[3].payments_made | currency: '$'}}</td>
+                                <td>{{data[3].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[3].children" ng-hide="data[3].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[4].division_cost_code}}
+                                            <i class="fa" ng-click="data[4].isCollapsed = !data[4].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[4].isCollapsed,
+                                                           'fa-chevron-up': !data[4].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[4].est_budget | currency: '$'}}</td>
+                                <td>{{data[4].under_contract | currency: '$'}}</td>
+                                <td>{{data[4].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[4].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[4].direct_costs | currency: '$'}}</td>
+                                <td>{{data[4].working_budget | currency: '$'}}</td>
+                                <td>{{data[4].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[4].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[4].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[4].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[4].payments_made | currency: '$'}}</td>
+                                <td>{{data[4].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[4].children" ng-hide="data[4].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[5].division_cost_code}}
+                                            <i class="fa" ng-click="data[5].isCollapsed = !data[5].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[5].isCollapsed,
+                                                           'fa-chevron-up': !data[5].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[5].est_budget | currency: '$'}}</td>
+                                <td>{{data[5].under_contract | currency: '$'}}</td>
+                                <td>{{data[5].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[5].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[5].direct_costs | currency: '$'}}</td>
+                                <td>{{data[5].working_budget | currency: '$'}}</td>
+                                <td>{{data[5].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[5].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[5].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[5].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[5].payments_made | currency: '$'}}</td>
+                                <td>{{data[5].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[5].children" ng-hide="data[5].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[6].division_cost_code}}
+                                            <i class="fa" ng-click="data[6].isCollapsed = !data[6].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[6].isCollapsed,
+                                                           'fa-chevron-up': !data[6].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[6].est_budget | currency: '$'}}</td>
+                                <td>{{data[6].under_contract | currency: '$'}}</td>
+                                <td>{{data[6].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[6].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[6].direct_costs | currency: '$'}}</td>
+                                <td>{{data[6].working_budget | currency: '$'}}</td>
+                                <td>{{data[6].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[6].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[6].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[6].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[6].payments_made | currency: '$'}}</td>
+                                <td>{{data[6].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[6].children" ng-hide="data[6].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[7].division_cost_code}}
+                                            <i class="fa" ng-click="data[7].isCollapsed = !data[7].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[7].isCollapsed,
+                                                           'fa-chevron-up': !data[7].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[7].est_budget | currency: '$'}}</td>
+                                <td>{{data[7].under_contract | currency: '$'}}</td>
+                                <td>{{data[7].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[7].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[7].direct_costs | currency: '$'}}</td>
+                                <td>{{data[7].working_budget | currency: '$'}}</td>
+                                <td>{{data[7].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[7].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[7].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[7].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[7].payments_made | currency: '$'}}</td>
+                                <td>{{data[7].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[7].children" ng-hide="data[7].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[8].division_cost_code}}
+                                            <i class="fa" ng-click="data[8].isCollapsed = !data[8].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[8].isCollapsed,
+                                                           'fa-chevron-up': !data[8].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[8].est_budget | currency: '$'}}</td>
+                                <td>{{data[8].under_contract | currency: '$'}}</td>
+                                <td>{{data[8].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[8].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[8].direct_costs | currency: '$'}}</td>
+                                <td>{{data[8].working_budget | currency: '$'}}</td>
+                                <td>{{data[8].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[8].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[8].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[8].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[8].payments_made | currency: '$'}}</td>
+                                <td>{{data[8].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[8].children" ng-hide="data[8].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[9].division_cost_code}}
+                                            <i class="fa" ng-click="data[9].isCollapsed = !data[9].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[9].isCollapsed,
+                                                           'fa-chevron-up': !data[9].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[9].est_budget | currency: '$'}}</td>
+                                <td>{{data[9].under_contract | currency: '$'}}</td>
+                                <td>{{data[9].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[9].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[9].direct_costs | currency: '$'}}</td>
+                                <td>{{data[9].working_budget | currency: '$'}}</td>
+                                <td>{{data[9].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[9].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[9].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[9].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[9].payments_made | currency: '$'}}</td>
+                                <td>{{data[9].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[9].children" ng-hide="data[9].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[10].division_cost_code}}
+                                            <i class="fa" ng-click="data[10].isCollapsed = !data[10].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[10].isCollapsed,
+                                                           'fa-chevron-up': !data[10].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[10].est_budget | currency: '$'}}</td>
+                                <td>{{data[10].under_contract | currency: '$'}}</td>
+                                <td>{{data[10].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[10].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[10].direct_costs | currency: '$'}}</td>
+                                <td>{{data[10].working_budget | currency: '$'}}</td>
+                                <td>{{data[10].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[10].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[10].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[10].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[10].payments_made | currency: '$'}}</td>
+                                <td>{{data[10].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[10].children" ng-hide="data[10].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[11].division_cost_code}}
+                                            <i class="fa" ng-click="data[11].isCollapsed = !data[11].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[11].isCollapsed,
+                                                           'fa-chevron-up': !data[11].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[11].est_budget | currency: '$'}}</td>
+                                <td>{{data[11].under_contract | currency: '$'}}</td>
+                                <td>{{data[11].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[11].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[11].direct_costs | currency: '$'}}</td>
+                                <td>{{data[11].working_budget | currency: '$'}}</td>
+                                <td>{{data[11].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[11].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[11].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[11].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[11].payments_made | currency: '$'}}</td>
+                                <td>{{data[11].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[11].children" ng-hide="data[11].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[12].division_cost_code}}
+                                            <i class="fa" ng-click="data[12].isCollapsed = !data[12].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[12].isCollapsed,
+                                                           'fa-chevron-up': !data[12].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[12].est_budget | currency: '$'}}</td>
+                                <td>{{data[12].under_contract | currency: '$'}}</td>
+                                <td>{{data[12].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[12].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[12].direct_costs | currency: '$'}}</td>
+                                <td>{{data[12].working_budget | currency: '$'}}</td>
+                                <td>{{data[12].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[12].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[12].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[12].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[12].payments_made | currency: '$'}}</td>
+                                <td>{{data[12].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[12].children" ng-hide="data[12].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[13].division_cost_code}}
+                                            <i class="fa" ng-click="data[13].isCollapsed = !data[13].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[13].isCollapsed,
+                                                           'fa-chevron-up': !data[13].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[13].est_budget | currency: '$'}}</td>
+                                <td>{{data[13].under_contract | currency: '$'}}</td>
+                                <td>{{data[13].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[13].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[13].direct_costs | currency: '$'}}</td>
+                                <td>{{data[13].working_budget | currency: '$'}}</td>
+                                <td>{{data[13].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[13].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[13].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[13].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[13].payments_made | currency: '$'}}</td>
+                                <td>{{data[13].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[13].children" ng-hide="data[13].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr class="first-level">
+                                <td>
+                                    <div class="space1">
+                                        <span class="sky">{{data[14].division_cost_code}}
+                                            <i class="fa" ng-click="data[14].isCollapsed = !data[14].isCollapsed"
+                                                ng-class="{'fa-chevron-down': data[14].isCollapsed,
+                                                           'fa-chevron-up': !data[14].isCollapsed}"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>{{data[14].est_budget | currency: '$'}}</td>
+                                <td>{{data[14].under_contract | currency: '$'}}</td>
+                                <td>{{data[14].approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[14].approved_change_orders | currency: '$'}}</td>
+                                <td>{{data[14].direct_costs | currency: '$'}}</td>
+                                <td>{{data[14].working_budget | currency: '$'}}</td>
+                                <td>{{data[14].pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{data[14].pending_change_orders | currency: '$'}}</td>
+                                <td>{{data[14].unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{data[14].est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{data[14].payments_made | currency: '$'}}</td>
+                                <td>{{data[14].cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
+                            <tr ng-repeat="row in data[14].children" ng-hide="data[14].isCollapsed">
+                                <td><div class="space1"><span class="sky">{{row.division_cost_code}}</span></div></td>
+                                <td>{{row.est_budget | currency: '$'}}</td>
+                                <td>{{row.under_contract | currency: '$'}}</td>
+                                <td>{{row.approved_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.approved_change_orders | currency: '$'}}</td>
+                                <td>{{row.direct_costs | currency: '$'}}</td>
+                                <td>{{row.working_budget | currency: '$'}}</td>
+                                <td>{{row.pending_purchase_orders | currency: '$'}}</td>
+                                <td>{{row.pending_change_orders | currency: '$'}}</td>
+                                <td>{{row.unbudgeted_costs | currency: '$'}}</td>
+                                <td>{{row.est_cost_at_completion | currency: '$'}}</td>
+                                <td>{{row.payments_made | currency: '$'}}</td>
+                                <td>{{row.cash_required_to_complete | currency: '$'}}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
