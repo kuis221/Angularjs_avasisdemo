@@ -1,0 +1,78 @@
+.procurement-table h3 {
+  margin: 30px 0 15px;
+  font-family: "AvenirNextLTPro-Medium";
+  font-size: 17px;
+  color: #4a4a4a; }
+
+.procurement-table table {
+  background-color: #fff; }
+  .procurement-table table thead th {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 15px;
+    color: #808080;
+    border: none; }
+  .procurement-table table thead th.name {
+    width: 30%; }
+  .procurement-table table tbody tr {
+    border-top: 1px solid #eee; }
+  .procurement-table table tbody tr td {
+    border: none;
+    vertical-align: middle; }
+  .procurement-table table tbody small {
+    font-size: 10px;
+    color: #9e9e9e; }
+  .procurement-table table tbody td.name {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px; }
+    .procurement-table table tbody td.name span.action_image {
+      float: left;
+      padding-top: 5px;
+      margin-right: 20px; }
+    .procurement-table table tbody td.name span.action_name {
+      float: left; }
+    .procurement-table table tbody td.name small {
+      font-size: 10px; }
+  .procurement-table table tbody td.status span {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 9px;
+    padding: 2px 0px 2px 0px;
+    margin-top: 5px;
+    color: #2a2d33; }
+  .procurement-table table tbody td.status .success {
+    color: #79c485; }
+  .procurement-table table tbody td.status .warning {
+    color: #fdae46; }
+  .procurement-table table tbody td.status .danger {
+    color: #e25c5c; }
+  .procurement-table table tbody td.responsible {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px; }
+  .procurement-table table tbody td.date_order {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px; }
+  .procurement-table table tbody td.work_scope {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 11px; }
+  .procurement-table table tbody td.supplier {
+    color: #2a2d33;
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 12px; }
+    .procurement-table table tbody td.supplier span.no_supplier {
+      color: #9e9e9e;
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 10px; }
+    .procurement-table table tbody td.supplier img {
+      border-left: 1px solid #d8dcdd;
+      padding: 0 9px;
+      float: left; }
+    .procurement-table table tbody td.supplier img:first-of-type {
+      border: none;
+      padding-left: 0; }
+    .procurement-table table tbody td.supplier img.phone {
+      padding-right: 5px; }
+    .procurement-table table tbody td.supplier span.phone_detail {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 10px;
+      color: #7f8a90; }
