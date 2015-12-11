@@ -7,124 +7,107 @@ app.controller('ProcurementsCtrl',
             listRequiredByMe: [
                 {
                     flag: 'red',
-                    title: "Lorem Dapibus Vestibulum",
+                    title: "Main Floor Fireplace",
                     sTitle: "Design",
-                    status: "not yet ordered",
+                    status: "Awaiting Approval",
                     responsible: {
-                        name: "Eric Hoffman",
-                        company: "ABC Inc."
+                        name: "Bob Jones",
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/17/2015",
+                    date_ordered: "",
                     scope: {
-                        name: "Bibendum Ridiculus Fermentum",
+                        name: "Fireplace Install",
                         ready: true
                     },
                     supplier: {
-                        name: "Bob Jones",
-                        file: "document.xls",
-                        email: "bob@jones.com",
-                        phone: "415 123 3456"
                     }
                 },
                 {
                     flag: 'red',
-                    title: "Cras Consectetur",
-                    sTitle: "Material",
-                    status: "Back Ordered",
-                    responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
-                    },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
-                    scope: {
-                        name: "Ultricies Adipiscing Purus",
-                        ready: true
-                    },
-                    supplier: {
-                    }
-                },
-                {
-                    flag: 'orange',
-                    title: "Cursus Nullam Parturient",
-                    sTitle: "Equipment",
-                    status: "Awaiting Approval",
+                    title: "Air Ducts",
+                    sTitle: "Materials",
+                    status: "Delivered",
                     responsible: {
                         name: "Bob Jones",
-                        company: "ABC Inc."
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/17/2015",
+                    date_ordered: "8/5/2015",
                     scope: {
-                        name: "Sollicitudin",
+                        name: "Rough HVAC",
                         ready: true
                     },
                     supplier: {
-                        name: "Sloan Urry",
-                        file: "document.xls",
-                        phone: "415 123 3456"
+                        name: "Contractors HVAC Supply"
                     }
                 },
                 {
                     flag: 'orange',
-                    title: "Ullamcorper Consectetur",
-                    sTitle: "Design",
-                    status: "completed",
-                    responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
-                    },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
-                    scope: {
-                        name: "Vulputate Risus",
-                        ready: true
-                    },
-                    supplier: {
-                        name: "Taylor Hyde",
-                        file: "document.xls",
-                        email: "bob@jones.com"
-                    }
-                },
-                {
-                    flag: 'orange',
-                    title: "Cursus Nullam Parturient",
+                    title: "Excavation Backhoe",
                     sTitle: "Equipment",
-                    status: "cancelled",
+                    status: "Ordered",
                     responsible: {
                         name: "Bob Jones",
-                        company: "ABC Inc."
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/24/2015",
+                    date_ordered: "8/17/2015",
                     scope: {
-                        name: "Sollicitudin",
+                        name: "Landscaping",
                         ready: true
                     },
                     supplier: {
-                        name: "Kimball Frank",
-                        phone: "415 213 3456"
+                        name: "Arnold Machinery",
                     }
                 },
                 {
                     flag: 'green',
-                    title: "Ullamcorper Consectetur",
+                    title: "Interior Door Hardware",
                     sTitle: "Design",
-                    status: "draft",
+                    status: "Awaiting Selection",
                     responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
+                        name: "Bob Jones",
                     },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
+                    date_required: "8/25/2015",
+                    date_ordered: "",
                     scope: {
-                        name: "Vulputate Risus",
+                        name: "Door Hardware",
                         ready: true
                     },
                     supplier: {
-                        name: "David Hunter",
-                        file: "document.xls",
+                    }
+                },
+                {
+                    flag: 'green',
+                    title: "Kitchen Cabinets",
+                    sTitle: "Design",
+                    status: "Awaiting Approval",
+                    responsible: {
+                        name: "Bob Jones",
+                    },
+                    date_required: "9/1/2015",
+                    date_ordered: "9/1/2015",
+                    scope: {
+                        name: "Kitchen Cabinets",
+                        ready: true
+                    },
+                    supplier: {
+                    }
+                },
+                {
+                    flag: 'green',
+                    title: "Paint Primer",
+                    sTitle: "Materials",
+                    status: "Awaiting Procurement",
+                    responsible: {
+                        name: "Bob Jones",
+                    },
+                    date_required: "9/6/2015",
+                    date_ordered: "9/9/2015",
+                    scope: {
+                        name: "Prime",
+                        ready: true
+                    },
+                    supplier: {
+                        name: "Kenwood Paint Supply"
                     }
                 },
             ],
@@ -132,102 +115,87 @@ app.controller('ProcurementsCtrl',
             listRequiredByOthers: [
                 {
                     flag: 'red',
-                    title: "Lorem Dapibus Vestibulum",
+                    title: "Piping",
+                    sTitle: "Materials",
+                    status: "Needs to be Ordered",
+                    responsible: {
+                        name: "Beth Wiseman",
+                    },
+                    date_required: "8/15/2015",
+                    date_ordered: "8/15/2015",
+                    scope: {
+                        name: "Plumbing",
+                        ready: true
+                    },
+                    supplier: {
+                        name: "Standard Plumbing"
+                    }
+                },
+                {
+                    flag: 'red',
+                    title: "Interior Doors",
                     sTitle: "Design",
-                    status: "not yet ordered",
+                    status: "Awaiting Selection",
                     responsible: {
-                        name: "Bob Jones",
-                        company: "ABC Inc."
+                        name: "Jane Smith",
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/17/2015",
+                    date_ordered: "",
                     scope: {
-                        name: "Bibendum Ridiculus Fermentum",
-                        ready: true
-                    },
-                    supplier: {
-                        name: "Bob Jones",
-                        file: "document.xls",
-                        email: "bob@jones.com",
-                        phone: "415 123 3456"
-                    }
-                },
-                {
-                    flag: 'green',
-                    title: "Cras Consectetur",
-                    sTitle: "Material",
-                    status: "Back Ordered",
-                    responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
-                    },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
-                    scope: {
-                        name: "Ultricies Adipiscing Purus",
+                        name: "Door Installation",
                         ready: true
                     },
                     supplier: {
                     }
                 },
                 {
-                    flag: 'green',
-                    title: "Cursus Nullam Parturient",
-                    sTitle: "Equipment",
+                    flag: 'orange',
+                    title: "Decorative Base Boards",
+                    sTitle: "Design",
                     status: "Awaiting Approval",
                     responsible: {
-                        name: "Bob Jones",
-                        company: "ABC Inc."
+                        name: "Earnie Rutland",
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/19/2015",
+                    date_ordered: "",
                     scope: {
-                        name: "Sollicitudin",
+                        name: "Base Board",
                         ready: true
                     },
                     supplier: {
-                        name: "Sloan Urry",
-                        file: "document.xls",
-                        phone: "415 123 3456"
+                    }
+                },
+                {
+                    flag: 'green',
+                    title: "Drywall",
+                    sTitle: "Materials",
+                    status: "Awaiting Procurment",
+                    responsible: {
+                        name: "Beth Wiseman",
+                    },
+                    date_required: "8/23/2015",
+                    date_ordered: "",
+                    scope: {
+                        name: "Drywall",
+                        ready: true
+                    },
+                    supplier: {
                     }
                 }
             ],
             listDrafts: [
                 {
                     flag: 'edit',
-                    title: "Lorem Dapibus Vestibulum",
+                    title: "Kitchen Counter Top",
                     sTitle: "Design",
-                    status: "completed",
+                    status: "draft",
                     responsible: {
-                        name: "Bob Jones",
-                        company: "ABC Inc."
+                        name: "Jane Smith",
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "9/2/2015",
+                    date_ordered: "",
                     scope: {
-                        name: "Bibendum Ridiculus Fermentum",
-                        ready: true
-                    },
-                    supplier: {
-                        name: "Bob Jones",
-                        file: "document.xls",
-                        email: "bob@jones.com",
-                        phone: "415 123 3456"
-                    }
-                },
-                {
-                    flag: 'edit',
-                    title: "Cras Consectetur",
-                    sTitle: "Material",
-                    status: "completed",
-                    responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
-                    },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
-                    scope: {
-                        name: "Ultricies Adipiscing Purus",
+                        name: "Counter Tops",
                         ready: true
                     },
                     supplier: {
@@ -235,128 +203,111 @@ app.controller('ProcurementsCtrl',
                 },
                 {
                     flag: 'edit',
-                    title: "Cursus Nullam Parturient",
-                    sTitle: "Equipment",
-                    status: "completed",
-                    responsible: {
-                        name: "Bob Jones",
-                        company: "ABC Inc."
-                    },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
-                    scope: {
-                        name: "Sollicitudin",
-                        ready: true
-                    },
-                    supplier: {
-                        name: "Sloan Urry",
-                        file: "document.xls",
-                        phone: "415 123 3456"
-                    }
-                },
-                {
-                    flag: 'edit',
-                    title: "Ullamcorper Consectetur",
+                    title: "Kitchen Tile",
                     sTitle: "Design",
-                    status: "cancelled",
+                    status: "draft",
                     responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
+                        name: "Jane Smith",
                     },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
+                    date_required: "",
+                    date_ordered: "",
                     scope: {
-                        name: "Vulputate Risus",
+                        name: "Kitchen Flooring",
                         ready: true
                     },
                     supplier: {
-                        name: "Taylor Hyde",
-                        file: "document.xls",
-                        email: "bob@jones.com"
                     }
                 }
             ],
             listCompleted: [
                 {
                     flag: 'completed',
-                    title: "Lorem Dapibus Vestibulum",
-                    sTitle: "Design",
+                    title: "Wood Framing",
+                    sTitle: "Materials",
                     status: "completed",
                     responsible: {
-                        name: "Bob Jones",
-                        company: "ABC Inc."
+                        name: "Dan Bonker",
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/12/2015",
+                    date_ordered: "8/1/2015",
                     scope: {
-                        name: "Bibendum Ridiculus Fermentum",
+                        name: "Framing",
                         ready: true
                     },
                     supplier: {
-                        name: "Bob Jones",
-                        file: "document.xls",
-                        email: "bob@jones.com",
-                        phone: "415 123 3456"
+                        name: "Smokey Mountain Lumber"
                     }
                 },
                 {
                     flag: 'completed',
-                    title: "Cras Consectetur",
-                    sTitle: "Material",
+                    title: "Structural Steel",
+                    sTitle: "Materials",
                     status: "completed",
                     responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
+                        name: "John Steel",
                     },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
+                    date_required: "8/7/2015",
+                    date_ordered: "8/1/2015",
                     scope: {
-                        name: "Ultricies Adipiscing Purus",
+                        name: "Steel Framing",
                         ready: true
                     },
                     supplier: {
+                        name: "Metal Markets"
                     }
                 },
                 {
                     flag: 'completed',
-                    title: "Cursus Nullam Parturient",
+                    title: "Crane",
                     sTitle: "Equipment",
                     status: "completed",
                     responsible: {
                         name: "Bob Jones",
-                        company: "ABC Inc."
                     },
-                    date_required: "May 23, 2015",
-                    date_ordered: "May 23, 2015",
+                    date_required: "8/7/2015",
+                    date_ordered: "8/1/2015",
                     scope: {
-                        name: "Sollicitudin",
+                        name: "Steel Framing",
                         ready: true
                     },
                     supplier: {
-                        name: "Sloan Urry",
-                        file: "document.xls",
-                        phone: "415 123 3456"
+                        name: "ECC Crane Service"
                     }
                 },
                 {
-                    flag: 'failed',
-                    title: "Ullamcorper Consectetur",
-                    sTitle: "Design",
-                    status: "cancelled",
+                    flag: 'completed',
+                    title: "Wood Framing",
+                    sTitle: "Materials",
+                    status: "completed",
                     responsible: {
-                        name: "David Hunter",
-                        company: "ABC Inc."
+                        name: "Dale Guerra",
                     },
-                    date_required: "Dec 6, 2015",
-                    date_ordered: "Jan 12, 2016",
+                    date_required: "7/23/2015",
+                    date_ordered: "7/9/2015",
                     scope: {
-                        name: "Vulputate Risus",
+                        name: "Pour Foundation Walls",
                         ready: true
                     },
                     supplier: {
-                        name: "Taylor Hyde",
-                        file: "document.xls",
-                        email: "bob@jones.com"
+                        name: "McKinnley Concrete"
+                    }
+                },
+                {
+                    flag: 'completed',
+                    title: "Additional Concrete Forms",
+                    sTitle: "Equipment",
+                    status: "completed",
+                    responsible: {
+                        name: "John Graber",
+                    },
+                    date_required: "7/23/2015",
+                    date_ordered: "7/9/2015",
+                    scope: {
+                        name: "Pour Foundation Walls",
+                        ready: true
+                    },
+                    supplier: {
+                        name: "Mckinnley Concrete Rentals"
                     }
                 }
             ]
