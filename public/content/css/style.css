@@ -319,7 +319,6 @@ input[type=url], input[type=password] {
     padding: 13px 15px;
 }
 
-/******* PADDING BOTTOM*******/
 .pl0 {padding-left: 0 !important;}
 .pl10 {padding-left: 10px !important;}
 .pl15 {padding-left: 15px !important;}
@@ -331,6 +330,7 @@ input[type=url], input[type=password] {
 .pr20 {padding-right: 20px !important;}
 .pr30 {padding-right: 30px !important;}
 
+.p5 {padding: 5px !important;}
 .p10 {padding: 10px !important;}
 .p15 {padding: 15px !important;}
 .p20 {padding: 20px !important;}
@@ -399,4 +399,16 @@ input.round {
 }
 .inline-block {
     display: inline-block;
+}
+.invisible {
+    visibility: hidden;
+}
+.table > tbody > tr > td.has-input {
+    padding: 5px;
+}
+.table > tbody > tr > td.has-input input {
+    padding: 5px;
+    border: none;
+    font-family: "AvenirNextLTPro-Demi" !important;
+    min-width: 80px;
 }
