@@ -186,6 +186,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
         })
+<<<<<<< HEAD
+        .state('procurement', {
+            url: '/procurements',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('procurement.main', {
+            url: '/main',
+            templateUrl: 'partials/procurement/list.html',
+            controller: 'ProcurementsCtrl'
+=======
         .state('payment-application', {
             url: '/financials/payment-application',
             abstract: true,
@@ -206,6 +217,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             data: {
                 isHeaderHidden: true
             }
+>>>>>>> dc0a3aff89669099600adf174e570b260cc1a7b0
         })
         .state('photos', {
             url: '/photos',
