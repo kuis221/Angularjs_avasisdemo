@@ -23,7 +23,7 @@
                 <tr ng-repeat="item in compliances">
                     <td>
                         <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
-                        <img ng-if="!item.avatar" ng-src="assets/img/user_2.png" class="img-circle" alt="image">
+                        <div ng-if="!item.avatar" class="no-avatar">{{item.contact | initials}}</div>
                     </td>
                     <td style="padding-left: 0">
                         <div class="sub-title text-primary">{{item.contact}}</div>
