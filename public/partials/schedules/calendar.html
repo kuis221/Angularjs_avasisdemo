@@ -15,16 +15,16 @@
     </div>
 
     <div class="calendar-container">
-        <div class="mb30" ng-repeat="week in [0, 1, 2]">
-            <div class="heading text-center">{{weekTitles[week]}}</div>
+        <div class="mb40" ng-repeat="week in [0, 1, 2]">
+            <div class="heading text-center font-bold">{{weekTitles[week]}}</div>
             <div class="week-container">
                 <table class="table">
                     <tr>
-                        <td ng-repeat="day in [0, 1, 2, 3, 4, 5, 6]">
-                            <div class="day-header" ng-class="{true: 'label-success'}[((offset + week) * 7 + day) == 0]">{{daysInRange[week * 7 + day]}}</div>        
-                        </td>
+                        <th ng-repeat="day in [0, 1, 2, 3, 4, 5, 6]">
+                            <div class="day-header text-center" ng-class="{true: 'label-success'}[daysInRange[week * 7 + day] == today.format('ddd, MMM DD')]">{{daysInRange[week * 7 + day]}}</div>        
+                        </th>
                     </tr>
-                    <tr>
+                    <tr ng-if="offset==0">
                         <td></td>
                         <td colspan="5">
                             <div class="alert alert-primary">
@@ -35,7 +35,7 @@
                         </td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr ng-if="offset==0">
                         <td></td>
                         <td colspan="2">
                             <div class="alert alert-success">
@@ -54,7 +54,7 @@
                         <td colspan="2">
                         </td>
                     </tr>
-                    <tr>
+                    <tr ng-if="offset==0">
                         <td colspan="2"></td>
                         <td colspan="2">
                             <div class="alert alert-warning">
@@ -66,7 +66,7 @@
                         <td colspan="3">
                         </td>
                     </tr>
-                    <tr>
+                    <tr ng-if="offset==0">
                         <td></td>
                         <td colspan="3">
                             <div class="alert alert-success">
@@ -75,7 +75,7 @@
                                 <i class="fa fa-info-circle pl10"></i>
                             </div>
                         </td>
-                        <td colspan="2">
+                        <td colspan="3">
                         </td>
                     </tr>
                 </table>
