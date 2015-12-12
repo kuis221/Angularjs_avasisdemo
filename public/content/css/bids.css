@@ -125,11 +125,7 @@ p {
 }
 
 .table-bids .bid-name {
-    width: 280px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px;
+    width: 300px;
 }
 .table-bids .text-active {
     color: #3aabd5;
