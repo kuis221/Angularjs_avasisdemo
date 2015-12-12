@@ -1785,11 +1785,13 @@ ol.unstyled { list-style: none outside none; margin-left: 0;}
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus { -moz-border-bottom-colors: none;  -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;
  background: none; border-color: #dddddd #dddddd rgba(0, 0, 0, 0); border-bottom: #f3f3f4; border-image: none; border-style: solid; border-width: 1px; color: #555555; cursor: default;}
-.nav.nav-tabs li { background: none; border: none;}
-.nav-tabs > li > a { color: #A7B1C2;font-weight: 600; padding: 10px 20px 10px 25px;}
+.nav.nav-tabs li { border: none;}
+.nav-tabs > li > a { color: #6c6c6c; font-size: 14px; min-width: 110px; text-align: center; padding: 25px 30px;}
+.nav.nav-tabs > li.active {background: transparent;}
+.nav.nav-tabs > li.active > a { color: #e25c5c; background: white; border-bottom: 1px solid white;}
 .nav-tabs > li > a:hover,
-.nav-tabs > li > a:focus {  background-color: #e6e6e6;  color: #676a6c;}
-.ui-tab .tab-content { padding: 20px 0px;}
+.nav-tabs > li > a:focus { background-color: #e6e6e6;  color: #676a6c;}
+.tab-content { padding: 20px; border: 1px solid #dedede; border-top: none; background: white;}
 
 /* GLOBAL  */
 .no-padding {padding: 0 !important;}
@@ -1870,9 +1872,9 @@ table.table-mail tr td { padding: 12px;}
 .progress-bar {  background-color: #3aabd5;}
 .progress {border-radius: 0px;}
 .progress-small,
-.progress-small .progress-bar { border-radius: 21px; height: 9px;}
+.progress-small .progress-bar { border-radius: 21px; height: 7px;}
 .progress-small,
-.progress-mini { margin-top: 8px; margin-bottom: 0px;}
+.progress-mini { margin-top: 2px; margin-bottom: 0px;}
 .progress-mini,
 .progress-mini .progress-bar {height: 5px;  margin-bottom: 0px;}
 .progress-bar-navy-light {background-color: #3dc7ab;}
@@ -2499,13 +2501,14 @@ background: radial-gradient(ellipse at center, #f6f6f6 20%, #d5d5d5 100%);
     padding: 0;
 }
 .overview ul.topSubtitle li a {
-    font-size: 14px;
-    font-family: avenirnextltpro-demi;
+    font-size: 16px;
+    font-family: "AvenirNextLTPro-Demi";
     color: #3aabd5;
 }
 .overview ul.topSubtitle li span {
     color: #8b8b8b;
-    font-family: avenirnextltpro-demi;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
 }
 .progressBar .ibox {
     padding: 0 14px 0 0;
@@ -2542,15 +2545,16 @@ span.project {
     margin-right: 12px;
 }
 .ibox .Schedules p {
-    font-size: 20px;
+    font-size: 17px;
     font-family: "AvenirNextLTPro-Regular";
 }
 .ibox .Schedules p a {
     float: right;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
-    margin: 0 21px;
+    margin: 8px 21px 0px 0px;
     color: #3aabd5;
+    font-family: "AvenirNextLTPro-Medium";
 }
 .ibox .project {
     border-bottom: 1px solid #eeeeee;
@@ -2565,15 +2569,16 @@ span.project {
 .ibox .project .media-body strong {
     color: #3aabd5;
     float: left;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: normal;
-    margin-bottom: 6px;
     width: 100%;
     font-family: avenirnextltpro-demi;
 }
 .ibox .project .media-body p.progrsTxt {
+    font-family: "AvenirNextLTPro-Regular";
     color: #4a4a4a;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
     margin: 0;
     white-space: nowrap;
 }
@@ -2595,7 +2600,7 @@ span.project {
     color: #8b8b8b;
 }
 h3.proStatus {
-    font-size: 20px;
+    font-size: 17px;
     color: #4a4a4a;
     font-weight: normal;
     font-family: "AvenirNextLTPro-Regular";
@@ -2642,20 +2647,20 @@ h3.proStatus i {
 }
 .whiteBox .hdingTopBox {
     border-bottom: 1px solid #eeeeee;
-    padding: 23px 0 5px;
+    padding: 15px 0 0px;
 }
 .hdingTopBox p {
-    font-size: 20px;
+    font-size: 17px;
     padding: 0 10px;
     font-family: "AvenirNextLTPro-Regular"
 }
 .hdingTopBox a {
     float: right;
-    margin: 0 12px;
+    margin: 6px 12px 0px 0px;
     color: #3aabd5;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    font-family: "AvenirNextLTPro-Regular";
+    font-family: "AvenirNextLTPro-Demi";
 }
 .hdingTopBox > p i {
     margin-right: 10px;
@@ -2665,7 +2670,7 @@ h3.proStatus i {
     position: relative;
 }
 .whiteBox .space2 {
-    padding: 30px 0 5px 5px;
+    padding: 10px 0 5px 0px;
     position: relative;
 }
 .whiteBox .space span.smlhding {
@@ -2703,7 +2708,8 @@ h3.proStatus i {
     font-size: 18px;
 }
 .whiteBox table.community td p {
-    font-size: 16px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
 }
 .whiteBox .progress-bar-primary {
     background: #3aabd5;
@@ -2718,7 +2724,7 @@ h3.proStatus i {
 }
 .whiteBox table.team td {
     vertical-align: middle;
-    padding: 8px 4px 8px 13px;
+    padding: 8px 4px 8px 4px;
 }
 .whiteBox table.team td ul.breadcrumb2 {
     float: right;
@@ -2742,7 +2748,7 @@ h3.proStatus i {
 }
 .teamupper {
     font-family: avenirnextltpro-demi;
-    font-size: 16px;
+    font-size: 12px;
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
@@ -3143,41 +3149,7 @@ h3.proStatus i {
     height: 18px;
     margin: 8px 0 0 0;
 }
-/**** Custom tabs ****/
 
-.custom-tabs1 {
-    /*border-top: 1px solid #d7d7d7;*/
-    border-bottom: none !important;
-}
-.custom-tabs1 li.active {
-    background: #fff !important;
-    border-right: 1px solid #ccc !important;
-}
-.custom-tabs1 li {
-    padding: 15px 0;
-}
-.custom-tabs1 > li > a {
-    padding: 10px 20px 10px 25px;
-    border-right: 1px solid #ccc !important;
-}
-.custom-tabs1 > li > a:hover {
-    padding: none !important;
-}
-.custom-tabs1 li.active a {
-    border: none !important;
-    color: #e25c5c !important;
-}
-.custom-tabs1 > li > a:hover,
-.custom-tabs1 > li > a:focus {
-    background: none !important;
-    border: none;
-}
-.nav-tabs > li > a {
-    padding: none !important;
-}
-.nav-tabs > li {
-    margin-bottom: 0px !important;
-}
 /**** Custom table ****/
 
 .table-custom1 {
@@ -3838,13 +3810,6 @@ table.table {
     padding: 0;
     margin: 0;
 }
-::selection {
-    background: transparent;
-}
-::-moz-selection {
-    background: transparent;
-}
-
 
 /* --------- AVASIS PROJECT DETAILS V-12 DROPDOWN --------- */
 

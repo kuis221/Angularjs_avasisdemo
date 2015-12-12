@@ -1,0 +1,68 @@
+table.no-border {
+    & > th, td {
+        border: none !important;
+    }
+}
+
+#schedule-stats {
+    td {
+        padding: 5px;
+    }
+}
+#calendar {
+    .date-navigator {
+        width: 25px;
+        height: 25px;
+        text-align: center; 
+        background: #f1f1f1;
+        border-radius: 50%;
+        line-height: 25px;
+        display: block;
+        &:hover {
+            color: #3aabd5;
+        }
+    }
+    .sub-title {
+        font-size: 14px;
+    }
+    .calendar-container {
+        border: 1px solid #dedede;
+        .heading {
+            padding: 10px;
+        }
+        .week-container {
+            & > table {
+                td {
+                    padding: 5px !important;
+                    border-color: #f1f1f1;
+                    .alert {
+                        color: #4a4a4a;
+                        margin: 0;
+                        i:first-child {
+                            border: 1px solid white;
+                            display: inline-block;
+                            width: 22px;
+                            height: 22px;
+                            line-height: 22px;
+                            text-align: center;
+                            background: white;
+                            border-radius: 2px;
+                        }
+                        i:last-child {
+                            font-size: 18px;
+                        }
+                    }
+                    .alert-primary {background-color: #c4e6f2;}
+                    .alert-success {background-color: #e4f3e6;}
+                    .alert-info {background-color: #e4f3e6;}
+                    .alert-warning {background-color: #feecd5;}
+                    .alert-danger {background-color: #f6cece;}
+                }
+                .day-header {
+                    padding: 7px 30px;
+                    border-radius: 4px;
+                }
+            }
+        }    
+    }    
+}

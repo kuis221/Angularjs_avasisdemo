@@ -18,11 +18,13 @@
                 <tr ng-repeat="item in drawDetails">
                     <td width="200px">{{item.description}}</td>
                     <td>{{numberToCurrency(item.scheduled_value)}}</td>
-                    <td>{{numberToCurrency(item.reallocations)}}</td>
+                    <td class="has-input">
+                        <input type="text" size="12" ng-model="item.reallocations" ui-money-mask>
+                    </td>
                     <td>{{numberToCurrency(item.updated_budget)}}</td>
                     <td>{{numberToCurrency(item.disbursed_to_date)}}</td>
                     <td class="text-primary">{{numberToCurrency(item.this_draw)}}</td>
-                    <td>{{item.percentage_of_drawn * 100 | number:2}}%</td>                                    
+                    <td>{{item.percentage_of_drawn * 100 | number:0}}%</td>                                    
                     <td ng-class="{true: 'text-danger'}[item.balance_to_complete < 0]">{{item.balance_to_complete | accounting:'$'}}</td>
                 </tr>
             </tbody>

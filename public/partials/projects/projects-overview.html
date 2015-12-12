@@ -3,76 +3,64 @@
         <h2 class="hding">Project Overview</h2>
         <ul class="topSubtitle">
             <li>
-                <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
+                <a href="#">Wilmington 47<i class="ace-icon fa fa-angle-down"></i></a>
             </li>
-            <li><span>Arlington, VA 90125</span></li>
+            <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
         </ul>
     </div>
-    <div class="col-sm-12 col-md-9">
+    <div class="col-sm-12 col-md-9 no-l-pad">
         <div class="col-md-6">
             <div class="row">
-                <div class="pull-left prj-pr-m" id="financial-chart-container">
-                    <div id="financial-chart"></div>
-                    <div class="chart-data">
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="32" />
-                            <input type="hidden" class="color" value="#79c485" />
-                        </div>
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="64" />
-                            <input type="hidden" class="color" value="#3aabd5" />
-                        </div>
-                    </div>
+                <div class="pull-left prj-pr-m">
+                    <div ui-arc-chart rect-width="90" rect-height="90" radius="20" pen-width="10" chart-data="financialChartData"></div>
                 </div>
                 <div class="pull-left prj-mt-s">
                     <div class="">
                         <span class="prj-blue-rect prj-mr-s"></span>
-                        <span class="teamupper">Schedule</span>
+                        <span class="prj-hd-itm">Schedule</span>
                     </div>
                     <div>
                         <div class="clearfix prj-pt-s">
                             <div class="pull-left prj-pr-m">
-                                <span>Estimated Completion Date<span>
+                                <span class="prj-itm-title">Estimated Completion Date<span>
                             </div>
                             <div class="pull-right">
-                                <b class="text-right">Dec 28, 2015</b>
+                                <p class="text-right prj-itm-cont">Dec 28, 2015</p>
                             </div>
                         </div>
                         <div class="clearfix prj-pt-s">
                             <div class="pull-left prj-pr-m">
-                                <span>Original Completion Date<span>
+                                <span class="prj-itm-title">Original Completion Date<span>
                             </div>
                             <div class="pull-right">
-                                <b class="text-right">Nov 14, 2015</b></p>
+                                <p class="text-right prj-itm-cont">Nov 14, 2015</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 no-l-pad">
             <div class="prj-mt-s">
                 <div>
                     <span class="prj-green-rect prj-mr-s"></span>
-                    <span class="teamupper">Finance</span>
+                    <span class="prj-hd-itm">Finance</span>
                 </div>
                 <div>
                     <div class="clearfix prj-pt-s">
                         <div class="pull-left prj-pr-m">
-                            <span>Funds Disbursed to Date</span>
+                            <span class="prj-itm-title">Funds Disbursed to Date</span>
                         </div>
                         <div class="pull-right">
-                             <b class="text-right">$903,348</b>
+                             <p class="text-right prj-itm-cont">$903,348</p>
                         </div>
                     </div>
                     <div class="clearfix prj-pt-s">
                         <div class="pull-left prj-pr-m">
-                            <span>Estimated Cost at Completion</span>
+                            <span class="prj-itm-title">Estimated Cost at Completion</span>
                         </div>
                         <div class="pull-right">
-                            <b class="text-right">$2,788,284</b>
+                            <p class="text-right prj-itm-cont">$2,788,284</p>
                         </div>
                     </div>
                 </div>
@@ -100,114 +88,144 @@
                     <div class="col-lg-6 border">
                         <div class="ibox">
                             <div class="Schedules">
-                                <p><img src="assets/img/cal.png">  Aug 17 2015, Today's Schedules<a href="#">View All</a></p>
+                                <p><img src="assets/img/cal.png">  Aug 17 2015, Today's Schedules<a ui-sref="schedules">View All</a></p>
                             </div>
                             <div class="project">
                                 <div class="feed-element">
-                                    <a class="pull-left" href="#">
-                                        <img src="assets/img/avasisteam/gebo.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Roof Dry-In</strong><br>
-                                        <div class="clearfix mt10"></div>
-                                        <div class="row">
-                                            <div class="col-md-3"><p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
-                                            <div class="col-md-3"><p class="progrsTxt"> 60% Completed</p></div>
-                                            <div class="col-md-4">
-                                                <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: {{schedule_completed}}%"></div>
+                                    <div class="row no-margin">
+                                        <div class="pull-left">
+                                            <a href="#">
+                                                <img src="assets/img/avasisteam/gebo.jpg" class="img-circle prj-sch-photo" alt="image">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <strong>Roof Dry-In</strong><br>
+                                            <div class="clearfix"></div>
+                                            <div class="row no-margin">
+                                                <div class="prj-sch-cont">
+                                                    <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">In Progress</span></p>
+                                                </div>
+                                                <div class="prj-sch-cont"><p class="progrsTxt"> {{schedule_completed[0]}}% COMPLETED</p></div>
+                                                <div class="prj-sch-prog">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: {{schedule_completed[0]}}%"></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Dave Gebo</div>
                                         </div>
                                     </div>
-                                    <p><span>assigned to:</span> Dave Gebo</p>
                                 </div>
                             </div>
 
                             <div class="project">
                                 <div class="feed-element">
-                                    <a class="pull-left" href="#">
-                                        <img src="assets/img/avasisteam/dave.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Rough HVAC</strong><br>
-                                        <div class="clearfix mt10"></div>
-                                        <div class="row">
-                                            <div class="col-md-3"><p class="progrsTxt"><span><img src="assets/img/red-flag-simple.png" class="img-circle" alt="image">Suspended</span></p></div>
-                                            <div class="col-md-3"><p class="progrsTxt"> 40% Completed</p></div>
-                                            <div class="col-md-4">
-                                                <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+                                    <div class="row no-margin">
+                                        <div class="pull-left">
+                                            <a href="#">
+                                                <img src="assets/img/avasisteam/dave.jpg" class="img-circle prj-sch-photo" alt="image">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <strong>Rough HAVC</strong><br>
+                                            <div class="clearfix"></div>
+                                            <div class="row no-margin">
+                                                <div class="prj-sch-cont">
+                                                    <p class="progrsTxt"><span><img src="assets/img/red-flag-simple.png" class="img-circle prj-flg-sm" alt="image">Suspended</span></p>
+                                                </div>
+                                                <div class="prj-sch-cont"><p class="progrsTxt"> {{schedule_completed[1]}}% COMPLETED</p></div>
+                                                <div class="prj-sch-prog">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: {{schedule_completed[1]}}%"></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Dave Musgrove</div>
                                         </div>
                                     </div>
-                                    <p><span>assigned to:</span> Dave Musgrove</p>
                                 </div>
                             </div>
 
                             <div class="project">
                                 <div class="feed-element">
-                                    <a class="pull-left" href="#">
-                                        <img src="assets/img/avasisteam/mike.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Rough Electrical</strong><br>
-                                        <div class="clearfix mt10"></div>
-                                        <div class="row">
-                                            <div class="col-md-3"><p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
-                                            <div class="col-md-3"><p class="progrsTxt"> 90% Completed</p></div>
-                                            <div class="col-md-4">
-                                                <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                    <div class="row no-margin">
+                                        <div class="pull-left">
+                                            <a href="#">
+                                                <img src="assets/img/avasisteam/mike.jpg" class="img-circle prj-sch-photo" alt="image">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <strong>Rough Electrical</strong><br>
+                                            <div class="clearfix"></div>
+                                            <div class="row no-margin">
+                                                <div class="prj-sch-cont">
+                                                    <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">In Progress</span></p>
+                                                </div>
+                                                <div class="prj-sch-cont"><p class="progrsTxt"> {{schedule_completed[2]}}% COMPLETED</p></div>
+                                                <div class="prj-sch-prog">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: {{schedule_completed[2]}}%"></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Mike Riley</div>
                                         </div>
                                     </div>
-                                    <p><span>assigned to:</span> Mike Riley</p>
                                 </div>
                             </div>
 
                             <div class="project">
                                 <div class="feed-element">
-                                    <a class="pull-left" href="#">
-                                        <img src="assets/img/4.png" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Plumbing</strong><br>
-                                        <div class="clearfix mt10"></div>
-                                        <div class="row">
-                                            <div class="col-md-3"><p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">In Progress</span></p></div>
-                                            <div class="col-md-3"><p class="progrsTxt"> 20% Completed</p></div>
-                                            <div class="col-md-4">
-                                                <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 20%"></div>
+                                    <div class="row no-margin">
+                                        <div class="pull-left">
+                                            <a href="#">
+                                                <img src="assets/img/user_4.png" class="img-circle prj-sch-photo" alt="image">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <strong>Plumbing</strong><br>
+                                            <div class="clearfix"></div>
+                                            <div class="row no-margin">
+                                                <div class="prj-sch-cont">
+                                                    <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">In Progress</span></p>
+                                                </div>
+                                                <div class="prj-sch-cont"><p class="progrsTxt"> {{schedule_completed[3]}}% COMPLETED</p></div>
+                                                <div class="prj-sch-prog">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: {{schedule_completed[3]}}%"></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Christine Spendlove</div>
                                         </div>
                                     </div>
-                                    <p><span>assigned to:</span> Chrisitine Spendlove</p>
                                 </div>
                             </div>
                             <div class="project">
                                 <div class="feed-element">
-                                    <a class="pull-left" href="#">
-                                        <img src="assets/img/avasisteam/dan.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Framing</strong><br>
-                                        <div class="clearfix mt10"></div>
-                                        <div class="row">
-                                            <div class="col-md-3"><p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle" alt="image">Completed</span></p></div>
-                                            <div class="col-md-3"><p class="progrsTxt"> 100% Completed</p></div>
-                                            <div class="col-md-4">
-                                                <div class="progress progress-small">
-                                                    <div class="progress-bar progress-bar-success" style="width: 100%"></div>
+                                    <div class="row no-margin">
+                                        <div class="pull-left">
+                                            <a href="#">
+                                                <img src="assets/img/avasisteam/dan.jpg" class="img-circle prj-sch-photo" alt="image">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <strong>Framing</strong><br>
+                                            <div class="clearfix"></div>
+                                            <div class="row no-margin">
+                                                <div class="prj-sch-cont">
+                                                    <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">Completed</span></p>
+                                                </div>
+                                                <div class="prj-sch-cont"><p class="progrsTxt"> {{schedule_completed[4]}}% COMPLETED</p></div>
+                                                <div class="prj-sch-prog">
+                                                    <div class="progress progress-small">
+                                                        <div class="progress-bar progress-bar-success" style="width: {{schedule_completed[4]}}%"></div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Dan Bonker</div>
                                         </div>
                                     </div>
-                                    <p><span>assigned to:</span> Dan Bonker</p>
                                 </div>
                             </div>
                         </div>
@@ -220,8 +238,8 @@
                                     <thead>
                                     <tr>
                                         <th colspan="2"><h2>Items Due Today</h2></th>
-                                        <th>
-                                            3 of 9 completed
+                                        <th width="150px">
+                                            <span class="prj-itm-comp">3 of 9 COMPLETED</span>
                                             <div class="progress progress-small">
                                                 <div class="progress-bar progress-bar-success" style="width: {{project_completed}}%"></div>
                                             </div>
@@ -291,68 +309,81 @@
                 <div class="hdingTopBox">
                     <p><img alt="image" src="assets/img/alert-flag.png">Flag Alerts<a href="#">View All</a></p>
                 </div>
-                <div class="col-lg-12">
-                    <div class="col-xs-3 col-md-3">
-                        <canvas doughnutchart options="mineOptions" data="mineData" height="120" width="100"></canvas>
-                        <div class="prj-piechart-center-title">MINE</div>
-                    </div>
-                    <div class="col-xs-3 col-md-3 space">
-                        <span class="smlhding">{{mineData[0].value + mineData[1].value + mineData[2].value}} Alerts</span>
-                        <div class="left1">
-                            <h3 class="label progress-bar-pending">5</h3>
-                            <span class="teamupper">{{mineData[0].value}}</span>
-                            <p class="price">{{mineData[0].value * 100 / (mineData[0].value + mineData[1].value + mineData[2].value) | number:0 }}%</p>
+                <div class="prj-white-wrapper">
+                    <div class="row no-margin">
+                        <div class="pull-left prj-flg-pie">
+                            <canvas doughnutchart options="mineOptions" data="mineData" height="75" width="75"></canvas>
+                            <div class="prj-piechart-center-title">MINE</div>
+                        </div>
+                        <div class="row no-margin">
+                            <div class="prj-flg-tol">{{mineData[0].value + mineData[1].value + mineData[2].value}} Alerts</div>
+                            <div class="pull-left prj-flg-itm">
+                                <div class="bids-group">
+                                    <span class="label progress-bar-pending">&nbsp;</span>
+                                    <span class="strong-demi">{{mineData[0].value}}</span>
+                                    <div>
+                                        <span class="bids-per regular">{{mineData[0].value * 100 / (mineData[0].value + mineData[1].value + mineData[2].value) | number:0 }}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pull-left prj-flg-itm">
+                                <div class="bids-group">
+                                    <span class="label progress-bar-contractual">&nbsp;</span>
+                                    <span class="strong-demi">{{mineData[1].value}}</span>
+                                    <div>
+                                        <span class="bids-per regular">{{mineData[1].value * 100 / (mineData[0].value + mineData[1].value + mineData[2].value) | number:0 }}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pull-left prj-flg-itm">
+                                <div class="bids-group">
+                                    <span class="label progress-bar-cost">&nbsp;</span>
+                                    <span class="strong-demi">{{mineData[2].value}}</span>
+                                    <div>
+                                        <span class="bids-per regular">{{mineData[2].value * 100 / (mineData[0].value + mineData[1].value + mineData[2].value) | number:0 }}%</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-md-3 space">
-                        <div class="left1">
-                            <span>&nbsp;</span>
-                            <h3 class="label progress-bar-contractual">5</h3>
-                            <span class="teamupper">{{mineData[1].value}}</span>
-                            <p class="price">{{mineData[1].value * 100 / (mineData[0].value + mineData[1].value + mineData[2].value) | number:0 }}%</p>
+                    <hr class="section-border" />
+                    <div class="row no-margin">
+                        <div class="pull-left prj-flg-pie">
+                            <canvas doughnutchart options="mineOptions" data="mineData" height="75" width="75"></canvas>
+                            <div class="prj-piechart-center-team">TEAM</div>
                         </div>
-                    </div>
-                    <div class="col-xs-3 col-md-3 space">
-                        <div class="left1">
-                            <span>&nbsp;</span>
-                            <h3 class="label progress-bar-cost">5</h3>
-                            <span class="teamupper">{{mineData[2].value}}</span>
-                            <p class="price">{{mineData[2].value * 100 / (mineData[0].value + mineData[1].value + mineData[2].value) | number:0 }}%</p>
+                        <div class="row no-margin">
+                            <div class="prj-flg-tol">{{teamData[0].value + teamData[1].value + teamData[2].value}} Alerts</div>
+                            <div class="pull-left prj-flg-itm">
+                                <div class="bids-group">
+                                    <span class="label progress-bar-pending">&nbsp;</span>
+                                    <span class="strong-demi">{{teamData[0].value}}</span>
+                                    <div>
+                                        <span class="bids-per regular">{{teamData[0].value * 100 / (teamData[0].value + teamData[1].value + teamData[2].value) | number:0 }}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pull-left prj-flg-itm">
+                                <div class="bids-group">
+                                    <span class="label progress-bar-contractual">&nbsp;</span>
+                                    <span class="strong-demi">{{teamData[1].value}}</span>
+                                    <div>
+                                        <span class="bids-per regular">{{teamData[1].value * 100 / (teamData[0].value + teamData[1].value + teamData[2].value) | number:0 }}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pull-left prj-flg-itm">
+                                <div class="bids-group">
+                                    <span class="label progress-bar-cost">&nbsp;</span>
+                                    <span class="strong-demi">{{teamData[2].value}}</span>
+                                    <div>
+                                        <span class="bids-per regular">{{teamData[2].value * 100 / (teamData[0].value + teamData[1].value + teamData[2].value) | number:0 }}%</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <hr />
-                <div class="col-lg-12">
-                    <div class="col-xs-3 col-md-3">
-                        <canvas doughnutchart options="teamOptions" data="teamData" height="120" width="100"></canvas>
-                        <div class="prj-piechart-center-title">TEAM</div>
-                    </div>
-                    <div class="col-xs-3 col-md-3 space">
-                        <span class="smlhding">{{teamData[0].value + teamData[1].value + teamData[2].value}} Alerts</span>
-                        <div class="left1">
-                            <h3 class="label progress-bar-pending">5</h3>
-                            <span class="teamupper">{{teamData[0].value}}</span>
-                            <p class="price">{{teamData[0].value * 100 / (teamData[0].value + teamData[1].value + teamData[2].value) | number:0 }}%</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-3 col-md-3 space">
-                        <div class="left1">
-                            <span>&nbsp;</span>
-                            <h3 class="label progress-bar-contractual">5</h3>
-                            <span class="teamupper">{{teamData[1].value}}</span>
-                            <p class="price">{{teamData[1].value * 100 / (teamData[0].value + teamData[1].value + teamData[2].value) | number:0 }}%</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-3 col-md-3 space">
-                        <div class="left1">
-                            <span>&nbsp;</span>
-                            <h3 class="label progress-bar-cost">5</h3>
-                            <span class="teamupper">{{teamData[2].value}}</span>
-                            <p class="price">{{teamData[2].value * 100 / (teamData[0].value + teamData[1].value + teamData[2].value) | number:0 }}%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
             </div>
 
             <div class="whiteBox mt30">
@@ -386,27 +417,15 @@
         <div class="col-xs-12 col-lg-4">
             <div class="whiteBox">
                 <div class="hdingTopBox">
-                    <p><img src="assets/img/team-member.png" alt="image">Team Members<a href="#">View All</a></p>
+                    <p><img src="assets/img/team-member.png" alt="image">Team Members<a ui-sref="team-members.list">View All</a></p>
                 </div>
                 <div class="col-lg-12">
                     <div class="row no-margin space2">
                         <div class="pull-left" id="team-member-chart-container">
-                            <div id="team-member-chart"></div>
-                            <div class="chart-data">
-                                <div class="arc signed-members">
-                                    <span class="text"></span>
-                                    <input type="hidden" class="percent" value="13" />
-                                    <input type="hidden" class="color" value="#3aabd5" />
-                                </div>
-                                <div class="arc total-members">
-                                    <span class="text"></span>
-                                    <input type="hidden" class="percent" value="100" />
-                                    <input type="hidden" class="color" value="#79c485" />
-                                </div>
-                            </div>
+                            <div id="team-member-chart" ui-arc-chart rect-width="80" rect-height="80" radius="15" pen-width="8" chart-data="teamMemberChartData"></div>
                         </div>
                         <div class="pull-left">
-                            <div class="left1">
+                            <div class="prj-mbm-info">
                                 <h3 class="label progress-bar-cost">5</h3>
                                 <span class="teamupper">Total Project Team Members</span>
                                 <p class="price">40 Members</p>
@@ -420,13 +439,13 @@
                 <div class="clearfix"></div>
                 <div class="prj-table-wrapper">
                     <div class="table-responsive">
-                        <table class="table mt20 team">
+                        <table class="table team">
                             <tbody>
                             <tr>
                                 <td width="40px"><img alt="image" class="img-circle prj-team-photo" src="assets/img/avasisteam/iris.jpg"></td>
                                 <td>
                                     <span class="sky">Iris Kennedy</span>
-                                    <p>Banker</p>
+                                    <p class="prj-contact-job">Banker</p>
                                 </td>
                                 <td>
                                     <div class="prj-comm">
@@ -440,7 +459,7 @@
                                 <td><img alt="image" class="img-circle prj-team-photo" src="assets/img/avasisteam/bruce.jpg"></td>
                                 <td>
                                     <span class="sky">Bruce Wayne</span>
-                                    <p>Contractor</p>
+                                    <p class="prj-contact-job">Contractor</p>
                                 </td>
                                 <td>
                                     <div class="prj-comm">
@@ -453,7 +472,7 @@
                                 <td><img alt="image" class="img-circle prj-team-photo" src="assets/img/avasisteam/jane.jpg"></td>
                                 <td>
                                     <span class="sky">Jane Smith</span>
-                                    <p>Qwner</p>
+                                    <p class="prj-contact-job">Owner</p>
                                 </td>
                                 <td>
                                     <div class="prj-comm">
@@ -465,7 +484,7 @@
                                 <td><img alt="image" class="img-circle prj-team-photo" src="assets/img/avasisteam/beth.jpg"></td>
                                 <td>
                                     <span class="sky">Beth Wiseman</span>
-                                    <p>Office Administrator</p>
+                                    <p class="prj-contact-job">Office Administrator</p>
                                 </td>
                                 <td>
                                     <div class="prj-comm">
@@ -479,7 +498,7 @@
                                 <td><img alt="image" class="img-circle prj-team-photo" src="assets/img/avasisteam/gebo.jpg"></td>
                                 <td>
                                     <span class="sky">Dave Gebo</span>
-                                    <p>Sub-Contractor</p>
+                                    <p class="prj-contact-job">Sub-Contractor</p>
                                 </td>
                                 <td>
                                     <div class="prj-comm">
@@ -492,7 +511,7 @@
                                 <td><img alt="image" class="img-circle prj-team-photo" src="assets/img/avasisteam/dan.jpg"></td>
                                 <td>
                                     <span class="sky">Dan Bonker</span>
-                                    <p>Sub-Contractor</p>
+                                    <p class="prj-contact-job">Sub-Contractor</p>
                                 </td>
                                 <td>
                                     <div class="prj-comm">
@@ -512,7 +531,7 @@
         <div class="col-xs-12 col-lg-4">
             <div class="whiteBox">
                 <div class="hdingTopBox">
-                    <p><img alt="image" src="assets/img/latest-photo.png">Latest Photos<a href="#">View All</a></p>
+                    <p><img alt="image" src="assets/img/latest-photo.png">Latest Photos<a ui-sref="photos">View All</a></p>
                 </div>
 
                 <div class="row gallery mt10">
@@ -626,128 +645,4 @@
 
     });
 
-</script>
-
-<script>
-var financial_chart = {
-    init: function (width, height, radius, pen_width) {
-        this.diagram(width, height, radius, pen_width);
-    },
-    random: function (l, u) {
-        return Math.floor((Math.random() * (u - l + 1)) + l);
-    },
-    diagram: function (width, height, radius, pen_width) {
-        var display = '';
-        var width = width,
-            height = height,
-            radius = radius,
-            pen_width = pen_width;
-
-        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
-            var t = $(this);
-            display += t.find('.percent').val() + "%\n";
-        });
-
-        var r = Raphael('financial-chart', width, height),
-			rad = radius,
-			defaultText = '%',
-            param = {stroke: "#fff", "stroke-width": pen_width};
-			speed = 250;
-
-        // r.circle(width/2, height/2, p).attr({ stroke: 'none', fill: '#FFF' });
-
-        var title = r.text(width / 2, height / 2, defaultText).attr({
-            font: '14px Arial',
-            fill: '#000'
-        }).toFront();
-
-        title.attr({ text: display });
-
-        r.customAttributes.arc = function (value, color, rad) {
-            var v = 3.6 * value,
-				alpha = v == 360 ? 359.99 : v,
-				a = (90 - alpha) * Math.PI / 180,
-				b = 90 * Math.PI / 180,
-				sx = width / 2 + rad * Math.cos(b),
-				sy = height / 2  - rad * Math.sin(b),
-				x = width / 2 + rad * Math.cos(a),
-				y = height / 2 - rad * Math.sin(a),
-				path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-            return { path: path }
-        }
-
-        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
-            var t = $(this),
-				color = t.find('.color').val(),
-				value = t.find('.percent').val(),
-				text = t.find('.text').text();
-
-            rad += pen_width;
-            var z = r.path().attr(param).attr({ arc: [0, color, rad]});
-            z.animate({arc: [value, color, rad], 'stroke': color}, 1000, ">");
-        });
-    }
-}
-
-var team_member_chart = {
-    init: function (width, height, radius, pen_width) {
-        this.diagram(width, height, radius, pen_width);
-    },
-    random: function (l, u) {
-        return Math.floor((Math.random() * (u - l + 1)) + l);
-    },
-    diagram: function (width, height, radius, pen_width) {
-        var display = '';
-        var width = width,
-            height = height,
-            radius = radius,
-            pen_width = pen_width;
-
-        display = $('#team-member-chart-container .signed-members .percent').val() + "%\n";
-
-        var r = Raphael('team-member-chart', width, height),
-			rad = radius,
-			defaultText = '%',
-            param = {stroke: "#fff", "stroke-width": pen_width};
-			speed = 250;
-
-        // r.circle(width/2, height/2, p).attr({ stroke: 'none', fill: '#FFF' });
-
-        var title = r.text(width / 2, height / 2, defaultText).attr({
-            font: '14px Arial',
-            fill: '#000'
-        }).toFront();
-
-        title.attr({ text: display });
-
-        r.customAttributes.arc = function (value, color, rad) {
-            var v = 3.6 * value,
-				alpha = v == 360 ? 359.99 : v,
-				a = (90 - alpha) * Math.PI / 180,
-				b = 90 * Math.PI / 180,
-				sx = width / 2 + rad * Math.cos(b),
-				sy = height / 2  - rad * Math.sin(b),
-				x = width / 2 + rad * Math.cos(a),
-				y = height / 2 - rad * Math.sin(a),
-				path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-            return { path: path }
-        }
-
-        $('#team-member-chart-container .chart-data').find('.arc').each(function (i) {
-            var t = $(this),
-				color = t.find('.color').val(),
-				value = t.find('.percent').val(),
-				text = t.find('.text').text();
-
-            rad += pen_width;
-            var z = r.path().attr(param).attr({ arc: [0, color, rad]});
-            z.animate({arc: [value, color, rad], 'stroke': color}, 1000, ">");
-        });
-    }
-}
-
-$(document).ready(function() {
-    financial_chart.init(90, 90, 20, 10);
-    team_member_chart.init(80, 80, 20, 5);
-});
 </script>

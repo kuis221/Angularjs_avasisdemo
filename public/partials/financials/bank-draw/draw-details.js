@@ -7,6 +7,11 @@ app.controller('BankDrawDrawDetailsCtrl',
             else
                 return $filter('currency')(val);
         }
+
+        $scope.updateValue = function(evt, item) {
+            if (evt.keyCode == 13)
+                item.isEditing = false;
+        }
         $scope.drawDetails = [
             {description: "Plans", scheduled_value: 1000.00, reallocations: 1272.85, updated_budget: 2272.85, disbursed_to_date: 2272.85, this_draw: null, percentage_of_drawn: 1.00, balance_to_complete: 0.00},
             {description: "Engineering", scheduled_value: 800.00, reallocations: 57.50, updated_budget: 857.50, disbursed_to_date: 857.50, this_draw: null, percentage_of_drawn: 1.00, balance_to_complete: 0.00},

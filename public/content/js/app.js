@@ -8,7 +8,8 @@ var app = angular.module('avasis',
         'angles',
         'ngDropzone',
         'ui.tree',
-        'jkuri.slimscroll'
+        'jkuri.slimscroll',
+        'ui.utils.masks'
     ]);
 
 app.controller('AppCtrl', [
@@ -186,6 +187,27 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
         })
+        .state('comm', {
+            url: '/communication',
+            abstract: true,
+            templateUrl: 'partials/comm/comm-main.html',
+            controller: 'CommCtrl'
+        })
+        .state('comm.inbox', {
+            url: '/inbox',
+            templateUrl: "partials/comm/comm-inbox.html",
+            controller: "CommInboxCtrl"
+        })
+        .state('procurement', {
+            url: '/procurements',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('procurement.main', {
+            url: '/main',
+            templateUrl: 'partials/procurement/list.html',
+            controller: 'ProcurementsCtrl'
+        })
         .state('payment-application', {
             url: '/financials/payment-application',
             abstract: true,
@@ -211,6 +233,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/photos',
             templateUrl: 'partials/photos/photos.html',
             controller: 'PhotosCtrl'
+        })
+        .state('schedules', {
+            url: '/schedules',
+            templateUrl: 'partials/schedules/main.html',
+            controller: 'SchedulesCtrl'
         })
         .state('sample', {
             url: '/sample',
