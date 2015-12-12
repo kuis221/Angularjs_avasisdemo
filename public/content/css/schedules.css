@@ -1,0 +1,5 @@
+table.no-border > th, table.no-border td {
+  border: none !important; }
+
+#schedule-stats td {
+  padding: 5px; }
