@@ -22,14 +22,13 @@
 </div>
 
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="financial-wrapper">
-        <ul class="nav nav-tabs custom-tabs1">
-            <li ng-class="{true: 'active'}[isActive('comm.inbox')]"><a ui-sref="comm.inbox">In Box</a></li>
-            <li ng-class="{true: 'active'}[isActive('comm.sent')]"><a ui-sref="comm.inbox">Sent</a></li>
-            <li><a ui-sref="comm.inbox">Important</a></li>
-            <li><a ui-sref="comm.inbox">Drafts</a></li>
-            <li ng-class="{true: 'active'}[isActive('comm.trash')]"><a ui-sref="comm.trash">Trash</a></li>
-        </ul>
-        <ui-view></ui-view>
-    </div>
+    <uib-tabset>
+        <uib-tab heading="Inbox">
+            <div ng-include="'partials/comm/comm-inbox.html'"></div>
+        </uib-tab>
+        <uib-tab heading="Sent">Short Labeled Justified content</uib-tab>
+        <uib-tab heading="Important">Long Labeled Justified content</uib-tab>
+        <uib-tab heading="Drafts">Long Labeled Justified content</uib-tab>
+        <uib-tab heading="Trash">Long Labeled Justified content</uib-tab>
+    </uib-tabset>
 </div>
