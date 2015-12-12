@@ -8,7 +8,8 @@ var app = angular.module('avasis',
         'angles',
         'ngDropzone',
         'ui.tree',
-        'jkuri.slimscroll'
+        'jkuri.slimscroll',
+        'ui.utils.masks'
     ]);
 
 app.controller('AppCtrl', [
@@ -185,6 +186,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/bids',
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
+        })
+        .state('procurement', {
+            url: '/procurements',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('procurement.main', {
+            url: '/main',
+            templateUrl: 'partials/procurement/list.html',
+            controller: 'ProcurementsCtrl'
         })
         .state('payment-application', {
             url: '/financials/payment-application',

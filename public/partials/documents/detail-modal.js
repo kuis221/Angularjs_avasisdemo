@@ -24,7 +24,7 @@ app.controller('DocumentDetailModalCtrl',
                 body: "What is this date referring to? Is this the due date?"
             },
             {
-                id: _.uniqueId(),
+              id: _.uniqueId(),
                 avatar: 'assets/img/bruce-wayne.png',
                 created_by: 'Bruce Wayne',
                 created_at: 'Aug 8, 2015 3:40PM',

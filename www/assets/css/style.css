@@ -3842,13 +3842,6 @@ table.table {
     padding: 0;
     margin: 0;
 }
-::selection {
-    background: transparent;
-}
-::-moz-selection {
-    background: transparent;
-}
-
 
 /* --------- AVASIS PROJECT DETAILS V-12 DROPDOWN --------- */
 
