@@ -187,6 +187,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
         })
+        .state('communication', {
+            url: '/comm',
+            templateUrl: 'partials/comm/comm-main.html',
+            controller: 'CommCtrl'
+        })
         .state('procurement', {
             url: '/procurements',
             abstract: true,
