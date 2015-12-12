@@ -24,29 +24,71 @@
     </div>
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="pull-left" id="financial-chart-container">
-                <div id="financial-chart"></div>
-                <div class="chart-data">
-                    <div class="arc">
-                        <span class="text"></span>
-                        <input type="hidden" class="percent" value="32" />
-                        <input type="hidden" class="color" value="#79c485" />
-                    </div>
-                    <div class="arc">
-                        <span class="text"></span>
-                        <input type="hidden" class="percent" value="64" />
-                        <input type="hidden" class="color" value="#3aabd5" />
+    <div class="panel panel-default">
+        <div class="panel-body row" id="schedule-stats">
+            <div class="col-md-4">
+                <div class="pull-left" id="financial-chart-container">
+                    <div id="financial-chart"></div>
+                    <div class="chart-data">
+                        <div class="arc">
+                            <span class="text"></span>
+                            <input type="hidden" class="percent" value="32" />
+                            <input type="hidden" class="color" value="#79c485" />
+                        </div>
+                        <div class="arc">
+                            <span class="text"></span>
+                            <input type="hidden" class="percent" value="64" />
+                            <input type="hidden" class="color" value="#3aabd5" />
+                        </div>
                     </div>
                 </div>
+                <div class="pull-left">
+                    <table class="table no-border pull-right mt20">
+                        <tr>
+                            <td>
+                                <div class="label label-primary">&nbsp;</div>
+                                SCHEDULE
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="font-regular">Estimate Completion</td>
+                            <td class="font-bold">Apr 20, 2016</td>
+                        </tr>
+                        <tr>
+                            <td class="font-regular">Original Completion Date</td>
+                            <td class="font-bold">Nov 12, 2014</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4 col-sm-6 border-right">
-        </div>
-        <div class="col-md-2 col-sm-6">
-        </div>
-        <div class="col-md-2 col-sm-6">
+            <div class="col-md-4 col-sm-6 border-right">
+                <table class="table no-border pull-right mt20">
+                    <tr>
+                        <td>
+                            <div class="label label-success">&nbsp;</div>
+                            FINANCE
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="font-regular">Fund Disbursed Date</td>
+                        <td class="font-bold">Apr 20, 2016</td>
+                    </tr>
+                    <tr>
+                        <td class="font-regular">Original Completion Date</td>
+                        <td class="font-bold">Nov 12, 2014</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="pull-left" sparkline spark-data="[68, 32]" spark-options="pieOptions"></div>
+                <div class="pull-left mt40 pl20">68%</div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="pull-left" sparkline spark-data="[44, 56]" spark-options="pieOptions"></div>
+                <div class="pull-left mt40 pl20">44%</div>
+            </div>
         </div>
     </div>
 </div>
@@ -112,6 +154,6 @@ var financial_chart = {
     }
 }
 $(function(){
-    financial_chart.init(90, 90, 20, 10);
+    financial_chart.init(120, 120, 20, 10);
 })
 </script>
