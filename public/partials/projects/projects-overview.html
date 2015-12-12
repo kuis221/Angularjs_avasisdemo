@@ -11,20 +11,8 @@
     <div class="col-sm-12 col-md-9 no-l-pad">
         <div class="col-md-6">
             <div class="row">
-                <div class="pull-left prj-pr-m" id="financial-chart-container">
-                    <div id="financial-chart"></div>
-                    <div class="chart-data">
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="32" />
-                            <input type="hidden" class="color" value="#79c485" />
-                        </div>
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="64" />
-                            <input type="hidden" class="color" value="#3aabd5" />
-                        </div>
-                    </div>
+                <div class="pull-left prj-pr-m">
+                    <div ui-arc-chart rect-width="90" rect-height="90" radius="20" pen-width="10" chart-data="financialChartData"></div>
                 </div>
                 <div class="pull-left prj-mt-s">
                     <div class="">
@@ -434,19 +422,7 @@
                 <div class="col-lg-12">
                     <div class="row no-margin space2">
                         <div class="pull-left" id="team-member-chart-container">
-                            <div id="team-member-chart"></div>
-                            <div class="chart-data">
-                                <div class="arc signed-members">
-                                    <span class="text"></span>
-                                    <input type="hidden" class="percent" value="13" />
-                                    <input type="hidden" class="color" value="#3aabd5" />
-                                </div>
-                                <div class="arc total-members">
-                                    <span class="text"></span>
-                                    <input type="hidden" class="percent" value="100" />
-                                    <input type="hidden" class="color" value="#79c485" />
-                                </div>
-                            </div>
+                            <div id="team-member-chart" ui-arc-chart rect-width="80" rect-height="80" radius="15" pen-width="8" chart-data="teamMemberChartData"></div>
                         </div>
                         <div class="pull-left">
                             <div class="prj-mbm-info">
@@ -669,128 +645,4 @@
 
     });
 
-</script>
-
-<script>
-var financial_chart = {
-    init: function (width, height, radius, pen_width) {
-        this.diagram(width, height, radius, pen_width);
-    },
-    random: function (l, u) {
-        return Math.floor((Math.random() * (u - l + 1)) + l);
-    },
-    diagram: function (width, height, radius, pen_width) {
-        var display = '';
-        var width = width,
-            height = height,
-            radius = radius,
-            pen_width = pen_width;
-
-        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
-            var t = $(this);
-            display += t.find('.percent').val() + "%\n";
-        });
-
-        var r = Raphael('financial-chart', width, height),
-			rad = radius,
-			defaultText = '%',
-            param = {stroke: "#fff", "stroke-width": pen_width};
-			speed = 250;
-
-        // r.circle(width/2, height/2, p).attr({ stroke: 'none', fill: '#FFF' });
-
-        var title = r.text(width / 2, height / 2, defaultText).attr({
-            font: '14px Arial',
-            fill: '#000'
-        }).toFront();
-
-        title.attr({ text: display });
-
-        r.customAttributes.arc = function (value, color, rad) {
-            var v = 3.6 * value,
-				alpha = v == 360 ? 359.99 : v,
-				a = (90 - alpha) * Math.PI / 180,
-				b = 90 * Math.PI / 180,
-				sx = width / 2 + rad * Math.cos(b),
-				sy = height / 2  - rad * Math.sin(b),
-				x = width / 2 + rad * Math.cos(a),
-				y = height / 2 - rad * Math.sin(a),
-				path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-            return { path: path }
-        }
-
-        $('#financial-chart-container .chart-data').find('.arc').each(function (i) {
-            var t = $(this),
-				color = t.find('.color').val(),
-				value = t.find('.percent').val(),
-				text = t.find('.text').text();
-
-            rad += pen_width;
-            var z = r.path().attr(param).attr({ arc: [0, color, rad]});
-            z.animate({arc: [value, color, rad], 'stroke': color}, 1000, ">");
-        });
-    }
-}
-
-var team_member_chart = {
-    init: function (width, height, radius, pen_width) {
-        this.diagram(width, height, radius, pen_width);
-    },
-    random: function (l, u) {
-        return Math.floor((Math.random() * (u - l + 1)) + l);
-    },
-    diagram: function (width, height, radius, pen_width) {
-        var display = '';
-        var width = width,
-            height = height,
-            radius = radius,
-            pen_width = pen_width;
-
-        display = $('#team-member-chart-container .signed-members .percent').val() + "%\n";
-
-        var r = Raphael('team-member-chart', width, height),
-			rad = radius,
-			defaultText = '%',
-            param = {stroke: "#fff", "stroke-width": pen_width};
-			speed = 250;
-
-        // r.circle(width/2, height/2, p).attr({ stroke: 'none', fill: '#FFF' });
-
-        var title = r.text(width / 2, height / 2, defaultText).attr({
-            font: '14px Arial',
-            fill: '#000'
-        }).toFront();
-
-        title.attr({ text: display });
-
-        r.customAttributes.arc = function (value, color, rad) {
-            var v = 3.6 * value,
-				alpha = v == 360 ? 359.99 : v,
-				a = (90 - alpha) * Math.PI / 180,
-				b = 90 * Math.PI / 180,
-				sx = width / 2 + rad * Math.cos(b),
-				sy = height / 2  - rad * Math.sin(b),
-				x = width / 2 + rad * Math.cos(a),
-				y = height / 2 - rad * Math.sin(a),
-				path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-            return { path: path }
-        }
-
-        $('#team-member-chart-container .chart-data').find('.arc').each(function (i) {
-            var t = $(this),
-				color = t.find('.color').val(),
-				value = t.find('.percent').val(),
-				text = t.find('.text').text();
-
-            rad += pen_width;
-            var z = r.path().attr(param).attr({ arc: [0, color, rad]});
-            z.animate({arc: [value, color, rad], 'stroke': color}, 1000, ">");
-        });
-    }
-}
-
-$(document).ready(function() {
-    financial_chart.init(90, 90, 20, 10);
-    team_member_chart.init(80, 80, 15, 8);
-});
 </script>
