@@ -223,6 +223,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/photos/photos.html',
             controller: 'PhotosCtrl'
         })
+        .state('schedules', {
+            url: '/schedules',
+            templateUrl: 'partials/schedules/main.html',
+            controller: 'SchedulesCtrl',
+        })
         .state('sample', {
             url: '/sample',
             templateUrl: 'partials/sample/sample.html',
