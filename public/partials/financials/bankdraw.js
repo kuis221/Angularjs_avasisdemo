@@ -12,7 +12,7 @@ app.controller('FinancialsBankdrawCtrl',
                 },
                 submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
-                    name: 'Chase',
+                    name: 'World Bank',
                     value: 12613.97
                 },
                 status: 'Approved - Payment Complete',
@@ -28,7 +28,7 @@ app.controller('FinancialsBankdrawCtrl',
                 },
                 submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
-                    name: 'Wells Fargo',
+                    name: 'World Bank',
                     value: 131560.45
                 },
                 status: 'Approved - Payment Complete',
@@ -44,7 +44,7 @@ app.controller('FinancialsBankdrawCtrl',
                 },
                 submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
-                    name: 'Bank of America',
+                    name: 'World Bank',
                     value: 142741.60
                 },
                 status: 'Approved - Payment Complete',
@@ -60,7 +60,7 @@ app.controller('FinancialsBankdrawCtrl',
                 },
                 submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
-                    name: 'Chase',
+                    name: 'World Bank',
                     value: 269400.35
                 },
                 status: 'Approved - Payment Complete',
@@ -76,7 +76,7 @@ app.controller('FinancialsBankdrawCtrl',
                 },
                 submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
-                    name: 'Chase',
+                    name: 'World Bank',
                     value: 135233.49
                 },
                 status: 'Approved - Payment Complete',
@@ -92,7 +92,7 @@ app.controller('FinancialsBankdrawCtrl',
                 },
                 submitted_by: 'Beth Wiseman',
                 bank_draw_amount: {
-                    name: 'Chase',
+                    name: 'World Bank',
                     value: 211797.50
                 },
                 status: 'Approved - Payment Complete',

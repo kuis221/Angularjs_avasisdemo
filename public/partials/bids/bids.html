@@ -92,7 +92,9 @@
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleBid($index)">
-                                <i class="fa fa-plus"></i>{{ award.bid_name }}
+                                <i ng-hide="showBid[$index]" class="fa fa-plus"></i>
+                                <i ng-show="showBid[$index]" class="fa fa-minus"></i>
+                                {{ award.bid_name }}
                             </span>
                         </td>
                         <td>{{ award.initial_date }}</td>
@@ -206,7 +208,9 @@
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleDraft($index)">
-                                <i class="fa fa-plus"></i>{{ draft.bid_name }}
+                                <i ng-hide="showBid[$index]" class="fa fa-plus"></i>
+                                <i ng-show="showBid[$index]" class="fa fa-minus"></i>
+                                {{ draft.bid_name }}
                             </span>
                         </td>
                         <td>{{ draft.initial_date }}</td>
@@ -320,7 +324,9 @@
                     <tr>
                         <td class="bid-name">
                             <span class="text-active" ng-click="toggleAward($index)">
-                                <i class="fa fa-plus"></i>{{ awarded.bid_name }}
+                                <i ng-hide="showBid[$index]" class="fa fa-plus"></i>
+                                <i ng-show="showBid[$index]" class="fa fa-minus"></i>
+                                {{ awarded.bid_name }}
                             </span>
                         </td>
                         <td>{{ awarded.initial_date }}</td>
