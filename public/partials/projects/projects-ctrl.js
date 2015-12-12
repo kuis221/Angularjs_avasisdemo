@@ -9,7 +9,7 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
     $scope.doughnutOptions = {};
     $scope.doughnutData = [];
 
-    $scope.schedule_completed = 60;
+    $scope.schedule_completed = [60, 40, 90, 20, 100];
     $scope.project_completed = 33;
 
     /**
