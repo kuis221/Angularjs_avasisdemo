@@ -73,4 +73,33 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
         animateScale : false,
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
     };
+
+    /**
+    * Financial chart data
+    */
+    $scope.financialChartData = [
+        {
+            value: 32,
+            color: "#79c485",
+            text: "32%"
+        },
+        {
+            value: 64,
+            color: "#3aabd5",
+            text: "64%"
+        }
+    ];
+
+    $scope.teamMemberChartData = [
+        {
+            value: 13,
+            color: "#3aabd5",
+            text: "32%"
+        },
+        {
+            value: 100,
+            color: "#79c485",
+            text: "100%"
+        }
+    ]
 });

@@ -13,7 +13,7 @@
             <div class="row" ng-repeat="inviteUser in inviteUserList">
                 <div class="col-sm-6 form-group">
                     <span uib-dropdown>
-                        <div class="tm-user-selection" uib-dropdown-toggle>{{inviteUser.user.name}}</div>
+                        <input type="text" class="tm-user-selection" uib-dropdown-toggle ng-value="inviteUser.user.name" />
                         <ul class="uib-dropdown-menu" template-url="invite-user-dropdown.html"></ul>
                         <script type="text/ng-template" id="invite-user-dropdown.html">
                             <div class="tm-user-dropdown">
@@ -37,7 +37,7 @@
                     </span>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <input class="form-control tm-input-big" type="text" ng-value="inviteUser.user.email" disabled/>
+                    <input class="form-control tm-input-big" type="text" ng-value="inviteUser.user.email"/>
                 </div>
             </div>
             <div class="row">
