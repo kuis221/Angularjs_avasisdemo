@@ -8,7 +8,8 @@ var app = angular.module('avasis',
         'angles',
         'ngDropzone',
         'ui.tree',
-        'jkuri.slimscroll'
+        'jkuri.slimscroll',
+        'ui.utils.masks'
     ]);
 
 app.controller('AppCtrl', [
@@ -229,6 +230,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/photos',
             templateUrl: 'partials/photos/photos.html',
             controller: 'PhotosCtrl'
+        })
+        .state('schedules', {
+            url: '/schedules',
+            templateUrl: 'partials/schedules/main.html',
+            controller: 'SchedulesCtrl',
         })
         .state('sample', {
             url: '/sample',

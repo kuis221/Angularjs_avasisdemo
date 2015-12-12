@@ -199,3 +199,30 @@ app.directive('slimScroll', ['$timeout', function($timeout) {
         }
     };
 }]);
+app.directive('focusOn',function($timeout) {
+    return {
+        restrict : 'A',
+        link : function($scope,$element,$attr) {
+            $scope.$watch($attr.focusOn,function(_focusVal) {
+                $timeout(function() {
+                    _focusVal ? $element.focus() :
+                        $element.blur();
+                });
+            });
+        }
+    }
+})
+
+String.prototype.getInitials = function(glue){
+    if (typeof glue == "undefined") {
+        var glue = true;
+    }
+
+    var initials = this.replace(/[^a-zA-Z- ]/g, "").match(/\b\w/g);
+    
+    if (glue) {
+        return initials.join('');
+    }
+
+    return  initials;
+};

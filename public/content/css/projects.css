@@ -39,10 +39,18 @@
 
 .prj-piechart-center-title {
     position: absolute;
-    top: 53px;
-    left: 50px;
+    top: 100px;
+    left: 52px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
 }
-
+.prj-piechart-center-team {
+    position: absolute;
+    top: 200px;
+    left: 51px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
+}
 .prj-btn-sm {
     min-width: 80px;
 }
@@ -93,12 +101,18 @@
     font-weight: normal;
     padding: 3px 8px;
     white-space: nowrap;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+}
+.items-today td p {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
 }
 .items-today h2 {
     margin: 0;
     padding: 6px;
-    font-family: "AvenirNextLTPro-Regular";
-    font-size: 20px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 14px;
 }
 .items-today .table td {
     padding: 20px 10px 9px;
@@ -114,7 +128,7 @@
 
 .prj-hd-itm {
     font-family: "AvenirNextLTPro-Demi";
-    font-size: 15px;
+    font-size: 13px;
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
@@ -122,12 +136,12 @@
 
 .prj-itm-title {
     font-family: "AvenirNextLTPro-Regular";
-    font-size: 13.5px;
+    font-size: 12px;
     color: #4a4a4a;
 }
 .prj-itm-cont {
     font-family: "AvenirNextLTPro-Bold";
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 0px;
 }
 .prj-assign {
@@ -150,7 +164,7 @@
 }
 
 .prj-sch-prog {
-    padding-top: 5px;
+    padding-top: 4px;
 }
 .prj-sch-prog .progress-small {
     width: 30%;
@@ -160,4 +174,76 @@
     .prj-sch-prog .progress-small {
         width: 100%;
     }
+}
+
+.prj-white-wrapper {
+    padding: 12px 15px;
+}
+
+.prj-flg-pie {
+    margin-right: 30px;
+}
+
+.prj-flg-itm {
+    width: 65px;
+}
+
+.prj-flg-itm .strong-demi {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: black;
+}
+
+.prj-flg-itm .regular {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
+}
+
+.prj-flg-tol {
+    margin-bottom: 5px;
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 12px;
+}
+
+.section-border {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.prj-mbm-info {
+    margin-top: 10px;
+}
+.prj-mbm-info p {
+    padding-left: 22px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1600px) {
+    .prj-mbm-info {
+        margin-left: 20px;
+    }
+}
+
+.no-r-pad {
+    padding-right: 0px;
+}
+.no-l-pad {
+    padding-left: 0px;
+}
+
+.prj-itm-comp {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 11.5px;
+}
+
+.prj-contact-name {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 13px;
+    color: #3aabd5;
+    cursor: pointer;
+}
+.prj-contact-job {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 13px;
 }
