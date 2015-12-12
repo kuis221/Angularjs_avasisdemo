@@ -51,6 +51,11 @@
     right: 25px;
     bottom: 40px;
 }
+
+.comm-card-title i {
+    margin-right: 7px;
+    color: #efbe38;
+}
 .comm-card-name {
     font-family: "AvenirNextLTPro-Bold";
     font-size: 14px;
@@ -64,6 +69,14 @@
 .comm-card-cont {
     font-family: "AvenirNextLTPro-Regular";
     font-size: 12px;
+}
+
+.comm-card-spot {
+    color: #3aabd5;
+    font-size: 10px;
+    margin-left: -20px;
+    margin-right: 10px;
+    padding-top: 33px;
 }
 
 .comm-msg-name {
