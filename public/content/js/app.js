@@ -237,7 +237,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('schedules', {
             url: '/schedules',
             templateUrl: 'partials/schedules/main.html',
-            controller: 'SchedulesCtrl',
+            controller: 'SchedulesCtrl'
         })
         .state('sample', {
             url: '/sample',
