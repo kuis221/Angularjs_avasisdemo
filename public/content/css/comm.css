@@ -1,11 +1,98 @@
 .comm-wrapper {
     padding: 25px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
 }
+.comm-wrapper .text-normal {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #4a4a4a;
+}
+
 .comm-header {
-    
+    padding-bottom: 10px;
 }
 .comm-header li {
     display: inline-block;
-    text-align: center;
-    width: 130px;
+    text-align: right;
+    margin-left: 45px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+}
+.comm-header li i {
+    margin-right: 7px;
+}
+.comm-header li a {
+    color: #868686;
+}
+.comm-card {
+    padding: 15px 15px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comm-card-wrapper {
+    margin-top: 10px;
+}
+.comm-msg-wrapper {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.comm-card-wrapper hr,
+.comm-msg-wrapper hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.comm-card .comm-card-num {
+    background-color: #cccccc;
+    color: white;
+    position: absolute;
+    right: 25px;
+    bottom: 40px;
+}
+.comm-card-name {
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 14px;
+}
+
+.comm-card-proj {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 13px;
+    padding-bottom: 8px;
+}
+.comm-card-cont {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+}
+
+.comm-msg-name {
+    margin-top: 9px;
+}
+
+.comm-msg-name strong {
+    margin-right: 30px;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 14px;
+    color: #3aabd5;
+}
+.comm-msg-name span {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    color: #979797;
+}
+.comm-msg-name p {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 16px;
+}
+.comm-msg-cont {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+}
+
+.comm-msg-tab {
+    padding-top: 13px;
+    font-size: 18px;
+    color: #3aabd5;
+    cursor: pointer;
 }
