@@ -26,17 +26,25 @@ table.no-border {
         font-size: 14px;
     }
     .calendar-container {
+        & > div {
+            border: 1px solid #dedede;
+            border-bottom: none;
+        }
         .heading {
             padding: 10px;
         }
-        border-top: 1px solid #dedede;
-        border-bottom: 1px solid #dedede;
         .week-container {
+            margin-bottom: 40px;
             & > table {
+                border-bottom: 1px solid #f1f1f1;
+                th {
+                    background: #f9f9f9;
+                }
                 td {
                     padding: 5px !important;
                     .alert {
                         color: #4a4a4a;
+                        margin: 0;
                         i:first-child {
                             border: 1px solid white;
                             display: inline-block;
@@ -46,6 +54,9 @@ table.no-border {
                             text-align: center;
                             background: white;
                             border-radius: 2px;
+                        }
+                        i:last-child {
+                            font-size: 18px;
                         }
                     }
                     .alert-primary {background-color: #c4e6f2;}
