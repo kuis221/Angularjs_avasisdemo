@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading overview">
     <div class="col-sm-6 col-lg-10">
-        <h2 class="heading">Action Items</h2>
+        <h2 class="heading">Schedules</h2>
         <ul class="topSubtitle">
             <li>
                 <a href="#">Wilmington 47<i class="ace-icon fa fa-angle-down"></i></a>
@@ -82,18 +82,26 @@
                 </table>
             </div>
             <div class="col-md-2 col-sm-6">
-                <div class="pull-left" sparkline spark-data="[68, 32]" spark-options="pieOptions"></div>
-                <div class="pull-left mt40 pl20">68%</div>
+                <div class="clearfix">
+                    <div class="pull-left" sparkline spark-data="[68, 32]" spark-options="pieOptions"></div>
+                    <div class="pull-left mt40 pl20">68%</div>
+                </div>
+                <div class="sub-title">Task Due Today</div>
+                <div class="text-muted">7 of 16 completed</div>
             </div>
             <div class="col-md-2 col-sm-6">
-                <div class="pull-left" sparkline spark-data="[44, 56]" spark-options="pieOptions"></div>
-                <div class="pull-left mt40 pl20">44%</div>
+                <div class="clearfix">
+                    <div class="pull-left" sparkline spark-data="[44, 56]" spark-options="pieOptions"></div>
+                    <div class="pull-left mt40 pl20">44%</div>
+                </div>
+                <div class="sub-title">Task Due Today</div>
+                <div class="text-muted">7 of 16 completed</div>
             </div>
         </div>
     </div>
     <uib-tabset>
         <uib-tab heading="Calendar">
-            Hello
+            <div ng-include="'partials/schedules/calendar.html'"></div>
         </uib-tab>
         <uib-tab heading="Flow">Short Labeled Justified content</uib-tab>
         <uib-tab heading="List">Long Labeled Justified content</uib-tab>
