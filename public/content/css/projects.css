@@ -247,3 +247,7 @@
     font-family: "AvenirNextLTPro-Medium";
     font-size: 13px;
 }
+.overview-photo .gallery img {
+    height: 100px;
+    width: 100px;
+}
