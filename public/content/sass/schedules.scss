@@ -26,15 +26,22 @@ table.no-border {
         font-size: 14px;
     }
     .calendar-container {
-        border: 1px solid #dedede;
+        & > div {
+            border: 1px solid #dedede;
+            border-bottom: none;
+        }
         .heading {
             padding: 10px;
         }
         .week-container {
+            margin-bottom: 40px;
             & > table {
+                border-bottom: 1px solid #f1f1f1;
+                th {
+                    background: #f9f9f9;
+                }
                 td {
                     padding: 5px !important;
-                    border-color: #f1f1f1;
                     .alert {
                         color: #4a4a4a;
                         margin: 0;

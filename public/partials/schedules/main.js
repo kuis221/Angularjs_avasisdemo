@@ -4,7 +4,7 @@ app.controller('SchedulesCtrl',
     ['$scope', '$uibModal', function($scope, $uibModal) {
         $scope.pieOptions = {
             type: 'pie',
-            height: '100px',
+            height: '80px',
             offset: -90,
             sliceColors: ['#3aabd5', '#f1f1f1', '#f6b875'],
             disableTooltips: true
@@ -14,6 +14,9 @@ app.controller('SchedulesCtrl',
         $scope.weekTitles = [];
         $scope.daysInRange = [];
         $scope.offset = 0;
+        $scope.schedules = [{
+
+        }];
 
         function getWeekTitle(offset) {
             offset = $scope.offset + offset;
@@ -45,9 +48,7 @@ app.controller('SchedulesCtrl',
                 for (var i = 0; i < 20; i ++) {
                     startDate = angular.copy($scope.startDate);
                     $scope.daysInRange.push(startDate.add(i, 'd').format('ddd, MMM DD'));
-                    console.log($scope.startDate);
                 }
-                console.log($scope.daysInRange);
             }
         }
 
