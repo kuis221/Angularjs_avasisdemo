@@ -48,6 +48,9 @@ table.no-border {
                             background: white;
                             border-radius: 2px;
                         }
+                        i:last-child {
+                            font-size: 18px;
+                        }
                     }
                     .alert-primary {background-color: #c4e6f2;}
                     .alert-success {background-color: #e4f3e6;}

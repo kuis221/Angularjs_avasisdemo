@@ -37,6 +37,8 @@ table.no-border > th, table.no-border td {
         text-align: center;
         background: white;
         border-radius: 2px; }
+      #calendar .calendar-container .week-container > table td .alert i:last-child {
+        font-size: 18px; }
     #calendar .calendar-container .week-container > table td .alert-primary {
       background-color: #c4e6f2; }
     #calendar .calendar-container .week-container > table td .alert-success {
