@@ -81,8 +81,10 @@ app.controller('CommCtrl',
             }
         ];
         $scope.card = 0;
+        $scope.messages = $scope.comms[0];
         $scope.setCard = function(newCard){
             $scope.card = newCard;
+            $scope.messages = $scope.comms[newCard];
         };
         $scope.isSet = function(cardNum){
             return $scope.card === cardNum;

@@ -36,7 +36,7 @@
                 <hr>
             </div>
         </div>
-        <div class="col-lg-8 no-r-pad">
+        <div class="col-lg-8 no-r-pad" ng-modal="messages">
             <div class="comm-msg-wrapper">
                 <div class="comm-msg">
                     <div class="comm-msg-title">
@@ -47,8 +47,35 @@
                                 </a>
                             </div>
                             <div class="pull-left comm-msg-name">
-                                <strong>Dave Gebo</strong>
-                                <span>1:17pm - Aug 17, 2015</span>
+                                <strong>{{ messages.receiver }}</strong>
+                                <span>{{ messages.time_full }}</span>
+                                
+                                <p>{{ messages.project }}</p>
+                            </div>
+                            <div class="pull-right comm-msg-tab">
+                                <span><i class="fa fa-caret-right"></i></span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="comm-msg-cont">
+                            <p>{{ messages.replies }}</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="comm-msg-wrapper" ng-repeat="receive in messages.receives">
+                <div class="comm-msg">
+                    <div class="comm-msg-title">
+                        <div class="row no-margin">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="assets/img/avasisteam/gebo.jpg" class="img-circle prj-sch-photo" alt="image">
+                                </a>
+                            </div>
+                            <div class="pull-left comm-msg-name">
+                                <strong>{{ receive.from }}</strong>
+                                <span>{{ receive.time_full }}</span>
                                 
                                 <p>Schedule for Roof Dry-In Completion</p>
                             </div>
@@ -58,7 +85,7 @@
                         </div>
                         <hr>
                         <div class="comm-msg-cont">
-                            <p>Hi Bob,  I appologize for the delayed response. My team and I have been slammed trying to complete the Roof Dry-In proccess by the set deadline. Not to mention before this massive storm is supposed to blow in. As of right now we should have this completed by end of day. Fingers crossed that we dont run into any issues. I will inform you immediately if it does not look like we will be completing the task today. Sorry if this causes any uneasieness, you set a very tight deadline. Ill get back to you regardless, end of day. Talk to you soon, Dave</p>
+                            <p>{{ receive.msg }}</p>
                         </div>
                     </div>
                 </div>
