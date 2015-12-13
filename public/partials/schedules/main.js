@@ -28,6 +28,7 @@ app.controller('SchedulesCtrl',
         $scope.offset = 0;
         $scope.schedulesInWeek = []; // schedules in date of range
         $scope.schedules = [{
+            id: _.uniqueId(),
             description: "Test schedule 12/4/2015 - 12/13/2015",
             start_date: moment('2015-12-4'),
             end_date: moment('2015-12-13'),
@@ -35,6 +36,7 @@ app.controller('SchedulesCtrl',
             completion_percentage: 80
         },
         {
+            id: _.uniqueId(),
             description: "Test schedule 11/29/2015 - 12/13/2015",
             start_date: moment('2015-11-29'),
             end_date: moment('2015-12-13'),
@@ -42,6 +44,7 @@ app.controller('SchedulesCtrl',
             completion_percentage: 80
         },
         {
+            id: _.uniqueId(),
             description: "Test schedule 12/7/2015 - 12/14/2015",
             start_date: moment('2015-12-7'),
             end_date: moment('2015-12-14'),
@@ -49,6 +52,7 @@ app.controller('SchedulesCtrl',
             completion_percentage: 80
         },
         {
+            id: _.uniqueId(),
             description: "Test schedule 11/8/2015 - 11/14/2015",
             start_date: moment('2015-11-8'),
             end_date: moment('2015-11-14'),
@@ -56,6 +60,7 @@ app.controller('SchedulesCtrl',
             completion_percentage: 80
         },
         {
+            id: _.uniqueId(),
             description: "Christmas holiday 12/24/2015 - 12/30/2015",
             start_date: moment('2015-12-24'),
             end_date: moment('2015-12-30'),

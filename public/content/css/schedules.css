@@ -26,6 +26,7 @@ table.no-border > th, table.no-border td {
   padding: 10px; }
 
 #calendar .calendar-container .alert {
+  position: relative;
   text-align: left;
   color: #4a4a4a;
   margin: 0;
@@ -50,9 +51,7 @@ table.no-border > th, table.no-border td {
     #calendar .calendar-container .alert .flag-badge i.fa-flag {
       transform: rotate(-30deg); }
   #calendar .calendar-container .alert i:last-child {
-    font-size: 18px;
-    display: block;
-    float: right; }
+    font-size: 18px; }
 
 #calendar .calendar-container .alert-primary {
   background-color: #c4e6f2; }
