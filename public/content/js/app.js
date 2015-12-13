@@ -180,6 +180,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
         })
+        .state('projects.flag_alerts', {
+            url: '/flag-alerts?bucket&filter',
+            templateUrl: 'partials/projects/project-flag-alerts.html',
+            controller: 'ProjectFlagAlertsCtrl',
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('documents', {
             url: '/documents',
             abstract: true,
