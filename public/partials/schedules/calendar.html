@@ -15,17 +15,17 @@
     </div>
 
     <div class="calendar-container">
-        <div class="mb40" ng-repeat="section in [0, 1, 2]">
+        <div class="mb40" ng-repeat="section in range(3)">
             <div class="heading text-center font-bold">{{weekTitles[section]}}</div>
             <div class="week-container">
                 <table class="table">
                     <tr>
-                        <th width="14%" ng-repeat="day in [0, 1, 2, 3, 4, 5, 6]">
-                            <div class="day-header text-center" ng-class="{true: 'label-success'}[daysInRange[section * 7 + day] == today.format('ddd, MMM DD')]">{{daysInRange[section * 7 + day]}}</div>        
+                        <th width="14%" ng-repeat="day in range(7)">
+                            <div class="day-header text-center" ng-class="{true: 'label-success'}[daysInRange[section * 7 + day] == today.format('ddd, MMM DD')]">{{daysInRange[section * 7 + day]}}</div>
                         </th>
                     </tr>
                     <tr ng-repeat="schedule in schedulesInWeek[section]">
-                        <td width="14%" ng-if="schedule.relativePos > 0" colspan="{{schedule.relativePos}}"></td>
+                        <td width="14%" ng-repeat="i in range(schedule.relativePos)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i)]"></td>
                         <td width="14%" colspan="{{schedule.relativeLength}}">
                             <div class="alert text-left alert-{{schedule.schedule_type}} clearfix">
                                 <div class="flag-badge"><i class="fa fa-flag"></i></div>
@@ -36,7 +36,7 @@
                                 <i class="fa fa-info-circle pl10"></i>
                             </div>
                         </td>
-                        <td width="14%" ng-if="7 - schedules.relativePos - schedule.relativeLength > 0" colspan="{{7 - schedules.relativePos - schedule.relativeLength}}">
+                        <td width="14%" ng-repeat="i in range(7 - schedule.relativePos - schedule.relativeLength)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i + schedule.relativePos + schedule.relativeLength)]">
                         </td>
                     </tr>
                 </table>

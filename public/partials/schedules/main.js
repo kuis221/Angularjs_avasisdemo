@@ -66,6 +66,16 @@ app.controller('SchedulesCtrl',
             e.days_of_period = e.end_date.diff(e.start_date, 'd') + 1;
         })
 
+        $scope.range = function(val) {
+            return _.range(val);
+        }
+        $scope.isEmptyDate = function(week, day) {
+            var scheduled = _.filter($scope.schedulesInWeek[week], function(e) {
+                return _.range(e.relativePos, e.relativePos + e.relativeLength).indexOf(day) >= 0;
+            });
+            return scheduled.length == 0;
+        }
+
         function getWeekTitle(offset) {
             offset = $scope.offset + offset;
             if (offset == 0)
