@@ -9,6 +9,18 @@ app.controller('SchedulesCtrl',
             sliceColors: ['#3aabd5', '#f1f1f1', '#f6b875'],
             disableTooltips: true
         };
+        $scope.financialChartData = [
+            {
+                value: 32,
+                color: "#79c485",
+                text: "32%"
+            },
+            {
+                value: 64,
+                color: "#3aabd5",
+                text: "64%"
+            }
+        ];
         $scope.calendarScope = 'week';
         $scope.today = moment().startOf('day');
         $scope.weekTitles = [];
