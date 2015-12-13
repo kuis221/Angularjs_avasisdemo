@@ -16,22 +16,22 @@
     </div>
     <div class="row comm-section">
         <div class="col-lg-4 border-right">
-            <div class="comm-card-wrapper">
-                <div class="comm-card">
-                    <span class="pull-left comm-card-spot"><i class="fa fa-circle"></i></span>
+            <div class="comm-card-wrapper" ng-repeat="comm in comms track by $index">
+                <div class="comm-card" ng-class="{ active: isSet($index) }" ng-click="setCard($index)">
+                    <span ng-hide="isSet($index)" class="pull-left comm-card-spot"><i class="fa fa-circle"></i></span>
                     <div class="comm-card-title">
-                        <span class="comm-card-name">Dave Gebo</span>
-                        <span class="pull-right text-normal"><i class="fa fa-star"></i>1:17 pm</span>
+                        <span class="comm-card-name">{{ comm.receiver }}</span>
+                        <span class="pull-right text-normal"><i ng-show="isImportant($index)" class="fa fa-star"></i>{{ comm.time }}</span>
                     </div>
                     <div class="comm-card-proj">
-                        Schedule for Roof Dry-In Completion
+                        {{ comm.project }}
                     </div>
                     <div class="comm-card-cont">
                         <span>
-                            Hi Bob, I appologize for the delayed response, My team an….
+                            {{ comm.replies_abs }}
                         </span>
                     </div>
-                    <span class="label comm-card-num">2</span>
+                    <span class="label comm-card-num">{{ comm.num }}</span>
                 </div>
                 <hr>
             </div>
