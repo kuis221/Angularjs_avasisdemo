@@ -1785,11 +1785,13 @@ ol.unstyled { list-style: none outside none; margin-left: 0;}
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus { -moz-border-bottom-colors: none;  -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;
  background: none; border-color: #dddddd #dddddd rgba(0, 0, 0, 0); border-bottom: #f3f3f4; border-image: none; border-style: solid; border-width: 1px; color: #555555; cursor: default;}
-.nav.nav-tabs li { background: none; border: none;}
-.nav-tabs > li > a { color: #A7B1C2;font-weight: 600; padding: 10px 20px 10px 25px;}
+.nav.nav-tabs li { border: none;}
+.nav-tabs > li > a { color: #6c6c6c; font-size: 14px; min-width: 110px; text-align: center; padding: 25px 30px;}
+.nav.nav-tabs > li.active {background: transparent;}
+.nav.nav-tabs > li.active > a { color: #e25c5c; background: white; border-bottom: 1px solid white;}
 .nav-tabs > li > a:hover,
-.nav-tabs > li > a:focus {  background-color: #e6e6e6;  color: #676a6c;}
-.ui-tab .tab-content { padding: 20px 0px;}
+.nav-tabs > li > a:focus { background-color: #e6e6e6;  color: #676a6c;}
+.tab-content { padding: 20px; border: 1px solid #dedede; border-top: none; background: white;}
 
 /* GLOBAL  */
 .no-padding {padding: 0 !important;}
@@ -3147,41 +3149,7 @@ h3.proStatus i {
     height: 18px;
     margin: 8px 0 0 0;
 }
-/**** Custom tabs ****/
 
-.custom-tabs1 {
-    /*border-top: 1px solid #d7d7d7;*/
-    border-bottom: none !important;
-}
-.custom-tabs1 li.active {
-    background: #fff !important;
-    border-right: 1px solid #ccc !important;
-}
-.custom-tabs1 li {
-    padding: 15px 0;
-}
-.custom-tabs1 > li > a {
-    padding: 10px 20px 10px 25px;
-    border-right: 1px solid #ccc !important;
-}
-.custom-tabs1 > li > a:hover {
-    padding: none !important;
-}
-.custom-tabs1 li.active a {
-    border: none !important;
-    color: #e25c5c !important;
-}
-.custom-tabs1 > li > a:hover,
-.custom-tabs1 > li > a:focus {
-    background: none !important;
-    border: none;
-}
-.nav-tabs > li > a {
-    padding: none !important;
-}
-.nav-tabs > li {
-    margin-bottom: 0px !important;
-}
 /**** Custom table ****/
 
 .table-custom1 {

@@ -1,93 +1,91 @@
-<div class="panel panel-default">
-    <div class="panel-body">
-        <div id="bankdraw-stats">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h3>Construction Loan Amount</h3>
-                            <h2>$2,860,509</h2>
-                        </div>
-                        <div class="col-lg-4">
-                            <h3>Amount Drawn to Date</h3>
-                            <h2>$903,348</h2>
-                        </div>
-                        <div class="col-lg-4">
-                            <h3>Amount Remaining</h3>
-                            <h2>$1,957,161</h2>
-                        </div>
+<div class="tab-content">
+    <div id="bankdraw-stats">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h3>Construction Loan Amount</h3>
+                        <h2>$2,860,509</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Amount Drawn to Date</h3>
+                        <h2>$903,348</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Amount Remaining</h3>
+                        <h2>$1,957,161</h2>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row bankdraw-chart-area">
-                        <div class="col-lg-3">
-                            <div class="pull-left prj-pr-m" id="bankdraw-main-container">
-                                <div id="bankdraw-main-chart"></div>
-                                <div class="chart-data">
-                                    <div class="arc">
-                                        <span class="text"></span>
-                                        <input type="hidden" class="percent" value="31.6" />
-                                        <input type="hidden" class="color" value="#79c485" />
-                                    </div>
-                                    <div class="arc">
-                                        <span class="text"></span>
-                                        <input type="hidden" class="percent" value="64" />
-                                        <input type="hidden" class="color" value="#3aabd5" />
-                                    </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row bankdraw-chart-area">
+                    <div class="col-lg-3">
+                        <div class="pull-left prj-pr-m" id="bankdraw-main-container">
+                            <div id="bankdraw-main-chart"></div>
+                            <div class="chart-data">
+                                <div class="arc">
+                                    <span class="text"></span>
+                                    <input type="hidden" class="percent" value="31.6" />
+                                    <input type="hidden" class="color" value="#79c485" />
+                                </div>
+                                <div class="arc">
+                                    <span class="text"></span>
+                                    <input type="hidden" class="percent" value="64" />
+                                    <input type="hidden" class="color" value="#3aabd5" />
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <span class="label label-primary">&nbsp;</span>
-                            <span>Percentage Drawn</span>
-                            <p>31.6%</p>
-                        </div>
-                        <div class="col-lg-5">
-                            <span class="label label-success">&nbsp;</span>
-                            <span>Percentage Project Completion</span>
-                            <p>64%</p>
-                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <span class="label label-primary">&nbsp;</span>
+                        <span>Percentage Drawn</span>
+                        <p>31.6%</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <span class="label label-success">&nbsp;</span>
+                        <span>Percentage Project Completion</span>
+                        <p>64%</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="table-responsive bankdraw-main-table">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Submission Date</th>
-                        <th>Draw & Project Name</th>
-                        <th>Submitted by</th>
-                        <th>Bank & Draw Amounts</th>
-                        <th>Status</th>
-                        <th>Documents</th>
-                        <th>Pay Applications</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="row in bankdraws">
-                        <td class="submission-date">{{ row.submission_date }}</td>
-                        <td class="draw-project">
-                            <span class="text-primary">{{row.draw_project.name}}</span><br>
-                            <span class="text-muted">{{row.draw_project.type}}</span>
-                        </td>
-                        <td class="text-primary submitted-by">{{row.submitted_by}}</td>
-                        <td class="bank-draw-amount">
-                            <span class="text-info">{{row.bank_draw_amount.name}}</span><br>
-                            <span class="text-default">{{row.bank_draw_amount.value | currency:'$':0}}</span>
-                        </td>
-                        <td class="status">
-                            <div class="label"
-                                ng-class="{'label-success': row.status == 'Approved - Payment Complete',
-                                           'label-warning': row.status == 'Returned With Comments',
-                                           'label-danger': row.status == 'Not Yet Submitted'}">{{row.status}}</div>
-                        </td>
-                        <td class="text-primary documents">3 Documents</td>
-                        <td class="text-primary pay-application">5 Pay Applications</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </div>
+    <div class="table-responsive bankdraw-main-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Submission Date</th>
+                    <th>Draw & Project Name</th>
+                    <th>Submitted by</th>
+                    <th>Bank & Draw Amounts</th>
+                    <th>Status</th>
+                    <th>Documents</th>
+                    <th>Pay Applications</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in bankdraws">
+                    <td class="submission-date">{{ row.submission_date }}</td>
+                    <td class="draw-project">
+                        <span class="text-primary">{{row.draw_project.name}}</span><br>
+                        <span class="text-muted">{{row.draw_project.type}}</span>
+                    </td>
+                    <td class="text-primary submitted-by">{{row.submitted_by}}</td>
+                    <td class="bank-draw-amount">
+                        <span class="text-info">{{row.bank_draw_amount.name}}</span><br>
+                        <span class="text-default">{{row.bank_draw_amount.value | currency:'$':0}}</span>
+                    </td>
+                    <td class="status">
+                        <div class="label"
+                            ng-class="{'label-success': row.status == 'Approved - Payment Complete',
+                                       'label-warning': row.status == 'Returned With Comments',
+                                       'label-danger': row.status == 'Not Yet Submitted'}">{{row.status}}</div>
+                    </td>
+                    <td class="text-primary documents">3 Documents</td>
+                    <td class="text-primary pay-application">5 Pay Applications</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 <script>

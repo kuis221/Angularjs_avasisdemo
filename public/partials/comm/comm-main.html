@@ -1,0 +1,34 @@
+<div class="row wrapper border-bottom white-bg page-heading overview">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">Team Communication Inbox</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
+            </li>
+            <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2">
+        <div class="btns mr10">
+            <a href="#" class="btn btn-primary btn-lg" data-toggle="dropdown">
+                <i class="fa fa-pencil"></i> Compose New Message
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                <li><a href="">Bid Package</a></li>
+                <li><a href="">Quick Bid</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <uib-tabset>
+        <uib-tab heading="Inbox">
+            <div ng-include="'partials/comm/comm-inbox.html'"></div>
+        </uib-tab>
+        <uib-tab heading="Sent">Short Labeled Justified content</uib-tab>
+        <uib-tab heading="Important">Long Labeled Justified content</uib-tab>
+        <uib-tab heading="Drafts">Long Labeled Justified content</uib-tab>
+        <uib-tab heading="Trash">Long Labeled Justified content</uib-tab>
+    </uib-tabset>
+</div>

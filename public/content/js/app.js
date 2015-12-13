@@ -162,6 +162,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('action-items.inspections-popup', {
+            url: '/inspections-popup',
+            templateUrl: "partials/action-items/inspections/main-popup.html",
+            controller: "InspectionsMainPopupCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('projects', {
             url: '/projects',
             abstract: true,
@@ -194,6 +202,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/bids',
             templateUrl: 'partials/bids/bids.html',
             controller: 'BidsCtrl'
+        })
+        .state('comm', {
+            url: '/communication',
+            templateUrl: 'partials/comm/comm-main.html',
+            controller: 'CommCtrl'
         })
         .state('procurement', {
             url: '/procurements',
@@ -234,7 +247,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('schedules', {
             url: '/schedules',
             templateUrl: 'partials/schedules/main.html',
-            controller: 'SchedulesCtrl',
+            controller: 'SchedulesCtrl'
         })
         .state('sample', {
             url: '/sample',

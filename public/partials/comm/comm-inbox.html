@@ -1,0 +1,95 @@
+<div class="comm-wrapper">
+    <div class="row border-bottom comm-header ">
+        <div class="pull-left">
+            Your Message
+        </div>
+        <div class="pull-right">
+            <ul>
+                <li><a href=""><i class="fa fa-reply"></i>Reply</a></li>
+                <li><a href=""><i class="fa fa-reply-all"></i>Reply All</a></li>
+                <li><a href=""><i class="fa fa-long-arrow-right"></i>Forward</a></li>
+                <li><a href=""><i class="fa fa-star"></i>Important</a></li>
+                <li><a href=""><i class="fa fa-print"></i>Print</a></li>
+                <li><a href=""><i class="fa fa-trash"></i>Trash</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row comm-section">
+        <div class="col-lg-4 border-right">
+            <div class="comm-card-wrapper" ng-repeat="comm in comms track by $index">
+                <div class="comm-card" ng-class="{ active: isSet($index) }" ng-click="setCard($index)">
+                    <span ng-hide="isSet($index)" class="pull-left comm-card-spot"><i class="fa fa-circle"></i></span>
+                    <div class="comm-card-title">
+                        <span class="comm-card-name">{{ comm.receiver }}</span>
+                        <span class="pull-right text-normal"><i ng-show="isImportant($index)" class="fa fa-star"></i>{{ comm.time }}</span>
+                    </div>
+                    <div class="comm-card-proj">
+                        {{ comm.project }}
+                    </div>
+                    <div class="comm-card-cont">
+                        <span>
+                            {{ comm.replies_abs }}
+                        </span>
+                    </div>
+                    <span ng-if="comm.num > 0" class="label comm-card-num">{{ comm.num }}</span>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="col-lg-8 no-r-pad" ng-modal="messages">
+            <div class="comm-msg-wrapper">
+                <div class="comm-msg">
+                    <div class="comm-msg-title">
+                        <div class="row no-margin">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img ng-src="{{messages.img_url}}" class="img-circle prj-sch-photo" alt="image">
+                                </a>
+                            </div>
+                            <div class="pull-left comm-msg-name">
+                                <strong>{{ messages.receiver }}</strong>
+                                <span>{{ messages.time_full }}</span>
+                                
+                                <p>{{ messages.project }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comm-msg-cont">
+                        <p>{{ messages.replies }}</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="comm-msg-wrapper" ng-repeat="receive in messages.receives track by $index">
+                <div class="comm-msg">
+                    <div class="comm-msg-title" ng-click="toggleMsg($index)">
+                        <div class="row no-margin">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img ng-src="{{receive.img_url}}" class="img-circle prj-sch-photo" alt="image">
+                                </a>
+                            </div>
+                            <div class="pull-left comm-msg-name" ng-class="{'comm-msg-checked': showMsg[$index]}">
+                                <strong>{{ receive.from }}</strong> to
+                                <strong>{{ receive.to }}</strong>
+                                <span>{{ receive.time_full }}</span>
+                                <p class="msg-abs" ng-hide="showMsg[$index]">{{ receive.msg | limitTo:50 }}...</p>
+                            </div>
+                            <div class="pull-right comm-msg-tab">
+                                <span ng-hide="showMsg[$index]"><i class="fa fa-caret-right"></i></span>
+                                <span ng-show="showMsg[$index]"><i class="fa fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comm-msg-cont" ng-show="showMsg[$index]">
+                        <p>{{ receive.msg }}</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -9,3 +9,108 @@ table.no-border {
         padding: 5px;
     }
 }
+#calendar {
+    .date-navigator {
+        width: 25px;
+        height: 25px;
+        text-align: center; 
+        background: #f1f1f1;
+        border-radius: 50%;
+        line-height: 25px;
+        display: block;
+        &:hover {
+            color: #3aabd5;
+        }
+    }
+    .sub-title {
+        font-size: 14px;
+    }
+    .calendar-container {
+        & > div {
+            border: 1px solid #dedede;
+            border-bottom: none;
+        }
+        .heading {
+            padding: 10px;
+        }
+        .alert {
+            position: relative;
+            text-align: left;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 10px 5px;
+            & > div {
+                float: left;
+            }
+            .content {
+                width: calc(100% - 60px);
+                div {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .flag-badge {
+                margin-right: 10px;
+                border: 1px solid white;
+                width: 22px;
+                height: 22px;
+                line-height: 22px;
+                text-align: center;
+                background: white;
+                border-radius: 2px;
+                i.fa-flag {
+                    transform: rotate(-30deg);
+                }
+            }
+            i:last-child {
+                font-size: 18px;
+            }
+        }
+        .alert-primary {
+            background-color: #c4e6f2;
+            i.fa-flag { color: #3aabd5;}
+        }
+        .alert-success {
+            background-color: #e4f3e6;
+            i.fa-flag { color: #79c485;}
+        }
+        .alert-info {
+            background-color: #e4f3e6;
+            i.fa-flag { color: #2a2d33;}
+        }
+        .alert-warning {
+            background-color: #feecd5;
+            i.fa-flag { color: #fdb04a;}
+        }
+        .alert-danger {
+            background-color: #f6cece;
+            i.fa-flag { color: #e25c5c;}
+        }
+
+        .week-container {
+            margin-bottom: 40px;
+            & > table {
+                table-layout: fixed;
+                border-bottom: 1px solid #f1f1f1;
+                th {
+                    background: #f9f9f9;
+                    padding: 7px 10px;
+                    vertical-align: middle;
+                }
+                td {
+                    width: 14%;
+                    padding: 5px !important;
+                    &.no-schedule {
+                        background: url("/assets/img/bg_pattern_1.png");
+                    }
+                    border: 1px solid #f1f1f1;
+                }
+                .day-header {
+                    padding: 7px 30px;
+                    border-radius: 4px;
+                }
+            }
+        }    
+    }    
+}
