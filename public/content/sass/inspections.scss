@@ -4,7 +4,7 @@ $medium: "AvenirNextLTPro-Medium";
 $regular: "AvenirNextLTPro-Regular";
 
 $c-primary: #3aabd5;
-$c-gray-border: #d7d7d7;
+$c-gray-border: #eee;
 $c-fa-icon: #aaa;
 $c-text-gray: #808080;
 
@@ -259,4 +259,93 @@ table.aii-item-table {
     .item-value {
         text-align: left;
     }
+}
+
+.aii-uat-head {
+    background-color: #F5F5F6;
+    border: 1px solid $c-gray-border;
+    border-bottom: 1px solid #DDDDDD;
+
+    .aii-uat-th {
+        text-align: left;
+        padding: 15px 20px;
+        font-family: $demi;
+        font-size: 12px;
+        color: $c-text-gray;
+    }
+}
+
+.aii-uat-body {
+    border: 1px solid $c-gray-border;
+    border-top: none;
+
+    .aii-uat-td {
+        text-align: left;
+        padding: 15px 20px;
+        color: $c-primary;
+    }
+}
+
+.aii-photo-section {
+    border: 1px solid $c-gray-border;
+    border-radius: 3px;
+    padding: 10px 5px 0px 5px;
+
+    .pl5 {
+        padding-left: 5px !important;
+    }
+
+    .pr5 {
+        padding-right: 5px !important;
+    }
+
+    .aii-photo-thumb {
+        height: 130px;
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        width: 100%;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.aii-comment {
+    position: relative;
+    border-bottom: 1px solid $c-gray-border;
+    padding: 15px 0px;
+
+    .aii-comment-photo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .aii-comment-name {
+        color: $c-primary;
+        font-family: $bold;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .aii-comment-content {
+        font-family: $regular;
+        font-size: 14px;
+    }
+
+    .aii-comment-date {
+        font-family: $demi;
+        font-size: 10px;
+        color: $c-text-gray;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+}
+
+.aii-mr15 {
+    margin-right: 15px;
 }
