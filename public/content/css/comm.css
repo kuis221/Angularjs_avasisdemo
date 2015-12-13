@@ -1,3 +1,11 @@
-p {
+.comm-wrapper {
+    padding: 25px;
+}
+.comm-header {
     
+}
+.comm-header li {
+    display: inline-block;
+    text-align: center;
+    width: 130px;
 }

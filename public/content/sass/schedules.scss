@@ -33,37 +33,72 @@ table.no-border {
         .heading {
             padding: 10px;
         }
+        .alert {
+            text-align: left;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 10px 5px;
+            & > div {
+                float: left;
+            }
+            .content {
+                width: calc(100% - 60px);
+                div {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .flag-badge {
+                margin-right: 10px;
+                border: 1px solid white;
+                width: 22px;
+                height: 22px;
+                line-height: 22px;
+                text-align: center;
+                background: white;
+                border-radius: 2px;
+                i.fa-flag {
+                    transform: rotate(-30deg);
+                }
+            }
+            i:last-child {
+                font-size: 18px;
+                display: block;
+                float: right;
+            }
+        }
+        .alert-primary {
+            background-color: #c4e6f2;
+            i.fa-flag { color: #3aabd5;}
+        }
+        .alert-success {
+            background-color: #e4f3e6;
+            i.fa-flag { color: #79c485;}
+        }
+        .alert-info {
+            background-color: #e4f3e6;
+            i.fa-flag { color: #2a2d33;}
+        }
+        .alert-warning {
+            background-color: #feecd5;
+            i.fa-flag { color: #fdb04a;}
+        }
+        .alert-danger {
+            background-color: #f6cece;
+            i.fa-flag { color: #e25c5c;}
+        }
+
         .week-container {
             margin-bottom: 40px;
             & > table {
                 border-bottom: 1px solid #f1f1f1;
                 th {
                     background: #f9f9f9;
+                    padding: 7px 10px;
                 }
                 td {
                     padding: 5px !important;
-                    .alert {
-                        color: #4a4a4a;
-                        margin: 0;
-                        i:first-child {
-                            border: 1px solid white;
-                            display: inline-block;
-                            width: 22px;
-                            height: 22px;
-                            line-height: 22px;
-                            text-align: center;
-                            background: white;
-                            border-radius: 2px;
-                        }
-                        i:last-child {
-                            font-size: 18px;
-                        }
-                    }
-                    .alert-primary {background-color: #c4e6f2;}
-                    .alert-success {background-color: #e4f3e6;}
-                    .alert-info {background-color: #e4f3e6;}
-                    .alert-warning {background-color: #feecd5;}
-                    .alert-danger {background-color: #f6cece;}
                 }
                 .day-header {
                     padding: 7px 30px;
