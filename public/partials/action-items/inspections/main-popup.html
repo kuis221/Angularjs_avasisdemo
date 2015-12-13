@@ -153,7 +153,7 @@
                                         <img ng-src="assets/img/{{getFlagIcon(item.status)}}" />
                                     </td>
                                     <td class="col-item">
-                                        <a href="#" class="text-primary">{{ item.title }}</a>
+                                        <a class="text-primary" ng-click="showInspectionDetail();">{{ item.title }}</a>
                                         <br>
                                         <small>{{ item.titleStatus }}</small>
                                     </td>
@@ -219,12 +219,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="item in outstandingItems">
+                                <tr ng-repeat="item in completedItems">
                                     <td class="col-flag">
                                         <img ng-src="assets/img/{{getFlagIcon(item.status)}}" />
                                     </td>
                                     <td class="col-item">
-                                        <a href="#" class="text-primary">{{ item.title }}</a>
+                                        <a class="text-primary" ng-click="showInspectionDetail();">{{ item.title }}</a>
                                         <br>
                                         <small>{{ item.titleStatus }}</small>
                                     </td>

@@ -54,6 +54,51 @@ app.controller('InspectionsMainPopupCtrl',
             }
         ];
 
+        $scope.completedItems = [
+            {
+                status: 'red',
+                title: 'Lorem Dapibus Vestibulum',
+                titleStatus: 'Plumbing',
+                dueDate: 'May 23, 2015',
+                responsible: {
+                    name: 'Bob Jones',
+                    phone: '415-123-3456'
+                },
+                scope: 'Pellentesque',
+                location: 'kitchen',
+                approveName: 'Gaody Bishop',
+                approveDate: 'Aug 23, 2015'
+            },
+            {
+                status: 'orange',
+                title: 'Lorem Dapibus Vestibulum',
+                titleStatus: 'Plumbing',
+                dueDate: 'May 23, 2015',
+                responsible: {
+                    name: 'Bob Jones',
+                    phone: '415-123-3456'
+                },
+                scope: 'Pellentesque',
+                location: 'kitchen',
+                approveName: 'Gaody Bishop',
+                approveDate: 'Aug 23, 2015'
+            },
+            {
+                status: 'green',
+                title: 'Lorem Dapibus Vestibulum',
+                titleStatus: 'Plumbing',
+                dueDate: 'May 23, 2015',
+                responsible: {
+                    name: 'Bob Jones',
+                    phone: '415-123-3456'
+                },
+                scope: 'Pellentesque',
+                location: 'kitchen',
+                approveName: 'Gaody Bishop',
+                approveDate: 'Aug 23, 2015'
+            }
+        ];
+
         $scope.getFlagIcon = function(status) {
             var icon_name = '';
             switch (status) {
@@ -72,6 +117,19 @@ app.controller('InspectionsMainPopupCtrl',
             }
 
             return icon_name;
+        }
+
+        $scope.showInspectionDetail = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/action-items/inspections/detail-modal.html',
+                controller: 'InspectionDetailCtrl',
+                windowClass: 'tm-modal-main'
+            });
+
+            modalInstance.result.then(function (res) {
+            }, function () {
+
+            });
         }
     }]
 );
