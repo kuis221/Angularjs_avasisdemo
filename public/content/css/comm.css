@@ -89,14 +89,17 @@
 .comm-msg-name {
     margin-top: 9px;
 }
+.comm-msg-checked {
+    margin-top: 17px;
+}
 
 .comm-msg-name strong {
-    margin-right: 30px;
     font-family: "AvenirNextLTPro-Bold";
     font-size: 14px;
     color: #3aabd5;
 }
 .comm-msg-name span {
+    margin-left: 30px;
     font-family: "AvenirNextLTPro-Demi";
     font-size: 10px;
     color: #979797;
@@ -104,6 +107,10 @@
 .comm-msg-name p {
     font-family: "AvenirNextLTPro-Medium";
     font-size: 16px;
+}
+.comm-msg-name .msg-abs {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
 }
 .comm-msg-cont {
     font-family: "AvenirNextLTPro-Regular";

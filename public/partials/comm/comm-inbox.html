@@ -52,9 +52,6 @@
                                 
                                 <p>{{ messages.project }}</p>
                             </div>
-                            <div class="pull-right comm-msg-tab">
-                                <span><i class="fa fa-caret-right"></i></span>
-                            </div>
                         </div>
                         <hr>
                         <div class="comm-msg-cont">
@@ -64,32 +61,33 @@
                 </div>
                 <hr>
             </div>
-            <div class="comm-msg-wrapper" ng-repeat="receive in messages.receives">
+            <div class="comm-msg-wrapper" ng-repeat="receive in messages.receives track by $index">
                 <div class="comm-msg">
                     <div class="comm-msg-title">
                         <div class="row no-margin">
                             <div class="pull-left">
                                 <a href="#">
-                                    <img src="assets/img/avasisteam/gebo.jpg" class="img-circle prj-sch-photo" alt="image">
+                                    <img src="assets/img/avasisteam/bruce.jpg" class="img-circle prj-sch-photo" alt="image">
                                 </a>
                             </div>
-                            <div class="pull-left comm-msg-name">
-                                <strong>{{ receive.from }}</strong>
+                            <div class="pull-left comm-msg-name" ng-class="{'comm-msg-checked': showMsg[$index]}">
+                                <strong>{{ receive.from }}</strong> to
+                                <strong>{{ receive.to }}</strong>
                                 <span>{{ receive.time_full }}</span>
-                                
-                                <p>Schedule for Roof Dry-In Completion</p>
+                                <p class="msg-abs" ng-hide="showMsg[$index]">{{ receive.msg | limitTo:50 }}...</p>
                             </div>
-                            <div class="pull-right comm-msg-tab">
-                                <span><i class="fa fa-caret-right"></i></span>
+                            <div class="pull-right comm-msg-tab" ng-click="toggleMsg($index)">
+                                <span ng-hide="showMsg[$index]"><i class="fa fa-caret-right"></i></span>
+                                <span ng-show="showMsg[$index]"><i class="fa fa-caret-down"></i></span>
                             </div>
                         </div>
                         <hr>
-                        <div class="comm-msg-cont">
+                        <div class="comm-msg-cont" ng-show="showMsg[$index]">
                             <p>{{ receive.msg }}</p>
+                            <hr>
                         </div>
                     </div>
                 </div>
-                <hr>
             </div>
         </div>
 
