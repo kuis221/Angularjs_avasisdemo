@@ -1,0 +1,351 @@
+$demi: "AvenirNextLTPro-Demi";
+$bold: "AvenirNextLTPro-Bold";
+$medium: "AvenirNextLTPro-Medium";
+$regular: "AvenirNextLTPro-Regular";
+
+$c-primary: #3aabd5;
+$c-gray-border: #eee;
+$c-fa-icon: #aaa;
+$c-text-gray: #808080;
+
+.aii-page-wrapper {
+    padding-top: 0px;
+
+    .bankbg {
+        background: #fff none repeat scroll 0 0;
+        box-shadow: 1px 0 4px #d8d8d8;
+    }
+
+    .close-section {
+        background: #1b1e23;
+        width: 100px;
+        text-align: center;
+        display: table;
+    }
+
+    @media (min-width: 990px) {
+        .close-section {
+            height: 220px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 989px) {
+        .close-section {
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .close-section {
+            height: 370px;
+        }
+    }
+
+    .closeBox {
+        background: #1b1e23;
+        width: 100px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .mr15 {
+        margin-right: 15px;
+    }
+
+    .pr0 {
+        padding-right: 0px;
+    }
+}
+
+.aii-page-title {
+    margin-top: 60px;
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+}
+
+.aii-heading-subtitle {
+    font-size: 14px;
+    font-family: $demi;
+    color: #3aabd5;
+}
+
+.aii-head-info {
+    font-size: 11px;
+    font-family: $bold;
+
+    td {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .item-title {
+        padding-right: 20px;
+        text-align: right;
+    }
+
+    .item-value {
+        font-size: 12px;
+        font-family: $medium;
+    }
+}
+
+.aii-page-wrapper {
+
+    .label-black {
+        background: #000;
+        color: #fff;
+        font-family: "AvenirNextLTPro-Demi";
+        font-size: 10px;
+    }
+
+    .mt20 {
+        margin-top: 20px;
+    }
+
+    .content-section {
+        background-color: #fff;
+        border: 1px solid #d7d7d7;
+        border-radius: 4px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .border-right {
+        border-right: 1px solid #ddd;
+    }
+
+    .section-title {
+        margin-top: 10px;
+        color: #4a4a4a;
+        font-family: $medium;
+        font-size: 17px;
+    }
+}
+
+.aii-inspection-info {
+
+    .item-title {
+        font-family: $regular;
+        text-align: left;
+
+        .fa {
+            margin-left: 10px;
+            color: $c-fa-icon;
+        }
+    }
+
+    .item-value {
+        font-family: $medium;
+    }
+
+    .breadcrumbv22x {
+        display: inline;
+
+        > li {
+            border-right: 1px solid #ccc;
+            display: inline-block;
+            padding: 0 8px 0 8px;
+            font-size: 10px;
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+table.aii-item-table {
+    thead th {
+        font-family: $demi;
+        font-size: 15px;
+        color: $c-text-gray;
+        border: none !important;
+    }
+
+    tbody td {
+        border-right: none !important;
+        border-left: none !important;
+        vertical-align: middle;
+    }
+
+    th.col-flag,
+    td.col-flag {
+        width: 30px;
+        text-align: center;
+    }
+
+    .col-item small {
+        color: $c-text-gray;
+    }
+
+    .col-date {
+        font-family: $regular;
+        font-size: 12px;
+    }
+
+    .col-responsible {
+        font-size: 12px;
+
+        .breadcrumbv22x {
+            font-size: 10px;
+            margin-bottom: 0px;
+
+            > li {
+                padding: 0 8px 0 8px;
+            }
+
+            > li:first-child {
+                padding-left: 0px;
+            }
+        }
+    }
+
+    .col-text {
+        font-family: $regular;
+        font-size: 12px;
+    }
+
+    .col-status {
+        .approve-status {
+            font-family: $bold;
+            font-size: 9px;
+        }
+
+        .approve-name {
+            font-family: $demi;
+            font-size: 10px;
+        }
+
+        .approve-date {
+            font-family: $demi;
+            font-size: 10px;
+            color: $c-text-gray;
+        }
+    }
+
+    .col-setting .fa {
+        font-size: 14px;
+        color: #aaa;
+    }
+}
+
+.aii-dropdown-menu {
+    width: 100px;
+    min-width: 80px;
+    margin-top: 16px;
+    padding: 0;
+    border: 1px solid rgba(221,221,221,0.1);
+    box-shadow: 0px 0px 25px 0 #ccc;
+
+    &::before {
+        font-family: FontAwesome;
+        font-size: 20px;
+        color: #fff;
+        content: "\f0de";
+        position: absolute;
+        right: 20px;
+        top: -11px;
+    }
+}
+
+.modal-dialog button.close {
+    outline: none;
+}
+
+.aii-detail-summary-item {
+    margin-bottom: 10px;
+
+    .item-value {
+        text-align: left;
+    }
+}
+
+.aii-uat-head {
+    background-color: #F5F5F6;
+    border: 1px solid $c-gray-border;
+    border-bottom: 1px solid #DDDDDD;
+
+    .aii-uat-th {
+        text-align: left;
+        padding: 15px 20px;
+        font-family: $demi;
+        font-size: 12px;
+        color: $c-text-gray;
+    }
+}
+
+.aii-uat-body {
+    border: 1px solid $c-gray-border;
+    border-top: none;
+
+    .aii-uat-td {
+        text-align: left;
+        padding: 15px 20px;
+        color: $c-primary;
+    }
+}
+
+.aii-photo-section {
+    border: 1px solid $c-gray-border;
+    border-radius: 3px;
+    padding: 10px 5px 0px 5px;
+
+    .pl5 {
+        padding-left: 5px !important;
+    }
+
+    .pr5 {
+        padding-right: 5px !important;
+    }
+
+    .aii-photo-thumb {
+        height: 130px;
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        width: 100%;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.aii-comment {
+    position: relative;
+    border-bottom: 1px solid $c-gray-border;
+    padding: 15px 0px;
+
+    .aii-comment-photo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .aii-comment-name {
+        color: $c-primary;
+        font-family: $bold;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .aii-comment-content {
+        font-family: $regular;
+        font-size: 14px;
+    }
+
+    .aii-comment-date {
+        font-family: $demi;
+        font-size: 10px;
+        color: $c-text-gray;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+}
+
+.aii-mr15 {
+    margin-right: 15px;
+}

@@ -162,6 +162,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('action-items.inspections-popup', {
+            url: '/inspections-popup',
+            templateUrl: "partials/action-items/inspections/main-popup.html",
+            controller: "InspectionsMainPopupCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('projects', {
             url: '/projects',
             abstract: true,
