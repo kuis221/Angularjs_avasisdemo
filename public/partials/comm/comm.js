@@ -29,14 +29,6 @@ app.controller('CommCtrl',
                         img_url: "assets/img/avasisteam/bruce.jpg",
                         time_full: "7:32am - Aug 15, 2015",
                         msg: "Dave, I am checking in with you to make sure that everything is going well on the Roof Dry-In process and that you are still on schedule to complete the task on the required day? Hope you are well, look forward to hearing back from you ASAP."
-                    },
-                    {
-                        id: 13,
-                        from: "Bruce Wayne",
-                        to: "Dave Gebo",
-                        img_url: "assets/img/avasisteam/bruce.jpg",
-                        time_full: "7:32am - Aug 15, 2015",
-                        msg: "Dave, I am checking in with you to make sure that everything is going well on the Roof Dry-In process and that you are still on schedule to complete the task on the required day? Hope you are well, look forward to hearing back from you ASAP."
                     }
                 ]
             },
@@ -85,7 +77,7 @@ app.controller('CommCtrl',
             {
                 id: 5,
                 receiver: "Mary Beroset",
-                img_url: "assets/img/avasisteam/marry.jpg",
+                img_url: "assets/img/avasisteam/mary.jpg",
                 is_important: true,
                 is_opened: false,
                 time: "12:27pm",

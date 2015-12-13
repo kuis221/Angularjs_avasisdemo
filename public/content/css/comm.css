@@ -29,6 +29,7 @@
     padding: 15px 15px;
     border-radius: 3px;
     cursor: pointer;
+    position: relative;
 }
 .comm-card:hover {
     background-color: #fafafa;
@@ -52,8 +53,8 @@
     background-color: #cccccc;
     color: white;
     position: absolute;
-    right: 25px;
-    bottom: 30px;
+    right: 10px;
+    bottom: 10px;
 }
 
 .comm-card-title {
@@ -115,6 +116,15 @@
 .comm-msg-cont {
     font-family: "AvenirNextLTPro-Regular";
     font-size: 14px;
+}
+
+.comm-msg-title {
+    cursor: pointer;
+}
+
+.comm-msg-title .row:hover{
+    background-color: #fafafa;
+    border-radius: 3px;
 }
 
 .comm-msg-tab {
