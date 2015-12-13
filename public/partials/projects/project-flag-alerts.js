@@ -3,7 +3,7 @@
 */
 
 app.controller('ProjectFlagAlertsCtrl', 
-	['$scope', '$state', '$uibModal', '$stateParams', function($scope, $state, $uibModal, $stateParams){
+	['$scope', '$state', '$uibModal', '$timeout', '$stateParams', function($scope, $state, $uibModal, $timeout, $stateParams){
 
 		//Flag Alerts
 		$scope.pieOptions = {
@@ -32,18 +32,25 @@ app.controller('ProjectFlagAlertsCtrl',
 			assignedMe: {
                 green: {
                     total: 61,
-                    done: 40
+                    done: 0
                 },
                 orange: {
                     total: 49,
-                    done: 21,
+                    done: 0,
                 },
                 red: {
                     total: 33,
-                    done: 28
+                    done: 0
                 }
             },
-		}
+		};
+
+        $timeout(function(){
+            $scope.flagAlerts.assignedMe.green.done = 40;
+            $scope.flagAlerts.assignedMe.orange.done = 21;
+            $scope.flagAlerts.assignedMe.red.done = 28;
+        }, 500);
+
         $scope.highPriority = [
             {
                 month: 'Aug',
