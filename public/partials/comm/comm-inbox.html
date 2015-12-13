@@ -31,7 +31,7 @@
                             {{ comm.replies_abs }}
                         </span>
                     </div>
-                    <span class="label comm-card-num">{{ comm.num }}</span>
+                    <span ng-if="comm.num > 0" class="label comm-card-num">{{ comm.num }}</span>
                 </div>
                 <hr>
             </div>
@@ -54,16 +54,16 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="comm-msg-cont">
-                            <p>{{ messages.replies }}</p>
-                        </div>
+                    </div>
+                    <div class="comm-msg-cont">
+                        <p>{{ messages.replies }}</p>
                     </div>
                 </div>
                 <hr>
             </div>
             <div class="comm-msg-wrapper" ng-repeat="receive in messages.receives track by $index">
                 <div class="comm-msg">
-                    <div class="comm-msg-title">
+                    <div class="comm-msg-title" ng-click="toggleMsg($index)">
                         <div class="row no-margin">
                             <div class="pull-left">
                                 <a href="#">
@@ -76,16 +76,16 @@
                                 <span>{{ receive.time_full }}</span>
                                 <p class="msg-abs" ng-hide="showMsg[$index]">{{ receive.msg | limitTo:50 }}...</p>
                             </div>
-                            <div class="pull-right comm-msg-tab" ng-click="toggleMsg($index)">
+                            <div class="pull-right comm-msg-tab">
                                 <span ng-hide="showMsg[$index]"><i class="fa fa-caret-right"></i></span>
                                 <span ng-show="showMsg[$index]"><i class="fa fa-caret-down"></i></span>
                             </div>
                         </div>
                         <hr>
-                        <div class="comm-msg-cont" ng-show="showMsg[$index]">
-                            <p>{{ receive.msg }}</p>
-                            <hr>
-                        </div>
+                    </div>
+                    <div class="comm-msg-cont" ng-show="showMsg[$index]">
+                        <p>{{ receive.msg }}</p>
+                        <hr>
                     </div>
                 </div>
             </div>
