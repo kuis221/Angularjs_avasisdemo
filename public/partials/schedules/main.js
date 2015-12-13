@@ -26,62 +26,45 @@ app.controller('SchedulesCtrl',
         $scope.weekTitles = [];
         $scope.daysInRange = [];
         $scope.offset = 0;
+        $scope.schedulesInWeek = []; // schedules in date of range
         $scope.schedules = [{
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(3, 'd'),
-            end_date: moment().startOf('day').add(6, 'd'),
-            days_of_period: 3,
+            description: "Test schedule 12/4/2015 - 12/13/2015",
+            start_date: moment('2015-12-4'),
+            end_date: moment('2015-12-13'),
             schedule_type: "primary",
             completion_percentage: 80
         },
         {
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(10, 'd'),
-            end_date: moment().startOf('day').add(16, 'd'),
-            days_of_period: 6,
+            description: "Test schedule 11/29/2015 - 12/13/2015",
+            start_date: moment('2015-11-29'),
+            end_date: moment('2015-12-13'),
             schedule_type: "danger",
-            completion_percentage: 20
-        },
-        {
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(-10, 'd'),
-            end_date: moment().startOf('day').add(-3, 'd'),
-            days_of_period: 8,
-            schedule_type: "primary",
             completion_percentage: 80
         },
         {
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(3, 'd'),
-            end_date: moment().startOf('day').add(4, 'd'),
-            days_of_period: 2,
+            description: "Test schedule 12/7/2015 - 12/14/2015",
+            start_date: moment('2015-12-7'),
+            end_date: moment('2015-12-14'),
             schedule_type: "info",
             completion_percentage: 80
         },
         {
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(1, 'd'),
-            end_date: moment().startOf('day').add(3, 'd'),
-            schedule_type: "warning",
-            days_of_period: 3,
+            description: "Test schedule 11/8/2015 - 11/14/2015",
+            start_date: moment('2015-11-8'),
+            end_date: moment('2015-11-14'),
+            schedule_type: "success",
             completion_percentage: 80
         },
         {
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(16, 'd'),
-            end_date: moment().startOf('day').add(19, 'd'),
-            days_of_period: 4,
-            schedule_type: "primary",
-            completion_percentage: 80
-        },
-        {
-            description: 'Title 1',
-            start_date: moment().startOf('day').add(8, 'd'),
-            end_date: moment().startOf('day').add(10, 'd'),
-            days_of_period: 3,
+            description: "Christmas holiday 12/24/2015 - 12/30/2015",
+            start_date: moment('2015-12-24'),
+            end_date: moment('2015-12-30'),
             schedule_type: "success",
             completion_percentage: 80
         }];
+        _.each($scope.schedules, function(e) {
+            e.days_of_period = e.end_date.diff(e.start_date, 'd') + 1;
+        })
 
         function getWeekTitle(offset) {
             offset = $scope.offset + offset;
@@ -110,14 +93,30 @@ app.controller('SchedulesCtrl',
                 
                 $scope.daysInRange = [];
                 var startDate;
-                for (var i = 0; i < 20; i ++) {
+                for (var i = 0; i < 21; i ++) {
                     startDate = angular.copy($scope.startDate);
                     $scope.daysInRange.push(startDate.add(i, 'd').format('ddd, MMM DD'));
                 }
-                var schedulesInRange = _.filter($scope.schedules, function(e) {
-                    return e.start_date.isBetween($scope.startDate, $scope.endDate) || e.end_date.isBetween($scope.startDate, $scope.endDate);
+
+                // filter schdules which are in date of range
+                // repeat 3 times to filter schedules for 3 week
+                _.times(3, function(i) {
+                    var filteredInWeek = _.filter($scope.schedules, function(e) {
+                        var startDate = moment($scope.startDate).add(i, 'w');
+                        var endDate = moment(startDate).add(6, 'd');
+                        return (startDate <= e.end_date) && (endDate >= e.start_date);
+                    });
+                    $scope.schedulesInWeek[i] = (angular.copy(filteredInWeek));
+
+                    _.each($scope.schedulesInWeek[i], function(e) {
+                        var startDate = moment($scope.startDate).add(i, 'w');
+                        var relativePos = e.start_date.diff(startDate, 'd');
+                        e.relativePos = Math.max(relativePos, 0);
+
+                        // calculate relative length
+                        e.relativeLength = Math.min(e.days_of_period + relativePos, 7) - e.relativePos;
+                    });
                 });
-                
             }
         }
 
