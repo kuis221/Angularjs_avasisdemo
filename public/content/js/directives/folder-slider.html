@@ -1,0 +1,41 @@
+<!-- folders -->
+<div class="folders" ng-if="folders.length == 0">
+    <img src="assets/img/addphotos.png" class="arrow">
+
+    <h3>Folders <a href="">Add Folder</a></h3>
+
+    <div class="col-md-12 text-center">
+        <p class="mt30">There is no folder created yet.</p>
+        <span>Click to “Add Folder” to create folder, and keep your photos organized</span>
+        <br/>
+    </div>
+</div><!-- /folders -->
+
+<!-- folders -->
+<div class="folders" ng-if="folders.length > 0">
+
+    <h3>Folders <a href="" ng-click="addFolder()">Add Folder</a></h3>
+
+    <button class="backward"><i class="fa fa-chevron-left"></i></button>
+    <button class="forward"><i class="fa fa-chevron-right"></i></button>
+
+    <div class="frame" id="basic">
+        <ul class="clearfix">
+            <li ng-repeat="folder in folders">
+                <img src="assets/img/photos/Photos1.jpg" alt=""/>
+                <div class="mask">
+                    <div class="folder-name">{{folder.name}}</div>
+                    <div class="folder-date">{{folder.date}}</div>
+                    <div class="folder-number-photos">{{folder.number_of_photos > 0 ? folder.number_of_photos : 'No'}}{{folder.number_of_photos > 1 ? ' Photos' : ' Photo'}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="scrollbar">
+        <div class="handle">
+            <div class="mousearea"></div>
+        </div>
+    </div>
+
+</div><!-- /folders -->
