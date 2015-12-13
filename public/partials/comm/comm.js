@@ -11,7 +11,7 @@ app.controller('CommCtrl',
                 time_full: "1:17pm - Today",
                 project: "Schedule for Roof Dry-In Completion",
                 replies_abs: "Hi Bob, I appologize for the delayed response, My team an...",
-                replies: "Hi Bob, I appologize for the delayed response. My team and I have been slammed trying to complete the Roof Dry-In proccess by the set deadline. Not to mention before this massive storm is supposed to blow in. As of right now we should have this completed by end of day. Fingers crossed that we dont run into any issues. I will inform you immediately if it does not look like we will be completing the task today. Sorry if this causes any uneasieness, you set a very tight deadline. Ill get back to you regardless, end of day. Talk to you soon, Dave",
+                replies: "Hi Dave, I appologize for the delayed response. My team and I have been slammed trying to complete the Roof Dry-In proccess by the set deadline. Not to mention before this massive storm is supposed to blow in. As of right now we should have this completed by end of day. Fingers crossed that we dont run into any issues. I will inform you immediately if it does not look like we will be completing the task today. Sorry if this causes any uneasieness, you set a very tight deadline. Ill get back to you regardless, end of day. Talk to you soon, Dave",
                 num: 2,
                 receives: [
                     {
@@ -27,7 +27,7 @@ app.controller('CommCtrl',
                         from: "Bruce Wayne",
                         to: "Dave Gebo",
                         img_url: "assets/img/avasisteam/bruce.jpg",
-                        time_full: "7:32am - Aug 15, 2015",
+                        time_full: "10:20am - Aug 14, 2015",
                         msg: "Dave, I am checking in with you to make sure that everything is going well on the Roof Dry-In process and that you are still on schedule to complete the task on the required day? Hope you are well, look forward to hearing back from you ASAP."
                     }
                 ]
@@ -72,7 +72,48 @@ app.controller('CommCtrl',
                 replies_abs: "Another update on the progress of the Roof. Right now we are set...",
                 replies: "Another update on the progress of the Roof. Right now we are set...",
                 num: 6,
-                receives: []
+                receives: [
+                    {
+                        id: 41,
+                        from: "Mary Beroset",
+                        to: "Dave Gebo",
+                        img_url: "assets/img/avasisteam/mary.jpg",
+                        time_full: "7:32am - Aug 15, 2015",
+                        msg: "Dave, I am checking in with you to make sure that everything is going well on the Roof Dry-In process and that you are still on schedule to complete the task on the required day? Hope you are well, look forward to hearing back from you ASAP."
+                    },
+                    {
+                        id: 42,
+                        from: "Jane Smith",
+                        to: "Dave Gebo",
+                        img_url: "assets/img/avasisteam/jane.jpg",
+                        time_full: "3:20am - Aug 15, 2015",
+                        msg: "Hi Dave, I appologize for the delayed response. My team and I have been slammed trying to complete the Roof Dry-In proccess by the set deadline. Not to mention before this massive storm is supposed to blow in. As of right now we should have this completed by end of day. Fingers crossed that we dont run into any issues. I will inform you immediately if it does not look like we will be completing the task today. Sorry if this causes any uneasieness, you set a very tight deadline. Ill get back to you regardless, end of day. Talk to you soon, Dave",
+                    },
+                    {
+                        id: 43,
+                        from: "Dave Musgrove",
+                        to: "Dave Gebo",
+                        img_url: "assets/img/avasisteam/dave.jpg",
+                        time_full: "4:56pm - Aug 14, 2015",
+                        msg: "Dave, I am checking in with you to make sure that everything is going well on the Roof Dry-In process and that you are still on schedule to complete the task on the required day? Hope you are well, look forward to hearing back from you ASAP."
+                    },
+                    {
+                        id: 44,
+                        from: "Dan Bonker",
+                        to: "Dave Gebo",
+                        img_url: "assets/img/avasisteam/dan.jpg",
+                        time_full: "5:24pm - Aug 12, 2015",
+                        msg: "Hi Dave, I appologize for the delayed response. My team and I have been slammed trying to complete the Roof Dry-In proccess by the set deadline. Not to mention before this massive storm is supposed to blow in. As of right now we should have this completed by end of day. Fingers crossed that we dont run into any issues. I will inform you immediately if it does not look like we will be completing the task today. Sorry if this causes any uneasieness, you set a very tight deadline. Ill get back to you regardless, end of day. Talk to you soon, Dave",
+                    },
+                    {
+                        id: 45,
+                        from: "Jane Smith",
+                        to: "Dave Gebo",
+                        img_url: "assets/img/avasisteam/jane.jpg",
+                        time_full: "10:17am - Aug 12, 2015",
+                        msg: "Dave, I am checking in with you to make sure that everything is going well on the Roof Dry-In process and that you are still on schedule to complete the task on the required day? Hope you are well, look forward to hearing back from you ASAP."
+                    },
+                ]
             },
             {
                 id: 5,
