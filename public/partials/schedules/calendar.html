@@ -33,9 +33,9 @@
                                     <div>{{schedule.description}}</div>
                                     <div class="text-muted font-regular">%{{schedule.completion_percentage}} completed</div>
                                 </div>
-                                <a popover-trigger="mouseenter" uib-popover-template="'schedule-popover-template.html'">
+                                <span tabindex="0" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
                                     <i class="fa fa-info-circle"></i>
-                                </a>
+                                </span>
                             </div>
                         </td>
                         <td ng-repeat="i in range(7 - schedule.relativePos - schedule.relativeLength)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i + schedule.relativePos + schedule.relativeLength)]">
@@ -47,8 +47,35 @@
     </div>
 </div>
 <script type="text/ng-template" id="schedule-popover-template.html">
-    <div style="width: 400px">
-        <h4>Coming soon!</h4>
-        <p>This is schedule detail panel</p>
+    <div style="width: 420px;">
+        <ul class="list-inline">
+            <li><a class="text-default">Roofing <i class="fa fa-chevron-right pl10"></i></a></li>
+            <li><a class="text-default">Roofing Prep <i class="fa fa-chevron-right pl10"></i></a></li>
+            <li><a class="text-primary">Roof Dry-In</a></li>
+        </ul>
+
+        <hr>
+        
+        <div>Team Members</div>
+        <div class="text-primary">Dave Gebo</div>
+        <div class="text-muted font-regular medium">Sub Contractor, On Top Roofing</div>
+
+        <hr>
+        <div class="clearfix">
+            <div class="pull-left">
+                <div class="text-muted font-regular">Duration</div>
+                5 <span class="font-regular"> of</span> 9 Days
+            </div>
+            <div class="pl20 pull-left">
+                <div class="text-muted font-regular">Status</div>
+                <span class="text-success">IN PROGRESS</span> %60 Completed
+            </div>
+            <div class="pull-right text-right pt20 text-primary">
+                <a ng-click="showScheduleDetail(schedule.id)">
+                    <i class="fa fa-info-circle" style="font-size: 16px"></i>
+                    See Details
+                </a>
+            </div>
+        </div>
     </div>
 </script>

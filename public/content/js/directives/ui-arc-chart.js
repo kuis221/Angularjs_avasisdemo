@@ -46,7 +46,7 @@ app.directive('uiArcChart', function ($compile, $sce) {
     			var value = item.value;
 
                 rad += pen_width;
-                var font = item.font ? item.font : '14px AvenirNextLTPro-Demi 300';
+                var font = item.font ? item.font : '14px AvenirNextLTPro-Demi';
                 title.attr({
                     font: font,
                     fill: item.color

@@ -4,7 +4,7 @@ app.controller('SchedulesCtrl',
     ['$scope', '$state', '$uibModal', function($scope, $state, $uibModal) {
         $scope.pieOptions = {
             type: 'pie',
-            height: '80px',
+            height: '60px',
             offset: -90,
             sliceColors: ['#3aabd5', '#f1f1f1', '#f6b875'],
             disableTooltips: true
