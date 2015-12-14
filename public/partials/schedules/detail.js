@@ -8,6 +8,15 @@ app.controller('ScheduleDetailCtrl',
                 font: '18px AvenirNextLTPro-Regular'
             },
         ];
+
+        $scope.slider = {
+          min: 21,
+          max: 80,
+          options: {
+            floor: 0,
+            ceil: 100
+          }
+        };
         // define schedules to search by params[:id]
         $scope.schedules = [{
             id: _.uniqueId(),
