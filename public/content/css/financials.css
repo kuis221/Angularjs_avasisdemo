@@ -358,14 +358,33 @@
 }
 
 .loan-info-input.long {
-    width: 200px;
+    width: 19%;
 }
 .loan-info-input.medium {
-    width: 160px;
+    width: 16%;
+}
+.loan-info-input.end {
+    padding-right: 0px;
 }
 .loan-info-input.short {
-    width: 140px;
+    width: 14%;
 }
+
+@media (max-width: 768px) {
+    .loan-info-input {
+        padding-right: 0px;
+    }
+    .loan-info-input.long {
+        width: 100%;
+    }
+    .loan-info-input.medium {
+        width: 100%;
+    }
+    .loan-info-input.short {
+        width: 100%;
+    }
+}
+
 .loan-wrapper .normal-row {
     padding-top: 10px;
     padding-bottom: 5px;
