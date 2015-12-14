@@ -30,15 +30,5 @@ app.controller('FinancialsCtrl',
         }
 
         $scope.stats = {};
-        // Stats
-        $timeout(function(){
-            $scope.stats = {
-                estimated: 52,
-                contractual: 30,
-                direct: 12,
-                pending: 0,
-                unbudgeted: 0
-            };
-        }, 500);
 
     }]);
