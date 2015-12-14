@@ -20,108 +20,201 @@
         <p>Loan Information</p>
         <div class="loan-info loan-wrapper">
             <div class="row no-margin border-bottom">
-                <div class="pull-left loan-info-input">
-                   <span>Hello</span>
+                <div class="pull-left loan-info-input long">
+                   <p>Loan Account Number</p>
                    <input type="text" class="form-control">
                 </div>
-                <div class="pull-left loan-info-input">
-                   <span>Hello</span>
-                   <input type="text" class="form-control">
+                <div class="pull-left loan-info-input long">
+                   <p>Construction Loan Amount</p>
+                   <input type="text" class="form-control" placeholder="$">
                 </div>
-                <div class="pull-left loan-info-input">
-                   <span>Hello</span>
-                   <input type="text" class="form-control">
+                <div class="pull-left loan-info-input medium">
+                   <p>Loan Amount</p>
+                   <input type="text" class="form-control text-right" placeholder="Months">
                 </div>
-                <div class="pull-left loan-info-input">
-                   <span>Hello</span>
-                   <input type="text" class="form-control">
+                <div class="pull-left loan-info-input short">
+                   <p>Interest Rate</p>
+                   <input type="text" class="form-control text-right" placeholder="%">
                 </div>
-                <div class="pull-left loan-info-input">
-                   <span>Hello</span>
-                   <input type="text" class="form-control">
+                <div class="pull-left loan-info-input medium">
+                   <p>Original Date</p>
+                   <input type="text" class="form-control" placeholder="Aug 23, 2015">
                 </div>
-                <div class="pull-left loan-info-input">
-                   <span>Hello</span>
-                   <input type="text" class="form-control">
+                <div class="pull-left loan-info-input medium">
+                   <p>Closing Date</p>
+                   <input type="text" class="form-control" placeholder="Dec 6, 2015">
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <p class="pull-left">Interest Reserve</p>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin mt20">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Do you want to upload the Budget?</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-margin mt20">
+                <div class="loan-info-upload">
+                    <div><span></span> Drag and drop files here or <strong>click here to browse for files</strong></div>
+                </div>
             </div>
         </div>
     </div>
     <div class="row no-margin mt20">
         <p>Draw Approval Requirements</p>
         <div class="loan-info loan-wrapper">
-            <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+            <div class="row no-margin border-bottom special-row">
+                <div class="pull-left">Lien Reease</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Photos</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Proof of Supplier Payment</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Subcontractor Credit Check</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Subcontractor Minimum Credit Requirement</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Subcontractor Background Check</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Subcontractor Judgement Check</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Subcontractor Verification of Current License</div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="row no-margin mt20">
-                <div class="pull-left">Interest Reserve</div>
-                <div class="pull-right">button</div>
+                <div class="pull-left">Subcontractor Verification of Current Insurance  </div>
+                <div class="pull-right">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="row no-margin mt20 border-bottom">
-        <div class="pull-left loan-info-input">
-           <span>Hello</span>
+        <div class="pull-left loan-info-input long">
+           <span>Owner Name*</span>
            <input type="text" class="form-control">
         </div>
-        <div class="pull-left loan-info-input">
-           <span>Hello</span>
+        <div class="pull-left loan-info-input long">
+           <span>Owner Email*</span>
            <input type="text" class="form-control">
         </div>
-        <div class="pull-left loan-info-input">
-           <span>Hello</span>
+        <div class="pull-left loan-info-input long">
+           <span>General Contractor Name</span>
            <input type="text" class="form-control">
         </div>
-        <div class="pull-left loan-info-input">
-           <span>Hello</span>
+        <div class="pull-left loan-info-input long">
+           <span>General Contractor Email</span>
            <input type="text" class="form-control">
         </div>
     </div>
     <div class="row mt20 no-margin">
         <div class="pull-left">*Required</div>
         <div class="btns">
-            <a href="#" class="btn btn-success btn-lg btn-bids" data-toggle="dropdown">
-                Got It!
+            <a href="#" class="btn btn-primary btn-lg btn-bids" data-toggle="dropdown">
+                Save Project
             </a>
             <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                <li><a href="">Bid Package</a></li>
+                
             </ul>
         </div>
     </div>
