@@ -1,0 +1,149 @@
+<div class="wrapper wrapper-content animated fadeInRight project-start">
+    <h2>Welcome Bruce, Lets Get Started!</h2>
+    <div class="card-wrapper whiteBox">
+        <h3>Basic Details</h3>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Name of your Project</span>
+                    <input type="text" class="form-control"></input>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Type of Project</span>
+                    <ui-select selected-item="typeOfProject[1]" options="typeOfProject"></ui-select>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Which Best Describes Your Project?</span>
+                    <ui-select selected-item="bestDescriptions[0]" options="bestDescriptions"></ui-select>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Select a Country</span>
+                    <ui-select selected-item="countries[0]" options="countries"></ui-select>
+                </div>
+            </div>
+        </div>
+
+
+        <h3>Address of Your Property</h3>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="item">
+                    <span>Street Address</span>
+                    <input type="text" class="form-control"></input>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>City</span>
+                    <input type="text" class="form-control"></input>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>State</span>
+                    <ui-select selected-item="states[2]" options="states"></ui-select>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <div class="item">
+                    <span>Zipcode</span>
+                    <input type="text" class="form-control"></input>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="card-wrapper whiteBox">
+        <h3>Project Specifications</h3>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Your Role</span>
+                    <ui-select selected-item="roles[0]" options="roles"></ui-select>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <div class="item">
+                    <span>Project Sqft</span>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <div class="item">
+                    <span>Your Role</span>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Project Start Date (Excavation)</span>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-2">
+                <div class="item">
+                    <span>Price Goal per Sqft</span>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input class="form-control" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt0"/>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="item">
+                    <span>Have Architectural Plans?</span>
+                    <ui-rec-switch ng-model="haveArchPlans" />
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-5">
+                <div class="item" ng-show="haveArchPlans">
+                    <div class="ps-file-dropzone">
+                        <form class="mt30 dropzone"
+                              enctype="multipart/form-data"
+                              ng-dropzone dropzone="dropzone"
+                              dropzone-config="dropzoneConfig"
+                              event-handlers="dropzoneEventHandlers">
+                            <input name="file" class="hidden" type="file" multiple />
+                        </form>
+                        <div class="text-center dropzone-title">
+                            <div>Drag and drop Plans, <a class="mt20 btn-file-input">or click here to browse for files</a></div>
+                            <small class="text-muted">Max. 50MB</small>
+                        </div>
+                        <div id="upload-files-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-right">
+        <a class="btn btn-cancel btn-lg">Cancel</a>
+        <a class="btn btn-success btn-lg" ui-sref="projects.main">Create Project</a>
+    </div>
+</div>
+<script>
+</script>

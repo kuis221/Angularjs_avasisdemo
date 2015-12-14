@@ -57,6 +57,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/financials/bankdraw.html",
             controller: "FinancialsBankdrawCtrl"
         })
+        .state('financials.loan', {
+            url: '/construction',
+            templateUrl: "partials/financials/loan.html",
+            controller: "LoanCtrl"
+        })
         .state('bankdraw', {
             url: '/financials/bankdraw',
             abstract: true,
@@ -188,6 +193,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             data: {
                 isHeaderHidden: true
             }
+        })
+        .state('projects.start', {
+            url: '/start',
+            templateUrl: 'partials/projects/project-start.html',
+            controller: 'ProjectStartCtrl'
         })
         .state('documents', {
             url: '/documents',

@@ -32,7 +32,7 @@
             <li><a ui-sref="financials.main">Purchase Orders</a></li>
             <li><a ui-sref="financials.main">Payment Applications</a></li>
             <li ng-class="{true: 'active'}[isActive('financials.bankdraw')]"><a ui-sref="financials.bankdraw">Bank Draws</a></li>
-            <li><a ui-sref="financials.main">Construction Loan</a></li>
+            <li ng-class="{true: 'active'}[isActive('financials.loan')]"><a ui-sref="financials.loan">Construction Loan</a></li>
         </ul>
 
         <ui-view></ui-view>
