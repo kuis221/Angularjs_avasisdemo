@@ -87,8 +87,11 @@
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Subcontractor Credit Check</p>
+                <div class="pull-right loan-check-input" ng-show="checkCredit">
+                    <input type="text" class="form-control" placeholder="550">
+                </div>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="checkCredit" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">

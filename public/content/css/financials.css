@@ -396,3 +396,15 @@
     width: 35px;
     margin-right: 8px;
 }
+
+.loan-check-input input {
+    padding: 5px;
+    width: 65px;
+    height: 33px;
+    background-color: #f9f9f9;
+    margin-left: 20px;
+    border-radius: 3px;
+}
+.loan-check-input input:focus {
+    border-color: #a0a0a0;
+}
