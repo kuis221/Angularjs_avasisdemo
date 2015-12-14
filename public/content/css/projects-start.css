@@ -1,0 +1,52 @@
+.project-start {
+  color: #4a4a4a;
+  /* Dropzoen CSS */ }
+  .project-start > h2 {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-bottom: 25px; }
+  .project-start .card-wrapper h3 {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .project-start .card-wrapper .item {
+    margin-bottom: 20px;
+    padding-top: 10px; }
+    .project-start .card-wrapper .item > span {
+      display: block;
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 13px;
+      margin-bottom: 13px; }
+    .project-start .card-wrapper .item .input-group .input-group-addon {
+      background-color: #f9f9f9; }
+      .project-start .card-wrapper .item .input-group .input-group-addon + .form-control {
+        border-left: 0; }
+  .project-start .card-wrapper .form-control {
+    height: 51px;
+    padding: 15px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9; }
+    .project-start .card-wrapper .form-control:focus, .project-start .card-wrapper .form-control.focus {
+      background-color: #fff; }
+  .project-start .ps-file-dropzone {
+    border: 1px dashed #3aabd5; }
+    .project-start .ps-file-dropzone .dropzone {
+      min-height: 80px;
+      margin-top: 0px !important;
+      padding: 0px; }
+      .project-start .ps-file-dropzone .dropzone .dz-default.dz-message {
+        background-image: url("/assets/img/financials/dropzone.png");
+        background-position: left;
+        background-size: 45px;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 15%;
+        height: 70px; }
+    .project-start .ps-file-dropzone .dropzone-title {
+      margin-left: calc(15% + 55px);
+      top: 30%;
+      position: absolute; }

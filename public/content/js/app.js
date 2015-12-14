@@ -189,6 +189,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('projects.start', {
+            url: '/start',
+            templateUrl: 'partials/projects/project-start.html',
+            controller: 'ProjectStartCtrl'
+        })
         .state('documents', {
             url: '/documents',
             abstract: true,
