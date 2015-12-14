@@ -163,6 +163,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('action-items.inspections-popup', {
+            url: '/inspections-popup',
+            templateUrl: "partials/action-items/inspections/main-popup.html",
+            controller: "InspectionsMainPopupCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('projects', {
             url: '/projects',
             abstract: true,
@@ -172,6 +180,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
+        })
+        .state('projects.flag_alerts', {
+            url: '/flag-alerts?bucket&filter',
+            templateUrl: 'partials/projects/project-flag-alerts.html',
+            controller: 'ProjectFlagAlertsCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('documents', {
             url: '/documents',
