@@ -35,4 +35,9 @@ app.controller('LoanCtrl' ,
         $scope.subVerificationIsurance = false;
         $scope.photos = false;
 
+        $scope.savedProject = false;
+        $scope.saveProject = function() {
+            $scope.savedProject = true;
+        };
+
     }]);

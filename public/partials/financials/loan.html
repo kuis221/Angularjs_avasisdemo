@@ -146,12 +146,17 @@
     </div>
     <div class="row mt10 no-margin">
         <div class="pull-left">*Required</div>
-        <div class="btns">
-            <a href="#" class="btn btn-primary btn-lg btn-bids" data-toggle="dropdown">
+        <div class="btns" ng-click="saveProject()" ng-hide="savedProject">
+            <a href="" class="btn btn-primary btn-lg btn-bids" data-toggle="dropdown">
                 Save Project
             </a>
+        </div>
+        <div class="btns" ng-show="savedProject">
+            <a href="" class="btn btn-success btn-lg btn-bids" data-toggle="dropdown">
+                Got It!
+            </a>
             <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-
+                <li></li>
             </ul>
         </div>
     </div>
