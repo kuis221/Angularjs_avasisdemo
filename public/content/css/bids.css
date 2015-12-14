@@ -253,3 +253,11 @@ p {
 .bids-table-btn {
     height: 120px;
 }
+.bids-table-sow {
+    height: 50px;
+    padding-left: 15px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #808080;
+    border: none !important;
+}
