@@ -72,7 +72,7 @@
         <h3>Project Specifications</h3>
         <hr/>
         <div class="row">
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-2">
                 <div class="item">
                     <span>Your Role</span>
                     <ui-select selected-item="roles[0]" options="roles"></ui-select>
@@ -86,10 +86,10 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-2">
+            <div class="col-sm-6 col-md-3">
                 <div class="item">
-                    <span>Your Role</span>
-                    <input type="text" class="form-control" />
+                    <span>Target Construction Days per Sqft</span>
+                    <input type="text" class="form-control" placeholder=".05"/>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@
                     <ui-rec-switch ng-model="haveArchPlans" />
                 </div>
             </div>
-            <div class="col-sm-6 col-md-5">
+            <div class="col-sm-6 col-md-6">
                 <div class="item" ng-show="haveArchPlans">
                     <div class="ps-file-dropzone">
                         <form class="mt30 dropzone"
