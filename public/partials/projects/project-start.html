@@ -72,54 +72,63 @@
         <h3>Project Specifications</h3>
         <hr/>
         <div class="row">
-            <div class="col-sm-6 col-md-3">
-                <div class="item">
-                    <span>Your Role</span>
-                    <ui-select selected-item="roles[0]" options="roles"></ui-select>
-                </div>
-            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <span>Your Role</span>
+                            <ui-select selected-item="roles[0]" options="roles"></ui-select>
+                        </div>
+                    </div>
 
-            <div class="col-sm-6 col-md-2">
-                <div class="item">
-                    <span>Project Sqft</span>
-                    <input type="text" class="form-control" />
-                </div>
-            </div>
+                    <div class="col-lg-3">
+                        <div class="item">
+                            <span>Project Sqft</span>
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
 
-            <div class="col-sm-6 col-md-2">
-                <div class="item">
-                    <span>Your Role</span>
-                    <input type="text" class="form-control" />
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-3">
-                <div class="item">
-                    <span>Project Start Date (Excavation)</span>
-                    <input type="text" class="form-control" />
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-2">
-                <div class="item">
-                    <span>Price Goal per Sqft</span>
-                    <div class="input-group">
-                        <span class="input-group-addon">$</span>
-                        <input class="form-control" type="text" />
+                    <div class="col-lg-5">
+                        <div class="item">
+                            <span>Target Construction Days per Sqft</span>
+                            <input type="text" class="form-control" placeholder=".05"/>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="item">
+                            <span>Project Start Date (Excavation)</span>
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="item">
+                            <span>Price Goal per Sqft</span>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input class="form-control" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <hr class="mt0"/>
         <div class="row">
-            <div class="col-sm-6 col-md-3">
+            <div class="col-md-3">
                 <div class="item">
                     <span>Have Architectural Plans?</span>
                     <ui-rec-switch ng-model="haveArchPlans" />
                 </div>
             </div>
-            <div class="col-sm-6 col-md-5">
+            <div class="col-md-9 col-lg-6">
                 <div class="item" ng-show="haveArchPlans">
                     <div class="ps-file-dropzone">
                         <form class="mt30 dropzone"
@@ -142,7 +151,7 @@
 
     <div class="text-right">
         <a class="btn btn-cancel btn-lg">Cancel</a>
-        <a class="btn btn-success btn-lg" ui-sref="projects.main">Create Project</a>
+        <a class="btn btn-success btn-lg" ui-sref="financials.loan({initialize: true})">Create Project</a>
     </div>
 </div>
 <script>

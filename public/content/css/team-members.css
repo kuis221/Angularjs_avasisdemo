@@ -278,3 +278,13 @@ table.tm-scroll-table tbody {
 .riskmiddle {
     margin: 45px 0 43px 0;
 }
+
+.riskresports .searchround:focus {
+    border-color: #66afe9;
+}
+
+.riskmanagement .ibox-tools .dropdown-menu > li > a {
+    padding: 17px;
+    font-size: 13px;
+    margin-left: 0px;
+}

@@ -40,7 +40,7 @@
                    <p>Original Date</p>
                    <input type="text" class="form-control" placeholder="Aug 23, 2015">
                 </div>
-                <div class="pull-left loan-info-input medium">
+                <div class="pull-left loan-info-input end medium">
                    <p>Closing Date</p>
                    <input type="text" class="form-control" placeholder="Dec 6, 2015">
                 </div>
@@ -70,19 +70,19 @@
             <div class="row no-margin border-bottom special-row">
                 <div class="pull-left">Lien Reease</div>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="drawApproval" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Photos</p>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="photos" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Proof of Supplier Payment</p>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="proofSupplierPayment" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
@@ -97,50 +97,50 @@
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Subcontractor Minimum Credit Requirement</p>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="subMiniCredit" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Subcontractor Background Check</p>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="subBackgrdCheck" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Subcontractor Judgement Check</p>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="subJudgeCheck" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Subcontractor Verification of Current License</p>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="subVerificationLicense" />
                 </div>
             </div>
             <div class="row no-margin mt10">
                 <div class="pull-left mt10">Subcontractor Verification of Current Insurance  </div>
                 <div class="pull-right">
-                    <ui-rec-switch ng-model="" />
+                    <ui-rec-switch ng-model="subVerificationIsurance" />
                 </div>
             </div>
         </div>
     </div>
     <div class="row no-margin mt20 border-bottom">
         <div class="pull-left loan-info-input long">
-           <span>Owner Name*</span>
+           <p>Owner Name*</p>
            <input type="text" class="form-control">
         </div>
         <div class="pull-left loan-info-input long">
-           <span>Owner Email*</span>
+           <p>Owner Email*</p>
            <input type="text" class="form-control">
         </div>
         <div class="pull-left loan-info-input long">
-           <span>General Contractor Name</span>
+           <p>General Contractor Name</p>
            <input type="text" class="form-control">
         </div>
         <div class="pull-left loan-info-input long">
-           <span>General Contractor Email</span>
+           <p>General Contractor Email</p>
            <input type="text" class="form-control">
         </div>
     </div>
@@ -151,7 +151,7 @@
                 Save Project
             </a>
             <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                
+
             </ul>
         </div>
     </div>
