@@ -48,28 +48,16 @@
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Interest Reserve</p>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="haveInterest" />
                 </div>
             </div>
             <div class="row no-margin mt20">
-                <div class="pull-left">Do you want to upload the Budget?</div>
+                <p class="pull-left">Do you want to upload the Budget?</p>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="upload" />
                 </div>
             </div>
-            <div class="row no-margin mt20">
+            <div class="row no-margin mt20" ng-show="upload">
                 <div class="loan-info-upload">
                     <div><span></span> Drag and drop files here or <strong>click here to browse for files</strong></div>
                 </div>
@@ -82,109 +70,55 @@
             <div class="row no-margin border-bottom special-row">
                 <div class="pull-left">Lien Reease</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Photos</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Proof of Supplier Payment</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Subcontractor Credit Check</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Subcontractor Minimum Credit Requirement</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Subcontractor Background Check</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Subcontractor Judgement Check</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin border-bottom normal-row">
                 <div class="pull-left">Subcontractor Verification of Current License</div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
             <div class="row no-margin mt20">
                 <div class="pull-left">Subcontractor Verification of Current Insurance  </div>
                 <div class="pull-right">
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
+                    <ui-rec-switch ng-model="" />
                 </div>
             </div>
         </div>
