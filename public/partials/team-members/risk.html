@@ -6,7 +6,7 @@
                 <p><a ui-sref="team-members.list">Close <i class="fa fa-caret-right"></i></a></p>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-3 page-heading overview">
+        <div class="col-md-11 page-heading overview">
             <div class="riskmiddle">
                 <h2 class="hding">Risk Management</h2>
                 <ul class="topSubtitle">
@@ -20,963 +20,1074 @@
     </div>
 
     <!----==================MIDDLE CONTENT==================---->
-    <div class="row prog-inner1 mt35 animated fadeInRight">
-        <div class="row riskresports">
-            <div class="col-lg-7">
-                <h3 class="riskheading"><img src="assets/img/risk.png">   Contractor Risk Reports</h3>
-            </div>
+    <div class="row no-margin">
+        <div class="col-lg-12">
+            <div class="row prog-inner1 mt35 animated fadeInRight">
+                <div class="row riskresports">
+                    <div class="col-lg-7">
+                        <h3 class="riskheading"><img src="assets/img/risk.png">   Contractor Risk Reports</h3>
+                    </div>
 
-            <div class="col-lg-5">
-                <div class="col-xs-12 col-md-6 col-lg-9 paddingLR ">
-                    <ul class="searchdown  pull-right">
-                        <li>
-                            <input type="text" class="form-control searchround">
-                        </li>
-                    </ul>
+                    <div class="col-lg-5">
+                        <div class="col-xs-12 col-md-6 col-lg-9 paddingLR ">
+                            <ul class="searchdown  pull-right">
+                                <li>
+                                    <input type="text" class="form-control searchround">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-3 mt10 paddingLR ">
+                            <a class="sort pull-right tm-sortby" href="#">
+                                Sort by  <i class="fa fa-angle-down"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-md-6 col-lg-3 mt10 paddingLR ">
-                    <a class="sort pull-right tm-sortby" href="#">
-                        Sort by  <i class="fa fa-angle-down"></i>
-                    </a>
+                <!-- END DEFAULT WIZARD -->
+
+                <div class="row">
+                    <div class="table-responsive risk-table">
+                        <table class="table riskmanagement">
+                            <thead>
+                                <tr>
+                                    <th width="200px">Name</th>
+                                    <th>Project/Role</th>
+                                    <th>Credit<img data-html="true" data-content="<div class='check'>Check Credit Compliance</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title="" title="" src="assets/img/alert.png" /></th>
+                                    <th>Insurance</th>
+                                    <th>Licence</th>
+                                    <th>Judgements</th>
+                                    <th>Background Check</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/dan.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>
+                                                        Dan Bonker <a ui-sref="team-members.risk"><img src="assets/img/alert_small.png"></a>
+                                                    </span>
+                                                    <p class="profile_text">Sage Creek Framing Co.</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 891 5339</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilmington 47</p>
+                                        <span><b>Sub Contractor</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="outcompliance">Out of Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/john.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>
+                                                        John Steel <a ui-sref="team-members.risk"><img src="assets/img/alert_small.png"></a>
+                                                    </span>
+                                                    <p class="profile_text">L&L Steel Erection</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 518 1636</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilmington 47</p>
+                                        <span><b>Sub Contractor</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="outcompliance">Out of Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/mary.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Mary Berost</span>
+                                                    <p class="profile_text">Wasatch Lighting, Inc.</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilmington 47</p>
+                                        <span><b>Designer</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/gebo.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Dave Gebo</span>
+                                                    <p class="profile_text">On Top Roofing</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;835 513 6185</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="multipalepro"><a>Multiple</a></p>
+                                        <span><b>Sub Contractor</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/bruce.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Bruce Wayne</span>
+                                                    <p class="profile_text">Synergy Construction</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;801 580 5683</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="multipalepro"><a>Multiple</a></p>
+                                        <span><b>General Contractor</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/dave.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Dave Musgrove</span>
+                                                    <p class="profile_text">Premier Heating & Air, Inc.</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 569 6688</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilmington 47</p>
+                                        <span><b>Sub Contractor</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/peters.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Christian Peters</span>
+                                                    <p class="profile_text">MyTy Appliance Specialists</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 998 8283</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilmington 47</p>
+                                        <span><b>Design</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>-</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/jeff.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Jeff Price</span>
+                                                    <p class="profile_text">Probuild</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;835 563 6699</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="multipalepro"><a>Multiple</a></p>
+                                        <span><b>Supplier</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/mike.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Mike Riley</span>
+                                                    <p class="profile_text">Canyon River Electric</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;385 285 8616</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilmington 47</p>
+                                        <span><b>Sub Contrator</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="whiteBgColor">
+                                    <td class="td-name">
+                                        <div class="feed-Compliance">
+                                            <a href="#" class="pull-left">
+                                                <img alt="image" class="img-circle photo" src="assets/img/avasisteam/jane.jpg">
+                                            </a>
+                                            <div class="media-Compliance">
+                                                <div class="TableDetails">
+                                                    <span>Jane Smith</span>
+                                                    <p class="profile_text">-</p>
+                                                    <ul class="breadcrumbv22x">
+                                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;801 942 1092</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Wilminton 47</p>
+                                        <span><b>Qwner</b></span>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="feed-Compliance">
+                                            <div class="flag pull-left">
+                                                <img src="assets/img/flag_green.png" class="img-circle" alt="image">
+                                            </div>
+                                            <div class="media-Compliance">
+                                                <small class="pull-right"></small>
+                                                <strong>1 attachment</strong><br>
+                                                <small class="date-muted">Aug 1, 2015</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="sky4">In Compliance</span></td>
+                                    <td>
+                                        <div class="ibox-tools pull-left">
+                                            <div class="gear-dropdown">
+                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                                                    <li><a href="">Override The Alert</a></li>
+                                                    <li><a href="">Add Notes</a></li>
+                                                    <li><a href="">Compliance Test</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                <!----==================MIDDLE CONTENT END================== ---->
             </div>
         </div>
-        <!-- END DEFAULT WIZARD -->
-
-        <div class="row">
-            <div class="table-responsive">
-                <table class="table riskmanagement">
-                    <thead>
-                        <tr>
-                            <th width="200px">Name</th>
-                            <th>Project/Role</th>
-                            <th>Credit<img data-html="true" data-content="<div class='check'>Check Credit Compliance</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title="" title="" src="assets/img/alert.png" /></th>
-                            <th>Insurance</th>
-                            <th>Licence</th>
-                            <th>Judgements</th>
-                            <th>Background Check</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/dan.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>
-                                                Dan Bonker <a ui-sref="team-members.risk"><img src="assets/img/alert_small.png"></a>
-                                            </span>
-                                            <p class="profile_text">Sage Creek Framing Co.</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 891 5339</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilmington 47</p>
-                                <span><b>Sub Contractor</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="outcompliance">Out of Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/john.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>
-                                                John Steel <a ui-sref="team-members.risk"><img src="assets/img/alert_small.png"></a>
-                                            </span>
-                                            <p class="profile_text">L&L Steel Erection</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 518 1636</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilmington 47</p>
-                                <span><b>Sub Contractor</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <a ng-click="showAttachment()"><img src="assets/img/flag_red.png" class="img-circle" alt="image"></a>
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="outcompliance">Out of Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/mary.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Mary Berost</span>
-                                            <p class="profile_text">Wasatch Lighting, Inc.</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;415 123 3456</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilmington 47</p>
-                                <span><b>Designer</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/gebo.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Dave Gebo</span>
-                                            <p class="profile_text">On Top Roofing</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;835 513 6185</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="multipalepro"><a>Multiple</a></p>
-                                <span><b>Sub Contractor</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/bruce.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Bruce Wayne</span>
-                                            <p class="profile_text">Synergy Construction</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;801 580 5683</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="multipalepro"><a>Multiple</a></p>
-                                <span><b>General Contractor</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/dave.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Dave Musgrove</span>
-                                            <p class="profile_text">Premier Heating & Air, Inc.</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 569 6688</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilmington 47</p>
-                                <span><b>Sub Contractor</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/peters.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Christian Peters</span>
-                                            <p class="profile_text">MyTy Appliance Specialists</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861 998 8283</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilmington 47</p>
-                                <span><b>Design</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>-</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/jeff.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Jeff Price</span>
-                                            <p class="profile_text">Probuild</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;835 563 6699</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="multipalepro"><a>Multiple</a></p>
-                                <span><b>Supplier</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/mike.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Mike Riley</span>
-                                            <p class="profile_text">Canyon River Electric</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;385 285 8616</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilmington 47</p>
-                                <span><b>Sub Contrator</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="whiteBgColor">
-                            <td class="td-name">
-                                <div class="feed-Compliance">
-                                    <a href="#" class="pull-left">
-                                        <img alt="image" class="img-circle photo" src="assets/img/avasisteam/jane.jpg">
-                                    </a>
-                                    <div class="media-Compliance">
-                                        <div class="TableDetails">
-                                            <span>Jane Smith</span>
-                                            <p class="profile_text">-</p>
-                                            <ul class="breadcrumbv22x">
-                                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-phone"></i> &nbsp;801 942 1092</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p>Wilminton 47</p>
-                                <span><b>Qwner</b></span>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="feed-Compliance">
-                                    <div class="flag pull-left">
-                                        <img src="assets/img/flag_green.png" class="img-circle" alt="image">
-                                    </div>
-                                    <div class="media-Compliance">
-                                        <small class="pull-right"></small>
-                                        <strong>1 attachment</strong><br>
-                                        <small class="date-muted">Aug 1, 2015</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="sky4">In Compliance</span></td>
-                            <td>
-                                <div class="ibox-tools pull-left">
-                                    <a class="#" data-html="true" data-placement="left" data-content="<div class='popover-content check'>Override The Alert</div><div class='popover-content check'>Add Notes</div><div class='popover-content check'>Compliance Test</div>" data-placement="top" data-toggle="popover" data-container="body" data-original-title=""><i class="fa fa-cog"></i></a>
-                                    <a href="#"><i class="fa fa-angle-down"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!----==================MIDDLE CONTENT END================== ---->
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        // Inspection Table Gear Button
+        // $('body').on('shown.bs.dropdown', '.gear-dropdown', function () {
+        //     debugger;
+        //     var offsetRight = $(this).parentsUntil('.risk-table').last().offset().left +
+        //                       $(this).parentsUntil('.risk-table').last().width() -
+        //                       $(this).find('a.dropdown-toggle').offset().left -
+        //                       $(this).find('a.dropdown-toggle').width();
+        //     var offsetTop = $(this).find('a.dropdown-toggle').offset().top - $(this).parentsUntil('.risk-table').last().offset().top
+        //
+        //     $(this).find('ul.dropdown-menu').css('top', offsetTop + 10);
+        //     $(this).find('ul.dropdown-menu').css('right', offsetRight - 30);
+        // });
+    });
+</script>
