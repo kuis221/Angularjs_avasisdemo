@@ -9,7 +9,8 @@ var app = angular.module('avasis',
         'ngDropzone',
         'ui.tree',
         'jkuri.slimscroll',
-        'ui.utils.masks'
+        'ui.utils.masks',
+        'rzModule'
     ]);
 
 app.controller('AppCtrl', [

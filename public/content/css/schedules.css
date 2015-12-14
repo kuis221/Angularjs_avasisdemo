@@ -145,3 +145,50 @@ table.no-border > th, table.no-border td {
 
 .schedule-detail #schedule-overview table td {
   padding: 5px !important; }
+
+rzslider {
+  margin-top: 24px; }
+  rzslider .rz-current-pointer {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    border-radius: 50%;
+    color: transparent;
+    background: #44474b;
+    box-shadow: 0 0 0px 6px #c7c7c9;
+    left: 50% !important;
+    z-index: 3; }
+    rzslider .rz-current-pointer.rz-pointer.rz-active:after {
+      background: #f1f1f1; }
+    rzslider .rz-current-pointer:after {
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%; }
+  rzslider .rz-pointer {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 6px #fee7c8;
+    background: #fdb04a;
+    /* css styles for first and last pointer(added) */ }
+    rzslider .rz-pointer.rz-pointer.rz-active:after {
+      background: #f1f1f1; }
+    rzslider .rz-pointer:after {
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%; }
+    rzslider .rz-pointer.first, rzslider .rz-pointer.last {
+      color: transparent;
+      background: #61c571;
+      box-shadow: 0 0 0px 6px #ccecd1; }
+  rzslider .rz-bar-wrapper {
+    margin-top: -18px; }
+    rzslider .rz-bar-wrapper .rz-bar {
+      height: 6px; }
+  rzslider .rz-bubble {
+    display: none; }

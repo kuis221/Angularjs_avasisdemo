@@ -175,3 +175,65 @@ table.no-border {
         }
     }
 }
+
+rzslider {
+    margin-top: 24px;
+    .rz-current-pointer {
+        width: 20px;
+        height: 20px;
+        top: -10px;
+        border-radius: 50%;
+        color: transparent;
+        background: #44474b;
+        box-shadow: 0 0 0px 6px #c7c7c9;
+        left: 50% !important;
+        z-index: 3;
+        &.rz-pointer.rz-active:after {
+            background: #f1f1f1;
+        }
+        &:after {
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    }
+    .rz-pointer {
+        width: 20px;
+        height: 20px;
+        top: -10px;
+        border-radius: 50%;
+        box-shadow: 0 0 0px 6px #fee7c8;
+        background: #fdb04a;
+        &.rz-pointer.rz-active:after {
+            background: #f1f1f1;
+        }
+        &:after {
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+        /* css styles for first and last pointer(added) */
+        &.first, &.last{
+            color: transparent;
+            background: #61c571;
+            box-shadow: 0 0 0px 6px #ccecd1;
+        }
+    }
+    .rz-bar-wrapper {
+        margin-top: -18px;
+        .rz-bar {
+            height: 6px;
+        }
+
+    }
+    .rz-bubble {
+        display: none;
+    }
+    .rz-bar.rz-selection {
+        
+    }
+}
