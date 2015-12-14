@@ -44,9 +44,9 @@
         left: 0;
         margin-right: 0;
         margin-top: 0;
-        margin-left: 15%;
+        margin-left: 10%;
         height: 70px; }
     .project-start .ps-file-dropzone .dropzone-title {
-      margin-left: calc(15% + 55px);
+      margin-left: calc(10% + 55px);
       top: 30%;
       position: absolute; }
