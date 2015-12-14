@@ -1,0 +1,239 @@
+.aii-page-wrapper {
+  padding-top: 0px; }
+  .aii-page-wrapper .bankbg {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8; }
+  .aii-page-wrapper .close-section {
+    background: #1b1e23;
+    width: 100px;
+    text-align: center;
+    display: table; }
+  @media (min-width: 990px) {
+    .aii-page-wrapper .close-section {
+      height: 220px; } }
+  @media (min-width: 768px) and (max-width: 989px) {
+    .aii-page-wrapper .close-section {
+      height: 300px; } }
+  @media (max-width: 767px) {
+    .aii-page-wrapper .close-section {
+      height: 370px; } }
+  .aii-page-wrapper .closeBox {
+    background: #1b1e23;
+    width: 100px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle; }
+  .aii-page-wrapper .mr15 {
+    margin-right: 15px; }
+  .aii-page-wrapper .pr0 {
+    padding-right: 0px; }
+
+.aii-page-title {
+  margin-top: 60px;
+  width: -webkit-calc(100% - 100px);
+  width: calc(100% - 100px); }
+
+.aii-heading-subtitle {
+  font-size: 14px;
+  font-family: "AvenirNextLTPro-Demi";
+  color: #3aabd5; }
+
+.aii-head-info {
+  font-size: 11px;
+  font-family: "AvenirNextLTPro-Bold"; }
+  .aii-head-info td {
+    padding-top: 3px;
+    padding-bottom: 3px; }
+  .aii-head-info .item-title {
+    padding-right: 20px;
+    text-align: right; }
+  .aii-head-info .item-value {
+    font-size: 12px;
+    font-family: "AvenirNextLTPro-Medium"; }
+
+.aii-page-wrapper .label-black {
+  background: #000;
+  color: #fff;
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 10px; }
+
+.aii-page-wrapper .mt20 {
+  margin-top: 20px; }
+
+.aii-page-wrapper .content-section {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 15px; }
+
+.aii-page-wrapper .border-right {
+  border-right: 1px solid #ddd; }
+
+.aii-page-wrapper .section-title {
+  margin-top: 10px;
+  color: #4a4a4a;
+  font-family: "AvenirNextLTPro-Medium";
+  font-size: 17px; }
+
+.aii-inspection-info .item-title {
+  font-family: "AvenirNextLTPro-Regular";
+  text-align: left; }
+  .aii-inspection-info .item-title .fa {
+    margin-left: 10px;
+    color: #aaa; }
+
+.aii-inspection-info .item-value {
+  font-family: "AvenirNextLTPro-Medium"; }
+
+.aii-inspection-info .breadcrumbv22x {
+  display: inline; }
+  .aii-inspection-info .breadcrumbv22x > li {
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    padding: 0 8px 0 8px;
+    font-size: 10px; }
+    .aii-inspection-info .breadcrumbv22x > li:last-child {
+      border: none; }
+
+table.aii-item-table thead th {
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 15px;
+  color: #808080;
+  border: none !important; }
+
+table.aii-item-table tbody td {
+  border-right: none !important;
+  border-left: none !important;
+  vertical-align: middle; }
+
+table.aii-item-table th.col-flag,
+table.aii-item-table td.col-flag {
+  width: 30px;
+  text-align: center; }
+
+table.aii-item-table .col-item small {
+  color: #808080; }
+
+table.aii-item-table .col-date {
+  font-family: "AvenirNextLTPro-Regular";
+  font-size: 12px; }
+
+table.aii-item-table .col-responsible {
+  font-size: 12px; }
+  table.aii-item-table .col-responsible .breadcrumbv22x {
+    font-size: 10px;
+    margin-bottom: 0px; }
+    table.aii-item-table .col-responsible .breadcrumbv22x > li {
+      padding: 0 8px 0 8px; }
+    table.aii-item-table .col-responsible .breadcrumbv22x > li:first-child {
+      padding-left: 0px; }
+
+table.aii-item-table .col-text {
+  font-family: "AvenirNextLTPro-Regular";
+  font-size: 12px; }
+
+table.aii-item-table .col-status .approve-status {
+  font-family: "AvenirNextLTPro-Bold";
+  font-size: 9px; }
+
+table.aii-item-table .col-status .approve-name {
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 10px; }
+
+table.aii-item-table .col-status .approve-date {
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 10px;
+  color: #808080; }
+
+table.aii-item-table .col-setting .fa {
+  font-size: 14px;
+  color: #aaa; }
+
+.aii-dropdown-menu {
+  width: 100px;
+  min-width: 80px;
+  margin-top: 16px;
+  padding: 0;
+  border: 1px solid rgba(221, 221, 221, 0.1);
+  box-shadow: 0px 0px 25px 0 #ccc; }
+  .aii-dropdown-menu::before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #fff;
+    content: "\f0de";
+    position: absolute;
+    right: 20px;
+    top: -11px; }
+
+.modal-dialog button.close {
+  outline: none; }
+
+.aii-detail-summary-item {
+  margin-bottom: 10px; }
+  .aii-detail-summary-item .item-value {
+    text-align: left; }
+
+.aii-uat-head {
+  background-color: #F5F5F6;
+  border: 1px solid #eee;
+  border-bottom: 1px solid #DDDDDD; }
+  .aii-uat-head .aii-uat-th {
+    text-align: left;
+    padding: 15px 20px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #808080; }
+
+.aii-uat-body {
+  border: 1px solid #eee;
+  border-top: none; }
+  .aii-uat-body .aii-uat-td {
+    text-align: left;
+    padding: 15px 20px;
+    color: #3aabd5; }
+
+.aii-photo-section {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 10px 5px 0px 5px; }
+  .aii-photo-section .pl5 {
+    padding-left: 5px !important; }
+  .aii-photo-section .pr5 {
+    padding-right: 5px !important; }
+  .aii-photo-section .aii-photo-thumb {
+    height: 130px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    width: 100%; }
+    .aii-photo-section .aii-photo-thumb img {
+      max-width: 100%;
+      max-height: 100%; }
+
+.aii-comment {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0px; }
+  .aii-comment .aii-comment-photo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; }
+  .aii-comment .aii-comment-name {
+    color: #3aabd5;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 14px;
+    text-align: left; }
+  .aii-comment .aii-comment-content {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px; }
+  .aii-comment .aii-comment-date {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    color: #808080;
+    position: absolute;
+    right: 0;
+    top: 10px; }
+
+.aii-mr15 {
+  margin-right: 15px; }
