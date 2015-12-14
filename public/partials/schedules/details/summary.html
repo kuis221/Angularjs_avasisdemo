@@ -90,4 +90,184 @@
             </div>
         </div>
     </div>
+
+    <div id="schedule-notes">
+        <div class="title">Add Notes</div>
+        <textarea rows="5" class="mt10 label-default form-control" placeholder="Provide any additional information here"></textarea>
+    </div>
+
+    <div id="processor-list" class="mt20">
+        <div class="clearfix">
+            <div class="pull-left title">Processor List</div>
+            <div class="pull-right">
+                <a class="btn btn-success btn-md">
+                    <i class="fa fa-plus pr5"></i>
+                    Add
+                </a>
+            </div>
+        </div>
+        <table class="table table-bordered text-muted mt10">
+            <thead >
+                <tr>
+                    <th>Process</th>
+                    <th>Description</th>
+                    <th>Responsible</th>
+                    <th>Date Range</th>
+                    <th>Complete</th>
+                    <th></th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hello</td>
+                    <td>
+                        <small>This is urgent project to do</small>
+                    </td>
+                    <td>
+                        <div class="text-primary">Bob Jones</div>
+                        <small>ABC Inc</small>
+                    </td>
+                    <td>
+                        Aug 23, 2015<br>
+                        /Dec 6, 2015
+                    </td>
+                    <td>
+                        <div class="checkbox checkbox-inline">
+                            <input type="checkbox" ng-model="application.checked">
+                            <label>&nbsp;</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn-group" uib-dropdown>
+                            <a class="heading" uib-dropdown-toggle>
+                                <i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i>
+                            </a>
+
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Yes</a></li>
+                                <li role="menuitem"><a ng-click="">No</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="prodecessor-list" class="mt20">
+        <div class="clearfix">
+            <div class="pull-left title">Prodecessors List</div>
+            <div class="pull-right">
+                <a class="btn btn-success btn-md">
+                    <i class="fa fa-plus pr5"></i>
+                    Add
+                </a>
+            </div>
+        </div>
+        <table class="table table-bordered text-muted mt10">
+            <thead >
+                <tr>
+                    <th>
+                        <span class="label label-info">8.2.1</span>
+                        Phase
+                    </th>
+                    <th>Sub-Phase</th>
+                    <th>Scope of Work</th>
+                    <th>Team Member</th>
+                    <th>Status</th>
+                    <th>Lag</th>
+                    <th></th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hello</td>
+                    <td>
+                        <small>What is SLI?</small>
+                    </td>
+                    <td>
+                        <small>Wall Painting</small>
+                    </td>
+                    <td>
+                        <div class="text-primary">Bob Jones</div>
+                        <small>ABC Inc</small>
+                    </td>
+                    <td>
+                        <div class="checkbox checkbox-inline">
+                            <div class="text-success">IN PROGRESS</div>
+                            <small>24% Completed</small>
+                        </div>
+                    </td>
+                    <td>2w</td>
+                    <td>
+                        <div class="btn-group" uib-dropdown>
+                            <a class="heading" uib-dropdown-toggle>
+                                <i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i>
+                            </a>
+
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Yes</a></li>
+                                <li role="menuitem"><a ng-click="">No</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="successor-list" class="mt20">
+        <div class="clearfix">
+            <div class="pull-left title">Successors List</div>
+            <div class="pull-right">
+                <a class="btn btn-success btn-md">
+                    <i class="fa fa-plus pr5"></i>
+                    Add
+                </a>
+            </div>
+        </div>
+        <table class="table table-bordered text-muted mt10">
+            <thead >
+                <tr>
+                    <th>
+                        <span class="label label-info">8.2.1</span>
+                        Phase
+                    </th>
+                    <th>Sub-Phase</th>
+                    <th>Scope of Work</th>
+                    <th>Team Member</th>
+                    <th>Lag</th>
+                    <th></th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hello</td>
+                    <td>
+                        <small>What is SLI?</small>
+                    </td>
+                    <td>
+                        <small>Wall Painting</small>
+                    </td>
+                    <td>
+                        <div class="text-primary">Bob Jones</div>
+                        <small>ABC Inc</small>
+                    </td>
+                    <td>2w</td>
+                    <td>
+                        <div class="btn-group" uib-dropdown>
+                            <a class="heading" uib-dropdown-toggle>
+                                <i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i>
+                            </a>
+
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Yes</a></li>
+                                <li role="menuitem"><a ng-click="">No</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
