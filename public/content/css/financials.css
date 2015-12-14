@@ -367,14 +367,18 @@
     width: 140px;
 }
 .loan-wrapper .normal-row {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.loan-wrapper .normal-row .loan-detail {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .loan-wrapper .normal-row p {
-    
+    padding-top: 7px;
 }
 .loan-wrapper .special-row {
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 .loan-info-upload {
     padding: 20px;
@@ -386,4 +390,9 @@
 .loan-info-upload strong {
     color: #3aabd5;
     cursor: pointer;
+}
+
+.loan-upload-img {
+    width: 35px;
+    margin-right: 8px;
 }
