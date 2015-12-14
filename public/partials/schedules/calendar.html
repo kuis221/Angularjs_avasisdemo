@@ -27,8 +27,8 @@
                     <tr ng-repeat="schedule in schedulesInWeek[section]">
                         <td ng-repeat="i in range(schedule.relativePos)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i)]"></td>
                         <td colspan="{{schedule.relativeLength}}">
-                            <div class="alert text-left alert-{{schedule.schedule_type}} clearfix" ng-click="showScheduleDetail(schedule.id)">
-                                <div class="flag-badge"><i class="fa fa-flag"></i></div>
+                            <div class="alert text-left alert-{{schedule.schedule_type}} clearfix">
+                                <div class="flag-badge"><i class="fa fa-flag text-{{schedule.status}}"></i></div>
                                 <div class="content">
                                     <div>{{schedule.description}}</div>
                                     <div class="text-muted font-regular">%{{schedule.completion_percentage}} completed</div>
