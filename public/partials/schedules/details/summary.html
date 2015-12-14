@@ -48,45 +48,38 @@
 
             <div class="mt20 p20 mb20" id="schedule-slider">
 
-                <div class="cleafix">
-                    <div class="pull-left" style="width: 20%;">
-                        MAY 10<br>2014
-                    </div>
-                    <div class="pull-left" style="width: 29%;">
-                        AUG 16<br>2014
-                    </div>
-                    <div class="pull-left" style="width: 28%;">
-                        JUN 23<br>2015
-                    </div>
-                    <div class="pull-left" style="width: 10%;">
-                        MAY 12<br>2016
-                    </div>
-                    <div class="pull-right text-right" style="">
-                        JUN 30<br>2016
-                    </div>
-                </div>
+                <table class="table no-border">
+                    <tr>
+                        <td width="{{slider.min}}%">
+                            MAY 10<br>2014
+                        </td>
+                        <td width="{{slider.max-slider.min}}%">
+                            <span class="pull-left">AUG 16<br>2014</span>
+                            <span class="pull-right text-right">MAY 12<br>2016</span>
+                        </td>
+                        <td class="text-right">
+                            JUN 30<br>2016
+                        </td>
+                    </tr>
+                </table>
                 <rzslider
                     rz-slider-model="slider.min"
                     rz-slider-high="slider.max"
                     rz-slider-options="slider.options"></rzslider>
-                <div class="clearfix">
-                    <div class="pull-left" style="width: 20%;">
-                        Original<br>Start Date
-                    </div>
-                    <div class="pull-left" style="width: 29%;">
-                        Estimated<br>Start
-                    </div>
-                    <div class="pull-left" style="width: 28%;">
-                        Current Date
-                        <div class="text-danger">312 Days Left</div>
-                    </div>
-                    <div class="pull-left" style="width: 10%;">
-                        Original Completion<br>Date
-                    </div>
-                    <div class="pull-right text-right" style="">
-                        Actual Completion<br>Date
-                    </div>
-                </div>
+                <table class="table no-border">
+                    <tr>
+                        <td width="{{slider.min}}%">
+                            Original<br>Start Date
+                        </td>
+                        <td width="{{slider.max-slider.min}}%">
+                            <span class="pull-left">Estimated<br>Start</span>
+                            <span class="pull-right text-right">Original Completion<br>Date</span>
+                        </td>
+                        <td class="text-right">
+                            Actual Completion<br>Date
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
