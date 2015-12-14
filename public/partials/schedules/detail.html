@@ -1,0 +1,59 @@
+<div class="row schedule-detail">
+    <div class="top clearfix">
+        <div class="closeBox">
+            <p><a ui-sref="schedules.main">Close <i class="fa fa-caret-right"></i></a></p>
+        </div>
+        <div class="detail">
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div class="label label-info">8.2.1</div>
+                    <div class="title font-semibold">Interior Finishes > Feature Cabinery</div>
+                    <div class="font-medium heading"><em>Estimated Completion Date</em> &nbsp;May 12, 2016</div>
+                </div>
+                <div class="pull-right">
+                    <a class="btn btn-success btn-lg"><i class="fa fa-plus"></i> Add User to SOW</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-11">
+                    <div class="row mt10">
+                        <div class="col-sm-4">
+                            <div class="pull-left text-success" ui-arc-chart rect-width="90" rect-height="90" radius="33" pen-width="8" chart-data="sowData"></div>     
+                            <div class="pl20 pull-left">
+                                <div class="mt10 sub-title text-success">SCOPE OF WORK</div>
+                                <p>Kitchen Cabinetry</p>
+                                <div class="text-success">In Progress</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="circle circle-primary">$875K</div>
+                            <div class="pl20 pull-left">
+                                <div class="mt10 sub-title text-primary">FUND DISBURSED TO DATE</div>
+                                <p>23 June, 2015</p>
+                                <div class="text-primary">%70 OF BUDGET</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="circle circle-warning">$1.2M</div>
+                            <div class="pl20 pull-left">
+                                <p class="mt10 sub-title text-warning">ESTIMATED COST AT <br>THE COMPLETION</p>
+                                <div>$1,289,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <uib-tabset>
+            <uib-tab heading="Summary">
+                <div ng-include="'partials/schedules/details/summary.html'"></div>
+            </uib-tab>
+            <uib-tab heading="Team">Short Labeled Justified content</uib-tab>
+            <uib-tab heading="Action Items">Long Labeled Justified content</uib-tab>
+            <uib-tab heading="Documents">Long Labeled Justified content</uib-tab>
+            <uib-tab heading="Photos">Long Labeled Justified content</uib-tab>
+        </uib-tabset>
+    </div>
+</div>

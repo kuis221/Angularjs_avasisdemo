@@ -114,3 +114,64 @@ table.no-border {
         }    
     }    
 }
+
+.schedule-detail {
+    .title {
+        font-size: 17px;
+        line-height: 30px;
+        margin-top: 5px;
+    }
+    .heading {
+        font-size: 16px;
+        line-height: 30px;
+        color: #a1a3a5;
+    }
+    .sub-title {
+        font-size: 14px;
+    }
+    .top {
+        background: white;
+        .closeBox {
+            background: #000;
+            width: 100px;
+            padding: 110px 0;
+            text-align: center;
+            float: left;
+        }
+        .detail {
+            padding: 30px 20px;
+            width: calc(100% - 100px);
+            float: left;
+
+            .circle {
+                float: left;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                padding-top: 26px;
+                text-align: center;
+                border: 1px solid #ccc;
+                font-size: 18px;
+                font-family: AvenirNextLTPro-Regular;
+                &.circle-primary {
+                    box-shadow: 0 0 0px 6px #e6f4fa;
+                    border-color: #3aabd5;
+                    color: #3aabd5;
+                }
+                &.circle-warning {
+                    box-shadow: 0 0 0px 6px #fff5e7;
+                    border-color: #fdb04a;
+                    color: #fdb04a;
+                }
+            }
+            div[ui-arc-chart] svg tspan{
+                font-weight: normal !important;
+            }
+        }
+    }
+    #schedule-overview {
+        table td {
+            padding: 5px !important;
+        }
+    }
+}

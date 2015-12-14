@@ -415,3 +415,6 @@ input.round {
 .no-avatar {
     width: 40px; height: 40px; background: #f1f1f1; border-radius: 50%; text-align: center; color: #888; line-height: 40px;
 }
+.panel {
+    border-radius: 0;
+}

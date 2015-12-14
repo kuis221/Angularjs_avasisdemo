@@ -230,8 +230,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('schedules', {
             url: '/schedules',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('schedules.main', {
+            url: '/main',
             templateUrl: 'partials/schedules/main.html',
             controller: 'SchedulesCtrl'
+        })
+        .state('schedules.detail', {
+            url: '/:id',
+            templateUrl: 'partials/schedules/detail.html',
+            controller: 'ScheduleDetailCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('sample', {
             url: '/sample',

@@ -96,3 +96,52 @@ table.no-border > th, table.no-border td {
     #calendar .calendar-container .week-container > table .day-header {
       padding: 7px 30px;
       border-radius: 4px; }
+
+.schedule-detail .title {
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 5px; }
+
+.schedule-detail .heading {
+  font-size: 16px;
+  line-height: 30px;
+  color: #a1a3a5; }
+
+.schedule-detail .sub-title {
+  font-size: 14px; }
+
+.schedule-detail .top {
+  background: white; }
+  .schedule-detail .top .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center;
+    float: left; }
+  .schedule-detail .top .detail {
+    padding: 30px 20px;
+    width: calc(100% - 100px);
+    float: left; }
+    .schedule-detail .top .detail .circle {
+      float: left;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      padding-top: 26px;
+      text-align: center;
+      border: 1px solid #ccc;
+      font-size: 18px;
+      font-family: AvenirNextLTPro-Regular; }
+      .schedule-detail .top .detail .circle.circle-primary {
+        box-shadow: 0 0 0px 6px #e6f4fa;
+        border-color: #3aabd5;
+        color: #3aabd5; }
+      .schedule-detail .top .detail .circle.circle-warning {
+        box-shadow: 0 0 0px 6px #fff5e7;
+        border-color: #fdb04a;
+        color: #fdb04a; }
+    .schedule-detail .top .detail div[ui-arc-chart] svg tspan {
+      font-weight: normal !important; }
+
+.schedule-detail #schedule-overview table td {
+  padding: 5px !important; }

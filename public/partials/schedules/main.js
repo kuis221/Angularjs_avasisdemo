@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('SchedulesCtrl',
-    ['$scope', '$uibModal', function($scope, $uibModal) {
+    ['$scope', '$state', '$uibModal', function($scope, $state, $uibModal) {
         $scope.pieOptions = {
             type: 'pie',
             height: '80px',
@@ -56,6 +56,14 @@ app.controller('SchedulesCtrl',
             description: "Test schedule 11/8/2015 - 11/14/2015",
             start_date: moment('2015-11-8'),
             end_date: moment('2015-11-14'),
+            schedule_type: "success",
+            completion_percentage: 80
+        },
+        {
+            id: _.uniqueId(),
+            description: "Test schedule 12/16/2015 - 12/24/2015",
+            start_date: moment('2015-12-16'),
+            end_date: moment('2015-12-24'),
             schedule_type: "success",
             completion_percentage: 80
         },
@@ -151,6 +159,9 @@ app.controller('SchedulesCtrl',
             $scope.calendarScope = scope;
             $scope.offset = 0;
             resetOffsetRange();
+        }
+        $scope.showScheduleDetail = function(id) {
+            $state.go("schedules.detail", {id: id});
         }
         resetOffsetRange();
     }]
