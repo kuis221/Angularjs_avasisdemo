@@ -193,3 +193,28 @@ p {
     width: 125px;
     font-family: "AvenirNextLTPro-Demi";
 }
+
+.bids-proj-info {
+    margin-top: 30px;
+}
+.bids-proj-info div {
+    margin-right: 20px;
+}
+
+.bids-comp-wrapper {
+    background-color: white;
+    padding: 20px;
+}
+
+.bids-comp-table {
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+}
+.bids-comp-table table {
+    background-color: white;
+}
+.bids-comp-table .table tbody tr td{
+    border: 1px solid #d7d7d7;
+    width: 200px;
+}
