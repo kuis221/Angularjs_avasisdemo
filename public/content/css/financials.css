@@ -198,9 +198,9 @@
 }
 #bankdraw-finalize .label {
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
     margin-top: 4px;
-    padding: 1px 5px; 
+    padding: 1px 5px;
 }
 #bankdraw-finalize #stats td {
     padding: 30px;
@@ -345,7 +345,8 @@
     margin-bottom: 20px;
 }
 .loan-info-input input {
-    height: 50px;
+    height: 51px;
+    padding: 15px;
     background-color: #f9f9f9;
 }
 .loan-info-input input:focus {
