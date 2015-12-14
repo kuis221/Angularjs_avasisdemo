@@ -423,7 +423,9 @@ input.round {
 .panel {
     border-radius: 0;
 }
-
+:focus {
+    outline: none;
+}
 
 /* TOOGLE SWICH */
 .onoffswitch {
