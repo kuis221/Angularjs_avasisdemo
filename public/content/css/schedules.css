@@ -8,6 +8,9 @@ table.no-border > th, table.no-border td {
 #schedule-stats td {
   padding: 5px; }
 
+#today-tasks .project {
+  border: none; }
+
 .popover {
   max-width: 450px;
   font-family: AvenirNextLTPro-Medium;

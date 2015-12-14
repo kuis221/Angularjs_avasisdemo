@@ -14,6 +14,11 @@ table.no-border {
         padding: 5px;
     }
 }
+#today-tasks {
+    .project {
+        border: none;
+    }
+}
 .popover {
     max-width: 450px;
     font-family: AvenirNextLTPro-Medium;
