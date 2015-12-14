@@ -55,28 +55,18 @@ table.no-border > th, table.no-border td {
 
 #calendar .calendar-container .alert-primary {
   background-color: #c4e6f2; }
-  #calendar .calendar-container .alert-primary i.fa-flag {
-    color: #3aabd5; }
 
 #calendar .calendar-container .alert-success {
   background-color: #e4f3e6; }
-  #calendar .calendar-container .alert-success i.fa-flag {
-    color: #79c485; }
 
 #calendar .calendar-container .alert-info {
   background-color: #e4f3e6; }
-  #calendar .calendar-container .alert-info i.fa-flag {
-    color: #2a2d33; }
 
 #calendar .calendar-container .alert-warning {
   background-color: #feecd5; }
-  #calendar .calendar-container .alert-warning i.fa-flag {
-    color: #fdb04a; }
 
 #calendar .calendar-container .alert-danger {
   background-color: #f6cece; }
-  #calendar .calendar-container .alert-danger i.fa-flag {
-    color: #e25c5c; }
 
 #calendar .calendar-container .week-container {
   margin-bottom: 40px; }
