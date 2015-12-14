@@ -1,0 +1,86 @@
+.project-start {
+    color: #4a4a4a;
+
+    > h2 {
+        font-family: AvenirNextLTPro-Regular;
+        font-size: 27px;
+        margin-top: 0px;
+        margin-bottom: 25px;
+    }
+
+    .card-wrapper {
+        h3 {
+            font-family: AvenirNextLTPro-Medium;
+            font-size: 17px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+            padding-top: 10px;
+
+            > span {
+                display: block;
+                font-family: AvenirNextLTPro-Demi;
+                font-size: 13px;
+                margin-bottom: 13px;
+            }
+
+            .input-group {
+                .input-group-addon {
+                    background-color: #f9f9f9;
+
+                    + .form-control {
+                        border-left: 0;
+                    }
+                }
+
+            }
+        }
+
+        .form-control {
+            height: 51px;
+            padding: 15px;
+            border: 1px solid #eee;
+            background-color: #f9f9f9;
+
+            &:focus, &.focus {
+                background-color: #fff;
+            }
+        }
+    }
+
+    /* Dropzoen CSS */
+    .ps-file-dropzone {
+        border: 1px dashed #3aabd5;
+
+        .dropzone {
+            min-height: 80px;
+            margin-top: 0px !important;
+            padding: 0px;
+
+            .dz-default.dz-message {
+                background-image: url('/assets/img/financials/dropzone.png');
+                background-position: left;
+                background-size: 45px;
+                top: 0;
+                left: 0;
+                margin-right: 0;
+                margin-top: 0;
+                margin-left: 10%;
+                height: 70px;
+            }
+        }
+
+        .dropzone-title {
+            top: 30%;
+            position: absolute;
+            left: calc(50% - 150px);
+
+            @media (min-width: 1200px) and (max-width: 1370px) {
+                left: calc(50% - 115px);
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+.flag-alert-header {
+	.action-item-progress-text {
+		font-family: "AvenirNextLTPro-Medium";
+    	font-size: 14px;
+    	margin-top: -5px;
+	}
+}
+.flag-alert-content-filter {
+	padding: 30px 15px 0px;
+	
+	.dropdown-container {
+		display: block;
+		float: left;
+		width: 125px;
+		margin-left: 4px;
+		.dropdown-title {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 11px;
+			color: #8b8b8b;
+		}
+		.dropdown .dropdown-toggle{
+			font-family: "AvenirNextLTPro-Bold";
+			font-size: 11px;
+			color: #44474b;
+		}
+		.dropdown .dropdown-menu {
+			padding: 0px;
+		}
+		.dropdown .dropdown-menu > li > a {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 13px;
+			color: #3aabd5;
+			border-bottom: 1px solid #dedede;
+		}
+		.dropdown .dropdown-menu li:first-of-type a {
+			border-radius: 4px 4px 0 0;
+		}
+		.dropdown .dropdown-menu li:last-of-type a {
+    		border: none;
+    		border-radius: 0 0 4px 4px;
+    	}
+	}
+	.width110 {
+		width: 110px;
+	}
+	.member-filter {
+		font-family: "AvenirNextLTPro-Regular";
+		font-size: 9px;
+		width: 151px;
+		padding: 11px 16px;
+	}
+	.due-date-range {
+		display: inline-block;
+		border: 1px solid #eee;
+		border-radius: 3px;
+		background-color: #fff;
+		color: #8b8b8b;
+		.date-info {
+			display:block;
+			margin: 9px;
+			.text-muted {
+				font-family: "AvenirNextLTPro-Regular";
+				font-size: 9px;
+				padding: 0 12px;
+			}
+			.spilter {
+				font-family: "AvenirNextLTPro-Bold";
+				font-size: 9px;
+			}
+		}
+		.inline-calendar {
+			display: block;
+			position: absolute;
+			min-height: 290px;
+	    	z-index: 9999;
+		}
+	}
+}
+.flag-alert-content-result {
+	padding: 0px 15px 40px;
+	.hdingTopBox {
+		border-bottom: 0px;
+		padding: 15px 0 1px 0;
+		border-radius: 5px 5px 0 0;
+		p {
+			padding-left: 20px;
+			color: #fff;
+			font-family: "AvenirNextLTPro-Medium";
+			font-size: 17px;
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+	.high-priority {
+		.hdingTopBox {
+			background-color: #e25c5c;
+		}
+	}
+	.medium-priority {
+		.hdingTopBox {
+			background-color: #fdae46;
+		}
+	}
+	.low-priority {
+		.hdingTopBox {
+			background-color: #79c485;
+		}
+	}
+	.icon .avatar {
+		width: 40px;
+	}
+	table.priority tbody tr td {
+		vertical-align: middle;
+		.month {
+			font-family: "AvenirNextLTPro-Medium";
+			font-size: 11px;
+			text-transform: uppercase;
+		}
+		.day {
+			font-family: "AvenirNextLTPro-Medium";
+			font-size: 12px;
+		}
+		.ticket {
+			background: #2a2d33;
+			border-radius: 5px;
+			color: #fff;
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 9px;
+			width: 55px;
+			display: inline-block;
+			text-align: center;
+			margin-right: 6px;
+		}
+		.category {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 12px;
+			color: #8b8b8b;
+		}
+		.title {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 15px;
+			color: #44474b;
+		}
+		.name {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 12px;
+			color: #3aabd5;
+		}
+	}
+	table.priority tbody tr td.icon {
+		max-width: 40px;
+	}
+	table.priority tbody tr td.date {
+		text-align: center;
+	}
+}

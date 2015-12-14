@@ -1,7 +1,27 @@
 app.controller('FinancialsMainCtrl',
-    ['$scope', '$state', function ($scope, $state) {
+    ['$scope', '$state', '$timeout', function ($scope, $state, $timeout) {
 
         $scope.$parent.setCurrentTab($state.current.name);
+
+        // Stats
+        $timeout(function(){
+            $scope.$parent.stats = {
+                estimated: 52,
+                contractual: 30,
+                direct: 12,
+                pending: 0,
+                unbudgeted: 0,
+                amount: {
+                    total: '2,788,284.48',
+                    funds_disbursed: '903,347.67',
+                    est_budget: '1,451,937',
+                    contractual: '829,181.07',
+                    direct: '322,166.41',
+                    pending: ' -',
+                    unbudgeted: ' -'
+                }
+            };
+        }, 300);
 
         $scope.data = [
             {division_cost_code: 'Division 1 General Requirements', est_budget: 55532, under_contract: 0, approved_purchase_orders: 0, approved_change_orders: 0, direct_costs: 208459.41, working_budget: 263991.41, pending_purchase_orders: 0, pending_change_orders: 0, unbudgeted_costs: 0, est_cost_at_completion: 263991.41, payments_made: 208459.26, cash_required_to_complete: 55532.15,

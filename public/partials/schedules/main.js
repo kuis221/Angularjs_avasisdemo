@@ -1,10 +1,10 @@
 'use strict';
 
 app.controller('SchedulesCtrl',
-    ['$scope', '$uibModal', function($scope, $uibModal) {
+    ['$scope', '$state', '$uibModal', function($scope, $state, $uibModal) {
         $scope.pieOptions = {
             type: 'pie',
-            height: '80px',
+            height: '60px',
             offset: -90,
             sliceColors: ['#3aabd5', '#f1f1f1', '#f6b875'],
             disableTooltips: true
@@ -22,49 +22,87 @@ app.controller('SchedulesCtrl',
             }
         ];
         $scope.calendarScope = 'week';
-        $scope.today = moment().startOf('day');
+        $scope.today = moment('2015-08-17').startOf('day');
         $scope.weekTitles = [];
         $scope.daysInRange = [];
         $scope.offset = 0;
         $scope.schedulesInWeek = []; // schedules in date of range
         $scope.schedules = [{
-            description: "Test schedule 12/4/2015 - 12/13/2015",
-            start_date: moment('2015-12-4'),
-            end_date: moment('2015-12-13'),
+            id: _.uniqueId(),
+            description: "Roof Dry-In",
+            start_date: moment('2015-8-17'),
+            end_date: moment('2015-8-20'),
+            schedule_type: "success",
+            status: 'success',
+            completion_percentage: 60
+        },
+        {
+            id: _.uniqueId(),
+            description: "Rough HVAC",
+            start_date: moment('2015-8-17'),
+            end_date: moment('2015-8-25'),
+            schedule_type: "warning",
+            status: "danger",
+            completion_percentage: 40
+        },
+        {
+            id: _.uniqueId(),
+            description: "Rough Electrical",
+            start_date: moment('2015-8-17'),
+            end_date: moment('2015-8-18'),
             schedule_type: "primary",
-            completion_percentage: 80
+            status: "success",
+            completion_percentage: 90
         },
         {
-            description: "Test schedule 11/29/2015 - 12/13/2015",
-            start_date: moment('2015-11-29'),
-            end_date: moment('2015-12-13'),
+            id: _.uniqueId(),
+            description: "Framing",
+            start_date: moment('2015-8-17'),
+            end_date: moment('2015-8-17'),
             schedule_type: "danger",
-            completion_percentage: 80
+            status: "success",
+            completion_percentage: 100
         },
         {
-            description: "Test schedule 12/7/2015 - 12/14/2015",
-            start_date: moment('2015-12-7'),
-            end_date: moment('2015-12-14'),
-            schedule_type: "info",
-            completion_percentage: 80
+            id: _.uniqueId(),
+            description: "Plumbing",
+            start_date: moment('2015-8-17'),
+            end_date: moment('2015-9-1'),
+            schedule_type: "primary",
+            status: "success",
+            completion_percentage: 20
         },
         {
-            description: "Test schedule 11/8/2015 - 11/14/2015",
-            start_date: moment('2015-11-8'),
-            end_date: moment('2015-11-14'),
+            id: _.uniqueId(),
+            description: "Landscaping",
+            start_date: moment('2015-8-24'),
+            end_date: moment('2015-9-4'),
             schedule_type: "success",
-            completion_percentage: 80
+            status: "success",
+            completion_percentage: 0
         },
         {
-            description: "Christmas holiday 12/24/2015 - 12/30/2015",
-            start_date: moment('2015-12-24'),
-            end_date: moment('2015-12-30'),
+            id: _.uniqueId(),
+            description: "Fire Sprinkler Rough-In",
+            start_date: moment('2015-9-1'),
+            end_date: moment('2015-9-4'),
             schedule_type: "success",
-            completion_percentage: 80
+            status: "success",
+            completion_percentage: 0
         }];
         _.each($scope.schedules, function(e) {
             e.days_of_period = e.end_date.diff(e.start_date, 'd') + 1;
         })
+
+        $scope.range = function(val) {
+            return _.range(val);
+        }
+        $scope.isEmptyDate = function(week, day) {
+            var scheduled = _.filter($scope.schedulesInWeek[week], function(e) {
+                return _.range(e.relativePos, e.relativePos + e.relativeLength).indexOf(day) >= 0;
+            });
+            return scheduled.length == 0;
+        }
 
         function getWeekTitle(offset) {
             offset = $scope.offset + offset;
@@ -81,12 +119,12 @@ app.controller('SchedulesCtrl',
         }
         function resetOffsetRange() {
             if ($scope.calendarScope == 'day') {
-                $scope.startDate = moment().startOf('day').add($scope.offset * 3, 'd');
-                $scope.endDate = moment().startOf('day').add($scope.offset * 3 + 2, 'd');
+                $scope.startDate = moment('2015-08-16').startOf('day').add($scope.offset * 3, 'd');
+                $scope.endDate = moment('2015-08-16').startOf('day').add($scope.offset * 3 + 2, 'd');
             }
             else if ($scope.calendarScope == 'week') {
-                $scope.startDate = moment().startOf('week').add($scope.offset, 'w');
-                $scope.endDate = moment().startOf('week').add($scope.offset + 2, 'w').endOf('week');
+                $scope.startDate = moment('2015-08-16').startOf('week').add($scope.offset, 'w');
+                $scope.endDate = moment('2015-08-16').startOf('week').add($scope.offset + 2, 'w').endOf('week');
 
                 $scope.weekTitles = [];
                 _.each([0, 1, 2], function(i){ $scope.weekTitles.push(getWeekTitle(i)); });
@@ -136,6 +174,9 @@ app.controller('SchedulesCtrl',
             $scope.calendarScope = scope;
             $scope.offset = 0;
             resetOffsetRange();
+        }
+        $scope.showScheduleDetail = function(id) {
+            $state.go("schedules.detail", {id: id});
         }
         resetOffsetRange();
     }]

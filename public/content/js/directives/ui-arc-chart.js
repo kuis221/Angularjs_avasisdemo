@@ -15,13 +15,10 @@ app.directive('uiArcChart', function ($compile, $sce) {
                 pen_width = _.isUndefined(attr.penWidth) ? 10 : parseInt(attr.penWidth);
             var r = Raphael(elem[0], width, height),
     			defaultText = '',
-                param = {stroke: "#fff", "stroke-width": pen_width};
+                param = {stroke: "#eee", "stroke-width": pen_width};
     			speed = 250;
 
-            var title = r.text(width / 2, height / 2, defaultText).attr({
-                font: '14px Arial',
-                fill: '#000'
-            }).toFront();
+            var title = r.text(width / 2, height / 2, defaultText).toFront();
 
             var display = '';
             _.forEach(scope.chartData, function (item, key) {
@@ -49,7 +46,13 @@ app.directive('uiArcChart', function ($compile, $sce) {
     			var value = item.value;
 
                 rad += pen_width;
-                var z = r.path().attr(param).attr({ arc: [0, color, rad]});
+                var font = item.font ? item.font : '14px AvenirNextLTPro-Demi';
+                title.attr({
+                    font: font,
+                    fill: item.color
+                })
+                var z = r.path().attr(param).attr({arc: [0, color, rad]});
+
                 z.animate({arc: [value, color, rad], 'stroke': color}, 1000, ">");
             });
         }

@@ -1,0 +1,228 @@
+<div class="row page-detail-header flag-alert-header">
+    <div class="col-md-1 no-padding-horizontal">
+        <div class="closeBox">
+            <p>
+                <a ui-sref="projects.main">
+                    Close <i class="fa fa-caret-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="row page-detail-header-wrapper">
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading">Flag Alerts</h2>
+                            <ul class="topSubtitle">
+                                <li>
+                                    <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
+                                </li>
+                                <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="row mt30">
+                    <div class="col-md-3 col-sm-6">
+                        <span class="action-item-text">TOTAL ITEM# {{ flagAlerts.total }}</span>
+                        <div class="action-item-count-info">
+                            <span class="label label-green">&nbsp;</span>
+                            <span class="count">{{ flagAlerts.green }}</span>
+                            <span class="label label-orange">&nbsp;</span>
+                            <span class="count">{{ flagAlerts.orange }}</span>
+                            <span class="label label-red">&nbsp;</span>
+                            <span class="count">{{ flagAlerts.red }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="action-completed-chart">
+                            <div sparkline spark-data="[flagAlerts.completed, flagAlerts.total-flagAlerts.completed]" spark-options="pieOptions"></div>
+                        </div>
+                        <div>
+                            <span class="action-item-text">{{ round(flagAlerts.completed / flagAlerts.total * 100) }}% COMPLETED</span><br>
+                            <span class="action-item-value">{{ flagAlerts.completed }}</span>
+                            <span class="action-item-of">of</span>
+                            <span class="action-item-value">{{ flagAlerts.total }} items</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-5 no-padding-right">
+                                <div class="">
+                                    <span class="action-item-text">ITEMS ASSIGNED TO ME</span><br>
+                                    <span class="action-item-value">
+                                        {{ flagAlerts.assignedMe.green.total + flagAlerts.assignedMe.orange.total + flagAlerts.assignedMe.red.total }} Items
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-7 assigned-me-progress">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="progress progress-medium">
+                                            <div class="progress-bar progress-bar-success"
+                                                 style="width: {{flagAlerts.assignedMe.green.done / flagAlerts.assignedMe.green.total * 100}}%;">
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                        {{ flagAlerts.assignedMe.green.total }} items
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="progress progress-medium">
+                                            <div class="progress-bar progress-bar-warning"
+                                                 style="width: {{flagAlerts.assignedMe.orange.done / flagAlerts.assignedMe.orange.total * 100}}%;">
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                        {{ flagAlerts.assignedMe.orange.total }} items
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="progress progress-medium">
+                                            <div class="progress-bar progress-bar-danger"
+                                                 style="width: {{flagAlerts.assignedMe.red.done / flagAlerts.assignedMe.red.total * 100}}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                        {{ flagAlerts.assignedMe.red.total }} items
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row no-margin animated flag-alert-content-filter">
+    <div class="col-md-12">
+        <div class="dropdown-container">
+            <span class="dropdown-title">Bucket by</span><br/>
+            <div class="dropdown">
+                <a class="dropdown-toggle text-primary" data-toggle="dropdown">
+                    <span ng-if="bucket=='team-member'">Team Members</span>
+                    <span ng-if="bucket=='flag-status'">Flag Status</span>
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="projects.flag_alerts({bucket: 'team-member'})">Team Members</a></li>
+                    <li><a ui-sref="projects.flag_alerts({bucket: 'flag-status'})">Flag Status</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-container width110">
+            <span class="dropdown-title">Filters</span><br/>
+            <div class="dropdown">
+                <a class="dropdown-toggle text-primary" data-toggle="dropdown">
+                    <span ng-if="filter=='type'">Item Type</span>
+                    <span ng-if="filter=='member'">Team Member</span>
+                    <span ng-if="filter=='range'">Due Date</span>
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a ui-sref="projects.flag_alerts({filter: 'type'})">Item Type</a></li>
+                    <li><a ui-sref="projects.flag_alerts({filter: 'member'})">Team Member</a></li>
+                    <li><a ui-sref="projects.flag_alerts({filter: 'range'})">Due Date</a></li>
+                </ul>
+            </div>
+        </div>
+        <input type="text" placeholder="Enter team member name" class="member-filter" ng-if="filter=='member'">
+        <div class="due-date-range" ng-if="filter=='range'">
+            <div class="date-info">
+                <span class="text-muted" ng-click="isShowStartDatePicker = !isShowStartDatePicker">{{ startDate | date: 'MMM dd, yyyy'}}</span>
+                <span class="spilter">to</span>
+                <span class="text-muted" ng-click="isShowEndDatePicker = !isShowEndDatePicker">{{ endDate | date: 'MMM dd, yyyy'}}</span>
+            </div>
+            <div class="inline-calendar" ng-show="isShowStartDatePicker">
+                <uib-datepicker ng-model="startDate" min-date="minDate" show-weeks="false" class="well well-sm" ng-click="isShowStartDatePicker = false;"></uib-datepicker>
+            </div>
+            <div class="inline-calendar" ng-show="isShowEndDatePicker">
+                <uib-datepicker ng-model="endDate" min-date="minDate" show-weeks="false" class="well well-sm" ng-click="isShowEndDatePicker = false;"></uib-datepicker>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="row no-margin animated fadeInRight flag-alert-content-result">
+    <div class="col-xs-12 col-lg-4">
+        <div class="whiteBox mt30 high-priority">
+            <div class="hdingTopBox">
+                <p><img alt="image" src="assets/img/alert-flag-white.png">High Priority</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table priority">
+                    <tbody>
+                    <tr ng-repeat="row in highPriority">
+                        <td class="icon">
+                            <img alt="image" src="assets/img/alert-flag-gray.png" ng-show="bucket=='flag-status'">
+                            <img alt="image" class="avatar" ng-src="{{ row.avatar }}" ng-show="bucket=='team-member'">
+                        </td>
+                        <td class="date"><span class="month">{{ row.month }}</span><br/><span class="day">{{ row.day }}</span></td>
+                        <td>
+                            <span class="ticket">{{ row.ticket }}</span><span class="category">{{ row.category }}</span><br/>
+                            <span class="title">{{ row.title }}</span><br/>
+                            <span class="name">{{ row.name }}</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+        <div class="whiteBox mt30 medium-priority">
+            <div class="hdingTopBox">
+                <p><img alt="image" src="assets/img/alert-flag-white.png">Medium Priority</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table priority">
+                    <tbody>
+                    <tr ng-repeat="row in mediumPriority">
+                        <td class="icon">
+                            <img alt="image" src="assets/img/alert-flag-gray.png" ng-show="bucket=='flag-status'">
+                            <img alt="image" class="avatar" ng-src="{{ row.avatar }}" ng-show="bucket=='team-member'">
+                        </td>
+                        <td class="date"><span class="month">{{ row.month }}</span><br/><span class="day">{{ row.day }}</span></td>
+                        <td>
+                            <span class="ticket">{{ row.ticket }}</span><span class="category">{{ row.category }}</span><br/>
+                            <span class="title">{{ row.title }}</span><br/>
+                            <span class="name">{{ row.name }}</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+        <div class="whiteBox mt30 low-priority">
+            <div class="hdingTopBox">
+                <p><img alt="image" src="assets/img/alert-flag-white.png">Low Priority</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table priority">
+                    <tbody>
+                    <tr ng-repeat="row in lowPriority">
+                        <td class="icon">
+                            <img alt="image" src="assets/img/alert-flag-gray.png" ng-show="bucket=='flag-status'">
+                            <img alt="image" class="avatar" ng-src="{{ row.avatar }}" ng-show="bucket=='team-member'">
+                        </td>
+                        <td class="date"><span class="month">{{ row.month }}</span><br/><span class="day">{{ row.day }}</span></td>
+                        <td>
+                            <span class="ticket">{{ row.ticket }}</span><span class="category">{{ row.category }}</span><br/>
+                            <span class="title">{{ row.title }}</span><br/>
+                            <span class="name">{{ row.name }}</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
