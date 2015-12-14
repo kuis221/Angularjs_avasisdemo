@@ -412,6 +412,100 @@ input.round {
     font-family: "AvenirNextLTPro-Demi" !important;
     min-width: 80px;
 }
+.table.table-bordered > tbody > tr > td,
+.table.table-bordered > thead > tr > th {
+    border-left: none;
+    border-right: none;
+}
 .no-avatar {
     width: 40px; height: 40px; background: #f1f1f1; border-radius: 50%; text-align: center; color: #888; line-height: 40px;
+}
+.panel {
+    border-radius: 0;
+}
+
+
+/* TOOGLE SWICH */
+.onoffswitch {
+    position: relative;
+    width: 65px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    /*border: 2px solid #79c485;*/
+    border-radius: 2px;
+}
+.onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 20px;
+    padding: 0;
+    line-height: 20px;
+    font-size: 12px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: AvenirNextLTPro-Bold;
+    padding-top: 7px;
+}
+.onoffswitch-inner:before {
+    content: "YES";
+    padding-left: 8px;
+    background-color: #79c485;
+    color: #FFFFFF;
+    height: 33px;
+
+}
+.onoffswitch-inner:after {
+    content: "NO";
+    padding-right: 8px;
+    background-color: #cecece;
+    color: #fff;
+    text-align: right;
+    height: 33px;
+}
+.onoffswitch-switch {
+    width: 34px;
+    margin: 0px;
+    background: #FFFFFF;
+    border: 2px solid #cecece;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 31px;
+    -moz-transition: all 0.3s ease-in 0s;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch .change-border{
+    border: 2px solid #79c485;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
 }

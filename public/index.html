@@ -14,12 +14,17 @@
     <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
     <link rel="stylesheet" href="bower_components/dropzone/downloads/css/dropzone.css">
+    <link href="bower_components/ng-table/dist/ng-table.min.css" rel="stylesheet">
+    <link href="bower_components/angular-animate-css/build/nga.all.min.css" rel="stylesheet">
+    <link href="bower_components/nvd3/build/nv.d3.css" rel="stylesheet" >
+    <link href="bower_components/angularjs-slider/dist/rzslider.min.css" rel="stylesheet" >
 
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="content/css/style.css" rel="stylesheet">
     <link href="content/css/action.css" rel="stylesheet">
     <link href="content/css/projects.css" rel="stylesheet">
+    <link href="content/css/flag-alert.css" rel="stylesheet">
     <link href="content/css/documents.css" rel="stylesheet">
     <link href="content/css/bids.css" rel="stylesheet">
     <link href="content/css/comm.css" rel="stylesheet">
@@ -29,14 +34,12 @@
     <link href="content/css/financials-payment-initiate.css" rel="stylesheet">
     <link href="content/css/photos.css" rel="stylesheet">
     <link href="content/css/schedules.css" rel="stylesheet">
+    <link href="content/css/inspections.css" rel="stylesheet">
+    <link href="content/css/projects-start.css" rel="stylesheet">
 
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 
     <script src="bower_components/raphael/raphael-min.js"></script>
-
-    <link href="bower_components/ng-table/dist/ng-table.min.css" rel="stylesheet">
-    <link href="bower_components/angular-animate-css/build/nga.all.min.css" rel="stylesheet">
-    <link href="bower_components/nvd3/build/nv.d3.css" rel="stylesheet" >
 </head>
 
 <body class="pace-done">
@@ -90,15 +93,19 @@
 <script src="bower_components/angular-dropzone/lib/angular-dropzone.js"></script>
 <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.min.js"></script>
 <script src="bower_components/angular-input-masks/angular-input-masks-standalone.min.js"></script>
+<script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
 
 <script src="content/js/app.js"></script>
 <script src="content/js/directives/directives.js"></script>
 <script src="content/js/directives/ui-select.js"></script>
 <script src="content/js/directives/ui-arc-chart.js"></script>
+<script src="content/js/directives/ui-rec-switch.js"></script>
 <script src="content/js/filters/accounting.js"></script>
 <script src="content/js/filters/initials.js"></script>
 <script src="partials/dashboards/dashboards.js"></script>
 <script src="partials/projects/projects-ctrl.js"></script>
+<script src="partials/projects/project-flag-alerts.js"></script>
+<script src="partials/projects/project-start.js"></script>
 <script src="partials/team-members/team-members.js"></script>
 <script src="partials/team-members/team-members-invite.js"></script>
 <script src="partials/team-members/team-members-project.js"></script>
@@ -121,6 +128,8 @@
 <script src="partials/action-items/action-items.js"></script>
 <script src="partials/action-items/gai-new-modal.js"></script>
 <script src="partials/action-items/change-order-new-modal.js"></script>
+<script src="partials/action-items/inspections/main-popup.js"></script>
+<script src="partials/action-items/inspections/detail-modal.js"></script>
 <script src="partials/documents/list.js"></script>
 <script src="partials/documents/upload-modal.js"></script>
 <script src="partials/documents/detail-modal.js"></script>
@@ -129,6 +138,7 @@
 <script src="partials/procurement/list.js"></script>
 <script src="partials/photos/photos.js"></script>
 <script src="partials/schedules/main.js"></script>
+<script src="partials/schedules/detail.js"></script>
 <script src="partials/sample/sample.js"></script>
 </body>
 </html>

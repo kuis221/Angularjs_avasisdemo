@@ -55,28 +55,18 @@ table.no-border > th, table.no-border td {
 
 #calendar .calendar-container .alert-primary {
   background-color: #c4e6f2; }
-  #calendar .calendar-container .alert-primary i.fa-flag {
-    color: #3aabd5; }
 
 #calendar .calendar-container .alert-success {
   background-color: #e4f3e6; }
-  #calendar .calendar-container .alert-success i.fa-flag {
-    color: #79c485; }
 
 #calendar .calendar-container .alert-info {
   background-color: #e4f3e6; }
-  #calendar .calendar-container .alert-info i.fa-flag {
-    color: #2a2d33; }
 
 #calendar .calendar-container .alert-warning {
   background-color: #feecd5; }
-  #calendar .calendar-container .alert-warning i.fa-flag {
-    color: #fdb04a; }
 
 #calendar .calendar-container .alert-danger {
   background-color: #f6cece; }
-  #calendar .calendar-container .alert-danger i.fa-flag {
-    color: #e25c5c; }
 
 #calendar .calendar-container .week-container {
   margin-bottom: 40px; }
@@ -96,3 +86,103 @@ table.no-border > th, table.no-border td {
     #calendar .calendar-container .week-container > table .day-header {
       padding: 7px 30px;
       border-radius: 4px; }
+
+.schedule-detail .title {
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 5px; }
+
+.schedule-detail .heading {
+  font-size: 16px;
+  line-height: 30px;
+  color: #a1a3a5; }
+
+.schedule-detail .sub-title {
+  font-size: 14px; }
+
+.schedule-detail .top {
+  background: white; }
+  .schedule-detail .top .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center;
+    float: left; }
+  .schedule-detail .top .detail {
+    padding: 30px 20px;
+    width: calc(100% - 100px);
+    float: left; }
+    .schedule-detail .top .detail .circle {
+      float: left;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      padding-top: 26px;
+      text-align: center;
+      border: 1px solid #ccc;
+      font-size: 18px;
+      font-family: AvenirNextLTPro-Regular; }
+      .schedule-detail .top .detail .circle.circle-primary {
+        box-shadow: 0 0 0px 6px #e6f4fa;
+        border-color: #3aabd5;
+        color: #3aabd5; }
+      .schedule-detail .top .detail .circle.circle-warning {
+        box-shadow: 0 0 0px 6px #fff5e7;
+        border-color: #fdb04a;
+        color: #fdb04a; }
+    .schedule-detail .top .detail div[ui-arc-chart] svg tspan {
+      font-weight: normal !important; }
+
+.schedule-detail #schedule-overview table td {
+  padding: 5px !important; }
+
+.schedule-detail #schedule-notes textarea {
+  background: #f5f5f5;
+  padding: 10px 20px; }
+
+rzslider {
+  margin-top: 24px; }
+  rzslider .rz-current-pointer {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    border-radius: 50%;
+    color: transparent;
+    background: #44474b;
+    box-shadow: 0 0 0px 6px #c7c7c9;
+    left: 50% !important;
+    z-index: 3; }
+    rzslider .rz-current-pointer.rz-pointer.rz-active:after {
+      background: #f1f1f1; }
+    rzslider .rz-current-pointer:after {
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%; }
+  rzslider .rz-pointer {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 6px #fee7c8;
+    background: #fdb04a;
+    /* css styles for first and last pointer(added) */ }
+    rzslider .rz-pointer.rz-pointer.rz-active:after {
+      background: #f1f1f1; }
+    rzslider .rz-pointer:after {
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%; }
+    rzslider .rz-pointer.first, rzslider .rz-pointer.last {
+      color: transparent;
+      background: #61c571;
+      box-shadow: 0 0 0px 6px #ccecd1; }
+  rzslider .rz-bar-wrapper {
+    margin-top: -18px; }
+    rzslider .rz-bar-wrapper .rz-bar {
+      height: 6px; }
+  rzslider .rz-bubble {
+    display: none; }

@@ -1,0 +1,117 @@
+.flag-alert-header .action-item-progress-text {
+  font-family: "AvenirNextLTPro-Medium";
+  font-size: 14px;
+  margin-top: -5px; }
+
+.flag-alert-content-filter {
+  padding: 30px 15px 0px; }
+  .flag-alert-content-filter .dropdown-container {
+    display: block;
+    float: left;
+    width: 125px;
+    margin-left: 4px; }
+    .flag-alert-content-filter .dropdown-container .dropdown-title {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 11px;
+      color: #8b8b8b; }
+    .flag-alert-content-filter .dropdown-container .dropdown .dropdown-toggle {
+      font-family: "AvenirNextLTPro-Bold";
+      font-size: 11px;
+      color: #44474b; }
+    .flag-alert-content-filter .dropdown-container .dropdown .dropdown-menu {
+      padding: 0px; }
+    .flag-alert-content-filter .dropdown-container .dropdown .dropdown-menu > li > a {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 13px;
+      color: #3aabd5;
+      border-bottom: 1px solid #dedede; }
+    .flag-alert-content-filter .dropdown-container .dropdown .dropdown-menu li:first-of-type a {
+      border-radius: 4px 4px 0 0; }
+    .flag-alert-content-filter .dropdown-container .dropdown .dropdown-menu li:last-of-type a {
+      border: none;
+      border-radius: 0 0 4px 4px; }
+  .flag-alert-content-filter .width110 {
+    width: 110px; }
+  .flag-alert-content-filter .member-filter {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 9px;
+    width: 151px;
+    padding: 11px 16px; }
+  .flag-alert-content-filter .due-date-range {
+    display: inline-block;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #8b8b8b; }
+    .flag-alert-content-filter .due-date-range .date-info {
+      display: block;
+      margin: 9px; }
+      .flag-alert-content-filter .due-date-range .date-info .text-muted {
+        font-family: "AvenirNextLTPro-Regular";
+        font-size: 9px;
+        padding: 0 12px; }
+      .flag-alert-content-filter .due-date-range .date-info .spilter {
+        font-family: "AvenirNextLTPro-Bold";
+        font-size: 9px; }
+    .flag-alert-content-filter .due-date-range .inline-calendar {
+      display: block;
+      position: absolute;
+      min-height: 290px;
+      z-index: 9999; }
+
+.flag-alert-content-result {
+  padding: 0px 15px 40px; }
+  .flag-alert-content-result .hdingTopBox {
+    border-bottom: 0px;
+    padding: 15px 0 1px 0;
+    border-radius: 5px 5px 0 0; }
+    .flag-alert-content-result .hdingTopBox p {
+      padding-left: 20px;
+      color: #fff;
+      font-family: "AvenirNextLTPro-Medium";
+      font-size: 17px; }
+      .flag-alert-content-result .hdingTopBox p img {
+        margin-right: 10px; }
+  .flag-alert-content-result .high-priority .hdingTopBox {
+    background-color: #e25c5c; }
+  .flag-alert-content-result .medium-priority .hdingTopBox {
+    background-color: #fdae46; }
+  .flag-alert-content-result .low-priority .hdingTopBox {
+    background-color: #79c485; }
+  .flag-alert-content-result .icon .avatar {
+    width: 40px; }
+  .flag-alert-content-result table.priority tbody tr td {
+    vertical-align: middle; }
+    .flag-alert-content-result table.priority tbody tr td .month {
+      font-family: "AvenirNextLTPro-Medium";
+      font-size: 11px;
+      text-transform: uppercase; }
+    .flag-alert-content-result table.priority tbody tr td .day {
+      font-family: "AvenirNextLTPro-Medium";
+      font-size: 12px; }
+    .flag-alert-content-result table.priority tbody tr td .ticket {
+      background: #2a2d33;
+      border-radius: 5px;
+      color: #fff;
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 9px;
+      width: 55px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 6px; }
+    .flag-alert-content-result table.priority tbody tr td .category {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 12px;
+      color: #8b8b8b; }
+    .flag-alert-content-result table.priority tbody tr td .title {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 15px;
+      color: #44474b; }
+    .flag-alert-content-result table.priority tbody tr td .name {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px;
+      color: #3aabd5; }
+  .flag-alert-content-result table.priority tbody tr td.icon {
+    max-width: 40px; }
+  .flag-alert-content-result table.priority tbody tr td.date {
+    text-align: center; }

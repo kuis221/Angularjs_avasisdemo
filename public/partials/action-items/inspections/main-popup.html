@@ -1,0 +1,296 @@
+<div class="aii-page-wrapper mb30">
+    <!----================== Start TOP NAV BAR==================---->
+    <div class="row bankbg">
+        <div class="pull-left noPdingLeft noPdingRight close-section">
+            <div class="closeBox">
+                <p><a ui-sref="action-items.inspections">Close <i class="fa fa-caret-right"></i></a></p>
+            </div>
+        </div>
+        <div class="pull-left aii-page-title">
+            <div class="row no-margin">
+                <div class="col-md-6">
+                    <h2 class="heading">Inspection Name Here</h2>
+                    <p class="aii-heading-subtitle">Project Title Label</p>
+                </div>
+                <div class="col-md-6 aii-head-info">
+                    <div class="row no-margin">
+                        <table class="pull-right">
+                            <tr>
+                                <td class="item-title">INSPECTION#</td>
+                                <td><span class="label label-black">INS1393</span></td>
+                            </tr>
+                            <tr>
+                                <td class="item-title">DATE INITIATED</td>
+                                <td class="item-value">8/23/14</td>
+                            </tr>
+                            <tr>
+                                <td class="item-title">INITIATED BY</td>
+                                <td class="item-value">Eric Hoffman</td>
+                            </tr>
+                            <tr>
+                                <td class="item-title">STATUS</td>
+                                <td class="item-value"><span class="text-success">In Process</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="col-sm-8 item-title mt20">INSPECTION LEAD</label>
+                                <div class="col-sm-4">
+                                    <ui-select selected-item="inspectionLead" options="leadList"></ui-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----==================End TOP NAV BAR==================---->
+
+    <!----================== Start Inspection Content ==================---->
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-md-12">
+            <div class="row no-margin">
+                <div class="content-section">
+                    <div class="row aii-inspection-info">
+                        <div class="col-md-9 border-right">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p class="item-title">Type Of Inspection</p>
+                                            <span class="item-value">Ornare Gras</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-title">Inspection Date</p>
+                                            <span class="item-value">Aug 23, 2015</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="item-title">Inspector<i class="fa fa-pencil"></i></p>
+                                            <div>
+                                                <span class="item-value">Erik Hoffman</span>
+                                                <ul class="breadcrumbv22x">
+                                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861-569-6688</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="item-title">Company<i class="fa fa-pencil"></i></p>
+                                            <div>
+                                                <span class="item-value">Flora Corp</span>
+                                                <ul class="breadcrumbv22x">
+                                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861-569-6688</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="item-title">Progress</p>
+                                    <div class="row">
+                                        <div class="col-sm-6 pr0">
+                                            <div class="progress progress-medium">
+                                                <div class="progress-bar" style="width: {{inspectionProgress}}%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="col-sm-6 item-value">3 of 12 Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----================== End Inspection Content==================---->
+
+            <!----================== Start Items Outstanding ==================---->
+            <div class="row mt30">
+                <div class="col-md-12 aii-inspection-table">
+                    <div class="row no-margin">
+                        <h3 class="section-title pull-left">Items Outstanding</h3>
+                        <a class="sort pull-right tm-sortby" href="#">
+                            Sort by  <i class="fa fa-angle-down"></i>
+                        </a>
+                        <a class="sort pull-right tm-sortby mr15" href="#">
+                            Filter by  <i class="fa fa-angle-down"></i>
+                        </a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered aii-item-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Inspection Item</th>
+                                    <th>Due Date</th>
+                                    <th>Responsible</th>
+                                    <th>Scope of Work</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in outstandingItems">
+                                    <td class="col-flag">
+                                        <img ng-src="assets/img/{{getFlagIcon(item.status)}}" />
+                                    </td>
+                                    <td class="col-item">
+                                        <a class="text-primary" ng-click="showInspectionDetail();">{{ item.title }}</a>
+                                        <br>
+                                        <small>{{ item.titleStatus }}</small>
+                                    </td>
+                                    <td class="col-date">
+                                        {{item.dueDate}}
+                                    </td>
+                                    <td class="col-responsible">
+                                        <span class="text-primary">Bob Jones</span>
+                                        <ul class="breadcrumbv22x">
+                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861-569-6688</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-text">
+                                        {{ item.scope }}
+                                    </td>
+                                    <td class="col-text">
+                                        {{ item.location }}
+                                    </td>
+                                    <td class="col-status">
+                                        <div class="text-success approve-status">Approved By</div>
+                                        <div class="approve-name">{{ item.approveName }}</div>
+                                        <div class="text-success approve-date">{{ item.approveDate }}</div>
+                                    </td>
+                                    <td class="col-setting">
+                                        <div class="gear-dropdown">
+                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa fa-gear"></i>
+                                                <i class="fa fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-right aii-dropdown-menu" role="menu" style="top: 134px; right: 33.75px;">
+                                                <li><a href="">Edit</a></li>
+                                                <li><a href="">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!----================== End Items Outstanding ==================---->
+
+
+            <!----================== Start Items Completed ==================---->
+            <div class="row mt30">
+                <div class="col-md-12 aii-inspection-table">
+                    <h3 class="section-title">Items Completed</h3>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered aii-item-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Inspection Item</th>
+                                    <th>Due Date</th>
+                                    <th>Responsible</th>
+                                    <th>Scope of Work</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in completedItems">
+                                    <td class="col-flag">
+                                        <img ng-src="assets/img/{{getFlagIcon(item.status)}}" />
+                                    </td>
+                                    <td class="col-item">
+                                        <a class="text-primary" ng-click="showInspectionDetail();">{{ item.title }}</a>
+                                        <br>
+                                        <small>{{ item.titleStatus }}</small>
+                                    </td>
+                                    <td class="col-date">
+                                        {{item.dueDate}}
+                                    </td>
+                                    <td class="col-responsible">
+                                        <span class="text-primary">Bob Jones</span>
+                                        <ul class="breadcrumbv22x">
+                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861-569-6688</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-text">
+                                        {{ item.scope }}
+                                    </td>
+                                    <td class="col-text">
+                                        {{ item.location }}
+                                    </td>
+                                    <td class="col-status">
+                                        <div class="text-success approve-status">Approved By</div>
+                                        <div class="approve-name">{{ item.approveName }}</div>
+                                        <div class="text-success approve-date">{{ item.approveDate }}</div>
+                                    </td>
+                                    <td class="col-setting">
+                                        <div class="gear-dropdown">
+                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa fa-gear"></i>
+                                                <i class="fa fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-right aii-dropdown-menu" role="menu" style="top: 134px; right: 33.75px;">
+                                                <li><a href="">Edit</a></li>
+                                                <li><a href="">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!----================== End Items Completed ==================---->
+
+            <div class="row mt30">
+                <div class="col-md-12 text-right">
+                    <button class="btn btn-lg btn-info mr15">Submit - All Inspection Items Compliant</button>
+                    <button class="btn btn-lg btn-primary">Submit - Further Action Required</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    // Inspection Table Gear Button
+    $('body').on('shown.bs.dropdown', '.gear-dropdown', function () {
+        var offsetRight = $(this).parentsUntil('.aii-inspection-table').last().offset().left +
+                          $(this).parentsUntil('.aii-inspection-table').last().width() -
+                          $(this).find('a.dropdown-toggle').offset().left -
+                          $(this).find('a.dropdown-toggle').width();
+        var offsetTop = $(this).find('a.dropdown-toggle').offset().top - $(this).parentsUntil('.aii-inspection-table').last().offset().top
+
+        $(this).find('ul.dropdown-menu').css('top', offsetTop + 50);
+        $(this).find('ul.dropdown-menu').css('right', offsetRight + 10);
+    });
+});
+</script>

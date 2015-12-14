@@ -9,7 +9,8 @@ var app = angular.module('avasis',
         'ngDropzone',
         'ui.tree',
         'jkuri.slimscroll',
-        'ui.utils.masks'
+        'ui.utils.masks',
+        'rzModule'
     ]);
 
 app.controller('AppCtrl', [
@@ -167,6 +168,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('action-items.inspections-popup', {
+            url: '/inspections-popup',
+            templateUrl: "partials/action-items/inspections/main-popup.html",
+            controller: "InspectionsMainPopupCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('projects', {
             url: '/projects',
             abstract: true,
@@ -176,6 +185,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/projects/projects-overview.html',
             controller: 'ProjectsCtrl'
+        })
+        .state('projects.flag_alerts', {
+            url: '/flag-alerts?bucket&filter',
+            templateUrl: 'partials/projects/project-flag-alerts.html',
+            controller: 'ProjectFlagAlertsCtrl',
+            data: {
+                isHeaderHidden: true
+            }
+        })
+        .state('projects.start', {
+            url: '/start',
+            templateUrl: 'partials/projects/project-start.html',
+            controller: 'ProjectStartCtrl'
         })
         .state('documents', {
             url: '/documents',
@@ -235,8 +257,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('schedules', {
             url: '/schedules',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('schedules.main', {
+            url: '/main',
             templateUrl: 'partials/schedules/main.html',
             controller: 'SchedulesCtrl'
+        })
+        .state('schedules.detail', {
+            url: '/:id',
+            templateUrl: 'partials/schedules/detail.html',
+            controller: 'ScheduleDetailCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('sample', {
             url: '/sample',
