@@ -3,7 +3,7 @@
         <h2 class="heading">Your Project Photos</h2>
         <ul class="topSubtitle">
             <li>
-                <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
+                <a href="#">Wilmington 47<i class="ace-icon fa fa-angle-down"></i></a>
             </li>
             <li><span>47 Wilmington Ave  Arlington,<br /> VA 90125</span></li>
         </ul>
@@ -41,17 +41,7 @@
                     </div> <!-- /filters -->
 
                     <!-- folders -->
-                    <div class="folders">
-                        <img src="assets/img/addphotos.png" class="arrow">
-
-                        <h3>Folders <a href="">Add Folder</a></h3>
-
-                        <div class="col-md-12 text-center">
-                            <p class="mt30">There is no folder created yet.</p>
-                            <span>Click to “Add Folder” to create folder, and keep your photos organized</span>
-                            <br/>
-                        </div>
-                    </div><!-- /folders -->
+                    <folder-slider />
 
                 </div>
 
@@ -74,100 +64,70 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="#" class="pull-right options">Options</a>
+                            <a href="javascript:void(0)" class="pull-right options animated fadeIn" ng-click="toggleOption()">{{isOptionShow ? 'Done' : 'Options'}}</a>
+
+                            <ul class="list-unstyled option pull-right animated fadeInLeft" ng-show="isOptionShow">
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-share-square" aria-hidden="true"></i>
+                                        Share
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-folder"></i>
+                                            Move to Folder
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right chevron-down-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                        Copy to Folder
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        Download
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-tag" aria-hidden="true"></i>
+                                        Add Tags
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        Trash
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="row mt20">
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos10.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos2.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos3.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos4.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos5.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos6.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos7.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos8.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos9.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos10.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos2.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos3.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos4.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos5.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos6.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos7.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos8.jpg" alt=""/>
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <a href="#" class="thumbnail">
-                                <img src="assets/img/photos/Photos1.jpg" alt=""/>
-                            </a>
+                        <div class="col-xs-6 col-sm-4 col-md-2 photo" ng-repeat="photo in photos">
+                            <div class="overlay" ng-class="{'selected': photo.selected}">
+                                <div class="uploaded_by text-left">Bruce Wayne</div>
+                                <div class="uploaded_at text-left">May 20, 2015 - 2:34pm</div>
+                                <div class="desc text-left">Master bedroom cabinetry install</div>
+                            </div>
+                            <div class="thumbnail" ng-class="{'selected': photo.selected}">
+                                <input type="checkbox" ng-model="photo.selected" ng-show="isFolderSelected"></input>
+                                <img ng-src="assets/img/photos/{{photo.name}}" alt=""/>
+                            </div>
                         </div>
 
                     </div>
@@ -180,13 +140,3 @@
 
 <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-
-        var widthpho = $('.photos').width();
-        var unitWeight = parseInt(widthpho / 2) - 262 + 'px';
-
-        $('.photos .arrow').css('width', unitWeight);
-    });
-</script>
