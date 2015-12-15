@@ -10,7 +10,7 @@ app.controller('ScheduleDetailCtrl',
         ];
 
         $scope.slider = {
-            min: 21,
+            min: 10,
             max: 80,
             options: {
                 floor: 0,
