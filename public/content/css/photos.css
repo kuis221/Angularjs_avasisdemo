@@ -117,7 +117,7 @@
       position: absolute;
       left: 10px;
       top: 10px;
-      z-index: 999; }
+      z-index: 99; }
     .photos .panel-body .photo .thumbnail img {
       position: relative;
       top: 50%;
@@ -248,15 +248,8 @@
       box-shadow: none;
       margin: 0 auto; }
 
-.photos .panel-body .btn-group {
-  margin-left: 10px; }
-  .photos .panel-body .btn-group .dropdown-menu {
-    border: none;
-    left: inherit;
-    right: 0;
-    top: 45px;
-    min-width: 230px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
+.photos .panel-body .dropdown .dropdown-menu {
+  z-index: 999; }
 
 @media (max-width: 979px) {
   .photos .folders .arrow {
