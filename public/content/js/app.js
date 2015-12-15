@@ -223,7 +223,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('bids.compare', {
             url: '/compare',
             templateUrl: 'partials/bids/bids-compare.html',
-            controller: 'BidsCompareCtrl'
+            controller: 'BidsCompareCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('comm', {
             url: '/communication',
