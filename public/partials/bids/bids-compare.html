@@ -1,0 +1,141 @@
+<div class="row page-detail-header">
+    <div class="col-md-1 no-padding-horizontal">
+        <div class="closeBox">
+            <p>
+                <a ui-sref="bids.main">
+                    Close <i class="fa fa-caret-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-11 animated fadeInRight">
+        <div class="row page-detail-header-wrapper">
+            <div class="col-sm-12 col-md-12 col-lg-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading">Malesuada Fermentum Aenean Condimentum</h2>
+                        <ul class="topSubtitle">
+                            <li>
+                                <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
+                            </li>
+                            <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-3">
+                <div class="row bids-proj-info">
+                    <div class="pull-left text-right proj-info-title">
+                        <p>BID NUMBER</p>
+                        <P>DATE INITIATED</P>
+                        <P>INITIATED BY</P>
+                    </div>
+                    <div class="text-left proj-info-cont">
+                        <span>193</span>
+                        <p>8/23/14</p>
+                        <p>Bruce Wayne</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="bids-comp-wrapper">
+        <h3>Bid Comparison</h3>
+        <hr>
+        <div class="bids-comp-responsive">
+            <table class="table-bordered">
+                <thead>
+                    <tr>
+                        <th class="bids-table-sow">Scope of Work</th>
+                        <th class="bids-table-sow" ng-repeat="bid in bids"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bids-table-hd bids-table-high">Fireplace</td>
+                        <td class="bids-table-high" ng-repeat="bid in bids">SubContractor Name {{ bid.id }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Estimate Information</td>
+                        <td ng-repeat="bid in bids">{{ bid.estimation }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Duration</td>
+                        <td ng-repeat="bid in bids">{{ bid.duration }} days</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Materials</td>
+                        <td ng-repeat="bid in bids">${{ bid.material | number:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Labor</td>
+                        <td class="bids-table-active" ng-repeat="bid in bids">${{ bid.labor | number:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Equipment</td>
+                        <td ng-repeat="bid in bids">${{ bid.equipment | number:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Micellaneous</td>
+                        <td ng-repeat="bid in bids">${{ bid.miscell | number:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd bids-table-total">Total</td>
+                        <td ng-repeat="bid in bids">${{ bid.total | number:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Additional Requirements:</td>
+                        <td ng-repeat="bid in bids"></td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Company Information</td>
+                        <td ng-repeat="bid in bids">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox" ng-click="">
+                                <label>&nbsp;</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Insurance Requirements</td>
+                        <td ng-repeat="bid in bids">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox" ng-click="">
+                                <label>&nbsp;</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">Work History</td>
+                        <td ng-repeat="bid in bids">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox" ng-click="">
+                                <label>&nbsp;</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-hd">References</td>
+                        <td ng-repeat="bid in bids">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox" ng-click="">
+                                <label>&nbsp;</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bids-table-btn"></td>
+                        <td class="bids-table-btn" ng-repeat="bid in bids">
+                            <div class="text-center">
+                                <p>View Bid</p>
+                                <button type="button" class="btn btn-primary btn-lg">Award Bid</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

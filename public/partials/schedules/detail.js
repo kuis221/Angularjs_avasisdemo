@@ -10,12 +10,15 @@ app.controller('ScheduleDetailCtrl',
         ];
 
         $scope.slider = {
-          min: 21,
-          max: 80,
-          options: {
-            floor: 0,
-            ceil: 100
-          }
+            min: 10,
+            max: 80,
+            options: {
+                floor: 0,
+                ceil: 100,
+                onChange: function() {
+                    console.log('helo');
+                }
+            }
         };
         // define schedules to search by params[:id]
         $scope.schedules = [{

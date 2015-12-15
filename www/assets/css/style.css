@@ -1732,6 +1732,7 @@ video {
 
 /* WRAPPERS */
 #wrapper { width: 100%; overflow-x: hidden;}
+body > #wrapper { background: #2a2d33;}
 .wrapper {padding: 0 20px;}
 .wrapper-content { padding: 30px 15px 40px;}
 #page-wrapper { padding: 0 15px; min-height: 568px; position: relative !important;}

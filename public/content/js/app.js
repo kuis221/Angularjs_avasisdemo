@@ -58,7 +58,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "FinancialsBankdrawCtrl"
         })
         .state('financials.loan', {
-            url: '/construction',
+            url: '/construction?initialize',
             templateUrl: "partials/financials/loan.html",
             controller: "LoanCtrl"
         })
@@ -211,8 +211,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('bids', {
             url: '/bids',
-            templateUrl: 'partials/bids/bids.html',
+            abstract: true,
+            template: '<ui-view></ui-view>',
             controller: 'BidsCtrl'
+        })
+        .state('bids.main', {
+            url: '/main',
+            templateUrl: 'partials/bids/bids.html',
+            controller: 'BidsMainCtrl'
+        })
+        .state('bids.compare', {
+            url: '/compare',
+            templateUrl: 'partials/bids/bids-compare.html',
+            controller: 'BidsCompareCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('comm', {
             url: '/communication',

@@ -4,7 +4,7 @@ app.controller('SchedulesCtrl',
     ['$scope', '$state', '$uibModal', function($scope, $state, $uibModal) {
         $scope.pieOptions = {
             type: 'pie',
-            height: '80px',
+            height: '60px',
             offset: -90,
             sliceColors: ['#3aabd5', '#f1f1f1', '#f6b875'],
             disableTooltips: true
@@ -30,8 +30,8 @@ app.controller('SchedulesCtrl',
         $scope.schedules = [{
             id: _.uniqueId(),
             description: "Roof Dry-In",
-            start_date: moment('2015-8-17'),
-            end_date: moment('2015-8-20'),
+            start_date: moment('2015-08-17'),
+            end_date: moment('2015-08-20'),
             schedule_type: "success",
             status: 'success',
             completion_percentage: 60
@@ -39,8 +39,8 @@ app.controller('SchedulesCtrl',
         {
             id: _.uniqueId(),
             description: "Rough HVAC",
-            start_date: moment('2015-8-17'),
-            end_date: moment('2015-8-25'),
+            start_date: moment('2015-08-17'),
+            end_date: moment('2015-08-25'),
             schedule_type: "warning",
             status: "danger",
             completion_percentage: 40
@@ -48,8 +48,8 @@ app.controller('SchedulesCtrl',
         {
             id: _.uniqueId(),
             description: "Rough Electrical",
-            start_date: moment('2015-8-17'),
-            end_date: moment('2015-8-18'),
+            start_date: moment('2015-08-17'),
+            end_date: moment('2015-08-18'),
             schedule_type: "primary",
             status: "success",
             completion_percentage: 90
@@ -57,8 +57,8 @@ app.controller('SchedulesCtrl',
         {
             id: _.uniqueId(),
             description: "Framing",
-            start_date: moment('2015-8-17'),
-            end_date: moment('2015-8-17'),
+            start_date: moment('2015-08-17'),
+            end_date: moment('2015-08-17'),
             schedule_type: "danger",
             status: "success",
             completion_percentage: 100
@@ -66,8 +66,8 @@ app.controller('SchedulesCtrl',
         {
             id: _.uniqueId(),
             description: "Plumbing",
-            start_date: moment('2015-8-17'),
-            end_date: moment('2015-9-1'),
+            start_date: moment('2015-08-17'),
+            end_date: moment('2015-09-01'),
             schedule_type: "primary",
             status: "success",
             completion_percentage: 20
@@ -75,8 +75,8 @@ app.controller('SchedulesCtrl',
         {
             id: _.uniqueId(),
             description: "Landscaping",
-            start_date: moment('2015-8-24'),
-            end_date: moment('2015-9-4'),
+            start_date: moment('2015-08-24'),
+            end_date: moment('2015-09-04'),
             schedule_type: "success",
             status: "success",
             completion_percentage: 0
@@ -84,8 +84,8 @@ app.controller('SchedulesCtrl',
         {
             id: _.uniqueId(),
             description: "Fire Sprinkler Rough-In",
-            start_date: moment('2015-9-1'),
-            end_date: moment('2015-9-4'),
+            start_date: moment('2015-09-01'),
+            end_date: moment('2015-09-04'),
             schedule_type: "success",
             status: "success",
             completion_percentage: 0

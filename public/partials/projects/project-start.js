@@ -18,11 +18,14 @@ app.controller('ProjectStartCtrl' ,
                 id: 1,
                 name: 'Condominium'
             }, {
-                id: 1,
+                id: 2,
                 name: 'Apartment'
             }, {
-                id: 1,
+                id: 3,
                 name: 'Duplex'
+            }, {
+                id: 4,
+                name: 'Single Unit House'
         }];
 
         $scope.countries = [
@@ -65,6 +68,9 @@ app.controller('ProjectStartCtrl' ,
             }, {
                 id: 7,
                 name: 'Hawaii'
+            }, {
+                id: 8,
+                name: 'Virginia'
         }];
 
         $scope.roles = [
