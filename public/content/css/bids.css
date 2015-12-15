@@ -201,9 +201,27 @@ p {
     margin-right: 20px;
 }
 
+.bids-proj-info .proj-info-title {
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 9px;
+}
+.bids-proj-info .proj-info-cont {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 12px;
+}
+
+.bids-proj-info .proj-info-cont span {
+    display: block;
+    margin-bottom: 5px;
+}
+
 .bids-comp-wrapper {
     background-color: white;
     padding: 20px;
+}
+.bids-comp-wrapper h3 {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 22px;
 }
 .bids-comp-wrapper table thead tr th,{
     background-color: #f9f9f9;
@@ -252,6 +270,10 @@ p {
 }
 .bids-table-btn {
     height: 120px;
+}
+.bids-table-btn p {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 14px;
 }
 .bids-table-sow {
     height: 50px;
