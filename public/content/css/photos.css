@@ -76,6 +76,8 @@
 
 .photos .panel-body .photo {
   position: relative; }
+  .photos .panel-body .photo .selected {
+    border-color: #e25c5c !important; }
   .photos .panel-body .photo .overlay {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -109,7 +111,13 @@
     border-radius: 0;
     border-color: #fff;
     border-width: 2px;
-    background-color: #f9f9f9; }
+    background-color: #f9f9f9;
+    position: relative; }
+    .photos .panel-body .photo .thumbnail input[type=checkbox] {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: 999; }
     .photos .panel-body .photo .thumbnail img {
       position: relative;
       top: 50%;

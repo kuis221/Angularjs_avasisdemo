@@ -23,7 +23,7 @@
         <ul class="clearfix">
             <li ng-repeat="folder in folders">
                 <img ng-src="assets/img/photos/{{folder.thumbnail}}" alt=""/>
-                <div class="mask">
+                <div class="mask" ng-click="selectFolder(folder)">
                     <div class="folder-name">{{folder.name}}</div>
                     <div class="folder-date">{{folder.date}}</div>
                     <div class="folder-number-photos">{{folder.number_of_photos > 0 ? folder.number_of_photos : 'No'}}{{folder.number_of_photos > 1 ? ' Photos' : ' Photo'}}</div>

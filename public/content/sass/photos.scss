@@ -109,6 +109,10 @@
     .photo {
         position: relative;
 
+        .selected {
+            border-color: #e25c5c !important;
+        }
+
         .overlay {
             background: rgba(0,0,0,.5);
             text-align: center;
@@ -151,6 +155,14 @@
           border-color: #fff;
           border-width: 2px;
           background-color: #f9f9f9;
+          position: relative;
+
+          input[type=checkbox] {
+              position: absolute;
+              left: 10px;
+              top: 10px;
+              z-index: 999;
+          }
 
           img {
               position: relative;
