@@ -47,6 +47,9 @@
         margin-left: 10%;
         height: 70px; }
     .project-start .ps-file-dropzone .dropzone-title {
-      margin-left: calc(10% + 55px);
       top: 30%;
-      position: absolute; }
+      position: absolute;
+      left: calc(50% - 150px); }
+      @media (min-width: 1200px) and (max-width: 1370px) {
+        .project-start .ps-file-dropzone .dropzone-title {
+          left: calc(50% - 115px); } }

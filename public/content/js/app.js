@@ -59,7 +59,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "FinancialsBankdrawCtrl"
         })
         .state('financials.loan', {
-            url: '/construction',
+            url: '/construction?initialize',
             templateUrl: "partials/financials/loan.html",
             controller: "LoanCtrl"
         })
@@ -212,8 +212,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('bids', {
             url: '/bids',
-            templateUrl: 'partials/bids/bids.html',
+            abstract: true,
+            template: '<ui-view></ui-view>',
             controller: 'BidsCtrl'
+        })
+        .state('bids.main', {
+            url: '/main',
+            templateUrl: 'partials/bids/bids.html',
+            controller: 'BidsMainCtrl'
+        })
+        .state('bids.compare', {
+            url: '/compare',
+            templateUrl: 'partials/bids/bids-compare.html',
+            controller: 'BidsCompareCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('comm', {
             url: '/communication',
@@ -229,6 +243,31 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/main',
             templateUrl: 'partials/procurement/list.html',
             controller: 'ProcurementsCtrl'
+        })
+        .state('procurement.create', {
+            url:'/create',
+            templateUrl: 'partials/procurement/create.html',
+            controller: 'ProcurementCreateCtrl',
+            data: {
+                isHeaderHidden: true
+            },
+            abstract: true,
+        })
+        .state('procurement.create.step1', {
+            url:'/step1',
+            templateUrl: 'partials/procurement/steps/step1.html',
+        })
+        .state('procurement.create.step2', {
+            url:'/step2',
+            templateUrl: 'partials/procurement/steps/step2.html',
+        })
+        .state('procurement.create.step3', {
+            url:'/step3',
+            templateUrl: 'partials/procurement/steps/step3.html',
+        })
+        .state('procurement.create.step4', {
+            url:'/step4',
+            templateUrl: 'partials/procurement/steps/step4.html',
         })
         .state('payment-application', {
             url: '/financials/payment-application',

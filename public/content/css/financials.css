@@ -198,9 +198,9 @@
 }
 #bankdraw-finalize .label {
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
     margin-top: 4px;
-    padding: 1px 5px; 
+    padding: 1px 5px;
 }
 #bankdraw-finalize #stats td {
     padding: 30px;
@@ -345,7 +345,8 @@
     margin-bottom: 20px;
 }
 .loan-info-input input {
-    height: 50px;
+    height: 51px;
+    padding: 15px;
     background-color: #f9f9f9;
 }
 .loan-info-input input:focus {
@@ -358,14 +359,33 @@
 }
 
 .loan-info-input.long {
-    width: 200px;
+    width: 19%;
 }
 .loan-info-input.medium {
-    width: 160px;
+    width: 16%;
+}
+.loan-info-input.end {
+    padding-right: 0px;
 }
 .loan-info-input.short {
-    width: 140px;
+    width: 14%;
 }
+
+@media (max-width: 768px) {
+    .loan-info-input {
+        padding-right: 0px;
+    }
+    .loan-info-input.long {
+        width: 100%;
+    }
+    .loan-info-input.medium {
+        width: 100%;
+    }
+    .loan-info-input.short {
+        width: 100%;
+    }
+}
+
 .loan-wrapper .normal-row {
     padding-top: 10px;
     padding-bottom: 5px;

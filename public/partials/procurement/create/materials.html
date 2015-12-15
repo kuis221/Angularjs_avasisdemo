@@ -1,0 +1,33 @@
+<div class="row material-wrapper">
+    <div class="col-md-9 col-sm-12 no-padding">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step" ng-class="getClass(1)">
+                    <a ui-sref="procurement.create.step1" type="button" class="btn btn-default btn-circle"></a>
+                    <p>Selection</p>
+                </div>
+                <div class="stepwizard-step" ng-class="getClass(2)">
+                    <a ui-sref="procurement.create.step2" type="button" class="btn btn-default btn-circle"></a>
+                    <p>Procurement</p>
+                </div>
+                <div class="stepwizard-step" ng-class="getClass(3)">
+                    <a ui-sref="procurement.create.step3" type="button" class="btn btn-default btn-circle"></a>
+                    <p>Approval</p>
+                </div>
+                <div class="stepwizard-step" ng-class="getClass(4)">
+                    <a ui-sref="procurement.create.step4" type="button" class="btn btn-default btn-circle"></a>
+                    <p>Order</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 no-padding">
+        <div class="pull-right">
+            <button class="btn btn-cancel btn-lg">Save</button>
+            <button class="btn btn-success btn-lg" ng-click="goNext();" ng-if="!isFinal()">Next</button>
+            <button class="btn btn-success btn-lg" ng-if="isFinal()">Finalize</button>
+        </div>
+    </div>
+</div>
+
+<div class="row material-wrapper no-border" ui-view></div>

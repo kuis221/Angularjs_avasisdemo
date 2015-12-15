@@ -185,6 +185,9 @@ p {
     display: inline-block;
     padding-right: 20px;
 }
+.detailed-opt a {
+    color: #3aabd5;
+}
 .detailed-opt .border-right {
     margin-right: 20px;
 }
@@ -192,4 +195,116 @@ p {
 .btn-bids {
     width: 125px;
     font-family: "AvenirNextLTPro-Demi";
+}
+
+.bids-proj-info {
+    margin-top: 32px;
+}
+.bids-proj-info div {
+    margin-right: 20px;
+}
+
+.bids-proj-info .proj-info-title {
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 9px;
+}
+.bids-proj-info .proj-info-cont {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 12px;
+}
+.bids-proj-info .proj-info-cont p {
+    margin-top: 3px;
+}
+.bids-proj-info .proj-info-cont span {
+    background-color: #44474b;
+    color: white;
+    border-radius: 3px;
+    padding-top: 2px;
+}
+
+.bids-proj-info .proj-info-cont span {
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bids-proj-info .proj-info-cont p {
+    margin-bottom: 5px;
+}
+
+.bids-comp-wrapper {
+    background-color: white;
+    padding: 20px;
+}
+.bids-comp-wrapper h3 {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 22px;
+}
+.bids-comp-wrapper table thead tr th,{
+    background-color: #f9f9f9;
+    border: none;
+    width: 200px;
+}
+.bids-comp-wrapper table tr {
+    height: 35px;
+}
+
+.bids-comp-wrapper table td {
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+}
+
+.bids-comp-wrapper table {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 11px;
+}
+.bids-comp-wrapper table .bids-table-hd {
+    padding-left: 30px;
+    text-align: left;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 11px;
+    color: #808080;
+    background-color: #fcfcfc;
+}
+.bids-comp-wrapper table .bids-table-total {
+    color: #333;
+}
+.bids-comp-wrapper table .bids-table-high {
+    height: 50px;
+    padding-left: 15px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+}
+.bids-comp-wrapper table tbody .bids-table-high {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #3aabd5;
+}
+
+.bids-table-active {
+    color: #79c485;
+}
+.bids-table-btn {
+    height: 120px;
+}
+.bids-table-btn p {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 14px;
+}
+.bids-table-sow {
+    height: 50px;
+    padding-left: 15px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #808080;
+    border: none !important;
+}
+
+.bids-comp-responsive {
+    overflow: auto;
+}
+
+.bids-comp-wrapper .checkbox {
+    margin-left: 11px;
 }

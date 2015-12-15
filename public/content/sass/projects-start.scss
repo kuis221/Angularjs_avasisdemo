@@ -74,9 +74,13 @@
         }
 
         .dropzone-title {
-            margin-left: calc(10% + 55px);
             top: 30%;
             position: absolute;
+            left: calc(50% - 150px);
+
+            @media (min-width: 1200px) and (max-width: 1370px) {
+                left: calc(50% - 115px);
+            }
         }
     }
 }

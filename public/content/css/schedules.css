@@ -204,6 +204,10 @@ rzslider {
   rzslider .rz-bar-wrapper {
     margin-top: -18px; }
     rzslider .rz-bar-wrapper .rz-bar {
-      height: 6px; }
+      height: 6px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/Pjx438GPICPj48RRDMxEAmGgkKAAAMAzKsECXuvf1AAAAAASUVORK5CYII=);
+      background-color: white; }
   rzslider .rz-bubble {
     display: none; }
+  rzslider .rz-bar.rz-selection {
+    background: #f1f1f1; }

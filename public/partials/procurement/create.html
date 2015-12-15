@@ -1,0 +1,108 @@
+<div class="procurement-create">
+    <div class="row page-detail-header procurement-create-header">
+        <div class="col-sm-1 no-padding-horizontal">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="procurement.main">
+                        Close <i class="fa fa-caret-right"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-11">
+            <div class="row pc-header-title">
+                <div class="col-md-8">
+                    <h2 class="heading">Create New Procurement</h2>
+                    <input type="text" placeholder="This is My Procurement Name">
+                    <div class="info">
+                        <span class="info-title">Type of Procurement</span><br/>
+                        <span class="info-value">{{ procurementType }}</span>
+                    </div>
+                    <div class="info">
+                        <span class="info-title">Scope of Work</span><br/>
+                        <span class="info-value">{{ workScope }}</span>
+                    </div>
+                    <div class="info">
+                        <span class="info-title">Due Date</span><br/>
+                        <span class="info-value">{{ dateDue }}</span>
+                    </div>
+                </div>
+                <div class="col-md-4 additional-info">
+                    <div class="details">
+                        <span class="more-info-name">Procurement #</span>
+                        <span class="more-info-value"><span class="pc-info-title">{{ procurementNumber }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">Date initiated</span>
+                        <span class="more-info-value"><span class="pc-info-date">{{ dateInit }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">initiated by</span>
+                        <span class="more-info-value"><span class="pc-info-date">{{ creator }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">Status</span>
+                        <span class="more-info-value"><span class="pc-info-status text-success">{{ procurementStatus }}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="procurement-create-content">
+                <div class="row person-info-wrapper">
+                    <div class="person-info">
+                        <div class="info-panel">
+                            <div class="name">
+                                <span class="name-header">Ordered by</span><br/>
+                                <span class="name-value text-primary">{{ selectionBy.name }}</span>
+                            </div>
+                            <div class="date">
+                                <span class="date-header">Due Date</span><br/>
+                                <span class="date-value">{{ selectionBy.date }}</span>
+                            </div>
+                        </div>
+                        <div class="info-panel">
+                            <div class="name">
+                                <span class="name-header">Procurement by</span><br/>
+                                <span class="name-value text-primary">{{ procurementBy.name }}</span>
+                            </div>
+                            <div class="date">
+                                <span class="date-header">Due Date</span><br/>
+                                <span class="date-value">{{ procurementBy.date }}</span>
+                            </div>
+                        </div>
+                        <div class="info-panel">
+                            <div class="name">
+                                <span class="name-header">Approval by</span><br/>
+                                <span class="name-value text-primary">{{ approvalBy.name }}</span>
+                            </div>
+                            <div class="date">
+                                <span class="date-header">Due Date</span><br/>
+                                <span class="date-value">{{ approvalBy.date }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg pull-right">Edit</button>
+                </div>
+                <div class="row person-info-wrapper">
+                    <span class="description-title">Description of Selection:</span>
+                    <span class="description-text">{{ desc }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <uib-tabset>
+            <uib-tab heading="Materials">
+                <div ng-include="'partials/procurement/create/materials.html'"></div>
+            </uib-tab>
+            <uib-tab heading="Equipment">Equipment</uib-tab>
+            <uib-tab heading="Notes">Notes</uib-tab>
+        </uib-tabset>
+    </div>
+</div>
+
+

@@ -255,6 +255,8 @@ rzslider {
         margin-top: -18px;
         .rz-bar {
             height: 6px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/Pjx438GPICPj48RRDMxEAmGgkKAAAMAzKsECXuvf1AAAAAASUVORK5CYII=);
+            background-color: white;
         }
 
     }
@@ -262,6 +264,6 @@ rzslider {
         display: none;
     }
     .rz-bar.rz-selection {
-        
+        background: #f1f1f1;
     }
 }

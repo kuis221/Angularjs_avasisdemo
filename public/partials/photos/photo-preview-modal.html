@@ -1,0 +1,72 @@
+<div class="modal-header clearfix">
+  <button type="button" data-dismiss="modal" aria-label="Close" class="close" ng-click="cancel()">
+      <i class="fa fa-times-circle"></i>
+  </button>
+  <div class="row mt20">
+      <div class="col-md-6">
+          <h2>
+              Wilmington 47<br>
+              <span>Roof Detail Front View.jpg</span>
+          </h2>
+      </div>
+      <div class="col-md-6 pt20">
+          <ul class="list-unstyled text-right">
+              <li>
+                  <a href=""><i class="fa fa-share-square"></i>Share</a>
+              </li>
+              <li>
+                  <a href=""><i class="fa fa-download"></i>Download</a>
+              </li>
+              <li>
+                  <a href=""><i class="fa fa-trash"></i>Trash</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="modal-body">
+  <img src="assets/img/photos/photo54.jpg" alt="" />
+  <div class="comments-photo">
+      <div class="comment-author">
+          Bruce Wayne <span>Aug 16, 2015 - 2:34pm</span>
+      </div>
+      <div class="comment-description">
+          Front view of Wilmington 47 upon completion of the Roof Dry-In process.
+      </div>
+      <div class="comment-tags">
+          <ul class="list-unstyled">
+              <li ng-repeat="tag in tags">
+                  {{tag}} <i class="fa fa-times"></i>
+              </li>
+          </ul>
+          <a class="add-tags"><i class="fa fa-plus"></i>Add</a>
+      </div>
+
+      <div class="comment-users" ng-repeat="comment in comments">
+          <a href="" class="edit-comment"><i class="fa fa-pencil"></i>Edit</a>
+          <div class="avatar">
+              <img ng-src="assets/img/avasisteam/{{comment.avatar}}" alt="" />
+          </div>
+          <div class="comments">
+              <div class="author">
+                  {{comment.author}} <span>{{comment.date}}</span>
+              </div>
+              <p>
+                  {{comment.desc}}
+              </p>
+          </div>
+      </div>
+
+      <form class="" action="" method="POST">
+          <textarea placeholder="Add Comment..."></textarea>
+      </form>
+
+  </div>
+</div>
+<div class="modal-footer">
+
+  <button type="submit" class="btn btn-cancel btn-sm" data-dismiss="modal" aria-label="Close">cancel</button>
+  <button type="submit" class="btn btn-success btn-sm">post comment</button>
+
+</div>
