@@ -64,9 +64,9 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="javascript:void(0)" class="pull-right options animated fadeIn" ng-click="toggleOption()">{{isOptionShow ? 'Done' : 'Options'}}</a>
+                            <a href="javascript:void(0)" class="pull-right options" ng-click="toggleOption()">{{isOptionShow ? 'Done' : 'Options'}}</a>
 
-                            <ul class="list-unstyled option pull-right animated fadeInLeft" ng-show="isOptionShow">
+                            <ul class="list-unstyled option pull-right" ng-show="isOptionShow">
                                 <li>
                                     <button type="button" class="btn btn-default" aria-label="Left Align">
                                         <i class="fa fa-share-square" aria-hidden="true"></i>
@@ -119,7 +119,7 @@
 
                     <div class="row mt20">
                         <div class="col-xs-6 col-sm-4 col-md-2 photo" ng-repeat="photo in photos">
-                            <div class="overlay" ng-class="{'selected': photo.selected}">
+                            <div class="overlay" ng-class="{'selected': photo.selected}" ng-click="showPreviewModal()">
                                 <div class="uploaded_by text-left">Bruce Wayne</div>
                                 <div class="uploaded_at text-left">May 20, 2015 - 2:34pm</div>
                                 <div class="desc text-left">Master bedroom cabinetry install</div>

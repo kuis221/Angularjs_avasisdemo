@@ -1,5 +1,5 @@
 app.controller('PhotosCtrl',
-    ['$scope', function($scope) {
+    ['$scope', '$uibModal', function($scope, $uibModal) {
         $scope.folders = [
             {
                 id: 1,
@@ -206,5 +206,19 @@ app.controller('PhotosCtrl',
                     p.selected = false;
             });
         };
+
+        $scope.showPreviewModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/photos/photo-preview-modal.html',
+                controller: 'PhotoPreviewModalCtrl',
+                windowTopClass: 'photos-preview'
+            });
+
+            modalInstance.result.then(function(res) {
+
+            }, function() {
+
+            });
+        }
 
     }]);
