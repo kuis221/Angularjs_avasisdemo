@@ -1,0 +1,378 @@
+$demi: "AvenirNextLTPro-Demi";
+$bold: "AvenirNextLTPro-Bold";
+$medium: "AvenirNextLTPro-Medium";
+$regular: "AvenirNextLTPro-Regular";
+$italic: "AvenirNextLTPro-Italic";
+
+$c-red: #ed5565;
+$c-orange: #f8ac59;
+$c-green: #79c485;
+
+$c-primary: #3aabd5;
+$c-gray-border: #eee;
+$c-fa-icon: #aaa;
+$c-text-gray: #808080;
+
+.dash-wrapper {
+    .hdingTopBox {
+        p {
+            font-size: 16px;
+            font-family: $demi;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .dash-flag-red {
+        background-color: $c-red;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 13px;
+        height: 13px;
+        float: left;
+    }
+
+    .dash-flag-orange {
+        background-color: $c-orange;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 13px;
+        height: 13px;
+        float: left;
+    }
+
+    .dash-flag-green {
+        background-color: $c-green;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 13px;
+        height: 13px;
+        float: left;
+    }
+
+    .dash-flag-blue {
+        background-color: $c-primary;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 13px;
+        height: 13px;
+        float: left;
+    }
+
+    .items-today {
+        border: 1px solid #ececec;
+        border-radius: 5px;
+        margin-top: 0px;
+        height: auto;
+
+        .td-number {
+            width: 100px;
+        }
+
+        td span {
+            color: #3aabd5;
+            font-size: 12p;
+            font-family: $medium;
+        }
+    }
+
+    .no-border-top {
+        border-top: 0px !important;
+    }
+}
+
+.dash-flag-section {
+    .flag-title {
+        font-family: $demi;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .flag-item {
+        float: left;
+        margin-top:5px;
+        margin-right: 20px;
+
+        .flag-number {
+            font-family: $demi;
+            font-size: 13px;
+            margin-right: 5px;
+        }
+
+        .flag-percent {
+            font-family: $regular;
+            font-size: 12px;
+        }
+    }
+
+    .flag-item:last-child {
+        margin-right: 0px;
+    }
+
+    .dash-flag-project {
+        position: relative;
+
+        .flat-item:last-child {
+            margin-right: 0px;
+        }
+
+        .alerts-count {
+            font-size: 10px;
+            font-family: $medium;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+        }
+    }
+}
+
+.dash-white-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dash-updates-section {
+    font-size: 12px;
+    font-family: $regular;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+
+    .fa {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .btn-xs {
+        outline: none;
+        width: 60px;
+    }
+}
+
+.dash-projects {
+    .heading {
+        padding: 20px 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .accordion-group {
+        padding-top: 15px;
+    }
+
+    .project-accordion {
+        margin-top: 15px;
+
+        .project-title {
+            font-size: 16px;
+            font-family: $demi;
+            color: $c-primary;
+
+            .fa {
+                margin-right: 20px;
+            }
+        }
+
+        .project-address {
+            font-size: 11px;
+            font-family: $demi;
+            color: $c-text-gray;
+            margin-bottom: 15px;
+        }
+
+        .project-role {
+            font-size: 11px;
+            font-family: $demi;
+            margin-top: 15px;
+        }
+
+        .project-role-title {
+            color: $c-text-gray;
+        }
+
+        .dash-flag-section {
+            margin-left: 30px;
+            margin-bottom: 15px;
+            margin-top: 2px;
+        }
+
+        .user-section {
+            margin-right: 40px;
+        }
+
+        .user-photo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .user-title {
+            margin-bottom: 5px;
+            font-size: 11px;
+            font-family: $demi;
+            color: $c-primary;
+        }
+
+        .user-assigned {
+            font-size: 9px;
+            font-family: $italic;
+            color: $c-text-gray;
+        }
+
+        .user-assignee {
+            font-size: 10px;
+            font-family: $medium;
+            margin-bottom: 10px;
+            width: 250px;
+            word-wrap: break-word;
+        }
+
+        .user-status-label {
+            text-transform: uppercase;
+            font-family: $regular;
+            font-size: 9px;
+        }
+
+        .user-status {
+            float: left;
+            margin-right: 20px;
+            font-family: $bold;
+            font-size: 9px;
+            text-transform: uppercase;
+        }
+
+        .slick-prev,
+        .slick-next {
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-top: -30px;
+            cursor: pointer;
+            color: transparent;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+
+        .slick-prev {
+            left: -10px;
+        }
+
+        .slick-prev:before {
+            content: "\f053"!important;
+        }
+
+        .slick-next{
+            right: -15px;
+        }
+
+        .slick-next:before{
+            content: "\f054"!important;
+        }
+
+        .slick-prev:before, .slick-next:before{
+            font-family: fontawesome !important;
+            font-size: 15px !important;
+            color: #333 !important;
+        }
+
+        .slick-disabled {
+            opacity: 0.5;
+        }
+
+        .chart-section {
+            position: relative;
+            margin-right: 15px;
+        }
+
+        .chart-label {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .project-est-section {
+            display: table;
+            margin-top: 3px;
+        }
+
+        .project-sf-title {
+            float: left;
+            font-family: $regular;
+            font-size: 12px;
+            width: 170px;
+        }
+
+        .project-sf-value {
+            float: right;
+            font-family: $bold;
+            font-size: 11px;
+            margin-right: 30px;
+        }
+
+        .border-top {
+            border-top: 1px solid $c-gray-border;
+        }
+
+        .border-right {
+            border-right: 1px solid $c-gray-border;
+        }
+
+        .items-today {
+            border: 0px;
+            margin-top: 15px;
+
+            .table th {
+                border-bottom: 0px;
+            }
+
+            .table td {
+                padding: 10px;
+                vertical-align: middle;
+            }
+
+            .table p {
+                margin: 0px;
+            }
+
+            .prj-itm-comp {
+                font-size: 10px;
+            }
+
+            .member-count {
+                font-size: 12px;
+                font-family: $regular;
+                text-align: right;
+            }
+
+            .td-photo img {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            .td-contact img {
+                padding: 0px 10px;
+                border-right: 1px solid #ddd;
+                width: 35px;
+            }
+
+            .td-contact img:last-child {
+                border-right: 0px;
+            }
+        }
+    }
+
+    .panel-default>.panel-heading {
+        color: #333;
+        background-color: #fff;
+        border-color: #ddd;
+        padding: 15px 15px 0px 15px;
+    }
+}

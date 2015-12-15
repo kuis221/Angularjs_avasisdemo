@@ -283,6 +283,10 @@ table.tm-scroll-table tbody {
     border-color: #66afe9;
 }
 
+.riskmanagement .ibox-tools {
+    position: static;
+}
+
 .riskmanagement .ibox-tools .dropdown-menu > li > a {
     padding: 17px;
     font-size: 13px;

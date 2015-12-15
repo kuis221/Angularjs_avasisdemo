@@ -10,7 +10,8 @@ var app = angular.module('avasis',
         'ui.tree',
         'jkuri.slimscroll',
         'ui.utils.masks',
-        'rzModule'
+        'rzModule',
+        'slick'
     ]);
 
 app.controller('AppCtrl', [
@@ -31,11 +32,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     $urlRouterProvider.otherwise("/projects/main");
 
     return $stateProvider
-        // .state('dashboards', {
-        //     url: '/',
-        //     templateUrl: "partials/dashboards/dashboards.html",
-        //     controller: "DashboardsCtrl"
-        // })
+        .state('dashboard', {
+            url: '/',
+            templateUrl: "partials/dashboards/dashboard.html",
+            controller: "DashboardCtrl"
+        })
         .state('financials', {
             url: '/financials',
             abstract: true,

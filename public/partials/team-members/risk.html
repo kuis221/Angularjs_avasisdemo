@@ -1078,16 +1078,15 @@
 <script>
     $(document).ready(function() {
         // Inspection Table Gear Button
-        // $('body').on('shown.bs.dropdown', '.gear-dropdown', function () {
-        //     debugger;
-        //     var offsetRight = $(this).parentsUntil('.risk-table').last().offset().left +
-        //                       $(this).parentsUntil('.risk-table').last().width() -
-        //                       $(this).find('a.dropdown-toggle').offset().left -
-        //                       $(this).find('a.dropdown-toggle').width();
-        //     var offsetTop = $(this).find('a.dropdown-toggle').offset().top - $(this).parentsUntil('.risk-table').last().offset().top
-        //
-        //     $(this).find('ul.dropdown-menu').css('top', offsetTop + 10);
-        //     $(this).find('ul.dropdown-menu').css('right', offsetRight - 30);
-        // });
+        $('body').on('shown.bs.dropdown', '.gear-dropdown', function () {
+            var offsetRight = $(this).parentsUntil('.risk-table').last().offset().left +
+                              $(this).parentsUntil('.risk-table').last().width() -
+                              $(this).find('a.dropdown-toggle').offset().left -
+                              $(this).find('a.dropdown-toggle').width();
+            var offsetTop = $(this).find('a.dropdown-toggle').offset().top - $(this).parentsUntil('.risk-table').last().offset().top
+
+            $(this).find('ul.dropdown-menu').css('top', offsetTop + 70);
+            $(this).find('ul.dropdown-menu').css('right', offsetRight - 10);
+        });
     });
 </script>
