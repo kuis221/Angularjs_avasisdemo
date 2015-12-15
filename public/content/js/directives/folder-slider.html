@@ -22,7 +22,7 @@
     <div class="frame" id="basic">
         <ul class="clearfix">
             <li ng-repeat="folder in folders">
-                <img src="assets/img/photos/Photos1.jpg" alt=""/>
+                <img ng-src="assets/img/photos/{{folder.thumbnail}}" alt=""/>
                 <div class="mask">
                     <div class="folder-name">{{folder.name}}</div>
                     <div class="folder-date">{{folder.date}}</div>

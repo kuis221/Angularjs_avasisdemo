@@ -7,8 +7,8 @@ app.directive('folderSlider', function ($compile, $timeout) {
                 var $frame  = $('#basic');
                 var $slidee = $frame.children('ul').eq(0);
                 var $wrap   = $frame.parent();
-                var foldername = '<div class=add-name><i class=\"remove fa fa-times-circle\""></i><i class=\"accept fa fa-check-circle\"></i><input id=new-name value=\"Folder Name\" /></div>'
-                var newitem = '<li class=\"new animated fadeInLeft\">' + foldername + '<div class=mask><div class=folder-name>'+ 'Folder Name' +'</div><div class=folder-date>'+ 'nov 13, 2015' +'</div><div class=folder-number-photos>'+ 'No Photos' +'</div></div></li>';
+                var foldername = '<div class=add-name><i class=\"remove fa fa-times-circle\"></i><i class=\"accept fa fa-check-circle\"></i><input id=new-name value=\"Folder Name\" /></div>'
+                var newitem = '<li class=\"new animated fadeInLeft\">' + foldername + '<div class=mask><div class=folder-name>'+ 'Folder Name' +'</div><div class=folder-date>'+ 'Nov 13, 2015' +'</div><div class=folder-number-photos>'+ 'No Photos' +'</div></div></li>';
 
                 // Call Sly on frame
                 $frame.sly({
@@ -39,15 +39,24 @@ app.directive('folderSlider', function ($compile, $timeout) {
                 });
 
                 // Add item
-                scope.addFolder = function () {
+                scope.addFolder = function() {
                     $frame.sly('add', newitem, 0);
                     return false;
                 };
 
                 // Remove item
-                scope.removeFolder = function () {
-                    $frame.sly('remove', -1);
-                };
+                $('body').on('click', '.add-name .remove', function(){
+                });
+
+                $('body').on('click', '.add-name .accept', function(){
+                    var folderName = $(this).next().val();
+                    $(this).closest('.add-name').slideUp(function() {
+                        if (folderName != '')
+                            $(this).parent().find('.mask .folder-name').html(folderName);
+                        $(this).parent().find('.mask').slideDown();
+                    });
+                });
+
 
                 // change name folder
                 $wrap.find('.frame').on('click', '.new', function(e){

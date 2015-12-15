@@ -8,10 +8,12 @@
   border-radius: 5px; }
 
 .photos h3 {
-  font-family: 'AvenirNextLTPro-Demi'; }
+  font-family: 'AvenirNextLTPro-Medium';
+  font-size: 19px; }
 
 .photos a {
   font-family: 'AvenirNextLTPro-Demi';
+  font-size: 14px;
   color: #3aabd5; }
 
 .photos .filters, .photos .folders {
@@ -43,8 +45,8 @@
     width: 321px;
     height: 73px; }
   .photos .folders h3 a {
-    font-size: 90%;
-    margin-left: 20px; }
+    font-size: 14px;
+    margin-left: 15px; }
   .photos .folders p {
     color: #4a4a4a;
     font-size: 18px;
@@ -72,17 +74,49 @@
   .photos .panel-body h3 button i {
     margin-left: 10px; }
 
-.photos .panel-body .thumbnail {
-  height: 140px;
-  width: 100%;
-  padding: 0;
-  border-radius: 0;
-  border-color: #fff;
-  border-width: 2px;
-  background-color: #f9f9f9; }
-  .photos .panel-body .thumbnail img {
-    height: 100%;
-    width: 100%; }
+.photos .panel-body .photo {
+  position: relative; }
+  .photos .panel-body .photo .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    height: calc(100% - 20px);
+    width: calc(100% - 30px);
+    -webkit-transition: opacity .25s ease;
+    -moz-transition: opacity .25s ease;
+    z-index: 99;
+    padding: 10px; }
+    .photos .panel-body .photo .overlay .uploaded_by {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 12px;
+      color: #fff;
+      margin-bottom: 5px; }
+    .photos .panel-body .photo .overlay .uploaded_at {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 10px;
+      color: #fff; }
+    .photos .panel-body .photo .overlay .desc {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 11px;
+      color: #fff;
+      position: absolute;
+      bottom: 10px; }
+  .photos .panel-body .photo .thumbnail {
+    height: 160px;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    border-color: #fff;
+    border-width: 2px;
+    background-color: #f9f9f9; }
+    .photos .panel-body .photo .thumbnail img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      max-height: 100%; }
+  .photos .panel-body .photo:hover .overlay {
+    opacity: 1; }
 
 .photos .panel-heading .scrollbar {
   margin: 8px 0 20px;
@@ -120,10 +154,11 @@
       border-color: #e25c5c;
       background-color: transparent; }
     .photos .panel-heading .folders ul li img {
-      position: absolute;
+      height: 100%;
+      width: 100%;
       left: 0;
-      top: 0;
-      max-width: 100%; }
+      position: absolute;
+      top: 0; }
     .photos .panel-heading .folders ul li .mask {
       position: absolute;
       height: 100%;

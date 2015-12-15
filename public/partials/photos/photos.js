@@ -5,7 +5,7 @@ app.controller('PhotosCtrl',
                 id: 1,
                 name: 'Excavation',
                 date: 'Mar 20, 2015',
-                number_of_photos: 4
+                number_of_photos: 4,
             }, {
                 id: 2,
                 name: 'Foundation',
@@ -183,6 +183,8 @@ app.controller('PhotosCtrl',
             // 4-Way Inspection Folder : 0
         ];
 
-
+        _.each($scope.folders, function(folder) {
+            folder.thumbnail = _.result(_.find($scope.photos, function(photo) { return _.indexOf(photo.folders, folder.id) != -1}), 'name');
+        });
 
     }]);
