@@ -193,18 +193,16 @@
         bottom: 8px;
         left: 10px; }
 
-.photos .panel-body .option {
-  display: none; }
-  .photos .panel-body .option li {
-    display: inline-block;
-    border-right: 1px solid #d7d7d7;
-    line-height: 31px; }
-    .photos .panel-body .option li button {
-      background: white;
-      border: none;
-      font-size: 12px;
-      color: #868686;
-      font-family: 'AvenirNextLTPro-Demi'; }
+.photos .panel-body .option > li {
+  display: inline-block;
+  border-right: 1px solid #d7d7d7;
+  line-height: 31px; }
+  .photos .panel-body .option > li button {
+    background: white;
+    border: none;
+    font-size: 12px;
+    color: #868686;
+    font-family: 'AvenirNextLTPro-Demi'; }
 
 .photos .panel-heading .folders ul li:hover {
   border-color: #e25c5c;

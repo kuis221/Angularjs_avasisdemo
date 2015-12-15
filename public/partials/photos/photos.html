@@ -64,7 +64,56 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="#" class="pull-right options">Options</a>
+                            <a href="javascript:void(0)" class="pull-right options animated fadeIn" ng-click="toggleOption()">{{isOptionShow ? 'Done' : 'Options'}}</a>
+
+                            <ul class="list-unstyled option pull-right animated fadeInLeft" ng-show="isOptionShow">
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-share-square" aria-hidden="true"></i>
+                                        Share
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-folder"></i>
+                                            Move to Folder
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right chevron-down-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                        Copy to Folder
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        Download
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-tag" aria-hidden="true"></i>
+                                        Add Tags
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        Trash
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 

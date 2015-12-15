@@ -191,6 +191,12 @@ app.controller('PhotosCtrl',
             folder.thumbnail = _.result(_.find($scope.photos, function(photo) { return _.indexOf(photo.folders, folder.id) != -1}), 'name');
         });
 
+        $scope.isOptionShow = false;
+
+        $scope.toggleOption = function() {
+            $scope.isOptionShow = !$scope.isOptionShow;
+        };
+
         $scope.selectFolder = function(folder) {
             $scope.isFolderSelected = true;
             _.each($scope.photos, function(p) {

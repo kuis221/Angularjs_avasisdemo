@@ -269,8 +269,7 @@
   }
 
   .panel-body .option {
-    display: none;
-    li {
+    > li {
       display: inline-block;
       border-right: 1px solid #d7d7d7;
       line-height: 31px;
