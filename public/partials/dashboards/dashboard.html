@@ -1,0 +1,300 @@
+<div class="row wrapper border-bottom white-bg page-heading overview ng-scope">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">My Dashboard</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="javascript:void(0)">All Projects Summary</a>
+            </li>
+            <li><span>18 Live Projects</span></li>
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2 text-right">
+        <button class="btn btn-lg btn-success"><i class="fa fa-plus"></i> Create New</button>
+    </div>
+</div>
+
+<div class="row dash-wrapper wrapper-content animated fadeInRight">
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-xs-12 col-lg-4">
+                <div class="whiteBox dash-flag-section">
+                    <div class="hdingTopBox">
+                        <p><img alt="image" src="assets/img/alert-flag.png">Flag Alerts</p>
+                    </div>
+                    <div slim-scroll box-height="200px" class="prj-white-wrapper">
+                        <div class="row no-margin dash-flag-project" ng-repeat="project in flagProjectList">
+                            <div class="flag-title">{{ project.name }}</div>
+                            <div>
+                                <div class="flag-item">
+                                    <span class="dash-flag-red"></span>
+                                    <span class="flag-number">{{ project.red_value }}</span>
+                                    <span class="flag-percent">{{ project.red_percent }}</span>
+                                </div>
+                                <div class="flag-item">
+                                    <span class="dash-flag-orange"></span>
+                                    <span class="flag-number">{{ project.orange_value }}</span>
+                                    <span class="flag-percent">{{ project.orange_percent }}</span>
+                                </div>
+                                <div class="flag-item">
+                                    <span class="dash-flag-green"></span>
+                                    <span class="flag-number">{{ project.green_value }}</span>
+                                    <span class="flag-percent">{{ project.green_percent }}</span>
+                                </div>
+                                <div class="alerts-count">{{ project.alert_count }} Alerts</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <hr class="section-border">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whiteBox mt30">
+                    <div class="hdingTopBox">
+                        <p>Updates</p>
+                    </div>
+                    <div class="dash-white-wrapper">
+                        <div class="row no-margin dash-updates-section">
+                            <span><i class="fa fa-flag-o"></i></span>
+                            <span>Items Requiring Approval</span>
+                            <span class="pull-right"><button class="btn btn-danger btn-xs" type="button">12 Items</button></span>
+                        </div>
+                        <div class="row no-margin dash-updates-section">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                            <span>Unread Messages</span>
+                            <span class="pull-right"><button class="btn btn-warning btn-xs" type="button">1 Items</button></span>
+                        </div>
+                        <div class="row no-margin dash-updates-section">
+                            <span><i class="fa fa-file-o"></i></span>
+                            <span>Recently Updated Documents</span>
+                            <span class="pull-right"><button class="btn btn-success btn-xs" type="button">1 Items</button></span>
+                        </div>
+                    </div>
+                </div><!-- Communication Box End -->
+            </div>
+
+            <div class="col-lg-8">
+                <div class="items-today">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h2>Items Due Today</h2></th>
+                            <th width="150px">
+                                <span class="prj-itm-comp">3 of 9 COMPLETED</span>
+                                <div class="progress progress-small">
+                                    <div class="progress-bar progress-bar-success" style="width: {{itemsCompleted}}%"></div>
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div slim-scroll box-height="430px">
+                        <div class="">
+                            <table class="table no-border-top">
+                                <tbody>
+                                    <tr ng-repeat="item in todayItemList">
+                                        <td class="td-number"><a href="#">{{ item.number }}</a></td>
+                                        <td><p>{{ item.name }}</p></td>
+                                        <td><span>{{ item.project }}</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row no-margin whiteBox dash-projects">
+                    <div class="heading">
+                        Projects
+                    </div>
+                    <div class="col-md-12 accordion-group">
+                        <uib-accordion class="project-accordion" close-others="oneAtATime">
+                            <uib-accordion-group ng-repeat="prj in projectList">
+                                <uib-accordion-heading>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="pull-left project-title"><i class="fa fa-plus"></i></div>
+                                            <div class="pull-left">
+                                                <div class="project-title"><p>{{ prj.name }}</p></div>
+                                                <div class="project-address">{{ prj.address }}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="row no-margin">
+                                                <div class="pull-left dash-flag-section">
+                                                    <div class="row no-margin dash-flag-project">
+                                                        <div>Flag Counts</div>
+                                                        <div>
+                                                            <div class="flag-item">
+                                                                <span class="dash-flag-red"></span>
+                                                                <span class="flag-number ng-binding">{{ prj.flag.red_value }}</span>
+                                                                <span class="flag-percent ng-binding">{{ prj.flag.red_percent }}</span>
+                                                            </div>
+                                                            <div class="flag-item">
+                                                                <span class="dash-flag-orange"></span>
+                                                                <span class="flag-number ng-binding">{{ prj.flag.orange_value }}</span>
+                                                                <span class="flag-percent ng-binding">{{ prj.flag.orange_percent }}</span>
+                                                            </div>
+                                                            <div class="flag-item">
+                                                                <span class="dash-flag-green"></span>
+                                                                <span class="flag-number ng-binding">{{ prj.flag.green_value }}</span>
+                                                                <span class="flag-percent ng-binding">{{ prj.flag.green_percent }}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alerts-count ng-binding">{{ prj.flag.alert_count }} Total</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <div class="project-role text-right">
+                                                        <div class="project-role-title">Role</div>
+                                                        <div>{{ prj.role }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-accordion-heading>
+                                <div class="row no-margin">
+                                    <slick dots="false" infinite="false" speed="300" slides-to-show="3" touch-move="true" slides-to-scroll="1" variable-width="true" center-padding="60px" responsive="slickSetting">
+                                        <div class="user-section" ng-repeat="user in prj.user_list">
+                                            <div class="pull-left">
+                                                <img class="user-photo img-circle" ng-src="{{user.photo}}" />
+                                            </div>
+                                            <div class="pull-left">
+                                                <p class="user-title">{{ user.title }}</p>
+                                                <div class="user-assigned">assigned to</div>
+                                                <div class="user-assignee">{{ user.assignee }}</div>
+                                                <div>
+                                                    <div class="user-status">
+                                                        <div class="user-status-label">Status</div>
+                                                        <div class="text-danger">{{ user.status }}</div>
+                                                    </div>
+                                                    <div class="user-status">
+                                                        <div class="user-status-label">{{ user.progress }}% completed</div>
+                                                        <div class="progress progress-small">
+                                                            <div class="progress-bar progress-bar-success" style="width: {{ user.progress }}%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </slick>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr class="mb15"/>
+                                        <div class="pull-left chart-section">
+                                            <div ui-arc-chart rect-width="100" rect-height="100" radius="15" pen-width="10" chart-data="prj.chart_data"></div>
+                                            <div class="chart-label">
+                                                <div class="text-success">32%</div>
+                                                <div class="text-primary">78%</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <div class="mt15"><div class="dash-flag-blue"></div>SCHEDULE</div>
+                                            <div class="project-est-section">
+                                                <div class="project-sf-title">Estimated Completion Date</div>
+                                                <div class="project-sf-value">{{prj.estimated_date}}</div>
+                                            </div>
+                                            <div class="project-est-section">
+                                                <div class="project-sf-title">Original Completion Date</div>
+                                                <div class="project-sf-value">{{prj.original_date}}</div>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <div class="mt15"><div class="dash-flag-green"></div>FINANCE</div>
+                                            <div class="project-est-section">
+                                                <div class="project-sf-title">Funds Distributed to Date</div>
+                                                <div class="project-sf-value">{{prj.funds_distributed | currency}}</div>
+                                            </div>
+                                            <div class="project-est-section">
+                                                <div class="project-sf-title">Estimated Cost at Completion</div>
+                                                <div class="project-sf-value">{{prj.estimated_cost | currency}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-margin mt15 border-top">
+                                    <div class="col-lg-8 border-right">
+                                        <div class="items-today">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th colspan="2"><h2>Items Due Today</h2></th>
+                                                    <th width="150px">
+                                                        <span class="prj-itm-comp">3 of 9 COMPLETED</span>
+                                                        <div class="progress progress-small">
+                                                            <div class="progress-bar progress-bar-success" style="width: {{prj.items_completed}}%"></div>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                            </table>
+                                            <div slim-scroll box-height="200px">
+                                                <div class="table-responsive">
+                                                    <table class="table no-border-top">
+                                                        <tbody>
+                                                            <tr ng-repeat="item in prj.itemList">
+                                                                <td class="td-number"><a href="#">{{ item.number }}</a></td>
+                                                                <td><p>{{ item.name }}</p></td>
+                                                                <td><span>{{ item.project }}</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="items-today">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th colspan="2"><h2>Team Members</h2></th>
+                                                    <th class="text-right">
+                                                        <span class="member-count">{{prj.member_count}} Total</span>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                            </table>
+                                            <div slim-scroll box-height="200px">
+                                                <div class="table-responsive">
+                                                    <table class="table no-border-top">
+                                                        <tbody>
+                                                            <tr ng-repeat="member in prj.memberList">
+                                                                <td class="td-photo">
+                                                                    <div class="pull-left">
+                                                                        <img ng-src="{{ member.photo }}" class="img-circle" />
+                                                                    </div>
+                                                                    <div class="pull-left">
+                                                                        <div class="text-primary">{{ member.name }}</div>
+                                                                        <div class=""><small>{{ member.role }}</small></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="td-contact text-right">
+                                                                    <img ng-if="member.email != null" src="assets/img/envelope.png">
+                                                                    <img ng-if="member.chat != null" src="assets/img/chat.png">
+                                                                    <img ng-if="member.phone != null" class="phone" src="assets/img/phone.png">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </uib-accordion-group>
+                        </uib-accordion>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
