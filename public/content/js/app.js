@@ -243,6 +243,31 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/procurement/list.html',
             controller: 'ProcurementsCtrl'
         })
+        .state('procurement.create', {
+            url:'/create',
+            templateUrl: 'partials/procurement/create.html',
+            controller: 'ProcurementCreateCtrl',
+            data: {
+                isHeaderHidden: true
+            },
+            abstract: true,
+        })
+        .state('procurement.create.step1', {
+            url:'/step1',
+            templateUrl: 'partials/procurement/steps/step1.html',
+        })
+        .state('procurement.create.step2', {
+            url:'/step2',
+            templateUrl: 'partials/procurement/steps/step2.html',
+        })
+        .state('procurement.create.step3', {
+            url:'/step3',
+            templateUrl: 'partials/procurement/steps/step3.html',
+        })
+        .state('procurement.create.step4', {
+            url:'/step4',
+            templateUrl: 'partials/procurement/steps/step4.html',
+        })
         .state('payment-application', {
             url: '/financials/payment-application',
             abstract: true,

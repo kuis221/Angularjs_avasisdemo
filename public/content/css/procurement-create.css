@@ -1,0 +1,181 @@
+.procurement-create .procurement-create-header .closeBox img {
+  margin-top: -1px;
+  margin-right: 5px; }
+
+.procurement-create .procurement-create-header .pc-header-title {
+  padding-top: 37px;
+  padding-left: 15px; }
+  .procurement-create .procurement-create-header .pc-header-title .heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px;
+    color: 4a4a4a; }
+  .procurement-create .procurement-create-header .pc-header-title input {
+    width: 100%;
+    border: 0px;
+    background: transparent;
+    color: #4a4a4a;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    padding: 20px 0 10px; }
+  .procurement-create .procurement-create-header .pc-header-title input:focus {
+    outline: 0; }
+  .procurement-create .procurement-create-header .pc-header-title .info {
+    display: block;
+    float: left;
+    padding: 20px 30px 20px 0; }
+    .procurement-create .procurement-create-header .pc-header-title .info .info-title {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 13px;
+      color: #44474b;
+      padding-bottom: 5px; }
+    .procurement-create .procurement-create-header .pc-header-title .info .info-value {
+      font-family: "AvenirNextLTPro-Medium";
+      font-size: 13px;
+      color: #4a4a4a; }
+  .procurement-create .procurement-create-header .pc-header-title .additional-info {
+    padding-top: 65px; }
+    .procurement-create .procurement-create-header .pc-header-title .additional-info .details {
+      text-align: right;
+      padding-bottom: 6px; }
+    .procurement-create .procurement-create-header .pc-header-title .additional-info .details .more-info-name {
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: "AvenirNextLTPro-Bold";
+      font-size: 9px;
+      color: 44474b; }
+    .procurement-create .procurement-create-header .pc-header-title .additional-info .details .more-info-value {
+      display: inline-block;
+      min-width: 100px;
+      text-align: left;
+      padding: 0 10px; }
+      .procurement-create .procurement-create-header .pc-header-title .additional-info .details .more-info-value .pc-info-title {
+        background-color: #44474b;
+        color: #fff;
+        border-radius: 3px;
+        font-family: "AvenirNextLTPro-Bold";
+        font-size: 10px;
+        padding: 2px 6px; }
+      .procurement-create .procurement-create-header .pc-header-title .additional-info .details .more-info-value .pc-info-date {
+        font-family: "AvenirNextLTPro-Medium";
+        font-size: 12px;
+        color: 44474b; }
+      .procurement-create .procurement-create-header .pc-header-title .additional-info .details .more-info-value .pc-info-status {
+        font-family: "AvenirNextLTPro-Bold";
+        font-size: 12px; }
+
+.procurement-create .procurement-create-content {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 15px; }
+  .procurement-create .procurement-create-content .person-info-wrapper {
+    padding: 20px 0;
+    border-bottom: 1px solid #d7d7d7;
+    margin: 0 20px; }
+  .procurement-create .procurement-create-content .person-info {
+    display: block; }
+    .procurement-create .procurement-create-content .person-info .info-panel {
+      display: block;
+      float: left;
+      border-right: 1px solid #d7d7d7;
+      padding: 8px 10px 8px 20px; }
+      .procurement-create .procurement-create-content .person-info .info-panel .name, .procurement-create .procurement-create-content .person-info .info-panel .date {
+        display: block;
+        float: left;
+        padding-right: 20px; }
+      .procurement-create .procurement-create-content .person-info .info-panel .name-header, .procurement-create .procurement-create-content .person-info .info-panel .date-header {
+        font-family: "AvenirNextLTPro-Regular";
+        font-size: 11px;
+        color: #44474b; }
+      .procurement-create .procurement-create-content .person-info .info-panel .name-value {
+        font-family: "AvenirNextLTPro-Bold";
+        font-size: 12px; }
+      .procurement-create .procurement-create-content .person-info .info-panel .date-value {
+        font-family: "AvenirNextLTPro-Medium";
+        font-size: 13px;
+        color: #4a4a4a; }
+    .procurement-create .procurement-create-content .person-info .info-panel:first-of-type {
+      padding-left: 0px; }
+    .procurement-create .procurement-create-content .person-info .info-panel:last-of-type {
+      border-right: none; }
+  .procurement-create .procurement-create-content .description-title {
+    display: block;
+    margin-bottom: 14px;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 13px;
+    color: #44474b; }
+  .procurement-create .procurement-create-content .description-text {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
+    color: #4a4a4a; }
+
+.procurement-create .no-border {
+  border: none !important; }
+
+.procurement-create .material-wrapper {
+  padding: 20px 0;
+  border-bottom: 1px solid #d7d7d7;
+  margin: 0 15px; }
+  .procurement-create .material-wrapper .stepwizard {
+    display: table;
+    width: 100%;
+    position: relative; }
+  .procurement-create .material-wrapper .stepwizard-row:before {
+    top: 13px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: #eeeeee;
+    z-index: 0; }
+  .procurement-create .material-wrapper .stepwizard-row {
+    display: table-row; }
+  .procurement-create .material-wrapper .stepwizard-step {
+    display: table-cell;
+    text-align: left;
+    position: relative;
+    width: calc(33.34%); }
+  .procurement-create .material-wrapper .stepwizard-step:last-of-type {
+    text-align: right; }
+  .procurement-create .material-wrapper .stepwizard-step p {
+    margin-top: 10px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px; }
+  .procurement-create .material-wrapper .wizard-step a {
+    width: 22px;
+    height: 22px;
+    background-image: url("/assets/img/wizard-step.png"); }
+  .procurement-create .material-wrapper .wizard-step p {
+    color: #4a4a4a; }
+  .procurement-create .material-wrapper .wizard-active a {
+    width: 28px;
+    height: 28px;
+    background-image: url("/assets/img/wizard-active.png"); }
+  .procurement-create .material-wrapper .wizard-active p {
+    color: #e25c5c; }
+  .procurement-create .material-wrapper .wizard-past a {
+    width: 22px;
+    height: 22px;
+    background-image: url("/assets/img/wizard-past.png"); }
+  .procurement-create .material-wrapper .wizard-past p {
+    color: #3aabd5; }
+  .procurement-create .material-wrapper .form-group label {
+    display: block;
+    padding-bottom: 10px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #44474b; }
+  .procurement-create .material-wrapper .form-group input, .procurement-create .material-wrapper .form-group textarea {
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 15px 20px;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px; }
+  .procurement-create .material-wrapper .revision-item {
+    margin-top: 30px; }
+
+.procurement-create .tab-content {
+  border-radius: 0px 0px 4px 4px; }
