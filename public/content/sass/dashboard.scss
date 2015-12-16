@@ -243,48 +243,6 @@ $c-text-gray: #808080;
             text-transform: uppercase;
         }
 
-        .slick-prev,
-        .slick-next {
-            line-height: 0;
-            position: absolute;
-            top: 50%;
-            display: block;
-            width: 20px;
-            height: 20px;
-            margin-top: -30px;
-            cursor: pointer;
-            color: transparent;
-            border: none;
-            outline: none;
-            background: transparent;
-        }
-
-        .slick-prev {
-            left: -10px;
-        }
-
-        .slick-prev:before {
-            content: "\f053"!important;
-        }
-
-        .slick-next{
-            right: -15px;
-        }
-
-        .slick-next:before{
-            content: "\f054"!important;
-        }
-
-        .slick-prev:before, .slick-next:before{
-            font-family: fontawesome !important;
-            font-size: 15px !important;
-            color: #333 !important;
-        }
-
-        .slick-disabled {
-            opacity: 0.5;
-        }
-
         .chart-section {
             position: relative;
             margin-right: 15px;
@@ -375,4 +333,46 @@ $c-text-gray: #808080;
         border-color: #ddd;
         padding: 15px 15px 0px 15px;
     }
+}
+
+.slick-prev,
+.slick-next {
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -30px;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev {
+    left: -10px;
+}
+
+.slick-prev:before {
+    content: "\f053"!important;
+}
+
+.slick-next{
+    right: -15px;
+}
+
+.slick-next:before{
+    content: "\f054"!important;
+}
+
+.slick-prev:before, .slick-next:before{
+    font-family: fontawesome !important;
+    font-size: 15px !important;
+    color: #333 !important;
+}
+
+.slick-disabled {
+    opacity: 0.5;
 }

@@ -9,7 +9,7 @@
         </ul>
     </div>
     <div class="col-sm-6 col-lg-2 text-right">
-        <button class="btn btn-lg btn-success"><i class="fa fa-plus"></i> Create New</button>
+        <a class="btn btn-lg btn-success" ui-sref="projects.start"><i class="fa fa-plus"></i> Create New</a>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
                     </div>
                     <div slim-scroll box-height="200px" class="prj-white-wrapper">
                         <div class="row no-margin dash-flag-project" ng-repeat="project in flagProjectList">
-                            <div class="flag-title">{{ project.name }}</div>
+                            <div class="flag-title"><a ui-sref="projects.main" class="text-default">{{ project.name }}</a></div>
                             <div>
                                 <div class="flag-item">
                                     <span class="dash-flag-red"></span>
@@ -62,12 +62,12 @@
                         <div class="row no-margin dash-updates-section">
                             <span><i class="fa fa-envelope-o"></i></span>
                             <span>Unread Messages</span>
-                            <span class="pull-right"><button class="btn btn-warning btn-xs" type="button">1 Items</button></span>
+                            <span class="pull-right"><a class="btn btn-warning btn-xs" ui-sref="comm">1 Items</a></span>
                         </div>
                         <div class="row no-margin dash-updates-section">
                             <span><i class="fa fa-file-o"></i></span>
                             <span>Recently Updated Documents</span>
-                            <span class="pull-right"><button class="btn btn-success btn-xs" type="button">1 Items</button></span>
+                            <span class="pull-right"><a class="btn btn-success btn-xs" ui-sref="documents.main">1 Items</a></span>
                         </div>
                     </div>
                 </div><!-- Communication Box End -->
@@ -120,7 +120,7 @@
                                         <div class="col-lg-6 col-md-12">
                                             <div class="pull-left project-title"><i class="fa fa-plus"></i></div>
                                             <div class="pull-left">
-                                                <div class="project-title"><p>{{ prj.name }}</p></div>
+                                                <div class="project-title" ng-click="$state.go('projects.main')"><p>{{ prj.name }}</p></div>
                                                 <div class="project-address">{{ prj.address }}</div>
                                             </div>
                                         </div>
