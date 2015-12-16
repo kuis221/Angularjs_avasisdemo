@@ -43,36 +43,36 @@
             </div>
         </div>
         <div class="row no-margin bid-modal-details">
-            <div class="table-responsive">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td>Division 1</td>
-                            <td>Total</td>
-                            <td>Estimate by</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <div class="">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-active">Hello</td>
-                                                    <td>hello</td>
-                                                    <td>Hello</td>
-                                                    <td>hello</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div ui-tree data-drag-enabled="false" data-max-depth="3">
+                <ol ui-tree-nodes="" ng-model="budgets">
+                    <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
+                </ol>
             </div>
+            <script type="text/ng-template" id="budget-item-template.html">
+                <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                    <div class="text-muted font-regular">
+                        <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                            <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                            <div style="display: inline-block">
+                                <div class="text-gray division">{{item.division}}</div>
+                                <span>{{item.name}}</span>
+                            </div>
+                        </div>
+                        <div style="width: 100px">{{item.labor | currency:'$':0}}</div>
+                        <div style="width: 100px">{{item.materials | currency:'$':0}}</div>
+                        <div style="width: 100px">{{item.equipment | currency:'$':0}}</div>
+                        <div style="width: 100px">{{item.misc | currency:'$':0}}</div>
+                        <div style="width: 100px">{{item.total | currency:'$':0}}</div>
+                        <div style="width: 120px"><span class="items" ng-if="item.items">{{item.items}}</span></div>
+                        <div style="width: 80px">{{item.status}}</div>
+                        <div style="width: 60px">{{item.cpsf}}</div>
+                        <div style="width: 60px"><span ng-if="item.percent_of_project">{{item.percent_of_project}}%</span></div>
+                    </div>
+                </div>
+                <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
+                    <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
+                </ol>
+            </script>
         </div>
         <hr>
     </div>
