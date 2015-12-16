@@ -9,11 +9,6 @@ app.controller('BidAwardModalCtrl',
             $state.go('bids.compare');
         };
         $scope.showCosts = false;
-        $scope.bidCosts = function () {
-            debugger;
-            $scope.showCosts = !$scope.showCosts;
-        };
-
         $scope.budgets = [{
             id: _.uniqueId(),
             name: 'General Requirements',

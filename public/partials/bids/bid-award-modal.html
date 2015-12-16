@@ -39,7 +39,7 @@
                 <p>Does this contract replace any currently Estimated Costs?</p>
             </div>
             <div class="pull-right">
-                <ui-rec-switch ng-model="upload" ng-click="bidCosts()"/>
+                <ui-rec-switch ng-model="showCosts"/>
             </div>
         </div>
         <div class="row no-margin bid-modal-details" ng-show="showCosts">
@@ -58,8 +58,8 @@
                                 <span>{{item.name}}</span>
                             </div>
                         </div>
-                        <div class="normal-num">${{item.labor}}</div>
-                        <div class="normal-num">${{item.materials}}</div>
+                        <div class="normal-num">{{item.labor}}</div>
+                        <div class="normal-num">{{item.materials}}</div>
                         <div class="normal-num"><span ng-if="item.trash == true" class="pull-right"><i class="fa fa-trash"></i></span></div>
                     </div>
                 </div>

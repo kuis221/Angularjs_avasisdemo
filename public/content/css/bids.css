@@ -316,6 +316,12 @@ p {
     color: #44474b;
 }
 
+@media (max-width: 768px) {
+    .modal.bids-modal .modal-dialog {
+        width: 90%;
+    }
+}
+
 .bids-modal .modal-body {
     padding: 40px 30px 0 30px;
 }
@@ -389,6 +395,7 @@ p {
     border-radius: 3px;
     padding: 0px 10px 10px 10px;
     margin-bottom: 20px;
+    overflow: auto;
 }
 
 .bid-modal-detailed .division {
