@@ -129,7 +129,7 @@ table.no-border {
             background-color: #f6cece;
         }
 
-        .week-container {
+        .week-container, .days-container {
             margin-bottom: 40px;
             & > table {
                 table-layout: fixed;

@@ -15,17 +15,16 @@
     </div>
 
     <div class="calendar-container">
-        <div class="mb40" ng-repeat="section in range(3)">
-            <div class="heading text-center font-bold">{{weekTitles[section]}}</div>
-            <div class="week-container">
+        <div ng-show="calendarScope=='day'">
+            <div class="days-container">
                 <table class="table">
                     <tr>
-                        <th width="14%" ng-repeat="day in range(7)">
-                            <div class="day-header text-center" ng-class="{true: 'label-success'}[daysInRange[section * 7 + day] == today.format('ddd, MMM DD')]">{{daysInRange[section * 7 + day]}}</div>
+                        <th width="14%" ng-repeat="day in range(3)">
+                            <div class="day-header text-center" ng-class="{true: 'label-success'}[dayTitles[day] == today.format('ddd, MMM DD')]">{{dayTitles[day]}}</div>
                         </th>
                     </tr>
-                    <tr ng-repeat="schedule in schedulesInWeek[section]">
-                        <td ng-repeat="i in range(schedule.relativePos)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i)]"></td>
+                    <tr ng-repeat="schedule in schedulesInRange">
+                        <td ng-repeat="i in range(schedule.relativePos)"></td>
                         <td colspan="{{schedule.relativeLength}}">
                             <div class="alert text-left alert-{{schedule.schedule_type}} clearfix">
                                 <div class="flag-badge"><i class="fa fa-flag text-{{schedule.status}}"></i></div>
@@ -33,15 +32,46 @@
                                     <div>{{schedule.description}}</div>
                                     <div class="text-muted font-regular">%{{schedule.completion_percentage}} completed</div>
                                 </div>
-                                <span tabindex="0" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
+                                <span tabindex="0" popover-placement="left" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
                                     <i class="fa fa-info-circle"></i>
                                 </span>
                             </div>
                         </td>
-                        <td ng-repeat="i in range(7 - schedule.relativePos - schedule.relativeLength)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i + schedule.relativePos + schedule.relativeLength)]">
+                        <td ng-if="schedule.relativePos + schedule.relativeLength == 2">
                         </td>
                     </tr>
                 </table>
+            </div>
+        </div>
+        <div ng-show="calendarScope=='week'">
+            <div class="mb40" ng-repeat="section in range(3)">
+                <div class="heading text-center font-bold">{{weekTitles[section]}}</div>
+                <div class="week-container">
+                    <table class="table">
+                        <tr>
+                            <th width="14%" ng-repeat="day in range(7)">
+                                <div class="day-header text-center" ng-class="{true: 'label-success'}[daysInRange[section * 7 + day] == today.format('ddd, MMM DD')]">{{daysInRange[section * 7 + day]}}</div>
+                            </th>
+                        </tr>
+                        <tr ng-repeat="schedule in schedulesInRange[section]">
+                            <td ng-repeat="i in range(schedule.relativePos)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i)]"></td>
+                            <td colspan="{{schedule.relativeLength}}">
+                                <div class="alert text-left alert-{{schedule.schedule_type}} clearfix">
+                                    <div class="flag-badge"><i class="fa fa-flag text-{{schedule.status}}"></i></div>
+                                    <div class="content">
+                                        <div>{{schedule.description}}</div>
+                                        <div class="text-muted font-regular">%{{schedule.completion_percentage}} completed</div>
+                                    </div>
+                                    <span tabindex="0" popover-placement="left" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
+                                        <i class="fa fa-info-circle"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td ng-repeat="i in range(7 - schedule.relativePos - schedule.relativeLength)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i + schedule.relativePos + schedule.relativeLength)]">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
