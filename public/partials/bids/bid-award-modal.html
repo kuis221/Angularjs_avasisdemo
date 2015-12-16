@@ -1,0 +1,77 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body">
+    <div class="row border-bottom bid-modal-title">
+        <p>Award Bid</p>
+    </div>
+    <div class="row border-bottom bid-modal-info">
+        <div class="col-lg-4 no-l-pad">
+            <span>Bid Name</span>
+            <p class="text-active">Ridiculus Omare Venenatis</p>
+        </div>
+        <div class="col-lg-3 no-l-pad">
+            <span>Sub Contractor</span>
+            <p class="text-active">Bruce Wayne</p>
+        </div>
+        <div class="col-lg-3 no-l-pad">
+            <span>Company</span>
+            <p class="text-inactive">Ornare Venenatis</p>
+        </div>
+        <div class="col-lg-2 no-l-pad">
+            <span>Bid Amount</span>
+            <p>$1,123,456.00</p>
+        </div>
+    </div>
+    <div class="row border-bottom bid-modal-query">
+        <div class="col-lg-6 no-l-pad">
+            <p>Who is responsible for generating contact?</p>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-lg-3 no-l-pad">
+            <p>Contact Due Date</p>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row bid-modal-costs">
+        <div class="row no-margin bid-modal-detail">
+            <div class="pull-left">
+                <p>Does this contract replace any currently Estimated Costs?</p>
+            </div>
+            <div class="pull-right">
+                <ui-rec-switch ng-model="showCosts"/>
+            </div>
+        </div>
+        <div class="row no-margin bid-modal-details" ng-show="showCosts">
+            <div ui-tree data-drag-enabled="false" data-max-depth="3">
+                <ol ui-tree-nodes="" ng-model="budgets">
+                    <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
+                </ol>
+            </div>
+            <script type="text/ng-template" id="budget-item-template.html">
+                <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                    <div class="bid-modal-detailed">
+                        <div data-nodrag ng-click="toggle(this)" class="text-primary">
+                            <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                            <div style="display: inline-block">
+                                <div class="division">{{item.division}}</div>
+                                <span>{{item.name}}</span>
+                            </div>
+                        </div>
+                        <div class="normal-num">{{item.labor}}</div>
+                        <div class="normal-num">{{item.materials}}</div>
+                        <div class="normal-num"><span ng-if="item.trash == true" class="pull-right"><i class="fa fa-trash"></i></span></div>
+                    </div>
+                </div>
+                <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
+                    <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
+                </ol>
+            </script>
+        </div>
+        <hr>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel btn-lg" ng-click="cancel()">Cancel</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="award()">Award Bid</button>
+</div>

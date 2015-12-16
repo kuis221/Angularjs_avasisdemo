@@ -308,3 +308,107 @@ p {
 .bids-comp-wrapper .checkbox {
     margin-left: 11px;
 }
+
+
+
+.modal.bids-modal .modal-dialog {
+    width: 630px;
+    color: #44474b;
+}
+
+@media (max-width: 768px) {
+    .modal.bids-modal .modal-dialog {
+        width: 90%;
+    }
+}
+
+.bids-modal .modal-body {
+    padding: 40px 30px 0 30px;
+}
+.bids-modal .modal-footer {
+    border-top: none;
+}
+
+.bid-modal-info span {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 10px;
+    color: #808080;
+}
+
+.bid-modal-info p {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+}
+
+.bid-modal-info div {
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+.bid-modal-query div{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.bid-modal-query p {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+}
+
+.bid-modal-query input {
+    height: 51px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #d7d7d7;
+}
+.bid-modal-query input:focus {
+    border: 1px solid #808080;
+}
+
+.bid-modal-costs {
+    padding-top: 20px;
+}
+.bid-modal-costs p {
+    margin-top: 7px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+}
+
+.bids-modal .text-active {
+    color: #3aabd5;
+    font-weight: bold;
+}
+.bids-modal .text-inactive {
+    font-family: "AvenirNextLTPro-Regular";
+    color: #808080;
+}
+
+.bid-modal-detail {
+    margin-bottom: 15px;
+}
+.bid-modal-costs hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.bid-modal-details {
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    padding: 0px 10px 10px 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.bid-modal-detailed .division {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 9px;
+    color: #808080;
+}
+.bid-modal-detailed .span {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+}
+.bid-modal-detailed .normal-num {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    color: #808080;
+}

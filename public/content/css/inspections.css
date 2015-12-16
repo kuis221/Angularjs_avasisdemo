@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .aii-page-wrapper {
   padding-top: 0px; }
   .aii-page-wrapper .bankbg {
@@ -237,3 +238,41 @@ table.aii-item-table .col-setting .fa {
 
 .aii-mr15 {
   margin-right: 15px; }
+
+.tm-modal-body .slick-prev,
+.tm-modal-body .slick-next {
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -30px;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent; }
+
+.tm-modal-body .slick-prev {
+  left: -90px; }
+
+.tm-modal-body .slick-prev:before {
+  content: "" !important; }
+
+.tm-modal-body .slick-next {
+  right: -85px; }
+
+.tm-modal-body .slick-next:before {
+  content: "" !important; }
+
+.tm-modal-body .slick-prev:before, .tm-modal-body .slick-next:before {
+  font-family: fontawesome !important;
+  font-size: 15px !important;
+  color: black !important;
+  padding: 5px 8px;
+  background-color: white;
+  border-radius: 50%; }
+
+.tm-modal-body .slick-disabled {
+  opacity: 0.5; }

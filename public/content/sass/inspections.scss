@@ -349,3 +349,50 @@ table.aii-item-table {
 .aii-mr15 {
     margin-right: 15px;
 }
+
+.tm-modal-body{
+    .slick-prev,
+    .slick-next {
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-top: -30px;
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .slick-prev {
+        left: -90px;
+    }
+
+    .slick-prev:before {
+        content: "\f053"!important;
+    }
+
+    .slick-next{
+        right: -85px;
+    }
+
+    .slick-next:before{
+        content: "\f054"!important;
+    }
+
+    .slick-prev:before, .slick-next:before{
+        font-family: fontawesome !important;
+        font-size: 15px !important;
+        color: black !important;
+        padding: 5px 8px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .slick-disabled {
+        opacity: 0.5;
+    }
+}
