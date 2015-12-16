@@ -390,3 +390,18 @@ p {
     padding: 10px;
     margin-bottom: 20px;
 }
+
+.bid-modal-detailed .division {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 9px;
+    color: #808080;
+}
+.bid-modal-detailed .span {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+}
+.bid-modal-detailed .normal-num {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    color: #808080;
+}

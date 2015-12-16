@@ -50,23 +50,17 @@
             </div>
             <script type="text/ng-template" id="budget-item-template.html">
                 <div ui-tree-handle class="tree-node tree-node-content table-tree">
-                    <div class="text-muted font-regular">
-                        <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                    <div class="bid-modal-detailed">
+                        <div data-nodrag ng-click="toggle(this)" class="text-primary">
                             <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
                             <div style="display: inline-block">
-                                <div class="text-gray division">{{item.division}}</div>
+                                <div class="division">{{item.division}}</div>
                                 <span>{{item.name}}</span>
                             </div>
                         </div>
-                        <div style="width: 100px">{{item.labor | currency:'$':0}}</div>
-                        <div style="width: 100px">{{item.materials | currency:'$':0}}</div>
-                        <div style="width: 100px">{{item.equipment | currency:'$':0}}</div>
-                        <div style="width: 100px">{{item.misc | currency:'$':0}}</div>
-                        <div style="width: 100px">{{item.total | currency:'$':0}}</div>
-                        <div style="width: 120px"><span class="items" ng-if="item.items">{{item.items}}</span></div>
-                        <div style="width: 80px">{{item.status}}</div>
-                        <div style="width: 60px">{{item.cpsf}}</div>
-                        <div style="width: 60px"><span ng-if="item.percent_of_project">{{item.percent_of_project}}%</span></div>
+                        <div class="normal-num">{{item.labor | currency:'$':0}}</div>
+                        <div class="normal-num">{{item.materials | currency:'$':0}}</div>
+                        <div class="normal-num"><span class="pull-right"><i class="fa fa-trash"></i></span></div>
                     </div>
                 </div>
                 <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
