@@ -30,7 +30,10 @@
         </div>
         <div class="col-lg-3 no-l-pad">
             <p>Contact Due Date</p>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control due-date" value="{{ selectedDate | date: 'MMM dd, yyyy'}}" ng-click="isShowDatePicker = !isShowDatePicker">
+            <div class="inline-calendar" ng-show="isShowDatePicker">
+              <uib-datepicker ng-model="selectedDate" min-date="minDate" show-weeks="false" class="well well-sm" ng-click="isShowDatePicker = false;"></uib-datepicker>
+            </div>
         </div>
     </div>
     <div class="row bid-modal-costs">

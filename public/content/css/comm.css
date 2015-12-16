@@ -86,7 +86,11 @@
     margin-right: 10px;
     padding-top: 33px;
 }
-
+@media (min-width: 1600px) {
+    .comm-card-spot {
+        padding-top: 26px;
+    }
+}
 .comm-msg-name {
     margin-top: 9px;
 }
