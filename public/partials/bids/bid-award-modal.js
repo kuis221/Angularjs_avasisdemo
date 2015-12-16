@@ -7,19 +7,26 @@ app.controller('BidAwardModalCtrl',
         $scope.award = function () {
             $uibModalInstance.close();
             $state.go('bids.compare');
-        }
+        };
+        $scope.showCosts = false;
+        $scope.bidCosts = function () {
+            debugger;
+            $scope.showCosts = !$scope.showCosts;
+        };
 
         $scope.budgets = [{
             id: _.uniqueId(),
             name: 'General Requirements',
             division: 'DIVISION1',
             total: 1000000,
-            materials: 75000,
+            labor: "Total",
+            materials: "Esitimated by",
             equipment: 11750,
             misc: 2350,
             total: 131600,
-            items: ""
-            status: "",
+            items: '',
+            status: '',
+            trash: false,
             cpsf: 25.31,
             percent_of_project: 8,
             children: [{
@@ -30,6 +37,7 @@ app.controller('BidAwardModalCtrl',
                 equipment: 6150,
                 misc: 80350,
                 total: 2331600,
+                trash: true,
 
                 status: '',
                 cpsf: 25.31,
@@ -42,6 +50,7 @@ app.controller('BidAwardModalCtrl',
                     equipment: 450,
                     misc: 12350,
                     total: 5987,
+                    trash: true,
 
                     status: '',
                     cpsf: 13.46,
@@ -53,6 +62,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'estimate',
                         status: ''
                     },
@@ -63,6 +73,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'contract',
                         status: ''
                     },
@@ -73,6 +84,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'purchase order',
                         status: ''
                     },{
@@ -82,6 +94,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'change order',
                         status: ''
                     }]
@@ -94,6 +107,7 @@ app.controller('BidAwardModalCtrl',
                     equipment: 450,
                     misc: 12350,
                     total: 5987,
+                    trash: true,
 
                     status: '',
                     cpsf: 13.46,
@@ -105,6 +119,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'estimate',
                         status: ''
                     },
@@ -115,6 +130,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'contract',
                         status: ''
                     },
@@ -125,6 +141,7 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'purchase order',
                         status: ''
                     },{
@@ -134,45 +151,10 @@ app.controller('BidAwardModalCtrl',
                         equipment: 450,
                         misc: 12350,
                         total: 5987,
+                        trash: true,
                         items: 'change order',
                         status: ''
                     }]
-                }]
-            },
-            {
-                id: _.uniqueId(),
-                name: '12345 - Brick',
-                labor: 250000,
-                materials: 15000,
-                equipment: 6150,
-                misc: 80350,
-                total: 2331600,
-                status: '',
-                cpsf: 25.31,
-                percent_of_project: 8,
-                children: [{
-                    id: _.uniqueId(),
-                    name: 'Exterior Brick',
-                    labor: 20000,
-                    materials: 22000,
-                    equipment: 450,
-                    misc: 12350,
-                    total: 5987,
-                    status: '',
-                    cpsf: 13.46,
-                    percent_of_project: 8
-                },
-                {
-                    id: _.uniqueId(),
-                    name: 'Interior Brick',
-                    labor: 50000,
-                    materials: 7000,
-                    equipment: 129,
-                    misc: 12350,
-                    total: 987654,
-                    status: '',
-                    cpsf: 13.46,
-                    percent_of_project: 8
                 }]
             }]
         }];

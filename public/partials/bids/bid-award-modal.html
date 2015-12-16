@@ -10,11 +10,11 @@
             <span>Bid Name</span>
             <p class="text-active">Ridiculus Omare Venenatis</p>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 no-l-pad">
             <span>Sub Contractor</span>
             <p class="text-active">Bruce Wayne</p>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 no-l-pad">
             <span>Company</span>
             <p class="text-inactive">Ornare Venenatis</p>
         </div>
@@ -39,10 +39,10 @@
                 <p>Does this contract replace any currently Estimated Costs?</p>
             </div>
             <div class="pull-right">
-                <ui-rec-switch ng-model="upload" />
+                <ui-rec-switch ng-model="upload" ng-click="bidCosts()"/>
             </div>
         </div>
-        <div class="row no-margin bid-modal-details">
+        <div class="row no-margin bid-modal-details" ng-show="showCosts">
             <div ui-tree data-drag-enabled="false" data-max-depth="3">
                 <ol ui-tree-nodes="" ng-model="budgets">
                     <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
@@ -58,9 +58,9 @@
                                 <span>{{item.name}}</span>
                             </div>
                         </div>
-                        <div class="normal-num">{{item.labor | currency:'$':0}}</div>
-                        <div class="normal-num">{{item.materials | currency:'$':0}}</div>
-                        <div class="normal-num"><span class="pull-right"><i class="fa fa-trash"></i></span></div>
+                        <div class="normal-num">${{item.labor}}</div>
+                        <div class="normal-num">${{item.materials}}</div>
+                        <div class="normal-num"><span ng-if="item.trash == true" class="pull-right"><i class="fa fa-trash"></i></span></div>
                     </div>
                 </div>
                 <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
