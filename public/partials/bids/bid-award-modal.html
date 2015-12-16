@@ -63,7 +63,7 @@
                         </div>
                         <div class="normal-num">{{item.labor}}</div>
                         <div class="normal-num">{{item.materials}}</div>
-                        <div class="normal-num"><span ng-if="item.trash == true" class="pull-right"><i class="fa fa-trash"></i></span></div>
+                        <div class="normal-num text-right"><span ng-if="item.trash == true"><i class="fa fa-trash"></i></span></div>
                     </div>
                 </div>
                 <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
