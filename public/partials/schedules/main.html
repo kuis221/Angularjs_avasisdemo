@@ -102,118 +102,33 @@
                 <div class="pt10 heading">
                     <img src="assets/img/cal.png" width="20px">  Aug 17 2015, Today's Schedules
                 </div>
-                <div class="clearfix">
-                    <div class="col-md-3 project">
-                        <div class="feed-element">
-                            <div class="row no-margin">
-                                <div class="pull-left">
-                                    <a href="#">
-                                        <img src="assets/img/avasisteam/gebo.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <strong>Roof Dry-In</strong><br>
-                                    <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Dave Gebo</div>
-                                    <div class="clearfix"></div>
-                                    <div class="row no-margin">
-                                        <div class="prj-sch-cont">
-                                            <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">In Progress</span></p>
-                                        </div>
-                                        <div class="prj-sch-cont"><p class="progrsTxt"> 60% COMPLETED</p></div>
-                                        <div class="prj-sch-prog">
-                                            <div class="progress progress-small">
-                                                <div class="progress-bar progress-bar-success" style="width: 60%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <slick dots="false" infinite="false" speed="300" slides-to-show="3" touch-move="true" slides-to-scroll="1" variable-width="true" responsive="slickSetting">
+                    <div class="p10 mr30 clearfix" ng-repeat="schedule in schedulesOfToday">
+                        <div class="pull-left">
+                            <a>
+                                <img ng-src="{{schedule.avatar}}" width="50px" class="img-circle" alt="image">
+                            </a>
                         </div>
-                    </div>
+                        <div class="prj-data">
+                            <div class="text-primary">{{schedule.description}}</div>
+                            <div><small class="text-muted font-regular">assigned to:</small> {{schedule.assigned_to}}</div>
+                            <div class="row mt10">
+                                <div class="pl15 pull-left">
+                                    <div class="small text-gray-lighter">STATUS</div>
+                                    <span class="flag-badge"><i class="fa fa-flag text-{{schedule.status=='in progress' ? 'success' : 'danger'}}"></i></span>
+                                    <span class="small status">{{schedule.status}}</span>
+                                </div>
 
-                    <div class="col-md-3 project">
-                        <div class="feed-element">
-                            <div class="row no-margin">
-                                <div class="pull-left">
-                                    <a href="#">
-                                        <img src="assets/img/avasisteam/dave.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <strong>Rough HAVC</strong><br>
-                                    <div class="clearfix"></div>
-                                    <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Dave Musgrove</div>
-                                    <div class="row no-margin">
-                                        <div class="prj-sch-cont">
-                                            <p class="progrsTxt"><span><img src="assets/img/red-flag-simple.png" class="img-circle prj-flg-sm" alt="image">Suspended</span></p>
-                                        </div>
-                                        <div class="prj-sch-cont"><p class="progrsTxt ng-binding"> 40% COMPLETED</p></div>
-                                        <div class="prj-sch-prog">
-                                            <div class="progress progress-small">
-                                                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
-                                            </div>
-                                        </div>
+                                <div class="pl15 pull-left">
+                                    <small class="text-gray-lighter">{{schedule.completion_percentage}}% COMPLETED</small>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-success" style="width: {{schedule.completion_percentage}}%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-3 project">
-                        <div class="feed-element">
-                            <div class="row no-margin">
-                                <div class="pull-left">
-                                    <a href="#">
-                                        <img src="assets/img/avasisteam/mike.jpg" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <strong>Rough Electrical</strong><br>
-                                    <div class="clearfix"></div>
-                                    <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Mike Riley</div>
-                                    <div class="row no-margin">
-                                        <div class="prj-sch-cont">
-                                            <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">In Progress</span></p>
-                                        </div>
-                                        <div class="prj-sch-cont"><p class="progrsTxt ng-binding"> 90% COMPLETED</p></div>
-                                        <div class="prj-sch-prog">
-                                            <div class="progress progress-small">
-                                                <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 project">
-                        <div class="feed-element">
-                            <div class="row no-margin">
-                                <div class="pull-left">
-                                    <a href="#">
-                                        <img src="assets/img/user_4.png" class="img-circle prj-sch-photo" alt="image">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <strong>Framing</strong><br>
-                                    <div class="clearfix"></div>
-                                    <div class="prj-assigner"><span class="prj-assign">assigned to:</span> Dan Bonker</div>
-                                    <div class="row no-margin">
-                                        <div class="prj-sch-cont">
-                                            <p class="progrsTxt"><span class="green"><img src="assets/img/green-flag-simple.png" class="img-circle prj-flg-sm" alt="image">In Progress</span></p>
-                                        </div>
-                                        <div class="prj-sch-cont"><p class="progrsTxt ng-binding"> 100% COMPLETED</p></div>
-                                        <div class="prj-sch-prog">
-                                            <div class="progress progress-small">
-                                                <div class="progress-bar progress-bar-success" style="width: 100%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </slick>
             </div>
         </div>
     </div>
