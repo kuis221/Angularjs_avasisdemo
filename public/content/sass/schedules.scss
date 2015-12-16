@@ -15,8 +15,28 @@ table.no-border {
     }
 }
 #today-tasks {
-    .project {
-        border: none;
+    .prj-data {
+        padding-left: 10px;
+        width: 250px;
+        float: left;
+        img {
+            display: inline;
+        }
+        .flag-badge {
+            border: 1px solid white;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            background: white;
+            border-radius: 2px;
+            i.fa-flag {
+                transform: rotate(-30deg);
+            }
+        }
+        .status {
+            text-transform: uppercase;
+        }
     }
 }
 .popover {

@@ -8,8 +8,24 @@ table.no-border > th, table.no-border td {
 #schedule-stats td {
   padding: 5px; }
 
-#today-tasks .project {
-  border: none; }
+#today-tasks .prj-data {
+  padding-left: 10px;
+  width: 250px;
+  float: left; }
+  #today-tasks .prj-data img {
+    display: inline; }
+  #today-tasks .prj-data .flag-badge {
+    border: 1px solid white;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: white;
+    border-radius: 2px; }
+    #today-tasks .prj-data .flag-badge i.fa-flag {
+      transform: rotate(-30deg); }
+  #today-tasks .prj-data .status {
+    text-transform: uppercase; }
 
 .popover {
   max-width: 450px;

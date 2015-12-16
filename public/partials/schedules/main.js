@@ -33,8 +33,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-20'),
             schedule_type: "success",
-            status: 'success',
-            completion_percentage: 60
+            status: 'in progress',
+            completion_percentage: 60,
+            assigned_to: 'Dave Gebo',
+            avatar: 'assets/img/users/dave_gebo.jpg'
         },
         {
             id: _.uniqueId(),
@@ -42,8 +44,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-25'),
             schedule_type: "warning",
-            status: "danger",
-            completion_percentage: 40
+            status: "suspended",
+            completion_percentage: 40,
+            assigned_to: 'Dave Musgrove',
+            avatar: 'assets/img/users/dave.jpg'
         },
         {
             id: _.uniqueId(),
@@ -51,8 +55,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-18'),
             schedule_type: "primary",
-            status: "success",
-            completion_percentage: 90
+            status: "in progress",
+            completion_percentage: 90,
+            assigned_to: 'Mike Riley',
+            avatar: 'assets/img/users/mike.jpg'
         },
         {
             id: _.uniqueId(),
@@ -60,8 +66,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-17'),
             schedule_type: "danger",
-            status: "success",
-            completion_percentage: 100
+            status: "in progress",
+            completion_percentage: 100,
+            assigned_to: 'Dan Bonker',
+            avatar: 'assets/img/users/dan.jpg'
         },
         {
             id: _.uniqueId(),
@@ -69,8 +77,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-09-01'),
             schedule_type: "primary",
-            status: "success",
-            completion_percentage: 20
+            status: "in progress",
+            completion_percentage: 20,
+            assigned_to: 'Mary',
+            avatar: 'assets/img/users/mary.jpg'
         },
         {
             id: _.uniqueId(),
@@ -78,7 +88,7 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-24'),
             end_date: moment('2015-09-04'),
             schedule_type: "success",
-            status: "success",
+            status: "in progress",
             completion_percentage: 0
         },
         {
@@ -87,11 +97,15 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-09-01'),
             end_date: moment('2015-09-04'),
             schedule_type: "success",
-            status: "success",
+            status: "in progress",
             completion_percentage: 0
         }];
         _.each($scope.schedules, function(e) {
             e.days_of_period = e.end_date.diff(e.start_date, 'd') + 1;
+        })
+
+        $scope.schedulesOfToday = _.filter($scope.schedules, function(e){
+            return e.start_date <= moment('2015-08-17') && moment('2015-08-17') <= e.end_date;
         })
 
         $scope.range = function(val) {
@@ -179,5 +193,32 @@ app.controller('SchedulesCtrl',
             $state.go("schedules.detail", {id: id});
         }
         resetOffsetRange();
+
+        $scope.slickSetting = [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false
+                }
+            }
+        ];
     }]
 );
