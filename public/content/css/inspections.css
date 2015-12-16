@@ -204,13 +204,16 @@ table.aii-item-table .col-setting .fa {
     padding-right: 5px !important; }
   .aii-photo-section .aii-photo-thumb {
     height: 130px;
-    display: table-cell;
-    vertical-align: middle;
     margin-bottom: 10px;
-    width: 100%; }
+    width: 100%;
+    position: relative; }
     .aii-photo-section .aii-photo-thumb img {
       max-width: 100%;
-      max-height: 100%; }
+      max-height: 100%;
+      margin: 0 auto;
+      position: relative;
+      transform: translateY(-50%);
+      top: 50%; }
 
 .aii-comment {
   position: relative;

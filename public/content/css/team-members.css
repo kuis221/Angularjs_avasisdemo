@@ -284,7 +284,7 @@ table.tm-scroll-table tbody {
 }
 
 .riskmanagement .ibox-tools {
-    position: static;
+    position: inherit;
 }
 
 .riskmanagement .ibox-tools .dropdown-menu > li > a {

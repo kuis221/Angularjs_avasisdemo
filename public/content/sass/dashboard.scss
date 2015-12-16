@@ -325,6 +325,11 @@ $c-text-gray: #808080;
                 border-right: 0px;
             }
         }
+
+        .slick-slider {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     .panel-default>.panel-heading {
@@ -360,7 +365,7 @@ $c-text-gray: #808080;
 }
 
 .slick-next{
-    right: -15px;
+    right: -20px;
 }
 
 .slick-next:before{

@@ -214,6 +214,9 @@
       width: 35px; }
     .dash-projects .project-accordion .items-today .td-contact img:last-child {
       border-right: 0px; }
+  .dash-projects .project-accordion .slick-slider {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .dash-projects .panel-default > .panel-heading {
   color: #333;
@@ -243,7 +246,7 @@
   content: "" !important; }
 
 .slick-next {
-  right: -15px; }
+  right: -20px; }
 
 .slick-next:before {
   content: "" !important; }
