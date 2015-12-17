@@ -137,3 +137,99 @@
     color: #3aabd5;
     cursor: pointer;
 }
+
+
+.comm-head-wrapper {
+    padding: 0px 30px;
+}
+.comm-head-wrapper input {
+    width: 100%;
+    border: 0px;
+    background: transparent;
+    color: #CCC;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 17px;
+}
+
+.comm-msg-header {
+    background-color: #f9f9f9;
+}
+.comm-new-wrapper {
+    background-color: #f9f9f9;
+    padding: 30px;
+}
+.comm-new-wrapper .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.comm-new-wrapper .msg-note {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 22px;
+}
+.comm-new-wrapper .msg-input {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 14px;
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    border: 1px solid #d7d7d7;
+}
+
+.msg-note span{
+    margin-right: 5px;
+}
+.msg-add {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    color: #3aabd5;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    padding: 9px 20px 10px 20px;
+}
+
+.msg-add span{
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.msg-add span:first-child {
+    font-size: 22px;
+}
+.msg-add-spec {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    color: #3aabd5;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    padding: 9px 20px 10px 20px;
+}
+
+.msg-add-spec .add-mark {
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.msg-add-spec .add-note {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.msg-add-spec .add-switch {
+    margin-top: -1px;
+}

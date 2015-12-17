@@ -1,1 +1,51 @@
-<p>Hello world</p>
+<div class="row page-detail-header comm-msg-header">
+    <div class="col-md-1 no-padding-horizontal">
+        <div class="closeBox">
+            <p>
+                <a ui-sref="comm.main">
+                    Close <i class="fa fa-caret-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-11 animated fadeInRight">
+        <div class="row page-detail-header-wrapper">
+            <div class="row">
+                <div class="comm-head-wrapper">
+                    <h2 class="heading">Compose New Message</h2>
+                    <div class="">
+                        <input type="text" placeholder="Give This Email a Subject">
+                        <input type="text" placeholder="Name of Recipient">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row comm-new-wrapper animated fadeInRight">
+    <div class="row">
+        <div class="msg-note">
+            <span><i class="fa fa-pencil"></i></span>
+            <span>Create Your Message</span>
+        </div>
+        <input type="text" class="msg-input" placeholder="Compose your message here...">
+    </div>
+    <div class="row">
+        <div class="msg-add">
+            <span><i class="fa fa-paperclip"></i></span>
+            <span>Add Attachments</span>
+        </div>
+        <div class="msg-add">
+            <span><i class="fa fa-bell-o"></i></span>
+            <span>Set Reminder</span>
+        </div>
+        <div class="msg-add-spec">
+            <span class="add-mark"><i class="fa fa-envelope-o"></i></span>
+            <span class="add-note">Request Read Receipt</span>
+            <div class="pull-right add-switch">
+                <ui-rec-switch ng-model="photos" />
+            </div>
+        </div>
+    </div>
+</div>
