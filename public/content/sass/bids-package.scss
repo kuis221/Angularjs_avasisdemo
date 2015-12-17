@@ -1,0 +1,371 @@
+.bids-package {
+	.package-create-header {
+		.closeBox {
+			img {
+				margin-top: -1px;
+				margin-right: 5px;
+			}
+		}
+
+		.package-header-title {
+			padding-top: 30px;
+			padding-left: 15px;
+
+			.heading {
+				font-family: "AvenirNextLTPro-Regular";
+	    		font-size: 27px;
+	    		color: 4a4a4a;
+			}
+
+			input {
+				width: 100%;
+			    border: 0px;
+			    background: transparent;
+			    color: #4a4a4a;
+			    font-size: 17px;
+			    border-bottom: 1px solid #ccc;
+			    border-radius: 0px;
+			    padding: 20px 0 10px;
+			}
+			input:focus{
+	    		outline: 0;
+			}
+
+			.info {
+				display: block;
+				float: left;
+				padding: 20px 30px 20px 0;
+
+				.info-title {
+					font-family: "AvenirNextLTPro-Demi";
+					font-size: 14px;
+					color: #3aabd5;
+					padding-bottom: 5px;
+				}
+
+				.info-value {
+					font-family: "AvenirNextLTPro-Demi";
+					font-size: 11px;
+					color: #8b8b8b;
+				}
+
+			}
+
+			.additional-info {
+				padding-top: 40px;
+				padding-right: 20px;
+
+				.details {
+					text-align: right;
+					padding-bottom: 6px;
+				}
+
+				.details .more-info-name {
+					display: inline-block;
+					text-transform: uppercase;
+					font-family: "AvenirNextLTPro-Bold";
+					font-size: 9px;
+					color: 44474b;
+				}
+				.details .pd-right-20 {
+					padding-right: 20px;
+				}
+				.details .more-info-value {
+					display: inline-block;
+					min-width: 100px;
+					text-align: left;
+					padding: 0 10px;
+
+					.pc-info-title {
+						background-color: #44474b;
+						color: #fff;
+						border-radius: 3px;
+						font-family: "AvenirNextLTPro-Bold";
+						font-size: 10px;
+						padding: 2px 6px;
+					}
+
+					.pc-info-date {
+						font-family: "AvenirNextLTPro-Medium";
+						font-size: 12px;
+						color: 44474b;
+					}
+
+					.pc-info-status {
+						font-family: "AvenirNextLTPro-Bold";
+						font-size: 12px;
+					}
+				}
+				.details .more-info-select {
+					display: inline-block;
+					min-width: 200px;
+					text-align: left;
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+
+	.package-create-content {
+		background-color: #fff;
+	    border: 1px solid #d7d7d7;
+	    border-radius: 4px;
+	    margin-top: 30px;
+	    padding: 15px;
+
+	    .person-info-wrapper {
+	    	padding: 10px 0; 
+	    	border-bottom: 1px solid #d7d7d7;
+	    	margin: 0 20px;
+
+	    	.ibox-team {
+	    		padding-top: 10px;
+	    		font-size: 20px;
+	    	}
+
+	    	.document-title {
+	    		font-family: "AvenirNextLTPro-Regular";
+	    		font-size: 15px;
+	    		padding: 10px 0;
+	    		display: block;
+	    		color: #4a4a4a;
+	    	}
+
+	    	.table-document {
+	    		font-family: "AvenirNextLTPro-Demi";
+
+	    		table {
+	    			border: 1px solid #dedede;
+	    		}
+	    		thead tr th {
+	    			font-size: 12px;
+	    			color: #808080;
+	    			background-color: #f9f9f9;
+	    		}
+	    		tbody tr td {
+	    			font-size: 13px;
+	    			color: #3aabd5;
+	    		}
+	    		tbody tr td i {
+	    			color: #8b8b8b;
+	    		}
+	    	}
+	    }
+
+	    .person-info {
+	    	display: block;
+
+	    	.info-panel {
+	    		display: block;
+	    		float: left;
+	    		border-right: 1px solid #d7d7d7;
+	    		padding: 8px 10px 8px 20px;
+
+	    		.name, .other {
+	    			display: block;
+	    			float: left;
+	    			padding-right: 20px;
+	    		}
+
+	    		.name-header, .other-header {
+	    			font-family: "AvenirNextLTPro-Demi";
+	    			font-size: 11px;
+	    			color: #8b8b8b;
+	    		}
+
+	    		.name-value {
+	    			font-family: "AvenirNextLTPro-Demi";
+	    			font-size: 13px;
+	    			color: #3aabd5;
+	    		}
+
+	    		.other-value {
+	    			font-family: "AvenirNextLTPro-Regular";
+	    			font-size: 12px;
+	    			color: #4a4a4a;
+	    		}
+	    		.other-contact {
+	    			font-family: "AvenirNextLTPro-Regular";
+	    			font-size: 9px;
+	    			color: #4a4a4a;
+	    			.breadcrumbv22x {
+	    				padding-top: 3px;
+	    			}
+	    		}
+
+	    	}
+	    	.info-panel:first-of-type {
+	    		padding-left: 0px;
+	    	}
+	    }
+
+	    .description-title {
+	    	display: block;
+	    	margin-bottom: 14px;
+	    	font-family: "AvenirNextLTPro-Bold";
+	    	font-size: 13px;
+	    	color: #44474b;
+	    }
+
+	    .description-text {
+	    	font-family: "AvenirNextLTPro-Regular";
+	    	font-size: 13px;
+	    	color: #4a4a4a;
+	    }
+	}
+
+	.no-border {
+		border: none !important;
+	}
+
+	.no-padding-left {
+		padding-left: 0px;
+	}
+
+	.tab-content {
+		border-radius: 0px 0px 4px 4px;
+	}
+
+	.bids-package-table {
+		h3 {
+			font-family: "AvenirNextLTPro-Medium";
+			font-size: 17px;
+			color: #4a4a4a;
+		}
+
+		table thead tr th {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 15px;
+			color: #808080;
+			background-color: #f9f9f9;
+			vertical-align: middle;
+		}
+
+		table tbody tr td {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 12px;
+			color: #44474b;
+			background-color: #ffffff;
+			vertical-align: middle;
+		}
+
+		table tbody tr td.title {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #3aabd5;
+		}
+	}
+
+	.cost-schedule-table {
+		h3 {
+			font-family: "AvenirNextLTPro-Medium";
+			font-size: 17px;
+			color: #4a4a4a;
+		}
+
+		table thead tr th {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 15px;
+			color: #808080;
+			background-color: #f9f9f9;
+			vertical-align: middle;
+		}
+
+		table thead tr th.small {
+			font-size: 11px;
+		}
+
+		table tbody tr td {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 11px;
+			color: #44474b;
+			background-color: #ffffff;
+			vertical-align: middle;
+		}
+
+		.scope-title {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 11px;
+			color: #3aabd5;
+		}
+		.scope-division {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 10px;
+			color: #9e9e9e;
+		}
+		.costcode {
+			background: #2a2d33;
+		    border-radius: 5px;
+		    color: #fff;
+		    font-family: "AvenirNextLTPro-Regular";
+		    font-size: 10px;
+		    width: 55px;
+		    display: block;
+		    text-align: center;
+		}
+		.phase {
+			color: #3aabd5;
+		}
+		.large-text {
+			font-size: 12px;
+		}
+	}
+	.action-button {
+		display: block;
+		margin-top: 10px;
+		font-family: "AvenirNextLTPro-Demi";
+		font-size: 11px;
+		margin-right: 15px;
+		span.btn-text {
+			padding-right: 10px;
+		}
+	}
+
+	.bid-package-comments {
+		table td {
+			vertical-align: middle;
+
+			.profile-image {
+				width: 50px;
+			}
+		}
+		.name {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 15px;
+			color: #3aabd5;
+			margin-right: 10px;
+		}
+		.datetime {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 12px;
+			color: #4a4a4a;
+		}
+		.detail {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 14px;
+			color: #4a4a4a;
+		}
+
+		.form-group label {
+		    display: block;
+		    padding: 20px 0 10px;
+		    font-family: "AvenirNextLTPro-Demi";
+		    font-size: 13px;
+		    color: #afafaf;
+		}
+
+		.form-group textarea {
+		    background-color: #f9f9f9;
+		    width: 100%;
+		    padding: 15px 20px;
+		    font-family: "AvenirNextLTPro-Regular";
+		    font-size: 12px;
+		}
+	}
+}
+
+.bid-package-dropdown-menu li {
+	font-family: "AvenirNextLTPro-Regular";
+	font-size: 13px;
+	color: #3aabd5;
+}
