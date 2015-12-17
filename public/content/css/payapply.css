@@ -1,5 +1,11 @@
 .payapply-table {
   margin-bottom: 25px; }
+  .payapply-table table {
+    border-left: none;
+    border-right: none; }
+  .payapply-table table thead,
+  .payapply-table table tbody {
+    border: 1px solid #eee; }
   .payapply-table table tbody tr td {
     padding: 6px;
     height: 50px; }
@@ -17,11 +23,22 @@
     color: #808080;
     border: none; }
   .payapply-table table thead th,
-  .payapply-table table tbody td {
+  .payapply-table table tbody td,
+  .payapply-table table tfoot td {
     vertical-align: middle;
     border: none; }
   .payapply-table table tbody tr {
     border-top: 1px solid #eee; }
+  .payapply-table table tfoot tr {
+    border-top: 1px solid #eee;
+    border-right: none;
+    border-left: none; }
+  .payapply-table table tfoot span {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    color: #808080; }
+  .payapply-table table tfoot p {
+    margin-bottom: 5px; }
   .payapply-table th.flag {
     width: 4%; }
   .payapply-table td.flag span {
@@ -37,14 +54,20 @@
   .payapply-table th.responsible,
   .payapply-table th.status {
     width: 10%; }
-  .payapply-table th.order-by-date {
-    width: 8%;
+  .payapply-table td.order-by-date {
+    width: 9%;
     font-family: AvenirNextLTPro-Regular;
     font-size: 13px;
     color: #44474b; }
+  .payapply-table td.sow {
+    width: 20%;
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 13px;
+    color: #808080; }
   .payapply-table td.title a {
     font-family: AvenirNextLTPro-Demi;
-    font-size: 13px; }
+    font-size: 13px;
+    color: #686868; }
   .payapply-table td.title small {
     font-family: AvenirNextLTPro-Demi;
     font-size: 10px;
@@ -59,3 +82,23 @@
     font-family: AvenirNextLTPro-Demi;
     font-size: 10px;
     color: #9e9e9e; }
+  .payapply-table td.status .in-process {
+    color: #61c571; }
+  .payapply-table td.status .pending {
+    color: #fdb04a; }
+  .payapply-table td.status .draft {
+    color: #2a2d33; }
+  .payapply-table td.status .completed {
+    color: #3aabd5; }
+  .payapply-table td.flag span {
+    margin: 4px; }
+  .payapply-table td.status .label {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 10px;
+    padding: 2px 0px 2px 0px; }
+  .payapply-table td.status small {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 11px;
+    color: #44474b; }

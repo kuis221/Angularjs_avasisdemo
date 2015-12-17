@@ -1,6 +1,15 @@
 .payapply-table {
     margin-bottom: 25px;
 
+    table {
+        border-left: none;
+        border-right: none;
+    }
+    table thead,
+    table tbody {
+        border: 1px solid #eee;
+    }
+
     table tbody tr td {
         padding: 6px;
         height: 50px;
@@ -25,13 +34,27 @@
     }
 
     table thead th,
-    table tbody td {
+    table tbody td,
+    table tfoot td {
         vertical-align: middle;
         border: none;
     }
 
     table tbody tr {
         border-top: 1px solid #eee;
+    }
+    table tfoot tr {
+        border-top: 1px solid #eee;
+        border-right: none;
+        border-left: none;
+    }
+    table tfoot span {
+        font-family: "AvenirNextLTPro-Demi";
+        font-size: 12px;
+        color: #808080;
+    }
+    table tfoot p {
+        margin-bottom: 5px;
     }
 
     th.flag {
@@ -56,16 +79,23 @@
     th.status {
         width: 10%;
     }
-    th.order-by-date {
-        width: 8%;
+    td.order-by-date {
+        width: 9%;
         font-family: AvenirNextLTPro-Regular;
         font-size: 13px;
         color: #44474b;
+    }
+    td.sow {
+        width: 20%;
+        font-family: AvenirNextLTPro-Demi;
+        font-size: 13px;
+        color: #808080;
     }
 
     td.title a {
         font-family: AvenirNextLTPro-Demi;
         font-size: 13px;
+        color: #686868;
     }
     td.title small {
         font-family: AvenirNextLTPro-Demi;
@@ -83,5 +113,34 @@
         font-family: AvenirNextLTPro-Demi;
         font-size: 10px;
         color: #9e9e9e;
+    }
+
+    td.status .in-process {
+        color: #61c571;
+    }
+    td.status .pending {
+        color: #fdb04a;
+    }
+    td.status .draft {
+        color: #2a2d33;
+    }
+    td.status .completed {
+        color: #3aabd5;
+    }
+    td.flag span {
+        margin: 4px;
+    }
+
+    td.status .label {
+        background-color: transparent;
+        text-transform: uppercase;
+        font-family: "AvenirNextLTPro-Demi";
+        font-size: 10px;
+        padding: 2px 0px 2px 0px;
+    }
+    td.status small {
+        font-family: "AvenirNextLTPro-Regular";
+        font-size: 11px;
+        color: #44474b;
     }
 }
