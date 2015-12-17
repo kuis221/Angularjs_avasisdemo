@@ -1,0 +1,51 @@
+.date-field-wrapper {
+    padding: 14px 20px;
+    height: 50px;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    position: relative;
+    font-size: 14px;
+    .value {
+        margin-left: 30px;
+        cursor: pointer;
+    }
+    input[type='date'] {
+        border: none;
+        width: 0;
+        height: 0;
+    }
+}
+ul[uib-datepicker-popup-wrap] {
+    margin-top: 16px;
+    table {
+        .btn {
+            background: none;
+            color: white;
+            border: none;
+            color: #4a4a4a;
+            font-size: 13px;
+            padding: 8px 10px;
+            &:hover {
+                background: #ccc;
+            }
+            &.active {
+                box-shadow: none;
+                & > span {
+                    color: white;
+                }
+                &.btn-default {
+                    background: #aaa;
+                }
+            }
+            &.btn-info {
+                background-color: #79c485 !important;
+            }
+        }
+        thead > tr:last-child th {
+            background: #404854;
+            color: white; 
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+}
