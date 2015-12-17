@@ -1,0 +1,110 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body" ng-class="{'no-files': files.length == 0}">
+    <form class="mt30 dropzone"
+          enctype="multipart/form-data"
+          ng-dropzone dropzone="dropzone"
+          dropzone-config="dropzoneConfig"
+          event-handlers="dropzoneEventHandlers">
+        <input name="file" class="hidden" type="file" multiple />
+    </form>
+    <div class="text-center">
+        <a class="mt20 btn btn-green btn-lg btn-file-input">Browse Files</a>
+    </div>
+    <div class="text-center p20">
+        <img src="assets/img/doc_types.png">
+    </div>
+
+    <div class="progress-upload" ng-show="files.length > 0">
+        <ul class="list-unstyled">
+            <li ng-repeat="file in files" ng-class="{'uploaded': file.upload_progress == 100}">
+                <div class="row">
+
+                    <div class="col-xs-4 col-md-2 text-center" ng-show="file.upload_progress != 100">
+                        <a><i class="fa fa-times-circle" ng-click="file.is_remove = !file.is_remove;"></i></a>
+                        <a><i class="fa fa-pause-circle"></i></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2 text-center" ng-hide="file.upload_progress != 100">
+                        <a class="delete" ng-click="file.is_remove = !file.is_remove;"><i class="fa fa-times-circle"></i></a>
+                        <img ng-src="assets/img/photos/{{file.avatar}}" alt="" />
+                    </div>
+
+                    <div class="col-xs-8 col-md-10 text-left">
+                        <p>
+                            {{file.name}}
+                            <span>{{file.upload_progress != 100 ? file.bytes_sent + ' KB of ' + file.size + 'KB' : 'Uploaded'}}</span>
+                        </p>
+                        <div class="progress" ng-show="file.upload_progress != 100">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:{{file.upload_progress}}%">
+                                <span class="sr-only">{{file.upload_progress}} Complete</span>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Save to <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu animated fadeInUp">
+                                <li>
+                                    <input type="text" placeholder="Search Projects" class="form-control searchround">
+                                </li>
+                                <li>
+                                    <a class="trigger">Project Name <i class="pull-right fa fa-chevron-right"></i></a>
+                                    <ul class="dropdown-menu sub-menu animated fadeInLeft">
+                                        <li>
+                                            <a href="#"><i class="fa fa-plus"></i>Create New Folder</a>
+                                        </li>
+                                        <li>
+                                            <div class="input-group animated fadeInUp"><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span><input type="text" placeholder="Enter New Folder Name"></div>
+                                        </li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="trigger">Project Name <i class="pull-right fa fa-chevron-right"></i></a>
+                                    <ul class="dropdown-menu sub-menu animated fadeInLeft">
+                                        <li>
+                                            <a href="#"><i class="fa fa-plus"></i>Create New Folder</a>
+                                        </li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="trigger">Project Name <i class="pull-right fa fa-chevron-right"></i></a>
+                                    <ul class="dropdown-menu sub-menu animated fadeInLeft">
+                                        <li>
+                                            <a href="#"><i class="fa fa-plus"></i>Create New Folder</a>
+                                        </li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                        <li><a href="#">Folder Name</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="confirm-delete animated fadeInRight"  ng-show="file.is_remove">
+                            <p>Are you sure you want to delete this file?</p>
+
+                            <button type="button" class="btn btn-danger btn-rounded pull-right" ng-click="deleteFile(file)">Delete</button>
+                            <button type="button" class="btn btn-default pull-right" ng-click="file.is_remove = false;">Cancel</button>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="upload-files-container"></div>
+</div>

@@ -11,6 +11,9 @@
   font-family: 'AvenirNextLTPro-Medium';
   font-size: 19px; }
 
+.photos .btn-this-week {
+  margin-top: -5px; }
+
 .photos a {
   font-family: 'AvenirNextLTPro-Demi';
   font-size: 14px;
@@ -422,133 +425,167 @@
 
 .drag-drop .modal-content .modal-body {
   border-radius: 3px; }
-  .drag-drop .modal-content .modal-body i {
-    font-size: 26px;
-    color: #3aabd5;
-    margin-top: 80px; }
-  .drag-drop .modal-content .modal-body h6 {
-    font-family: "AvenirNextLTPro-Demi";
-    color: #44474b;
-    font-size: 14px;
-    margin: 35px 0; }
-  .drag-drop .modal-content .modal-body p {
-    font-family: "AvenirNextLTPro-Demi";
-    font-size: 14px;
-    margin-bottom: 35px;
-    color: #9c9c9c; }
-  .drag-drop .modal-content .modal-body .fileUpload {
-    position: relative;
-    overflow: hidden; }
-  .drag-drop .modal-content .modal-body .btn-success {
-    color: #fff;
-    font-family: "AvenirNextLTPro-Demi";
-    background-color: #79c485;
-    border: none; }
-  .drag-drop .modal-content .modal-body .fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0); }
-  .drag-drop .modal-content .modal-body ul {
-    margin: 35px 0 80px; }
-    .drag-drop .modal-content .modal-body ul li {
-      display: inline-block;
-      color: #eee;
-      font-family: "AvenirNextLTPro-Demi";
-      font-size: 11px; }
-      .drag-drop .modal-content .modal-body ul li span {
-        right: inherit;
-        top: inherit;
-        border: none;
-        border-radius: 4px;
-        color: #fff;
-        background-color: #eee;
-        margin-right: 10px;
-        font-size: 10px;
-        text-transform: uppercase;
-        padding: 2px 8px; }
 
+.drag-drop .modal-content .modal-body i {
+  font-size: 26px;
+  color: #3aabd5;
+  margin-top: 80px; }
+
+.drag-drop .modal-content .modal-body h6 {
+  font-family: "AvenirNextLTPro-Demi";
+  color: #44474b;
+  font-size: 14px;
+  margin: 35px 0; }
+
+.drag-drop .modal-content .modal-body p {
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 14px;
+  margin-bottom: 35px;
+  color: #9c9c9c; }
+
+.drag-drop .modal-content .modal-body .fileUpload {
+  position: relative;
+  overflow: hidden; }
+
+.drag-drop .modal-content .modal-body .btn-success {
+  color: #fff;
+  font-family: "AvenirNextLTPro-Demi";
+  background-color: #79c485;
+  border: none; }
+
+.drag-drop .modal-content .modal-body .fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.drag-drop .modal-content .modal-body ul {
+  margin: 35px 0 80px; }
+
+.drag-drop .modal-content .modal-body ul li {
+  display: inline-block;
+  color: #eee;
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 11px; }
+
+.drag-drop .modal-content .modal-body ul li span {
+  right: inherit;
+  top: inherit;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #eee;
+  margin-right: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 2px 8px; }
+
+.drag-drop .modal-content .modal-body {
+  padding: 20px 0px 0px; }
+  .drag-drop .modal-content .modal-body.no-files {
+    padding: 20px 0px 40px; }
+  .drag-drop .modal-content .modal-body .dropzone {
+    border: 0; }
+
+/* ******************** Drag & Drop in Progress ***********************/
 .drag-drop .modal-content .modal-header h3 {
   font-family: 'AvenirNextLTPro-Regular';
   font-size: 14px;
   color: #fff; }
-  .drag-drop .modal-content .modal-header h3 span {
-    border: 1px solid #fff;
-    border-radius: 10px;
-    padding: 0 7px;
-    margin-right: 10px; }
+
+.drag-drop .modal-content .modal-header h3 span {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 0 7px;
+  margin-right: 10px; }
 
 .drag-drop .modal-content .modal-body .progress-upload {
-  border-top: 1px solid #ccc;
-  margin-top: -40px; }
-  .drag-drop .modal-content .modal-body .progress-upload ul {
-    margin: 10px 0;
-    height: 220px; }
-    .drag-drop .modal-content .modal-body .progress-upload ul li {
-      display: block;
-      border-bottom: 1px solid #ccc;
-      padding-right: 20px;
-      padding-top: 15px;
-      position: relative; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li a {
-        display: inline-block;
-        margin-right: 10px;
-        font-weight: normal; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li a:last-of-type {
-          margin-right: 0; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li a i {
-          color: #d7d7d7;
-          margin: 0;
-          font-size: 16px;
-          font-weight: normal; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li .col-md-2 {
-        padding-right: 0; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li .col-md-10 {
-        padding-left: 0; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li p {
-        font-family: 'AvenirNextLTPro-Regular';
-        color: #4a4a4a;
-        font-size: 11px;
-        margin-bottom: 13px; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li p span {
-          font-size: 10px;
-          color: #8b8b8b;
-          background-color: transparent;
-          display: block;
-          padding: 0;
-          text-transform: inherit; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li .progress {
-        margin-bottom: 15px;
-        background-color: #eee;
-        height: 5px;
-        border-radius: 2.5px; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li .progress .progress-bar {
-          border-radius: 2.5px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li .btn-group {
-        position: absolute;
-        right: 20px;
-        top: 0px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li button {
-        border: none;
-        box-shadow: none;
-        background-color: transparent;
-        color: #3aabd5;
-        font-family: "AvenirNextLTPro-Demi";
-        font-size: 12px; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li button i {
-          font-size: 16px;
-          margin: 0 0 0 10px;
-          padding-top: 5px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li:first-child {
-        padding-top: 5px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li:last-child {
-        border-bottom: none; }
+  border-top: 1px solid #eee; }
 
+.drag-drop .modal-content .modal-body .progress-upload ul {
+  margin: 10px 0;
+  height: 220px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-right: 20px;
+  padding-top: 15px;
+  position: relative; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li a {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: normal; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li a:last-of-type {
+  margin-right: 0; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li a i {
+  color: #d7d7d7;
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .col-md-2 {
+  padding-right: 0; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .col-md-10 {
+  padding-left: 0; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li p {
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #4a4a4a;
+  font-size: 11px;
+  margin-bottom: 13px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li p span {
+  font-size: 10px;
+  color: #8b8b8b;
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  text-transform: inherit; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .progress {
+  margin-bottom: 15px;
+  background-color: #eee;
+  height: 5px;
+  border-radius: 2.5px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .progress .progress-bar {
+  border-radius: 2.5px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .btn-group {
+  position: absolute;
+  right: 20px;
+  top: 0px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li button {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #3aabd5;
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 12px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li button i {
+  font-size: 16px;
+  margin: 0 0 0 10px;
+  padding-top: 5px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li:first-child {
+  padding-top: 5px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li:last-child {
+  border-bottom: none; }
+
+/* ******************** Upload Error Status ***********************/
 .drag-drop .modal-content .modal-body .upload-error {
   left: 0;
   right: 0;
@@ -561,11 +598,7 @@
   font-size: 12px;
   ont-family: "AvenirNextLTPro-Demi"; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox {
-  overflow: inherit; }
-  .drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox .mCSB_container {
-    overflow: inherit; }
-
+/* ******************** Thumbnail Preview Uploaded ***********************/
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete {
   height: 13px;
   position: absolute;
@@ -574,51 +607,61 @@
   font-size: 1px;
   background: #fff;
   border-radius: 10px; }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete i {
-    color: #e36060; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete i {
+  color: #e36060; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded p {
   padding-top: 10px; }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded p span {
-    color: #a1d4a9; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li.uploaded p span {
+  color: #a1d4a9; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded img {
   border-radius: 0px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  width: 66px; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .col-md-2 {
   padding-left: 30px; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .col-md-10 {
-  padding-left: 20px;
+  padding-left: 20px; }
+
+/* ******************** Thumbnail Delete Option ***********************/
+.drag-drop .modal-content .modal-body .progress-upload ul li .col-md-10 {
   position: relative; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .confirm-delete {
-  display: none;
+.drag-drop .modal-content .modal-body .progress-upload ul li .confirm-delete {
   position: absolute;
   top: -15px;
   left: 20px;
   right: -5px;
   height: 80px;
   background: rgba(227, 100, 100, 0.93); }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .confirm-delete p {
-    padding: 0 50px 0 0;
-    margin: 10px 0 10px 20px;
-    line-height: 60px;
-    color: #fff;
-    font-family: "AvenirNextLTPro-Demi";
-    font-size: 11px;
-    display: inline-block;
-    border-right: 1px solid #be595a; }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .confirm-delete .btn {
-    margin: 25px 15px 0 0; }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .confirm-delete .btn-default {
-    color: #f1bcbc; }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .confirm-delete .btn-danger {
-    color: #fff;
-    border: 1px solid #fff; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu {
+.drag-drop .modal-content .modal-body .progress-upload ul li .confirm-delete p {
+  padding: 0 50px 0 0;
+  margin: 10px 0 10px 20px;
+  line-height: 60px;
+  color: #fff;
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 11px;
+  display: inline-block;
+  border-right: 1px solid #be595a; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .confirm-delete .btn {
+  margin: 25px 15px 0 0; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .confirm-delete .btn-default {
+  color: #f1bcbc; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .confirm-delete .btn-danger {
+  color: #fff;
+  border: 1px solid #fff; }
+
+/* ******************** Add to Project ***********************/
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu {
   border: none;
   top: 30px;
   height: auto;
@@ -628,67 +671,86 @@
   padding: 0;
   min-width: 200px;
   border-radius: 3px; }
-  .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li {
-    border-bottom: 1px solid #d7d7d7;
-    height: 40px;
-    padding: 0 15px;
-    position: relative; }
-    .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .searchround {
-      background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 6px;
-      font-family: 'AvenirNextLTPro-Regular';
-      font-size: 11px;
-      height: 30px;
-      border: 1px solid #f3f3f3;
-      margin: 10px 0 0;
-      border-radius: 100px;
-      box-shadow: none;
-      color: #4a4a4a; }
-    .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li a {
-      display: block;
-      line-height: 40px;
-      color: #3aabd5;
-      padding: 0;
-      font-family: 'AvenirNextLTPro-Regular';
-      font-size: 12px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li a:hover {
-        background-color: transparent; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li a i {
-        color: #3aabd5;
-        font-size: 8px;
-        margin: 0 0;
-        position: absolute;
-        top: 17px;
-        right: 15px; }
-    .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu {
-      top: 0px;
-      left: inherit;
-      right: -215px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li a i {
-        right: inherit;
-        left: 15px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li:first-child > a {
-        padding-left: 15px; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li:first-child > a:focus {
-          background-color: transparent; }
-    .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li:last-child {
-      border-bottom: none; }
-    .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li {
-      width: 200px; }
-      .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li .input-group {
-        padding-top: 5px;
-        width: 180px; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li .input-group span {
-          background-color: transparent; }
-          .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li .input-group span i {
-            margin: 0;
-            color: #a2a2a2;
-            font-size: 14px; }
-        .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .dropdown-menu li .sub-menu li .input-group input {
-          padding: 0;
-          border: none;
-          color: #a2a2a2;
-          height: 30px;
-          background-color: transparent;
-          font-family: 'AvenirNextLTPro-Regular';
-          font-size: 11px;
-          width: 150px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li {
+  border-bottom: 1px solid #d7d7d7;
+  height: 40px;
+  padding: 0 15px;
+  position: relative; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .searchround {
+  background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 6px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-size: 11px;
+  height: 30px;
+  border: 1px solid #f3f3f3;
+  margin: 10px 0 0;
+  border-radius: 100px;
+  box-shadow: none;
+  color: #4a4a4a; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a {
+  display: block;
+  line-height: 40px;
+  color: #3aabd5;
+  padding: 0;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-size: 12px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a:hover {
+  background-color: transparent; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a i {
+  color: #3aabd5;
+  font-size: 8px;
+  margin: 0 0;
+  position: absolute;
+  top: 17px;
+  right: 15px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu {
+  top: 0px;
+  left: inherit;
+  right: -215px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li a i {
+  right: inherit;
+  left: 15px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li:first-child > a {
+  padding-left: 15px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li:first-child > a:focus {
+  background-color: transparent; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li:last-child {
+  border-bottom: none; }
+
+/* ******************** Create New Folder ***********************/
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li {
+  width: 200px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group {
+  padding-top: 5px;
+  width: 180px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group span {
+  background-color: transparent; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group span i {
+  margin: 0;
+  color: #a2a2a2;
+  font-size: 14px; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group input {
+  padding: 0;
+  border: none;
+  color: #a2a2a2;
+  height: 30px;
+  background-color: transparent;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-size: 11px;
+  width: 150px; }
+
+.drag-drop .modal-content.drag-enter {
+  border: 3px solid #e25c5c; }
