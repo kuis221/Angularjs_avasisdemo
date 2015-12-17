@@ -1,0 +1,102 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body">
+    <div class="compare-modal-title">
+        <span>Award Bid</span>
+    </div>
+    <div class="compare-modal-info">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="text-title">Bid Name</span>
+                <span class="text-bid-name">Ridiculus Ornare Venenatis</span>
+            </div>
+            <div class="col-md-2">
+                <span class="text-title">Sub Contractor</span>
+                <span class="text-sub-contractor">Bob Jones</span>
+            </div>
+            <div class="col-md-3">
+                <span class="text-title">Company</span>
+                <span class="text-company">Ornare Venenatis</span>
+            </div>
+            <div class="col-md-3">
+                <span class="text-title">Bid Amount</span>
+                <span class="text-bid-amount">$1,234,67.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="compare-modal-info">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Who is responsible for generating contract?</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Contract Due Date</label>
+                    <div class="due-date" ng-click="isShowDatePicker = !isShowDatePicker">
+                        <span class="text-muted text-center">{{ selectedDate | date: 'MMM dd, yyyy'}}</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="inline-calendar" ng-show="isShowDatePicker">
+                      <uib-datepicker ng-model="selectedDate" min-date="minDate" show-weeks="false" class="well well-sm" ng-click="isShowDatePicker = false;"></uib-datepicker>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="compare-modal-info">
+        <div class="row">
+            <div class="col-md-10">
+                <span class="replaceCost-title">Does this contract replace any currently Estimated Costs?</span>
+            </div>
+            <div class="col-md-2">
+                <ui-rec-switch ng-model="replaceCost" class="pull-right" />
+            </div>
+        </div>
+        <div class="row" ng-show="replaceCost">
+            <div class="past-estimates">
+                <div ui-tree data-drag-enabled="false" data-max-depth="2">
+                    <ol ui-tree-nodes="" ng-model="pastEstimates">
+                        <li ng-repeat="item in pastEstimates" ui-tree-node data-collapsed="true" ng-include="'other-estimate-template.html'"></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Nested node template -->
+            <script type="text/ng-template" id="other-estimate-template.html">
+                <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                    <div class="text-muted" ng-if="item.topLevel">
+                        <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                            <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                            <div style="display: inline-block">
+                                <span class="division" ng-if="item.division">{{item.division}}</span>
+                                <span class="name">{{item.name}}</span>
+                            </div>
+                        </div>
+                        <div style="width: 150px" class="total-title">Total</div>
+                        <div style="width: 250px" class="total-estimateby">Estimated by</div>
+                    </div>
+                    <div class="text-muted font-regular" ng-if="!item.topLevel">
+                        <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                            <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                            <div style="display: inline-block">
+                                <span class="name">{{item.name}}</span>
+                            </div>
+                        </div>
+                        <div style="width: 150px"><input type="text" ng-model="item.total" ui-money-mask="0"></div>
+                        <div style="width: 250px">{{item.estimated_by}} on {{ item.estimated_on}}<i class="pull-right fa fa-trash"></i></div>
+                    </div>
+                </div>
+                <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
+                    <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'other-estimate-template.html'" ng-class="{'no-child': item.children==null}"></li>
+                </ol>
+            </script>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel btn-lg" ng-click="cancel()">Cancel</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="awardBid()">Award Bid</button>
+</div>
