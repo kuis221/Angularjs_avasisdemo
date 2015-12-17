@@ -313,6 +313,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('baseline-schedule', {
+            url: '/baseline-schedule',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('baseline-schedule.list', {
+            url: '/list',
+            templateUrl: 'partials/schedules/baseline/list.html',
+            controller: 'BaselineScheduleCtrl'
+        })
         .state('sample', {
             url: '/sample',
             templateUrl: 'partials/sample/sample.html',
