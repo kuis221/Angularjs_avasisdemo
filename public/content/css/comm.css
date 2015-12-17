@@ -142,15 +142,34 @@
 .comm-head-wrapper {
     padding: 0px 30px;
 }
-.comm-head-wrapper input {
+.comm-head-wrapper .msg-head-receiver {
     width: 100%;
     border: 0px;
     background: transparent;
-    color: #CCC;
-    border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
     padding-left: 0px;
-    font-family: "AvenirNextLTPro-Medium";
+    font-family: "AvenirNextLTPro-Medium" !important;
+    font-size: 17px;
+    color: #3aabd5;
+}
+
+.msg-receiver-group {
+    width: 90%;
+}
+.comm-head-wrapper hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-color: #d7d7d7;
+}
+
+.comm-head-wrapper .msg-head-sub {
+    width: 100%;
+    border: 0px;
+    background: transparent;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    font-family: "AvenirNextLTPro-Medium" !important;
     font-size: 17px;
 }
 
@@ -178,7 +197,11 @@
     margin-top: 10px;
     border: 1px solid #d7d7d7;
 }
-
+.msg-head-mark {
+    font-size: 17px;
+    margin-top: 20px;
+    color: #808080;
+}
 .msg-note span{
     margin-right: 5px;
 }
@@ -243,4 +266,16 @@
     width: 150px;
     text-align: center;
     height: 45px;
+}
+.msg-drop-name {
+    font-family: "AvenirNextLTPro-Medium";
+    font-size: 15px;
+    color: #3aabd5;
+    margin-top: 7px;
+}
+.msg-drop-photo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
