@@ -227,3 +227,6 @@ rzslider {
     display: none; }
   rzslider .rz-bar.rz-selection {
     background: #f1f1f1; }
+
+.modal-dialog.modal-xl {
+  width: 1000px; }
