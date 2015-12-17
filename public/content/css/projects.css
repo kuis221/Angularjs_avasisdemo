@@ -167,7 +167,7 @@
     padding-top: 4px;
 }
 .prj-sch-prog .progress-small {
-    width: 30%;
+    width: 20%;
 }
 
 @media screen and (max-width: 480px) {
@@ -225,13 +225,6 @@
     }
 }
 
-.no-r-pad {
-    padding-right: 0px;
-}
-.no-l-pad {
-    padding-left: 0px;
-}
-
 .prj-itm-comp {
     font-family: "AvenirNextLTPro-Regular";
     font-size: 11.5px;
@@ -250,4 +243,11 @@
 .overview-photo .gallery img {
     height: 100px;
     width: 100%;
+}
+
+.no-r-pad {
+    padding-right: 0px;
+}
+.no-l-pad {
+    padding-left: 0px;
 }

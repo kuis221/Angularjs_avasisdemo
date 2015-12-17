@@ -1,5 +1,5 @@
 app.controller('BidsCompareCtrl',
-    ['$scope', function($scope){
+    ['$scope', '$uibModal', function($scope, $uibModal){
         $scope.bids = [
             {
                 id: 1,
@@ -47,4 +47,17 @@ app.controller('BidsCompareCtrl',
                 references: true
             }
         ];
+        $scope.showBidAwardModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/bids/bid-award-modal.html',
+                controller: 'BidAwardModalCtrl',
+                windowClass: 'bids-modal'
+            });
+
+            modalInstance.result.then(function(res) {
+
+            }, function() {
+
+            });
+        }
     }]);
