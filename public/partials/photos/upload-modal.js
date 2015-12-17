@@ -50,7 +50,7 @@ app.controller('PhotoUploadModalCtrl',
                 $scope.$apply();
 
                 if ($scope.isFirst) {
-                    $('.progress-upload ul').mCustomScrollbar({
+                    $('.progress-upload .photos-uploaded').mCustomScrollbar({
                         theme: 'dark'
                     });
                     $scope.isFirst = false;

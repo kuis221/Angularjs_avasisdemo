@@ -17,7 +17,7 @@
     </div>
 
     <div class="progress-upload" ng-show="files.length > 0">
-        <ul class="list-unstyled">
+        <ul class="list-unstyled photos-uploaded">
             <li ng-repeat="file in files" ng-class="{'uploaded': file.upload_progress == 100}">
                 <div class="row">
 
@@ -93,7 +93,7 @@
                             </ul>
                         </div>
 
-                        <div class="confirm-delete animated fadeInRight"  ng-show="file.is_remove">
+                        <div class="confirm-delete"  ng-show="file.is_remove">
                             <p>Are you sure you want to delete this file?</p>
 
                             <button type="button" class="btn btn-danger btn-rounded pull-right" ng-click="deleteFile(file)">Delete</button>
@@ -108,3 +108,29 @@
 
     <div id="upload-files-container"></div>
 </div>
+<script>
+$('.modal-body').on('click', '.dropdown-menu input', function(){return false;});
+$('.modal-body').on('click','.dropdown-menu .sub-menu .input-group input', function(){return false});
+
+// open sublevel
+$('.modal-body').on('click', ".dropdown-menu > li > a.trigger", function(e){
+    var current=$(this).next();
+    var grandparent=$(this).parent().parent();
+    //if($(this).hasClass('left-caret')||$(this).hasClass('right-caret'))
+        //$(this).toggleClass('right-caret left-caret');
+    //grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
+    grandparent.find(".sub-menu:visible").not(current).hide();
+    current.toggle();
+    e.stopPropagation();
+});
+
+
+// Create new folder
+$('.modal-body').on('click', '.uploaded .sub-menu li:first-child a', function(){
+
+    var create = "<li><div class=\"input-group animated fadeInUp\"><span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-pencil\"></i></span><input type=\"text\" placeholder=\"Enter New Folder Name\" ></div></li>";
+
+    $(this).parent().parent().parent().find(".sub-menu li:first-child").after(create);
+    return false;
+});
+</script>

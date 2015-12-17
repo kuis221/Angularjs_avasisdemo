@@ -508,7 +508,7 @@
   border-top: 1px solid #eee; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul {
-  margin: 10px 0;
+  margin: 0px 0px 10px;
   height: 220px; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li {
@@ -517,6 +517,9 @@
   padding-right: 20px;
   padding-top: 15px;
   position: relative; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul li:first-child {
+  margin-top: 10px; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li a {
   display: inline-block;
@@ -599,6 +602,12 @@
   ont-family: "AvenirNextLTPro-Demi"; }
 
 /* ******************** Thumbnail Preview Uploaded ***********************/
+.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox {
+  overflow: inherit; }
+
+.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox .mCSB_container {
+  overflow: inherit; }
+
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete {
   height: 13px;
   position: absolute;
@@ -620,7 +629,8 @@
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded img {
   border-radius: 0px;
   margin-bottom: 15px;
-  width: 66px; }
+  width: 66px;
+  height: 49px; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .col-md-2 {
   padding-left: 30px; }
@@ -679,13 +689,14 @@
   position: relative; }
 
 .drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .searchround {
-  background: #f6f6f6 url("../img/search-icon.png") no-repeat scroll 10px 6px;
+  background: #f6f6f6 url("/assets/img/search-icon.png") no-repeat scroll 10px 6px;
   font-family: 'AvenirNextLTPro-Regular';
   font-size: 11px;
   height: 30px;
   border: 1px solid #f3f3f3;
   margin: 10px 0 0;
   border-radius: 100px;
+  padding: 0 10px 0 30px;
   box-shadow: none;
   color: #4a4a4a; }
 
