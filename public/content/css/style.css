@@ -343,6 +343,8 @@ input[type=url], input[type=password] {
 .mb20 {margin-bottom: 20px !important;}
 .mb25 {margin-bottom: 25px !important;}
 
+.pb10 {padding-bottom: 10px !important;}
+
 ui-select .btn.dropdown-toggle {
     background-color: white;
     border: 1px solid #eee;
