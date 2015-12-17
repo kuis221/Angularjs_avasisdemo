@@ -16,7 +16,6 @@ app.controller('ScheduleDetailCtrl',
                 floor: 0,
                 ceil: 100,
                 onChange: function() {
-                    console.log('helo');
                 }
             }
         };

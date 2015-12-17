@@ -6,29 +6,29 @@
     <div class="row form-group">
         <div class="col-sm-4">
             <label for="">Title of Process</label>
-            <input type="text" class="input-lg form-control label-default">
+            <input type="text" ng-model="process.title" class="input-lg form-control label-default">
         </div>
         <div class="col-sm-8 pl0">
             <label for="">Description</label>
-            <input type="text" class="input-lg form-control label-default">
+            <input type="text" ng-model="process.description" class="input-lg form-control label-default">
         </div>
     </div>
     <div class="row form-group">
         <div class="col-sm-4">
             <label for="">Responsible</label>
-            <ui-select ng-select="changeOption()" selected-item="selectedItem" options="availableUsers"></ui-select>            
+            <ui-select ng-select="changeOption()" placeholder="Select User" selected-item="process.selectedItem" options="availableUsers"></ui-select>            
         </div>
         <div class="col-sm-4 pl0">
             <label for="">Date Range</label>
-            <input type="text" class="input-lg form-control label-default">
+            <ui-date-field ng-model="process.startDate" placeholder="Start Date"></ui-date-field>
         </div>
         <div class="col-sm-4 pl0">
             <label for="">&nbsp;</label>
-            <input type="text" class="input-lg form-control label-default">
+            <ui-date-field ng-model="process.endDate" placeholder="End Date"></ui-date-field>
         </div>
     </div>
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-lg btn-cancel" ng-click="$dismiss()">Cancel</button>
-    <button type="button" class="btn btn-lg btn-success" ng-click="$close()">Save</button>
+    <button type="button" class="btn btn-lg btn-success" ng-click="$close(process)">Save</button>
 </div>
