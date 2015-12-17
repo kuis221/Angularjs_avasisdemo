@@ -1,3 +1,32 @@
+.payapply-head {
+    .normal {
+        width: 20%;
+        float: left;
+        padding-right: 10px;
+
+        h5 {
+            font-family: "AvenirNextLTPro-Demi";
+            font-size: 12px;
+            color: #808080;
+            margin-bottom: 5px;
+        }
+        span {
+            font-family: "AvenirNextLTPro-Medium";
+            font-size: 11px;
+            color: #808080;
+        }
+        p {
+            font-family: "AvenirNextLTPro-Medium";
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+        .btns > a {
+            width: 200px;
+            margin-top: 15px;
+        }
+    }
+}
+
 .payapply-table {
     margin-bottom: 25px;
 
@@ -145,11 +174,28 @@
     }
 
     .search-field {
-        width: 40%;
-        float: right;
+        width: 30%;
         margin-top: 15px;
+        float: right;
+        margin-right: 20px;
     }
     .search-field input{
         font-size: 12px;
     }
+    .btns > a {
+        font-family: "AvenirNextLTPro-Demi";
+        font-size: 12px;
+        margin: 0;
+        background-color: white;
+        color: #4a4a4a;
+        border-radius: 20px;
+        padding: 7px;
+        width: 100px;
+        border: 1px solid #b7b7b7;
+        margin-top: 15px;
+    }
+    .btns i {
+        margin-left: 5px;
+    }
+
 }
