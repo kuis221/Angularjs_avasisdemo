@@ -1,0 +1,86 @@
+<div class="row page-detail-header comm-msg-header">
+    <div class="col-md-1 no-padding-horizontal">
+        <div class="closeBox">
+            <p>
+                <a ui-sref="comm.main">
+                    Close <i class="fa fa-caret-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-11 animated fadeInRight">
+        <div class="row page-detail-header-wrapper">
+            <div class="row">
+                <div class="comm-head-wrapper">
+                    <h2 class="heading">Compose New Message</h2>
+                    <div class="">
+                        <input type="text" class="msg-head-sub" placeholder="Give This Email a Subject">
+                        <div class="row no-margin">
+                            <span uib-dropdown class="pull-left msg-receiver-group" ng-click="toggleReceivers()">
+                                <input type="text" uib-dropdown-toggle ng-value="receiver.user.name" class="msg-head-receiver" placeholder="Name of Recipient"/>
+                                <ul class="uib-dropdown-menu" template-url="invite-user-dropdown.html"></ul>
+                                <script type="text/ng-template" id="invite-user-dropdown.html">
+                                    <div class="tm-user-dropdown">
+                                        <div>
+                                            <ul class="dropdown-menu dropdown-menu-left">
+                                                <li ng-repeat="user in availableUsers" ng-click="selectUser(receiver, user)">
+                                                    <div class="pull-left"><img class="msg-drop-photo" ng-src="{{ user.photo }}" /></div>
+                                                    <div class="">
+                                                        <div class="msg-drop-name">{{ user.name }}</div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </script>
+                            </span>
+                            <span class="pull-right msg-head-mark" ng-hide="showReceivers">
+                                <i class="fa fa-caret-right"></i>
+                            </span>
+                            <span class="pull-right msg-head-mark" ng-show="showReceivers">
+                                <i class="fa fa-caret-down"></i>
+                            </span>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row comm-new-wrapper animated fadeInRight">
+    <div class="row">
+        <div class="msg-note">
+            <span><i class="fa fa-pencil"></i></span>
+            <span>Create Your Message</span>
+        </div>
+        <textarea type="text" class="msg-input" placeholder="Compose your message here..."></textarea>
+    </div>
+    <div class="row">
+        <div class="msg-add">
+            <span><i class="fa fa-paperclip"></i></span>
+            <span>Add Attachments</span>
+        </div>
+        <div class="msg-add">
+            <span><i class="fa fa-bell-o"></i></span>
+            <span>Set Reminder</span>
+        </div>
+        <div class="msg-add-spec">
+            <span class="add-mark"><i class="fa fa-envelope-o"></i></span>
+            <span class="add-note">Request Read Receipt</span>
+            <div class="pull-right add-switch">
+                <ui-rec-switch ng-model="photos" />
+            </div>
+        </div>
+    </div>
+    <div class="row msg-btns">
+        <button type="button" class="btn btn-info">
+            <i class="fa fa-file-text-o"></i> Save As Draft
+        </button>
+        <button type="button" class="btn btn-success">
+            <i class="fa fa-paper-plane-o"></i> Send Message
+        </button>
+    </div>
+</div>

@@ -13,7 +13,7 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
     $scope.project_completed = 33;
 
     $scope.goComm = function () {
-        $state.go('comm');
+        $state.go('comm.main');
     };
     $scope.goDoc = function () {
         $state.go('documents.main');
