@@ -219,6 +219,20 @@ app.controller('PhotosCtrl',
             }, function() {
 
             });
+        };
+
+        $scope.showUploadModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/photos/upload-modal.html',
+                controller: 'PhotoUploadModalCtrl',
+                windowTopClass: 'drag-drop'
+            });
+
+            modalInstance.result.then(function(res) {
+
+            }, function() {
+
+            });
         }
 
     }]);

@@ -44,6 +44,8 @@
   border-radius: 5px;
   margin-top: 0px;
   height: auto; }
+  .dash-wrapper .items-today table > thead > tr > th {
+    border-bottom: 0px; }
   .dash-wrapper .items-today .td-number {
     width: 100px; }
   .dash-wrapper .items-today td span {
@@ -121,7 +123,8 @@
     font-size: 11px;
     font-family: "AvenirNextLTPro-Demi";
     color: #808080;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    line-height: 15px; }
   .dash-projects .project-accordion .project-role {
     font-size: 11px;
     font-family: "AvenirNextLTPro-Demi";
@@ -131,9 +134,10 @@
   .dash-projects .project-accordion .dash-flag-section {
     margin-left: 30px;
     margin-bottom: 15px;
-    margin-top: 2px; }
+    margin-top: 10px; }
   .dash-projects .project-accordion .user-section {
-    margin-right: 40px; }
+    margin-right: 40px;
+    margin-bottom: 10px; }
   .dash-projects .project-accordion .user-photo {
     width: 50px;
     height: 50px;
