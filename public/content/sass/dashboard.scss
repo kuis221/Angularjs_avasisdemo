@@ -68,6 +68,10 @@ $c-text-gray: #808080;
         margin-top: 0px;
         height: auto;
 
+        table > thead > tr > th {
+            border-bottom: 0px;
+        }
+
         .td-number {
             width: 100px;
         }
