@@ -1,1 +1,80 @@
-<p>Hello world</p>
+<div class="animated">
+    <div class="inspections-wrapper">
+        <div class="inspections-charts">
+            <div class="row">
+                <div class="col-md-2">
+                    <div sparkline spark-data="[inspections.overview.pending, inspections.overview.upcoming, inspections.overview.completed]" spark-options="inspections.pieOptions"></div>
+                </div>
+                <div class="col-md-8">
+                    <div class="inspections-overview-title">
+                        {{ inspections.overview.total }} Total Inspections
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <span class="label label-completed">&nbsp;</span>
+                            <div class="value">
+                                Completed <b>{{ round(inspections.overview.completed/inspections.overview.total * 100) }}%</b><br>
+                                {{ inspections.overview.completed }} Inspections
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <span class="label label-pending">&nbsp;</span>
+                            <div class="value">
+                                Pending / In Process <b>{{ round(inspections.overview.pending/inspections.overview.total * 100) }}%</b><br>
+                                {{ inspections.overview.pending }} Inspections
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <span class="label label-upcoming">&nbsp;</span>
+                            <div class="value">
+                                Upcoming <b>{{ round(inspections.overview.upcoming/inspections.overview.total * 100) }}%</b><br>
+                                {{ inspections.overview.upcoming }} Inspections
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row payapply-table">
+            <div class="col-md-12">
+                <h3>Actions Required by Me</h3>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered table-striped">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="amount">Amount</th>
+                            <th class="staus">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in inspections.pendingList">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'orange'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'failed'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'edit'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="order-by-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="amount"></td>
+                            <td class="status">{{ row.date_completion }}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
