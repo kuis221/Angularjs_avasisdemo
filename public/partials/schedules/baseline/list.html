@@ -11,3 +11,109 @@
         <a class="btn btn-lg btn-success" ui-sref="projects.start" href="#!/projects/start"><i class="fa fa-plus"></i> Create New</a>
     </div>
 </div>
+
+<div class="row no-margin animated fadeInRight">
+    <div class="col-md-12">
+        <div class="row no-margin">
+            <div class="bs-content-section">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Project Start Date</div>
+                                    <div class="bs-summary-value">Apr 20,2016</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Estimated Project Duration</div>
+                                    <div class="bs-summary-value">Jun 19,2016</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Type of Project</div>
+                                    <div class="bs-summary-value">Residental / My Home</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Working Days In a Week</div>
+                                    <div class="bs-summary-value">5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Square Footage</div>
+                                    <div class="bs-summary-value">43,421</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Avarage Days per SF</div>
+                                    <div class="bs-summary-value">5.00</div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Schedule Phase Contingency</div>
+                                    <div class="bs-summary-value">0.00</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Project Schedule Contingency</div>
+                                    <div class="bs-summary-value">10.00</div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-lg btn-primary mt5">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt30">
+            <div class="col-md-12">
+                <div class="row no-margin">
+                    <div class="table-responsive bs-schedule-head">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Phase / SubPhase / SOW</th>
+                                    <th>Start Date</th>
+                                    <th>Completion Date</th>
+                                    <th>Duration</th>
+                                    <th>Predecessor</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="row no-margin bs-tree">
+                    <div ui-tree data-drag-enabled="false" data-max-depth="3">
+                        <ol ui-tree-nodes="" ng-model="schedules">
+                            <li ng-repeat="folder in schedules" ui-tree-node data-collapsed="true" ng-include="'schedule-template.html'"></li>
+                        </ol>
+                    </div>
+                    <script type="text/ng-template" id="schedule-template.html">
+                        <div ui-tree-handle class="tree-node tree-node-content">
+                            <div data-nodrag ng-click="toggle(this)" class="text-primary pull-left" style="display: inline-block">
+                                <span class="bullet"><i class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}"></i>{{folder.no}}</span>
+                                <span>{{folder.title}}</span>
+                            </div>
+                            <div class="pull-left">{{folder.start_date}}</div>
+                            <div class="pull-left">{{folder.completion_date}}</div>
+                            <div class="pull-left">{{folder.duration}} Days</div>
+                            <div class="pull-left">{{folder.predecessor}}</div>
+                        </div>
+                        <ol ui-tree-nodes ng-model="folder.children" ng-class="{hidden: collapsed}" ng-if="!folder.has_files">
+                            <li ng-repeat="folder in folder.children" has-child="{{folder.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'schedule-template.html'"></li>
+                        </ol>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

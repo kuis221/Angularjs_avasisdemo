@@ -1,0 +1,33 @@
+.bs-content-section {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 5px 15px 15px 15px; }
+
+.bs-summary-row {
+  display: table;
+  margin-top: 10px; }
+  .bs-summary-row .bs-summary-title {
+    float: left;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    width: 170px; }
+  .bs-summary-row .bs-summary-value {
+    float: right;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 11px; }
+
+.bs-schedule-head table > thead > tr > th {
+  color: #808080;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 12px; }
+
+.bs-tree .angular-ui-tree-nodes .fa {
+  font-size: 18px;
+  padding-right: 5px; }
+
+.bs-tree .bullet {
+  padding-right: 15px; }
