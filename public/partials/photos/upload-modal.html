@@ -40,11 +40,11 @@
                                 <span class="sr-only">{{file.upload_progress}} Complete</span>
                             </div>
                         </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                            <button type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle>
                             Save to <i class="fa fa-angle-down"></i>
                             </button>
-                            <ul class="dropdown-menu animated fadeInUp">
+                            <ul class="pu-dropdown-menu animated fadeInUp uib-dropdown-menu" style="z-index: 9999;">
                                 <li>
                                     <input type="text" placeholder="Search Projects" class="form-control searchround">
                                 </li>
@@ -53,9 +53,6 @@
                                     <ul class="dropdown-menu sub-menu animated fadeInLeft">
                                         <li>
                                             <a href="#"><i class="fa fa-plus"></i>Create New Folder</a>
-                                        </li>
-                                        <li>
-                                            <div class="input-group animated fadeInUp"><span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span><input type="text" placeholder="Enter New Folder Name"></div>
                                         </li>
                                         <li><a href="#">Folder Name</a></li>
                                         <li><a href="#">Folder Name</a></li>
@@ -109,11 +106,11 @@
     <div id="upload-files-container"></div>
 </div>
 <script>
-$('.modal-body').on('click', '.dropdown-menu input', function(){return false;});
-$('.modal-body').on('click','.dropdown-menu .sub-menu .input-group input', function(){return false});
+$('body').on('click', '.pu-dropdown-menu input', function(){return false;});
+$('body').on('click','.pu-dropdown-menu .sub-menu .input-group input', function(){return false});
 
 // open sublevel
-$('.modal-body').on('click', ".dropdown-menu > li > a.trigger", function(e){
+$('body').on('click', ".pu-dropdown-menu > li > a.trigger", function(e){
     var current=$(this).next();
     var grandparent=$(this).parent().parent();
     //if($(this).hasClass('left-caret')||$(this).hasClass('right-caret'))
@@ -126,7 +123,7 @@ $('.modal-body').on('click', ".dropdown-menu > li > a.trigger", function(e){
 
 
 // Create new folder
-$('.modal-body').on('click', '.uploaded .sub-menu li:first-child a', function(){
+$('body').on('click', '.pu-dropdown-menu .sub-menu li:first-child a', function(){
 
     var create = "<li><div class=\"input-group animated fadeInUp\"><span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-pencil\"></i></span><input type=\"text\" placeholder=\"Enter New Folder Name\" ></div></li>";
 

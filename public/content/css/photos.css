@@ -602,12 +602,6 @@
   ont-family: "AvenirNextLTPro-Demi"; }
 
 /* ******************** Thumbnail Preview Uploaded ***********************/
-.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox {
-  overflow: inherit; }
-
-.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox .mCSB_container {
-  overflow: inherit; }
-
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete {
   height: 13px;
   position: absolute;
@@ -671,7 +665,7 @@
   border: 1px solid #fff; }
 
 /* ******************** Add to Project ***********************/
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu {
+.pu-dropdown-menu {
   border: none;
   top: 30px;
   height: auto;
@@ -682,13 +676,13 @@
   min-width: 200px;
   border-radius: 3px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li {
+.pu-dropdown-menu li {
   border-bottom: 1px solid #d7d7d7;
   height: 40px;
   padding: 0 15px;
   position: relative; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .searchround {
+.pu-dropdown-menu li .searchround {
   background: #f6f6f6 url("/assets/img/search-icon.png") no-repeat scroll 10px 6px;
   font-family: 'AvenirNextLTPro-Regular';
   font-size: 11px;
@@ -700,7 +694,7 @@
   box-shadow: none;
   color: #4a4a4a; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a {
+.pu-dropdown-menu li a {
   display: block;
   line-height: 40px;
   color: #3aabd5;
@@ -708,10 +702,10 @@
   font-family: 'AvenirNextLTPro-Regular';
   font-size: 12px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a:hover {
+.pu-dropdown-menu li a:hover {
   background-color: transparent; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a i {
+.pu-dropdown-menu li a i {
   color: #3aabd5;
   font-size: 8px;
   margin: 0 0;
@@ -719,41 +713,42 @@
   top: 17px;
   right: 15px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu {
+.pu-dropdown-menu li .sub-menu {
   top: 0px;
   left: inherit;
   right: -215px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li a i {
+.pu-dropdown-menu li .sub-menu li a i {
   right: inherit;
   left: 15px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li:first-child > a {
+.pu-dropdown-menu li .sub-menu li:first-child > a {
   padding-left: 15px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li:first-child > a:focus {
+.pu-dropdown-menu li .sub-menu li:first-child > a:focus {
   background-color: transparent; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li:last-child {
+.pu-dropdown-menu li:last-child {
   border-bottom: none; }
 
 /* ******************** Create New Folder ***********************/
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li {
+.pu-dropdown-menu li .sub-menu li {
   width: 200px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group {
+.pu-dropdown-menu li .sub-menu li .input-group {
   padding-top: 5px;
   width: 180px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group span {
-  background-color: transparent; }
+.pu-dropdown-menu li .sub-menu li .input-group span {
+  background-color: transparent;
+  border: none; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group span i {
+.pu-dropdown-menu li .sub-menu li .input-group span i {
   margin: 0;
   color: #a2a2a2;
   font-size: 14px; }
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group input {
+.pu-dropdown-menu li .sub-menu li .input-group input {
   padding: 0;
   border: none;
   color: #a2a2a2;

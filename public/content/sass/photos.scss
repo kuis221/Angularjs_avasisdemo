@@ -655,8 +655,8 @@
 
 /* ******************** Thumbnail Preview Uploaded ***********************/
 
-.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox {overflow: inherit;}
-.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox .mCSB_container {overflow: inherit;}
+//.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox {overflow: inherit;}
+//.drag-drop .modal-content .modal-body .progress-upload ul .mCustomScrollBox .mCSB_container {overflow: inherit;}
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete {height:13px; position: absolute; left: 24px; top: -6px; font-size: 1px; background: #fff; border-radius: 10px;}
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded .delete i{color: #e36060}
 .drag-drop .modal-content .modal-body .progress-upload ul li.uploaded p {padding-top: 10px;}
@@ -676,25 +676,25 @@
 
 /* ******************** Add to Project ***********************/
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu {border: none; top: 30px; height: auto; left: -120px; box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2); margin: 0; padding: 0; min-width: 200px; border-radius: 3px;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li {border-bottom: 1px solid #d7d7d7; height: 40px; padding: 0 15px; position: relative;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .searchround {background: #f6f6f6 url("/assets/img/search-icon.png") no-repeat scroll 10px 6px; font-family: 'AvenirNextLTPro-Regular'; font-size: 11px; height: 30px; border: 1px solid #f3f3f3; margin: 10px 0 0; border-radius: 100px; padding: 0 10px 0 30px; box-shadow: none; color: #4a4a4a;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a {display: block; line-height:40px; color: #3aabd5; padding: 0; font-family: 'AvenirNextLTPro-Regular'; font-size: 12px}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a:hover {background-color: transparent;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li a i {color: #3aabd5; font-size: 8px; margin: 0 0; position: absolute; top: 17px; right: 15px}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu {top: 0px; left: inherit; right: -215px;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li a i {right: inherit; left: 15px; }
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li:first-child > a {padding-left: 15px;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li:first-child > a:focus {background-color: transparent;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li:last-child {border-bottom: none;}
+.pu-dropdown-menu {border: none; top: 30px; height: auto; left: -120px; box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2); margin: 0; padding: 0; min-width: 200px; border-radius: 3px;}
+.pu-dropdown-menu li {border-bottom: 1px solid #d7d7d7; height: 40px; padding: 0 15px; position: relative;}
+.pu-dropdown-menu li .searchround {background: #f6f6f6 url("/assets/img/search-icon.png") no-repeat scroll 10px 6px; font-family: 'AvenirNextLTPro-Regular'; font-size: 11px; height: 30px; border: 1px solid #f3f3f3; margin: 10px 0 0; border-radius: 100px; padding: 0 10px 0 30px; box-shadow: none; color: #4a4a4a;}
+.pu-dropdown-menu li a {display: block; line-height:40px; color: #3aabd5; padding: 0; font-family: 'AvenirNextLTPro-Regular'; font-size: 12px}
+.pu-dropdown-menu li a:hover {background-color: transparent;}
+.pu-dropdown-menu li a i {color: #3aabd5; font-size: 8px; margin: 0 0; position: absolute; top: 17px; right: 15px}
+.pu-dropdown-menu li .sub-menu {top: 0px; left: inherit; right: -215px;}
+.pu-dropdown-menu li .sub-menu li a i {right: inherit; left: 15px; }
+.pu-dropdown-menu li .sub-menu li:first-child > a {padding-left: 15px;}
+.pu-dropdown-menu li .sub-menu li:first-child > a:focus {background-color: transparent;}
+.pu-dropdown-menu li:last-child {border-bottom: none;}
 
 /* ******************** Create New Folder ***********************/
 
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li {width: 200px}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group {padding-top: 5px; width: 180px}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group span {background-color: transparent; }
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group span i {margin: 0; color: #a2a2a2; font-size: 14px;}
-.drag-drop .modal-content .modal-body .progress-upload ul li .dropdown-menu li .sub-menu li .input-group input {padding:0; border: none; color: #a2a2a2; height: 30px; background-color: transparent; font-family: 'AvenirNextLTPro-Regular'; font-size: 11px; width: 150px}
+.pu-dropdown-menu li .sub-menu li {width: 200px}
+.pu-dropdown-menu li .sub-menu li .input-group {padding-top: 5px; width: 180px}
+.pu-dropdown-menu li .sub-menu li .input-group span {background-color: transparent; border: none; }
+.pu-dropdown-menu li .sub-menu li .input-group span i {margin: 0; color: #a2a2a2; font-size: 14px;}
+.pu-dropdown-menu li .sub-menu li .input-group input {padding:0; border: none; color: #a2a2a2; height: 30px; background-color: transparent; font-family: 'AvenirNextLTPro-Regular'; font-size: 11px; width: 150px}
 
 
 .drag-drop .modal-content {
