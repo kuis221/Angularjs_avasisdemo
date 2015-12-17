@@ -2237,7 +2237,6 @@ table.issue-tracker tbody tr td {vertical-align: middle; height: 50px;}
 
 /* DIFF */
 ins { background-color: #c6ffc6; text-decoration: none;}
-del { background-color: #ffc6c6;}
 #small-chat {position: fixed; bottom: 20px; right: 20px; z-index: 100;}
  #small-chat .badge { position: absolute; top: -3px; right: -4px;}
 .open-small-chat {height: 38px; width: 38px; display: block; background: #1ab394; padding: 9px 8px; text-align: center; color: #fff; border-radius: 50%;}

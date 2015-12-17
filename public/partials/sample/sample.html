@@ -56,7 +56,24 @@
     </div>
     <div class="card-wrapper">
         <div class="row">
+            <div class="col-md-3">
+                <p>Custom date field</p>
+                <ui-date-field ng-model="date" placeholder="Start Date"></ui-date-field>
+            </div>
+            <div class="col-sm-3 pl0">
+                <p>Date Range</p>
+                <ui-date-field ng-model="startDate" max-date="endDate" placeholder="Start Date"></ui-date-field>
+            </div>
+            <div class="col-sm-3 pl0">
+                <p>&nbsp;</p>
+                <ui-date-field ng-model="endDate" min-date="startDate" placeholder="End Date"></ui-date-field>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper">
+        <div class="row">
             <div class="col-lg-12">
+                <ui-date-field ng-model="date" placeholder="Start Date"></ui-date-field>
                 <p>Single Select</p>
                 <ui-select ng-select="changeOption()" selected-item="selectedItem" options="options"></ui-select><br>
                 <p>Multi Select</p>

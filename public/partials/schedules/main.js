@@ -26,15 +26,17 @@ app.controller('SchedulesCtrl',
         $scope.weekTitles = [];
         $scope.daysInRange = [];
         $scope.offset = 0;
-        $scope.schedulesInWeek = []; // schedules in date of range
+        $scope.schedulesInRange = []; // schedules in date of range
         $scope.schedules = [{
             id: _.uniqueId(),
             description: "Roof Dry-In",
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-20'),
             schedule_type: "success",
-            status: 'success',
-            completion_percentage: 60
+            status: 'in progress',
+            completion_percentage: 60,
+            assigned_to: 'Dave Gebo',
+            avatar: 'assets/img/users/dave_gebo.jpg'
         },
         {
             id: _.uniqueId(),
@@ -42,8 +44,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-25'),
             schedule_type: "warning",
-            status: "danger",
-            completion_percentage: 40
+            status: "suspended",
+            completion_percentage: 40,
+            assigned_to: 'Dave Musgrove',
+            avatar: 'assets/img/users/dave.jpg'
         },
         {
             id: _.uniqueId(),
@@ -51,8 +55,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-18'),
             schedule_type: "primary",
-            status: "success",
-            completion_percentage: 90
+            status: "in progress",
+            completion_percentage: 90,
+            assigned_to: 'Mike Riley',
+            avatar: 'assets/img/users/mike.jpg'
         },
         {
             id: _.uniqueId(),
@@ -60,8 +66,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-08-17'),
             schedule_type: "danger",
-            status: "success",
-            completion_percentage: 100
+            status: "in progress",
+            completion_percentage: 100,
+            assigned_to: 'Dan Bonker',
+            avatar: 'assets/img/users/dan.jpg'
         },
         {
             id: _.uniqueId(),
@@ -69,8 +77,10 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-17'),
             end_date: moment('2015-09-01'),
             schedule_type: "primary",
-            status: "success",
-            completion_percentage: 20
+            status: "in progress",
+            completion_percentage: 20,
+            assigned_to: 'Mary',
+            avatar: 'assets/img/users/mary.jpg'
         },
         {
             id: _.uniqueId(),
@@ -78,7 +88,7 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-08-24'),
             end_date: moment('2015-09-04'),
             schedule_type: "success",
-            status: "success",
+            status: "in progress",
             completion_percentage: 0
         },
         {
@@ -87,18 +97,22 @@ app.controller('SchedulesCtrl',
             start_date: moment('2015-09-01'),
             end_date: moment('2015-09-04'),
             schedule_type: "success",
-            status: "success",
+            status: "in progress",
             completion_percentage: 0
         }];
         _.each($scope.schedules, function(e) {
             e.days_of_period = e.end_date.diff(e.start_date, 'd') + 1;
         })
 
+        $scope.schedulesOfToday = _.filter($scope.schedules, function(e){
+            return e.start_date <= moment('2015-08-17') && moment('2015-08-17') <= e.end_date;
+        })
+
         $scope.range = function(val) {
             return _.range(val);
         }
         $scope.isEmptyDate = function(week, day) {
-            var scheduled = _.filter($scope.schedulesInWeek[week], function(e) {
+            var scheduled = _.filter($scope.schedulesInRange[week], function(e) {
                 return _.range(e.relativePos, e.relativePos + e.relativeLength).indexOf(day) >= 0;
             });
             return scheduled.length == 0;
@@ -119,8 +133,24 @@ app.controller('SchedulesCtrl',
         }
         function resetOffsetRange() {
             if ($scope.calendarScope == 'day') {
-                $scope.startDate = moment('2015-08-16').startOf('day').add($scope.offset * 3, 'd');
-                $scope.endDate = moment('2015-08-16').startOf('day').add($scope.offset * 3 + 2, 'd');
+                $scope.startDate = moment('2015-08-16').startOf('day').add($scope.offset, 'd');
+                $scope.endDate = moment('2015-08-16').startOf('day').add($scope.offset + 2, 'd');
+                $scope.schedulesInRange = _.filter($scope.schedules, function(e) {
+                    return ($scope.startDate <= e.end_date) && ($scope.endDate >= e.start_date);
+                });
+                var startDate = angular.copy($scope.startDate);
+                $scope.dayTitles = [];
+                _.times(3, function(i) {
+                    $scope.dayTitles[i] = startDate.format('ddd, MMM DD');
+                    startDate.add(1, 'd');
+                });
+                _.each($scope.schedulesInRange, function(e) {
+                    var relativePos = e.start_date.diff($scope.startDate, 'd');
+                    e.relativePos = Math.max(relativePos, 0);
+
+                    // calculate relative length
+                    e.relativeLength = Math.min(e.days_of_period + relativePos, 3) - e.relativePos;
+                });
             }
             else if ($scope.calendarScope == 'week') {
                 $scope.startDate = moment('2015-08-16').startOf('week').add($scope.offset, 'w');
@@ -144,9 +174,9 @@ app.controller('SchedulesCtrl',
                         var endDate = moment(startDate).add(6, 'd');
                         return (startDate <= e.end_date) && (endDate >= e.start_date);
                     });
-                    $scope.schedulesInWeek[i] = (angular.copy(filteredInWeek));
+                    $scope.schedulesInRange[i] = (angular.copy(filteredInWeek));
 
-                    _.each($scope.schedulesInWeek[i], function(e) {
+                    _.each($scope.schedulesInRange[i], function(e) {
                         var startDate = moment($scope.startDate).add(i, 'w');
                         var relativePos = e.start_date.diff(startDate, 'd');
                         e.relativePos = Math.max(relativePos, 0);
@@ -179,5 +209,32 @@ app.controller('SchedulesCtrl',
             $state.go("schedules.detail", {id: id});
         }
         resetOffsetRange();
+
+        $scope.slickSetting = [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false
+                }
+            }
+        ];
     }]
 );

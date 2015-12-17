@@ -15,8 +15,28 @@ table.no-border {
     }
 }
 #today-tasks {
-    .project {
-        border: none;
+    .prj-data {
+        padding-left: 10px;
+        width: 250px;
+        float: left;
+        img {
+            display: inline;
+        }
+        .flag-badge {
+            border: 1px solid white;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            background: white;
+            border-radius: 2px;
+            i.fa-flag {
+                transform: rotate(-30deg);
+            }
+        }
+        .status {
+            text-transform: uppercase;
+        }
     }
 }
 .popover {
@@ -29,10 +49,12 @@ table.no-border {
         font-size: 16px;
         margin: 0;
     }
-    hr {
-        border-color: #dedede;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .content-wrapper {
+        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 #calendar {
@@ -109,7 +131,7 @@ table.no-border {
             background-color: #f6cece;
         }
 
-        .week-container {
+        .week-container, .days-container {
             margin-bottom: 40px;
             & > table {
                 table-layout: fixed;
@@ -266,4 +288,7 @@ rzslider {
     .rz-bar.rz-selection {
         background: #f1f1f1;
     }
+}
+.modal-dialog.modal-xl{
+    width: 1000px;
 }

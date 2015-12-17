@@ -56,3 +56,4 @@ app.controller('BidsCompareCtrl', ['$scope', '$state', '$stateParams', '$uibModa
         });
     }
 }]);
+
