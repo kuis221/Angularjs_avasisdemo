@@ -40,4 +40,28 @@ app.controller('ScheduleDetailCtrl',
                 size: 'lg'
             });
         }
+        $scope.addSuccessor = function() {
+            var modalInstance = $uibModal.open({
+                controller: 'AddSuccessorModalCtrl',
+                templateUrl: 'partials/schedules/details/add-successor-modal.html',
+                resolve: {
+                    title: function() {
+                        return 'Add Successor'
+                    }
+                },
+                size: 'lg'
+            });
+        }
+        $scope.addPredecessor = function() {
+            var modalInstance = $uibModal.open({
+                controller: 'AddSuccessorModalCtrl',
+                templateUrl: 'partials/schedules/details/add-successor-modal.html',
+                resolve: {
+                    title: function() {
+                        return 'Add Predecessor'
+                    }
+                },
+                size: 'lg'
+            });
+        }
     }]);

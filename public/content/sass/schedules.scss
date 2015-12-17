@@ -49,10 +49,12 @@ table.no-border {
         font-size: 16px;
         margin: 0;
     }
-    hr {
-        border-color: #dedede;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .content-wrapper {
+        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 #calendar {
