@@ -36,10 +36,12 @@ table.no-border > th, table.no-border td {
   .popover ul > li > a {
     font-size: 16px;
     margin: 0; }
-  .popover hr {
-    border-color: #dedede;
-    margin-top: 20px;
-    margin-bottom: 20px; }
+  .popover .content-wrapper {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px; }
 
 #calendar .date-navigator {
   width: 25px;

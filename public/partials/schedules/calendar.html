@@ -79,18 +79,15 @@
 <script type="text/ng-template" id="schedule-popover-template.html">
     <div style="width: 420px;">
         <ul class="list-inline">
-            <li><a class="text-default">Roofing </a></li>
-            <li><a class="text-default">Roofing Prep <i class="fa fa-chevron-right pl10"></i></a></li>
+            <li><a class="text-default">Roofing > </a></li>
+            <li><a class="text-default">Roofing Prep > </a></li>
             <li><a class="text-primary">Roof Dry-In</a></li>
         </ul>
-
-        <hr>
-        
-        <div>Team Members</div>
-        <div class="text-primary">Dave Gebo</div>
-        <div class="text-muted font-regular medium">Sub Contractor, On Top Roofing</div>
-
-        <hr>
+        <div class="content-wrapper">
+            <div>Team Members</div>
+            <div class="text-primary">Dave Gebo</div>
+            <div class="text-muted font-medium small">Sub Contractor, On Top Roofing</div>
+        </div>
         <div class="clearfix">
             <div class="pull-left">
                 <div class="text-muted font-regular">Duration</div>
@@ -98,7 +95,7 @@
             </div>
             <div class="pl20 pull-left">
                 <div class="text-muted font-regular">Status</div>
-                <span class="text-success">IN PROGRESS</span> %60 Completed
+                <span class="text-success">IN PROGRESS</span> <strong>%60 Completed</strong>
             </div>
             <div class="pull-right text-right pt20 text-primary">
                 <a ng-click="showScheduleDetail(schedule.id)">
