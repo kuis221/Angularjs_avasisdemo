@@ -30,17 +30,27 @@
                 </div>
                 <div class="col-sm-3 border-right">
                     <div class="p10">
-                        <a class="heading">
-                            <span class="text-success">PROGRESS</span>
-                            <i class="fa fa-angle-down text-success"></i>
-                        </a>
-                        <div class="text-muted heading font-medium">Measure and Mark the Wall</div>
+                        <div class="btn-group" uib-dropdown>
+                            <a class="btn btn-transparent" uib-dropdown-toggle>
+                              <span class="text-success">PROGRESS </span><span class="fa fa-angle-down"></span>
+                            </a>
+                            <ul class="uib-dropdown-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Awating Start</a></li>
+                                <li role="menuitem"><a ng-click="">In Progress</a></li>
+                                <li role="menuitem"><a ng-click="">Work Suspended</a></li>
+                                <li role="menuitem"><a ng-click="">Completed</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-muted heading font-medium pl10">
+                            <img src="assets/img/flag_green.png" alt="">
+                            Measure and Mark the Wall
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="p10">
                         <div>Completion <i class="fa fa-pencil pl20 text-primary"></i></div>
-                        <input type="text" class="input-sm">
+                        <input type="text" disabled class="input-sm">
                     </div>
                 </div>
             </div>
