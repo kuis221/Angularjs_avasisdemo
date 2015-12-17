@@ -233,3 +233,14 @@
 .msg-add-spec .add-switch {
     margin-top: -1px;
 }
+
+.msg-btns {
+    margin-top: 20px;
+    float: right;
+}
+.msg-btns .btn {
+    margin-left: 20px;
+    width: 150px;
+    text-align: center;
+    height: 45px;
+}
