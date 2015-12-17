@@ -1,0 +1,43 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="$dismiss()">&times;</button>
+</div>
+<div class="modal-body mt20">
+    <h2 class="font-regular">History of Schedule Changes</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Reason</th>
+                <th>Requested by</th>
+                <th>Dates Modified</th>
+                <th>Attachments</th>
+            </tr>
+        </thead>
+        <tbody class="text-muted font-medium">
+            <tr ng-repeat="i in [1, 2, 3, 4, 5, 6, 7]">
+                <td>APR 9</td>
+                <td>Deadline is so tight. so added more 30 days</td>
+                <td>
+                    <div class="text-primary">Bob Jones</div>
+                    <span class="text-success font-regular">Approved By </span>
+                    <span class="text-primary"> Jim Steven</span>
+                </td>
+                <td class="text-left">
+                    <div class="clearfix small">
+                        <div class="pull-left" style="width: 125px">Actual Start date:</div>
+                        <div class="pull-left text-default">May 12, 2014 <del>May 10, 2014</del></div>
+                    </div>
+                    <div class="clearfix small">
+                        <div class="pull-left" style="width: 125px">Estimated completion:</div>
+                        <div class="pull-left text-default">Jun 30, 2015 <del>Apr 5, 2015</del></div>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <i class="fa fa-download pr10"></i> Request.pdf
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

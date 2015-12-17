@@ -26,7 +26,7 @@ app.controller('SchedulesCtrl',
         $scope.weekTitles = [];
         $scope.daysInRange = [];
         $scope.offset = 0;
-        $scope.schedulesInWeek = []; // schedules in date of range
+        $scope.schedulesInRange = []; // schedules in date of range
         $scope.schedules = [{
             id: _.uniqueId(),
             description: "Roof Dry-In",
@@ -112,7 +112,7 @@ app.controller('SchedulesCtrl',
             return _.range(val);
         }
         $scope.isEmptyDate = function(week, day) {
-            var scheduled = _.filter($scope.schedulesInWeek[week], function(e) {
+            var scheduled = _.filter($scope.schedulesInRange[week], function(e) {
                 return _.range(e.relativePos, e.relativePos + e.relativeLength).indexOf(day) >= 0;
             });
             return scheduled.length == 0;
@@ -133,8 +133,24 @@ app.controller('SchedulesCtrl',
         }
         function resetOffsetRange() {
             if ($scope.calendarScope == 'day') {
-                $scope.startDate = moment('2015-08-16').startOf('day').add($scope.offset * 3, 'd');
-                $scope.endDate = moment('2015-08-16').startOf('day').add($scope.offset * 3 + 2, 'd');
+                $scope.startDate = moment('2015-08-16').startOf('day').add($scope.offset, 'd');
+                $scope.endDate = moment('2015-08-16').startOf('day').add($scope.offset + 2, 'd');
+                $scope.schedulesInRange = _.filter($scope.schedules, function(e) {
+                    return ($scope.startDate <= e.end_date) && ($scope.endDate >= e.start_date);
+                });
+                var startDate = angular.copy($scope.startDate);
+                $scope.dayTitles = [];
+                _.times(3, function(i) {
+                    $scope.dayTitles[i] = startDate.format('ddd, MMM DD');
+                    startDate.add(1, 'd');
+                });
+                _.each($scope.schedulesInRange, function(e) {
+                    var relativePos = e.start_date.diff($scope.startDate, 'd');
+                    e.relativePos = Math.max(relativePos, 0);
+
+                    // calculate relative length
+                    e.relativeLength = Math.min(e.days_of_period + relativePos, 3) - e.relativePos;
+                });
             }
             else if ($scope.calendarScope == 'week') {
                 $scope.startDate = moment('2015-08-16').startOf('week').add($scope.offset, 'w');
@@ -158,9 +174,9 @@ app.controller('SchedulesCtrl',
                         var endDate = moment(startDate).add(6, 'd');
                         return (startDate <= e.end_date) && (endDate >= e.start_date);
                     });
-                    $scope.schedulesInWeek[i] = (angular.copy(filteredInWeek));
+                    $scope.schedulesInRange[i] = (angular.copy(filteredInWeek));
 
-                    _.each($scope.schedulesInWeek[i], function(e) {
+                    _.each($scope.schedulesInRange[i], function(e) {
                         var startDate = moment($scope.startDate).add(i, 'w');
                         var relativePos = e.start_date.diff(startDate, 'd');
                         e.relativePos = Math.max(relativePos, 0);
