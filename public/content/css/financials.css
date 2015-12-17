@@ -327,6 +327,12 @@
     border: 1px solid #d7d7d7;
     border-radius: 3px;
 }
+
+.loan-info .input-group .form-control:hover {
+    border: 1px solid #d7d7d7 !important;
+    border-left: 0 !important;
+}
+
 .loan-detail {
     width: 200px;
 }

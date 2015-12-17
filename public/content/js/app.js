@@ -229,10 +229,24 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
-        .state('comm', {
+       .state('comm', {
             url: '/communication',
-            templateUrl: 'partials/comm/comm-main.html',
+            abstract: true,
+            template: '<ui-view></ui-view>',
             controller: 'CommCtrl'
+        })
+        .state('comm.main', {
+            url: '/main',
+            templateUrl: 'partials/comm/comm-main.html',
+            controller: 'CommMainCtrl'
+        })
+       .state('comm.new', {
+            url: '/new',
+            templateUrl: 'partials/comm/comm-new.html',
+            controller: 'CommNewCtrl',
+            data: {
+                isHeaderHidden: true
+            }
         })
         .state('procurement', {
             url: '/procurements',
