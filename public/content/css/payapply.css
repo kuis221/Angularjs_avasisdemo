@@ -102,3 +102,9 @@
     font-family: "AvenirNextLTPro-Regular";
     font-size: 11px;
     color: #44474b; }
+  .payapply-table .search-field {
+    width: 40%;
+    float: right;
+    margin-top: 15px; }
+  .payapply-table .search-field input {
+    font-size: 12px; }
