@@ -291,7 +291,10 @@ input[type=url], input[type=password] {
     background-color: #2a2d33;
     color: #FFFFFF;
 }
-
+.label-default {
+    background: #f5f5f5;
+    color: #4a4a4a;
+}
 
 .chevron-down-menu::before{
     font-family: FontAwesome;
@@ -510,4 +513,8 @@ input.round {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
+}
+
+.input-lg {
+    height: 50px;
 }

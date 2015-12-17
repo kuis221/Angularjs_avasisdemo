@@ -34,4 +34,11 @@ app.controller('ScheduleDetailCtrl',
                 size: 'xl'
             });
         }
+        $scope.addProcess = function() {
+            var modalInstance = $uibModal.open({
+                controller: 'AddProcessModalCtrl',
+                templateUrl: 'partials/schedules/details/add-process-modal.html',
+                size: 'lg'
+            });
+        }
     }]);
