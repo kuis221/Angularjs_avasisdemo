@@ -20,11 +20,11 @@
         </div>
         <div class="col-sm-4 pl0">
             <label for="">Date Range</label>
-            <ui-date-field ng-model="process.startDate" placeholder="Start Date"></ui-date-field>
+            <ui-date-field ng-model="process.startDate" max-date="process.endDate" placeholder="Start Date"></ui-date-field>
         </div>
         <div class="col-sm-4 pl0">
             <label for="">&nbsp;</label>
-            <ui-date-field ng-model="process.endDate" placeholder="End Date"></ui-date-field>
+            <ui-date-field ng-model="process.endDate" min-date="process.startDate" placeholder="End Date"></ui-date-field>
         </div>
     </div>
 </div>

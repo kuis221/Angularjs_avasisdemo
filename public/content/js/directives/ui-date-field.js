@@ -3,7 +3,9 @@ app.directive('uiDateField', function ($compile, $timeout) {
         restrict: 'E',
         scope: {
             date: '=ngModel',
-            placeholder: "@"
+            placeholder: "@",
+            minDate: '=',
+            maxDate: '='
         },
         templateUrl: 'content/js/directives/ui-date-field.html',
         link: function (scope, element, attrs) {

@@ -32,7 +32,7 @@ ul[uib-datepicker-popup-wrap] {
         background: #aaa; }
     ul[uib-datepicker-popup-wrap] table .btn.btn-info {
       background-color: #79c485 !important; }
-  ul[uib-datepicker-popup-wrap] table thead > tr:last-child th {
+  ul[uib-datepicker-popup-wrap] table thead > tr:nth-child(2) th {
     background: #404854;
     color: white;
     padding-top: 8px;

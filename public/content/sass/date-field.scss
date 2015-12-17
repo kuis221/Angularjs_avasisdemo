@@ -41,7 +41,7 @@ ul[uib-datepicker-popup-wrap] {
                 background-color: #79c485 !important;
             }
         }
-        thead > tr:last-child th {
+        thead > tr:nth-child(2) th {
             background: #404854;
             color: white; 
             padding-top: 8px;
