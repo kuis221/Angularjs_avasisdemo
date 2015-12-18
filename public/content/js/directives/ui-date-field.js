@@ -1,3 +1,4 @@
+'use strict';
 app.directive('uiDateField', function ($compile, $timeout) {
     return {
         restrict: 'E',
@@ -13,7 +14,7 @@ app.directive('uiDateField', function ($compile, $timeout) {
                 scope.date = new Date();
             scope.opened = false;
             scope.open = function() {
-                scope.opened = true
+                scope.opened = true;
             }
 
             // since date-dropdown is not closed after date is selected, use a hack.

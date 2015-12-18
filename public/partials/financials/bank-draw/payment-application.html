@@ -10,17 +10,33 @@
                         </div>
                         <span class="text-muted">Filter By</span>
                     </div>
-                    <div class="text-primary sub-title">
-                        Date Range
+                    <div class="inline-block" uib-dropdown auto-close="outsideClick">
+                        <a tabindex="0" class="text-primary sub-title" uib-dropdown-toggle>Date Range</a>
+                        <div class="dropdown-menu-left chevron-down-menu" uib-dropdown-menu style="width: 520px">
+                            <div class="p20 row">
+                                <div class="col-sm-6">
+                                    <ui-date-field ng-model="dateRange.min" max-date="dateRange.max" placeholder="Start Date"></ui-date-field>
+                                </div>
+                                <div class="pl0 col-sm-6">
+                                    <ui-date-field ng-model="dateRange.max" min-date="dateRange.min" placeholder="End Date"></ui-date-field>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-primary sub-title">
-                        Amount Range
+                    <div class="inline-block" uib-dropdown auto-close="outsideClick">
+                        <a tabindex="0" class="text-primary sub-title" uib-dropdown-toggle>Amount Range</a>
+                        <div uib-dropdown-menu style="width: 400px;" ng-cloak class="p20 uib-dropdown-menu dropdown-menu-left chevron-down-menu">
+                            <rzslider rz-slider-model="amountRange.min"
+                                      rz-slider-high="amountRange.max"
+                                      rz-slider-options="amountRange.options">
+                            </rzslider>
+                        </div>
                     </div>
                 </div>
                 <div class="table-responsive" slim-scroll box-height="600px">
                     <table class="table" id="application-list">
                         <tbody>
-                            <tr ng-repeat="application in payment_applications">
+                            <tr ng-repeat="application in payment_applications | rangeFilter:'amount':amountRange.min:amountRange.max | dateRangeFilter:'date':dateRange.min:dateRange.max">
                                 <td class="middle-align pl5">
                                     <div class="checkbox checkbox-inline">
                                         <input type="checkbox" ng-model="application.checked">
@@ -40,7 +56,7 @@
                     </table>
                 </div>
             </td>
-            <td style="border-left: 1px solid #dedede">
+            <td class="border-left">
                 <div class="application-summary">
                     <div class="table-responsive">
                         <div class="title">Summary of Selected Pay Applications</div>

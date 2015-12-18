@@ -40,7 +40,7 @@ table.no-border {
     }
 }
 .popover {
-    max-width: 450px;
+    max-width: 550px;
     font-family: AvenirNextLTPro-Medium;
     border-radius: 2px;
     box-shadow: 0 1px 16px 5px rgba(0, 0, 0, 0.2);
@@ -226,7 +226,7 @@ table.no-border {
     }
 }
 
-rzslider {
+rzslider.schedule-slider {
     margin-top: 24px;
     .rz-current-pointer {
         width: 20px;
@@ -256,7 +256,7 @@ rzslider {
         border-radius: 50%;
         box-shadow: 0 0 0px 6px #fee7c8;
         background: #fdb04a;
-        &.rz-pointer.rz-active:after {
+        &.rz-active:after {
             background: #f1f1f1;
         }
         &:after {

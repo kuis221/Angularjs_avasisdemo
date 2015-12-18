@@ -246,8 +246,8 @@
 }
 
 .no-r-pad {
-    padding-right: 0px;
+    padding-right: 0px !important;
 }
 .no-l-pad {
-    padding-left: 0px;
+    padding-left: 0px !important;
 }

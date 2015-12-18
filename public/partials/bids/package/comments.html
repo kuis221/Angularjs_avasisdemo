@@ -1,0 +1,29 @@
+<div class="row bid-package-comments">
+    <div class="table-responsivie">
+        <table class="table no-border">
+            <tbody>
+                <tr ng-repeat="row in comments">
+                   <td class="profile-image"><img ng-src="{{ row.image }}"></td>
+                   <td>
+                        <span class="name">{{row.name}}</span>
+                        <span class="datetime">{{ row.date }} - {{row.time}}</span><br/>
+                        <span class="detail">{{row.detail}}</span>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>Add Comment...</label>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-right">
+            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-success">Post Comment</button>
+        </div>
+    </div>
+</div>
+
