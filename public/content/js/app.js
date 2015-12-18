@@ -161,6 +161,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('action-items.change-order-new', {
+            url: '/change-order-new',
+            templateUrl: "partials/action-items/change-order/new.html",
+            controller: "ChangeOrderCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
         .state('action-items.inspections', {
             url: '/inspections',
             templateUrl: "partials/action-items/inspections.html",

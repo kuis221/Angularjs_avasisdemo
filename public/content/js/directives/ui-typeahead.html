@@ -1,0 +1,11 @@
+<div class="btn-group ui-typeahead" uib-dropdown is-open="isOpened">
+    <span  uib-dropdown-toggle class="text-primary"><i class="fa fa-chevron-down" ></i></span>
+    <input type="text text-primary" class="form-control" ng-model="query.name" />
+    <ul class="uib-dropdown-menu" ng-show="filtered.length != 0">
+        <li ng-repeat="item in filtered">
+            <a tabindex="-1" ng-click="selectVal(item, $event);">
+                {{item.name}}
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,209 @@
+<div class="con-page-wrapper mb30">
+    <!-- Top Nav bar -->
+    <div class="row con-page-info">
+        <div class="pull-left pl0 pr0">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="action-items.main">Close <i class="fa fa-caret-right"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pull-left con-page-title">
+            <div class="col-md-7 pl20">
+                <h2 class="text-default">New Change Order</h2>
+                <input type="text" placeholder="Enter Change Order Name"></input>
+                <div class="project-info">
+                    <h3 class="text-primary">Wilmington 47</h3>
+                    <span class="text-muted">47 Wilmington Ave<br/>Arlington, VA 90125</span>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="co-info">
+                    <div class="row">
+                        <span class="col-xs-9 text-right">Change Order#</span>
+                        <span class="col-xs-3 text-left">
+                            <label class="label label-info">193</label>
+                        </span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Date Initiated</span>
+                        <span class="col-xs-3 text-left">8/23/14</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Initiated By</span>
+                        <span class="col-xs-3 text-left">Bruce Wayne</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Status</span>
+                        <span class="col-xs-3 text-left text-success">In Progress</span>
+                    </div>
+
+                    <div class="row mt5 pr15">
+                        <div class="col-md-6 text-right mt20">Currently Responsible</div>
+                        <div class="col-md-6 text-left">
+                            <ui-select options="users" ng-select="" selected-item="curResponsible"></ui>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Top Nav bar -->
+
+
+    <!-- Main Content -->
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="first-section">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Select Project</label>
+                        <ui-select options="projects" placeholder="Project Name Goes Here"></ui-select>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Approval Required by</label>
+                        <ui-select options="approvers" placeholder="User Name"></ui-select>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Scope of Work</label>
+                        <ui-select options="sows" placeholder="Scope of work name here"></ui-select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Change Requested Category</label>
+                        <ui-typeahead options="categories" placeholder="Correction" ng-select="changeOptions()"></ui-typeahead>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>&nbsp;</label>
+                        <ui-date-field ng-model="date" placeholder="Due Date"></ui-date-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <a class="text-primary more-option" ng-click="isOptShow = true" ng-hide="isOptShow">More Options</a>
+                        <div class="options" ng-show="isOptShow">
+                            <div class="options-bar mb10">
+                                <div class="row">
+                                    <div class="ob-item col-md-3"><span class="text-primary">Reminder Alert</span></div>
+                                    <div class="ob-item col-md-3"><span class="text-primary">Add Attachments</span></div>
+                                    <div class="ob-item col-md-2"><span class="text-primary">Add CC</span></div>
+                                    <div class="ob-item col-md-4">
+                                        <div class="checkbox text-center">
+                                            <label class="text-primary">
+                                                <input type="checkbox">Assignee can delegate task</input>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <a class="text-primary" ng-click="isOptShow = false">Less Options</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="table-responsive mb15">
+                            <table class="table con-duration-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Start Date</th>
+                                        <th>Comp Date</th>
+                                        <th>Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Current SOW Scheduled</td>
+                                        <td>Aug 26, 2015</td>
+                                        <td>Dec 6, 2015</td>
+                                        <td>234 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Requested Change</td>
+                                        <td><input type="text" value="Aug 26, 2015"></input></td>
+                                        <td><input type="text" value="Dec 6, 2015"></input></td>
+                                        <td><input type="text" class="text-right" placeholder="days"></input></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="table-responsive mb15">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Material</th>
+                                        <th>Labor</th>
+                                        <th>Equipment</th>
+                                        <th>Other</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Current Cost</td>
+                                        <td>$76,584.00</td>
+                                        <td>$42,953.09</td>
+                                        <td>$3,456.00</td>
+                                        <td>$100,456.78</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Requested Change</td>
+                                        <td><input type="text" ng-model="material" ui-money-mask="2" placeholder="$"></input></td>
+                                        <td><input type="text" ng-model="labor" ui-money-mask="2" placeholder="$"></input></td>
+                                        <td><input type="text" ng-model="equipment" ui-money-mask="2" placeholder="$"></input></td>
+                                        <td><input type="text" ng-model="other" ui-money-mask="2" placeholder="$"></input></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label>Description of Change Request</label>
+                        <textarea placeholder="Provide any additional information here..." class="form-control p20 text-default"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mt30 mb30 text-right">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary btn-lg">
+                    Actions <i class="fa fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row no-margin animated fadeInRight second-section">
+        <div class="second-content">
+            <uib-tabset>
+                <uib-tab heading="Comments">
+                    <div ng-include="'partials/action-items/change-order/comments.html'"></div>
+                </uib-tab>
+                <uib-tab heading="Access">Short Labeled Justified content</uib-tab>
+                <uib-tab heading="Workflow">Short Labeled Justified content</uib-tab>
+                <uib-tab heading="Attachments">Long Labeled Justified content</uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+    <!-- Main Content -->
+</div>
