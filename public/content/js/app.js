@@ -229,6 +229,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('bids.package', {
+            url: '/package',
+            templateUrl: 'partials/bids/bids-package.html',
+            controller: 'BidsPackageCtrl',
+            data: {
+                isHeaderHidden: true
+            }
+        })
        .state('comm', {
             url: '/communication',
             abstract: true,
