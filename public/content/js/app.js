@@ -63,6 +63,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/financials/loan.html",
             controller: "LoanCtrl"
         })
+        .state('financials.pay-apply', {
+            url: '/payment-apply',
+            templateUrl: "partials/financials/pay-apply.html",
+            controller: "PayApplyCtrl"
+        })
         .state('bankdraw', {
             url: '/financials/bankdraw',
             abstract: true,
@@ -334,6 +339,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             data: {
                 isHeaderHidden: true
             }
+        })
+        .state('baseline-schedule', {
+            url: '/baseline-schedule',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('baseline-schedule.list', {
+            url: '/list',
+            templateUrl: 'partials/schedules/baseline/list.html',
+            controller: 'BaselineScheduleCtrl'
         })
         .state('sample', {
             url: '/sample',

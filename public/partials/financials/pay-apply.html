@@ -1,0 +1,334 @@
+<div class="animated FadeInRight">
+    <div class="payapply-wrapper">
+        <div class="inspections-charts">
+            <div class="row payapply-head">
+                <div class="normal">
+                    <h5>Payment Applications Submitted</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span>Count</span>
+                            <p>144</p>
+                        </div>
+                        <div class="col-md-9">
+                            <span>Amount</span>
+                            <p>$123,456.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal">
+                    <h5>Payment Applications in Process</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span>Count</span>
+                            <p>91</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>%</span>
+                            <p>70%</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span>Amount</span>
+                            <p>$123,456.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal">
+                    <h5>Payment Applications Complete</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span>Count</span>
+                            <p>91</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>%</span>
+                            <p>70%</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span>Amount</span>
+                            <p>$123,456.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal">
+                    <h5>Items Requiring My Approval</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span>Count</span>
+                            <p>91</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>%</span>
+                            <p>70%</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span>Amount</span>
+                            <p>$123,456.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="normal no-r-pad">
+                    <div class="btns">
+                        <a href="#" class="btn btn-success btn-lg btn-bids" data-toggle="dropdown">
+                            Review Pay Application
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row payapply-table">
+            <div class="col-md-12">
+                <h3 class="pull-left">Actions Required by Me</h3>
+                <div class="btns pull-right">
+                    <a href="" class="btn btn-default" data-toggle="dropdown">
+                        Filter by <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                        <li><a href="">Date</a></li>
+                        <li><a href="">Worker</a></li>
+                        <li><a href="">Tag</a></li>
+                        <li><a href="">Location</a></li>
+                        <li><a href="">Project</a></li>
+                    </ul>
+                </div>
+                <div class="search-field">
+                    <i class="fa fa-search"></i>
+                    <input type="text text-default" placeholder="Search by date, worker, tag, location or project" class="form-control round">
+                </div>
+                <div class="clearfix"></div>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="amount">Amount</th>
+                            <th class="staus">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in applies.listRequiredByMe">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="order-by-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="amount">${{ row.amount | number:2 }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                               'draft': row.status[0] == 'Draft',
+                                                               'pending': row.status[0] == 'pending',
+                                                               'completed': row.status[0] == 'Completed' }">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <!-- <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100  }}% Completed</small> -->
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6"></td>
+                                <td>
+                                    <span>Total</span>
+                                    <p>$1,119,234.00</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row payapply-table">
+            <div class="col-md-12">
+                <h3>Actions Required by Others</h3>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="amount">Amount</th>
+                            <th class="staus">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in applies.listRequiredByOthers">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="order-by-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="amount">${{ row.amount | number:2 }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                               'draft': row.status[0] == 'Draft',
+                                                               'pending': row.status[0] == 'pending',
+                                                               'completed': row.status[0] == 'Completed' }">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <!-- <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100  }}% Completed</small> -->
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6"></td>
+                                <td>
+                                    <span>Total</span>
+                                    <p>$2,652,904.00</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row payapply-table">
+            <div class="col-md-12">
+                <h3>Payment Application Drafts</h3>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="amount">Amount</th>
+                            <th class="staus">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in applies.listDrafts">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="order-by-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="amount">${{ row.amount | number:2 }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                               'draft': row.status[0] == 'Draft',
+                                                               'pending': row.status[0] == 'pending',
+                                                               'completed': row.status[0] == 'Completed' }">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <!-- <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100  }}% Completed</small> -->
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6"></td>
+                                <td>
+                                    <span>Total</span>
+                                    <p>$452,904.00</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row payapply-table">
+            <div class="col-md-12">
+                <h3>Completed Payments</h3>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                            <th class="flag"></th>
+                            <th class="title">Title</th>
+                            <th class="due-date">Due Date</th>
+                            <th class="responsible">Responsible</th>
+                            <th class="initiator">Initiator</th>
+                            <th class="sow">SOW</th>
+                            <th class="amount">Amount</th>
+                            <th class="staus">Status</th>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="row in applies.listCompleted">
+                            <td class="flag">
+                                <span>
+                                    <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                    <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                    <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                    <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                    <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                    <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                                </span>
+                            </td>
+                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="order-by-date">{{ row.due_date }}</td>
+                            <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                            <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                            <td class="sow">{{ row.sow }}</td>
+                            <td class="amount">${{ row.amount | number:2 }}</td>
+                            <td class="status">
+                                <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                               'draft': row.status[0] == 'Draft',
+                                                               'pending': row.status[0] == 'pending',
+                                                               'completed': row.status[0] == 'Completed' }">
+                                    {{ row.status[0] }}
+                                </span><br>
+                                <!-- <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100  }}% Completed</small> -->
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6"></td>
+                                <td>
+                                    <span>Total</span>
+                                    <p>$932,323.00</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
