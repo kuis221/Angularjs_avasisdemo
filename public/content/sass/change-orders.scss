@@ -53,6 +53,18 @@
 
     .co-info {
         color: #4a4a4a;
+
+        .row {
+            span:first-child, div:first-child {
+                text-transform: uppercase;
+                font-size: 10px;
+                font-family: AvenirNextLTPro-Demi;
+            }
+
+            span:last-child {
+                font-family: AvenirNextLTPro-Regular;
+            }
+        }
     }
 
     .first-section {
