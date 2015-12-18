@@ -1,32 +1,31 @@
 .angular-ui-tree-nodes {
-    font-size: 14px;
-}
-.angular-ui-tree-node .angular-ui-tree-nodes:before {
-    position: absolute;
-    height: 14px;
-    border-left: 1px dashed #ccc;
-    top: -14px;
-    left: 60px;
-    content: ' ';
-}
-.angular-ui-tree-nodes .fa {
-    font-size: 18px;
-    padding-right: 15px;
-}
-.angular-ui-tree-handle {
-    padding: 15px;
-    border-top: 1px solid #eee;
-    cursor: pointer;
-}
-.angular-ui-tree-nodes .angular-ui-tree-nodes {
-    padding-left: 60px;
-}
-.angular-ui-tree-nodes .angular-ui-tree-nodes li {
-    border-left: 1px dashed #ccc;
-    padding-left: 20px;
-}
+  font-size: 14px; }
 
-.angular-ui-tree-nodes .angular-ui-tree-nodes li[has-child='true']:before {
+.angular-ui-tree-node .angular-ui-tree-nodes:before {
+  position: absolute;
+  height: 14px;
+  border-left: 1px dashed #ccc;
+  top: -14px;
+  content: ' '; }
+
+.has-checkbox[ui-tree] .angular-ui-tree-node .angular-ui-tree-nodes {
+  padding-left: 60px; }
+  .has-checkbox[ui-tree] .angular-ui-tree-node .angular-ui-tree-nodes:before {
+    left: 60px; }
+
+.angular-ui-tree-nodes .fa {
+  font-size: 18px;
+  padding-right: 15px; }
+
+.angular-ui-tree-handle {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  cursor: pointer; }
+
+.angular-ui-tree-nodes .angular-ui-tree-nodes li {
+  border-left: 1px dashed #ccc;
+  padding-left: 20px; }
+  .angular-ui-tree-nodes .angular-ui-tree-nodes li[has-child='true']:before {
     border-top: 1px solid #ccc;
     content: ' ';
     display: block;
@@ -35,39 +34,34 @@
     width: 17px;
     position: absolute;
     top: 24px;
-    left: -1px;
-}
-.angular-ui-tree-nodes .angular-ui-tree-nodes li:last-child:before {
-    border-left: 1px solid white;
-}
+    left: -1px; }
+  .angular-ui-tree-nodes .angular-ui-tree-nodes li:last-child:before {
+    border-left: 1px solid white; }
+
 .angular-ui-tree-nodes .checkbox {
-    margin-top: -5px;
-}
+  margin-top: -5px; }
+
 .angular-ui-tree-node th {
-    background-color: #F5F5F6 !important;
-    font-size: 15px;
-    color: #4a4a4a;
-    padding: 12px !important;
-}
+  background-color: #F5F5F6 !important;
+  font-size: 15px;
+  color: #4a4a4a;
+  padding: 12px !important; }
+
 .angular-ui-tree-node td {
-    vertical-align: middle !important;
-}
-.angular-ui-tree-node table{
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
+  vertical-align: middle !important; }
+
+.angular-ui-tree-node table {
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+
 .angular-ui-tree-node .medium {
-    font-size: 90%;
-}
+  font-size: 90%; }
 
 .table-tree {
-    display: table;
-    width: 100%;
-}
-.table-tree > div {
+  display: table;
+  width: 100%; }
+  .table-tree > div {
     display: table-row;
-    width: 100%;
-}
-.table-tree > div > div {
-    display: table-cell;
-}
+    width: 100%; }
+    .table-tree > div > div {
+      display: table-cell; }
