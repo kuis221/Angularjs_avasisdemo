@@ -1,3 +1,10 @@
+.payapply-wrapper {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-top: none;
+  box-shadow: -2px -2px 10px #eee;
+  background-color: white; }
+
 .payapply-head .normal {
   width: 20%;
   float: left;
@@ -103,6 +110,11 @@
     font-family: AvenirNextLTPro-Demi;
     font-size: 10px;
     color: #9e9e9e; }
+  .payapply-table td.amount {
+    width: 9%;
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px;
+    color: #44474b; }
   .payapply-table td.status .in-process {
     color: #61c571; }
   .payapply-table td.status .pending {
