@@ -1,0 +1,188 @@
+<div class="row wrapper border-bottom white-bg page-heading overview ng-scope">
+    <div class="col-sm-6 col-lg-10">
+        <h2 class="heading">Baseline Schedule</h2>
+        <ul class="topSubtitle">
+            <li>
+                <a href="javascript:void(0)">Project Title Label</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6 col-lg-2 text-right">
+        <a class="btn btn-lg btn-success" ui-sref="projects.start" href="#!/projects/start"><i class="fa fa-plus"></i> Create New</a>
+    </div>
+</div>
+
+<div class="row no-margin animated fadeInRight">
+    <div class="col-md-12">
+        <div class="row no-margin">
+            <div class="bs-content-section">
+                <div class="row" ng-hide="scheduleEditMode">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Project Start Date</div>
+                                    <div class="bs-summary-value">Apr 20,2016</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Estimated Project Duration</div>
+                                    <div class="bs-summary-value">Jun 19,2016</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Type of Project</div>
+                                    <div class="bs-summary-value">Residental / My Home</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Working Days In a Week</div>
+                                    <div class="bs-summary-value">5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="pull-left pl15">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Square Footage</div>
+                                    <div class="bs-summary-value">43,421</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Avarage Days per SF</div>
+                                    <div class="bs-summary-value">5.00</div>
+                                </div>
+                            </div>
+                            <div class="pull-left pl15">
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Schedule Phase Contingency</div>
+                                    <div class="bs-summary-value">0.00</div>
+                                </div>
+                                <div class="bs-summary-row">
+                                    <div class="bs-summary-title">Project Schedule Contingency</div>
+                                    <div class="bs-summary-value">10.00</div>
+                                </div>
+                            </div>
+                            <div class="pull-right pr15">
+                                <button class="btn btn-lg btn-primary mt15" ng-click="toggleEditMode();">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="scheduleEditMode">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Project Start Date</label>
+                                    <input type="text" class="form-control" ng-model="project_start_date" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Estimated Duration</label>
+                                    <input type="text" class="form-control" placeholder="Days" ng-model="estimated_duration" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Type of Project</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Working Days in Week</label>
+                                    <ui-select selected-item="selected_working_days" options="workingDaysList"></ui-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="form-group">
+                                    <label>Square Footage</label>
+                                    <input type="text" class="form-control" ng-model="square_footage" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Average Days per SF</label>
+                                    <input type="text" class="form-control" placeholder="Days" ng-model="average_days" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="form-group">
+                                    <label>Schedule Phase Contingency</label>
+                                    <input type="text" class="form-control" ng-model="schedule_phase" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Project Phase Contingency</label>
+                                    <input type="text" class="form-control" placeholder="Days" ng-model="project_phase" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="edit-btn-groups">
+                                    <button class="btn btn-lg btn-cancel" ng-click="cancelScheduleEdit();">Cancel</button>
+                                    <button class="btn btn-lg btn-primary" ng-click="toggleEditMode()">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt30">
+            <div class="col-md-12 bs-tree">
+                <div class="row no-margin">
+                    <div class="bs-schedule-head">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Phase / SubPhase / SOW</th>
+                                    <th class="tree-data">Start Date</th>
+                                    <th class="tree-data">Completion Date</th>
+                                    <th class="tree-data-small">Duration</th>
+                                    <th class="tree-data-small">Predecessor</th>
+                                    <th class="tree-gear"></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div ui-tree data-drag-enabled="false" data-max-depth="3">
+                        <ol ui-tree-nodes="" ng-model="schedules">
+                            <li ng-repeat="folder in schedules" ui-tree-node data-collapsed="true" ng-include="'schedule-template.html'"></li>
+                        </ol>
+                    </div>
+                    <script type="text/ng-template" id="schedule-template.html">
+                        <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                            <div>
+                                <div data-nodrag ng-click="toggle(this)" class="text-primary bs-tree-handle">
+                                        <span class="bullet"><i class="fa" ng-class="!collapsed && folder.has_child ? 'fa-folder-open-o' : 'fa-folder-o' "></i>{{folder.no}}</span>
+                                    <span>{{folder.title}}</span>
+                                </div>
+                                <div class="tree-data">{{folder.start_date}}</div>
+                                <div class="tree-data">{{folder.completion_date}}</div>
+                                <div class="tree-data-small">{{folder.duration}} Days</div>
+                                <div class="tree-data-small">{{folder.predecessor}}</div>
+                                <div class="tree-gear" uib-dropdown dropdown-append-to-body>
+                                        <a uib-dropdown-toggle class="dropdown-trigger">
+                                            <i class="fa fa-cog"></i><i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="uib-dropdown-menu dropdown-menu-right bs-tree-dropdown">
+                                            <li><a href>Edit</a></li>
+                                            <li><a href ng-click="showSowModal();">Add SOW</a></li>
+                                            <li><a href><span class="text-danger">Delete</span></a></li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ol ui-tree-nodes ng-model="folder.children" ng-class="{hidden: collapsed}" ng-if="folder.has_child">
+                            <li ng-repeat="folder in folder.children" has-child="{{folder.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'schedule-template.html'"></li>
+                        </ol>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

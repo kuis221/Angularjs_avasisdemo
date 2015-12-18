@@ -1,0 +1,74 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body tm-modal-body text-center bs-sow-modal">
+    <div class="bs-modal-title">Add Scope Of Work</div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group text-left">
+                        <label>Name Of SOW</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group text-left">
+                        <label>Start Date</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group text-left">
+                        <label>Duration</label>
+                        <div number-spinner value="duration" min="0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group text-left">
+                <label>Insert At</label>
+                <ui-select selected-item="insert_at" options="sow_insert_list"></ui-select>
+            </div>
+            <div class="form-group text-left">
+                <label>Responsible User<small class="text-muted pl15">optional</small></label>
+                <ui-select selected-item="responsible_user" options="responsible_user_list" placeholder="None"></ui-select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group text-left">
+                        <label>Predecessor<small class="text-muted pl15">optional</small></label>
+                        <ui-select selected-item="predecessor" options="predecessor_list" placeholder="None"></ui-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group text-left">
+                        <label>Division</label>
+                        <ui-select selected-item="division" options="division_list" placeholder="None"></ui-select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group text-left">
+                        <label>Code</label>
+                        <ui-select selected-item="code" options="code_list" placeholder="None"></ui-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button class="btn btn-lg btn-cancel" ng-click="cancel();">Cancel</button>
+            <button class="btn btn-lg btn-success" ng-click="cancel();">Save</button>
+        </div>
+    </div>
+</div>
