@@ -521,3 +521,15 @@ input.round {
 .input-lg {
     height: 50px;
 }
+rzslider .rz-pointer {
+    top: -12px;
+    width: 24px;
+    height: 24px;
+}
+rzslider .rz-pointer.rz-active:after {
+    background: #f1f1f1;
+}
+rzslider .rz-pointer:after {
+    top: 8px;
+    left: 8px;
+}
