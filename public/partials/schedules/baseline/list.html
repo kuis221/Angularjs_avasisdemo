@@ -80,13 +80,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Estimated Duration</label>
-                                    <input type="text" class="form-control" placeholder="Days" ng-model="estimated_duration" />
+                                    <input type="text" class="form-control text-right" placeholder="Days" ng-model="estimated_duration" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Type of Project</label>
-                                    <input type="text" class="form-control" />
+                                    <label>&nbsp;</label>
+                                    <div class="bs-input-height">
+                                        <p class="text-muted">Type of Project</p>
+                                        <p>Residental / My Home</p>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Working Days in Week</label>
@@ -100,21 +103,21 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-group">
                                     <label>Square Footage</label>
-                                    <input type="text" class="form-control" ng-model="square_footage" />
+                                    <input type="text" class="form-control" ng-model="square_footage" ui-number-mask="0" />
                                 </div>
                                 <div class="form-group">
                                     <label>Average Days per SF</label>
-                                    <input type="text" class="form-control" placeholder="Days" ng-model="average_days" />
+                                    <input type="text" class="form-control" placeholder="Days" ng-model="average_days" ui-number-mask="2" />
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-group">
                                     <label>Schedule Phase Contingency</label>
-                                    <input type="text" class="form-control" ng-model="schedule_phase" />
+                                    <input type="text" class="form-control" ng-model="schedule_phase" ui-number-mask="2" />
                                 </div>
                                 <div class="form-group">
                                     <label>Project Phase Contingency</label>
-                                    <input type="text" class="form-control" placeholder="Days" ng-model="project_phase" />
+                                    <input type="text" class="form-control" placeholder="Days" ng-model="project_phase" ui-number-mask="2"  />
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-12">
