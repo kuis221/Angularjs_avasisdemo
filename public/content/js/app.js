@@ -29,7 +29,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 }]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/projects/main");
+    $urlRouterProvider.otherwise("/");
 
     return $stateProvider
         .state('dashboard', {
