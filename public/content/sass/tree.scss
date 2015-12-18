@@ -1,0 +1,86 @@
+.angular-ui-tree-nodes {
+  font-size: 14px;
+}
+
+.angular-ui-tree-node .angular-ui-tree-nodes:before {
+  position: absolute;
+  height: 14px;
+  border-left: 1px dashed #ccc;
+  top: -14px;
+  content: ' ';
+}
+.has-checkbox[ui-tree] {
+  .angular-ui-tree-node .angular-ui-tree-nodes {
+    padding-left: 60px;
+    &:before {
+      left: 60px;
+    }
+  }
+}
+.angular-ui-tree-nodes .fa {
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+.angular-ui-tree-handle {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+}
+
+.angular-ui-tree-nodes {
+  .angular-ui-tree-nodes {
+    li {
+      border-left: 1px dashed #ccc;
+      padding-left: 20px;
+      &[has-child='true']:before {
+        border-top: 1px solid #ccc;
+        content: ' ';
+        display: block;
+        float: left;
+        height: 50px;
+        width: 17px;
+        position: absolute;
+        top: 24px;
+        left: -1px;
+      }
+      &:last-child:before {
+        border-left: 1px solid white;
+      }
+    }
+  }
+  .checkbox {
+    margin-top: -5px;
+  }
+}
+
+.angular-ui-tree-node {
+  th {
+    background-color: #F5F5F6 !important;
+    font-size: 15px;
+    color: #4a4a4a;
+    padding: 12px !important;
+  }
+  td {
+    vertical-align: middle !important;
+  }
+  table {
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .medium {
+    font-size: 90%;
+  }
+}
+
+.table-tree {
+  display: table;
+  width: 100%;
+  > div {
+    display: table-row;
+    width: 100%;
+    > div {
+      display: table-cell;
+    }
+  }
+}

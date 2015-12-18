@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div ui-tree data-drag-enabled="false" data-max-depth="3">
+        <div ui-tree class="has-checkbox" data-drag-enabled="false" data-max-depth="3">
             <ol ui-tree-nodes="" ng-model="documents">
                 <li ng-repeat="folder in documents" ui-tree-node data-collapsed="true" ng-include="'folder-template.html'"></li>
             </ol>

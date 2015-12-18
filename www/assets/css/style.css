@@ -4024,7 +4024,7 @@ table.table {
         min-height: 1200px;
     }
     .navbar-static-side {
-        z-index: 2001;
+        z-index: 5;
         position: absolute;
         width: 220px;
     }
