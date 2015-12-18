@@ -1,4 +1,4 @@
-<div id="payment-applications" ng-click="hidePopover()">
+<div id="payment-applications">
     <table class="table">
         <tr>
             <td width="360">
@@ -10,20 +10,28 @@
                         </div>
                         <span class="text-muted">Filter By</span>
                     </div>
-                    <a tabindex="0" class="popover-trigger text-primary sub-title"
-                                    uib-popover-template="'date-range-filter-popover.html'" 
-                                    popover-trigger="manual"
-                                    popover-is-open="isDateFilterShown"
-                                    popover-placement="right"
-                                    ng-click="showDateRangeFilter($event)"
-                                    popover-append-to-body="true">Date Range</a>
-                    <a tabindex="0" class="pl10 popover-trigger text-primary sub-title"
-                                    uib-popover-template="'amount-range-filter-popover.html'"
-                                    popover-trigger="click"
-                                    popover-is-open="isAmountFilterShown"
-                                    popover-placement="right"
-                                    ng-click="showAmountRangeFilter($event)"
-                                    popover-append-to-body="true">Amount Range</a>
+                    <div class="inline-block" uib-dropdown auto-close="outsideClick">
+                        <a tabindex="0" class="text-primary sub-title" uib-dropdown-toggle>Date Range</a>
+                        <div class="dropdown-menu-left chevron-down-menu" uib-dropdown-menu style="width: 520px">
+                            <div class="p20 row">
+                                <div class="col-sm-6">
+                                    <ui-date-field ng-model="dateRange.min" max-date="dateRange.max" placeholder="Start Date"></ui-date-field>
+                                </div>
+                                <div class="pl0 col-sm-6">
+                                    <ui-date-field ng-model="dateRange.max" min-date="dateRange.min" placeholder="End Date"></ui-date-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-block" uib-dropdown auto-close="outsideClick">
+                        <a tabindex="0" class="text-primary sub-title" uib-dropdown-toggle>Amount Range</a>
+                        <div uib-dropdown-menu style="width: 400px;" ng-cloak class="p20 uib-dropdown-menu dropdown-menu-left chevron-down-menu">
+                            <rzslider rz-slider-model="amountRange.min"
+                                      rz-slider-high="amountRange.max"
+                                      rz-slider-options="amountRange.options">
+                            </rzslider>
+                        </div>
+                    </div>
                 </div>
                 <div class="table-responsive" slim-scroll box-height="600px">
                     <table class="table" id="application-list">
@@ -112,22 +120,3 @@
         </tr>
     </table>
 </div>
-
-<script type="text/ng-template" id="date-range-filter-popover.html">
-    <div class="row" style="width: 520px" ng-click="preventFadeOut()">
-        <div class="col-sm-6">
-            <ui-date-field ng-model="dateRange.min" max-date="dateRange.max" placeholder="Start Date"></ui-date-field>
-        </div>
-        <div class="pl0 col-sm-6">
-            <ui-date-field ng-model="dateRange.max" min-date="dateRange.min" placeholder="End Date"></ui-date-field>
-        </div>
-    </div>
-</script>
-<script type="text/ng-template" id="amount-range-filter-popover.html">
-    <div style="width: 400px" ng-click="preventFadeOut()">
-        <rzslider rz-slider-model="amountRange.min"
-                  rz-slider-high="amountRange.max"
-                  rz-slider-options="amountRange.options">
-        </rzslider>
-    </div>
-</script>

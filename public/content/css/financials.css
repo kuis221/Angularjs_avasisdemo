@@ -128,9 +128,6 @@
 #payment-applications .amount {
     font-size: 20px;
 }
-#payment-applications td {
-    padding: 15px;
-}
 #payment-applications > table > tbody > tr > td {
     border-top: none !important;
 }
@@ -152,7 +149,7 @@
     padding: 7px;
     display: inline-block;
 }
-#application-list td {
+#application-list > table > tbody > tr > td {
     padding: 15px 10px;
 }
 .application-summary table {
