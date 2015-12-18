@@ -1,0 +1,22 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body">
+    <div class="bid-award-modal-title">
+        <span>Award Bid</span>
+    </div>
+    <div class="bid-award-modal-info">
+        <div class="row award-detail">
+            <div class="col-md-12">
+                <p>You have been awarded the Bid <span class="award-detail-info">{{ bid }}</span> for <span class="award-detail-info">{{ project }}</span> in the amount of <span class="award-price-info">{{ price|currency }}</span></p>
+            </div>
+            <div class="col-md-12">
+                <span class="award-price-info">Do you Accept?</span> <a href="" class="award-detail-info">View Submission</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel btn-lg" ng-click="declineBid()">No</button>
+    <button type="button" class="btn btn-success btn-lg" ng-click="acceptBid()">Yes</button>
+</div>
