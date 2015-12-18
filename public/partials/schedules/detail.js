@@ -2,9 +2,9 @@ app.controller('ScheduleDetailCtrl',
     ['$scope', '$stateParams', '$uibModal', function($scope, $stateParams, $uibModal) {
         $scope.sowData = [
             {
-                value: 65,
+                value: 60,
                 color: "#79c485",
-                text: "65%",
+                text: "60%",
                 font: '18px AvenirNextLTPro-Regular'
             },
         ];
