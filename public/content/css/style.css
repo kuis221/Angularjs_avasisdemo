@@ -306,9 +306,12 @@ input[type=url], input[type=password] {
     right: 20px;
     top: -11px;
 }
+.chevron-down-menu.dropdown-menu-left::before{
+    left: 20px;
+}
 .chevron-down-menu {
     min-width: 210px;
-    margin-top: 16px;
+    margin-top: 6px;
     padding: 0;
     border: 1px solid rgba(221,221,221,0.1);
     box-shadow: 0px 0px 25px 0 #ccc;
@@ -339,6 +342,8 @@ input[type=url], input[type=password] {
 .p15 {padding: 15px !important;}
 .p20 {padding: 20px !important;}
 
+.mb5 {margin-bottom: 5px !important;}
+.mb10 {margin-bottom: 10px !important;}
 .mb15 {margin-bottom: 15px !important;}
 .mb20 {margin-bottom: 20px !important;}
 .mb25 {margin-bottom: 25px !important;}
@@ -521,6 +526,7 @@ input.round {
 .input-lg {
     height: 50px;
 }
+
 rzslider .rz-pointer {
     top: -12px;
     width: 24px;

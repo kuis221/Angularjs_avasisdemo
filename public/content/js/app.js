@@ -29,7 +29,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 }]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/projects/main");
+    $urlRouterProvider.otherwise("/");
 
     return $stateProvider
         .state('dashboard', {
@@ -162,6 +162,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/general-action-items',
             templateUrl: "partials/action-items/general-action-items.html",
             controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true
+            }
+        })
+        .state('action-items.change-order-new', {
+            url: '/change-order-new',
+            templateUrl: "partials/action-items/change-order/new.html",
+            controller: "ChangeOrderCtrl",
             data: {
                 isHeaderHidden: true
             }

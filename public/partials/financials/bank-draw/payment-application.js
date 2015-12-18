@@ -2,8 +2,6 @@ app.controller('BankDrawPaymentApplicationCtrl',
     ['$scope', '$state', '$filter', function ($scope, $state, $filter) {
         $scope.$parent.setCurrentStep($state.current.name);
         $scope.isCheckedAll = false;
-        $scope.isDateFilterShown = false;
-        $scope.isRangeFilterShown = false;
         $scope.dateRange = {
             min: moment('07/01/2015').toDate(),
             max: moment('09/01/2015').toDate()
@@ -55,19 +53,5 @@ app.controller('BankDrawPaymentApplicationCtrl',
                 return '-';
             else
                 return $filter('currency')(val);
-        }
-        $scope.hidePopover = function() {
-            $scope.isDateFilterShown = false;
-            $scope.isAmountFilterShown = false;
-        }
-        $scope.showDateRangeFilter = function(evt) {
-            evt.stopPropagation();
-            $scope.isAmountFilterShown = false;
-            $scope.isDateFilterShown = true;
-        }
-        $scope.showAmountRangeFilter = function(evt) {
-            evt.stopPropagation();
-            $scope.isDateFilterShown = false;
-            $scope.isAmountFilterShown = true;
         }
     }]);
