@@ -1,12 +1,20 @@
 app.controller('BidsCompareModalCtrl',
-    ['$scope', '$state', '$uibModalInstance', function($scope, $state, $uibModalInstance) {
+    ['$scope', '$state', '$uibModal', '$uibModalInstance', function($scope, $state, $uibModal, $uibModalInstance) {
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');
         };
 
         $scope.awardBid = function () {
             $uibModalInstance.close();
-            $state.go('bids.compare');
+            $scope.confirmBid();
+        }
+
+        $scope.confirmBid = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/bids/modals/award-confirm.html',
+                controller: 'BidsAwardCtrl',
+                windowClass: 'bids-award-modal'
+            });
         }
 
         $scope.selectedDate = new Date(2015, 7, 18);

@@ -46,14 +46,5 @@ app.controller('BidsCompareCtrl', ['$scope', '$state', '$stateParams', '$uibModa
             references: true
         }
     ];
-
-    // Action Main GAI New Modal
-    $scope.showBigsCompareModal = function(){
-        var modalInstance = $uibModal.open({
-            templateUrl: 'partials/bids/bids-modal.html',
-            controller: 'BidsCompareModalCtrl',
-            windowClass: 'bids-compare-modal'
-        });
-    }
 }]);
 
