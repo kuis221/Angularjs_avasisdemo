@@ -1,45 +1,45 @@
-.bids-award-modal .modal-body {
+.bids-award-modal .modal-body, .bids-award-small-modal .modal-body {
   padding: 20px 20px 10px 20px; }
 
-.bids-award-modal .bid-award-modal-title {
+.bids-award-modal .bid-award-modal-title, .bids-award-small-modal .bid-award-modal-title {
   padding: 12px 0;
   border-bottom: 1px solid #d7d7d7; }
-  .bids-award-modal .bid-award-modal-title span {
+  .bids-award-modal .bid-award-modal-title span, .bids-award-small-modal .bid-award-modal-title span {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 13px; }
 
-.bids-award-modal .bid-award-modal-info {
+.bids-award-modal .bid-award-modal-info, .bids-award-small-modal .bid-award-modal-info {
   padding: 14px 0;
   border-bottom: 1px solid #d7d7d7; }
-  .bids-award-modal .bid-award-modal-info .text-title {
+  .bids-award-modal .bid-award-modal-info .text-title, .bids-award-small-modal .bid-award-modal-info .text-title {
     font-family: "AvenirNextLTPro-Medium";
     font-size: 9px;
     color: #8b8b8b;
     padding-bottom: 2px;
     display: block; }
-  .bids-award-modal .bid-award-modal-info .text-bid-name, .bids-award-modal .bid-award-modal-info .text-sub-contractor, .bids-award-modal .bid-award-modal-info .text-bid-amount {
+  .bids-award-modal .bid-award-modal-info .text-bid-name, .bids-award-modal .bid-award-modal-info .text-sub-contractor, .bids-award-modal .bid-award-modal-info .text-bid-amount, .bids-award-small-modal .bid-award-modal-info .text-bid-name, .bids-award-small-modal .bid-award-modal-info .text-sub-contractor, .bids-award-small-modal .bid-award-modal-info .text-bid-amount {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 13px;
     color: #3aabd5; }
-  .bids-award-modal .bid-award-modal-info .text-bid-amount {
+  .bids-award-modal .bid-award-modal-info .text-bid-amount, .bids-award-small-modal .bid-award-modal-info .text-bid-amount {
     color: #2a2d33; }
-  .bids-award-modal .bid-award-modal-info .text-company {
+  .bids-award-modal .bid-award-modal-info .text-company, .bids-award-small-modal .bid-award-modal-info .text-company {
     font-family: "AvenirNextLTPro-Regular";
     font-size: 13px;
     color: #4a4a4a; }
-  .bids-award-modal .bid-award-modal-info .form-group label {
+  .bids-award-modal .bid-award-modal-info .form-group label, .bids-award-small-modal .bid-award-modal-info .form-group label {
     display: block;
     padding-bottom: 10px;
     font-family: "AvenirNextLTPro-Demi";
     font-size: 12px;
     color: #44474b; }
-  .bids-award-modal .bid-award-modal-info .form-group input, .bids-award-modal .bid-award-modal-info .form-group textarea {
+  .bids-award-modal .bid-award-modal-info .form-group input, .bids-award-modal .bid-award-modal-info .form-group textarea, .bids-award-small-modal .bid-award-modal-info .form-group input, .bids-award-small-modal .bid-award-modal-info .form-group textarea {
     background-color: #f9f9f9;
     width: 100%;
     padding: 10px 20px;
     font-family: "AvenirNextLTPro-Regular";
     font-size: 12px; }
-  .bids-award-modal .bid-award-modal-info .form-group .due-date {
+  .bids-award-modal .bid-award-modal-info .form-group .due-date, .bids-award-small-modal .bid-award-modal-info .form-group .due-date {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 12px;
     background-color: #f9f9f9;
@@ -48,56 +48,85 @@
     padding: 10px 20px;
     border-radius: 3px;
     border: 1px solid #d7d7d7; }
-  .bids-award-modal .bid-award-modal-info .form-group .inline-calendar {
+  .bids-award-modal .bid-award-modal-info .form-group .inline-calendar, .bids-award-small-modal .bid-award-modal-info .form-group .inline-calendar {
     display: inline-block;
     position: absolute;
     min-height: 290px;
     z-index: 9999; }
-  .bids-award-modal .bid-award-modal-info .replaceCost-title {
+  .bids-award-modal .bid-award-modal-info .big-form label, .bids-award-small-modal .bid-award-modal-info .big-form label {
+    font-size: 13px; }
+  .bids-award-modal .bid-award-modal-info .big-form input, .bids-award-small-modal .bid-award-modal-info .big-form input {
+    font-size: 13px;
+    padding: 15px; }
+  .bids-award-modal .bid-award-modal-info .username-info, .bids-award-small-modal .bid-award-modal-info .username-info {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 11px;
+    padding-top: 42px;
+    display: block; }
+  .bids-award-modal .bid-award-modal-info .signature-date, .bids-award-small-modal .bid-award-modal-info .signature-date {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
+    color: #4a4a4a; }
+  .bids-award-modal .bid-award-modal-info .replaceCost-title, .bids-award-small-modal .bid-award-modal-info .replaceCost-title {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 13px;
     color: #44474b;
     padding-top: 8px;
     display: block; }
-  .bids-award-modal .bid-award-modal-info .past-estimates {
+  .bids-award-modal .bid-award-modal-info .past-estimates, .bids-award-small-modal .bid-award-modal-info .past-estimates {
     border: 1px solid #d7d7d7;
     border-radius: 4px;
     margin: 15px; }
-    .bids-award-modal .bid-award-modal-info .past-estimates .division {
+    .bids-award-modal .bid-award-modal-info .past-estimates .division, .bids-award-small-modal .bid-award-modal-info .past-estimates .division {
       font-family: "AvenirNextLTPro-Medium";
       font-size: 9px;
       color: #4a4a4a;
       display: block;
       margin-bottom: -5px; }
-    .bids-award-modal .bid-award-modal-info .past-estimates .name {
+    .bids-award-modal .bid-award-modal-info .past-estimates .name, .bids-award-small-modal .bid-award-modal-info .past-estimates .name {
       font-family: "AvenirNextLTPro-Demi";
       font-size: 12px;
       color: #3aabd5; }
-    .bids-award-modal .bid-award-modal-info .past-estimates .total-title, .bids-award-modal .bid-award-modal-info .past-estimates .total-estimateby {
+    .bids-award-modal .bid-award-modal-info .past-estimates .total-title, .bids-award-modal .bid-award-modal-info .past-estimates .total-estimateby, .bids-award-small-modal .bid-award-modal-info .past-estimates .total-title, .bids-award-small-modal .bid-award-modal-info .past-estimates .total-estimateby {
       font-family: "AvenirNextLTPro-Demi";
       font-size: 9px;
       color: #8b8b8b; }
-    .bids-award-modal .bid-award-modal-info .past-estimates .angular-ui-tree-nodes .angular-ui-tree-nodes {
+    .bids-award-modal .bid-award-modal-info .past-estimates .angular-ui-tree-nodes .angular-ui-tree-nodes, .bids-award-small-modal .bid-award-modal-info .past-estimates .angular-ui-tree-nodes .angular-ui-tree-nodes {
       padding-left: 20px; }
-    .bids-award-modal .bid-award-modal-info .past-estimates .angular-ui-tree-node .angular-ui-tree-nodes:before {
+    .bids-award-modal .bid-award-modal-info .past-estimates .angular-ui-tree-node .angular-ui-tree-nodes:before, .bids-award-small-modal .bid-award-modal-info .past-estimates .angular-ui-tree-node .angular-ui-tree-nodes:before {
       left: 20px; }
-    .bids-award-modal .bid-award-modal-info .past-estimates li.no-child .angular-ui-tree-nodes:before {
+    .bids-award-modal .bid-award-modal-info .past-estimates li.no-child .angular-ui-tree-nodes:before, .bids-award-small-modal .bid-award-modal-info .past-estimates li.no-child .angular-ui-tree-nodes:before {
       border: none; }
-    .bids-award-modal .bid-award-modal-info .past-estimates .font-regular {
+    .bids-award-modal .bid-award-modal-info .past-estimates .font-regular, .bids-award-small-modal .bid-award-modal-info .past-estimates .font-regular {
       font-family: "AvenirNextLTPro-Regular";
       font-size: 12px;
       color: #44474b; }
-    .bids-award-modal .bid-award-modal-info .past-estimates input {
+    .bids-award-modal .bid-award-modal-info .past-estimates input, .bids-award-small-modal .bid-award-modal-info .past-estimates input {
       background-color: #f9f9f9;
       width: 120px;
       padding: 10px 10px;
       font-family: "AvenirNextLTPro-Regular";
       font-size: 12px; }
+  .bids-award-modal .bid-award-modal-info .award-detail, .bids-award-small-modal .bid-award-modal-info .award-detail {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 13px;
+    color: #44474b; }
+  .bids-award-modal .bid-award-modal-info .award-detail-info, .bids-award-small-modal .bid-award-modal-info .award-detail-info {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #3aabd5; }
+  .bids-award-modal .bid-award-modal-info .award-price-info, .bids-award-small-modal .bid-award-modal-info .award-price-info {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 13px;
+    color: #44474b;
+    padding-right: 10px; }
 
-.bids-award-modal .modal-footer {
+.bids-award-modal .modal-footer, .bids-award-small-modal .modal-footer {
   border: none;
   padding: 20px; }
 
 @media (min-width: 768px) {
   .bids-award-modal .modal-dialog {
-    width: 720px; } }
+    width: 720px; }
+  .bids-award-small-modal .modal-dialog {
+    width: 555px; } }

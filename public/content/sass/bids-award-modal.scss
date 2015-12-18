@@ -1,4 +1,4 @@
-.bids-award-modal {
+.bids-award-modal, .bids-award-small-modal {
 	.modal-body {
 		padding: 20px 20px 10px 20px;
 	}
@@ -66,6 +66,26 @@
 			    z-index: 9999;
 			}
 		}
+		.big-form {
+			label {
+				font-size: 13px;
+			}
+			input {
+				font-size: 13px;
+				padding: 15px;
+			}
+		}
+		.username-info {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 11px;
+			padding-top: 42px;
+			display: block;
+		}
+		.signature-date {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 13px;
+			color: #4a4a4a;
+		}
 		.replaceCost-title {
 			font-family: "AvenirNextLTPro-Demi";
 			font-size: 13px;
@@ -117,6 +137,25 @@
 				font-size: 12px;
 			}
 		}
+
+		.award-detail {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 13px;
+			color: #44474b;
+		}
+
+		.award-detail-info {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #3aabd5;
+		}
+
+		.award-price-info {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #44474b;
+			padding-right: 10px;
+		}
 	}
 
 	.modal-footer {
@@ -128,5 +167,9 @@
 @media (min-width: 768px) {
 	.bids-award-modal .modal-dialog {
 		width: 720px;
+	}
+
+	.bids-award-small-modal .modal-dialog {
+		width: 555px;
 	}
 }

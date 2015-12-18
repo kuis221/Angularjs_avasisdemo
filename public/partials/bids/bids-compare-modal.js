@@ -6,16 +6,12 @@ app.controller('BidsCompareModalCtrl',
 
         $scope.awardBid = function () {
             $uibModalInstance.close();
-            $scope.confirmBid();
-        }
-
-        $scope.confirmBid = function() {
-            var modalInstance = $uibModal.open({
+            $uibModal.open({
                 templateUrl: 'partials/bids/modals/award-confirm.html',
                 controller: 'BidsAwardCtrl',
-                windowClass: 'bids-award-modal'
+                windowClass: 'bids-award-small-modal'
             });
-        }
+        };
 
         $scope.selectedDate = new Date(2015, 7, 18);
         $scope.replaceCost = true;

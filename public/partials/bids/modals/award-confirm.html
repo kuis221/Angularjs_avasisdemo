@@ -6,59 +6,17 @@
         <span>Award Bid</span>
     </div>
     <div class="bid-award-modal-info">
-        <div class="row">
-            <div class="col-md-4">
-                <span class="text-title">Bid Name</span>
-                <span class="text-bid-name">Ridiculus Ornare Venenatis</span>
+        <div class="row award-detail">
+            <div class="col-md-12">
+                <p>You have been awarded the Bid <span class="award-detail-info">{{ bid }}</span> for <span class="award-detail-info">{{ project }}</span> in the amount of <span class="award-price-info">{{ price|currency }}</span></p>
             </div>
-            <div class="col-md-2">
-                <span class="text-title">Sub Contractor</span>
-                <span class="text-sub-contractor">Bob Jones</span>
-            </div>
-            <div class="col-md-3">
-                <span class="text-title">Company</span>
-                <span class="text-company">Ornare Venenatis</span>
-            </div>
-            <div class="col-md-3">
-                <span class="text-title">Bid Amount</span>
-                <span class="text-bid-amount">$1,234,67.00</span>
-            </div>
-        </div>
-    </div>
-    <div class="bid-award-modal-info">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Who is responsible for generating contract?</label>
-                    <input type="text">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label>Contract Due Date</label>
-                    <div class="due-date" ng-click="isShowDatePicker = !isShowDatePicker">
-                        <span class="text-muted text-center">{{ selectedDate | date: 'MMM dd, yyyy'}}</span>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="inline-calendar" ng-show="isShowDatePicker">
-                      <uib-datepicker ng-model="selectedDate" min-date="minDate" show-weeks="false" class="well well-sm" ng-click="isShowDatePicker = false;"></uib-datepicker>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bid-award-modal-info">
-        <div class="row">
-            <div class="col-md-10">
-                <span class="replaceCost-title">Does this contract replace any currently Estimated Costs?</span>
-            </div>
-            <div class="col-md-2">
-                <ui-rec-switch ng-model="replaceCost" class="pull-right" />
+            <div class="col-md-12">
+                <span class="award-price-info">Do you Accept?</span> <a href="" class="award-detail-info">View Submission</a>
             </div>
         </div>
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-cancel btn-lg" ng-click="cancel()">Cancel</button>
-    <button type="button" class="btn btn-primary btn-lg" ng-click="awardBid()">Award Bid</button>
+    <button type="button" class="btn btn-cancel btn-lg" ng-click="declineBid()">No</button>
+    <button type="button" class="btn btn-success btn-lg" ng-click="acceptBid()">Yes</button>
 </div>
