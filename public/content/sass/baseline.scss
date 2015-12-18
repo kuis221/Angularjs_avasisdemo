@@ -27,6 +27,8 @@ $c-text-gray: #808080;
 }
 
 .bs-tree {
+    margin-bottom: 200px;
+
     .bs-schedule-head {
         table > thead > tr > th {
             color: $c-text-gray;
@@ -34,7 +36,17 @@ $c-text-gray: #808080;
             padding-bottom: 10px;
             font-family: $demi;
             font-size: 12px;
+            border-bottom: 0px;
         }
+
+        table.table-bordered {
+            border-bottom: 0px;
+        }
+    }
+
+    .angular-ui-tree {
+        border: 1px solid $c-gray-border;
+        border-top: 0px;
     }
 
     .angular-ui-tree-nodes .fa {
@@ -87,6 +99,24 @@ $c-text-gray: #808080;
 
     th.tree-gear {
         width: 115px;
+    }
+
+    @media (max-width: 1023px) {
+        .tree-data {
+            width: 100px;
+        }
+
+        .tree-data-small {
+            width: 50px;
+        }
+
+        .tree-gear {
+            width: 50px;
+        }
+
+        th.tree-gear {
+            width: 65px;
+        }
     }
 }
 
@@ -191,4 +221,8 @@ $c-text-gray: #808080;
     .btn i {
         margin-right: 0px;
     }
+}
+
+.bs-input-height {
+    height: 52px;
 }
