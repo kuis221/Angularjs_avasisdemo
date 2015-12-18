@@ -1,4 +1,4 @@
-<div id="payment-applications">
+<div id="payment-applications" ng-click="hidePopover()">
     <table class="table">
         <tr>
             <td width="360">
@@ -10,17 +10,25 @@
                         </div>
                         <span class="text-muted">Filter By</span>
                     </div>
-                    <div class="text-primary sub-title">
-                        Date Range
-                    </div>
-                    <div class="text-primary sub-title">
-                        Amount Range
-                    </div>
+                    <a tabindex="0" class="popover-trigger text-primary sub-title"
+                                    uib-popover-template="'date-range-filter-popover.html'" 
+                                    popover-trigger="manual"
+                                    popover-is-open="isDateFilterShown"
+                                    popover-placement="bottom"
+                                    ng-click="showDateRangeFilter($event)"
+                                    popover-append-to-body="true">Date Range</a>
+                    <a tabindex="0" class="pl10 popover-trigger text-primary sub-title"
+                                    uib-popover-template="'amount-range-filter-popover.html'"
+                                    popover-trigger="click"
+                                    popover-is-open="isAmountFilterShown"
+                                    popover-placement="bottom"
+                                    ng-click="showAmountRangeFilter($event)"
+                                    popover-append-to-body="true">Amount Range</a>
                 </div>
                 <div class="table-responsive" slim-scroll box-height="600px">
                     <table class="table" id="application-list">
                         <tbody>
-                            <tr ng-repeat="application in payment_applications">
+                            <tr ng-repeat="application in payment_applications | rangeFilter:'amount':amountRange.min:amountRange.max | dateRangeFilter:'date':dateRange.min:dateRange.max">
                                 <td class="middle-align pl5">
                                     <div class="checkbox checkbox-inline">
                                         <input type="checkbox" ng-model="application.checked">
@@ -40,7 +48,7 @@
                     </table>
                 </div>
             </td>
-            <td style="border-left: 1px solid #dedede">
+            <td class="border-left">
                 <div class="application-summary">
                     <div class="table-responsive">
                         <div class="title">Summary of Selected Pay Applications</div>
@@ -104,3 +112,22 @@
         </tr>
     </table>
 </div>
+
+<script type="text/ng-template" id="date-range-filter-popover.html">
+    <div class="row" style="width: 520px" ng-click="preventFadeOut()">
+        <div class="col-sm-6">
+            <ui-date-field ng-model="dateRange.min" max-date="dateRange.max" placeholder="Start Date"></ui-date-field>
+        </div>
+        <div class="pl0 col-sm-6">
+            <ui-date-field ng-model="dateRange.max" min-date="dateRange.min" placeholder="End Date"></ui-date-field>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="amount-range-filter-popover.html">
+    <div style="width: 400px" ng-click="preventFadeOut()">
+        <rzslider rz-slider-model="amountRange.min"
+                  rz-slider-high="amountRange.max"
+                  rz-slider-options="amountRange.options">
+        </rzslider>
+    </div>
+</script>
