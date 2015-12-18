@@ -1,0 +1,46 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="$dismiss()">&times;</button>
+</div>
+<div class="modal-body mt20">
+    <h2 class="font-regular pb10 border-bottom">{{title}}</h2>
+    <div class="row form-group pt10">
+        <div class="col-sm-4">
+            <label for="">Phase</label>
+            <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.phase" options="phases"></ui-select>
+        </div>
+        <div class="col-sm-4 pl0">
+            <label for="">Sub Phase</label>
+            <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.sub_phase" options="subPhases"></ui-select>
+        </div>
+        <div class="col-sm-4 pl0">
+            <label for="">Scope Of Work</label>
+            <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-6">
+            <label for="">Lag Time</label>
+            <div class="row">
+                <div class="col-xs-4"><input type="text" class="input-lg label-default form-control"></div>
+                <div class="col-xs-4 pl0"><input type="text" class="input-lg label-default form-control"></div>
+                <div class="col-xs-4 pl0"><input type="text" class="input-lg label-default form-control"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="row pt20">
+                <div class="col-xs-4">
+                    <label for="">Team Member</label>
+                    <div>-</div>
+                </div>
+                <div class="col-xs-4">
+                    <label for="">Status</label>
+                    <div>-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-lg btn-cancel" ng-click="$dismiss()">Cancel</button>
+    <button type="button" class="btn btn-lg btn-success" ng-click="$close(process)">Save</button>
+</div>

@@ -116,7 +116,7 @@
                                 <div class="pl15 pull-left">
                                     <div class="small text-gray-lighter">STATUS</div>
                                     <span class="flag-badge"><i class="fa fa-flag text-{{schedule.status=='in progress' ? 'success' : 'danger'}}"></i></span>
-                                    <span class="small status">{{schedule.status}}</span>
+                                    <span class="small status text-{{schedule.status=='in progress' ? 'success' : 'danger'}}">{{schedule.status}}</span>
                                 </div>
 
                                 <div class="pl15 pull-left">
@@ -137,7 +137,9 @@
             <div ng-include="'partials/schedules/calendar.html'"></div>
         </uib-tab>
         <uib-tab heading="Flow">Short Labeled Justified content</uib-tab>
-        <uib-tab heading="List">Long Labeled Justified content</uib-tab>
+        <uib-tab heading="List">
+            <div ng-include="'partials/schedules/list.html'"></div>
+        </uib-tab>
         <uib-tab heading="Gantt">Long Labeled Justified content</uib-tab>
         <uib-tab heading="Baseline">Long Labeled Justified content</uib-tab>
     </uib-tabset>

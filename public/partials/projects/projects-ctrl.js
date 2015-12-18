@@ -12,6 +12,13 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
     $scope.schedule_completed = [60, 40, 90, 20, 100];
     $scope.project_completed = 33;
 
+    $scope.goComm = function () {
+        $state.go('comm.main');
+    };
+    $scope.goDoc = function () {
+        $state.go('documents.main');
+    };
+
     /**
      * Data for Doughnut chart
      */

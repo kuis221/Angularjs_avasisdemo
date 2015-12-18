@@ -40,4 +40,15 @@ app.controller('LoanCtrl' ,
             $scope.savedProject = true;
         };
 
+        $scope.appendMonth = function() {
+            if (!_.isUndefined($scope.loanTerm) && $scope.loanTerm != '') {
+                month = $scope.loanTerm.match(/^\d+/);
+                switch(parseInt(month)) {
+                    case 0:
+                    case 1: $scope.loanTerm = month + ' month'; break;
+                    default: $scope.loanTerm = month + ' months';
+                }
+            }
+        };
+
     }]);

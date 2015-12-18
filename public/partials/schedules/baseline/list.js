@@ -1,5 +1,24 @@
 app.controller('BaselineScheduleCtrl',
-    ['$scope', '$stateParams', function ($scope, $stateParams) {
+    ['$scope', '$stateParams', '$uibModal', function ($scope, $stateParams, $uibModal) {
+
+        $scope.scheduleEditMode = false;
+        $scope.project_start_date = "Apr 20, 2015";
+        $scope.estimated_duration = 5;
+        $scope.square_footage = 42421;
+        $scope.average_days = 5.0;
+        $scope.schedule_phase = 0.0;
+        $scope.project_phase = 0.0;
+
+        $scope.workingDaysList = [
+            {id: 1, name: '1 Days'},
+            {id: 2, name: '2 Days'},
+            {id: 3, name: '3 Days'},
+            {id: 4, name: '4 Days'},
+            {id: 5, name: '5 Days'},
+            {id: 6, name: '6 Days'},
+            {id: 7, name: '7 Days'}
+        ]
+
         $scope.schedules = [
             {
                 id: 1,
@@ -9,6 +28,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -19,6 +39,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: true,
                 children: [
                     {
                         id: 3,
@@ -38,6 +59,7 @@ app.controller('BaselineScheduleCtrl',
                         completion_date: 'Dec 12, 2015',
                         duration: 2,
                         predecessor: '2.1',
+                        has_child: true,
                         children: [
                             {
                                 id: 5,
@@ -61,6 +83,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -71,6 +94,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -81,6 +105,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -91,6 +116,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -101,6 +127,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -111,6 +138,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -121,6 +149,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -131,6 +160,7 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             },
             {
@@ -141,8 +171,30 @@ app.controller('BaselineScheduleCtrl',
                 completion_date: 'Dec 12, 2015',
                 duration: 2,
                 predecessor: 'N/A',
+                has_child: false,
                 children: []
             }
         ];
+
+        $scope.toggleEditMode = function() {
+            $scope.scheduleEditMode = !$scope.scheduleEditMode;
+        }
+
+        $scope.cancelScheduleEdit = function() {
+            $scope.scheduleEditMode = false;
+        }
+
+        $scope.showSowModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/schedules/baseline/sow-modal.html',
+                controller: 'BaselineScheduleSowCtrl',
+                windowClass: 'tm-modal-main'
+            });
+
+            modalInstance.result.then(function (res) {
+            }, function () {
+
+            });
+        }
     }]
 );

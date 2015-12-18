@@ -12,6 +12,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="assets/css/plugins/customscroll/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
     <link rel="stylesheet" href="bower_components/dropzone/downloads/css/dropzone.css">
     <link href="bower_components/ng-table/dist/ng-table.min.css" rel="stylesheet">
@@ -28,6 +29,7 @@
     <link href="content/css/flag-alert.css" rel="stylesheet">
     <link href="content/css/documents.css" rel="stylesheet">
     <link href="content/css/bids.css" rel="stylesheet">
+    <link href="content/css/bids-compare-modal.css" rel="stylesheet">
     <link href="content/css/comm.css" rel="stylesheet">
     <link href="content/css/procurement.css" rel="stylesheet">
     <link href="content/css/procurement-create.css" rel="stylesheet">
@@ -77,6 +79,8 @@
 <!-- Peity -->
 <script src="assets/js/demo/peity-demo.js"></script>
 
+<script src="assets/js/plugins/customscroll/jquery.mCustomScrollbar.min.js"></script>
+
 <script src="bower_components/lodash/lodash.min.js"></script>
 <script src="bower_components/angular-loader/angular-loader.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
@@ -101,12 +105,15 @@
 <script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
 <script src="bower_components/slick-carousel/slick/slick.js"></script>
 <script src="bower_components/angular-slick/dist/slick.js"></script>
+<script src="bower_components/angular-slick/dist/slick.js"></script>
 
 <script src="content/js/app.js"></script>
 <script src="content/js/directives/directives.js"></script>
 <script src="content/js/directives/ui-select.js"></script>
 <script src="content/js/directives/ui-arc-chart.js"></script>
 <script src="content/js/directives/ui-rec-switch.js"></script>
+<script src="content/js/directives/ui-date-field.js"></script>
+<script src="content/js/directives/number-spinner.js"></script>
 <script src="content/js/filters/accounting.js"></script>
 <script src="content/js/filters/initials.js"></script>
 <script src="partials/projects/projects-ctrl.js"></script>
@@ -143,15 +150,21 @@
 <script src="partials/bids/bids.js"></script>
 <script src="partials/bids/bids-main.js"></script>
 <script src="partials/bids/bids-compare.js"></script>
-<script src="partials/bids/bid-award-modal.js"></script>
+<script src="partials/bids/bids-compare-modal.js"></script>
 <script src="partials/comm/comm.js"></script>
+<script src="partials/comm/comm-main.js"></script>
+<script src="partials/comm/comm-new.js"></script>
 <script src="partials/procurement/list.js"></script>
 <script src="partials/procurement/create.js"></script>
 <script src="partials/photos/photos.js"></script>
 <script src="partials/photos/photo-preview-modal.js"></script>
+<script src="partials/photos/upload-modal.js"></script>
 <script src="partials/schedules/main.js"></script>
 <script src="partials/schedules/detail.js"></script>
 <script src="partials/schedules/baseline/list.js"></script>
+<script src="partials/schedules/baseline/sow-modal.js"></script>
+<script src="partials/schedules/details/add-process-modal.js"></script>
+<script src="partials/schedules/details/add-successor-modal.js"></script>
 <script src="partials/dashboards/dashboard.js"></script>
 <script src="partials/sample/sample.js"></script>
 <script src="assets/js/plugins/sly/plugins.js"></script>

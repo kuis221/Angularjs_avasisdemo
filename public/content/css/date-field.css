@@ -1,0 +1,39 @@
+.date-field-wrapper {
+  padding: 14px 20px;
+  height: 50px;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  position: relative;
+  font-size: 14px; }
+  .date-field-wrapper .value {
+    margin-left: 30px;
+    cursor: pointer; }
+  .date-field-wrapper input[type='date'] {
+    border: none;
+    width: 0;
+    height: 0; }
+
+ul[uib-datepicker-popup-wrap] {
+  margin-top: 16px; }
+  ul[uib-datepicker-popup-wrap] table .btn {
+    background: none;
+    color: white;
+    border: none;
+    color: #4a4a4a;
+    font-size: 13px;
+    padding: 8px 10px; }
+    ul[uib-datepicker-popup-wrap] table .btn:hover {
+      background: #ccc; }
+    ul[uib-datepicker-popup-wrap] table .btn.active {
+      box-shadow: none; }
+      ul[uib-datepicker-popup-wrap] table .btn.active > span {
+        color: white; }
+      ul[uib-datepicker-popup-wrap] table .btn.active.btn-default {
+        background: #aaa; }
+    ul[uib-datepicker-popup-wrap] table .btn.btn-info {
+      background-color: #79c485 !important; }
+  ul[uib-datepicker-popup-wrap] table thead > tr:nth-child(2) th {
+    background: #404854;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px; }

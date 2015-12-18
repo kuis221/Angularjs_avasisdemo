@@ -5,7 +5,7 @@
     <div class="row no-margin normal-row border-bottom">
         <div class="pull-left loan-detail">
             <div>Type of Project</div>
-            <span>Multi Unit</span>
+            <span>Single Unit Residential</span>
         </div>
         <div class="pull-left loan-detail">
             <div>Square Footage</div>
@@ -26,18 +26,18 @@
                 </div>
                 <div class="pull-left loan-info-input long">
                    <p>Construction Loan Amount</p>
-                   <input type="text" class="form-control" placeholder="$">
+                   <input class="form-control" type="text" placeholder="$" ng-model="loanAmount" ui-money-mask="0"/>
                 </div>
                 <div class="pull-left loan-info-input medium">
-                   <p>Loan Amount</p>
-                   <input type="text" class="form-control text-right" placeholder="Months">
+                   <p>Loan Term</p>
+                   <input type="text" class="form-control text-right" placeholder="Months" ng-model="loanTerm" ng-blur="appendMonth()">
                 </div>
                 <div class="pull-left loan-info-input short">
                    <p>Interest Rate</p>
                    <input type="text" class="form-control text-right" placeholder="%">
                 </div>
                 <div class="pull-left loan-info-input medium">
-                   <p>Original Date</p>
+                   <p>Origination Date</p>
                    <input type="text" class="form-control" placeholder="Aug 23, 2015">
                 </div>
                 <div class="pull-left loan-info-input end medium">
@@ -68,7 +68,7 @@
         <p>Draw Approval Requirements</p>
         <div class="loan-info loan-wrapper">
             <div class="row no-margin border-bottom special-row">
-                <div class="pull-left">Lien Reease</div>
+                <div class="pull-left">Lien Release</div>
                 <div class="pull-right">
                     <ui-rec-switch ng-model="drawApproval" />
                 </div>

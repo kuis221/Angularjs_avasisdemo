@@ -30,7 +30,10 @@
         </div>
         <div class="col-lg-3 no-l-pad">
             <p>Contact Due Date</p>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control due-date" value="{{ selectedDate | date: 'MMM dd, yyyy'}}" ng-click="isShowDatePicker = !isShowDatePicker">
+            <div class="inline-calendar" ng-show="isShowDatePicker">
+              <uib-datepicker ng-model="selectedDate" min-date="minDate" show-weeks="false" class="well well-sm" ng-click="isShowDatePicker = false;"></uib-datepicker>
+            </div>
         </div>
     </div>
     <div class="row bid-modal-costs">
@@ -49,7 +52,7 @@
                 </ol>
             </div>
             <script type="text/ng-template" id="budget-item-template.html">
-                <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                <div ui-tree-handle class="tree-node tree-node-content table-tree no-r-pad">
                     <div class="bid-modal-detailed">
                         <div data-nodrag ng-click="toggle(this)" class="text-primary">
                             <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
@@ -60,7 +63,7 @@
                         </div>
                         <div class="normal-num">{{item.labor}}</div>
                         <div class="normal-num">{{item.materials}}</div>
-                        <div class="normal-num"><span ng-if="item.trash == true" class="pull-right"><i class="fa fa-trash"></i></span></div>
+                        <div class="normal-num text-right"><span ng-if="item.trash == true"><i class="fa fa-trash"></i></span></div>
                     </div>
                 </div>
                 <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">

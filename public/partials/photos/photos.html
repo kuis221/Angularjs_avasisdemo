@@ -10,7 +10,7 @@
     </div>
     <div class="col-xs-6 col-lg-2">
         <div class="btns mr10">
-            <a href="#" class="btn btn-success btn-lg">
+            <a href="javascript:void(0)" class="btn btn-success btn-lg" ng-click="showUploadModal()">
                 <i class="fa fa-plus"></i> Add New Photos
             </a>
         </div>
@@ -53,9 +53,9 @@
                                 <h3>
                                     Photos Uploaded
                                 </h3>
-                                <div class="btn-group" uib-dropdown>
+                                <div class="btn-group btn-this-week" uib-dropdown>
                                     <button type="button" class="btn round dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
-                                        <small>Filter By <span class="fa fa-angle-down"></span></small>
+                                        <small class="text-default">This Week <span class="fa fa-angle-down"></span></small>
                                     </button>
                                     <ul class="uib-dropdown-menu dropdown-menu" role="menu">
                                         <li role="menuitem"><a href="#">This Week</a></li>
@@ -135,6 +135,12 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+
+<div class="upload-preview hide">
+    <div class="dz-preview dz-image-preview">
     </div>
 </div>
 

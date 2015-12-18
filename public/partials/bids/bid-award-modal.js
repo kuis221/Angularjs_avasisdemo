@@ -8,6 +8,10 @@ app.controller('BidAwardModalCtrl',
             $uibModalInstance.close();
             $state.go('bids.compare');
         };
+
+        $scope.isShowDatePicker = false;
+        $scope.selectedDate = new Date(2015, 7, 18);
+
         $scope.showCosts = false;
         $scope.budgets = [{
             id: _.uniqueId(),
