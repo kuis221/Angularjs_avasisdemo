@@ -48,6 +48,8 @@
       .con-page-wrapper .first-section .table-responsive table {
         vertical-align: middle;
         font-family: AvenirNextLTPro-Regular; }
+        .con-page-wrapper .first-section .table-responsive table input {
+          max-width: 140px; }
         .con-page-wrapper .first-section .table-responsive table tbody tr:first-child td {
           border-top: 0; }
         .con-page-wrapper .first-section .table-responsive table tbody tr td {
