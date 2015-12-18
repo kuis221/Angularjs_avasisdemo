@@ -3,43 +3,51 @@
         <div class="table-tree" style="padding: 15px 20px; background: #f3f3f4;">
             <div class="text-muted">
                 <div>Phase / Sub Phase / SOW</div>
-                <div style="width: 120px">Start Date</div>
+                <div style="width: 100px">Start Date</div>
                 <div style="width: 120px">Completion Date</div>
-                <div style="width: 120px">Duration</div>
-                <div style="width: 120px">Predecessor</div>
-                <div style="width: 150px">Current Costs</div>
-                <div style="width: 200px">Contracted Team Members</div>
+                <div style="width: 100px">Duration</div>
+                <div style="width: 100px">Predecessor</div>
+                <div style="width: 100px">Current Costs</div>
+                <div style="width: 150px">Contracted Team Members</div>
                 <div style="width: 80px">Status</div>
             </div>
         </div>
         <div ui-tree data-drag-enabled="false" data-max-depth="3">
-            <ol ui-tree-nodes="" ng-model="budgets">
-                <li ng-repeat="item in budgets" ui-tree-node data-collapsed="true" ng-include="'budget-item-template.html'"></li>
+            <ol ui-tree-nodes="" ng-model="schedulesInList">
+                <li ng-repeat="item in schedulesInList" ui-tree-node data-collapsed="true" ng-include="'schedule-item-template.html'"></li>
             </ol>
         </div>
     </div>
     <!-- Nested node template -->
-    <script type="text/ng-template" id="budget-item-template.html">
+    <script type="text/ng-template" id="schedule-item-template.html">
         <div ui-tree-handle class="tree-node tree-node-content table-tree">
             <div class="text-muted font-regular">
                 <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
-                    <i class="fa" ng-class="{'fa-plus': collapsed, 'fa-minus': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
+                    <i class="fa" ng-class="{'fa-folder-o': collapsed, 'fa-folder-open-o': !collapsed}" ng-if="item.children" style="display:inline-block"></i>
                     <div style="display: inline-block">
-                        <div class="text-gray division">{{item.division}}</div>
-                        <span>{{item.name}}</span>
+                        <div class="text-gray division">{{item.title}}</div>
                     </div>
                 </div>
-                <div style="width: 120px">{{item.start_date}}</div>
+                <div style="width: 100px">{{item.start_date}}</div>
                 <div style="width: 120px">{{item.end_date}}</div>
-                <div style="width: 120px">{{item.duration}} Days</div>
-                <div style="width: 120px">N/A</div>
-                <div style="width: 150px">{{item.current_cost}}</div>
-                <div style="width: 200px"><span class="text-primary">{{item.team_members}}</span></div>
-                <div style="width: 80px"></div>
+                <div style="width: 100px">{{item.duration}} Days</div>
+                <div style="width: 100px">N/A</div>
+                <div style="width: 100px">{{item.current_cost}}</div>
+                <div style="width: 150px"><span class="text-primary">{{item.team_members}}</span></div>
+                <div style="width: 80px" uib-dropdown dropdown-append-to-body>
+                    <a uib-dropdown-toggle class="text-muted dropdown-trigger">
+                        <i class="fa fa-cog"></i><i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="uib-dropdown-menu dropdown-menu-right bs-tree-dropdown">
+                        <li><a href>Edit</a></li>
+                        <li><a href ng-click="showSowModal();">Add SOW</a></li>
+                        <li><a href><span class="text-danger">Delete</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
-            <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
+            <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'schedule-item-template.html'"></li>
         </ol>
     </script>
 </div>

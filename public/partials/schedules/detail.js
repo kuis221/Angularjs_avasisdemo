@@ -20,12 +20,8 @@ app.controller('ScheduleDetailCtrl',
             }
         };
         // define schedules to search by params[:id]
-        $scope.schedules = 
-        _.each($scope.schedules, function(e) {
-            e.days_of_period = e.end_date.diff(e.start_date, 'd') + 1;
-        })
-
-        $scope.schedule = _.find($scope.schedule, function(e){ return e.id == $stateParams.id; });
+        $scope.schedules = [];
+        $scope.schedule = _.find($scope.schedules, function(e){ return e.id == $stateParams.id; });
 
         $scope.showHistory = function() {
             var modalInstance = $uibModal.open({
