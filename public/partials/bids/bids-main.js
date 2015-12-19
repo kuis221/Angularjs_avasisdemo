@@ -1,5 +1,5 @@
 app.controller('BidsMainCtrl',
-    ['$scope', '$state', '$stateParams', '$timeout', function($scope, $state, $stateParams, $timeout) {
+    ['$scope', '$state', '$stateParams', '$timeout', '$uibModal', function($scope, $state, $stateParams, $timeout, $uibModal) {
         $scope.awards = [
             {
                 id: 1,
@@ -177,4 +177,12 @@ app.controller('BidsMainCtrl',
         $scope.toggleAddress = function() {
             $scope.showAddress = !$scope.showAddress;
         };
+
+        $scope.showQuickModal = function(){
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/bids/quick-modal.html',
+                controller: 'BidsQuickModalCtrl',
+                windowClass: 'bids-quick-modal'
+            });
+        }
     }]);
