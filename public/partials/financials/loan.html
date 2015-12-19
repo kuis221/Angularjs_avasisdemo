@@ -1,166 +1,148 @@
-<div class="tab-content loan-wrapper">
-    <div class="row no-margin border-bottom">
-        <p>Project Details</p>
-    </div>
-    <div class="row no-margin normal-row border-bottom">
-        <div class="pull-left loan-detail">
-            <div>Type of Project</div>
-            <span>Single Unit Residential</span>
+<div class="tab-content loan-top-section">
+    <div class="row mt10">
+        <div class="col-md-10">
+
+            <div class="row">
+                <div class="col-md-3 mb10">
+                    <h4 class="text-muted">Bank Name</h4>
+                    <p class="text-default">Wells Fargo</p>
+                    <small class="text-gray-lighter">123 Street San Diego CA 92110</small>
+                </div>
+                <div class="col-md-3  mb10">
+                    <h4 class="text-muted">Banker Name</h4>
+                    <p class="text-default">Joe Sloan</p>
+                    <small class="text-gray-lighter">
+                        <i class="fa fa-envelope mr5"></i>
+                        |
+                        <i class="fa fa-phone mr5 ml5"></i>
+                        415 123 3456
+                    </small>
+                </div>
+                <div class="col-md-3 mb10">
+                    <h4 class="text-muted">Construction Loan Amount</h4>
+                    <p class="text-default">$123,456.00</p>
+                </div>
+                <div class="col-md-3 mb10">
+                    <h4 class="text-muted">Loan Account Number</h4>
+                    <p class="text-default">897-2271623</p>
+                </div>
+            </div>
         </div>
-        <div class="pull-left loan-detail">
-            <div>Square Footage</div>
-            <span>9,788</span>
-        </div>
-        <div class="pull-left loan-detail">
-            <div>Start Date</div>
-            <span>January 14, 2015</span>
-        </div>
-    </div>
-    <div class="row no-margin mt20">
-        <p>Loan Information</p>
-        <div class="loan-info loan-wrapper">
-            <div class="row no-margin border-bottom">
-                <div class="pull-left loan-info-input long">
-                   <p>Loan Account Number</p>
-                   <input type="text" class="form-control">
-                </div>
-                <div class="pull-left loan-info-input long">
-                   <p>Construction Loan Amount</p>
-                   <input class="form-control" type="text" placeholder="$" ng-model="loanAmount" ui-money-mask="0"/>
-                </div>
-                <div class="pull-left loan-info-input medium">
-                   <p>Loan Term</p>
-                   <input type="text" class="form-control text-right" placeholder="Months" ng-model="loanTerm" ng-blur="appendMonth()">
-                </div>
-                <div class="pull-left loan-info-input short">
-                   <p>Interest Rate</p>
-                   <input type="text" class="form-control text-right" placeholder="%" ng-model="rate" ui-percentage-mask="3">
-                </div>
-                <div class="pull-left loan-info-input medium">
-                   <p>Origination Date</p>
-                   <input type="text" class="form-control" placeholder="Aug 23, 2015">
-                </div>
-                <div class="pull-left loan-info-input end medium">
-                   <p>Closing Date</p>
-                   <input type="text" class="form-control" placeholder="Dec 6, 2015">
-                </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Interest Reserve</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="haveInterest" />
-                </div>
-            </div>
-            <div class="row no-margin mt10">
-                <p class="pull-left mt10">Do you want to upload the Budget?</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="upload" />
-                </div>
-            </div>
-            <div class="row no-margin mt20" ng-show="upload">
-                <div class="loan-info-upload">
-                    <div><span><img class="loan-upload-img" src="assets/img/financials/dropzone.png"></span> Drag and drop files here or <strong>click here to browse for files</strong></div>
-                </div>
-            </div>
+
+        <div class="col-md-2 text-right  mb10">
+            <input type="button" class="btn btn-primary btn-lg" value="Edit" />
         </div>
     </div>
-    <div class="row no-margin mt20">
-        <p>Draw Approval Requirements</p>
-        <div class="loan-info loan-wrapper">
-            <div class="row no-margin border-bottom special-row">
-                <div class="pull-left">Lien Release</div>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="drawApproval" />
+
+    <hr/>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4 project-item  mb10">
+                    <h4 class="text-muted">Project</h4>
+                    <span class="text-primary">Commodo Ligula Fermentum</span>
+                </div>
+                <div class="col-md-4 project-item  mb10">
+                    <h4 class="text-muted">Amount Drawn to Date</h4>
+                    <span>$123,456.00</span>
+                </div>
+                <div class="col-md-4 project-item  mb10">
+                    <h4 class="text-muted">Total Draw Amount Pending</h4>
+                    <span>$123,456.00</span>
                 </div>
             </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Photos</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="photos" />
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3 project-item  mb10">
+                    <h4>%Drawn</h4>
+                    <span>65%</span>
                 </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Proof of Supplier Payment</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="proofSupplierPayment" />
-                </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Subcontractor Credit Check</p>
-                <div class="pull-right loan-check-input" ng-show="checkCredit">
-                    <input type="text" class="form-control" placeholder="550">
-                </div>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="checkCredit" />
-                </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Subcontractor Minimum Credit Requirement</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="subMiniCredit" />
-                </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Subcontractor Background Check</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="subBackgrdCheck" />
-                </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Subcontractor Judgement Check</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="subJudgeCheck" />
-                </div>
-            </div>
-            <div class="row no-margin border-bottom normal-row">
-                <p class="pull-left">Subcontractor Verification of Current License</p>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="subVerificationLicense" />
-                </div>
-            </div>
-            <div class="row no-margin mt10">
-                <div class="pull-left mt10">Subcontractor Verification of Current Insurance  </div>
-                <div class="pull-right">
-                    <ui-rec-switch ng-model="subVerificationIsurance" />
+                <div class="col-md-3 project-item  mb10">
+                    <h4>Remaining to be Drawn</h4>
+                    <span>$123,456.00</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row no-margin mt20 border-bottom">
-        <div class="pull-left loan-info-input long">
-           <p>Owner Name*</p>
-           <input type="text" class="form-control">
-        </div>
-        <div class="pull-left loan-info-input long">
-           <p>Owner Email*</p>
-           <input type="text" class="form-control">
-        </div>
-        <div class="pull-left loan-info-input long">
-           <p>General Contractor Name</p>
-           <input type="text" class="form-control">
-        </div>
-        <div class="pull-left loan-info-input long">
-           <p>General Contractor Email</p>
-           <input type="text" class="form-control">
-        </div>
-    </div>
-    <div class="row mt10 no-margin">
-        <div class="pull-left">*Required</div>
-        <div class="btns" ng-click="saveProject()" ng-hide="savedProject">
-            <a href="" class="btn btn-primary btn-lg btn-bids" data-toggle="dropdown">
-                Save Project
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                <li></li>
-            </ul>
-        </div>
-        <div class="btns" ng-show="savedProject">
-            <a href="" class="btn btn-success btn-lg btn-bids" data-toggle="dropdown">
-                Got It!
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                <li></li>
-            </ul>
-        </div>
+
+</div>
+
+
+<div class="row mt30 loan-bottom-section p15">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Scope Of Work</th>
+                    <th>Loan Amount</th>
+                    <th>Drawn to Date</th>
+                    <th>Pending Draws</th>
+                    <th>Amount Remaining to be Drawn</th>
+                    <th>% Drawn</th>
+                    <th>% Complete</th>
+                    <th>% Variance</th>
+                    <th>
+                        <div uib-dropdown dropdown-append-to-body>
+                            <a href="javascript:void(0)" uib-dropdown-toggle class="text-muted">
+                                <i class="fa fa-gear"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul class="uib-dropdown-menu loan-dropdown dropdown-menu-right chevron-down-menu" aria-labelledby="simple-dropdown">
+                                <li><a>Upload Budget</a></li>
+                                <li><a>Edit</a></li>
+                                <li><a>Delete</a></li>
+                             </ul>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="row in data">
+                    <td>
+                        <ui-select options="sows" selected-item="row.sow"></ui>
+                    </td>
+                    <td>
+                        <input type="text" ui-money-mask="2" placeholder="$" ng-model="row.loan_amount"/>
+                    </td>
+                    <td>{{row.drawn_date}}</td>
+                    <td>{{row.pending_draws}}</td>
+                    <td>{{row.amount_remaining}}</td>
+                    <td>{{row.percent_drawn}}</td>
+                    <td>{{row.percent_complete}}</td>
+                    <td>{{row.percent_variance}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h4>Total</h4>
+                        <span>$123,456,789.00</span>
+                    </td>
+                    <td>
+                        <h4>Total</h4>
+                        <span>$123,456,789.00</span>
+                    </td>
+                    <td>
+                        <h4>Total</h4>
+                        <span>$123,456,789.00</span>
+                    </td>
+                    <td>
+                        <h4>Total</h4>
+                        <span>$123,456,789.00</span>
+                    </td>
+                    <td colspan="4" class="text-right">
+                        <a class="btn btn-primary btn-lg">Save</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 </div>
