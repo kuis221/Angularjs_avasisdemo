@@ -114,5 +114,8 @@ app.controller('BidsQuickModalCtrl',
         $scope.selectType = function(bidCont, selectedType) {
             bidCont.typo = selectedType;
         }
+        $scope.addAnotherBid = function() {
+            $scope.quickBidList.push(new Object());
+        }
 
 }]);
