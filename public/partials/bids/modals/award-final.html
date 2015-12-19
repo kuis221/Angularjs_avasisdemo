@@ -1,0 +1,77 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body">
+    <div class="bid-award-modal-title">
+        <span>Award Bid</span>
+    </div>
+    <div class="bid-award-modal-info">
+        <div class="row award-detail">
+            <div class="col-md-12">
+                <span>You have been awarded the Bid <span class="award-detail-info">{{ bid }}</span> for <span class="award-detail-info">{{ project }}</span> in the amount of <span class="award-price-info">{{ price|currency }}</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="bid-award-modal-info">
+        <div class="row">
+            <div class="col-md-10">
+                <span class="replaceCost-title">Does this Bid requires Material Selection or Procurement?</span>
+            </div>
+            <div class="col-md-2">
+                <ui-rec-switch ng-model="requireMore" class="pull-right" />
+            </div>
+        </div>
+    </div>
+    <div class="bid-award-modal-info" ng-if="requireMore">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group big-form">
+                    <label>Responsible to Select</label>
+                    <ui-select selected-item="selectedResponsible" options="responsible" placeholder="Choose"></ui-select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group big-form">
+                    <label>Due Date</label>
+                    <input type="text" disabled="disabled" class="text-muted text-center" value="{{ dueDate | date: 'MMM dd, yyyy'}}" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bid-award-modal-info" ng-if="requireMore">
+        <div class="row">
+            <div class="col-md-10">
+                <span class="replaceCost-title">Does this Bid require Materials to be Ordered?</span>
+            </div>
+            <div class="col-md-2">
+                <ui-rec-switch ng-model="requireMaterial" class="pull-right" />
+            </div>
+        </div>
+    </div>
+    <div class="bid-award-modal-info" ng-if="requireMore">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group big-form">
+                    <label>Signature</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group big-form">
+                    <span class="username-info">Username</span>
+                    <span class="award-detail-info">{{ username }}</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group big-form">
+                    <span class="username-info">Date</span>
+                    <span class="signature-date">{{ signatureDate }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel btn-lg" ng-click="cancel()">Cancel</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="submit()">Submit</button>
+</div>

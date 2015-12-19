@@ -35,18 +35,24 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('dashboard', {
             url: '/',
             templateUrl: "partials/dashboards/dashboard.html",
-            controller: "DashboardCtrl"
+            controller: "DashboardCtrl",
+            data: {
+                pageName: 'My Dashboard'
+            }
         })
         .state('financials', {
             url: '/financials',
             abstract: true,
             controller: "FinancialsCtrl",
             templateUrl: 'partials/financials/financials.html',
+            data: {
+                pageName: 'Financials'
+            }
         })
         .state('financials.main', {
             url: '/main',
             templateUrl: "partials/financials/main.html",
-            controller: "FinancialsMainCtrl"
+            controller: "FinancialsMainCtrl",
         })
         .state('financials.budget', {
             url: '/budget',
@@ -74,7 +80,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "BankDrawCtrl",
             templateUrl: 'partials/financials/bank-draw/main.html',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'New Bank Draw Request'
             }
         })
         .state('bankdraw.payment-application', {
@@ -128,7 +135,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('team-members', {
             url: '/team-members',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Team members'
+            }
         })
         .state('team-members.empty', {
             url: '/empty',
@@ -145,13 +155,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/team-members/risk.html',
             controller: 'RiskCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Risk Management'
             }
         })
         .state('action-items', {
             url: '/action-items',
             abstract: true,
-            template: "<ui-view></ui-view>"
+            template: "<ui-view></ui-view>",
+            data: {
+                pageName: 'Action Items'
+            }
         })
         .state('action-items.main', {
             url: '/main',
@@ -163,7 +177,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/action-items/general-action-items.html",
             controller: "ActionItemsCtrl",
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'General Action Items'
+            }
+        })
+        .state('action-items.change-order-new', {
+            url: '/change-order-new',
+            templateUrl: "partials/action-items/change-order/new.html",
+            controller: "ChangeOrderCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'New Change Order'
             }
         })
         .state('action-items.inspections', {
@@ -171,7 +195,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/action-items/inspections.html",
             controller: "ActionItemsCtrl",
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Inspections'
             }
         })
         .state('action-items.inspections-popup', {
@@ -179,36 +204,50 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: "partials/action-items/inspections/main-popup.html",
             controller: "InspectionsMainPopupCtrl",
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Inspections'
             }
         })
         .state('projects', {
             url: '/projects',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Projects'
+            }
         })
         .state('projects.main', {
             url: '/main',
             templateUrl: 'partials/projects/projects-overview.html',
-            controller: 'ProjectsCtrl'
+            controller: 'ProjectsCtrl',
+            data: {
+                pageName: 'Project Overview'
+            }
         })
         .state('projects.flag_alerts', {
             url: '/flag-alerts?bucket&filter',
             templateUrl: 'partials/projects/project-flag-alerts.html',
             controller: 'ProjectFlagAlertsCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Flag Alerts'
             }
         })
         .state('projects.start', {
             url: '/start',
             templateUrl: 'partials/projects/project-start.html',
-            controller: 'ProjectStartCtrl'
+            controller: 'ProjectStartCtrl',
+            data: {
+                pageName: 'Project Start'
+            }
         })
         .state('documents', {
             url: '/documents',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Documents'
+            }
         })
         .state('documents.main', {
             url: '/main',
@@ -219,7 +258,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             url: '/bids',
             abstract: true,
             template: '<ui-view></ui-view>',
-            controller: 'BidsCtrl'
+            controller: 'BidsCtrl',
+            data: {
+                pageName: 'Bids'
+            }
         })
         .state('bids.main', {
             url: '/main',
@@ -231,7 +273,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/bids/bids-compare.html',
             controller: 'BidsCompareCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Bids Compare'
             }
         })
         .state('bids.package', {
@@ -239,32 +282,43 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/bids/bids-package.html',
             controller: 'BidsPackageCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Bid Package'
             }
         })
        .state('comm', {
             url: '/communication',
             abstract: true,
             template: '<ui-view></ui-view>',
-            controller: 'CommCtrl'
+            controller: 'CommCtrl',
+            data: {
+                pageName: 'Team Communication'
+            }
         })
         .state('comm.main', {
             url: '/main',
             templateUrl: 'partials/comm/comm-main.html',
-            controller: 'CommMainCtrl'
+            controller: 'CommMainCtrl',
+            data: {
+                pageName: 'Team Communication'
+            }
         })
        .state('comm.new', {
             url: '/new',
             templateUrl: 'partials/comm/comm-new.html',
             controller: 'CommNewCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Compose New Message'
             }
         })
         .state('procurement', {
             url: '/procurements',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Procurement'
+            }
         })
         .state('procurement.main', {
             url: '/main',
@@ -276,7 +330,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/procurement/create.html',
             controller: 'ProcurementCreateCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Create New Procurement'
             },
             abstract: true,
         })
@@ -299,14 +354,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('payment-application', {
             url: '/financials/payment-application',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Create New Pay Application'
+            }
         })
         .state('payment-application.initiate', {
             url: '/initiate',
             templateUrl: "partials/financials/payment-application/payment-initiate.html",
             controller: "FinancialsPaymentInitiateCtrl",
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
             }
         })
         .state('payment-application.finalize', {
@@ -320,12 +378,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('photos', {
             url: '/photos',
             templateUrl: 'partials/photos/photos.html',
-            controller: 'PhotosCtrl'
+            controller: 'PhotosCtrl',
+            data: {
+                pageName: 'Your Project Photos'
+            }
         })
         .state('schedules', {
             url: '/schedules',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Schedules'
+            }
         })
         .state('schedules.main', {
             url: '/main',
@@ -337,13 +401,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'partials/schedules/detail.html',
             controller: 'ScheduleDetailCtrl',
             data: {
-                isHeaderHidden: true
+                isHeaderHidden: true,
+                pageName: 'Schedule Detail'
             }
         })
         .state('baseline-schedule', {
             url: '/baseline-schedule',
             abstract: true,
-            template: '<ui-view></ui-view>'
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Baseline Schedule'
+            }
         })
         .state('baseline-schedule.list', {
             url: '/list',
@@ -353,7 +421,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('sample', {
             url: '/sample',
             templateUrl: 'partials/sample/sample.html',
-            controller: 'SampleCtrl'
+            controller: 'SampleCtrl',
+            data: {
+                pageName: 'Sample'
+            }
         });
 
 }]);
@@ -365,5 +436,7 @@ app.run (["$rootScope", function($rootScope) {
         } else {
             $rootScope.isHeaderHidden = false;
         }
+
+        $rootScope.pageName = to.data.pageName;
     });
 }]);

@@ -1,0 +1,23 @@
+<div class="comments-wrapper" slim-scroll box-height="340">
+    <div class="comment" ng-repeat="comment in comments track by $index">
+        <div>
+            <a href="#">
+                <img ng-src="assets/img/avasisteam/{{comment.avatar}}" class="img-circle prj-sch-photo" alt="image">
+            </a>
+        </div>
+        <div class="">
+            <a class="text-primary author">{{comment.author}}</a>
+            <small class="text-muted">{{comment.date}}</small>
+            <p class="text-default">{{comment.desc}}</p>
+        </div>
+        <span class="edit">Edit <i class="fa fa-pencil"></i></span>
+    </div>
+</div>
+
+<h3 class="text-muted">Add Comment...</h3>
+<textarea class="text-default form-control"></textarea>
+
+<div class="text-right mt20">
+    <a class="btn btn-cancel btn-sm">Cancel</a>
+    <a class="btn btn-success btn-sm">Post Comment</a>
+</div>
