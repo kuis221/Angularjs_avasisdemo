@@ -23,23 +23,6 @@ app.controller('LoanCtrl' ,
             }, 400);
         }
 
-        $scope.haveInterest = true;
-        $scope.upload = false;
-        $scope.checkCredit = false;
-        $scope.drawApproval = false;
-        $scope.proofSupplierPayment = false;
-        $scope.subMiniCredit = false;
-        $scope.subBackgrdCheck = false;
-        $scope.subJudgeCheck = false;
-        $scope.subVerificationLicense = false;
-        $scope.subVerificationIsurance = false;
-        $scope.photos = false;
-
-        $scope.savedProject = false;
-        $scope.saveProject = function() {
-            $scope.savedProject = true;
-        };
-
         $scope.appendMonth = function() {
             if (!_.isUndefined($scope.loanTerm) && $scope.loanTerm != '') {
                 month = $scope.loanTerm.match(/^\d+/);
@@ -50,5 +33,56 @@ app.controller('LoanCtrl' ,
                 }
             }
         };
+
+        $scope.sows = [
+            {
+                id: 1,
+                name: "Wood Finish"
+            }, {
+                id: 2,
+                name: "Duis mollis, est non commodo"
+            }
+        ];
+
+        $scope.data = [
+            {
+                sow: $scope.sows[0],
+                loan_amount: 123456987.00,
+                drawn_date: '$123,456,987.00',
+                pending_draws: '$123,456,987.00',
+                amount_remaining: '$123,456,987.00',
+                percent_drawn: '13%',
+                percent_complete: '%68',
+                percent_variance: '%24'
+            }, {
+                sow: $scope.sows[1],
+                loan_amount: 123456987.00,
+                drawn_date: '$123,456,987.00',
+                pending_draws: '$123,456,987.00',
+                amount_remaining: '$123,456,987.00',
+                percent_drawn: '13%',
+                percent_complete: '%68',
+                percent_variance: '%24'
+            }, {
+                sow: $scope.sows[0],
+                loan_amount: 123456987.00,
+                drawn_date: '$123,456,987.00',
+                pending_draws: '$123,456,987.00',
+                amount_remaining: '$123,456,987.00',
+                percent_drawn: '13%',
+                percent_complete: '%68',
+                percent_variance: '%24'
+            }, {
+                sow: $scope.sows[1],
+                loan_amount: 123456987.00,
+                drawn_date: '$123,456,987.00',
+                pending_draws: '$123,456,987.00',
+                amount_remaining: '$123,456,987.00',
+                percent_drawn: '13%',
+                percent_complete: '%68',
+                percent_variance: '%24'
+            }
+        ];
+
 
     }]);

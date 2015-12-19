@@ -1,0 +1,119 @@
+.loan-top-section {
+    h4 {
+        font-family: AvenirNextLTPro-Demi;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    p {
+        font-family: AvenirNextLTPro-Regular;
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+
+    small {
+        font-family: AvenirNextLTPro-Medium;
+        font-size: 10px;
+    }
+
+    .project-item {
+        span {
+            font-family: AvenirNextLTPro-Demi;
+        }
+    }
+}
+
+.loan-bottom-section {
+    .table-responsive {
+        h4 {
+            margin: 0;
+        }
+
+        .table {
+
+            th, td {
+                padding: 15px 5px 15px 15px;
+            }
+
+            thead {
+                tr {
+                    th {
+                        border-top: 1px solid #eee;
+                        background-color: #f9f9f9;
+                        color: #8b8b8b;
+                        vertical-align: middle;
+
+
+                        &:first-child {
+                            border-left: 1px solid #eee;
+                            min-width: 300px;
+                        }
+
+                        &:last-child {
+                            border-right: 1px solid #eee;
+                        }
+                    }
+                }
+
+            }
+
+            tbody {
+                tr {
+                    td {
+                        background-color: #fff;
+                        font-family: AvenirNextLTPro-Regular;
+                        font-size: 14px;
+                        vertical-align: middle;
+
+                        &:first-child {
+                            border-left: 1px solid #eee;
+                        }
+
+                        &:last-child {
+                            border-right: 1px solid #eee;
+                        }
+
+                        span {
+                            font-size:12px;
+                        }
+
+                        input[type=text] {
+                            background-color: #f9f9f9;
+                            padding: 15px;
+                            width: 100%;
+
+                            &:active, &:focus {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            tfoot {
+                tr {
+                    td {
+                        background-color: #f9f9f9;
+                        vertical-align: middle;
+
+                        h4 {
+                            font-size: 12px;
+                            font-family: AvenirNextLTPro-Demi;
+                            color: #8b8b8b;
+                        }
+
+                        span {
+                            font-family: AvenirNextLTPro-Medium;
+                            color: #000;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loan-dropdown.dropdown-menu-right {
+    right: 28px !important;
+}
