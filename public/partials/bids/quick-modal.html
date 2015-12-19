@@ -1,0 +1,100 @@
+<div class="modal-header clearfix">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body">
+    <div class="row quick-header">
+        <input type="text" placeholder="Enter Quick Bid Name">
+        <span><i class="fa fa-pencil"></i></span>
+    </div>
+    <div class="row quick-info">
+        <span>
+            <h5>QUICK BID #</h5>
+            <span class="bid-number">CO123456</span>
+        </span>
+        <span>
+            <h5>INITIATED BY</h5>
+            <p class="text-active">Bruce Wayne</p>
+        </span>
+        <span>
+            <h5>DATE</h5>
+            <p class="bid-date">Aug 23, 2015</p>
+        </span>
+    </div>
+    <div class="row quick-content">
+        <div class="row content-first">
+            <span>
+                <p>Team Member</p>
+                <input type="text">
+            </span>
+            <span>
+                <p>Email</p>
+                <input type="text">
+            </span>
+            <span>
+                <p>Project</p>
+                <div uib-dropdown class="tm-invite-dropdown">
+                    <button class="btn btn-block tm-input-big dropdown-toggle ng-scope" uib-dropdown-toggle>
+                        <span class="pull-left">{{bidPrj.project.name}}</span>
+                        <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
+                    </button>   
+                    <ul class="uib-dropdown-menu dropdown-menu-right" role="menu">
+                        <li ng-repeat="project in projects" ng-click="selectProject(bidPrj, project);">
+                            <a href="#">{{ project.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+        <div class="row content-second" ng-repeat="quickBid in quickBidList">
+            <span>
+                <p>Scope of Work</p>
+                <div uib-dropdown class="tm-invite-dropdown">
+                    <button class="btn btn-block tm-input-big dropdown-toggle ng-scope" uib-dropdown-toggle>
+                        <span class="pull-left">{{ bidCont.sow.name }}</span>
+                        <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
+                    </button>
+                    <ul class="uib-dropdown-menu dropdown-menu-right" role="menu">
+                        <li ng-repeat="sow in availableSows" ng-click="selectSow(bidCont, sow);">
+                            <a href="#">{{sow.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <span>
+                <p>Type</p>
+                <div uib-dropdown class="tm-invite-dropdown">
+                    <button class="btn btn-block tm-input-big dropdown-toggle ng-scope" uib-dropdown-toggle>
+                        <span class="pull-left">{{ bidCont.typo.name }}</span>
+                        <span class="pull-right"><i class="fa fa-chevron-down"></i></span>
+                    </button>
+                    <ul class="uib-dropdown-menu dropdown-menu-right" role="menu">
+                        <li ng-repeat="type in availableTypes" ng-click="selectType(bidCont, type);">
+                            <a href="#">{{type.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <span class="duration">
+                <p>Duration</p>
+                <input type="text">
+            </span>
+            <span class="amount">
+                <p>Amount</p>
+                <input type="text">
+            </span>
+            <span class="required">
+                <div class="checkbox checkbox-inline">
+                    <input type="checkbox" ng-click="">
+                    <label>Contract Required</label>
+                </div>
+            </span>
+        </div>
+        <div class="row">
+            <a ng-click="addAnotherBid()"><i class="fa fa-plus"></i> Add More</a>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel btn-lg" ng-click="cancel()">Cancel</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="finalize()">Finalize</button>
+</div>
