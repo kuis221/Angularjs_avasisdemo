@@ -22,7 +22,7 @@
     border-bottom: 1px solid #d7d7d7;
     padding-top: 10px; }
     .bids-quick-modal .quick-header input {
-      width: 20%;
+      width: 180px;
       border: 0px;
       background: transparent;
       padding: 10px;
@@ -63,6 +63,10 @@
       width: 25%;
       padding-right: 15px;
       vertical-align: middle; }
+    @media (max-width: 768px) {
+      .bids-quick-modal .quick-content span {
+        width: 100%;
+        margin-top: 10px; } }
     .bids-quick-modal .quick-content input {
       width: 100%;
       height: 52px;
@@ -80,5 +84,12 @@
         width: 18%;
         padding-right: 0px;
         margin-top: 25px; }
+        .bids-quick-modal .quick-content .content-second .required input {
+          height: auto; }
+      @media (max-width: 768px) {
+        .bids-quick-modal .quick-content .content-second .duration,
+        .bids-quick-modal .quick-content .content-second .amount,
+        .bids-quick-modal .quick-content .content-second .required {
+          width: 100%; } }
   .bids-quick-modal .tm-invite-dropdown span {
     width: 10px; }

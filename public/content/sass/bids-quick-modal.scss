@@ -30,7 +30,7 @@
         border-bottom: 1px solid #d7d7d7;
         padding-top: 10px;
         input {
-            width: 20%;
+            width: 180px;
             border: 0px;
             background: transparent;
             padding: 10px;
@@ -85,6 +85,13 @@
             padding-right: 15px;
             vertical-align: middle;
         }
+
+        @media (max-width: 768px) {
+            span {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
         input {
             width: 100%;
             height: 52px;
@@ -111,6 +118,16 @@
                 width: 18%;
                 padding-right: 0px;
                 margin-top: 25px;
+                input {
+                    height: auto;
+                }
+            }
+            @media (max-width: 768px) {
+                .duration,
+                .amount,
+                .required {
+                    width: 100%;
+                }
             }
         }
 
