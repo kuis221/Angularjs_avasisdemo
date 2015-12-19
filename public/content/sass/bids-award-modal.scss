@@ -1,0 +1,175 @@
+.bids-award-modal, .bids-award-small-modal {
+	.modal-body {
+		padding: 20px 20px 10px 20px;
+	}
+	.bid-award-modal-title {
+		padding: 12px 0;
+		border-bottom: 1px solid #d7d7d7;
+	 	span {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+		}
+	}
+
+	.bid-award-modal-info {
+		padding: 14px 0;
+		border-bottom: 1px solid #d7d7d7;
+		.text-title {
+			font-family: "AvenirNextLTPro-Medium";
+			font-size: 9px;
+			color: #8b8b8b;
+			padding-bottom: 2px;
+			display: block;
+		}
+		.text-bid-name, .text-sub-contractor, .text-bid-amount {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #3aabd5;
+		}
+		.text-bid-amount {
+			color: #2a2d33;
+		}
+		.text-company {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 13px;
+			color: #4a4a4a;
+		}
+		.form-group {
+			label {
+				display: block;
+				padding-bottom: 10px;
+				font-family: "AvenirNextLTPro-Demi";
+				font-size: 12px;
+				color: #44474b;
+			}
+			input, textarea {
+				background-color: #f9f9f9;
+				width: 100%;
+				padding: 10px 20px;
+				font-family: "AvenirNextLTPro-Regular";
+				font-size: 12px;
+			}
+			.due-date {
+				font-family: "AvenirNextLTPro-Demi";
+				font-size: 12px;
+				background-color: #f9f9f9;
+				color: #8b8b8b;
+				width: 100%;
+				padding: 10px 20px;
+				border-radius: 3px;
+    			border: 1px solid #d7d7d7;
+			}
+			.inline-calendar {
+				display: inline-block;
+			    position: absolute;
+			    min-height: 290px;
+			    z-index: 9999;
+			}
+		}
+		.big-form {
+			label {
+				font-size: 13px;
+			}
+			input {
+				font-size: 13px;
+				padding: 15px;
+			}
+		}
+		.username-info {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 11px;
+			padding-top: 42px;
+			display: block;
+		}
+		.signature-date {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 13px;
+			color: #4a4a4a;
+		}
+		.replaceCost-title {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #44474b;
+			padding-top: 8px;
+			display: block;
+		}
+		.past-estimates {
+			border: 1px solid #d7d7d7;
+			border-radius: 4px;
+			margin: 15px;
+
+			.division {
+				font-family: "AvenirNextLTPro-Medium";
+				font-size: 9px;
+				color: #4a4a4a;
+				display: block;
+				margin-bottom: -5px;
+			}
+			.name {
+				font-family: "AvenirNextLTPro-Demi";
+				font-size: 12px;
+				color: #3aabd5;
+			}
+			.total-title, .total-estimateby {
+				font-family: "AvenirNextLTPro-Demi";
+				font-size: 9px;
+				color: #8b8b8b;
+			}
+			.angular-ui-tree-nodes .angular-ui-tree-nodes {
+			    padding-left: 20px;
+			}
+			.angular-ui-tree-node .angular-ui-tree-nodes:before {
+				left: 20px;
+			}
+			li.no-child .angular-ui-tree-nodes:before {
+				border: none;
+			}
+			.font-regular {
+				font-family: "AvenirNextLTPro-Regular";
+				font-size: 12px;
+				color: #44474b;
+			}
+			input {
+				background-color: #f9f9f9;
+				width: 120px;
+				padding: 10px 10px;
+				font-family: "AvenirNextLTPro-Regular";
+				font-size: 12px;
+			}
+		}
+
+		.award-detail {
+			font-family: "AvenirNextLTPro-Regular";
+			font-size: 13px;
+			color: #44474b;
+		}
+
+		.award-detail-info {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #3aabd5;
+		}
+
+		.award-price-info {
+			font-family: "AvenirNextLTPro-Demi";
+			font-size: 13px;
+			color: #44474b;
+			padding-right: 10px;
+		}
+	}
+
+	.modal-footer {
+		border: none;
+		padding: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.bids-award-modal .modal-dialog {
+		width: 720px;
+	}
+
+	.bids-award-small-modal .modal-dialog {
+		width: 555px;
+	}
+}

@@ -1,0 +1,140 @@
+.bs-summary-row {
+  display: table;
+  margin-top: 15px; }
+  .bs-summary-row .bs-summary-title {
+    float: left;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    width: 170px; }
+  .bs-summary-row .bs-summary-value {
+    float: right;
+    font-family: "AvenirNextLTPro-Bold";
+    font-size: 11px; }
+
+.bs-tree {
+  margin-bottom: 200px; }
+  .bs-tree .bs-schedule-head table > thead > tr > th {
+    color: #808080;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 12px;
+    border-bottom: 0px; }
+  .bs-tree .bs-schedule-head table.table-bordered {
+    border-bottom: 0px; }
+  .bs-tree .angular-ui-tree {
+    border: 1px solid #eee;
+    border-top: 0px; }
+  .bs-tree .angular-ui-tree-nodes .fa {
+    font-size: 18px;
+    padding-right: 5px; }
+  .bs-tree .bullet {
+    padding-right: 15px; }
+  .bs-tree .tree-data {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+    width: 150px;
+    color: #7B7B7B;
+    padding-left: 12px; }
+  .bs-tree .tree-data-small {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 14px;
+    width: 100px;
+    color: #7B7B7B;
+    padding-left: 12px; }
+  .bs-tree .tree-gear {
+    width: 100px;
+    text-align: center;
+    padding-left: 12px; }
+    .bs-tree .tree-gear a {
+      color: #808080; }
+    .bs-tree .tree-gear a:hover {
+      color: #808080; }
+    .bs-tree .tree-gear .dropdown-trigger {
+      margin-left: 10px;
+      margin-right: 10px; }
+  .bs-tree th.tree-gear {
+    width: 115px; }
+  @media (max-width: 1023px) {
+    .bs-tree .tree-data {
+      width: 100px; }
+    .bs-tree .tree-data-small {
+      width: 50px; }
+    .bs-tree .tree-gear {
+      width: 50px; }
+    .bs-tree th.tree-gear {
+      width: 65px; } }
+
+.bs-tree-dropdown.dropdown-menu {
+  padding: 0px;
+  border: 1px solid rgba(221, 221, 221, 0.1);
+  box-shadow: 0px 0px 25px 0 #ccc; }
+  .bs-tree-dropdown.dropdown-menu li a {
+    text-decoration: none;
+    border-bottom: 1px solid #e6e8ea;
+    color: #3aabd5; }
+  .bs-tree-dropdown.dropdown-menu li:first-of-type a {
+    border-radius: 7px 7px 0 0; }
+  .bs-tree-dropdown.dropdown-menu li:last-of-type a {
+    border: none;
+    border-radius: 0 0 7px 7px; }
+  .bs-tree-dropdown.dropdown-menu:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #fff;
+    content: "\f0de";
+    position: absolute;
+    right: 20px;
+    top: -11px; }
+
+.bs-content-section {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 0px 15px 15px 15px; }
+  .bs-content-section .form-group {
+    margin-top: 15px;
+    margin-bottom: 0px; }
+    .bs-content-section .form-group input[type=text] {
+      height: 52px;
+      border: 1px solid #eee; }
+  .bs-content-section .edit-btn-groups {
+    line-height: 180px;
+    text-align: center; }
+  @media (max-width: 1199px) {
+    .bs-content-section .edit-btn-groups {
+      line-height: 50px;
+      text-align: center;
+      margin-top: 10px; } }
+
+.bs-sow-modal .bs-modal-title {
+  font-size: 20px;
+  font-family: "AvenirNextLTPro-Regular";
+  text-align: left; }
+
+.bs-sow-modal input[type=text] {
+  height: 52px;
+  border: 1px solid #eee; }
+
+.fs-counter {
+  border: 1px solid #eee; }
+  .fs-counter input[readonly] {
+    background: white;
+    padding-left: 0;
+    padding-right: 0px;
+    border: 0px; }
+    .fs-counter input[readonly]:focus {
+      border: 0px; }
+  .fs-counter .input-group-btn button {
+    padding: 2px 5px !important;
+    border-radius: 10px !important;
+    font-size: 10px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    color: #333 !important; }
+  .fs-counter .btn i {
+    margin-right: 0px; }
+
+.bs-input-height {
+  height: 52px; }

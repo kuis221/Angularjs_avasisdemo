@@ -28,7 +28,7 @@ table.no-border > th, table.no-border td {
     text-transform: uppercase; }
 
 .popover {
-  max-width: 450px;
+  max-width: 550px;
   font-family: AvenirNextLTPro-Medium;
   border-radius: 2px;
   box-shadow: 0 1px 16px 5px rgba(0, 0, 0, 0.2);
@@ -179,9 +179,9 @@ table.no-border > th, table.no-border td {
   background: #f5f5f5;
   padding: 10px 20px; }
 
-rzslider {
+rzslider.schedule-slider {
   margin-top: 24px; }
-  rzslider .rz-current-pointer {
+  rzslider.schedule-slider .rz-current-pointer {
     width: 20px;
     height: 20px;
     top: -10px;
@@ -191,15 +191,15 @@ rzslider {
     box-shadow: 0 0 0px 6px #c7c7c9;
     left: 50% !important;
     z-index: 3; }
-    rzslider .rz-current-pointer.rz-pointer.rz-active:after {
+    rzslider.schedule-slider .rz-current-pointer.rz-pointer.rz-active:after {
       background: #f1f1f1; }
-    rzslider .rz-current-pointer:after {
+    rzslider.schedule-slider .rz-current-pointer:after {
       top: 2px;
       left: 2px;
       width: 16px;
       height: 16px;
       border-radius: 50%; }
-  rzslider .rz-pointer {
+  rzslider.schedule-slider .rz-pointer {
     width: 20px;
     height: 20px;
     top: -10px;
@@ -207,27 +207,27 @@ rzslider {
     box-shadow: 0 0 0px 6px #fee7c8;
     background: #fdb04a;
     /* css styles for first and last pointer(added) */ }
-    rzslider .rz-pointer.rz-pointer.rz-active:after {
+    rzslider.schedule-slider .rz-pointer.rz-active:after {
       background: #f1f1f1; }
-    rzslider .rz-pointer:after {
+    rzslider.schedule-slider .rz-pointer:after {
       top: 2px;
       left: 2px;
       width: 16px;
       height: 16px;
       border-radius: 50%; }
-    rzslider .rz-pointer.first, rzslider .rz-pointer.last {
+    rzslider.schedule-slider .rz-pointer.first, rzslider.schedule-slider .rz-pointer.last {
       color: transparent;
       background: #61c571;
       box-shadow: 0 0 0px 6px #ccecd1; }
-  rzslider .rz-bar-wrapper {
+  rzslider.schedule-slider .rz-bar-wrapper {
     margin-top: -18px; }
-    rzslider .rz-bar-wrapper .rz-bar {
+    rzslider.schedule-slider .rz-bar-wrapper .rz-bar {
       height: 6px;
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/Pjx438GPICPj48RRDMxEAmGgkKAAAMAzKsECXuvf1AAAAAASUVORK5CYII=);
       background-color: white; }
-  rzslider .rz-bubble {
+  rzslider.schedule-slider .rz-bubble {
     display: none; }
-  rzslider .rz-bar.rz-selection {
+  rzslider.schedule-slider .rz-bar.rz-selection {
     background: #f1f1f1; }
 
 .modal-dialog.modal-xl {

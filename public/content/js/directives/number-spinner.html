@@ -1,0 +1,13 @@
+<div class="fs-counter input-group">
+    <span class="input-group-btn" ng-click="minus()">
+        <button class="btn btn-default">
+            <i class="fa fa-minus"></i>
+        </button>
+    </span>
+    <input type="text" class="form-control text-center" ng-model="value" ng-blur="blurred()" ng-change="changed()" ng-readonly="readonly">
+    <span class="input-group-btn" ng-click="plus()">
+        <button class="btn btn-default">
+            <i class="fa fa-plus"></i>
+        </button>
+    </span>
+</div>
