@@ -1,0 +1,95 @@
+.modal.bids-quick-modal .modal-dialog {
+  width: 1020px;
+  color: #44474b; }
+
+@media (max-width: 768px) {
+  .modal.bids-quick-modal .modal-dialog {
+    width: 90%; } }
+
+.bids-quick-modal {
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 13px; }
+  .bids-quick-modal .modal-body {
+    padding: 20px 30px 0 30px; }
+  .bids-quick-modal .modal-footer {
+    border-top: none; }
+  .bids-quick-modal .row {
+    margin-left: 0;
+    margin-right: 0; }
+  .bids-quick-modal .text-active {
+    color: #3aabd5; }
+  .bids-quick-modal .quick-header {
+    border-bottom: 1px solid #d7d7d7;
+    padding-top: 10px; }
+    .bids-quick-modal .quick-header input {
+      width: 180px;
+      border: 0px;
+      background: transparent;
+      padding: 10px;
+      padding-bottom: 20px;
+      padding-left: 0px;
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 17px; }
+    .bids-quick-modal .quick-header span {
+      font-size: 17px;
+      color: #3aabd5; }
+  .bids-quick-modal .quick-info {
+    padding: 10px 0;
+    border-bottom: 1px solid #d7d7d7; }
+    .bids-quick-modal .quick-info span {
+      display: inline-block;
+      width: 130px; }
+      .bids-quick-modal .quick-info span h5 {
+        font-family: "AvenirNextLTPro-Bold";
+        font-size: 9px;
+        color: #808080; }
+      .bids-quick-modal .quick-info span .bid-number {
+        background-color: black;
+        color: white;
+        border-radius: 3px;
+        padding: 2px 4px;
+        width: auto;
+        font-size: 10px; }
+      .bids-quick-modal .quick-info span .bid-date {
+        font-family: "AvenirNextLTPro-Medium";
+        font-size: 13px; }
+  .bids-quick-modal .quick-content {
+    padding: 15px 0px;
+    border-bottom: 1px solid #d7d7d7; }
+    .bids-quick-modal .quick-content .btn.dropdown-toggle {
+      border: 1px solid #d7d7d7; }
+    .bids-quick-modal .quick-content span {
+      display: inline-block;
+      width: 25%;
+      padding-right: 15px;
+      vertical-align: middle; }
+    @media (max-width: 768px) {
+      .bids-quick-modal .quick-content span {
+        width: 100%;
+        margin-top: 10px; } }
+    .bids-quick-modal .quick-content input {
+      width: 100%;
+      height: 52px;
+      padding: 10px;
+      background-color: #f9f9f9; }
+    .bids-quick-modal .quick-content a {
+      color: #3aabd5; }
+    .bids-quick-modal .quick-content .content-second {
+      padding: 15px 0px; }
+      .bids-quick-modal .quick-content .content-second .duration {
+        width: 10%; }
+      .bids-quick-modal .quick-content .content-second .amount {
+        width: 20%; }
+      .bids-quick-modal .quick-content .content-second .required {
+        width: 18%;
+        padding-right: 0px;
+        margin-top: 25px; }
+        .bids-quick-modal .quick-content .content-second .required input {
+          height: auto; }
+      @media (max-width: 768px) {
+        .bids-quick-modal .quick-content .content-second .duration,
+        .bids-quick-modal .quick-content .content-second .amount,
+        .bids-quick-modal .quick-content .content-second .required {
+          width: 100%; } }
+  .bids-quick-modal .tm-invite-dropdown span {
+    width: 10px; }

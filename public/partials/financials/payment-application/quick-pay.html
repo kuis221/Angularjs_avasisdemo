@@ -1,0 +1,174 @@
+<div class="qc-page-wrapper mb30">
+    <!-- Top Nav bar -->
+    <div class="row qc-page-info">
+        <div class="pull-left pl0 pr0">
+            <div class="closeBox">
+                <p>
+                    <a>Close <i class="fa fa-caret-right"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pull-left qc-page-title">
+            <div class="col-md-7 pl20">
+                <h2 class="text-default">Quick Pay</h2>
+                <div class="project-info">
+                    <h3 class="text-primary">Wilmington 47</h3>
+                    <span class="text-muted">47 Wilmington Ave<br/>Arlington, VA 90125</span>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="qc-info">
+                    <div class="row">
+                        <span class="col-xs-9 text-right">Quick Pay#</span>
+                        <span class="col-xs-3 text-left">
+                            <label class="label label-info">193</label>
+                        </span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Date Initiated</span>
+                        <span class="col-xs-3 text-left">8/23/14</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Initiated By</span>
+                        <span class="col-xs-3 text-left">Bruce Wayne</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Top Nav bar -->
+
+
+    <!-- Main Content -->
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="content-section">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Payee</label>
+                        <ui-select options="payee" placeholder="Choose"></ui-select>
+                    </div>
+                    <div class="col-md-8 form-group">
+                        <label>&nbsp;</label>
+                        <div class="checkbox ptm-checkbox">
+                            <input type="checkbox">
+                            <label>Non Project Team Member</label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive mb15">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Amount</th>
+                                        <th>Description</th>
+                                        <th>Project</th>
+                                        <th>Pay Application</th>
+                                        <th>Contract</th>
+                                        <th>SOW</th>
+                                        <th>Classification</th>
+                                        <th>Budgetted</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="row in data">
+                                        <td>
+                                            <input type="text" ui-money-mask="0" placeholder="$" ng-model="row.amount"></input>
+                                        </td>
+                                        <td>
+                                            <input type="text"></input>
+                                        </td>
+                                        <td>
+                                            <ui-select options="projects" placeholder="Choose"></ui-select>
+                                        </td>
+                                        <td>
+                                            <ui-select options="payApplications" placeholder="Choose"></ui-select>
+                                        </td>
+                                        <td>
+                                            <ui-select options="contracts" placeholder="Choose"></ui-select>
+                                        </td>
+                                        <td>
+                                            <ui-select options="sows" placeholder="Choose"></ui-select>
+                                        </td>
+                                        <td>
+                                            <ui-select options="classifications" placeholder="Choose"></ui-select>
+                                        </td>
+                                        <td>
+                                            <ui-rec-switch ng-model="row.budgetted"></ui-rec-switch>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8"><a class="text-primary add-new-line" ng-click="addLine()"><i class="fa fa-plus"></i>Add Additional Line</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt10">
+                    <div class="col-md-6 form-group">
+                        <label>Additional Details</label>
+                        <textarea class="form-control" placeholder="Provide any additional information here..." rows="6"></textarea>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Attachments</label>
+                        <div class="qc-file-dropzone">
+                            <form class="dropzone"
+                                  enctype="multipart/form-data"
+                                  ng-dropzone dropzone="dropzone"
+                                  dropzone-config="dropzoneConfig"
+                                  event-handlers="dropzoneEventHandlers">
+                                <input name="file" class="hidden" type="file" multiple />
+                            </form>
+                            <div class="text-center dropzone-title">
+                                <div>Drag and drop files here or<br class="visible-xs-inline"/><a class="btn-file-input"> click here to browse for files</a></div>
+                            </div>
+                            <div id="upload-files-container"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt10">
+                    <div class="col-md-3 form-group">
+                        <label>Payment Date</label>
+                        <input type="text" class="form-control"></input>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Payment Form</label>
+                        <ui-select options="paymentForm" placeholder="Choose"></ui-select>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="add-new text-primary"><i class="fa fa-plus"></i>Add New</a>
+                    </div>
+                </div>
+                <hr/>
+
+                <div class="row">
+                    <div class="col-md-3 col-xs-6 form-group">
+                        <label>Signature</label>
+                        <input type="text" class="form-control"></input>
+                    </div>
+                    <div class="col-md-9 col-xs-6 form-group approved-date">
+                        <h4>Approved Date</h4>
+                        <span class="text-muted">Aug 23, 2015</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mt30 mb30 text-right">
+            <a class="btn btn-cancel btn-lg">Cancel</a>
+            <a class="btn btn-success btn-lg">Finalize</a>
+        </div>
+    </div>
+</div>
