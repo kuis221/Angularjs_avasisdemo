@@ -1,0 +1,236 @@
+<div class="aii-page-wrapper pay-page-wrapper">
+    <!----================== Start TOP NAV BAR==================---->
+    <div class="row bankbg">
+        <div class="pull-left noPdingLeft noPdingRight close-section">
+            <div class="closeBox">
+                <p><a ui-sref="action-items.inspections">Close <i class="fa fa-caret-right"></i></a></p>
+            </div>
+        </div>
+        <div class="pull-left aii-page-title">
+            <div class="row no-margin pr15 pl15">
+                <div class="col-md-7">
+                    <h2 class="heading">Pay Application</h2>
+                    <input type="text" class="pay-app-name-input" placeholder="A Long Pay Application Name Goes Here">
+                    <ul class="topSubtitle mt10">
+                        <li>
+                            <a href="javascript:void(0)">Anderson Perkins LTD Shipping Center</a>
+                        </li>
+                        <li>
+                            <span>1796 Prospector Avenue</span>
+                            <br />
+                            <span>Park City, Utah 84605</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 aii-head-info">
+                    <div class="row no-margin">
+                        <table class="pull-right">
+                            <tr>
+                                <td class="item-title">Bid Number</td>
+                                <td><span class="label label-black">193</span></td>
+                            </tr>
+                            <tr>
+                                <td class="item-title">Date Initiated</td>
+                                <td class="item-value">8/23/14</td>
+                            </tr>
+                            <tr>
+                                <td class="item-title">Initiate By</td>
+                                <td class="item-value">Eric Hoffman</td>
+                            </tr>
+                            <tr>
+                                <td class="item-title">Status</td>
+                                <td class="item-value"><span class="text-success">In Process</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row mt5">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="col-sm-8 item-title mt20">Currently Responsible</label>
+                                <div class="col-sm-4">
+                                    <ui-select selected-item="inspectionLead" options="leadList"></ui-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----================== Start Table Content ==================---->
+    <div class="row animated fadeInRight mt30 pb30">
+        <div class="col-lg-12">
+            <div class="row no-margin">
+                <div class="col-lg-12 aii-inspection-table">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered aii-item-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th ng-repeat="item in itemList">Item #{{ $index + 1 }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-title">Project</td>
+                                    <td class="item-value" ng-repeat="item in itemList"><span class="text-primary">{{ item.project }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Contract</td>
+                                    <td class="item-value" ng-repeat="item in itemList"><span class="text-primary">{{ item.contract }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Scope Of Work</td>
+                                    <td class="item-value" ng-repeat="item in itemList"><span class="text-primary">{{ item.scope }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Contracted Amount</td>
+                                    <td ng-repeat="item in itemList">{{ item.contractedAmount | currency }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">% Completed</td>
+                                    <td ng-repeat="item in itemList">{{ item.completed }}%</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Earned (less Retainage)</td>
+                                    <td ng-repeat="item in itemList">{{ item.earned | currency }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Previously Paid</td>
+                                    <td ng-repeat="item in itemList">{{ item.previouslyPaid | currency }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Amount Due</td>
+                                    <td ng-repeat="item in itemList">{{ item.amountDue | currency }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Current Invoice</td>
+                                    <td ng-repeat="item in itemList">{{ item.currentInvoice | currency }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Variance</td>
+                                    <td ng-repeat="item in itemList"><span class="text-danger">{{ item.variance | currency }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title" colspan="{{itemList.length + 1}}">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Estimated Duration</td>
+                                    <td ng-repeat="item in itemList">{{ item.estimatedDuration }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Retainge</td>
+                                    <td ng-repeat="item in itemList">{{ item.retainage }}%</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Scheduled Completion</td>
+                                    <td ng-repeat="item in itemList">{{ item.scheduledCompletion }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Estimated Completion</td>
+                                    <td ng-repeat="item in itemList">{{ item.estimatedCompletion }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-title">Variance</td>
+                                    <td ng-repeat="item in itemList"><span class="text-danger">{{ item.varianceTotal | currency }}</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="content-section">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <div>
+                                        Total Amount of Pay Application
+                                        <div class="summary-total-value mt5">$123,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <label>Initator Signature</label>
+                                    <input type="text" class="form-control pi-input-signature">
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <div class="pi-static-summary"><span>Aug 24, 2015</span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <label>State of</label>
+                                    <ui-select selected-item="selectedState" options="stateList" placeholder="Choose"></ui-select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <label>Country of</label>
+                                    <ui-select selected-item="selectedCountry" options="countryList" placeholder="Choose"></ui-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 text-right mt30">
+                    <button class="btn btn-lg btn-primary">Action <i class="ace-icon fa fa-angle-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----================== Start Table Content ==================---->
+
+    <div class="row pay-comment-section pl15 pr15">
+        <div class="col-lg-12 mt30 mb60">
+            <uib-tabset>
+                <uib-tab heading="Comments">
+                    <div style="max-height: 300px;" full-scroll>
+                        <div class="row no-margin aii-comment" ng-repeat="comment in commentList">
+                            <div class="pull-left">
+                                <img ng-src="{{comment.photo}}" class="aii-comment-photo img-circle" ng-if="comment.photo" />
+                                <div class="aii-comment-photo no-photo" ng-if="!comment.photo">{{ getInitials(comment.name); }}</div>
+                            </div>
+                            <div class="pull-left">
+                                <div class="aii-comment-name">
+                                    {{comment.name}}
+                                    <span class="comment-date pl10">{{comment.date}}</span>
+                                </div>
+                                <div class="aii-comment-content">
+                                    {{comment.content}}
+                                    <div class="edit-icon">
+                                        Edit <i class="fa fa-pencil"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt15">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group comment-edit">
+                                    <label>Add Comment...</label>
+                                    <textarea class="form-control" rows="2" />
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button class="btn btn-md btn-cancel pr10">Cancel</button>
+                                <button class="btn btn-md btn-success">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Access"></uib-tab>
+                <uib-tab heading="Activity"></uib-tab>
+                <uib-tab heading="Attachments"></uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>

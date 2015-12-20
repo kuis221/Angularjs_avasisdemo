@@ -1,6 +1,9 @@
 @charset "UTF-8";
 .aii-page-wrapper {
   padding-top: 0px; }
+  .aii-page-wrapper .heading {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 27px; }
   .aii-page-wrapper .bankbg {
     background: #fff none repeat scroll 0 0;
     box-shadow: 1px 0 4px #d8d8d8; }
@@ -230,7 +233,8 @@ table.aii-item-table .col-setting .fa {
     text-align: left; }
   .aii-comment .aii-comment-content {
     font-family: "AvenirNextLTPro-Regular";
-    font-size: 14px; }
+    font-size: 14px;
+    position: relative; }
   .aii-comment .aii-comment-date {
     font-family: "AvenirNextLTPro-Demi";
     font-size: 10px;

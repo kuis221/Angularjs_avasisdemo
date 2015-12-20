@@ -1,0 +1,137 @@
+.pay-page-wrapper {
+    .aii-page-title {
+        margin-top: 50px;
+    }
+
+    .heading {
+        margin-top: 0px !important;
+        margin-bottom:0px !important;
+    }
+
+    .pay-app-name-input {
+        width: 100%;
+        border: 0px;
+        background: transparent;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0px 10px 0px;
+    }
+
+    ul.topSubtitle {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li a {
+            font-size: 16px;
+            font-family: "AvenirNextLTPro-Demi";
+            color: #3aabd5;
+        }
+
+        li span {
+            color: #8b8b8b;
+            font-family: "AvenirNextLTPro-Demi";
+            font-size: 12px;
+        }
+    }
+
+    .item-title {
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 767px) {
+        .close-section {
+            height: 400px !important;
+        }
+    }
+
+    @media (max-width: 989px) and (min-width: 768px) {
+        .close-section {
+            height: 360px !important;
+        }
+    }
+
+    .aii-item-table {
+        td.item-title {
+            color: #808080;
+            font-size: 14px;
+            font-family: "AvenirNextLTPro-Demi";
+            text-transform: none;
+            padding: 20px;
+        }
+
+        td {
+            font-family: "AvenirNextLTPro-Regular";
+            font-size: 13px;
+        }
+
+        td.item-value {
+            font-family: "AvenirNextLTPro-Demi";
+            font-size: 13px;
+        }
+    }
+
+    .summary-total-value {
+        font-size: 16px;
+    }
+
+    .pi-static-summary span {
+        color: #aaa;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+}
+
+.pay-comment-section {
+    border-top: 2px solid #e0e0e0;
+    background-color: #F0F0F0;
+
+    .nav-tabs {
+        background: #f9f9f9;
+
+        > li > a {
+            padding: 15px 60px;
+        }
+    }
+
+    .tab-content {
+        padding: 15px;
+    }
+
+    .aii-comment {
+        border-bottom: 0px;
+        padding: 15px 0px;
+
+        .comment-date {
+            font-family: "AvenirNextLTPro-Demi";
+            font-size: 12px;
+            color: #808080;
+        }
+
+        .no-photo {
+            background-color: #ddd;
+            border-radius: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+        }
+
+        .edit-icon {
+            font-family: "AvenirNextLTPro-Demi";
+            font-size: 12px;
+            color: #333;
+            right: 0;
+            top: -14px;
+            position: absolute;
+        }
+    }
+
+    .comment-edit {
+        color: #a0a0a0;
+    }
+
+    .comment-edit textarea {
+        padding: 15px;
+    }
+}

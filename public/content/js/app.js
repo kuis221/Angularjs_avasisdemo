@@ -367,6 +367,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true,
             }
         })
+        .state('pay-application', {
+            url: '/financials/pay-application',
+            abstract: true,
+            template: '<ui-view></ui-view>',
+            data: {
+                pageName: 'Create New Pay Application'
+            }
+        })
+        .state('pay-application.preview', {
+            url: '/preview',
+            templateUrl: 'partials/financials/pay-application/preview.html',
+            controller: 'PayPreviewCtrl',
+            data: {
+                isHeaderHidden: true,
+            }
+        })
         .state('payment-application.finalize', {
             url: '/finalize',
             templateUrl: "partials/financials/payment-application/payment-finalize.html",
