@@ -75,6 +75,10 @@
 .mb25 { margin-bottom: 25px;}
 .mb30 {margin-bottom: 30px;}
 .mb35 {margin-bottom: 35px;}
+.mb40 {margin-bottom: 40px !important;}
+.mb45 {margin-bottom: 45px !important;}
+.mb50 {margin-bottom: 50px !important;}
+.mb60 {margin-bottom: 60px !important;}
 
 .btn.focus, .btn:focus, .btn:hover {border: none; outline: none; outline-offset: none; color: #FFF;}
 a:focus{outline:none}
