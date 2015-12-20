@@ -1,0 +1,128 @@
+.qc-page-wrapper {
+  padding-top: 0;
+  margin-bottom: 0; }
+  .qc-page-wrapper .qc-page-info {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8; }
+  .qc-page-wrapper .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center; }
+  .qc-page-wrapper .qc-page-title {
+    margin-top: 80px;
+    width: calc(100% - 100px); }
+    .qc-page-wrapper .qc-page-title h2 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 27px;
+      margin-top: 0px; }
+    .qc-page-wrapper .qc-page-title input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      width: 100%;
+      font-size: 17px; }
+    .qc-page-wrapper .qc-page-title .project-info h3 {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 20px; }
+    .qc-page-wrapper .qc-page-title .project-info span {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px; }
+  .qc-page-wrapper .qc-info {
+    color: #4a4a4a; }
+    .qc-page-wrapper .qc-info .row span:first-child, .qc-page-wrapper .qc-info .row div:first-child {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-family: AvenirNextLTPro-Demi; }
+    .qc-page-wrapper .qc-info .row span:last-child {
+      font-family: AvenirNextLTPro-Regular; }
+  .qc-page-wrapper .content-section {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    margin-top: 30px;
+    padding: 20px; }
+    .qc-page-wrapper .content-section .table-responsive {
+      border: 1px solid #eee; }
+      .qc-page-wrapper .content-section .table-responsive table {
+        vertical-align: middle;
+        font-family: AvenirNextLTPro-Regular; }
+        .qc-page-wrapper .content-section .table-responsive table input {
+          max-width: 140px; }
+        .qc-page-wrapper .content-section .table-responsive table tbody tr td {
+          vertical-align: middle; }
+        .qc-page-wrapper .content-section .table-responsive table tbody tr:last-child td {
+          border-top: 0; }
+        .qc-page-wrapper .content-section .table-responsive table tbody tr .add-new-line {
+          font-family: AvenirNextLTPro-Demi;
+          font-size: 13px; }
+          .qc-page-wrapper .content-section .table-responsive table tbody tr .add-new-line i {
+            margin-right: 5px; }
+        .qc-page-wrapper .content-section .table-responsive table thead {
+          background-color: #f9f9f9; }
+          .qc-page-wrapper .content-section .table-responsive table thead tr th {
+            font-weight: normal;
+            font-family: AvenirNextLTPro-Demi;
+            color: #8b8b8b; }
+    .qc-page-wrapper .content-section .qc-file-dropzone {
+      min-height: 80px;
+      margin-top: 0px !important;
+      padding: 0px;
+      position: relative; }
+      .qc-page-wrapper .content-section .qc-file-dropzone .dropzone {
+        padding: 0;
+        min-height: 140px;
+        border: 1px solid #eee; }
+        .qc-page-wrapper .content-section .qc-file-dropzone .dropzone .dz-default.dz-message {
+          background-image: url("/assets/img/financials/dropzone.png");
+          background-position: left;
+          background-size: 45px;
+          top: 0;
+          left: 0;
+          margin-right: 0;
+          margin-top: 0;
+          margin-left: 10%;
+          height: 138px; }
+      .qc-page-wrapper .content-section .qc-file-dropzone .dropzone-title {
+        left: calc(50% - 150px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
+        @media (max-width: 768px) {
+          .qc-page-wrapper .content-section .qc-file-dropzone .dropzone-title {
+            left: 30%; } }
+        @media (min-width: 992px) and (max-width: 1372px) {
+          .qc-page-wrapper .content-section .qc-file-dropzone .dropzone-title a {
+            display: block; }
+          .qc-page-wrapper .content-section .qc-file-dropzone .dropzone-title {
+            left: calc(50% - 50px); } }
+    .qc-page-wrapper .content-section input {
+      padding: 15px;
+      background-color: #f9f9f9;
+      min-height: 52px; }
+      .qc-page-wrapper .content-section input:focus, .qc-page-wrapper .content-section input:active {
+        background-color: #fff;
+        border: 1px solid #eee; }
+    .qc-page-wrapper .content-section .ptm-checkbox {
+      padding-top: 7px; }
+    .qc-page-wrapper .content-section .add-new {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 13px;
+      line-height: 100px; }
+      .qc-page-wrapper .content-section .add-new i {
+        margin-right: 5px; }
+    .qc-page-wrapper .content-section textarea {
+      border-radius: 3px;
+      padding: 15px;
+      font-size: 13px;
+      resize: none; }
+      .qc-page-wrapper .content-section textarea:focus, .qc-page-wrapper .content-section textarea:active {
+        border: 1px solid #eee; }
+    .qc-page-wrapper .content-section .approved-date h4 {
+      margin-top: 32px;
+      margin-bottom: 3px; }
