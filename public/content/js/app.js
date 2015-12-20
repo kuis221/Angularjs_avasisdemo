@@ -199,6 +199,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'Inspections'
             }
         })
+        .state('action-items.inspections-new', {
+            url: '/inspections/new',
+            templateUrl: "partials/action-items/inspections/new.html",
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Add New Inspection'
+            }
+        })
         .state('action-items.inspections-popup', {
             url: '/inspections-popup',
             templateUrl: "partials/action-items/inspections/main-popup.html",
