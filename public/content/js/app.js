@@ -375,6 +375,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
+        .state('payment-application.quick-pay', {
+            url: '/quick-pay',
+            templateUrl: "partials/financials/payment-application/quick-pay.html",
+            controller: "QuickPayCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Quick Pay'
+            }
+        })
         .state('photos', {
             url: '/photos',
             templateUrl: 'partials/photos/photos.html',
