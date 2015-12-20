@@ -4,7 +4,7 @@ app.controller('BankDrawPaymentApplicationCtrl',
         $scope.isCheckedAll = false;
         $scope.dateRange = {
             min: moment('07/01/2015').toDate(),
-            max: moment('09/01/2015').toDate()
+            max: moment('08/09/2015').toDate()
         };
 
         $scope.payment_applications = [

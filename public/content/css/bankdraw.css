@@ -1,18 +1,35 @@
-#payment-applications .amount {
-  font-size: 20px; }
+.bankdraw-initiate .title {
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 5px; }
 
-#payment-applications .title {
-  font-size: 17px; }
+.bankdraw-initiate .heading {
+  font-size: 16px;
+  line-height: 30px;
+  color: #a1a3a5; }
 
-#payment-applications .sub-title {
+.bankdraw-initiate .sub-title {
   font-size: 14px; }
 
-#payment-applications td {
-  vertical-align: middle; }
-
-#payment-applications .data {
-  line-height: 24px; }
-
-#payment-applications .filters > div {
-  padding-right: 10px;
-  display: inline-block; }
+.bankdraw-initiate .top {
+  background: white; }
+  .bankdraw-initiate .top .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center;
+    float: left; }
+  .bankdraw-initiate .top .detail {
+    padding: 30px 20px 0;
+    margin-top: 10px;
+    width: calc(100% - 100px);
+    float: left; }
+    .bankdraw-initiate .top .detail .pull-left {
+      font-size: 14px; }
+    .bankdraw-initiate .top .detail .pull-right {
+      padding-top: 30px; }
+      .bankdraw-initiate .top .detail .pull-right table tr > td {
+        padding: 3px 10px; }
+        .bankdraw-initiate .top .detail .pull-right table tr > td:first-child {
+          text-align: right;
+          font-size: 12px; }
