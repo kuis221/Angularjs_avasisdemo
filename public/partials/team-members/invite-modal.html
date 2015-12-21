@@ -12,8 +12,8 @@
             </div>
             <div class="row" ng-repeat="inviteUser in inviteUserList">
                 <div class="col-sm-6 form-group">
-                    <span uib-dropdown>
-                        <input type="text" class="tm-user-selection" uib-dropdown-toggle ng-value="inviteUser.user.name" />
+                    <input type="text" class="tm-user-selection" ng-model="inviteUser.user.name" ng-change="searchUserByName(inviteUser);" />
+                    <div uib-dropdown is-open="inviteUser.isUserListOpened.status">
                         <ul class="uib-dropdown-menu" template-url="invite-user-dropdown.html"></ul>
                         <script type="text/ng-template" id="invite-user-dropdown.html">
                             <div class="tm-user-dropdown">
@@ -22,7 +22,7 @@
                                 </div>
                                 <div>
                                     <ul class="dropdown-menu dropdown-menu-left">
-                                        <li ng-repeat="user in availableUsers" ng-click="selectUser(inviteUser, user)">
+                                        <li ng-repeat="user in filteredUsers" ng-click="selectUser(inviteUser, user)">
                                             <div class="pull-left"><img class="tm-dropdown-photo" ng-src="{{ user.photo }}" /></div>
                                             <div class="pull-left">
                                                 <div class="text-primary">{{ user.name }}</div>
@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                         </script>
-                    </span>
+                    </div>
                 </div>
                 <div class="col-sm-6 form-group">
                     <input class="form-control tm-input-big" type="text" ng-value="inviteUser.user.email"/>

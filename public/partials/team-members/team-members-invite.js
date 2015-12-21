@@ -1,7 +1,12 @@
 app.controller('TeamMembersInviteCtrl',
-    ['$scope', '$state', '$uibModalInstance', function($scope, $state, $uibModalInstance) {
-        $scope.inviteUserList = [{}];
+    ['$scope', '$state', '$filter', '$uibModalInstance', function($scope, $state, $filter, $uibModalInstance) {
+        $scope.inviteUserList = [
+            {isUserListOpened: {status: false}}
+        ];
+
         $scope.inviteProjectsList = [{}];
+        $scope.option = {};
+        $scope.option.isUserListOpened = false; //
 
         $scope.availableUsers = [
             {
@@ -40,6 +45,8 @@ app.controller('TeamMembersInviteCtrl',
                 title: 'Developer'
             }
         ];
+
+        $scope.filteredUsers = [];
 
         $scope.availableProjects = [
             {
@@ -85,7 +92,8 @@ app.controller('TeamMembersInviteCtrl',
         }
 
         $scope.selectUser = function(inviteUser, selectedUser) {
-            inviteUser.user = selectedUser;
+            inviteUser.user = angular.copy(selectedUser);
+            inviteUser.isUserListOpened = !inviteUser.isUserListOpened;
         }
 
         $scope.selectProject = function(invitePrj, selectedProject) {
@@ -101,7 +109,12 @@ app.controller('TeamMembersInviteCtrl',
         }
 
         $scope.addAnotherUser = function() {
-            $scope.inviteUserList.push(new Object());
+            $scope.inviteUserList.push(new Object({isUserListOpened: {status: false}}));
         }
+
+        $scope.searchUserByName = function(inviteUser) {
+            $scope.filteredUsers = $filter('filter')($scope.availableUsers, {name: inviteUser.user.name});
+            inviteUser.isUserListOpened.status = $scope.filteredUsers.length != 0 && inviteUser.user.name != '';
+        };
     }]
 );
