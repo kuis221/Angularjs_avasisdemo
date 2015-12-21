@@ -10,14 +10,14 @@
     </div>
     <div class="col-sm-6 col-lg-2">
         <div class="btns mr10">
-            <a href="#" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-plus"></i> New
+            <a class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-plus"></i> Add New
             </a>
             <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                <li><a ng-click="">Team Member</a></li>
-                <li><a ng-click="">Action Item</a></li>
-                <li><a ng-click="">Document</a></li>
-                <li><a ng-click="">Photo</a></li>
+                <li><a ng-click="showAddTeamMemberModal()">Team Member</a></li>
+                <li><a ng-click="showAddActionItemModal()">Action Item</a></li>
+                <li><a ng-click="showAddDocumentModal()">Document</a></li>
+                <li><a ng-click="showAddPhotoModal()">Photo</a></li>
             </ul>
         </div>
     </div>
@@ -143,3 +143,9 @@
         <uib-tab heading="Baseline">Long Labeled Justified content</uib-tab>
     </uib-tabset>
 </div>
+
+<script type="text/javascript">
+    $(function() {
+        $('.nav-tabs').tabdrop({text: "<i class='fa fa-align-justify'></i>"});
+    })
+</script>

@@ -9,6 +9,15 @@ app.controller('ScheduleDetailCtrl',
             },
         ];
 
+        $scope.fundData = [
+            {
+                value: 40,
+                color: "#3aabd5",
+                text: "40%",
+                font: '18px AvenirNextLTPro-Regular'
+            },
+        ];
+
         $scope.slider = {
             min: 10,
             max: 80,
