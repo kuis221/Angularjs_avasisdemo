@@ -18,6 +18,7 @@
     "angular-ui-tree": "~2.11.0",
     "angular-input-masks": "~2.1.1",
     "angularjs-slider": "~2.1.0",
-    "angular-slick": "~0.2.1"
+    "angular-slick": "~0.2.1",
+    "bootstrap-tabdrop": "~1.0.0"
   }
 }
