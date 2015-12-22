@@ -28,9 +28,55 @@ app.controller('ScheduleDetailCtrl',
                 }
             }
         };
-        // define schedules to search by params[:id]
-        $scope.schedules = [];
-        $scope.schedule = _.find($scope.schedules, function(e){ return e.id == $stateParams.id; });
+
+        $scope.processes = [
+        {
+            title: 'Roofing Felt',
+            description: 'Install roofing felt. All materials are in the garage.',
+            responsible: {
+                name: 'Dave Gebo',
+                project: 'On Top Roofing'
+            },
+            start_date: moment('08/08/2015').format('MMM DD, YYYY'),
+            end_date: moment('08/10/2015').format('MMM DD, YYYY'),
+            completed: true
+        },
+        {
+            title: 'Check Vents',
+            description: "Double check all vents don't have anything blocking them",
+            responsible: {
+                name: 'Dave Gebo',
+                project: 'On Top Roofing'
+            },
+            start_date: moment('08/17/2015').format('MMM DD, YYYY'),
+            end_date: moment('08/18/2015').format('MMM DD, YYYY'),
+            completed: false
+        }];
+
+        $scope.prodecessors = [
+        {
+            phase: 'Framing',
+            sub_phase: 'Steel Framing',
+            scope_of_work: 'Steel Framing',
+            team_member: {
+                name: 'John Steel',
+                company: 'L&L Steel Erection'
+            },
+            status: 'Completed',
+            lag: '2d'
+        }];
+
+        $scope.successors = [
+        {
+            phase: 'Exterior',
+            sub_phase: '-',
+            scope_of_work: '-',
+            team_member: {
+                name: '-',
+                company: ''
+            },
+            lag: '-'
+        }];
 
         $scope.showHistory = function() {
             var modalInstance = $uibModal.open({

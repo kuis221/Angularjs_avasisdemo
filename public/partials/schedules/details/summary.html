@@ -122,26 +122,26 @@
                 </tr>    
             </thead>
             <tbody>
-                <tr>
-                    <td>Hello</td>
+                <tr ng-repeat="item in processes">
+                    <td>{{item.title}}</td>
                     <td>
-                        <small>This is urgent project to do</small>
+                        <small>{{item.description}}</small>
                     </td>
                     <td>
-                        <div class="text-primary">Bob Jones</div>
-                        <small>ABC Inc</small>
+                        <div class="text-primary">{{item.responsible.name}}</div>
+                        <small>{{item.responsible.project}}</small>
                     </td>
                     <td>
-                        Aug 23, 2015<br>
-                        /Dec 6, 2015
+                        {{item.start_date}}<br>
+                        /{{item.end_date}}
                     </td>
                     <td>
                         <div class="checkbox checkbox-inline">
-                            <input type="checkbox" ng-model="application.checked">
+                            <input type="checkbox" ng-model="item.completed">
                             <label>&nbsp;</label>
                         </div>
                     </td>
-                    <td width="100px">
+                    <td width="60px">
                         <div class="btn-group" uib-dropdown>
                             <a class="heading" uib-dropdown-toggle>
                                 <i class="fa fa-cog"></i><i class="pl5 fa fa-angle-down"></i>
@@ -172,7 +172,7 @@
             <thead >
                 <tr>
                     <th>
-                        <span class="label label-info">8.2.1</span>
+                        <span class="label label-info">5.1.1</span>
                         Phase
                     </th>
                     <th>Sub-Phase</th>
@@ -184,25 +184,25 @@
                 </tr>    
             </thead>
             <tbody>
-                <tr>
-                    <td>Hello</td>
+                <tr ng-repeat="item in prodecessors">
+                    <td>{{item.phase}}</td>
                     <td>
-                        <small>What is SLI?</small>
+                        <small>{{item.sub_phase}}</small>
                     </td>
                     <td>
-                        <small>Wall Painting</small>
+                        <small>{{item.scope_of_work}}</small>
                     </td>
                     <td>
-                        <div class="text-primary">Bob Jones</div>
-                        <small>ABC Inc</small>
+                        <div class="text-primary">{{item.team_member.name}}</div>
+                        <small>{{item.team_member.company}}</small>
                     </td>
                     <td>
                         <div class="checkbox checkbox-inline">
-                            <div class="text-success">IN PROGRESS</div>
-                            <small>24% Completed</small>
+                            <div class="text-success">{{item.status}}</div>
+                            <!-- <small>24% Completed</small> -->
                         </div>
                     </td>
-                    <td width="100px">2w</td>
+                    <td width="100px">{{item.lag}}</td>
                     <td width="60px">
                         <div class="btn-group" uib-dropdown>
                             <a class="heading" uib-dropdown-toggle>
@@ -245,19 +245,25 @@
                 </tr>    
             </thead>
             <tbody>
-                <tr>
-                    <td>Hello</td>
+                <tr ng-repeat="item in successors">
+                    <td>{{item.phase}}</td>
                     <td>
-                        <small>What is SLI?</small>
+                        <small>{{item.sub_phase}}</small>
                     </td>
                     <td>
-                        <small>Wall Painting</small>
+                        <small>{{item.scope_of_work}}</small>
                     </td>
                     <td>
-                        <div class="text-primary">Bob Jones</div>
-                        <small>ABC Inc</small>
+                        <div class="text-primary">{{item.team_member.name}}</div>
+                        <small>{{item.team_member.company}}</small>
                     </td>
-                    <td width="100px">2w</td>
+                    <td>
+                        <div class="checkbox checkbox-inline">
+                            <div class="text-success">{{item.status}}</div>
+                            <!-- <small>24% Completed</small> -->
+                        </div>
+                    </td>
+                    <td width="100px">{{item.lag}}</td>
                     <td width="60px">
                         <div class="btn-group" uib-dropdown>
                             <a class="heading" uib-dropdown-toggle>
