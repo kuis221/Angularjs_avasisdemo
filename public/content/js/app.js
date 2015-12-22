@@ -66,8 +66,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('financials.loan', {
             url: '/construction?initialize',
+            abstract: true,
+            template: '<ui-view></ui-view>'
+        })
+        .state('financials.loan.main', {
+            url: '/main',
             templateUrl: "partials/financials/loan.html",
             controller: "LoanCtrl"
+        })
+        .state('financials.loan.edit-params', {
+            url: '/edit-params',
+            templateUrl: "partials/financials/loan/edit-params.html",
+            controller: "LoanEditParamsCtrl"
         })
         .state('financials.pay-apply', {
             url: '/payment-apply',

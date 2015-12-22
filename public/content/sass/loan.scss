@@ -52,6 +52,14 @@
                         &:last-child {
                             border-right: 1px solid #eee;
                         }
+
+                        &.sow {
+                            width: 350px;
+                        }
+
+                        &.gear {
+                            width: 60px;
+                        }
                     }
                 }
 
@@ -110,10 +118,80 @@
                     }
                 }
             }
+
+            input {
+                font-size: 12px;
+            }
+        }
+    }
+
+    a.add-line {
+        font-family: AvenirNextLTPro-Demi;
+        font-size: 12px;
+
+        i {
+            margin-right: 5px;
         }
     }
 }
 
 .loan-dropdown.dropdown-menu-right {
-    right: 28px !important;
+    right: 44px !important;
+}
+
+.loan-deletion-modal {
+    .modal-dialog {
+        width: 435px;
+
+        .modal-header {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 15px 15px 0;
+
+            h3 {
+                font-family: AvenirNextLTPro-Demi;
+                font-size: 12px;
+            }
+        }
+
+        .modal-body {
+            padding: 15px 15px 0px;
+
+            div.question {
+                border-top: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                font-family: AvenirNextLTPro-Regular;
+                font-size: 12px;
+                padding: 15px 0 15px;
+                margin-bottom: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 0;
+            }
+            label {
+                font-family: AvenirNextLTPro-Demi;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+
+            input {
+                padding: 30px 15px;
+                background-color: #f5f5f5;
+
+                &:active, &:focus {
+                    border: 1px solid #eee;
+                    background-color: #fff;
+                }
+
+                &:hover {
+                    border: 1px solid #eee;
+                }
+            }
+        }
+
+        .modal-footer {
+            border: 0;
+        }
+    }
 }

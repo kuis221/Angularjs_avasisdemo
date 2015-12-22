@@ -31,6 +31,10 @@
     min-width: 300px; }
   .loan-bottom-section .table-responsive .table thead tr th:last-child {
     border-right: 1px solid #eee; }
+  .loan-bottom-section .table-responsive .table thead tr th.sow {
+    width: 350px; }
+  .loan-bottom-section .table-responsive .table thead tr th.gear {
+    width: 60px; }
 
 .loan-bottom-section .table-responsive .table tbody tr td {
   background-color: #fff;
@@ -62,5 +66,49 @@
     color: #000;
     font-size: 14px; }
 
+.loan-bottom-section .table-responsive .table input {
+  font-size: 12px; }
+
+.loan-bottom-section a.add-line {
+  font-family: AvenirNextLTPro-Demi;
+  font-size: 12px; }
+  .loan-bottom-section a.add-line i {
+    margin-right: 5px; }
+
 .loan-dropdown.dropdown-menu-right {
-  right: 28px !important; }
+  right: 44px !important; }
+
+.loan-deletion-modal .modal-dialog {
+  width: 435px; }
+  .loan-deletion-modal .modal-dialog .modal-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 15px 15px 0; }
+    .loan-deletion-modal .modal-dialog .modal-header h3 {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 12px; }
+  .loan-deletion-modal .modal-dialog .modal-body {
+    padding: 15px 15px 0px; }
+    .loan-deletion-modal .modal-dialog .modal-body div.question {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 12px;
+      padding: 15px 0 15px;
+      margin-bottom: 15px; }
+    .loan-deletion-modal .modal-dialog .modal-body .form-group {
+      margin-bottom: 0; }
+    .loan-deletion-modal .modal-dialog .modal-body label {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 12px;
+      margin-bottom: 15px; }
+    .loan-deletion-modal .modal-dialog .modal-body input {
+      padding: 30px 15px;
+      background-color: #f5f5f5; }
+      .loan-deletion-modal .modal-dialog .modal-body input:active, .loan-deletion-modal .modal-dialog .modal-body input:focus {
+        border: 1px solid #eee;
+        background-color: #fff; }
+      .loan-deletion-modal .modal-dialog .modal-body input:hover {
+        border: 1px solid #eee; }
+  .loan-deletion-modal .modal-dialog .modal-footer {
+    border: 0; }

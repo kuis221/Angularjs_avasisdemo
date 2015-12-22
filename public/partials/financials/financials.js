@@ -26,7 +26,7 @@ app.controller('FinancialsCtrl',
         }
 
         $scope.isActive = function(state) {
-            return $scope.currentState === state;
+            return _.startsWith($scope.currentState, state);
         }
 
         $scope.stats = {};
