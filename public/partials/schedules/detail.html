@@ -46,14 +46,27 @@
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
-        <uib-tabset>
-            <uib-tab heading="Summary">
-                <div ng-include="'partials/schedules/details/summary.html'"></div>
-            </uib-tab>
-            <uib-tab heading="Team">Short Labeled Justified content</uib-tab>
-            <uib-tab heading="Action Items">Long Labeled Justified content</uib-tab>
-            <uib-tab heading="Documents">Long Labeled Justified content</uib-tab>
-            <uib-tab heading="Photos">Long Labeled Justified content</uib-tab>
-        </uib-tabset>
+        <ul class="nav nav-tabs">
+            <li ng-class="{true: 'active'}[currentTab=='summary']"><a ng-click="currentTab='summary'">Summary</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='team']"><a ng-click="currentTab='team'">Team</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='action_items']"><a ng-click="currentTab='action_items'">Action Items</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='documents']"><a ng-click="currentTab='documents'">Documents</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='drawings']"><a ng-click="currentTab='drawings'">Drawings</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='communication']"><a ng-click="currentTab='communication'">Communication</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='photos']"><a ng-click="currentTab='photos'">Photos</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='financials']"><a ng-click="currentTab='financials'">Financials</a></li>
+            <li ng-class="{true: 'active'}[currentTab=='procurement']"><a ng-click="currentTab='procurement'">Procurement</a></li>
+        </ul>
+        <div class="tab-content">
+            <div ng-if="currentTab=='summary'" ng-include="'partials/schedules/details/summary.html'"></div>
+            <div ng-if="currentTab=='photos'" ng-include="'partials/photos/_photos.html'"></div>
+            <!-- <div ng-if="currentTab=='team'" ng-include="'partials/photos/_photos.html'"></div>
+            <div ng-if="currentTab=='action_items'" ng-include="'partials/photos/_photos.html'"></div>
+            <div ng-if="currentTab=='documents'" ng-include="'partials/photos/_photos.html'"></div>
+            <div ng-if="currentTab=='drawings'" ng-include="'partials/photos/_photos.html'"></div>
+            <div ng-if="currentTab=='communication'" ng-include="'partials/photos/_photos.html'"></div>
+            <div ng-if="currentTab=='financials'" ng-include="'partials/photos/_photos.html'"></div>
+            <div ng-if="currentTab=='procurement'" ng-include="'partials/photos/_photos.html'"></div> -->
+        </div>
     </div>
 </div>
