@@ -60,6 +60,14 @@ svg tspan {
     transform: translate(0,100px);
 }
 
+div.custom-tooltip {
+    display: block;
+}
+
+li.active .custom-tooltip {
+    display: none !important;
+}
+
 /*************************************************
 *                  Wrapper                       *
 *************************************************/
