@@ -188,7 +188,7 @@ rzslider.schedule-slider {
     border-radius: 50%;
     color: transparent;
     background: #44474b;
-    box-shadow: 0 0 0px 6px #c7c7c9;
+    box-shadow: 0 0 0px 3px #c7c7c9;
     left: 50% !important;
     z-index: 3; }
     rzslider.schedule-slider .rz-current-pointer.rz-pointer.rz-active:after {
@@ -204,7 +204,7 @@ rzslider.schedule-slider {
     height: 20px;
     top: -10px;
     border-radius: 50%;
-    box-shadow: 0 0 0px 6px #fee7c8;
+    box-shadow: 0 0 0px 3px #fee7c8;
     background: #fdb04a;
     /* css styles for first and last pointer(added) */ }
     rzslider.schedule-slider .rz-pointer.rz-active:after {
@@ -218,7 +218,7 @@ rzslider.schedule-slider {
     rzslider.schedule-slider .rz-pointer.first, rzslider.schedule-slider .rz-pointer.last {
       color: transparent;
       background: #61c571;
-      box-shadow: 0 0 0px 6px #ccecd1; }
+      box-shadow: 0 0 0px 3px #ccecd1; }
   rzslider.schedule-slider .rz-bar-wrapper {
     margin-top: -18px; }
     rzslider.schedule-slider .rz-bar-wrapper .rz-bar {
