@@ -24,7 +24,7 @@ app.controller('PayPreviewCtrl',
                 retainage: 10,
                 scheduledCompletion: 'Aug 23 2015',
                 estimatedCompletion: 'Aug 23 2015',
-                varianceTotal: 123
+                varianceTotal: '4 days'
             },
             {
                 project: 'Project Name Goes Here',
@@ -41,7 +41,7 @@ app.controller('PayPreviewCtrl',
                 retainage: 10,
                 scheduledCompletion: 'Aug 23 2015',
                 estimatedCompletion: 'Aug 23 2015',
-                varianceTotal: 123
+                varianceTotal: '12 days'
             },
             {
                 project: 'Project Name Goes Here',
@@ -58,7 +58,7 @@ app.controller('PayPreviewCtrl',
                 retainage: 10,
                 scheduledCompletion: 'Aug 23 2015',
                 estimatedCompletion: 'Aug 23 2015',
-                varianceTotal: 123
+                varianceTotal: '1 day'
             }
         ];
 

@@ -51,7 +51,12 @@
         }
     }
 
-    .aii-item-table {
+    .pai-item-table {
+
+        th, td {
+            vertical-align: middle;
+        }
+
         td.item-title {
             color: #808080;
             font-size: 14px;
@@ -63,11 +68,43 @@
         td {
             font-family: "AvenirNextLTPro-Regular";
             font-size: 13px;
+            background-color: #fff;
         }
 
         td.item-value {
             font-family: "AvenirNextLTPro-Demi";
             font-size: 13px;
+        }
+
+        > tbody > tr > td.item-total, > thead > tr > th.item-total {
+            border-left: 1px solid #e7eaec;
+        }
+
+        tr {
+            &.empty td {
+                background-color: #f9f9f9;
+            }
+
+            &.current-invoice td {
+                background-color: #f3fafd;
+
+                &.item-title {
+                    color: #4a4a4a;
+                }
+            }
+
+            &.previously-paid td {
+                background-color: #fdf5f5;
+                color: #e25c5c;
+
+                &.item-title {
+                    color: #4a4a4a;
+                }
+            }
+
+            td:last-child {
+                text-align: center;
+            }
         }
     }
 
@@ -133,5 +170,9 @@
 
     .comment-edit textarea {
         padding: 15px;
+    }
+
+    textarea {
+        resize: none;
     }
 }

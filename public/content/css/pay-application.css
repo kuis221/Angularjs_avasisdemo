@@ -37,20 +37,44 @@
   .pay-page-wrapper .close-section {
     height: 360px !important; } }
 
-.pay-page-wrapper .aii-item-table td.item-title {
+.pay-page-wrapper .pai-item-table th, .pay-page-wrapper .pai-item-table td {
+  vertical-align: middle; }
+
+.pay-page-wrapper .pai-item-table td.item-title {
   color: #808080;
   font-size: 14px;
   font-family: "AvenirNextLTPro-Demi";
   text-transform: none;
   padding: 20px; }
 
-.pay-page-wrapper .aii-item-table td {
+.pay-page-wrapper .pai-item-table td {
   font-family: "AvenirNextLTPro-Regular";
-  font-size: 13px; }
+  font-size: 13px;
+  background-color: #fff; }
 
-.pay-page-wrapper .aii-item-table td.item-value {
+.pay-page-wrapper .pai-item-table td.item-value {
   font-family: "AvenirNextLTPro-Demi";
   font-size: 13px; }
+
+.pay-page-wrapper .pai-item-table > tbody > tr > td.item-total, .pay-page-wrapper .pai-item-table > thead > tr > th.item-total {
+  border-left: 1px solid #e7eaec; }
+
+.pay-page-wrapper .pai-item-table tr.empty td {
+  background-color: #f9f9f9; }
+
+.pay-page-wrapper .pai-item-table tr.current-invoice td {
+  background-color: #f3fafd; }
+  .pay-page-wrapper .pai-item-table tr.current-invoice td.item-title {
+    color: #4a4a4a; }
+
+.pay-page-wrapper .pai-item-table tr.previously-paid td {
+  background-color: #fdf5f5;
+  color: #e25c5c; }
+  .pay-page-wrapper .pai-item-table tr.previously-paid td.item-title {
+    color: #4a4a4a; }
+
+.pay-page-wrapper .pai-item-table tr td:last-child {
+  text-align: center; }
 
 .pay-page-wrapper .summary-total-value {
   font-size: 16px; }
@@ -94,3 +118,5 @@
     color: #a0a0a0; }
   .pay-comment-section .comment-edit textarea {
     padding: 15px; }
+  .pay-comment-section textarea {
+    resize: none; }

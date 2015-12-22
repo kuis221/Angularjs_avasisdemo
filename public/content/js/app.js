@@ -390,6 +390,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: 'PayPreviewCtrl',
             data: {
                 isHeaderHidden: true,
+                pageName: 'Pay Application'
             }
         })
         .state('payment-application.finalize', {
