@@ -1738,7 +1738,7 @@ video {
 #wrapper { width: 100%; overflow-x: hidden;}
 body > #wrapper { background: #2a2d33;}
 .wrapper {padding: 0 20px;}
-.wrapper-content { padding: 30px 15px 40px;}
+.wrapper-content { padding: 30px 30px 40px;}
 #page-wrapper { padding: 0 15px; min-height: 568px; position: relative !important;}
 
 @media (min-width: 768px) {
@@ -1781,7 +1781,7 @@ ol.unstyled { list-style: none outside none; margin-left: 0;}
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > td,
-.table > tfoot > tr > td {border-top: 1px solid #e7eaec; line-height: 1.42857;  padding: 8px; vertical-align: top;}
+.table > tfoot > tr > td {border-top: 1px solid #e7eaec; line-height: 1.42857;  padding: 12px; vertical-align: top;}
 
 /* PANELS */
 .panel.blank-panel { background: none; margin: 0;}

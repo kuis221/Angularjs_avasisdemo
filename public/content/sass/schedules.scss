@@ -235,7 +235,7 @@ rzslider.schedule-slider {
         border-radius: 50%;
         color: transparent;
         background: #44474b;
-        box-shadow: 0 0 0px 6px #c7c7c9;
+        box-shadow: 0 0 0px 3px #c7c7c9;
         left: 50% !important;
         z-index: 3;
         &.rz-pointer.rz-active:after {
@@ -254,7 +254,7 @@ rzslider.schedule-slider {
         height: 20px;
         top: -10px;
         border-radius: 50%;
-        box-shadow: 0 0 0px 6px #fee7c8;
+        box-shadow: 0 0 0px 3px #fee7c8;
         background: #fdb04a;
         &.rz-active:after {
             background: #f1f1f1;
@@ -270,7 +270,7 @@ rzslider.schedule-slider {
         &.first, &.last{
             color: transparent;
             background: #61c571;
-            box-shadow: 0 0 0px 6px #ccecd1;
+            box-shadow: 0 0 0px 3px #ccecd1;
         }
     }
     .rz-bar-wrapper {

@@ -26,7 +26,7 @@
 
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="financial-wrapper">
-        <ul class="nav nav-tabs custom-tabs1">
+        <ul class="nav nav-tabs">
             <li ng-class="{true: 'active'}[isActive('financials.main')]"><a ui-sref="financials.main">Main</a></li>
             <li ng-class="{true: 'active'}[isActive('financials.budget')]"><a ui-sref="financials.budget">Budget</a></li>
             <li><a ui-sref="financials.main">Purchase Orders</a></li>
@@ -38,3 +38,8 @@
         <ui-view></ui-view>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    $('.nav-tabs').tabdrop({text: "<i class='fa fa-align-justify'></i>"});
+</script>

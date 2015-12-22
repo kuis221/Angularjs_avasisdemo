@@ -1,0 +1,360 @@
+$demi: "AvenirNextLTPro-Demi";
+$bold: "AvenirNextLTPro-Bold";
+$medium: "AvenirNextLTPro-Medium";
+$regular: "AvenirNextLTPro-Regular";
+
+$c-primary: #3aabd5;
+$c-gray-border: #eee;
+$c-fa-icon: #aaa;
+$c-text-gray: #808080;
+
+.tm-modal-body {
+    margin-top: 55px;
+}
+
+@media (min-width: 1024px) {
+    .tm-modal-main .modal-dialog {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .tm-modal-main .modal-dialog {
+        width: 90%;
+    }
+}
+
+.tm-modal-title {
+    font-size: 18px;
+    text-align: left;
+}
+
+.tm-form-padding {
+    padding-top: 20px;
+}
+
+.tm-user-selection {
+    background-color: white;
+    border: 1px solid #eee;
+    min-width: 100%;
+    padding: 15px 15px;
+    position: relative;
+    min-height: 50px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    height: 50px;
+}
+
+.tm-input-big {
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 15px 15px;
+    min-height: 50px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tm-user-dropdown {
+    margin-top: 5px;
+    position: absolute;
+    z-index: 1000;
+    width: 250px;
+    cursor: pointer;
+}
+
+.tm-user-dropdown ul.dropdown-menu {
+    display: inline-block;
+    margin-top: 0px;
+    padding: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: relative;
+    width: 100%;
+}
+
+.tm-user-dropdown ul.dropdown-menu > li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tm-user-dropdown ul.dropdown-menu > li:hover,
+.tm-user-dropdown ul.dropdown-menu > li:active {
+    background: #f5f5f5;
+}
+
+.tm-user-dropdown .tm-dropdown-photo {
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+}
+
+.tm-user-dropdown .add-new-user {
+    border: 1px solid #ddd;
+    border-bottom: 0px;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+    background: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.tm-invite-dropdown .uib-dropdown-menu {
+    padding: 0px;
+    width: 100%;
+}
+
+.tm-invite-dropdown .dropdown-menu > li {
+    border-bottom: 1px solid #eee;
+}
+
+.tm-pt15 {
+    padding-top: 15px;
+}
+
+.tm-pb30 {
+    padding-bottom: 30px !important;
+}
+
+.tm-hr-margin-small {
+    margin-top: 15px;
+}
+
+.tm-mb30 {
+    margin-bottom: 30px;
+}
+
+.table.memberv22x span {
+    display: block;
+}
+
+.tm-project-tool {
+    font-size: 17px;
+}
+
+.tm-project-tool li {
+    border: 0 !important;
+    padding-left: 20px !important;
+}
+
+.memberv22x .feed-Compliance .photo {
+    width: 40px;
+    height: 40px;
+}
+
+.memberv22x .MemberTableDetails {
+    width: 260px;
+}
+
+.tm-flag-td {
+    width: 130px;
+}
+
+.tm-flag-td .alert-flag {
+    margin-right: 5px;
+}
+
+.tm-flag-td .alert-flag img {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 2px;
+}
+
+.tm-flag-td .alert-flag span {
+    float: left;
+    padding-top: 5px;
+}
+
+.risk-page-wrapper {
+    padding-top: 0px;
+}
+
+.risk-page-wrapper .prog-inner1 {
+    margin-bottom: 0px;
+}
+
+/*table.tm-scroll-table {
+    display: block;
+}
+
+table.tm-scroll-table tbody {
+    display: block;
+}*/
+
+/*.memberv22x .td-name {
+    width: 20%;
+    min-width: 260px;
+}
+
+.memberv22x .td-scheduled {
+    width: 15%;
+}
+
+.memberv22x .td-project {
+    width: 12%;
+}
+
+.memberv22x .td-scope {
+    width: 30%;
+}
+
+.memberv22x .td-flag {
+    width: 15%;
+}
+
+.table.memberv22x th {
+    padding-right: 20px;
+}*/
+.outcompliance {
+    color: #E42424;
+}
+
+.feed-Compliance .photo {
+    width: 40px;
+    height: 40px;
+}
+
+.tm-sortby {
+    border-radius: 30px;
+    font-size: 11px;
+    padding: 7px 14px;
+    border: 1px solid #ccc;
+    color: #888;
+}
+
+.riskmanagement .td-name {
+    width: 260px;
+}
+
+.risk-attach-right {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    line-height: 0;
+    border: 0;
+    top: 50%;
+    right: 0%;
+    margin-right: -50px;
+    outline: none;
+}
+
+.risk-attach-left {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    line-height: 0;
+    border: 0;
+    top: 50%;
+    margin-left: -50px;
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    .risk-attach-right {
+        background: #333;
+        color: white;
+        margin-right: 20px;
+    }
+
+    .risk-attach-left {
+        background: #333;
+        color: white;
+        margin-left: 20px;
+    }
+
+    .risk-attach-right.disabled {
+        display: none;
+    }
+
+    .risk-attach-left.disabled {
+        display: none;
+    }
+}
+
+.risk-attach-right.disabled {
+    background: #aaa;
+}
+
+.risk-attach-left.disabled {
+    background: #aaa;
+}
+
+.riskmiddle {
+    margin: 45px 0 43px 0;
+}
+
+.riskresports .searchround:focus {
+    border-color: #66afe9;
+}
+
+.riskmanagement .ibox-tools {
+    position: inherit;
+}
+
+.riskmanagement .ibox-tools .dropdown-menu > li > a {
+    padding: 17px;
+    font-size: 13px;
+    margin-left: 0px;
+}
+
+.riskresports h3.riskheading {
+    font-size: 20px;
+    font-family: $regular;
+
+    img {
+        width: 22px;
+        height: 22px;
+    }
+
+    span {
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+}
+
+.risk-page-wrapper {
+    .top-border {
+        border-top: 1px solid #d7d7d7;
+    }
+
+    .table.riskmanagement {
+        .td-name {
+            width: 230px;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        th {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            vertical-align: middle;
+        }
+
+        th img {
+            width: 20px;
+            margin: -3px 0px 0px 0px;
+        }
+    }
+
+    .riskmanagement tr {
+        border: 0px;
+    }
+
+    .tooltip.risk-tooltip {
+        .tooltip-inner {
+            color: $c-primary;
+            background-color: white;
+            box-shadow: 0px 0px 4px 2px rgba(0,0,0,.2);
+        }
+
+        .tooltip-arrow {
+            display: none;
+        }
+    }
+}

@@ -3,7 +3,7 @@
     <div class="row bankbg">
         <div class="pull-left noPdingLeft noPdingRight close-section">
             <div class="closeBox">
-                <p><a ui-sref="action-items.inspections">Close <i class="fa fa-caret-right"></i></a></p>
+                <p><a ui-sref="financials.pay-apply">Close <i class="fa fa-caret-right"></i></a></p>
             </div>
         </div>
         <div class="pull-left aii-page-title">
@@ -39,7 +39,7 @@
                             </tr>
                             <tr>
                                 <td class="item-title">Status</td>
-                                <td class="item-value"><span class="text-success">In Process</span></td>
+                                <td class="item-value"><span class="text-success">IN PROGRESS</span></td>
                             </tr>
                         </table>
                     </div>
@@ -62,78 +62,97 @@
     <div class="row animated fadeInRight mt30 pb30">
         <div class="col-lg-12">
             <div class="row no-margin">
-                <div class="col-lg-12 aii-inspection-table">
+                <div class="col-lg-12 pai-inspection-table">
                     <div class="table-responsive">
-                        <table class="table table-condensed table-bordered aii-item-table">
+                        <table class="table table-condensed table-bordered pai-item-table">
                             <thead>
                                 <tr>
                                     <th></th>
                                     <th ng-repeat="item in itemList">Item #{{ $index + 1 }}</th>
+                                    <th class="text-center item-total">
+                                        TOTAL
+                                        <span class="pull-right"><i class="fa fa-gear"></i><i class="fa fa-chevron-down"></i></span>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="item-title">Project</td>
                                     <td class="item-value" ng-repeat="item in itemList"><span class="text-primary">{{ item.project }}</span></td>
+                                    <td class="item-total"></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Contract</td>
                                     <td class="item-value" ng-repeat="item in itemList"><span class="text-primary">{{ item.contract }}</span></td>
+                                    <td class="item-total"></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Scope Of Work</td>
                                     <td class="item-value" ng-repeat="item in itemList"><span class="text-primary">{{ item.scope }}</span></td>
+                                    <td class="item-total"></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Contracted Amount</td>
                                     <td ng-repeat="item in itemList">{{ item.contractedAmount | currency }}</td>
+                                    <td class="item-total">$123</td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">% Completed</td>
                                     <td ng-repeat="item in itemList">{{ item.completed }}%</td>
+                                    <td class="item-total"></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Earned (less Retainage)</td>
                                     <td ng-repeat="item in itemList">{{ item.earned | currency }}</td>
+                                    <td class="item-total">$123</td>
                                 </tr>
-                                <tr>
+                                <tr class="previously-paid">
                                     <td class="item-title">Previously Paid</td>
                                     <td ng-repeat="item in itemList">{{ item.previouslyPaid | currency }}</td>
+                                    <td class="item-total">$123</td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Amount Due</td>
                                     <td ng-repeat="item in itemList">{{ item.amountDue | currency }}</td>
+                                    <td class="item-total"></td>
                                 </tr>
-                                <tr>
+                                <tr class="current-invoice">
                                     <td class="item-title">Current Invoice</td>
                                     <td ng-repeat="item in itemList">{{ item.currentInvoice | currency }}</td>
+                                    <td class="item-total">$123</td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Variance</td>
                                     <td ng-repeat="item in itemList"><span class="text-danger">{{ item.variance | currency }}</span></td>
+                                    <td class="item-total">$123</td>
                                 </tr>
-                                <tr>
-                                    <td class="item-title" colspan="{{itemList.length + 1}}">&nbsp;</td>
+                                <tr class="empty">
+                                    <td class="item-title" colspan="{{itemList.length + 2}}">&nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Estimated Duration</td>
                                     <td ng-repeat="item in itemList">{{ item.estimatedDuration }}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="item-title">Retainge</td>
+                                    <td class="item-title">Retainage</td>
                                     <td ng-repeat="item in itemList">{{ item.retainage }}%</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Scheduled Completion</td>
                                     <td ng-repeat="item in itemList">{{ item.scheduledCompletion }}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Estimated Completion</td>
                                     <td ng-repeat="item in itemList">{{ item.estimatedCompletion }}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="item-title">Variance</td>
-                                    <td ng-repeat="item in itemList"><span class="text-danger">{{ item.varianceTotal | currency }}</span></td>
+                                    <td ng-repeat="item in itemList"><span class="text-danger">{{ item.varianceTotal }}</span></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -181,7 +200,7 @@
                 </div>
 
                 <div class="col-lg-12 text-right mt30">
-                    <button class="btn btn-lg btn-primary">Action <i class="ace-icon fa fa-angle-down"></i></button>
+                    <button class="btn btn-lg btn-primary">Action <i class="ace-icon fa fa-chevron-down"></i></button>
                 </div>
             </div>
         </div>
@@ -192,7 +211,7 @@
         <div class="col-lg-12 mt30 mb60">
             <uib-tabset>
                 <uib-tab heading="Comments">
-                    <div style="max-height: 300px;" full-scroll>
+                    <div style="max-height: 290px;" full-scroll>
                         <div class="row no-margin aii-comment" ng-repeat="comment in commentList">
                             <div class="pull-left">
                                 <img ng-src="{{comment.photo}}" class="aii-comment-photo img-circle" ng-if="comment.photo" />

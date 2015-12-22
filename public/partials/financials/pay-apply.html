@@ -22,11 +22,7 @@
                             <span>Count</span>
                             <p>91</p>
                         </div>
-                        <div class="col-md-3">
-                            <span>%</span>
-                            <p>70%</p>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <span>Amount</span>
                             <p>$123,456.00</p>
                         </div>
@@ -39,11 +35,7 @@
                             <span>Count</span>
                             <p>91</p>
                         </div>
-                        <div class="col-md-3">
-                            <span>%</span>
-                            <p>70%</p>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <span>Amount</span>
                             <p>$123,456.00</p>
                         </div>
@@ -56,11 +48,7 @@
                             <span>Count</span>
                             <p>91</p>
                         </div>
-                        <div class="col-md-3">
-                            <span>%</span>
-                            <p>70%</p>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <span>Amount</span>
                             <p>$123,456.00</p>
                         </div>
@@ -101,8 +89,8 @@
                     <table class="table table-condensed table-bordered">
                         <thead>
                             <th class="flag"></th>
-                            <th class="title">Title</th>
-                            <th class="due-date">Due Date</th>
+                            <th class="title">Name & Project</th>
+                            <th class="due-date">Date Submitted</th>
                             <th class="responsible">Responsible</th>
                             <th class="initiator">Initiator</th>
                             <th class="sow">SOW</th>
@@ -121,7 +109,7 @@
                                     <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                                 </span>
                             </td>
-                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="title"><a ui-sref="pay-application.preview">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
                             <td class="order-by-date">{{ row.due_date }}</td>
                             <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
                             <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
@@ -160,8 +148,8 @@
                     <table class="table table-condensed table-bordered">
                         <thead>
                             <th class="flag"></th>
-                            <th class="title">Title</th>
-                            <th class="due-date">Due Date</th>
+                            <th class="title">Name & Project</th>
+                            <th class="due-date">Date Submitted</th>
                             <th class="responsible">Responsible</th>
                             <th class="initiator">Initiator</th>
                             <th class="sow">SOW</th>
@@ -180,7 +168,7 @@
                                     <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                                 </span>
                             </td>
-                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="title"><a ui-sref="pay-application.preview">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
                             <td class="order-by-date">{{ row.due_date }}</td>
                             <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
                             <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
@@ -219,8 +207,8 @@
                     <table class="table table-condensed table-bordered">
                         <thead>
                             <th class="flag"></th>
-                            <th class="title">Title</th>
-                            <th class="due-date">Due Date</th>
+                            <th class="title">Name & Project</th>
+                            <th class="due-date">Date Submitted</th>
                             <th class="responsible">Responsible</th>
                             <th class="initiator">Initiator</th>
                             <th class="sow">SOW</th>
@@ -239,7 +227,7 @@
                                     <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                                 </span>
                             </td>
-                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="title"><a ui-sref="pay-application.preview">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
                             <td class="order-by-date">{{ row.due_date }}</td>
                             <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
                             <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
@@ -278,8 +266,8 @@
                     <table class="table table-condensed table-bordered">
                         <thead>
                             <th class="flag"></th>
-                            <th class="title">Title</th>
-                            <th class="due-date">Due Date</th>
+                            <th class="title">Name & Project</th>
+                            <th class="due-date">Date Submitted</th>
                             <th class="responsible">Responsible</th>
                             <th class="initiator">Initiator</th>
                             <th class="sow">SOW</th>
@@ -298,7 +286,7 @@
                                     <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
                                 </span>
                             </td>
-                            <td class="title"><a ui-sref="action-items.inspections-popup">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
+                            <td class="title"><a ui-sref="pay-application.preview">{{ row.title }}</></a><br><small>{{ row.type}}</small></td>
                             <td class="order-by-date">{{ row.due_date }}</td>
                             <td class="responsible"><a href="">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
                             <td class="initiator"><a href="">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>

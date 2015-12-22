@@ -156,7 +156,6 @@ app.controller('DocumentsCtrl',
             } else {
                 $scope.selectedDocuments.push(document.id);
             }
-            console.log($scope.selectedDocuments);
         }
 
         $scope.showUploadModal = function() {
