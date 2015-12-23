@@ -3,7 +3,7 @@
  */
 'use strict'
 
-app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
+app.controller('ProjectsCtrl', function($scope, $state, $stateParams, $uibModal) {
     $scope.schedule_completed = 0;
     $scope.project_completed = 0;
     $scope.doughnutOptions = {};
@@ -18,6 +18,21 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams) {
     $scope.goDoc = function () {
         $state.go('documents.main');
     };
+
+    // Action Main GAI New Modal
+    $scope.showGaiNewModal = function() {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'partials/action-items/gai-new-modal.html',
+            controller: 'GAINewModalCtrl',
+            windowClass: 'gai-modal'
+        });
+
+        modalInstance.result.then(function(res) {
+
+        }, function() {
+
+        });
+    }
 
     /**
      * Data for Doughnut chart

@@ -6,7 +6,6 @@ app.controller('GAINewModalCtrl',
 
         $scope.distribute = function () {
             $uibModalInstance.close();
-            $state.go('action-items.general-action-items');
         }
 
         $scope.isShowDatePicker = false;
