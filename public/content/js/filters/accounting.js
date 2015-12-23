@@ -1,15 +1,18 @@
-app.filter('accounting', ["$filter", function ($filter) {       
+app.filter('accounting', ["$filter", function ($filter) {
     return function(amount, currencySymbol){
-        var currency = $filter('currency');         
+        var currency = $filter('currency');
+        var symbol = '$';
+
+        if (!_.isUndefined(currencySymbol))
+            symbol = currencySymbol;
 
         if(amount < 0){
             amount = -amount;
-            if (!_.isUndefined(currencySymbol))
-                amount = currencySymbol + amount;
-            return "(" + amount + ")";
+            return "(" + currency(amount, symbol, 2) + ")";
+
         }
-        if (!_.isUndefined(currencySymbol))
-            amount = currencySymbol + amount;
+
+        amount = currency(amount, symbol, 2);
         return amount;
     };
 }]);
