@@ -45,4 +45,8 @@ app.controller('CommNewCtrl',
         $scope.toggleReceivers = function() {
             $scope.showReceivers = !$scope.showReceivers;
         }
+
+        $scope.sendMessage = function() {
+            $state.go('comm.main');
+        };
     }]);
