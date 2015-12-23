@@ -26,13 +26,18 @@
                     <tr ng-repeat="schedule in schedulesInRange">
                         <td ng-repeat="i in range(schedule.relativePos)"></td>
                         <td colspan="{{schedule.relativeLength}}">
-                            <div class="alert text-left alert-{{schedule.schedule_type}} clearfix">
+                            <div class="alert text-left alert-{{schedule.schedule_type}} clearfix"
+                                 tabindex="0"
+                                 popover-placement="left"
+                                 popover-trigger="focus"
+                                 popover-append-to-body="true"
+                                 uib-popover-template="'schedule-popover-template.html'">
                                 <div class="flag-badge"><i class="fa fa-flag text-{{schedule.status}}"></i></div>
                                 <div class="content">
                                     <div>{{schedule.description}}</div>
                                     <div class="text-muted font-regular">{{schedule.completion_percentage}}% completed</div>
                                 </div>
-                                <span tabindex="0" popover-placement="left" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
+                                <span>
                                     <i class="fa fa-info-circle"></i>
                                 </span>
                             </div>
@@ -56,13 +61,13 @@
                         <tr ng-repeat="schedule in schedulesInRange[section]">
                             <td ng-repeat="i in range(schedule.relativePos)" ng-class="{true: 'no-schedule'}[isEmptyDate(section, i)]"></td>
                             <td colspan="{{schedule.relativeLength}}">
-                                <div class="alert text-left alert-{{schedule.schedule_type}} clearfix">
+                                <div class="alert text-left alert-{{schedule.schedule_type}} clearfix" tabindex="0" popover-placement="left" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
                                     <div class="flag-badge"><i class="fa fa-flag text-{{schedule.status}}"></i></div>
                                     <div class="content">
                                         <div>{{schedule.description}}</div>
                                         <div class="text-muted font-regular">{{schedule.completion_percentage}}% completed</div>
                                     </div>
-                                    <span tabindex="0" popover-placement="left" popover-trigger="focus" popover-append-to-body="true" uib-popover-template="'schedule-popover-template.html'">
+                                    <span>
                                         <i class="fa fa-info-circle"></i>
                                     </span>
                                 </div>

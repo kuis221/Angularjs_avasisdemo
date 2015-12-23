@@ -11,7 +11,17 @@
                     <div class="font-medium heading"><em>Estimated Completion Date</em> &nbsp;Aug 20, 2015</div>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-success btn-lg"><i class="fa fa-plus"></i> Add User to SOW</a>
+                    <div class="btns mr10">
+                        <a class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-plus"></i> New
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
+                            <li><a ng-click="showAddTeamMemberModal()">Team Member</a></li>
+                            <li><a ng-click="showAddActionItemModal()">Action Item</a></li>
+                            <li><a ng-click="showAddDocumentModal()">Document</a></li>
+                            <li><a ng-click="showAddPhotoModal()">Photo</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="row">
