@@ -1,29 +1,23 @@
-<div class="row bid-package-comments">
-    <div class="table-responsivie">
-        <table class="table no-border">
-            <tbody>
-                <tr ng-repeat="row in comments">
-                   <td class="profile-image"><img ng-src="{{ row.image }}"></td>
-                   <td>
-                        <span class="name">{{row.name}}</span>
-                        <span class="datetime">{{ row.date }} - {{row.time}}</span><br/>
-                        <span class="detail">{{row.detail}}</span>
-                   </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-12">
-        <div class="form-group">
-            <label>Add Comment...</label>
-            <textarea></textarea>
+<div class="comments-wrapper" slim-scroll box-height="340">
+    <div class="comment" ng-repeat="comment in comments track by $index">
+        <div>
+            <a href="#">
+                <img ng-src="assets/img/avasisteam/{{comment.avatar}}" class="img-circle prj-sch-photo" alt="image">
+            </a>
         </div>
-    </div>
-    <div class="col-md-12">
-        <div class="pull-right">
-            <button class="btn btn-cancel">Cancel</button>
-            <button class="btn btn-success">Post Comment</button>
+        <div class="">
+            <a class="text-primary author">{{comment.author}}</a>
+            <small class="text-muted">{{comment.date}}</small>
+            <p class="text-default">{{comment.desc}}</p>
         </div>
+        <span class="edit">Edit <i class="fa fa-pencil"></i></span>
     </div>
 </div>
 
+<h3 class="text-muted">Add Comment...</h3>
+<textarea class="text-default form-control"></textarea>
+
+<div class="text-right mt20">
+    <a class="btn btn-cancel btn-sm">Cancel</a>
+    <a class="btn btn-success btn-sm">Post Comment</a>
+</div>

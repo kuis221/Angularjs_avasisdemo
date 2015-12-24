@@ -1,277 +1,325 @@
-.bids-package .package-create-header .closeBox img {
-  margin-top: -1px;
-  margin-right: 5px; }
-
-.bids-package .package-create-header .package-header-title {
-  padding-top: 30px;
-  padding-left: 15px; }
-  .bids-package .package-create-header .package-header-title .heading {
-    font-family: "AvenirNextLTPro-Regular";
-    font-size: 27px;
-    color: 4a4a4a; }
-  .bids-package .package-create-header .package-header-title input {
-    width: 100%;
-    border: 0px;
-    background: transparent;
-    color: #4a4a4a;
-    font-size: 17px;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0px;
-    padding: 20px 0 10px; }
-  .bids-package .package-create-header .package-header-title input:focus {
-    outline: 0; }
-  .bids-package .package-create-header .package-header-title .info {
-    display: block;
-    float: left;
-    padding: 20px 30px 20px 0; }
-    .bids-package .package-create-header .package-header-title .info .info-title {
+.bids-package-wrapper {
+  padding-top: 0;
+  margin-bottom: 0; }
+  .bids-package-wrapper .bp-page-info {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8; }
+  .bids-package-wrapper .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center; }
+  .bids-package-wrapper .bp-page-title {
+    margin-top: 60px;
+    width: calc(100% - 100px); }
+    .bids-package-wrapper .bp-page-title h2 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 27px;
+      margin-top: 0px; }
+    .bids-package-wrapper .bp-page-title input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      width: 100%;
+      font-size: 17px; }
+    .bids-package-wrapper .bp-page-title .project-info h3 {
       font-family: "AvenirNextLTPro-Demi";
-      font-size: 14px;
-      color: #3aabd5;
-      padding-bottom: 5px; }
-    .bids-package .package-create-header .package-header-title .info .info-value {
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 20px; }
+    .bids-package-wrapper .bp-page-title .project-info span {
       font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px; }
+  .bids-package-wrapper .bp-info {
+    color: #4a4a4a; }
+    .bids-package-wrapper .bp-info .row span:first-child, .bids-package-wrapper .bp-info .row div:first-child {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-family: AvenirNextLTPro-Demi; }
+    .bids-package-wrapper .bp-info .row span:last-child {
+      font-family: AvenirNextLTPro-Regular; }
+  .bids-package-wrapper .info-section {
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #eee; }
+  .bids-package-wrapper .bp-wrapper > div:not(:last-child) {
+    border-right: 1px solid #eee; }
+  .bids-package-wrapper .bp-wrapper > div:last-child {
+    padding-top: 20px; }
+  .bids-package-wrapper .bp-wrapper > div {
+    padding: 0 10px; }
+  .bids-package-wrapper .col-3 {
+    width: 28%;
+    display: inline-block; }
+  .bids-package-wrapper .col-4 {
+    width: 30.333333%;
+    display: inline-block; }
+  .bids-package-wrapper .col-5 {
+    width: 40.66666667%;
+    display: inline-block; }
+    .bids-package-wrapper .col-5 > div:first-child {
+      display: inline-block;
+      padding: 0px 15px;
+      border-right: 1px solid #eee; }
+    .bids-package-wrapper .col-5 > div:last-child {
+      display: inline-block;
+      float: right; }
+  .bids-package-wrapper .col-3,
+  .bids-package-wrapper .col-4,
+  .bids-package-wrapper .col-5 {
+    padding: 0 10px; }
+  @media (max-width: 1399px) {
+    .bids-package-wrapper .col-3,
+    .bids-package-wrapper .col-4,
+    .bids-package-wrapper .col-5 {
+      width: 100%; }
+    .bids-package-wrapper .bp-wrapper > div {
+      text-align: left; }
+      .bids-package-wrapper .bp-wrapper > div:first-child, .bids-package-wrapper .bp-wrapper > div:nth-child(2) {
+        border-right: 0; }
+      .bids-package-wrapper .bp-wrapper > div > .bp-section:first-child,
+      .bids-package-wrapper .bp-wrapper > div > .bp-section:nth-child(1) {
+        padding-left: 10px; } }
+  .bids-package-wrapper .bp-section {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    text-align: left; }
+    .bids-package-wrapper .bp-section:first-child {
+      padding-left: 0; }
+    .bids-package-wrapper .bp-section .header {
+      font-family: AvenirNextLTPro-Demi;
       font-size: 11px;
       color: #8b8b8b; }
-  .bids-package .package-create-header .package-header-title .additional-info {
-    padding-top: 40px;
-    padding-right: 20px; }
-    .bids-package .package-create-header .package-header-title .additional-info .details {
-      text-align: right;
-      padding-bottom: 6px; }
-    .bids-package .package-create-header .package-header-title .additional-info .details .more-info-name {
-      display: inline-block;
-      text-transform: uppercase;
-      font-family: "AvenirNextLTPro-Bold";
-      font-size: 9px;
-      color: 44474b; }
-    .bids-package .package-create-header .package-header-title .additional-info .details .pd-right-20 {
-      padding-right: 20px; }
-    .bids-package .package-create-header .package-header-title .additional-info .details .more-info-value {
-      display: inline-block;
-      min-width: 100px;
-      text-align: left;
-      padding: 0 10px; }
-      .bids-package .package-create-header .package-header-title .additional-info .details .more-info-value .pc-info-title {
-        background-color: #44474b;
-        color: #fff;
-        border-radius: 3px;
-        font-family: "AvenirNextLTPro-Bold";
-        font-size: 10px;
-        padding: 2px 6px; }
-      .bids-package .package-create-header .package-header-title .additional-info .details .more-info-value .pc-info-date {
-        font-family: "AvenirNextLTPro-Medium";
-        font-size: 12px;
-        color: 44474b; }
-      .bids-package .package-create-header .package-header-title .additional-info .details .more-info-value .pc-info-status {
-        font-family: "AvenirNextLTPro-Bold";
-        font-size: 12px; }
-    .bids-package .package-create-header .package-header-title .additional-info .details .more-info-select {
-      display: inline-block;
-      min-width: 200px;
-      text-align: left;
-      padding: 0 10px; }
-
-.bids-package .package-create-content {
-  background-color: #fff;
-  border: 1px solid #d7d7d7;
-  border-radius: 4px;
-  margin-top: 30px;
-  padding: 15px; }
-  .bids-package .package-create-content .person-info-wrapper {
-    padding: 10px 0;
-    border-bottom: 1px solid #d7d7d7;
-    margin: 0 20px; }
-    .bids-package .package-create-content .person-info-wrapper .ibox-team {
-      padding-top: 10px;
-      font-size: 20px; }
-    .bids-package .package-create-content .person-info-wrapper .document-title {
-      font-family: "AvenirNextLTPro-Regular";
-      font-size: 15px;
-      padding: 10px 0;
-      display: block;
+    .bids-package-wrapper .bp-section .value {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 13px;
+      color: #3aabd5; }
+    .bids-package-wrapper .bp-section .info {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 12px;
       color: #4a4a4a; }
-    .bids-package .package-create-content .person-info-wrapper .table-document {
-      font-family: "AvenirNextLTPro-Demi"; }
-      .bids-package .package-create-content .person-info-wrapper .table-document table {
-        border: 1px solid #dedede; }
-      .bids-package .package-create-content .person-info-wrapper .table-document thead tr th {
-        font-size: 12px;
-        color: #808080;
-        background-color: #f9f9f9; }
-      .bids-package .package-create-content .person-info-wrapper .table-document tbody tr td {
-        font-size: 13px;
-        color: #3aabd5; }
-      .bids-package .package-create-content .person-info-wrapper .table-document tbody tr td i {
-        color: #8b8b8b; }
-  .bids-package .package-create-content .person-info {
-    display: block; }
-    .bids-package .package-create-content .person-info .info-panel {
-      display: block;
-      float: left;
-      border-right: 1px solid #d7d7d7;
-      padding: 8px 10px 8px 20px; }
-      .bids-package .package-create-content .person-info .info-panel .name, .bids-package .package-create-content .person-info .info-panel .other {
-        display: block;
-        float: left;
-        padding-right: 20px; }
-      .bids-package .package-create-content .person-info .info-panel .name-header, .bids-package .package-create-content .person-info .info-panel .other-header {
-        font-family: "AvenirNextLTPro-Demi";
+    .bids-package-wrapper .bp-section .contact {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 10px;
+      color: #4a4a4a; }
+      .bids-package-wrapper .bp-section .contact i {
+        margin-right: 10px;
+        margin-left: 10px; }
+        .bids-package-wrapper .bp-section .contact i:first-child {
+          margin-left: 0; }
+    .bids-package-wrapper .bp-section .header,
+    .bids-package-wrapper .bp-section .info,
+    .bids-package-wrapper .bp-section .value,
+    .bids-package-wrapper .bp-section .contact {
+      line-height: 20px; }
+  .bids-package-wrapper .date-section {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+    .bids-package-wrapper .date-section .item {
+      display: inline-block;
+      padding: 15px; }
+      .bids-package-wrapper .date-section .item:first-child {
+        padding-left: 0; }
+      .bids-package-wrapper .date-section .item .header {
+        font-family: AvenirNextLTPro-Demi;
         font-size: 11px;
         color: #8b8b8b; }
-      .bids-package .package-create-content .person-info .info-panel .name-value {
-        font-family: "AvenirNextLTPro-Demi";
-        font-size: 13px;
-        color: #3aabd5; }
-      .bids-package .package-create-content .person-info .info-panel .other-value {
-        font-family: "AvenirNextLTPro-Regular";
+      .bids-package-wrapper .date-section .item .value {
+        font-family: AvenirNextLTPro-Regular;
         font-size: 12px;
         color: #4a4a4a; }
-      .bids-package .package-create-content .person-info .info-panel .other-contact {
-        font-family: "AvenirNextLTPro-Regular";
-        font-size: 9px;
-        color: #4a4a4a; }
-        .bids-package .package-create-content .person-info .info-panel .other-contact .breadcrumbv22x {
-          padding-top: 3px; }
-    .bids-package .package-create-content .person-info .info-panel:first-of-type {
-      padding-left: 0px; }
-  .bids-package .package-create-content .description-title {
-    display: block;
-    margin-bottom: 14px;
-    font-family: "AvenirNextLTPro-Bold";
-    font-size: 13px;
-    color: #44474b; }
-  .bids-package .package-create-content .description-text {
-    font-family: "AvenirNextLTPro-Regular";
-    font-size: 13px;
+      .bids-package-wrapper .date-section .item .header,
+      .bids-package-wrapper .date-section .item .value {
+        line-height: 20px; }
+  .bids-package-wrapper .documents-section,
+  .bids-package-wrapper .plans-section {
+    margin-top: 15px; }
+    .bids-package-wrapper .documents-section h4,
+    .bids-package-wrapper .plans-section h4 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 15px;
+      color: #4a4a4a;
+      margin-top: 0;
+      margin-bottom: 15px; }
+    .bids-package-wrapper .documents-section .info,
+    .bids-package-wrapper .plans-section .info {
+      border: 1px solid #eee;
+      color: #8b8b8b; }
+      .bids-package-wrapper .documents-section .info .head,
+      .bids-package-wrapper .plans-section .info .head {
+        width: 100%;
+        padding: 15px;
+        background-color: #f9f9f9;
+        font-family: AvenirNextLTPro-Demi;
+        font-size: 12px; }
+      .bids-package-wrapper .documents-section .info .item,
+      .bids-package-wrapper .plans-section .info .item {
+        border-top: 1px solid #eee;
+        width: 100%;
+        padding: 15px; }
+        .bids-package-wrapper .documents-section .info .item .name,
+        .bids-package-wrapper .plans-section .info .item .name {
+          font-family: AvenirNextLTPro-Demi;
+          font-size: 13px; }
+  .bids-package-wrapper .details-section {
+    margin-top: 15px;
+    font-family: AvenirNextLTPro-Regular;
     color: #4a4a4a; }
+    .bids-package-wrapper .details-section h4 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 15px;
+      color: #4a4a4a;
+      margin-top: 0;
+      margin-bottom: 15px; }
+    .bids-package-wrapper .details-section .info {
+      border: 1px solid #eee; }
+      .bids-package-wrapper .details-section .info .item {
+        width: 100%;
+        padding: 15px; }
+        .bids-package-wrapper .details-section .info .item:not(:first-child) {
+          border-top: 1px solid #eee; }
+  .bids-package-wrapper .bp-tabs-section {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 30px;
+    background-color: #eee; }
+    .bids-package-wrapper .bp-tabs-section .bp-tabs-content {
+      border: 1px solid #eee;
+      background-color: #f9f9f9; }
+      .bids-package-wrapper .bp-tabs-section .bp-tabs-content .nav-tabs {
+        border-bottom: 1px solid #eee; }
+        .bids-package-wrapper .bp-tabs-section .bp-tabs-content .nav-tabs > li > a {
+          font-family: AvenirNextLTPro-Medium;
+          font-size: 13px;
+          color: #6c6c6c;
+          min-width: 110px;
+          text-align: center;
+          padding: 15px 30px;
+          border-radius: 0;
+          border-top: 0; }
+        .bids-package-wrapper .bp-tabs-section .bp-tabs-content .nav-tabs > li:first-child > a {
+          border-left: 0; }
+        .bids-package-wrapper .bp-tabs-section .bp-tabs-content .nav-tabs > li.active a {
+          color: #e25c5c;
+          background: white;
+          border-bottom: 1px solid white; }
+      .bids-package-wrapper .bp-tabs-section .bp-tabs-content .tab-content {
+        border: 0; }
+        .bids-package-wrapper .bp-tabs-section .bp-tabs-content .tab-content .comments-wrapper .comment {
+          position: relative;
+          font-size: 13px;
+          margin-bottom: 15px;
+          font-family: AvenirNextLTPro-Regular; }
+          .bids-package-wrapper .bp-tabs-section .bp-tabs-content .tab-content .comments-wrapper .comment > div {
+            display: inline-block; }
+          .bids-package-wrapper .bp-tabs-section .bp-tabs-content .tab-content .comments-wrapper .comment .author {
+            font-size: 13px;
+            font-family: AvenirNextLTPro-Demi; }
+          .bids-package-wrapper .bp-tabs-section .bp-tabs-content .tab-content .comments-wrapper .comment .edit {
+            position: absolute;
+            right: 20px;
+            top: 4px; }
+            .bids-package-wrapper .bp-tabs-section .bp-tabs-content .tab-content .comments-wrapper .comment .edit:hover {
+              cursor: pointer; }
+    .bids-package-wrapper .bp-tabs-section h3 {
+      margin-top: 20px;
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 13px; }
+    .bids-package-wrapper .bp-tabs-section textarea {
+      padding: 15px;
+      border-radius: 3px;
+      color: #4a4a4a;
+      background-color: #f9f9f9; }
+      .bids-package-wrapper .bp-tabs-section textarea:active, .bids-package-wrapper .bp-tabs-section textarea:focus {
+        background-color: #fff;
+        border-color: #eee; }
+  .bids-package-wrapper h3 {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 17px;
+    color: #4a4a4a; }
+  .bids-package-wrapper table.pe-table {
+    border: 1px solid #eee; }
+    .bids-package-wrapper table.pe-table th,
+    .bids-package-wrapper table.pe-table td {
+      padding: 15px; }
+    .bids-package-wrapper table.pe-table thead tr th {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 15px;
+      color: #8b8b8b;
+      vertical-align: middle; }
+    .bids-package-wrapper table.pe-table tbody tr td {
+      background-color: #fff;
+      color: #4a4a4a;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 12px;
+      vertical-align: middle; }
+      .bids-package-wrapper table.pe-table tbody tr td.sow {
+        font-size: 13px;
+        color: #3aabd5;
+        font-family: AvenirNextLTPro-Demi; }
+      .bids-package-wrapper table.pe-table tbody tr td.material-links {
+        font-family: AvenirNextLTPro-Demi;
+        color: #3aabd5; }
+  .bids-package-wrapper table.csb-table thead:first-child > tr:first-child > th {
+    border-top: 1px solid #eee;
+    border-bottom: 0; }
+    .bids-package-wrapper table.csb-table thead:first-child > tr:first-child > th:first-child {
+      border-left: 1px solid #eee; }
+    .bids-package-wrapper table.csb-table thead:first-child > tr:first-child > th:last-child {
+      border-right: 1px solid #eee; }
+  .bids-package-wrapper table.csb-table tbody > tr > td {
+    padding: 15px;
+    border-top: 1px solid #eee; }
+    .bids-package-wrapper table.csb-table tbody > tr > td:first-child {
+      border-left: 1px solid #eee; }
+    .bids-package-wrapper table.csb-table tbody > tr > td:last-child {
+      border-right: 1px solid #eee; }
+  .bids-package-wrapper table.csb-table thead tr th {
+    font-family: AvenirNextLTPro-Demi;
+    font-size: 15px;
+    color: #8b8b8b;
+    vertical-align: middle; }
+    .bids-package-wrapper table.csb-table thead tr th.small {
+      font-size: 11px; }
+  .bids-package-wrapper table.csb-table tbody tr td {
+    background-color: #fff;
+    color: #4a4a4a;
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 11px;
+    vertical-align: middle; }
+    .bids-package-wrapper table.csb-table tbody tr td.sow {
+      font-family: AvenirNextLTPro-Demi; }
+      .bids-package-wrapper table.csb-table tbody tr td.sow span {
+        font-size: 11px;
+        color: #3aabd5; }
+      .bids-package-wrapper table.csb-table tbody tr td.sow small {
+        font-size: 10px;
+        color: #8b8b8b; }
+    .bids-package-wrapper table.csb-table tbody tr td.phase {
+      color: #3aabd5;
+      font-family: AvenirNextLTPro-Demi; }
+    .bids-package-wrapper table.csb-table tbody tr td.text-regular {
+      font-size: 12px; }
+  .bids-package-wrapper table.csb-table tfoot tr td {
+    background: transparent;
+    color: #8b8b8b;
+    font-family: AvenirNextLTPro-Demi;
+    padding-top: 30px; }
+    .bids-package-wrapper table.csb-table tfoot tr td span {
+      font-family: AvenirNextLTPro-Medium;
+      font-size: 13px; }
 
-.bids-package .no-border {
-  border: none !important; }
+.bp-action-menu {
+  right: 30px !important; }
+  .bp-action-menu li > a.text-danger {
+    color: #e25c5c; }
 
-.bids-package .no-padding-left {
-  padding-left: 0px; }
-
-.bids-package .tab-content {
-  border-radius: 0px 0px 4px 4px; }
-
-.bids-package .bids-package-table h3 {
-  font-family: "AvenirNextLTPro-Medium";
-  font-size: 17px;
-  color: #4a4a4a; }
-
-.bids-package .bids-package-table table thead tr th {
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 15px;
-  color: #808080;
-  background-color: #f9f9f9;
-  vertical-align: middle; }
-
-.bids-package .bids-package-table table tbody tr td {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 12px;
-  color: #44474b;
-  background-color: #ffffff;
-  vertical-align: middle; }
-
-.bids-package .bids-package-table table tbody tr td.title {
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 13px;
-  color: #3aabd5; }
-
-.bids-package .cost-schedule-table h3 {
-  font-family: "AvenirNextLTPro-Medium";
-  font-size: 17px;
-  color: #4a4a4a; }
-
-.bids-package .cost-schedule-table table thead tr th {
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 15px;
-  color: #808080;
-  background-color: #f9f9f9;
-  vertical-align: middle; }
-
-.bids-package .cost-schedule-table table thead tr th.small {
-  font-size: 11px; }
-
-.bids-package .cost-schedule-table table tbody tr td {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 11px;
-  color: #44474b;
-  background-color: #ffffff;
-  vertical-align: middle; }
-
-.bids-package .cost-schedule-table .scope-title {
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 11px;
-  color: #3aabd5; }
-
-.bids-package .cost-schedule-table .scope-division {
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 10px;
-  color: #9e9e9e; }
-
-.bids-package .cost-schedule-table .costcode {
-  background: #2a2d33;
-  border-radius: 5px;
-  color: #fff;
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 10px;
-  width: 55px;
-  display: block;
-  text-align: center; }
-
-.bids-package .cost-schedule-table .phase {
-  color: #3aabd5; }
-
-.bids-package .cost-schedule-table .large-text {
-  font-size: 12px; }
-
-.bids-package .action-button {
-  display: block;
-  margin-top: 10px;
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 11px;
-  margin-right: 15px; }
-  .bids-package .action-button span.btn-text {
-    padding-right: 10px; }
-
-.bids-package .bid-package-comments table td {
-  vertical-align: middle; }
-  .bids-package .bid-package-comments table td .profile-image {
-    width: 50px; }
-
-.bids-package .bid-package-comments .name {
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 15px;
-  color: #3aabd5;
-  margin-right: 10px; }
-
-.bids-package .bid-package-comments .datetime {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 12px;
-  color: #4a4a4a; }
-
-.bids-package .bid-package-comments .detail {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 14px;
-  color: #4a4a4a; }
-
-.bids-package .bid-package-comments .form-group label {
-  display: block;
-  padding: 20px 0 10px;
-  font-family: "AvenirNextLTPro-Demi";
-  font-size: 13px;
-  color: #afafaf; }
-
-.bids-package .bid-package-comments .form-group textarea {
-  background-color: #f9f9f9;
-  width: 100%;
-  padding: 15px 20px;
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 12px; }
-
-.bid-package-dropdown-menu li {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 13px;
-  color: #3aabd5; }
+.action-button {
+  margin-top: 10px; }
+  @media (min-width: 1445px) {
+    .action-button {
+      margin-top: -60px; } }

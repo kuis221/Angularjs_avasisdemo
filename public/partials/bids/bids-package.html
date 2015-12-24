@@ -1,142 +1,187 @@
-<div class="bids-package">
-    <div class="row page-detail-header package-create-header">
-        <div class="col-sm-1 no-padding-horizontal">
+<div class="bids-package-wrapper">
+    <!-- Top Nav bar -->
+    <div class="row bp-page-info">
+        <div class="pull-left pl0 pr0">
             <div class="closeBox">
                 <p>
-                    <a ui-sref="bids.main">
-                        Close <i class="fa fa-caret-right"></i>
-                    </a>
+                    <a ui-sref="bids.main">Close <i class="fa fa-caret-right"></i></a>
                 </p>
             </div>
         </div>
-        <div class="col-sm-11">
-            <div class="row package-header-title">
-                <div class="col-md-7">
-                    <h2 class="heading">Bid Package</h2>
-                    <input type="text" placeholder="A Long Long Bid Name Goes Here">
-                    <div class="info">
-                        <span class="info-title">{{ company}}</span><br/>
-                        <span class="info-value">{{ address1 }}</span><br/>
-                        <span class="info-value">{{ address2 }}</span>
-                    </div>
+
+        <div class="pull-left bp-page-title">
+            <div class="col-md-7 pl20">
+                <h2 class="text-default">Bid Package</h2>
+                <input type="text" placeholder="A Long Long Bid Name Goes Here"></input>
+                <div class="project-info">
+                    <h3 class="text-primary">Anderson Perkins LTD Shipping Center</h3>
+                    <span class="text-muted">1796 Prospector Avenue<br/>Arlington, VA 90125</span>
                 </div>
-                <div class="col-md-5 additional-info">
-                    <div class="details">
-                        <span class="more-info-name">Bid Number</span>
-                        <span class="more-info-value"><span class="pc-info-title">{{ bidNumber }}</span></span>
+            </div>
+
+            <div class="col-md-5">
+                <div class="bp-info">
+                    <div class="row">
+                        <span class="col-xs-9 text-right">Bid Number</span>
+                        <span class="col-xs-3 text-left">
+                            <label class="label label-info">193</label>
+                        </span>
                     </div>
-                    <div class="details">
-                        <span class="more-info-name">Date initiated</span>
-                        <span class="more-info-value"><span class="pc-info-date">{{ dateInit }}</span></span>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Date Initiated</span>
+                        <span class="col-xs-3 text-left">8/23/14</span>
                     </div>
-                    <div class="details">
-                        <span class="more-info-name">initiated by</span>
-                        <span class="more-info-value"><span class="pc-info-date">{{ creator }}</span></span>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Initiated By</span>
+                        <span class="col-xs-3 text-left">Bruce Wayne</span>
                     </div>
-                    <div class="details">
-                        <span class="more-info-name">Status</span>
-                        <span class="more-info-value"><span class="pc-info-status text-success">{{ procurementStatus }}</span></span>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Status</span>
+                        <span class="col-xs-3 text-left text-success">IN PROGRESS</span>
                     </div>
-                    <div class="details">
-                        <span class="more-info-name pd-right-20">Currently Responsible</span>
-                        <div class="more-info-select"><ui-select selected-item="selectedScope" options="responsibleList" placeholder="Bob Jones"></ui-select></div>
+
+                    <div class="row mt5 pr15">
+                        <div class="col-md-6 text-right mt20">Currently Responsible</div>
+                        <div class="col-md-6 text-left">
+                            <ui-select options="users" ng-select="" selected-item="curResponsible"></ui>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
-    <div class="row no-margin animated fadeInRight">
+    <!-- Top Nav bar -->
+
+    <div class="row no-margin animated fadeInRight mt30">
         <div class="col-lg-12">
-            <div class="package-create-content">
-                <div class="row person-info-wrapper">
-                    <div class="person-info">
-                        <div class="info-panel">
-                            <div class="name">
-                                <span class="name-header">General Contractor</span><br/>
-                                <span class="name-value text-primary">{{ generalContractor }}</span>
-                            </div>
-                            <div class="other">
-                                <span class="other-header">Contact</span><br/>
-                                <span class="other-contact">
-                                    <ul class="breadcrumbv22x">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;{{ contractorPhone }}</a></li>
-                                    </ul>
-                                </span>
-                            </div>
-                            <div class="other">
-                                <span class="other-header">Company</span><br/>
-                                <span class="other-value">{{ contactorCompany }}</span>
-                            </div>
+            <div class="info-section">
+                <div class="row bp-wrapper">
+                    <div class="col-3 mb15">
+                        <div class="bp-section">
+                            <div class="header">General Contractor</div>
+                            <div class="value">Bob Jones</div>
+                            <div class="info">Flora Corp</div>
                         </div>
-                        <div class="info-panel">
-                            <div class="name">
-                                <span class="name-header">Project Manager</span><br/>
-                                <span class="name-value text-primary">{{ projectManager }}</span>
-                            </div>
-                            <div class="other">
-                                <span class="other-header">Contact</span><br/>
-                                <span class="other-contact">
-                                    <ul class="breadcrumbv22x">
-                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> &nbsp;{{ managerPhone }}</a></li>
-                                    </ul>
+                        <div class="bp-section">
+                            <div class="header">Contact</div>
+                            <div class="contact">
+                                <span>
+                                    <i class="fa fa-envelope"></i>|
+                                    <i class="fa fa-comments"></i>|
+                                    <i class="fa fa-phone"></i>415 123 3456
                                 </span>
-                            </div>
-                            <div class="other">
-                                <span class="other-header">Company</span><br/>
-                                <span class="other-value">{{ managerCompany }}</span>
-                            </div>
-                        </div>
-                        <div class="info-panel">
-                            <div class="other">
-                                <span class="other-header">Date Est. to be on Project</span><br/>
-                                <span class="other-value">{{ projectDateOn }}</span>
-                            </div>
-                            <div class="other">
-                                <span class="other-header">Bid Closing Date</span><br/>
-                                <span class="other-value">{{ ProjectDateBidClose }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="ibox-team pull-right">
-                        <a class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-cog"></i>&nbsp;
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">Edit</a></li>
-                            <li><a href="">Delete</a></li>
-                        </ul>
+
+                    <div class="col-4 text-center mb15">
+                        <div class="bp-section">
+                            <div class="header">Project Manager</div>
+                            <div class="value">Sloan Urry</div>
+                            <div class="info">ABC Inc</div>
+                        </div>
+                        <div class="bp-section">
+                            <div class="header">Contact</div>
+                            <div class="contact">
+                                <span>
+                                    <i class="fa fa-envelope"></i>|
+                                    <i class="fa fa-comments"></i>|
+                                    <i class="fa fa-phone"></i>415 123 3456
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-5 mb15">
+                        <div>
+                            <div class="bp-section">
+                                <div class="header">SubContractor</div>
+                                <div class="value">Eric Hoffman</div>
+                                <div class="info">ABC Inc</div>
+                            </div>
+                            <div class="bp-section">
+                                <div class="header">EIN #</div>
+                                <div class="info text-default">23-2345623</div>
+                            </div>
+                            <div class="bp-section">
+                                <div class="header">Contact</div>
+                                <div class="contact">
+                                    <span>
+                                        <i class="fa fa-envelope"></i>|
+                                        <i class="fa fa-comments"></i>|
+                                        <i class="fa fa-phone"></i>415 123 3456
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div uib-dropdown dropdown-append-to-body>
+                            <a href="javascript:void(0)" uib-dropdown-toggle class="text-muted">
+                                <i class="fa fa-gear"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu bp-action-menu">
+                                <li><a>Edit</a></li>
+                                <li><a class="text-danger">Delete</a></li>
+                             </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="date-section">
+                    <div class="item">
+                        <div class="header">Date Est. to be on Project</div>
+                        <div class="value">Aug 23, 2015</div>
+                    </div>
+                    <div class="item">
+                        <div class="header">Bid Closing Date</div>
+                        <div class="value">Dec 6, 2015</div>
+                    </div>
+                    <div class="item">
+                        <div class="header">Submission Date</div>
+                        <div class="value">Dec 6, 2015</div>
                     </div>
                 </div>
-                <div class="row person-info-wrapper no-border">
-                    <div class="col-md-4 no-padding-left">
-                        <span class="document-title">Documents</span>
-                        <div class="table-responsive table-document">
-                            <table class="table">
-                                <thead>
-                                    <tr><th>Name</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="document in documents"><td>{{ document }}<i class="fa fa-download pull-right"></i></td></tr>
-                                </tbody>
-                            </table>
+
+                <div class="row">
+                    <div class="col-lg-4 documents-section">
+                        <h4>Documents</h4>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="item">
+                                <span class="name text-primary">Document Name.pdf</span>
+                                <span class="download pull-right"><i class="fa fa-download"></i></span>
+                            </div>
+                            <div class="item">
+                                <span class="name text-primary">Document Name.jpg</span>
+                                <span class="download pull-right"><i class="fa fa-download"></i></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 no-padding-left">
-                        <span class="document-title">Project Links</span>
-                        <div class="table-responsive table-document">
-                            <table class="table">
-                                <thead>
-                                    <tr><th>Name</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="link in projectLinks"><td>{{ link }}</td></tr>
-                                </tbody>
-                            </table>
+
+                    <div class="col-lg-4 plans-section">
+                        <h4>Plans</h4>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="item">
+                                <span class="name text-primary">Project Name Goes Here</span>
+                                <span class="download pull-right"><i class="fa fa-download"></i></span>
+                            </div>
+                            <div class="item">
+                                <span class="name text-primary">An Awesome Plan Name Here</span>
+                                <span class="download pull-right"><i class="fa fa-download"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 details-section">
+                        <h4>Details</h4>
+                        <div class="info">
+                            <div class="item">Aenean Lacina bibendum nulla sed consectetur</div>
+                            <div class="item">Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero</div>
+                            <div class="item">Aenean Lacina bibendum nulla sed consectetur</div>
                         </div>
                     </div>
                 </div>
@@ -144,84 +189,113 @@
         </div>
     </div>
 
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="row bids-package-table">
-            <div class="col-md-12">
-                <h3>Project Estimates</h3>
-                <div class="table-responsive">
-                    <table class="table table-condensed table-bordered">
-                        <thead>
+
+    <div class="row no-margin animated fadeInRight mt30">
+        <div class="col-lg-12">
+            <h3>Project Estimates</h3>
+
+            <div class="table-responsive">
+                <table class="table pe-table">
+                    <thead>
+                        <tr>
                             <th>Scope of Work</th>
                             <th>Quantity</th>
                             <th>Measurement</th>
                             <th>Material</th>
-                            <th>Material Link</th>
+                            <th>Materials Link</th>
                             <th>Details</th>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="row in projectEstimates">
-                                <td class="title">{{ row.scopeOfWork }}</td>
-                                <td>{{ row.quantity }}</td>
-                                <td>{{ row.measurement }}</td>
-                                <td>{{ row.material }}</td>
-                                <td class="title">{{ row.materialLink }}</td>
-                                <td>{{ row.details }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in projectEstimates">
+                            <td class="sow">{{ row.scopeOfWork }}</td>
+                            <td>{{ row.quantity }}</td>
+                            <td>{{ row.measurement }}</td>
+                            <td>{{ row.material }}</td>
+                            <td class="material-links">{{ row.materialLink }}</td>
+                            <td>{{ row.details }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
         </div>
     </div>
 
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="row cost-schedule-table">
-            <div class="col-md-12">
-                <h3>Cost & Schedule breakdown</h3>
-                <div class="table-responsive">
-                    <table class="table table-condensed table-bordered">
-                        <thead>
+
+    <div class="row no-margin animated fadeInRight mt30">
+        <div class="col-lg-12">
+            <h3>Cost & Schedule Breakdown</h3>
+
+            <div class="table-responsive">
+                <table class="table csb-table">
+                    <thead>
+                        <tr>
                             <th>Scope of Work</th>
                             <th>Cost Code</th>
-                            <th>Phase/Subphase</th>
+                            <th>Phase/SubPhase</th>
                             <th>Duration</th>
                             <th>Labor</th>
                             <th>Material</th>
                             <th>Equipment</th>
-                            <th>Misc</th>
+                            <th>General</th>
                             <th>Total</th>
                             <th class="small">Require Selection</th>
-                            <th class="small">Responsible to Selection</th>
-                            <th class="small">Require Order</th>
                             <th class="small">Responsible to Select</th>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="row in costScheduledBreakdown">
-                                <td><span class="scope-title">{{ row.scopeOfWork.title }}</span><br/><span class="scope-division">{{ row.scopeOfWork.division }}</span></td>
-                                <td><span class="costcode">{{ row.costCode.code }}</span><span>{{ row.costCode.title }}</span></td>
-                                <td><span class="phase">{{ row.phase.parent }}</span><br/><span class="phase">{{ row.phase.sub }}</span></td>
-                                <td><span>{{ row.duration }}</span></td>
-                                <td><span>{{ row.labor }}</span></td>
-                                <td><span>{{ row.material }}</span></td>
-                                <td><span>{{ row.equipment }}</span></td>
-                                <td><span>{{ row.misc }}</span></td>
-                                <td><span>{{ row.total }}</span></td>
-                                <td><span><input type="checkbox" ng-model="row.requireSelection"></td>
-                                <td><span class="large-text">{{ row.responsibleToSelection }}</span></td>
-                                <td><span><input type="checkbox" ng-model="row.requireOrder"></td>
-                                <td><span class="large-text">{{ row.responsibleToSelection2 }}</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                            <th class="small">Require Order</th>
+                            <th class="small">Responsible to Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in costScheduledBreakdown">
+                            <td class="sow"><span>{{ row.scopeOfWork.title }}</span><br/><small>{{ row.scopeOfWork.division }}</small></td>
+                            <td class="cost-code"><label class="label label-info">{{ row.costCode.code }}</label><br/><span>{{ row.costCode.title }}</span></td>
+                            <td class="phase">{{ row.phase.parent }}<br/>{{ row.phase.sub }}</td>
+                            <td>{{ row.duration }}</td>
+                            <td>{{ row.labor | currency:'$':0}}</td>
+                            <td>{{ row.material | currency:'$':0}}</td>
+                            <td>{{ row.equipment | currency:'$':0}}</td>
+                            <td>{{ row.misc | currency:'$':0}}</td>
+                            <td>{{ row.total | currency:'$':0}}</td>
+                            <td>
+                                <div class="checkbox checkbox-inline">
+                                    <input type="checkbox" ng-model="row.requireSelection">
+                                    <label>&nbsp;</label>
+                                </div>
+                            </td>
+                            <td class="text-regular">{{ row.responsibleToSelection }}</td>
+                            <td>
+                                <div class="checkbox checkbox-inline">
+                                    <input type="checkbox" ng-model="row.requireOrder">
+                                    <label>&nbsp;</label>
+                                </div>
+                            </td>
+                            <td class="text-regular">{{ row.responsibleToSelection2 }}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="8"></td>
+                            <td colspan="5">
+                                Total<br/>
+                                <span class="text-info">$1,109,300.00</span>
+                            </td>
+
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
-        <div class="row">
-            <div class="pull-right" uib-dropdown dropdown-append-to-body>
-                <button type="button" class="btn btn-success btn-lg action-button" uib-dropdown-toggle>
-                    <span class="btn-text">Actions</span><span class="fa fa-angle-down"></span>
+    </div>
+
+
+    <div class="row no-margin animated fadeInRight mb30">
+        <div class="col-lg-12 text-right action-button">
+            <div class="dropdown" uib-dropdown dropdown-append-to-body>
+                <button type="button" class="btn btn-primary btn-lg" uib-dropdown-toggle>
+                    Actions <i class="fa fa-chevron-down"></i>
                 </button>
-                <ul class="uib-dropdown-menu dropdown-menu-right action-menu bid-package-dropdown-menu" role="menu">
+                <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu bp-action-menu" role="menu">
                     <li><a href="">Save</a></li>
                     <li><a href="">Submit</a></li>
                     <li><a href="">Award</a></li>
@@ -231,16 +305,17 @@
         </div>
     </div>
 
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <uib-tabset>
-            <uib-tab heading="Comments">
-                <div ng-include="'partials/bids/package/comments.html'"></div>
-            </uib-tab>
-            <uib-tab heading="Access">Access</uib-tab>
-            <uib-tab heading="Workflow">Workflow</uib-tab>
-            <uib-tab heading="Attachments">Attachments</uib-tab>
-        </uib-tabset>
+    <div class="row no-margin animated fadeInRight bp-tabs-section">
+        <div class="bp-tabs-content">
+            <uib-tabset>
+                <uib-tab heading="Comments">
+                    <div ng-include="'partials/bids/package/comments.html'"></div>
+                </uib-tab>
+                <uib-tab heading="Access">Access</uib-tab>
+                <uib-tab heading="Activity">Activity</uib-tab>
+                <uib-tab heading="Attachments">Attachments</uib-tab>
+            </uib-tabset>
+        </div>
     </div>
+    <!-- Main Content -->
 </div>
-
-
