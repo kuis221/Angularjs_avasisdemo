@@ -1,0 +1,118 @@
+<div class="procurement-create">
+    <div class="row page-detail-header procurement-create-header">
+        <div class="col-sm-1 no-padding-horizontal">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="procurement.main">
+                        Close <i class="fa fa-caret-right"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-11">
+            <div class="row pc-header-title">
+                <div class="col-md-8">
+                    <h2 class="heading">Create New Procurement</h2>
+                    <input type="text" placeholder="This is My Procurement Name">
+                    <div class="mt10 text-primary sub-title">
+                        Anderson Perkins LTD Shipping Center
+                    </div>
+                    <div class="text-muted small">1796 Prospective Avenue</div>
+                    <div class="text-muted small">Park City, Utah 84605</div>
+                </div>
+                <div class="col-md-4 additional-info">
+                    <div class="details">
+                        <span class="more-info-name">Procurement #</span>
+                        <span class="more-info-value"><span class="pc-info-title">{{ procurementNumber }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">Date initiated</span>
+                        <span class="more-info-value"><span class="pc-info-date">{{ dateInit }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">initiated by</span>
+                        <span class="more-info-value"><span class="pc-info-date">{{ creator }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">Status</span>
+                        <span class="more-info-value"><span class="pc-info-status text-success">{{ procurementStatus }}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row wrapper wrapper-content animated fadeInRight">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row mt20 form-group">
+                    <div class="col-md-2">
+                        <label for="">Type of Procurement</label>
+                        <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Category</label>
+                        <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Location</label>
+                        <input type="text" class="form-control input-lg label-default">
+                    </div>
+                </div>
+
+                <div class="mt20 form-group">
+                    <label for="">Location</label>
+                    <input type="text" class="form-control input-lg label-default">
+                </div>
+
+                <div class="row mt20 form-group">
+                    <div class="col-md-2">
+                        <label for="">Scope of Work</label>
+                        <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Due Date</label>
+                        <input type="text" value="Aug 28, 2015" class="form-control input-lg label-default">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Selection By</label>
+                        <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Due Date</label>
+                        <input type="text" value="Aug 28, 2015" class="form-control input-lg label-default">
+                    </div>
+                </div>
+
+                <div class="row mt20 form-group">
+                    <div class="col-md-2">
+                        <label for="">Approved By</label>
+                        <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Due Date</label>
+                        <input type="text" value="Aug 28, 2015" class="form-control input-lg label-default">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Order by</label>
+                        <ui-select ng-select="changeOption()" placeholder="Choose" selected-item="process.scope_of_work" options="scopeOfWorks"></ui-select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="">Due Date</label>
+                        <input type="text" value="Aug 28, 2015" class="form-control input-lg label-default">
+                    </div>
+                </div>
+                <div class="text-primary mt20">
+                    Less Options
+                </div>
+                <hr>
+
+                <div class="pull-right">
+                    <a class="btn btn-lg btn-info">Save as Draft</a>
+                    <a class="btn btn-lg btn-primary">Create</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
