@@ -484,7 +484,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 }]);
 
 app.run (["$rootScope", function($rootScope) {
-    $rootScope.$on('$stateChangeStart', function(e, to) {
+    $rootScope.$on('$stateChangeSuccess', function(e, to) {
         if (!_.isUndefined(to.data)) {
             $rootScope.isHeaderHidden = to.data.isHeaderHidden;
         } else {
