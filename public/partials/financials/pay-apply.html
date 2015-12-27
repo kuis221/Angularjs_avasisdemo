@@ -1,67 +1,71 @@
 <div class="animated FadeInRight">
     <div class="payapply-wrapper">
-        <div class="inspections-charts">
-            <div class="row payapply-head">
-                <div class="normal">
-                    <h5>Payment Applications Submitted</h5>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <span>Count</span>
-                            <p>144</p>
-                        </div>
-                        <div class="col-md-9">
-                            <span>Amount</span>
-                            <p>$123,456.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="normal">
-                    <h5>Payment Applications in Process</h5>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <span>Count</span>
-                            <p>91</p>
-                        </div>
-                        <div class="col-md-9">
-                            <span>Amount</span>
-                            <p>$123,456.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="normal">
-                    <h5>Payment Applications Complete</h5>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <span>Count</span>
-                            <p>91</p>
-                        </div>
-                        <div class="col-md-9">
-                            <span>Amount</span>
-                            <p>$123,456.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="normal">
-                    <h5>Items Requiring My Approval</h5>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <span>Count</span>
-                            <p>91</p>
-                        </div>
-                        <div class="col-md-9">
-                            <span>Amount</span>
-                            <p>$123,456.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="normal no-r-pad">
-                    <div class="btns">
-                        <a href="#" class="btn btn-success btn-lg btn-bids" data-toggle="dropdown">
-                            Review Pay Application
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right action-menu" role="menu">
-                        </ul>
-                    </div>
+        <div class="row payapply-head border-bottom">
+            <div class="col-lg-7">
+                <table class="table no-border">
+                    <tr>
+                        <td>
+                            <div ui-arc-chart rect-width="100" rect-height="100" radius="38" pen-width="8" chart-data="sowData"></div>
+                        </td>
+                        <td>
+                            <div class="font-bold">TOTAL PAYMENT APPLICATIONS</div>
+                            <div class="font-regular value">$1,234</div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="label label-primary">&nbsp;</div>
+                                    <small>PAYMENT APPLICATIONS IN PROCESS</small>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="text-muted font-regular">Count</div>
+                                            <div class="value font-regular">8</div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="text-muted font-regular">Amount</div>
+                                            <div class="value font-regular">$2,000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="label label-success">&nbsp;</div>
+                                    <small>PAYMENT APPLICATIONS COMPLETED</small>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="text-muted font-regular">Count</div>
+                                            <div class="value font-regular">11</div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="text-muted font-regular">Amount</div>
+                                            <div class="value font-regular">$2,000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-5">
+                <div class="panel panel-default mt20">
+                    <table class="table no-border">
+                        <tr>
+                            <td>
+                                <small>ITEMS REQUIRING MY ACTIONS</small>
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <div class="text-muted font-regular">Count</div>
+                                        <div class="value font-regular">11</div>
+                                    </div>
+                                    <div class="pull-left pl20">
+                                        <div class="text-muted font-regular">Amount</div>
+                                        <div class="value font-regular">$2,000,000</div>
+                                    </div>
+                                </div>    
+                            </td>
+                            <td style="vertical-align: middle">
+                                <a class="btn btn-primary btn-lg">Review Pay Applications</a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

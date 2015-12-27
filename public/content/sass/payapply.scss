@@ -7,31 +7,12 @@
 }
 
 .payapply-head {
-    .normal {
-        width: 20%;
-        float: left;
-        padding-right: 10px;
-
-        h5 {
-            font-family: "AvenirNextLTPro-Demi";
-            font-size: 12px;
-            color: #808080;
-            margin-bottom: 5px;
-        }
-        span {
-            font-family: "AvenirNextLTPro-Medium";
-            font-size: 11px;
-            color: #808080;
-        }
-        p {
-            font-family: "AvenirNextLTPro-Medium";
-            font-size: 14px;
-            color: #4a4a4a;
-        }
-        .btns > a {
-            width: 200px;
-            margin-top: 15px;
-        }
+    * {
+        line-height: 22px;
+    }
+    .value {
+        font-size: 15px;
+        line-height: 24px;
     }
 }
 

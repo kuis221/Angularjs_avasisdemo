@@ -1,7 +1,15 @@
 app.controller('PayApplyCtrl' ,
     ['$scope', '$state', '$stateParams', '$timeout', function ($scope, $state, $stateParams, $timeout) {
         $scope.$parent.setCurrentTab($state.current.name);
-
+        $scope.sowData = [
+            {
+                value: 60,
+                color: "#79c485",
+                text: "60%",
+                font: '18px AvenirNextLTPro-Regular'
+            },
+        ];
+        
         if ($stateParams.initialize) {
             $timeout(function() {
                 $scope.$parent.stats = {
