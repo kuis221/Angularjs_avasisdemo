@@ -56,7 +56,7 @@
             </div>
             <hr>
 
-            <div class="mt20 p20 mb20" id="schedule-slider">
+            <div class="mt20 p20 mb20" id="schedule-slider-wrapper">
                 <table class="table no-border">
                     <tr>
                         <td width="{{slider.min}}%">
@@ -71,6 +71,11 @@
                         </td>
                     </tr>
                 </table>
+                <div class="current-date" style="left: 50%;">Aug 17<br>2015</div>
+                <div class="current-date-status" style="left: 50%;">
+                    Current Date
+                    <div class="text-danger">3 days left</div>
+                </div>
                 <rzslider
                     class="schedule-slider"
                     rz-slider-tpl-url="partials/schedules/details/schedule-overview-slider.html"
@@ -83,8 +88,11 @@
                             Original<br>Start Date
                         </td>
                         <td width="{{slider.max-slider.min}}%">
-                            <span class="pull-left">Actual Start<br>1 day late</span>
-                            <span class="pull-right text-right">Estimated<br>4 days early</span>
+                            <div class="pull-left">
+                                Actual Start
+                                <div class="text-danger">1 day late</div>
+                            </div>
+                            <div class="pull-right text-right">Estimated<br>4 days early</div>
                         </td>
                         <td class="text-right">
                             Original<br>Completion

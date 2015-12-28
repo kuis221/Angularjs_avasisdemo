@@ -179,6 +179,15 @@ table.no-border > th, table.no-border td {
   background: #f5f5f5;
   padding: 10px 20px; }
 
+#schedule-slider-wrapper {
+  position: relative; }
+  #schedule-slider-wrapper .current-date {
+    position: absolute;
+    top: 24px; }
+  #schedule-slider-wrapper .current-date-status {
+    position: absolute;
+    bottom: 24px; }
+
 rzslider.schedule-slider {
   margin-top: 24px; }
   rzslider.schedule-slider .rz-current-pointer {

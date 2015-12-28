@@ -226,6 +226,18 @@ table.no-border {
     }
 }
 
+#schedule-slider-wrapper {
+    position: relative;
+
+    .current-date {
+        position: absolute;
+        top: 24px;
+    }
+    .current-date-status {
+        position: absolute;
+        bottom: 24px;
+    }
+}
 rzslider.schedule-slider {
     margin-top: 24px;
     .rz-current-pointer {
