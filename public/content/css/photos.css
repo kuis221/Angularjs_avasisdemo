@@ -117,11 +117,11 @@
     border-width: 2px;
     background-color: #f9f9f9;
     position: relative; }
-    .photos .panel-body .photo .thumbnail input[type=checkbox] {
+    .photos .panel-body .photo .thumbnail .checkbox-inline {
       position: absolute;
-      left: 10px;
-      top: 10px;
-      z-index: 99; }
+      z-index: 99;
+      right: 0px;
+      top: 10px; }
     .photos .panel-body .photo .thumbnail img {
       position: relative;
       top: 50%;

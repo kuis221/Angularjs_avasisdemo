@@ -162,11 +162,11 @@
           background-color: #f9f9f9;
           position: relative;
 
-          input[type=checkbox] {
-              position: absolute;
-              left: 10px;
-              top: 10px;
-              z-index: 99;
+          .checkbox-inline {
+            position: absolute;
+            z-index: 99;
+            right: 0px;
+            top: 10px;
           }
 
           img {
