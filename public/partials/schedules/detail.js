@@ -201,4 +201,32 @@ app.controller('ScheduleDetailCtrl',
 
             });
         }
+
+        $scope.showAddTeamMemberModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/team-members/invite-modal.html',
+                controller: 'TeamMembersInviteCtrl',
+                windowClass: 'tm-modal-main'
+            });
+        }
+        $scope.showAddActionItemModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/action-items/gai-new-modal.html',
+                controller: 'GAINewModalCtrl',
+                windowClass: 'gai-modal'
+            });
+        }
+        $scope.showAddDocumentModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/documents/upload-modal.html',
+                controller: 'UploadDocumentModalCtrl',
+            });
+        }
+        $scope.showAddPhotoModal = function() {
+            var modalInstance = $uibModal.open({
+                templateUrl: 'partials/photos/upload-modal.html',
+                controller: 'PhotoUploadModalCtrl',
+                windowTopClass: 'drag-drop'
+            });
+        }
     }]);
