@@ -104,10 +104,27 @@
     </div>
 
     <div id="schedule-notes">
-        <div class="title">Add Notes</div>
-        <textarea rows="5" class="mt10 label-default form-control" placeholder="Provide any additional information here"></textarea>
+        <div class="title">Discussion Board</div>
+        <table class="table">
+            <tr ng-repeat="comment in comments">
+                <td><img ng-src="{{comment.avatar}}" class="img-circle" width="40px"></td>
+                <td class="pl0">
+                    <div class="clearfix">
+                        <div class="pull-left text-primary">{{comment.created_by}}</div>
+                        <div class="pull-right small text-muted">{{comment.created_at}}</div>
+                    </div>
+                    <div class="text-muted font-medium">{{comment.body}}</div>
+                </td>
+            </tr>
+        </table>
+        <textarea rows="3" class="mt10 mb10 label-default form-control" placeholder="Provide any additional information here"></textarea>
+        <div class="text-right">
+            <a class="btn btn-success btn-md" ng-click="addComment()">
+                Send
+            </a>
+        </div>
     </div>
-
+    <hr>
     <div id="processor-list" class="mt20">
         <div class="clearfix">
             <div class="pull-left title">Process List</div>
