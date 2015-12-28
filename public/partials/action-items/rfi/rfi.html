@@ -1,0 +1,295 @@
+<div class="row page-detail-header">
+    <div class="col-md-1 no-padding-horizontal">
+        <div class="closeBox">
+            <p>
+                <a ui-sref="action-items.main">
+                    Close <i class="fa fa-caret-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="row page-detail-header-wrapper">
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading">RFI</h2>
+                            <ul class="topSubtitle">
+                                <li>
+                                    <a href="#">Wilmington 47 <i class="ace-icon fa fa-angle-down"></i></a>
+                                </li>
+                                <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="row mt30">
+                    <div class="col-md-3 col-sm-6">
+                        <span class="action-item-text">TOTAL: {{ rfi.total }}</span>
+                        <div class="action-item-count-info">
+                            <span class="label label-green">&nbsp;</span>
+                            <span class="count">{{ rfi.green }}</span>
+                            <span class="label label-orange">&nbsp;</span>
+                            <span class="count">{{ rfi.orange }}</span>
+                            <span class="label label-red">&nbsp;</span>
+                            <span class="count">{{ rfi.red }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="action-completed-chart">
+                            <div sparkline spark-data="[rfi.completed.done, rfi.completed.total-rfi.completed.done]" spark-options="pieOptions"></div>
+                        </div>
+                        <div>
+                            <span class="action-item-text">{{ round(rfi.completed.done / rfi.completed.total * 100) }}% COMPLETED</span><br>
+                            <span class="action-item-value">{{ rfi.completed.done }}</span>
+                            <span class="action-item-of">of</span>
+                            <span class="action-item-value">{{ rfi.completed.total }} items</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-5 no-padding-right">
+                                <div class="">
+                                    <span class="action-item-text">ITEMS ASSIGNED TO ME</span><br>
+                                    <span class="action-item-value">
+                                        {{ rfi.assignedMe.green.total + rfi.assignedMe.orange.total + rfi.assignedMe.red.total }} Items
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="progress progress-medium">
+                                            <div class="progress-bar progress-bar-success"
+                                                 style="width: {{rfi.assignedMe.green.done / rfi.assignedMe.green.total * 100}}%;">
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                        {{ rfi.assignedMe.green.total }} items
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="progress progress-medium">
+                                            <div class="progress-bar progress-bar-warning"
+                                                 style="width: {{rfi.assignedMe.orange.done / rfi.assignedMe.orange.total * 100}}%;">
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                        {{ rfi.assignedMe.orange.total }} items
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                        <div class="progress progress-medium">
+                                            <div class="progress-bar progress-bar-danger"
+                                                 style="width: {{rfi.assignedMe.red.done / rfi.assignedMe.red.total * 100}}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 action-item-progress-text">
+                                        {{ rfi.assignedMe.red.total }} items
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="btns mt25">
+                    <a class="btn btn-success btn-lg">
+                        <i class="fa fa-plus"></i> Add New
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated">
+    <div class="row rfi-table">
+        <div class="col-md-12">
+            <h3>Actions Required by Me</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <th class="flag"></th>
+                        <th class="title">Title</th>
+                        <th class="due-date">Due Date</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="initiator">Initiator</th>
+                        <th class="sow">SOW</th>
+                        <th class="status">Status</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in rfi.listRequiredByMe">
+                        <td class="flag">
+                            <span>
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                            </span>
+                        </td>
+                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                        <td class="due-date">{{ row.due_date }}</td>
+                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                        <td class="sow">{{ row.sow }}</td>
+                        <td class="status">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'pending'}">
+                                {{ row.status[0] }}
+                            </span><br>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100  }}% Completed</small>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row rfi-table">
+        <div class="col-md-12">
+            <h3>Actions Required by Others</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <th class="flag"></th>
+                        <th class="title">Title</th>
+                        <th class="due-date">Due Date</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="initiator">Initiator</th>
+                        <th class="sow">SOW</th>
+                        <th class="status">Status</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in rfi.listRequiredByOthers">
+                        <td class="flag">
+                            <span>
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                            </span>
+                        </td>
+                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                        <td class="due-date">{{ row.due_date }}</td>
+                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                        <td class="sow">{{ row.sow }}</td>
+                        <td class="status">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'Pending'}">
+                                {{ row.status[0] }}
+                            </span><br>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100 }}% Completed</small>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row rfi-table">
+        <div class="col-md-12">
+            <h3>Drafts</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <th class="flag"></th>
+                        <th class="title">Title</th>
+                        <th class="due-date">Due Date</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="initiator">Initiator</th>
+                        <th class="sow">SOW</th>
+                        <th class="status">Status</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in rfi.listDrafts">
+                        <td class="flag">
+                            <span>
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                            </span>
+                        </td>
+                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                        <td class="due-date">{{ row.due_date }}</td>
+                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                        <td class="sow">{{ row.sow }}</td>
+                        <td class="status">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'Pending'}">
+                                {{ row.status[0] }}
+                            </span><br>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100 }}% Completed</small>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row rfi-table">
+        <div class="col-md-12">
+            <h3>Completed</h3>
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <th class="flag"></th>
+                        <th class="title">Title</th>
+                        <th class="due-date">Due Date</th>
+                        <th class="responsible">Responsible</th>
+                        <th class="initiator">Initiator</th>
+                        <th class="sow">SOW</th>
+                        <th class="status">Status</th>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in rfi.listCompleted">
+                        <td class="flag">
+                            <span>
+                                <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
+                                <img ng-show="row.flag == 'yellow'" src="assets/img/yellow _icon.png">
+                                <img ng-show="row.flag == 'green'" src="assets/img/flag_green.png">
+                                <img ng-show="row.flag == 'canceled'" src="assets/img/failed.png">
+                                <img ng-show="row.flag == 'completed'" src="assets/img/completed.png">
+                                <img ng-show="row.flag == 'draft'" src="assets/img/edit_circle.png">
+                            </span>
+                        </td>
+                        <td class="title"><span>{{ row.title }}<span><br><small>{{ row.sTitle }}</small></td>
+                        <td class="due-date">{{ row.due_date }}</td>
+                        <td class="responsible"><a href="#">{{ row.responsible.name }}</a><br><small>{{ row.responsible.company }}</small></td>
+                        <td class="initiator"><a href="#">{{ row.initiator.name }}</a><br><small>{{ row.initiator.company }}</small></td>
+                        <td class="sow">{{ row.sow }}</td>
+                        <td class="status">
+                            <span class="label" ng-class="{'in-process': row.status[0] == 'In Process',
+                                                           'draft': row.status[0] == 'Draft',
+                                                           'pending': row.status[0] == 'Pending'}">
+                                {{ row.status[0] }}
+                            </span><br>
+                            <small ng-show="row.status[1] != '-'">{{ row.status[1] * 100 }}% Completed</small>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

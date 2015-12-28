@@ -191,6 +191,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'General Action Items'
             }
         })
+        .state('action-items.rfi', {
+            url: '/rfi',
+            templateUrl: "partials/action-items/rfi/rfi.html",
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'RFI'
+            }
+        })
         .state('action-items.change-order-new', {
             url: '/change-order-new',
             templateUrl: "partials/action-items/change-order/new.html",
