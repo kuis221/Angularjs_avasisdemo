@@ -91,7 +91,7 @@ app.controller('ActionItemsCtrl',
         };
 
         $scope.rfi = {
-            state: "action-items.rfi",
+            state: "action-items.rfi.main",
             title: "RFI",
             total: 36,
             green: 15,

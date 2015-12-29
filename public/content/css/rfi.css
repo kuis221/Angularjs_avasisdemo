@@ -77,3 +77,159 @@ th.initiator {
 
 .rfi-table td.flag span {
   margin: 4px; }
+
+.rfi-new-wrapper {
+  padding-top: 0;
+  margin-bottom: 0; }
+  .rfi-new-wrapper .rfi-page-info {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8; }
+  .rfi-new-wrapper .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center; }
+  .rfi-new-wrapper .rfi-page-title {
+    margin-top: 60px;
+    width: calc(100% - 100px); }
+    .rfi-new-wrapper .rfi-page-title h2 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 27px;
+      margin-top: 0px; }
+    .rfi-new-wrapper .rfi-page-title input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      width: 100%;
+      font-size: 17px; }
+    .rfi-new-wrapper .rfi-page-title .project-info h3 {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 20px; }
+    .rfi-new-wrapper .rfi-page-title .project-info span {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px; }
+  .rfi-new-wrapper .rfi-info {
+    color: #4a4a4a; }
+    .rfi-new-wrapper .rfi-info .row span:first-child, .rfi-new-wrapper .rfi-info .row div:first-child {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-family: AvenirNextLTPro-Demi; }
+    .rfi-new-wrapper .rfi-info .row span:last-child {
+      font-family: AvenirNextLTPro-Regular; }
+  .rfi-new-wrapper .info-section {
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #eee; }
+    .rfi-new-wrapper .info-section a.add {
+      color: #3aabd5; }
+    .rfi-new-wrapper .info-section span.company {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 15px;
+      color: #4a4a4a; }
+    .rfi-new-wrapper .info-section h5 {
+      margin-bottom: 2sspx; }
+    .rfi-new-wrapper .info-section .reference {
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 3px; }
+      .rfi-new-wrapper .info-section .reference .rfi-file-dropzone .dropzone {
+        min-height: 80px;
+        margin-top: 0px !important;
+        padding: 0px; }
+      .rfi-new-wrapper .info-section .reference .rfi-file-dropzone {
+        border: 1px dashed #3aabd5;
+        position: relative; }
+      .rfi-new-wrapper .info-section .reference .rfi-file-dropzone .dropzone .dz-default.dz-message {
+        background-image: url("/assets/img/financials/dropzone.png");
+        background-position: left;
+        background-size: 45px;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: calc(45% - 200px);
+        height: 100%; }
+      .rfi-new-wrapper .info-section .reference .rfi-file-dropzone .dropzone-title {
+        margin-left: calc(45% - 130px);
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%; }
+      @media (max-width: 768px) {
+        .rfi-new-wrapper .info-section .reference .rfi-file-dropzone .dropzone .dz-default.dz-message {
+          margin-left: 10%; }
+        .rfi-new-wrapper .info-section .reference .rfi-file-dropzone .dropzone-title {
+          margin-left: calc(10% + 55px); } }
+    .rfi-new-wrapper .info-section textarea {
+      padding: 15px;
+      background-color: #f9f9f9;
+      resize: none;
+      border-radius: 3px;
+      color: #4a4a4a; }
+      .rfi-new-wrapper .info-section textarea:hover {
+        border: 1px solid #eee; }
+      .rfi-new-wrapper .info-section textarea:focus, .rfi-new-wrapper .info-section textarea:active {
+        background-color: #fff;
+        border: 1px solid #eee; }
+  .rfi-new-wrapper .rfi-tabs-section {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 30px;
+    background-color: #eee; }
+    .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content {
+      border: 1px solid #eee;
+      background-color: #f9f9f9; }
+      .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .nav-tabs {
+        border-bottom: 1px solid #eee; }
+        .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .nav-tabs > li > a {
+          font-family: AvenirNextLTPro-Medium;
+          font-size: 13px;
+          color: #6c6c6c;
+          min-width: 110px;
+          text-align: center;
+          padding: 15px 30px;
+          border-radius: 0;
+          border-top: 0; }
+        .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .nav-tabs > li:first-child > a {
+          border-left: 0; }
+        .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .nav-tabs > li.active a {
+          color: #e25c5c;
+          background: white;
+          border-bottom: 1px solid white; }
+      .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .tab-content {
+        border: 0; }
+        .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .tab-content .comments-wrapper .comment {
+          position: relative;
+          font-size: 13px;
+          margin-bottom: 15px;
+          font-family: AvenirNextLTPro-Regular; }
+          .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .tab-content .comments-wrapper .comment > div {
+            display: inline-block; }
+          .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .tab-content .comments-wrapper .comment .author {
+            font-size: 13px;
+            font-family: AvenirNextLTPro-Demi; }
+          .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .tab-content .comments-wrapper .comment .edit {
+            position: absolute;
+            right: 20px;
+            top: 4px; }
+            .rfi-new-wrapper .rfi-tabs-section .rfi-tabs-content .tab-content .comments-wrapper .comment .edit:hover {
+              cursor: pointer; }
+    .rfi-new-wrapper .rfi-tabs-section h3 {
+      margin-top: 20px;
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 13px; }
+    .rfi-new-wrapper .rfi-tabs-section textarea {
+      padding: 15px;
+      border-radius: 3px;
+      color: #4a4a4a;
+      background-color: #f9f9f9; }
+      .rfi-new-wrapper .rfi-tabs-section textarea:active, .rfi-new-wrapper .rfi-tabs-section textarea:focus {
+        background-color: #fff;
+        border-color: #eee; }
+  .rfi-new-wrapper h3 {
+    font-family: AvenirNextLTPro-Medium;
+    font-size: 17px; }

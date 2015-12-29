@@ -193,11 +193,38 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         })
         .state('action-items.rfi', {
             url: '/rfi',
+            abstract: true,
+            template: "<ui-view></ui-view>",
+            controller: "ActionItemsCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'RFI'
+            }
+        })
+        .state('action-items.rfi.main', {
+            url: '/',
             templateUrl: "partials/action-items/rfi/rfi.html",
             controller: "ActionItemsCtrl",
             data: {
                 isHeaderHidden: true,
                 pageName: 'RFI'
+            }
+        })
+        .state('action-items.rfi.new', {
+            url: '/new',
+            templateUrl: "partials/action-items/rfi/new.html",
+            controller: "RFICtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Create New RFI'
+            }
+        })
+        .state('action-items.rfi.in-process', {
+            url: '/new',
+            templateUrl: "partials/action-items/rfi/in-process.html",
+            controller: "RFICtrl",
+            data: {
+                isHeaderHidden: true,
             }
         })
         .state('action-items.change-order-new', {

@@ -1,0 +1,153 @@
+<div class="rfi-new-wrapper">
+    <!-- Top Nav bar -->
+    <div class="row rfi-page-info">
+        <div class="pull-left pl0 pr0">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="action-items.rfi.main">Close <i class="fa fa-caret-right"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pull-left rfi-page-title">
+            <div class="col-md-7 pl20">
+                <h2 class="text-default">Create New RFI</h2>
+                <input type="text" placeholder="Enter RFI Name"></input>
+                <div class="project-info">
+                    <h3 class="text-primary">Anderson Perkins LTD Shipping Center</h3>
+                    <span class="text-muted">1796 Prospector Avenue<br/>Arlington, VA 90125</span>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="rfi-info">
+                    <div class="row">
+                        <span class="col-xs-9 text-right">RFI#</span>
+                        <span class="col-xs-3 text-left">
+                            <label class="label label-info">193</label>
+                        </span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Date Initiated</span>
+                        <span class="col-xs-3 text-left">8/23/14</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Initiated By</span>
+                        <span class="col-xs-3 text-left">Bruce Wayne</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Status</span>
+                        <span class="col-xs-3 text-left text-success">IN PROGRESS</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Top Nav bar -->
+
+    <div class="row no-margin animated fadeInRight mt30">
+        <div class="col-lg-12">
+            <div class="info-section">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <label>Recipient</label>
+                                        <ui-select options="users" placeholder="User Name"></ui-select>
+                                    </div>
+                                    <div class="col-md-5 mt25">
+                                        <h5>Company</h5>
+                                        <span class="company">ABC Inc</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <label>CC</label>
+                                        <ui-select options="users" placeholder="User Name"></ui-select>
+                                    </div>
+                                    <div class="col-md-5 mt25">
+                                        <h5>Company</h5>
+                                        <span class="company">ABC Inc</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-6">
+                                <a class="add" href="javascript:void(0)"><i class="fa fa-plus"></i> Add</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Dicipline</label>
+                                    <div>
+                                        <ui-select options="users" placeholder="Mechanical"></ui-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Scope of Work</label>
+                                    <div>
+                                        <ui-select options="users" placeholder="Choose"></ui-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-6">
+                                <a class="add" href="javascript:void(0)"><i class="fa fa-plus"></i> Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Description of Requested Information</label>
+                    <textarea class="form-control" placeholder="Provide any additional information here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Suggested Solution</label>
+                    <textarea class="form-control" placeholder="Provide any additional information here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Reference</label>
+                    <div class="reference">
+                        <label>Attachements</label>
+                        <div class="rfi-file-dropzone">
+                            <form class="mt30 dropzone"
+                                  enctype="multipart/form-data"
+                                  ng-dropzone dropzone="dropzone"
+                                  dropzone-config="dropzoneConfig"
+                                  event-handlers="dropzoneEventHandlers">
+                                <input name="file" class="hidden" type="file" multiple />
+                            </form>
+                            <div class="text-left dropzone-title">
+                                Drag and drop files here or <br class="visible-xs-inline" /><a class="mt20 btn-file-input">click here to browse for files</a>
+                            </div>
+                            <div id="upload-files-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 text-right mt25">
+            <button class="btn btn-info btn-lg">Save as Draft</button>
+            <button class="btn btn-primary btn-lg">Distribute</button>
+        </div>
+    </div>
+
+</div>
