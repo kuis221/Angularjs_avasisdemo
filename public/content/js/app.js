@@ -220,7 +220,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             }
         })
         .state('action-items.rfi.in-process', {
-            url: '/new',
+            url: '/in-process',
             templateUrl: "partials/action-items/rfi/in-process.html",
             controller: "RFICtrl",
             data: {

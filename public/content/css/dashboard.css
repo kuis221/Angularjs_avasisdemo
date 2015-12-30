@@ -43,7 +43,8 @@
   border: 1px solid #ececec;
   border-radius: 5px;
   margin-top: 0px;
-  height: auto; }
+  height: auto;
+  background-color: #fff; }
   .dash-wrapper .items-today table > thead > tr > th {
     border-bottom: 0px; }
   .dash-wrapper .items-today .td-number {

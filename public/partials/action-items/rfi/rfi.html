@@ -123,7 +123,7 @@
                         <th class="status">Status</th>
                     </thead>
                     <tbody>
-                      <tr ng-repeat="row in rfi.listRequiredByMe">
+                      <tr ng-repeat="row in rfi.listRequiredByMe" ng-click="go('action-items.rfi.in-process')">
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
@@ -169,7 +169,7 @@
                         <th class="status">Status</th>
                     </thead>
                     <tbody>
-                      <tr ng-repeat="row in rfi.listRequiredByOthers">
+                      <tr ng-repeat="row in rfi.listRequiredByOthers" ng-click="go('action-items.rfi.in-process')">
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
@@ -215,7 +215,7 @@
                         <th class="status">Status</th>
                     </thead>
                     <tbody>
-                      <tr ng-repeat="row in rfi.listDrafts">
+                      <tr ng-repeat="row in rfi.listDrafts" ng-click="go('action-items.rfi.in-process')">
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">
@@ -261,7 +261,7 @@
                         <th class="status">Status</th>
                     </thead>
                     <tbody>
-                      <tr ng-repeat="row in rfi.listCompleted">
+                      <tr ng-repeat="row in rfi.listCompleted" ng-click="go('action-items.rfi.in-process')">
                         <td class="flag">
                             <span>
                                 <img ng-show="row.flag == 'red'" src="assets/img/red_icon.png">

@@ -501,6 +501,10 @@ app.controller('ActionItemsCtrl',
             $state.go(state);
         }
 
+        $scope.go = function(state) {
+            $state.go(state);
+        }
+
         $scope.items.push($scope.gai);
         $scope.items.push($scope.rfi);
         $scope.items.push(changeOrder);

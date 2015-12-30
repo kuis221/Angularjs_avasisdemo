@@ -253,6 +253,213 @@ th.initiator {
         }
     }
 
+    h3 {
+        font-family: AvenirNextLTPro-Medium;
+        font-size: 17px;
+    }
+
+}
+
+.rfi-in-process-wrapper {
+
+    padding-top: 0;
+    margin-bottom: 0;
+
+    .rfi-page-info {
+        background: #fff none repeat scroll 0 0;
+        box-shadow: 1px 0 4px #d8d8d8;
+    }
+
+    .closeBox {
+        background: #000;
+        width: 100px;
+        padding: 110px 0;
+        text-align: center;
+    }
+
+    .rfi-page-title {
+        margin-top: 60px;
+        width: calc(100% - 100px);
+
+        h2 {
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 27px;
+            margin-top: 0px;
+        }
+
+        input {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            width: 100%;
+            font-size: 17px;
+        }
+
+        .project-info {
+            h3 {
+                font-family: "AvenirNextLTPro-Demi";
+                font-size: 16px;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+
+            span {
+                font-family: "AvenirNextLTPro-Demi";
+                font-size: 12px;
+            }
+        }
+    }
+
+    .rfi-info {
+        color: #4a4a4a;
+
+        .row {
+            span:first-child, div:first-child {
+                text-transform: uppercase;
+                font-size: 10px;
+                font-family: AvenirNextLTPro-Demi;
+            }
+
+            span:last-child {
+                font-family: AvenirNextLTPro-Regular;
+            }
+        }
+    }
+
+    .info-section {
+        padding: 25px;
+        background-color: #fff;
+        border: 1px solid #eee;
+
+        a.add {
+            color: #3aabd5;
+        }
+
+        .info {
+            .col-md-3 {
+
+                span.title {
+                    display: block;
+                }
+
+                span.text-default {
+                    font-family: AvenirNextLTPro-Regular;
+                }
+
+                @media(min-width: 992px) {
+                    &:not(:first-child) {
+                        border-left: 1px solid #eee;
+                        text-align: center;
+
+                        div {
+                            display: table;
+                            margin: auto;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                @media(max-width: 992px) {
+                    & {
+                        margin-bottom: 15px;
+                        text-align: left;
+                    }
+                }
+
+                a {
+                    color: #3aabd5;
+
+                    & + span {
+                        margin-left: 15px;
+                        font-family: AvenirNextLTPro-Regular;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        span.company {
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 15px;
+            color: #4a4a4a;
+        }
+
+        h5 {
+            margin-bottom: 2px;
+        }
+
+        span.date {
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 15px;
+        }
+
+        .reference {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+
+            .rfi-file-dropzone .dropzone {
+                min-height: 80px;
+                margin-top: 0px !important;
+                padding: 0px;
+            }
+
+            .rfi-file-dropzone {
+                border: 1px dashed #3aabd5;
+                position: relative;
+            }
+
+            .rfi-file-dropzone .dropzone .dz-default.dz-message {
+                background-image: url('/assets/img/financials/dropzone.png');
+                background-position: left;
+                background-size: 45px;
+                top: 0;
+                left: 0;
+                margin-right: 0;
+                margin-top: 0;
+                margin-left: calc(45% - 200px);
+                height: 100%;
+            }
+
+            .rfi-file-dropzone .dropzone-title {
+                margin-left: calc(45% - 130px);
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
+            @media (max-width: 768px) {
+                .rfi-file-dropzone .dropzone .dz-default.dz-message {
+                    margin-left: 10%;
+                }
+                .rfi-file-dropzone .dropzone-title {
+                    margin-left: calc(10% + 55px);
+                }
+            }
+        }
+
+        textarea {
+            padding: 15px;
+            background-color: #f9f9f9;
+            resize: none;
+            border-radius: 3px;
+            color: #4a4a4a;
+            font-family: AvenirNextLTPro-Regular;
+
+            &:hover {
+                border: 1px solid #eee;
+            }
+
+            &:focus, &:active {
+                background-color: #fff;
+                border: 1px solid #eee;
+            }
+        }
+    }
+
     .rfi-tabs-section {
         margin-left: -15px;
         margin-right: -15px;
