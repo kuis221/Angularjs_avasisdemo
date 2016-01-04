@@ -2,6 +2,10 @@
     font-size: 16px;
     line-height: 30px;
 }
+/* define sub-title since it is used often */
+.sub-title {
+    font-size: 14px;
+}
 
 table.no-border {
     & > th, td {
