@@ -82,14 +82,12 @@
             <thead>
                 <tr>
                     <th>Description</th>
-                    <th class="sow">Scope Of Work</th>
+                    <th class="sow">Cost Code</th>
                     <th>Loan Amount</th>
                     <th>Drawn to Date</th>
                     <th>Pending Draws</th>
                     <th>Amount Remaining to be Drawn</th>
-                    <th>% Drawn</th>
-                    <th>% Complete</th>
-                    <th>% Variance</th>
+                    <th>Drawn</th>
                     <th class="gear">
                         <div uib-dropdown dropdown-append-to-body>
                             <a href="javascript:void(0)" uib-dropdown-toggle class="text-muted">
@@ -125,12 +123,10 @@
                     <td><span>{{row.pending_draws | currency:'$':2}}</span></td>
                     <td><span>{{row.amount_remaining | currency:'$':2}}</span></td>
                     <td><span>{{row.percent_drawn}}%</span></td>
-                    <td><span>{{row.percent_complete}}%</span></td>
-                    <td><span>{{row.percent_variance}}%</span></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td colspan="10">
+                    <td colspan="8">
                         <a href="javascript:void(0)" class="text-primary add-line" ng-click="addLine()"><i class="fa fa-plus"></i>Add  Additional Line</a>
                     </td>
                 </tr>
@@ -155,14 +151,6 @@
                     <td>
                         <h4>Total</h4>
                         <span>$123,456,789.00</span>
-                    </td>
-                    <td>
-                        <h4>Total</h4>
-                        <span>52%</span>
-                    </td>
-                    <td>
-                        <h4>Total</h4>
-                        <span>52%</span>
                     </td>
                     <td colspan="2">
                         <h4>Total</h4>
