@@ -34,6 +34,19 @@ app.controller('ProjectsCtrl', function($scope, $state, $stateParams, $uibModal)
         });
     }
 
+    $scope.showInviteModal = function() {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'partials/team-members/invite-modal.html',
+            controller: 'TeamMembersInviteCtrl',
+            windowClass: 'tm-modal-main'
+        });
+
+        modalInstance.result.then(function (res) {
+        }, function () {
+
+        });
+    }
+
     /**
      * Data for Doughnut chart
      */
