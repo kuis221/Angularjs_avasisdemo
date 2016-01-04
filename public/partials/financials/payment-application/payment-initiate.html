@@ -1,5 +1,4 @@
 <div class="pi-page-wrapper mb30">
-    <!----==================TOP NAV BAR==================---->
     <div class="row bankbg">
         <div class="pull-left noPdingLeft noPdingRight">
             <div class="closeBox">
@@ -8,239 +7,169 @@
         </div>
         <div class="pull-left pi-page-title">
             <div class="row no-margin">
-                <div class="col-md-6">
-                    <h2 class="heading">Create New Pay Application</h2>
+                <div class="col-md-8">
+                    <h2 class="heading">New Pay Application</h2>
+                    <input type="text" class="app-name-input" placeholder="Enter Pay Application Name" />
                 </div>
-                <div class="col-md-6">
-                    <div class="pi-app-info">
+                <div class="col-md-4">
+                    <div class="mt30">
                         <div class="row">
-                            <span class="col-xs-8 text-right">Pay App#</span>
+                            <span class="col-xs-8 text-right small">PAY APPLICATION</span>
                             <span class="col-xs-4 text-left">
                                 <span class="label label-black">193</span>
                             </span>
                         </div>
                         <div class="row mt5">
-                            <span class="col-xs-8 text-right">INITIATED APPLICATION ON</span>
+                            <span class="col-xs-8 text-right small">DATE INITATED</span>
                             <span class="col-xs-4 text-left">8/23/15</span>
                         </div>
                         <div class="row mt5">
-                            <span class="col-xs-8 text-right">CREATED BY</span>
+                            <span class="col-xs-8 text-right small">INITIATED BY</span>
                             <span class="col-xs-4 text-left">Eric Hoffman</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row no-margin">
-                <div class="col-lg-12">
-                    <input type="text" class="app-name-input" placeholder="Name of Pay Application" />
-                </div>
-            </div>
         </div>
     </div>
-    <!----================== End  TOP NAV BAR==================---->
 
-    <!----================== Start Main content==================---->
-    <div class="row no-margin animated fadeInRight">
-        <div class="col-lg-12">
-            <div class="content-section">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <h3 class="section-title">Enter Pay Application Details</h3>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="pull-right pi-total-billing-items">
-                            <div class="pi-number-circle">2</div>
-                            <span class="text-primary"><a ng-click="showBillingItemsModal();">Saved Billing Items</a></span>
-                        </div>
-                    </div>
-                </div>
+    <div class="wrapper wrapper-content mb30 animated fadeInRight">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="sub-title">Billing Item #1</div>
 
-                <div class="row"><div class="col-md-12"><hr class="mt5" /></div></div>
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label>Project</label>
-                            <ui-select selected-item="selectedProject" options="projectList" placeholder="General"></ui-select>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label>Contract</label>
-                            <ui-select selected-item="selectedContract" options="contractList" placeholder="Select One"></ui-select>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label>Scope of Work</label>
-                            <ui-select selected-item="selectedScope" options="scopeList" placeholder="Select One"></ui-select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th></th>
-                                    <th>Contracted</th>
-                                    <th>%Completed/Incured</th>
-                                    <th>Earned Less Retainage</th>
-                                    <th>Amount Previously Paid</th>
-                                    <th>Invoiced Amount</th>
-                                    <th>Variance</th>
-                                    <th>Balance to Complete</th>
-                                </thead>
-                                <tbody>
-                                    <tr class="pi-normal-row">
-                                        <td>Labor</td>
-                                        <td>$</td>
-                                        <td>
-                                            <span class="pi-right-symbol-input">
-                                                <input type="text" ng-model="labor_incured" ui-percentage-mask="2" class="text-right" placeholder="%"></input>
-                                            </span>
-                                        </td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td>
-                                            <span class="pi-left-symbol-input">
-                                                <input type="text" ng-model="labor_invoice" ui-money-mask="2" placeholder="$"></input>
-                                            </span>
-                                        </td>
-                                        <td class="text-danger">$</td>
-                                        <td>$</td>
-                                    </tr>
-                                    <tr class="pi-normal-row">
-                                        <td>Material</td>
-                                        <td>$</td>
-                                        <td>
-                                            <span class="pi-right-symbol-input">
-                                                <input type="text" ng-model="material_incured" ui-percentage-mask="2" class="text-right" placeholder="%"></input>
-                                            </span>
-                                        </td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td>
-                                            <span class="pi-left-symbol-input">
-                                                <input type="text" ng-model="material_invoice" ui-money-mask="2" placeholder="$"></input>
-                                            </span>
-                                        </td>
-                                        <td class="text-danger">$</td>
-                                        <td>$</td>
-                                    </tr>
-                                    <tr class="pi-normal-row">
-                                        <td>Equipment</td>
-                                        <td>$</td>
-                                        <td>
-                                            <span class="pi-right-symbol-input">
-                                                <input type="text" ng-model="equipment_incured" ui-percentage-mask="2" class="text-right" placeholder="%"></input>
-                                            </span>
-                                        </td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td>
-                                            <span class="pi-left-symbol-input">
-                                                <input type="text" ng-model="equipment_invoice" ui-money-mask="2" placeholder="$"></input>
-                                            </span>
-                                        </td>
-                                        <td class="text-danger">$</td>
-                                        <td>$</td>
-                                    </tr>
-                                    <tr class="pi-total-row">
-                                        <td class="total">Totals</td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td>$</td>
-                                        <td class="text-danger">$</td>
-                                        <td>$</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td colspan="7">
-                                            <table class="table pi-total-table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div>Duration</div>
-                                                            <div class="subtotal-value">Days</div>
-                                                        </td>
-                                                        <td>
-                                                            <div>Retainage</div>
-                                                            <div class="subtotal-value">%</div>
-                                                        </td>
-                                                        <td>
-                                                            <div>Scheduled Completion</div>
-                                                            <div class="subtotal-value">Date</div>
-                                                        </td>
-                                                        <td>
-                                                            <div>Estimated Conpletion</div>
-                                                            <div class="subtotal-value">Date</div>
-                                                        </td>
-                                                        <td>
-                                                            <div>Variance</div>
-                                                            <div class="subtotal-value">Days</div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row pt15">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="form-group">
-                            <label>Additional Comments</label>
-                            <div>
-                                <textarea class="form-control pi-textarea" rows="2" placeholder="Provide any additional information here..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="form-group">
-                            <label>Billing Items</label>
-                            <div class="pi-file-dropzone">
-                                <form class="mt30 dropzone"
-                                      enctype="multipart/form-data"
-                                      ng-dropzone dropzone="dropzone"
-                                      dropzone-config="dropzoneConfig"
-                                      event-handlers="dropzoneEventHandlers">
-                                    <input name="file" class="hidden" type="file" multiple />
-                                </form>
-                                <div class="text-left dropzone-title">
-                                    <div>Drag and drop invoices, Required Documents or Photos here</div>
-                                    <a class="mt20 btn-file-input">or click here to browse for files</a>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Project</label>
+                                    <ui-select selected-item="selectedProject" options="projectList" placeholder="General"></ui-select>
                                 </div>
-                                <div id="upload-files-container"></div>
                             </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Contract</label>
+                                    <ui-select selected-item="selectedContract" options="contractList" placeholder="Select One"></ui-select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Scope of Work</label>
+                                    <ui-select selected-item="selectedScope" options="scopeList" placeholder="Select One"></ui-select>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-bottom billing-item-table">
+                            <thead>
+                                <th></th>
+                                <th>Labor</th>
+                                <th>Materials</th>
+                                <th>Equipment</th>
+                                <th>General</th>
+                                <th>TOTAL</th>
+                            </thead>
+                            <tbody>
+                                <tr class="text-muted">
+                                    <td>Contracted Amount</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">% Completed</td>
+                                    <td><input type="text" ng-model="completed_percent1" ui-percentage-mask="2" class="text-right input-sm label-default" placeholder="%"></td>
+                                    <td><input type="text" ng-model="completed_percent2" ui-percentage-mask="2" class="text-right input-sm label-default" placeholder="%"></td>
+                                    <td><input type="text" ng-model="completed_percent3" ui-percentage-mask="2" class="text-right input-sm label-default" placeholder="%"></td>
+                                    <td><input type="text" ng-model="completed_percent4" ui-percentage-mask="2" class="text-right input-sm label-default" placeholder="%"></td>
+                                    <td><input type="text" ng-model="completed_percent5" ui-percentage-mask="2" class="text-right input-sm label-default" placeholder="%"></td>
+                                </tr>
+                                <tr>
+                                    <td>Earned (less Retainage)</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                </tr>
+                                <tr>
+                                    <td>Previously Paid</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                </tr>
+                                <tr class="text-muted">
+                                    <td>Amount Due</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                </tr>
+                                <tr>
+                                    <td>Current Invoice For</td>
+                                    <td><input type="text" ng-model="invoice_amount1" ui-money-mask class="input-sm label-default" placeholder="$"></td>
+                                    <td><input type="text" ng-model="invoice_amount2" ui-money-mask class="input-sm label-default" placeholder="$"></td>
+                                    <td><input type="text" ng-model="invoice_amount3" ui-money-mask class="input-sm label-default" placeholder="$"></td>
+                                    <td><input type="text" ng-model="invoice_amount4" ui-money-mask class="input-sm label-default" placeholder="$"></td>
+                                    <td><input type="text" ng-model="invoice_amount5" ui-money-mask class="input-sm label-default" placeholder="$"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-muted">Variance</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                    <td class="text-danger">{{-123 | accounting}}</td>
+                                </tr>
+                                <tr class="text-muted">
+                                    <td>Balance to Complete</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                    <td>$123</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row clearfix p20">
+                        <div class="col-md-2">
+                            <div>Estimation Duration</div>
+                            <div class="text-muted font-medium">144 days</div>
+                        </div>
+                        <div class="col-md-1">
+                            <div>Retainage</div>
+                            <div class="text-muted font-medium">10%</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>Scheduled Completion</div>
+                            <div class="text-muted font-medium">Aug 23, 2015</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>Estimated Completion</div>
+                            <div class="text-muted font-medium">Aug 28, 2015</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>Varience</div>
+                            <div class="text-danger font-medium">5 days</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="row"><div class="col-md-12"><hr /></div></div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="pull-left pt15">
-                            <a ui-sref="payment-application.initiate" class="text-primary text-left"><i class="fa fa-plus"></i> Add Another Billing Item</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="pull-right">
-                            <button type="button" class="btn btn-lg btn-primary" ng-click="cancel()">Save For Later</button>
-                            <button type="button" class="btn btn-lg btn-success" ng-click="sendInvite()">Review & Finalize</button>
-                        </div>
-                    </div>
+                <div class="">
+                    <a ui-sref="payment-application.initiate" class="text-primary text-left"><i class="fa fa-plus"></i> Add Another Billing Item</a>
                 </div>
             </div>
         </div>
+        <div class="text-right">
+            <button type="button" class="btn btn-lg btn-info" ng-click="cancel()">Save as Draft</button>
+            <button type="button" class="btn btn-lg btn-primary" ng-click="sendInvite()">Review</button>
+        </div>
     </div>
-    <!----================== End Main content==================---->
 </div>
