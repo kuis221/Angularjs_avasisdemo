@@ -232,8 +232,26 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true,
             }
         })
-        .state('action-items.change-order-new', {
-            url: '/change-order-new',
+        .state('action-items.change-order', {
+            url: '/change-order',
+            abstract: true,
+            template: "<ui-view></ui-view>",
+            controller: "ActionItemsCtrl",
+            data: {
+                pageName: 'Change Order'
+            }
+        })
+        .state('action-items.change-order.main', {
+            url: '/',
+            templateUrl: "partials/action-items/change-order.html",
+            controller: "ActionItemsCtrl",
+            data: {
+                pageName: 'Change Orders',
+                isHeaderHidden: true
+            }
+        })
+        .state('action-items.change-order.new', {
+            url: '/new',
             templateUrl: "partials/action-items/change-order/new.html",
             controller: "ChangeOrderCtrl",
             data: {
