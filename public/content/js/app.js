@@ -412,6 +412,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'Create New Procurement'
             }
         })
+        .state('procurement.show', {
+            url:'/:id',
+            templateUrl: 'partials/procurement/show.html',
+            controller: 'ProcurementShowCtrl',
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Procurement Detail'
+            }
+        })
         .state('procurement.create', {
             url:'/create',
             templateUrl: 'partials/procurement/create.html',

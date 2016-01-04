@@ -207,14 +207,8 @@ textarea.pi-textarea {
 .pi-filter-section {
   margin-right: 40px; }
 
-.pi-page-wrapper table.pi-payment-data .pi-normal-row {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 14px; }
-
-.pi-page-wrapper table.pi-payment-data .pi-total-row {
-  font-family: "AvenirNextLTPro-Regular";
-  font-size: 15px;
-  font-weight: bold; }
+.pi-page-wrapper table.billing-item-table tr > td {
+  height: 60px; }
 
 .pi-summary-section {
   font-size: 15px;

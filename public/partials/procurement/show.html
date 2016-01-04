@@ -1,0 +1,203 @@
+<div class="procurement-create">
+    <div class="row page-detail-header procurement-create-header">
+        <div class="col-sm-1 no-padding-horizontal">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="procurement.main">
+                        Close <i class="fa fa-caret-right"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-11">
+            <div class="row pc-header-title">
+                <div class="col-md-8">
+                    <h2 class="heading">Procurement</h2>
+                    <input type="text" placeholder="This is My Procurement Name">
+                    <div class="mt10 text-primary sub-title">
+                        Anderson Perkins LTD Shipping Center
+                    </div>
+                    <div class="text-muted small">1796 Prospective Avenue</div>
+                    <div class="text-muted small">Park City, Utah 84605</div>
+                </div>
+                <div class="col-md-4 pt30 additional-info">
+                    <div class="details">
+                        <span class="more-info-name">Procurement #</span>
+                        <span class="more-info-value"><span class="pc-info-title">{{ procurementNumber }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">Date initiated</span>
+                        <span class="more-info-value"><span class="pc-info-date">{{ dateInit }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">initiated by</span>
+                        <span class="more-info-value"><span class="pc-info-date">{{ creator }}</span></span>
+                    </div>
+                    <div class="details">
+                        <span class="more-info-name">Status</span>
+                        <span class="more-info-value"><span class="pc-info-status text-success">{{ procurementStatus }}</span></span>
+                    </div>
+                    <div class="row mt5 details">
+                        <div class="col-md-6 text-right mt20 more-info-name">CURRENTLY RESPONSIBLE</div>
+                        <div class="col-md-6 text-left pl0">
+                            <ui-select options="users" ng-select="" selected-item="procurement.responsible"></ui>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row mt10">
+                    <div class="col-md-2 col-sm-3">
+                        <div class="text-muted font-medium">Type</div>
+                        <div class="sub-title">Solicitudin Orane</div>
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <div class="text-muted font-medium">Category</div>
+                        <div class="sub-title">Semida</div>
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <div class="text-muted font-medium">Location</div>
+                        <div class="sub-title">Kitchen</div>
+                    </div>
+                    <div class="pull-right text-right">
+                        <div class="btn-group" uib-dropdown>
+                            <a class="btn btn-transparent heading" uib-dropdown-toggle>
+                                <i class="fa fa-cog"></i>&nbsp;<i class="fa fa-angle-down"></i>
+                            </a>
+
+                            <ul class="uib-dropdown-menu dropdown-menu-right chevron-down-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a ng-click="">Option 1</a></li>
+                                <li role="menuitem"><a ng-click="">Option 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="font-medium">Description</div>
+                <div class="font-medium text-muted">Get the new pages in order</div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <table class="table no-border">
+                            <tr>
+                                <td style="padding-left: 0">
+                                    <div class="text-muted font-medium">Scope of Work</div>
+                                    <div class="text-primary sub-title">Bruce Wayne</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Due Date</div>
+                                    <div class="text-muted sub-title">Aug 29, 2015</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Selection By</div>
+                                    <div class="text-primary sub-title">Bob Jones</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Due Date</div>
+                                    <div class="text-muted sub-title">Aug 29, 2015</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Approval By</div>
+                                    <div class="text-primary sub-title">Eric Hoffman</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Due Date</div>
+                                    <div class="text-muted sub-title">Aug 29, 2015</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Order By</div>
+                                    <div class="text-primary sub-title">Kimball Frank</div>
+                                </td>
+                                <td>
+                                    <div class="text-muted font-medium">Due Date</div>
+                                    <div class="text-muted sub-title">Aug 28, 2015</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="sub-title">Materials</div>
+                <hr>
+                <div class="panel panel-default" ng-repeat="times in [1, 2]">
+                    <div class="panel-heading pt15 pb15">Option #{{$index+1}}</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <table class="table no-border">
+                                    <tr>
+                                        <td style="padding-left: 0">
+                                            <div class="text-muted font-medium">Material</div>
+                                            <div class="sub-title">Sollicitudin Orane</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-muted font-medium">SKU</div>
+                                            <div class="sub-title">Brown</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-muted font-medium">Quantity</div>
+                                            <div class="sub-title">81</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-muted font-medium">Measurement</div>
+                                            <div class="sub-title">1kg</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-muted font-medium">Price</div>
+                                            <div class="sub-title">$123,567.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-muted font-medium">Supplier</div>
+                                            <div class="text-primary sub-title">Eric Hoffman</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-muted font-medium">Files</div>
+                                            <div class="text-primary sub-title">2 attachments</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="font-medium">Description</div>
+                        <div class="font-medium text-muted">Get the new pages in order</div>
+                    </div>
+                </div>
+
+                <div class="sub-title"><a class="text-primary" ng-click=""><i class="fa fa-plus"></i> Add Another Option</a></div>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <a class="btn btn-lg btn-primary">
+                Actions <i class="fa fa-angle-down pl10" style="font-size: 17px;"></i>
+            </a>
+        </div>
+    </div>
+    <div class="bids-package-wrapper">
+        <div class="row wrapper wrapper-content animated fadeInRight bp-tabs-section" style="background: #eee">
+            <div class="bp-tabs-content">
+                <uib-tabset>
+                    <uib-tab heading="Comments">
+                        <div ng-include="'partials/bids/package/comments.html'"></div>
+                    </uib-tab>
+                    <uib-tab heading="Access">Access</uib-tab>
+                    <uib-tab heading="Activity">Activity</uib-tab>
+                    <uib-tab heading="Attachments">Attachments</uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</div>
