@@ -141,3 +141,8 @@
     margin-top: 15px; }
   .payapply-table .btns i {
     margin-left: 5px; }
+  .payapply-table:last-child {
+    margin-bottom: 0; }
+
+.cpo-table {
+  border-bottom: none; }
