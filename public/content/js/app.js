@@ -85,9 +85,27 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "PayApplyCtrl"
         })
         .state('financials.purchase-orders', {
-            url: '/purchase-orders',
+            url: '/purchase-orders/main',
             templateUrl: "partials/financials/purchase-order.html",
             controller: "PurchaseOrderCtrl"
+        })
+        .state('purchase-orders', {
+            url: '/financials/purchase-orders',
+            abstract: true,
+            template: '<ui-view></ui-view>',
+            controller: "PurchaseOrdersCtrl",
+            data: {
+                pageName: 'Purchase Order'
+            }
+        })
+        .state('purchase-orders.new', {
+            url: '/new',
+            templateUrl: "partials/financials/purchase-order/new.html",
+            controller: "PurchaseOrdersCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Create New Purchase Order'
+            }
         })
         .state('bankdraw', {
             url: '/financials/bankdraw',

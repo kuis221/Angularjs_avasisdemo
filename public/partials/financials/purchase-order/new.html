@@ -1,0 +1,349 @@
+<div class="pon-page-wrapper mb30">
+    <!-- Top Nav bar -->
+    <div class="row pon-page-info">
+        <div class="pull-left pl0 pr0">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="action-items.main">Close <i class="fa fa-caret-right"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pull-left pon-page-title">
+            <div class="col-md-7 pl20">
+                <h2 class="text-default">Create New Purchase Order</h2>
+                <input type="text" placeholder="Enter Purchase Order Name"></input>
+            </div>
+
+            <div class="col-md-5">
+                <div class="po-info">
+                    <div class="row">
+                        <span class="col-xs-9 text-right">Purchase Order#</span>
+                        <span class="col-xs-3 text-left">
+                            <label class="label label-info">193</label>
+                        </span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Date Initiated</span>
+                        <span class="col-xs-3 text-left">8/23/14</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Initiated By</span>
+                        <span class="col-xs-3 text-left">Bruce Wayne</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Status</span>
+                        <span class="col-xs-3 text-left text-success">IN PROGRESS</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Top Nav bar -->
+
+
+    <!-- Main Content -->
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="first-section">
+                <h5>Purchase Order To</h5>
+                <div class="section">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Supplier Company</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>Supplier Address</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>City</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-1">
+                            <label>State</label>
+                            <ui-select options="states" seletecd-item="states[2]"></ui-select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Zip Code</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Supplier Contact</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Email</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Phone</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Website</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <div class="form-group">
+                        <label>Notes</label>
+                        <input class="form-control" type="text" />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 form-group">
+                            <label>Terms</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="col-md-2 form-group textable">
+                            <div class="pull-left">Textable?</div>
+                            <div class="pull-right">
+                                <ui-rec-switch ng-model="isTextable"></ui-rec-switch>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1 form-group">
+                            <label>Rate</label>
+                            <input class="form-control text-right" type="text" ng-model="rate" ui-percentage-mask="0" placeholder= "%" />
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Ship To</h5>
+                <div class="section">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Project Name</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label>Company Name</label>
+                            <input class="form-control" type="text" placeholder="Flora Corp"/>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Date Required</label>
+                            <input class="form-control" type="text" placeholder="August 26, 2015"/>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Delivery Address</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>City</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-1">
+                            <label>State</label>
+                            <ui-select options="states" seletecd-item="states[2]"></ui-select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Zip Code</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Company Contact</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Company Email</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>Company Phone</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3>Items</h3>
+            <div class="second-section">
+                <div class="paragraph">
+                    <div class="section">
+                        <div class="pull-left text-default">
+                            Item #1
+                        </div>
+                        <div class="pull-right">
+                            <div uib-dropdown dropdown-append-to-body class="dropdown">
+                            <a href="javascript:void(0)" uib-dropdown-toggle class="text-muted dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-gear"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+
+                        </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-3 form-group">
+                                <h5>Project</h5>
+                                <span class="value" class="value">Enclave 14</span>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <h5>Contract</h5>
+                                <span class="value">Lorem Jones</span>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <h5>Scope of Work</h5>
+                                <span class="value">Fire Place</span>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <h5>Procurement</h5>
+                                <span class="value">Dolor sit amet</span>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <h5>Description</h5>
+                                <span class="value">Donec id elit mi porta gravida at eget metus</span>
+                            </div>
+                            <div class="col-md-1 form-group">
+                                <h5>SKU</h5>
+                                <span class="value">123 ABD</span>
+                            </div>
+                            <div class="col-md-1 form-group">
+                                <h5>Units</h5>
+                                <span class="value">12</span>
+                            </div>
+                            <div class="col-md-1 form-group">
+                                <h5>Unit Cost</h5>
+                                <span class="value">$34</span>
+                            </div>
+                            <div class="col-md-1 form-group">
+                                <h5>Quantity</h5>
+                                <span class="value">19</span>
+                            </div>
+                            <div class="col-md-1 form-group">
+                                <h5>Total</h5>
+                                <span class="value">$408</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="paragraph">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Project</label>
+                            <ui-select options="projects" placeholder="Choose">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Contract</label>
+                            <ui-select options="contracts" placeholder="No Contract">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Scope of Work</label>
+                            <ui-select options="sow" placeholder="No Scope of Work">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Procurement</label>
+                            <ui-select options="procurements" placeholder="No Procurements">
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label>Description</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-md-1 form-group">
+                            <label>SKU</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-md-1 form-group">
+                            <label>Units</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-md-1 form-group">
+                            <label>Unit Cost</label>
+                            <input class="form-control" type="text" ng-model="unitCost" ui-money-mask="0" placeholder="$"/>
+                        </div>
+                        <div class="col-md-1 form-group">
+                            <label>Quantity</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-md-2 form-group mt30">
+                            TOTAL<br/>
+                            $ -
+                        </div>
+                    </div>
+                </div>
+                <div class="paragraph">
+                    <a href="javascript:void(0)" class="text-primary"><i class="fa fa-plus"></i> Add Additional Item</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 pull-right">
+                    <div class="row mt20 pr20">
+                        <div class="col-md-7 text-muted">
+                            Subtotal
+                        </div>
+                        <div class="col-md-5 text-right">
+                            $26,850
+                        </div>
+                    </div>
+                    <div class="row mt5 pr20">
+                        <div class="col-md-7 text-muted">
+                            Tax Amount
+                        </div>
+                        <div class="col-md-5 text-right">
+                            $1,250
+                        </div>
+                    </div>
+                    <div class="row mt5 pr20">
+                        <div class="col-md-7 text-muted">
+                            Total Purchase Order
+                        </div>
+                        <div class="col-md-5 text-right">
+                            $123,850
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="text-right mb30">
+                <a class="btn btn-lg btn-info mr15">Save as Draft</a>
+                <a class="btn btn-lg btn-primary">Create</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Main Content -->
+</div>

@@ -1,0 +1,175 @@
+// Purchase Order New
+
+.pon-page-wrapper {
+
+    label {
+        color: #4a4a4a;
+    }
+
+    padding-top: 0;
+    margin-bottom: 0;
+
+    .pon-page-info {
+        background: #fff none repeat scroll 0 0;
+        box-shadow: 1px 0 4px #d8d8d8;
+    }
+
+    .closeBox {
+        background: #000;
+        width: 100px;
+        padding: 110px 0;
+        text-align: center;
+    }
+
+    .pon-page-title {
+        margin-top: 60px;
+        width: calc(100% - 100px);
+
+        h2 {
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 27px;
+            margin-top: 0px;
+        }
+
+        input {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            width: 100%;
+            font-size: 17px;
+        }
+
+        .project-info {
+            h3 {
+                font-family: "AvenirNextLTPro-Demi";
+                font-size: 16px;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+
+            span {
+                font-family: "AvenirNextLTPro-Demi";
+                font-size: 12px;
+            }
+        }
+    }
+
+    .po-info {
+        color: #4a4a4a;
+
+        .row {
+            span:first-child, div:first-child {
+                text-transform: uppercase;
+                font-size: 10px;
+                font-family: AvenirNextLTPro-Demi;
+            }
+
+            span:last-child {
+                font-family: AvenirNextLTPro-Regular;
+            }
+        }
+
+        label {
+            color: #fff;
+        }
+    }
+
+    .first-section {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 3px;
+        margin-top: 30px;
+        padding: 20px;
+
+        .date-field-wrapper {
+            border: 1px solid #eee;
+        }
+
+        textarea {
+            background-color: #f9f9f9;
+
+            &:hover {
+                border: 1px solid #eee;
+            }
+
+            &:focus, &:active {
+                background-color: #fff;
+                border: 1px solid #eee;
+            }
+        }
+
+
+    }
+
+    .section {
+        padding: 20px;
+        border: 1px solid #eee;
+    }
+
+    h5 {
+        margin: 20px 0;
+        font-size: 13px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    input {
+        height: 51px;
+        padding: 15px;
+        background-color: #f9f9f9;
+
+        &:focus {
+            background-color: #fff;
+            border-color: #d7d7d7;
+        }
+    }
+
+    .textable {
+        line-height: 30px;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-family: AvenirNextLTPro-Medium;
+        font-size: 17px;
+        color: #4a4a4a;
+        margin: 30px 0 20px;
+    }
+
+    .second-section {
+        border: 1px solid #eee;
+        background-color: #fff;
+        border-radius: 3px;
+
+        .paragraph {
+            padding: 20px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #eee;
+            }
+
+            h5 {
+                color: #4a4a4a;
+                font-weight: 700;
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+
+            span.value {
+                font-family: AvenirNextLTPro-Regular;
+                font-size: 14px;
+                color: #4a4a4a;
+            }
+
+            .section {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+}
