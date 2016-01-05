@@ -37,33 +37,33 @@
                                            'fa-chevron-up': !item.isCollapsed}"></i>
                         </div>
                     </td>
-                    <td>{{item.est_budget | currency: '$'}}</td>
-                    <td>{{item.under_contract | currency: '$'}}</td>
-                    <td>{{item.approved_purchase_orders | currency: '$'}}</td>
-                    <td>{{item.approved_change_orders | currency: '$'}}</td>
-                    <td>{{item.direct_costs | currency: '$'}}</td>
-                    <td>{{item.working_budget | currency: '$'}}</td>
-                    <td class="optional-columns">{{item.pending_purchase_orders | currency: '$'}}</td>
-                    <td class="optional-columns">{{item.pending_change_orders | currency: '$'}}</td>
-                    <td class="optional-columns">{{item.unbudgeted_costs | currency: '$'}}</td>
-                    <td class="optional-columns">{{item.est_cost_at_completion | currency: '$'}}</td>
-                    <td class="optional-columns">{{item.payments_made | currency: '$'}}</td>
-                    <td class="optional-columns">{{item.cash_required_to_complete | currency: '$'}}</td>
+                    <td>{{item.est_budget | currency:'$':0}}</td>
+                    <td>{{item.under_contract | currency:'$':0}}</td>
+                    <td>{{item.approved_purchase_orders | currency:'$':0}}</td>
+                    <td>{{item.approved_change_orders | currency:'$':0}}</td>
+                    <td>{{item.direct_costs | currency:'$':0}}</td>
+                    <td>{{item.working_budget | currency:'$':0}}</td>
+                    <td class="optional-columns">{{item.pending_purchase_orders | currency:'$':0}}</td>
+                    <td class="optional-columns">{{item.pending_change_orders | currency:'$':0}}</td>
+                    <td class="optional-columns">{{item.unbudgeted_costs | currency:'$':0}}</td>
+                    <td class="optional-columns">{{item.est_cost_at_completion | currency:'$':0}}</td>
+                    <td class="optional-columns">{{item.payments_made | currency:'$':0}}</td>
+                    <td class="optional-columns">{{item.cash_required_to_complete | currency:'$':0}}</td>
                 </tr>
                 <tr ng-repeat="row in item.children" ng-hide="item.isCollapsed">
                     <td><div><span class="text-primary">{{row.division_cost_code}}</span></div></td>
-                    <td>{{row.est_budget | currency: '$'}}</td>
-                    <td>{{row.under_contract | currency: '$'}}</td>
-                    <td>{{row.approved_purchase_orders | currency: '$'}}</td>
-                    <td>{{row.approved_change_orders | currency: '$'}}</td>
-                    <td>{{row.direct_costs | currency: '$'}}</td>
-                    <td>{{row.working_budget | currency: '$'}}</td>
-                    <td class="optional-columns">{{row.pending_purchase_orders | currency: '$'}}</td>
-                    <td class="optional-columns">{{row.pending_change_orders | currency: '$'}}</td>
-                    <td class="optional-columns">{{row.unbudgeted_costs | currency: '$'}}</td>
-                    <td class="optional-columns">{{row.est_cost_at_completion | currency: '$'}}</td>
-                    <td class="optional-columns">{{row.payments_made | currency: '$'}}</td>
-                    <td class="optional-columns">{{row.cash_required_to_complete | currency: '$'}}</td>
+                    <td>{{row.est_budget | currency:'$':0}}</td>
+                    <td>{{row.under_contract | currency:'$':0}}</td>
+                    <td>{{row.approved_purchase_orders | currency:'$':0}}</td>
+                    <td>{{row.approved_change_orders | currency:'$':0}}</td>
+                    <td>{{row.direct_costs | currency:'$':0}}</td>
+                    <td>{{row.working_budget | currency:'$':0}}</td>
+                    <td class="optional-columns">{{row.pending_purchase_orders | currency:'$':0}}</td>
+                    <td class="optional-columns">{{row.pending_change_orders | currency:'$':0}}</td>
+                    <td class="optional-columns">{{row.unbudgeted_costs | currency:'$':0}}</td>
+                    <td class="optional-columns">{{row.est_cost_at_completion | currency:'$':0}}</td>
+                    <td class="optional-columns">{{row.payments_made | currency:'$':0}}</td>
+                    <td class="optional-columns">{{row.cash_required_to_complete | currency:'$':0}}</td>
                 </tr>
                 
             </tbody>
