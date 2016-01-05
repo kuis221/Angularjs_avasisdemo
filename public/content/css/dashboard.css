@@ -51,7 +51,7 @@
     width: 100px; }
   .dash-wrapper .items-today td span {
     color: #3aabd5;
-    font-size: 12p;
+    font-size: 12px;
     font-family: "AvenirNextLTPro-Medium"; }
 
 .dash-wrapper .no-border-top {
@@ -93,7 +93,7 @@
   padding-right: 15px; }
 
 .dash-updates-section {
-  font-size: 12px;
+  font-size: 13px;
   font-family: "AvenirNextLTPro-Regular";
   padding-top: 15px;
   padding-bottom: 15px;
@@ -103,7 +103,9 @@
     margin-right: 10px; }
   .dash-updates-section .btn-xs {
     outline: none;
-    width: 60px; }
+    width: 60px;
+    font-size: 9px;
+    padding: 5px 2px; }
 
 .dash-projects .heading {
   padding: 20px 15px;
