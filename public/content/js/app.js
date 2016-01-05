@@ -506,9 +506,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 isHeaderHidden: true
             }
         })
-        .state('payment-application.quick-pay', {
-            url: '/quick-pay',
-            templateUrl: "partials/financials/payment-application/quick-pay.html",
+        .state('direct-payment', {
+            url: '/financials/direct-payment',
+            templateUrl: "partials/financials/direct-payment/direct-payment.html",
             controller: "QuickPayCtrl",
             data: {
                 isHeaderHidden: true,
