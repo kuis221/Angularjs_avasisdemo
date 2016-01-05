@@ -6,12 +6,12 @@ app.controller('BankDrawCtrl',
             name: 'Payment Application'
         },
         {
-            state: 'bankdraw.draw-details',
-            name: 'Draw Details'
-        },
-        {
             state: 'bankdraw.compliance',
             name: 'Compliance'
+        },
+        {
+            state: 'bankdraw.draw-details',
+            name: 'Draw Details'
         },
         {
             state: 'bankdraw.documents',
