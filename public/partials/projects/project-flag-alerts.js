@@ -2,7 +2,7 @@
 * Created by Anton on 12/12/2015
 */
 
-app.controller('ProjectFlagAlertsCtrl', 
+app.controller('ProjectFlagAlertsCtrl',
 	['$scope', '$state', '$uibModal', '$timeout', '$stateParams', function($scope, $state, $uibModal, $timeout, $stateParams){
 
 		//Flag Alerts
@@ -56,7 +56,7 @@ app.controller('ProjectFlagAlertsCtrl',
                 month: 'Aug',
                 day: 23,
                 ticket: 'SOW#908',
-                category: 'General Action item',
+                category: 'Task',
                 title: 'Measure and Mark the Wall',
                 name: 'Bob Jones',
                 avatar: "assets/img/1.png"
@@ -83,7 +83,7 @@ app.controller('ProjectFlagAlertsCtrl',
                 month: 'Jun',
                 day: 14,
                 ticket: 'SOW#908',
-                category: 'General Action item',
+                category: 'Task',
                 title: 'Measure and Mark the Wall',
                 name: 'Sam Kovac',
                 avatar: "assets/img/4.png"
@@ -121,7 +121,7 @@ app.controller('ProjectFlagAlertsCtrl',
                 month: 'Aug',
                 day: 23,
                 ticket: 'SOW#908',
-                category: 'General Action item',
+                category: 'Task',
                 title: 'Measure and Mark the Wall',
                 name: 'Bob Jones',
                 avatar: "assets/img/1.png"
@@ -148,7 +148,7 @@ app.controller('ProjectFlagAlertsCtrl',
                 month: 'Jun',
                 day: 14,
                 ticket: 'SOW#908',
-                category: 'General Action item',
+                category: 'Task',
                 title: 'Measure and Mark the Wall',
                 name: 'Sam Kovac',
                 avatar: "assets/img/4.png"
@@ -202,7 +202,7 @@ app.controller('ProjectFlagAlertsCtrl',
                 month: 'Jun',
                 day: 14,
                 ticket: 'SOW#908',
-                category: 'General Action item',
+                category: 'Task',
                 title: 'Measure and Mark the Wall',
                 name: 'Sam Kovac',
                 avatar: "assets/img/2.png"
@@ -213,7 +213,7 @@ app.controller('ProjectFlagAlertsCtrl',
                 month: 'Aug',
                 day: 23,
                 ticket: 'SOW#908',
-                category: 'General Action item',
+                category: 'Task',
                 title: 'Measure and Mark the Wall',
                 name: 'Bob Jones',
                 avatar: "assets/img/1.png"

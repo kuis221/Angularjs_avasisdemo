@@ -211,7 +211,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "ActionItemsCtrl",
             data: {
                 isHeaderHidden: true,
-                pageName: 'General Action Items'
+                pageName: 'Tasks'
             }
         })
         .state('action-items.rfi', {

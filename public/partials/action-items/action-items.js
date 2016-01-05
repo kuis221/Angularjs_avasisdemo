@@ -12,7 +12,7 @@ app.controller('ActionItemsCtrl',
         };
         $scope.gai = {
             state: "action-items.general-action-items",
-            title: "General Action Items",
+            title: "Tasks",
             total: 28,
             green: 6,
             orange: 12,
@@ -580,8 +580,6 @@ app.controller('ActionItemsCtrl',
             $(this).find('ul.dropdown-menu').css('top', offsetTop + 10);
             $(this).find('ul.dropdown-menu').css('right', offsetRight + 10);
         });
-
-        // General Action Items
 
 
         // Inspections
