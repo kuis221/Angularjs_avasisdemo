@@ -38,6 +38,10 @@
     vertical-align: middle;
 }
 
+.table-financial-main.table.hidden-optional-columns thead tr th.optional-columns,
+.table-financial-main.table.hidden-optional-columns tbody tr td.optional-columns {
+    display: none;
+}
 .table-financial-main.table tbody tr td {
     font-size: 11px;
 }
