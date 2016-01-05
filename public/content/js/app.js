@@ -509,10 +509,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('direct-payment', {
             url: '/financials/direct-payment',
             templateUrl: "partials/financials/direct-payment/direct-payment.html",
-            controller: "QuickPayCtrl",
+            controller: "DirectPaymentCtrl",
             data: {
                 isHeaderHidden: true,
-                pageName: 'Quick Pay'
+                pageName: 'Direct Payment'
             }
         })
         .state('photos', {

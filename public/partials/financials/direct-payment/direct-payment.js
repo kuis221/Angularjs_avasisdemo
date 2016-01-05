@@ -1,4 +1,4 @@
-app.controller('QuickPayCtrl',
+app.controller('DirectPaymentCtrl',
     ['$scope', function($scope) {
 
         $scope.projects = [
