@@ -173,6 +173,15 @@ table.aii-item-table .col-setting .fa {
 .modal-dialog button.close {
   outline: none; }
 
+.details textarea {
+  padding: 20px;
+  background-color: #f9f9f9;
+  resize: none;
+  font-family: AvenirNextLTPro-Regular; }
+  .details textarea:focus {
+    background-color: #fff;
+    border: 1px solid #d7d7d7; }
+
 .aii-detail-summary-item {
   margin-bottom: 10px; }
   .aii-detail-summary-item .item-value {

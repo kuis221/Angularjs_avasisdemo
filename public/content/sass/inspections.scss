@@ -258,6 +258,20 @@ table.aii-item-table {
     outline: none;
 }
 
+.details {
+    textarea {
+        padding: 20px;
+        background-color: #f9f9f9;
+        resize: none;
+        font-family: AvenirNextLTPro-Regular;
+        
+        &:focus {
+            background-color: #fff;
+            border: 1px solid #d7d7d7;
+        }
+    }
+}
+
 .aii-detail-summary-item {
     margin-bottom: 10px;
 
