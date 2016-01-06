@@ -90,7 +90,20 @@
         </div>
     </div>
 </div>
-
+<ui-map-info-window templateUrl="'info-window-template.html'" ng-if="currentMarker"></ui-map-info-window>
+<script type="text/ng-template" id="info-window-template.html">
+    <div class="row">
+        <div class="col-sm-4">Address: {{currentMarker.address}}</div>
+        <div class="col-sm-8">
+            <div ng-repeat="doctor in currentMarker.data">
+                <div className="row">
+                    <div class="col-sm-6">{{doctor.photo}}</div>
+                    <div class="col-sm-6">{{doctor.name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</script>
 <!-- Nested node template -->
 <script type="text/ng-template" id="folder-template.html">
     <div ui-tree-handle class="tree-node tree-node-content">
