@@ -1,0 +1,138 @@
+.bids-new-wrapper {
+  padding-top: 0;
+  margin-bottom: 0; }
+  .bids-new-wrapper .bn-page-info {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8; }
+  .bids-new-wrapper .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center; }
+  .bids-new-wrapper .bn-page-title {
+    margin-top: 60px;
+    width: calc(100% - 100px);
+    padding-left: 30px;
+    padding-right: 30px; }
+    .bids-new-wrapper .bn-page-title h2 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 27px;
+      margin-top: 0px; }
+    .bids-new-wrapper .bn-page-title input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #eee;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      width: 100%;
+      font-family: AvenirNextLTPro-Medium;
+      font-size: 17px; }
+    .bids-new-wrapper .bn-page-title .project-info h3 {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 20px; }
+    .bids-new-wrapper .bn-page-title .project-info span {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 12px; }
+    .bids-new-wrapper .bn-page-title .uib-dropdown-menu {
+      padding: 0; }
+    .bids-new-wrapper .bn-page-title .dropdown-mark {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      cursor: pointer; }
+    .bids-new-wrapper .bn-page-title .assign-to-project {
+      position: relative; }
+  .bids-new-wrapper .bn-info {
+    color: #4a4a4a; }
+    .bids-new-wrapper .bn-info .row span:first-child, .bids-new-wrapper .bn-info .row div:first-child {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-family: AvenirNextLTPro-Demi; }
+    .bids-new-wrapper .bn-info .row span:last-child {
+      font-family: AvenirNextLTPro-Regular; }
+  .bids-new-wrapper .content-section {
+    margin-bottom: 40px; }
+    .bids-new-wrapper .content-section h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 22px;
+      color: #4a4a4a; }
+      .bids-new-wrapper .content-section h3 img {
+        height: 25px;
+        vertical-align: top;
+        margin-right: 10px; }
+      .bids-new-wrapper .content-section h3 label {
+        vertical-align: middle;
+        background-color: #7d8284;
+        color: #fff; }
+    .bids-new-wrapper .content-section label em {
+      font-size: 13px;
+      font-family: AvenirNextLTPro-Medium;
+      font-weight: 100;
+      color: #44474b; }
+    .bids-new-wrapper .content-section .custom-datefield {
+      background-color: #fff; }
+    @media (min-width: 992px) {
+      .bids-new-wrapper .content-section .include-project-drawings {
+        margin-top: 37px; } }
+    .bids-new-wrapper .content-section input[type=text] {
+      padding: 15px;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 13px;
+      height: initial;
+      border: 1px solid #eee; }
+      .bids-new-wrapper .content-section input[type=text]:focus {
+        border: 1px solid #d7d7d7; }
+    .bids-new-wrapper .content-section textarea {
+      resize: none;
+      padding: 15px;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 13px; }
+      .bids-new-wrapper .content-section textarea:focus {
+        border: 1px solid #d7d7d7; }
+    .bids-new-wrapper .content-section .well {
+      padding: 20px;
+      padding-right: 10px;
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 3px; }
+      .bids-new-wrapper .content-section .well .switch {
+        margin-top: -3.5px; }
+    .bids-new-wrapper .content-section .btn-cancel:not(:hover) {
+      color: #000; }
+    .bids-new-wrapper .content-section .bn-file-dropzone {
+      min-height: 80px;
+      margin-top: 0px !important;
+      padding: 0px;
+      position: relative; }
+      .bids-new-wrapper .content-section .bn-file-dropzone .dropzone {
+        padding: 0;
+        min-height: 140px;
+        border: 2px dashed #3aabd5; }
+        .bids-new-wrapper .content-section .bn-file-dropzone .dropzone .dz-default.dz-message {
+          background-image: url("/assets/img/financials/dropzone.png");
+          background-position: left;
+          background-size: 45px;
+          top: 0;
+          left: 0;
+          margin-right: 0;
+          margin-top: 0;
+          margin-left: 10%;
+          height: 138px; }
+      .bids-new-wrapper .content-section .bn-file-dropzone .dropzone-title {
+        left: calc(50% - 150px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
+        @media (max-width: 768px) {
+          .bids-new-wrapper .content-section .bn-file-dropzone .dropzone-title {
+            left: 30%; } }
+        @media (min-width: 992px) and (max-width: 1372px) {
+          .bids-new-wrapper .content-section .bn-file-dropzone .dropzone-title a {
+            display: block; }
+          .bids-new-wrapper .content-section .bn-file-dropzone .dropzone-title {
+            left: calc(50% - 50px); } }

@@ -1,0 +1,221 @@
+.bids-new-wrapper {
+
+    padding-top: 0;
+    margin-bottom: 0;
+
+    .bn-page-info {
+        background: #fff none repeat scroll 0 0;
+        box-shadow: 1px 0 4px #d8d8d8;
+    }
+
+    .closeBox {
+        background: #000;
+        width: 100px;
+        padding: 110px 0;
+        text-align: center;
+    }
+
+    .bn-page-title {
+        margin-top: 60px;
+        width: calc(100% - 100px);
+        padding-left: 30px;
+        padding-right: 30px;
+
+        h2 {
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 27px;
+            margin-top: 0px;
+        }
+
+        input {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #eee;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            width: 100%;
+            font-family: AvenirNextLTPro-Medium;
+            font-size: 17px;
+        }
+
+        .project-info {
+            h3 {
+                font-family: AvenirNextLTPro-Demi;
+                font-size: 16px;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+
+            span {
+                font-family: AvenirNextLTPro-Demi;
+                font-size: 12px;
+            }
+        }
+
+        .uib-dropdown-menu {
+            padding: 0;
+        }
+
+        .dropdown-mark {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            cursor: pointer;
+        }
+
+        .assign-to-project {
+            position: relative;
+        }
+    }
+
+    .bn-info {  
+        color: #4a4a4a;
+
+        .row {
+            span:first-child, div:first-child {
+                text-transform: uppercase;
+                font-size: 10px;
+                font-family: AvenirNextLTPro-Demi;
+            }
+
+            span:last-child {
+                font-family: AvenirNextLTPro-Regular;
+            }
+        }
+    }
+
+    .content-section {
+
+        margin-bottom: 40px;
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 22px;
+            color: #4a4a4a;
+
+            img {
+                height: 25px;
+                vertical-align: top;
+                margin-right: 10px;
+            }
+
+            label {
+                vertical-align: middle;
+                background-color: #7d8284;
+                color: #fff;
+            }
+        }
+
+        label {
+            em {
+                font-size: 13px;
+                font-family: AvenirNextLTPro-Medium;
+                font-weight: 100;
+                color: #44474b;
+            }
+        }
+
+        .custom-datefield {
+            background-color: #fff;
+        }
+
+        .include-project-drawings {
+            @media (min-width: 992px) {
+                margin-top: 37px;
+            }
+        }
+
+        input[type=text] {
+            padding: 15px;
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 13px;
+            height: initial;
+            border: 1px solid #eee;
+
+            &:focus {
+                border: 1px solid #d7d7d7;
+            }
+        }
+
+        textarea {
+
+            resize: none;
+            padding: 15px;
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 13px;
+
+            &:focus {
+                border: 1px solid #d7d7d7;
+            }
+        }
+
+        .well {
+            padding: 20px;
+            padding-right: 10px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 3px;
+
+            .switch {
+                margin-top: -3.5px;
+            }
+        }
+
+        .btn-cancel:not(:hover) {
+            color: #000;
+        }
+
+        .bn-file-dropzone {
+            min-height: 80px;
+            margin-top: 0px !important;
+            padding: 0px;
+            position: relative;
+
+            .dropzone {
+                padding: 0;
+                min-height: 140px;
+                border: 2px dashed #3aabd5;
+
+                .dz-default.dz-message {
+                    background-image: url("/assets/img/financials/dropzone.png");
+                    background-position: left;
+                    background-size: 45px;
+                    top: 0;
+                    left: 0;
+                    margin-right: 0;
+                    margin-top: 0;
+                    margin-left: 10%;
+                    height: 138px
+                }
+            }
+
+            .dropzone-title {
+                left: calc(50% - 150px);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media (max-width: 768px) {
+                    left: 30%;
+                };
+
+                @media (min-width: 992px) and (max-width: 1372px) {
+                    a {
+                        display: block;
+                    }
+
+                    & {
+                        left: calc(50% - 50px);
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+}
+

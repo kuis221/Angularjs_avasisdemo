@@ -382,6 +382,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'Bid Package'
             }
         })
+        .state('bids.new', {
+            url: '/new',
+            templateUrl: 'partials/bids/bids-new.html',
+            controller: 'BidsCtrl',
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Create New Bid'
+            }
+        })
        .state('comm', {
             url: '/communication',
             abstract: true,
