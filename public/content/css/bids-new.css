@@ -136,3 +136,18 @@
             display: block; }
           .bids-new-wrapper .content-section .bn-file-dropzone .dropzone-title {
             left: calc(50% - 50px); } }
+
+.bids-subcontractor-modal .modal-body {
+  margin-top: 50px;
+  padding: 30px 20px 20px;
+  color: #4a4a4a; }
+  .bids-subcontractor-modal .modal-body input[type=text] {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    height: initial; }
+    .bids-subcontractor-modal .modal-body input[type=text]:focus {
+      border: 1px solid #eee;
+      background-color: #fff; }
+  .bids-subcontractor-modal .modal-body h3 {
+    font-family: AvenirNextLTPro-Regular; }

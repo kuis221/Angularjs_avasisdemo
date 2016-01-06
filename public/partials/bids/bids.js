@@ -10,6 +10,14 @@ app.controller('BidsCtrl', ['$scope', '$uibModal', function($scope, $uibModal){
       });
     };
 
+    $scope.showSubcontractorModal = function() {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'partials/bids/bids-subcontractor-modal.html',
+            controller: 'BidsSubcontractorModalCtrl',
+            windowClass: 'bids-subcontractor-modal'
+        });
+    };
+
     /** 
     * Dropzone config
     */
@@ -79,6 +87,25 @@ app.controller('BidsCtrl', ['$scope', '$uibModal', function($scope, $uibModal){
     }
 
 }]);
+
+app.controller('BidsSubcontractorModalCtrl',
+    ['$scope', '$state', '$uibModalInstance', function($scope, $state, $uibModalInstance) {
+
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        };
+
+        $scope.distribute = function() {
+            $uibModalInstance.dismiss('cancel');
+            $state.go('bids.main');
+        };
+
+        $scope.contractors = [1, 2, 3, 4];
+        
+        $scope.add = function() {
+            $scope.contractors.push(_.uniqueId());
+        };
+    }]);
 
 
 app.controller('BidsAwardCtrl', ['$scope', '$uibModal', '$uibModalInstance', function($scope, $uibModal, $uibModalInstance){

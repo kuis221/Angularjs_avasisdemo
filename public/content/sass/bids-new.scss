@@ -214,8 +214,29 @@
             }
         }
     }
+}
 
-    
+.bids-subcontractor-modal {
+    .modal-body {
+        margin-top: 50px;
+        padding: 30px 20px 20px;
+        color: #4a4a4a;
 
+        input[type=text] {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 15px;
+            height: initial;
+
+            &:focus {
+                border: 1px solid #eee;
+                background-color: #fff;
+            }
+        }
+
+        h3 {
+            font-family: AvenirNextLTPro-Regular;
+        }
+    }
 }
 
