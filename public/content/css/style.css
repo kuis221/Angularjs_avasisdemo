@@ -446,7 +446,6 @@ input.round {
 }
 .table > tbody > tr > td.has-input input {
     padding: 5px;
-    border: none;
     font-family: "AvenirNextLTPro-Demi" !important;
     min-width: 80px;
 }
