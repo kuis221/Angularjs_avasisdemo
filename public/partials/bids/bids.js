@@ -18,6 +18,14 @@ app.controller('BidsCtrl', ['$scope', '$uibModal', function($scope, $uibModal){
         });
     };
 
+    $scope.showSowWorkModal = function() {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'partials/bids/scope-of-work-modal.html',
+            controller: 'SOWModalCtrl',
+            windowClass: 'scope-of-work-modal'
+        });
+    };
+
     /** 
     * Dropzone config
     */

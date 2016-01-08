@@ -151,3 +151,42 @@
       background-color: #fff; }
   .bids-subcontractor-modal .modal-body h3 {
     font-family: AvenirNextLTPro-Regular; }
+
+@media (min-width: 1200px) {
+  .scope-of-work-modal .modal-dialog {
+    width: 1150px; } }
+
+.scope-of-work-modal .modal-dialog .modal-body {
+  margin-top: 50px;
+  padding: 20px;
+  color: #4a4a4a; }
+  .scope-of-work-modal .modal-dialog .modal-body h5 {
+    font-size: 13px;
+    color: #4a4a4a; }
+  .scope-of-work-modal .modal-dialog .modal-body input[type=text] {
+    padding: 15px;
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 13px;
+    height: initial;
+    border: 1px solid #eee;
+    background-color: #f9f9f9; }
+    .scope-of-work-modal .modal-dialog .modal-body input[type=text]:focus {
+      border: 1px solid #d7d7d7;
+      background-color: #fff; }
+    .scope-of-work-modal .modal-dialog .modal-body input[type=text].default {
+      background-color: #fff; }
+      .scope-of-work-modal .modal-dialog .modal-body input[type=text].default:focus {
+        background-color: #f9f9f9; }
+  @media (min-width: 992px) {
+    .scope-of-work-modal .modal-dialog .modal-body .predecessors .row:not(:first-child) {
+      border-right: 1px solid #eee; } }
+  .scope-of-work-modal .modal-dialog .modal-body hr.pre_suc_divider {
+    display: none; }
+    @media (max-width: 992px) {
+      .scope-of-work-modal .modal-dialog .modal-body hr.pre_suc_divider {
+        display: block;
+        margin-left: 15px;
+        margin-right: 15px; } }
+  @media (min-width: 992px) {
+    .scope-of-work-modal .modal-dialog .modal-body .requires-bid {
+      margin-top: 15px; } }

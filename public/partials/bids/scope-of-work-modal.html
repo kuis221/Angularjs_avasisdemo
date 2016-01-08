@@ -1,0 +1,175 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+
+<div class="modal-body">
+    <h3>Enter Scope of Work Details</h3>
+    <hr/>
+
+    <div class="form-group">
+        <label>Name of SOW</label>
+        <input class="form-control default" type="text" placeholder="Give your Scope of Work name..." />
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label>Phase</label>
+            <ui-select options="phases" placeholder="General"></ui-select>
+        </div>
+
+        <div class="col-md-4 form-group">
+            <label>SubPhase</label>
+            <ui-select options="sub_phases" placeholder="Make Selection"></ui-select>
+        </div>
+
+        <div class="col-md-2 form-group">
+            <label>Division</label>
+            <ui-select options="divisions" placeholder="Select Division"></ui-select>
+        </div>
+
+        <div class="col-md-2 form-group">
+            <label>Cost Code</label>
+            <ui-select options="cost_codes" placeholder="Select Code"></ui-select>
+        </div>
+    </div>
+
+    <span ng-click="toggleMoreOptions()">
+        <a class="text-primary" href="javascript:void(0)" ng-show="isMoreOptionsHidden">
+            <i class="fa fa-plus"></i> More Options
+        </a>
+        <a class="text-primary" href="javascript:void(0)" ng-hide="isMoreOptionsHidden">
+            Hide More Options
+        </a>
+    </span>
+
+    <div class="more-options" ng-hide="isMoreOptionsHidden">
+        <hr/>
+
+        <h5>Schedule Estimate</h5>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label>Start Date</label>
+                <input class="form-control default" type="text" placholder="August 26, 2015" />
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Completion Date</label>
+                <input class="form-control default" type="text" placholder="August 26, 2015" />
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Duration</label>
+                <input class="form-control" type="text" placeholder="+/- days" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6 predecessors">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Predecessors</label>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Insert at</label>
+                    </div>
+                </div>
+
+                <div class="row" ng-repeat="item in predecessors">
+                    <div class="col-md-6 form-group">
+                        <ui-select options="predecessors_list" placeholder="Choose"></ui-select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <ui-select options="insert_at" placeholder="Choose"></ui-select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="text-primary"><i class="fa fa-plus"></i> Predecessors</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="pre_suc_divider" />
+
+            <div class="col-md-6 successors">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Successors</label>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Insert at</label>
+                    </div>
+                </div>
+
+                <div class="row" ng-repeat="item in successors">
+                    <div class="col-md-6 form-group">
+                        <ui-select options="predecessors_list" placeholder="Choose"></ui-select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <ui-select options="insert_at" placeholder="Choose"></ui-select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="text-primary"><i class="fa fa-plus"></i> Successors</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+
+        <h5>Financial Estimate</h5>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label>Labor</label>
+                <input class="form-control" type="text" placeholder="$">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Materials</label>
+                <input class="form-control" type="text" placeholder="$">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Equipment</label>
+                <input class="form-control" type="text" placeholder="$">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Miscellaneous</label>
+                <input class="form-control" type="text" placeholder="$">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Estimated Total</label>
+                <input class="form-control default" type="text" placeholder="$">
+            </div>
+
+            <div class="col-md-2 form-group requires-bid">
+                <label>Requires Bid</label>
+                <ui-rec-switch ng-model="require_bid"></ui-rec-switch>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-md-4 form-group">
+                <label>Assigned Team Member</label>
+                <ui-select options="users" placeholder="User Name"></ui-select>
+            </div>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="text-right">
+        <a class="btn btn-cancel btn-lg">Cancel</a>
+        <a class="btn btn-success btn-lg">Create</a>
+    </div>
+</div>
