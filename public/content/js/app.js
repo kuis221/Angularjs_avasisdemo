@@ -274,7 +274,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: "ChangeOrderCtrl",
             data: {
                 isHeaderHidden: true,
-                pageName: 'New Change Order'
+                pageName: 'Create New Change Order'
             }
         })
         .state('action-items.change-order.in-process', {

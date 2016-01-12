@@ -11,7 +11,7 @@
 
         <div class="pull-left con-page-title">
             <div class="col-md-7 pl20">
-                <h2 class="text-default">New Change Order</h2>
+                <h2 class="text-default">Create New Change Order</h2>
                 <input type="text" placeholder="Enter Change Order Name"></input>
                 <div class="project-info">
                     <h3 class="text-primary">Wilmington 47</h3>
@@ -29,22 +29,15 @@
                     </div>
                     <div class="row mt5">
                         <span class="col-xs-9 text-right">Date Initiated</span>
-                        <span class="col-xs-3 text-left">8/23/14</span>
+                        <span class="col-xs-3 text-left date">8/23/14</span>
                     </div>
                     <div class="row mt5">
                         <span class="col-xs-9 text-right">Initiated By</span>
-                        <span class="col-xs-3 text-left">Bruce Wayne</span>
+                        <span class="col-xs-3 text-left initiated-by">Bruce Wayne</span>
                     </div>
                     <div class="row mt5">
                         <span class="col-xs-9 text-right">Status</span>
-                        <span class="col-xs-3 text-left text-success">IN PROGRESS</span>
-                    </div>
-
-                    <div class="row mt5 pr15">
-                        <div class="col-md-6 text-right mt20">Currently Responsible</div>
-                        <div class="col-md-6 text-left">
-                            <ui-select options="users" ng-select="" selected-item="curResponsible"></ui>
-                        </div>
+                        <span class="col-xs-3 text-left text-success status">IN PROGRESS</span>
                     </div>
                 </div>
             </div>
@@ -59,28 +52,21 @@
         <div class="col-lg-12">
             <div class="first-section">
                 <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label>Select Project</label>
-                        <ui-select options="projects" placeholder="Project Name Goes Here"></ui-select>
-                    </div>
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-3 form-group">
                         <label>Approval Required by</label>
-                        <ui-select options="approvers" placeholder="User Name"></ui-select>
+                        <ui-select options="users" placeholder="User Name"></ui-select>
                     </div>
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-3 form-group">
                         <label>Scope of Work</label>
                         <ui-select options="sows" placeholder="Scope of work name here"></ui-select>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-3 form-group">
                         <label>Change Requested Category</label>
-                        <ui-typeahead options="categories" placeholder="Correction" ng-select="changeOptions()"></ui-typeahead>
+                        <ui-select options="categories" placeholder="Correction" ng-select="changeOptions()"></ui-typeahead>
                     </div>
                     <div class="col-md-3 form-group">
-                        <label>&nbsp;</label>
-                        <ui-date-field ng-model="date" placeholder="Due Date"></ui-date-field>
+                        <label>Due Date</label>
+                        <ui-date-field ng-model="date"></ui-date-field>
                     </div>
                 </div>
 
@@ -90,16 +76,10 @@
                         <div class="options" ng-show="isOptShow">
                             <div class="options-bar mb10">
                                 <div class="row">
-                                    <div class="ob-item col-md-3"><span class="text-primary">Reminder Alert</span></div>
                                     <div class="ob-item col-md-3"><span class="text-primary">Add Attachments</span></div>
+                                    <div class="ob-item col-md-4"><span class="text-primary">Add Change Requested By</span></div>
                                     <div class="ob-item col-md-2"><span class="text-primary">Add CC</span></div>
-                                    <div class="ob-item col-md-4">
-                                        <div class="checkbox text-center">
-                                            <label class="text-primary">
-                                                <input type="checkbox">Assignee can delegate task</input>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <div class="ob-item col-md-3"><span class="text-primary">Add IRN</span></div>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -135,6 +115,14 @@
                                         <td><input type="text" value="Dec 6, 2015"></input></td>
                                         <td><input type="text" class="text-right" placeholder="days"></input></td>
                                     </tr>
+                                    <tr>
+                                        <tr>
+                                            <td>Varience</td>
+                                            <td class="text-success">+3 days</td>
+                                            <td class="text-danger">-2 days</td>
+                                            <td class="text-danger">-2 days</td>
+                                        </tr>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -167,6 +155,13 @@
                                         <td><input type="text" ng-model="equipment" ui-money-mask="2" placeholder="$"></input></td>
                                         <td><input type="text" ng-model="other" ui-money-mask="2" placeholder="$"></input></td>
                                     </tr>
+                                    <tr>
+                                        <td>Varience</td>
+                                        <td class="text-danger">-$34</td>
+                                        <td class="text-danger">-$34</td>
+                                        <td class="text-danger">-$34</td>
+                                        <td class="text-success">+$6</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -183,27 +178,10 @@
         </div>
 
         <div class="col-lg-12 mt30 mb30 text-right">
-            <div class="dropdown">
-                <button type="button" class="btn btn-primary btn-lg">
-                    Actions <i class="fa fa-chevron-down"></i>
-                </button>
-            </div>
+            <button class="btn btn-info btn-lg mr20">Save as Draft</button>
+            <button class="btn btn-primary btn-lg">Distribute</button>
         </div>
     </div>
 
-
-
-    <div class="row no-margin animated fadeInRight second-section">
-        <div class="second-content">
-            <uib-tabset>
-                <uib-tab heading="Comments">
-                    <div ng-include="'partials/action-items/change-order/comments.html'"></div>
-                </uib-tab>
-                <uib-tab heading="Access">Short Labeled Justified content</uib-tab>
-                <uib-tab heading="Workflow">Short Labeled Justified content</uib-tab>
-                <uib-tab heading="Attachments">Long Labeled Justified content</uib-tab>
-            </uib-tabset>
-        </div>
-    </div>
     <!-- Main Content -->
 </div>

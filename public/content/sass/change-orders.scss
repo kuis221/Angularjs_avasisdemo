@@ -1,5 +1,9 @@
 .con-page-wrapper {
 
+    label {
+        margin-bottom: 10px;
+    }
+
     padding-top: 0;
     margin-bottom: 0;
 
@@ -61,9 +65,17 @@
                 font-family: AvenirNextLTPro-Demi;
             }
 
-            span:last-child {
-                font-family: AvenirNextLTPro-Regular;
+            span.date, span.initiated-by {
+                font-family: AvenirNextLTPro-Medium;
+                font-size: 12px;
             }
+
+            span.status {
+                font-family: AvenirNextLTPro-Demi;
+                font-size: 11px;
+                color: #79c485;
+            }
+
         }
     }
 
@@ -76,6 +88,7 @@
 
         .date-field-wrapper {
             border: 1px solid #eee;
+            background-color: #f9f9f9;
         }
 
         .table-responsive {
@@ -83,7 +96,7 @@
 
             table {
                 vertical-align: middle;
-                font-family: AvenirNextLTPro-Regular;
+                font-family: AvenirNextLTPro-Demi;
 
                 input {
                     max-width: 140px;
@@ -98,6 +111,12 @@
 
                         td {
                             vertical-align: middle;
+                            padding: 15px 10px;
+
+                            &:first-child {
+                                font-family: AvenirNextLTPro-Regular;
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -114,12 +133,17 @@
                         th {
                             vertical-align: middle;
                             font-weight: normal;
+                            font-family: AvenirNextLTPro-Regular;
+                            font-size: 12px;
                         }
                     }
                 }
             }
 
             .con-duration-table {
+                font-family: AvenirNextLTPro-Medium;
+                font-size: 12px;
+
                 input {
                     width: 115px;
                 }
@@ -144,6 +168,7 @@
 
         textarea {
             background-color: #f9f9f9;
+            resize: none;
 
             &:hover {
                 border: 1px solid #eee;
@@ -193,100 +218,6 @@
 
             }
         }
-    }
-
-    .second-section {
-        margin-left: -15px;
-        margin-right: -15px;
-        padding: 30px;
-        background-color: #eee;
-
-        .second-content {
-            border: 1px solid #eee;
-            background-color: #f9f9f9;
-
-            .nav-tabs {
-
-                border-bottom: 1px solid #eee;
-
-                > li {
-                    > a {
-                        font-family: AvenirNextLTPro-Medium;
-                        font-size: 13px;
-                        color: #6c6c6c;
-                        min-width: 110px;
-                        text-align: center;
-                        padding: 15px 30px;
-                        border-radius: 0;
-                        border-top: 0;
-                    }
-
-                    &:first-child > a {
-                        border-left: 0;
-                    }
-
-                    &.active a {
-                        color: #e25c5c;
-                        background: white;
-                        border-bottom: 1px solid white;
-                    }
-                }
-
-            }
-
-            .tab-content {
-                border: 0;
-
-                .comments-wrapper {
-
-                    .comment {
-                        position: relative;
-                        font-size: 13px;
-
-                        margin-bottom: 15px;
-                        font-family: AvenirNextLTPro-Regular;
-
-                        > div {
-                            display: inline-block;
-                        }
-
-                        .author {
-                            font-size: 13px;
-                            font-family: AvenirNextLTPro-Demi;
-                        }
-
-                        .edit {
-                            position: absolute;
-                            right: 20px;
-                            top: 4px;
-
-                            &:hover {
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        h3 {
-            margin-top: 20px;
-            font-family: AvenirNextLTPro-Demi;
-            font-size: 13px;
-        }
-
-        textarea {
-            padding: 15px;
-            border-radius: 3px;
-            color: #4a4a4a;
-            background-color: #f9f9f9;
-
-            &:active, &:focus {
-                background-color: #fff;
-                border-color: #eee;
-            }
-        }
-
     }
 }
 
