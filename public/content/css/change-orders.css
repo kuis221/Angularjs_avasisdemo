@@ -208,147 +208,368 @@
     .com-wrapper .value b {
       font-family: AvenirNextLTPro-Demi;
       font-size: 12px; }
+  .com-wrapper .com-charts {
+    padding: 15px 15px 30px;
+    border-bottom: 1px solid #eee; }
+  .com-wrapper .com-table {
+    margin-bottom: 25px; }
+    .com-wrapper .com-table table {
+      border-left: none;
+      border-right: none; }
+    .com-wrapper .com-table table thead,
+    .com-wrapper .com-table table tbody {
+      border: 1px solid #eee; }
+    .com-wrapper .com-table table tbody tr td {
+      padding: 6px;
+      height: 50px; }
+    .com-wrapper .com-table table thead tr th {
+      padding: 6px;
+      height: 40px; }
+    .com-wrapper .com-table h3 {
+      font-family: AvenirNextLTPro-Medium;
+      font-size: 17px;
+      color: #4a4a4a;
+      margin: 25px 0 15px; }
+    .com-wrapper .com-table table thead th {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 15px;
+      color: #808080;
+      border: none; }
+    .com-wrapper .com-table table thead th,
+    .com-wrapper .com-table table tbody td,
+    .com-wrapper .com-table table tfoot td {
+      vertical-align: middle;
+      border: none; }
+    .com-wrapper .com-table table tbody tr {
+      border-top: 1px solid #eee; }
+    .com-wrapper .com-table table tfoot tr {
+      border-top: 1px solid #eee;
+      border-right: none;
+      border-left: none; }
+    .com-wrapper .com-table table tfoot span {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px;
+      color: #808080; }
+    .com-wrapper .com-table table tfoot p {
+      margin-bottom: 5px;
+      color: #4a4a4a; }
+    .com-wrapper .com-table th.flag {
+      width: 4%; }
+    .com-wrapper .com-table td.flag span {
+      margin: 4px; }
+    .com-wrapper .com-table th.title {
+      width: 27%; }
+    .com-wrapper .com-table th.sow {
+      width: 20%; }
+    .com-wrapper .com-table th.initiator,
+    .com-wrapper .com-table th.due-date,
+    .com-wrapper .com-table th.amount {
+      width: 9%; }
+    .com-wrapper .com-table th.responsible,
+    .com-wrapper .com-table th.status {
+      width: 10%; }
+    .com-wrapper .com-table td.order-by-date {
+      width: 9%;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 13px;
+      color: #44474b; }
+    .com-wrapper .com-table td.sow {
+      width: 20%; }
+    .com-wrapper .com-table td.title a {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 15px;
+      color: #44474b; }
+    .com-wrapper .com-table td.title small {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 11px;
+      color: #9e9e9e; }
+    .com-wrapper .com-table td.responsible a,
+    .com-wrapper .com-table td.initiator a,
+    .com-wrapper .com-table td.sow a {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 12px;
+      color: #3aabd5; }
+    .com-wrapper .com-table td.responsible small,
+    .com-wrapper .com-table td.initiator small {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 10px;
+      color: #9e9e9e; }
+    .com-wrapper .com-table td.sow small {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 11px; }
+    .com-wrapper .com-table td.amount {
+      width: 9%;
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 12px;
+      color: #44474b; }
+    .com-wrapper .com-table td.status .in-process {
+      color: #61c571; }
+    .com-wrapper .com-table td.status .pending {
+      color: #fdb04a; }
+    .com-wrapper .com-table td.status .draft {
+      color: #2a2d33; }
+    .com-wrapper .com-table td.status .completed {
+      color: #3aabd5; }
+    .com-wrapper .com-table td.flag span {
+      margin: 4px; }
+    .com-wrapper .com-table td.status .label {
+      background-color: transparent;
+      text-transform: uppercase;
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 10px;
+      padding: 2px 0px 2px 0px; }
+    .com-wrapper .com-table td.status small {
+      font-family: "AvenirNextLTPro-Regular";
+      font-size: 11px;
+      color: #44474b; }
+    .com-wrapper .com-table .search-field {
+      width: 30%;
+      margin-top: 15px;
+      float: right;
+      margin-right: 20px; }
+    .com-wrapper .com-table .search-field input {
+      font-size: 12px; }
+    .com-wrapper .com-table .btns > a {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px;
+      margin: 0;
+      background-color: white;
+      color: #4a4a4a;
+      border-radius: 20px;
+      padding: 7px;
+      width: 100px;
+      border: 1px solid #b7b7b7;
+      margin-top: 15px; }
+    .com-wrapper .com-table .btns i {
+      margin-left: 5px; }
+    .com-wrapper .com-table:last-child {
+      margin-bottom: 0; }
 
-.com-charts {
-  padding: 15px 15px 30px;
-  border-bottom: 1px solid #eee; }
-
-.co-overview-title {
-  font-family: AvenirNextLTPro-Regular;
-  font-size: 21px;
-  color: #44474b;
-  margin-bottom: 10px; }
-
-.com-table {
-  margin-bottom: 25px; }
-  .com-table table {
-    border-left: none;
-    border-right: none; }
-  .com-table table thead,
-  .com-table table tbody {
-    border: 1px solid #eee; }
-  .com-table table tbody tr td {
-    padding: 6px;
-    height: 50px; }
-  .com-table table thead tr th {
-    padding: 6px;
-    height: 40px; }
-  .com-table h3 {
-    font-family: AvenirNextLTPro-Medium;
-    font-size: 17px;
-    color: #4a4a4a;
-    margin: 25px 0 15px; }
-  .com-table table thead th {
-    font-family: AvenirNextLTPro-Demi;
-    font-size: 15px;
-    color: #808080;
-    border: none; }
-  .com-table table thead th,
-  .com-table table tbody td,
-  .com-table table tfoot td {
-    vertical-align: middle;
-    border: none; }
-  .com-table table tbody tr {
-    border-top: 1px solid #eee; }
-  .com-table table tfoot tr {
-    border-top: 1px solid #eee;
-    border-right: none;
-    border-left: none; }
-  .com-table table tfoot span {
-    font-family: "AvenirNextLTPro-Demi";
-    font-size: 12px;
-    color: #808080; }
-  .com-table table tfoot p {
-    margin-bottom: 5px;
-    color: #4a4a4a; }
-  .com-table th.flag {
-    width: 4%; }
-  .com-table td.flag span {
-    margin: 4px; }
-  .com-table th.title {
-    width: 27%; }
-  .com-table th.sow {
-    width: 20%; }
-  .com-table th.initiator,
-  .com-table th.due-date,
-  .com-table th.amount {
-    width: 9%; }
-  .com-table th.responsible,
-  .com-table th.status {
-    width: 10%; }
-  .com-table td.order-by-date {
-    width: 9%;
-    font-family: AvenirNextLTPro-Regular;
-    font-size: 13px;
-    color: #44474b; }
-  .com-table td.sow {
-    width: 20%; }
-  .com-table td.title a {
-    font-family: AvenirNextLTPro-Regular;
-    font-size: 15px;
-    color: #44474b; }
-  .com-table td.title small {
-    font-family: AvenirNextLTPro-Regular;
-    font-size: 11px;
-    color: #9e9e9e; }
-  .com-table td.responsible a,
-  .com-table td.initiator a,
-  .com-table td.sow a {
-    font-family: AvenirNextLTPro-Demi;
-    font-size: 12px;
-    color: #3aabd5; }
-  .com-table td.responsible small,
-  .com-table td.initiator small {
-    font-family: AvenirNextLTPro-Demi;
-    font-size: 10px;
-    color: #9e9e9e; }
-  .com-table td.sow small {
-    font-family: AvenirNextLTPro-Regular;
-    font-size: 11px; }
-  .com-table td.amount {
-    width: 9%;
-    font-family: AvenirNextLTPro-Regular;
-    font-size: 12px;
-    color: #44474b; }
-  .com-table td.status .in-process {
-    color: #61c571; }
-  .com-table td.status .pending {
-    color: #fdb04a; }
-  .com-table td.status .draft {
-    color: #2a2d33; }
-  .com-table td.status .completed {
-    color: #3aabd5; }
-  .com-table td.flag span {
-    margin: 4px; }
-  .com-table td.status .label {
-    background-color: transparent;
-    text-transform: uppercase;
-    font-family: "AvenirNextLTPro-Demi";
-    font-size: 10px;
-    padding: 2px 0px 2px 0px; }
-  .com-table td.status small {
-    font-family: "AvenirNextLTPro-Regular";
-    font-size: 11px;
-    color: #44474b; }
-  .com-table .search-field {
-    width: 30%;
-    margin-top: 15px;
-    float: right;
-    margin-right: 20px; }
-  .com-table .search-field input {
-    font-size: 12px; }
-  .com-table .btns > a {
-    font-family: "AvenirNextLTPro-Demi";
-    font-size: 12px;
-    margin: 0;
-    background-color: white;
-    color: #4a4a4a;
-    border-radius: 20px;
-    padding: 7px;
+.coi-page-wrapper {
+  padding-top: 0;
+  margin-bottom: 0; }
+  .coi-page-wrapper .text-regular {
+    font-family: AvenirNextLTPro-Regular; }
+  .coi-page-wrapper .text-default {
+    font-family: AvenirNextLTPro-Demi; }
+  .coi-page-wrapper .text-medium {
+    font-family: AvenirNextLTPro-Medium; }
+  .coi-page-wrapper .coi-page-info {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 1px 0 4px #d8d8d8; }
+  .coi-page-wrapper .closeBox {
+    background: #000;
     width: 100px;
-    border: 1px solid #b7b7b7;
-    margin-top: 15px; }
-  .com-table .btns i {
-    margin-left: 5px; }
-  .com-table:last-child {
-    margin-bottom: 0; }
+    padding: 110px 0;
+    text-align: center; }
+  .coi-page-wrapper .coi-page-title {
+    margin-top: 60px;
+    width: calc(100% - 100px); }
+    .coi-page-wrapper .coi-page-title h2 {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 27px;
+      margin-bottom: 20px;
+      margin-top: 0px; }
+    .coi-page-wrapper .coi-page-title span.co-name {
+      font-family: AvenirNextLTPro-Regular;
+      font-size: 17px; }
+    .coi-page-wrapper .coi-page-title input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      width: 100%;
+      font-size: 17px; }
+    .coi-page-wrapper .coi-page-title .project-info h3 {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 20px; }
+    .coi-page-wrapper .coi-page-title .project-info span {
+      font-family: "AvenirNextLTPro-Demi";
+      font-size: 12px; }
+  .coi-page-wrapper .co-info {
+    color: #4a4a4a; }
+    .coi-page-wrapper .co-info .row span:first-child, .coi-page-wrapper .co-info .row div:first-child {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-family: AvenirNextLTPro-Demi; }
+    .coi-page-wrapper .co-info .row span.date, .coi-page-wrapper .co-info .row span.initiated-by {
+      font-family: AvenirNextLTPro-Medium;
+      font-size: 12px; }
+    .coi-page-wrapper .co-info .row span.status {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 11px;
+      color: #79c485; }
+    .coi-page-wrapper .co-info .row .dropdown button span {
+      font-size: 12px; }
+    .coi-page-wrapper .co-info .row .dropdown .dropdown-menu li a {
+      font-size: 12px; }
+  .coi-page-wrapper .first-section {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    margin-top: 30px;
+    padding: 20px; }
+    .coi-page-wrapper .first-section .date-field-wrapper {
+      border: 1px solid #eee; }
+    @media (min-width: 992px) {
+      .coi-page-wrapper .first-section .information > div {
+        min-height: 73px; }
+        .coi-page-wrapper .first-section .information > div:not(:first-child) {
+          border-left: 1px solid #eee;
+          text-align: center; }
+          .coi-page-wrapper .first-section .information > div:not(:first-child) > div {
+            display: table;
+            margin: auto;
+            text-align: left; } }
+    @media (max-width: 992px) {
+      .coi-page-wrapper .first-section .information > div {
+        margin-bottom: 15px;
+        text-align: left; } }
+    .coi-page-wrapper .first-section .information span.title {
+      display: block;
+      margin-bottom: 5px; }
+    .coi-page-wrapper .first-section .information .assign-to {
+      font-family: AvenirNextLTPro-Medium;
+      font-size: 10px; }
+      .coi-page-wrapper .first-section .information .assign-to small {
+        font-family: AvenirNextLTPro-Regular;
+        font-style: italic;
+        font-size: 9px; }
+    .coi-page-wrapper .first-section .information i.fa-flag {
+      transform: rotate(-30deg); }
+    .coi-page-wrapper .first-section .information .sow-cont {
+      float: left;
+      margin-right: 10px; }
+      .coi-page-wrapper .first-section .information .sow-cont .status {
+        font-family: AvenirNextLTPro-Demi;
+        font-size: 11px; }
+      .coi-page-wrapper .first-section .information .sow-cont.text {
+        font-family: AvenirNextLTPro-Regular;
+        font-size: 11px;
+        padding-top: 1px; }
+    .coi-page-wrapper .first-section .information .sow-prog {
+      padding-top: 2px; }
+    .coi-page-wrapper .first-section .table-responsive {
+      border: 1px solid #eee; }
+      .coi-page-wrapper .first-section .table-responsive table {
+        vertical-align: middle;
+        font-family: AvenirNextLTPro-Demi; }
+        .coi-page-wrapper .first-section .table-responsive table input {
+          max-width: 140px; }
+        .coi-page-wrapper .first-section .table-responsive table tbody tr:first-child td {
+          border-top: 0; }
+        .coi-page-wrapper .first-section .table-responsive table tbody tr td {
+          vertical-align: middle;
+          padding: 20px 10px; }
+          .coi-page-wrapper .first-section .table-responsive table tbody tr td:first-child {
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 12px; }
+        .coi-page-wrapper .first-section .table-responsive table thead {
+          background-color: #f9f9f9; }
+          .coi-page-wrapper .first-section .table-responsive table thead tr:first-child th {
+            border-bottom: 0; }
+          .coi-page-wrapper .first-section .table-responsive table thead tr th {
+            vertical-align: middle;
+            font-weight: normal;
+            font-family: AvenirNextLTPro-Regular;
+            font-size: 12px; }
+      .coi-page-wrapper .first-section .table-responsive .coi-duration-table {
+        font-family: AvenirNextLTPro-Medium;
+        font-size: 12px; }
+        .coi-page-wrapper .first-section .table-responsive .coi-duration-table input {
+          width: 115px; }
+    .coi-page-wrapper .first-section table input {
+      padding: 15px;
+      background-color: #f9f9f9; }
+      .coi-page-wrapper .first-section table input:focus {
+        background-color: #fff; }
+    .coi-page-wrapper .first-section .more-option {
+      text-decoration: underline; }
+    .coi-page-wrapper .first-section textarea {
+      background-color: #f9f9f9;
+      resize: none; }
+      .coi-page-wrapper .first-section textarea:hover {
+        border: 1px solid #eee; }
+      .coi-page-wrapper .first-section textarea:focus, .coi-page-wrapper .first-section textarea:active {
+        background-color: #fff;
+        border: 1px solid #eee; }
+    .coi-page-wrapper .first-section .options .options-bar {
+      border: 1px solid #eee;
+      border-radius: 3px; }
+      .coi-page-wrapper .first-section .options .options-bar .ob-item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px; }
+        @media (min-width: 992px) {
+          .coi-page-wrapper .first-section .options .options-bar .ob-item:not(:last-child) {
+            border-right: 1px solid #eee; } }
+        .coi-page-wrapper .first-section .options .options-bar .ob-item:not(:first-child) {
+          text-align: center; }
+        @media (max-width: 992px) {
+          .coi-page-wrapper .first-section .options .options-bar .ob-item:first-child {
+            text-align: center; } }
+        .coi-page-wrapper .first-section .options .options-bar .ob-item:first-child span {
+          margin-left: 15px; }
+      .coi-page-wrapper .first-section .options .options-bar .checkbox {
+        margin-top: 0;
+        margin-bottom: 0; }
+  .coi-page-wrapper .second-section {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 30px;
+    background-color: #eee; }
+    .coi-page-wrapper .second-section .second-content {
+      border: 1px solid #eee;
+      background-color: #f9f9f9; }
+      .coi-page-wrapper .second-section .second-content .nav-tabs {
+        border-bottom: 1px solid #eee; }
+        .coi-page-wrapper .second-section .second-content .nav-tabs > li > a {
+          font-family: AvenirNextLTPro-Medium;
+          font-size: 13px;
+          color: #6c6c6c;
+          min-width: 110px;
+          text-align: center;
+          padding: 15px 30px;
+          border-radius: 0;
+          border-top: 0; }
+        .coi-page-wrapper .second-section .second-content .nav-tabs > li:first-child > a {
+          border-left: 0; }
+        .coi-page-wrapper .second-section .second-content .nav-tabs > li.active a {
+          color: #e25c5c;
+          background: white;
+          border-bottom: 1px solid white; }
+      .coi-page-wrapper .second-section .second-content .tab-content {
+        border: 0; }
+        .coi-page-wrapper .second-section .second-content .tab-content .comments-wrapper .comment {
+          position: relative;
+          font-size: 13px;
+          margin-bottom: 15px;
+          font-family: AvenirNextLTPro-Regular; }
+          .coi-page-wrapper .second-section .second-content .tab-content .comments-wrapper .comment > div {
+            display: inline-block; }
+          .coi-page-wrapper .second-section .second-content .tab-content .comments-wrapper .comment .author {
+            font-size: 13px;
+            font-family: AvenirNextLTPro-Demi; }
+          .coi-page-wrapper .second-section .second-content .tab-content .comments-wrapper .comment .edit {
+            position: absolute;
+            right: 20px;
+            top: 4px; }
+            .coi-page-wrapper .second-section .second-content .tab-content .comments-wrapper .comment .edit:hover {
+              cursor: pointer; }
+    .coi-page-wrapper .second-section h3 {
+      margin-top: 20px;
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 13px; }
+    .coi-page-wrapper .second-section textarea {
+      padding: 15px;
+      border-radius: 3px;
+      color: #4a4a4a;
+      background-color: #f9f9f9; }
+      .coi-page-wrapper .second-section textarea:active, .coi-page-wrapper .second-section textarea:focus {
+        background-color: #fff;
+        border-color: #eee; }

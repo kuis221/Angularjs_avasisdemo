@@ -277,6 +277,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'New Change Order'
             }
         })
+        .state('action-items.change-order.in-process', {
+            url: '/in-process',
+            templateUrl: "partials/action-items/change-order/in-process.html",
+            controller: "ChangeOrderInProcessCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Change Order'
+            }
+        })
         .state('action-items.inspections', {
             url: '/inspections',
             templateUrl: "partials/action-items/inspections.html",

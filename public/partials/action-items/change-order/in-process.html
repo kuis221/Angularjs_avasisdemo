@@ -1,0 +1,234 @@
+<div class="coi-page-wrapper mb30">
+    <!-- Top Nav bar -->
+    <div class="row coi-page-info">
+        <div class="pull-left pl0 pr0">
+            <div class="closeBox">
+                <p>
+                    <a ui-sref="action-items.main">Close <i class="fa fa-caret-right"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pull-left coi-page-title">
+            <div class="col-md-7 pl20">
+                <h2 class="text-default">Change Order</h2>
+                <span class="co-name">Change Order Name Appear Here</span>
+                <div class="project-info">
+                    <h3 class="text-primary">Wilmington 47</h3>
+                    <span class="text-muted">47 Wilmington Ave<br/>Arlington, VA 90125</span>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="co-info">
+                    <div class="row">
+                        <span class="col-xs-9 text-right">Change Order#</span>
+                        <span class="col-xs-3 text-left">
+                            <label class="label label-info">193</label>
+                        </span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Date Initiated</span>
+                        <span class="col-xs-3 text-left date">8/23/14</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Initiated By</span>
+                        <span class="col-xs-3 text-left initiated-by">Bruce Wayne</span>
+                    </div>
+                    <div class="row mt5">
+                        <span class="col-xs-9 text-right">Status</span>
+                        <span class="col-xs-3 text-left text-success status">IN PROGRESS</span>
+                    </div>
+
+                    <div class="row mt5 pr15">
+                        <div class="col-md-6 text-right mt20">Currently Responsible</div>
+                        <div class="col-md-6 text-left">
+                            <ui-select options="users" ng-select="" selected-item="curResponsible"></ui>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Top Nav bar -->
+
+
+    <!-- Main Content -->
+    <div class="row no-margin animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="first-section">
+
+                <div class="form-group text-right">
+                    <div uib-dropdown dropdown-append-to-body class="dropdown">
+                        <a href="javascript:void(0)" uib-dropdown-toggle="" class="text-muted dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-gear"></i>
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="row information">
+                    <div class="col-md-2">
+                        <div>
+                            <span class="title">Approval Required by</span>
+                            <a href="javascript:void(0)" class="text-primary">User Name</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div>
+                            <span class="title">Scope of Work</span>
+                            <div class="text-primary">Zoning permit for South Entrance</div>
+                            <div>
+                                <div class="sow-cont">
+                                    <span class="text-danger status"><i class="fa fa-flag"></i> SUSPENDED</span>
+                                </div>
+                                <div class="sow-cont text-regular text">32% COMPLETED</div>
+                                <div class="sow-prog">
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-success" style="width: 32%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="assign-to text-default"><small class="text-muted">assigned to:</small> Eric Hoffman, Joe Sloan, Clark Anderson, Michael Kovac</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div>
+                            <span class="title">Change Requested Category</span>
+                            <span class="text-primary">Correction</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div>
+                            <span class="title">Due Date</span>
+                            <span class="text-regular">August 16, 2015</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1">
+                        <div>
+                            <span class="title">IRN</span>
+                            <span class="text-regular">1234567</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="table-responsive mb15">
+                            <table class="table coi-duration-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Start Date</th>
+                                        <th>Comp Date</th>
+                                        <th>Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Current SOW Scheduled</td>
+                                        <td>Aug 26, 2015</td>
+                                        <td>Dec 6, 2015</td>
+                                        <td>234 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Requested Change</td>
+                                        <td>Aug 26, 2015</td>
+                                        <td>Dec 6, 2015</td>
+                                        <td>234 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Varience</td>
+                                        <td class="text-success">+3 days</td>
+                                        <td class="text-danger">-2 days</td>
+                                        <td class="text-danger">-2 days</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="table-responsive mb15">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Material</th>
+                                        <th>Labor</th>
+                                        <th>Equipment</th>
+                                        <th>Other</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Current Cost</td>
+                                        <td>$76,584.00</td>
+                                        <td>$42,953.09</td>
+                                        <td>$3,456.00</td>
+                                        <td>$100,456.78</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Requested Change</td>
+                                        <td>$76,584.00</td>
+                                        <td>$42,953.09</td>
+                                        <td>$3,456.00</td>
+                                        <td>$100,456.78</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Varience</td>
+                                        <td class="text-danger">-$34</td>
+                                        <td class="text-danger">-$34</td>
+                                        <td class="text-danger">-$34</td>
+                                        <td class="text-success">+$6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label>Description of Change Request</label>
+                        <textarea placeholder="Provide any additional information here..." class="form-control p20 text-default"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mt30 mb30 text-right">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary btn-lg">
+                    Actions <i class="fa fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row no-margin animated fadeInRight second-section">
+        <div class="second-content">
+            <uib-tabset>
+                <uib-tab heading="Comments">
+                    <div ng-include="'partials/action-items/change-order/comments.html'"></div>
+                </uib-tab>
+                <uib-tab heading="Access">Short Labeled Justified content</uib-tab>
+                <uib-tab heading="Workflow">Short Labeled Justified content</uib-tab>
+                <uib-tab heading="Attachments">Long Labeled Justified content</uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+    <!-- Main Content -->
+</div>
