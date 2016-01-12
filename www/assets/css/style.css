@@ -2957,6 +2957,7 @@ h3.proStatus i {
 }
 .topMemberContain .green2 {
     color: #61c571;
+    cursor: pointer;
 }
 .topMemberContain .green2 img {
     float: left;
@@ -2973,6 +2974,7 @@ h3.proStatus i {
 }
 .topMemberContain .sky2 {
     color: #3aabd5;
+    cursor: pointer;
 }
 .topMemberContain .sky2 img {
     float: left;
@@ -2989,6 +2991,7 @@ h3.proStatus i {
 }
 .topMemberContain .orangeColor2 {
     color: #fdae46;
+    cursor: pointer;
 }
 .topMemberContain .orangeColor2 img {
     float: left;
