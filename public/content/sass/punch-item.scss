@@ -1,0 +1,38 @@
+.rfi-file-dropzone .dropzone {
+    min-height: 80px;
+    margin-top: 0px !important;
+    padding: 0px;
+}
+
+.rfi-file-dropzone {
+    border: 1px dashed #3aabd5;
+    position: relative;
+}
+
+.rfi-file-dropzone .dropzone .dz-default.dz-message {
+    background-image: url('/assets/img/financials/dropzone.png');
+    background-position: left;
+    background-size: 45px;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: calc(45% - 200px);
+    height: 100%;
+}
+
+.rfi-file-dropzone .dropzone-title {
+    margin-left: calc(45% - 130px);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+@media (max-width: 768px) {
+    .rfi-file-dropzone .dropzone .dz-default.dz-message {
+        margin-left: 10%;
+    }
+    .rfi-file-dropzone .dropzone-title {
+        margin-left: calc(10% + 55px);
+    }
+}

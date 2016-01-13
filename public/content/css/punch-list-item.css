@@ -1,0 +1,21 @@
+.detail .title {
+  font-size: 17px;
+  line-height: 30px;
+  margin-top: 5px; }
+
+.detail .heading {
+  font-size: 16px;
+  line-height: 30px;
+  color: #a1a3a5; }
+
+.detail .sub-title {
+  font-size: 14px; }
+
+.detail .top {
+  background: white; }
+  .detail .top .closeBox {
+    background: #000;
+    width: 100px;
+    padding: 110px 0;
+    text-align: center;
+    float: left; }

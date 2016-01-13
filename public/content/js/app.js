@@ -313,6 +313,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'Inspections'
             }
         })
+        .state('action-items.punch-list', {
+            url: '/punch-list',
+            template: "<ui-view></ui-view>",
+            data: {
+                pageName: 'Punch List Item'
+            }
+        })
+        .state('action-items.punch-list-new', {
+            url: '/punch-list/new',
+            templateUrl: "partials/action-items/punch-item/new.html",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Punch List Item'
+            }
+        })
         .state('projects', {
             url: '/projects',
             abstract: true,
