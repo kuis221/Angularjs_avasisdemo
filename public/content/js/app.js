@@ -548,6 +548,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                 pageName: 'Direct Payment'
             }
         })
+        .state('direct-invoice', {
+            url: '/financials/direct-invoice',
+            templateUrl: "partials/financials/direct-invoice/direct-invoice.html",
+            controller: "DirectInvoiceCtrl",
+            data: {
+                isHeaderHidden: true,
+                pageName: 'Create New Direct Invoice'
+            }
+        })
         .state('photos', {
             url: '/photos',
             templateUrl: 'partials/photos/photos.html',
