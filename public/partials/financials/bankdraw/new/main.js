@@ -1,28 +1,28 @@
-app.controller('BankDrawCtrl',
+app.controller('BankDrawNewCtrl',
     ['$scope', '$state', function ($scope, $state) {
         $scope.currentStep = 'bankdraw.payment-application';
         $scope.steps = [{
-            state: 'bankdraw.payment-application',
-            name: 'Payment Applications & Invoice'
+            state: 'bankdraw.new.payment-application',
+            name: 'Payment Applications & Invoices'
         },
         {
-            state: 'bankdraw.compliance',
+            state: 'bankdraw.new.compliance',
             name: 'Compliance'
         },
         {
-            state: 'bankdraw.draw-details',
+            state: 'bankdraw.new.draw-details',
             name: 'Draw Details'
         },
         {
-            state: 'bankdraw.documents',
+            state: 'bankdraw.new.documents',
             name: 'Documents'
         },
         {
-            state: 'bankdraw.payment-details',
+            state: 'bankdraw.new.payment-details',
             name: 'Payment Details'
         },
         {
-            state: 'bankdraw.finalize',
+            state: 'bankdraw.new.finalize',
             name: 'Finalize'
         }];
 

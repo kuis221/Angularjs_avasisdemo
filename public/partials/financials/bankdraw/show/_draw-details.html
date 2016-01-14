@@ -1,0 +1,67 @@
+﻿<div class="pt10">
+    <div class="table-responsive" slim-scroll box-height="500px">
+        <table class="table mb20 text-muted">
+            <thead>
+                <tr>
+                    <th width="200px">Description</th>
+                    <th>Sched. Value</th>
+                    <th>Reallocations</th>
+                    <th>Updated Budget</th>
+                    <th>Disbursed to Date</th>
+                    <th>This Draw</th>
+                    <th>% Drawn</th>
+                    <th>Balance to Finish</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in drawDetails">
+                    <td width="200px">{{item.description}}</td>
+                    <td>{{numberToCurrency(item.scheduled_value)}}</td>
+                    <td class="has-input">
+                        <input type="text" class="label-default" size="12" ng-model="item.reallocations" ui-money-mask>
+                    </td>
+                    <td>{{numberToCurrency(item.updated_budget)}}</td>
+                    <td>{{numberToCurrency(item.disbursed_to_date)}}</td>
+                    <td class="text-primary">{{numberToCurrency(item.this_draw)}}</td>
+                    <td>{{item.percentage_of_drawn * 100 | number:0}}%</td>                                    
+                    <td ng-class="{true: 'text-danger'}[item.balance_to_complete < 0]">{{item.balance_to_complete | accounting:'$'}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="text-default">
+                    <td ></td>
+                    <td>
+                        <div class="text-muted">Total</div>
+                        {{(drawDetails | sumBy:'scheduled_value') | currency}}
+                    </td>
+                    <td>
+                        <div class="text-muted">Total</div>
+                        {{(drawDetails | sumBy: 'reallocations') | currency}}
+                    </td>
+                    <td>
+                        <div class="text-muted">Total</div>
+                        {{(drawDetails | sumBy: 'updated_budget') | currency}}
+                    </td>
+
+                    <td>
+                        <div class="text-muted">Total</div>
+                        {{(drawDetails | sumBy: 'disbursed_to_date') | currency}}
+                    </td>
+                    <td>
+                        <div class="text-muted">Total</div>
+                        {{(drawDetails | sumBy: 'this_draw') | currency}}
+                    </td>
+                    <td>
+                        <div class="text-muted">Avg.</div>
+                        <div class="">37.9%</div>
+                    </td>
+                    <td>
+                        <div class="text-muted">Total</div>
+                        {{(drawDetails | sumBy: 'balance_to_complete') | currency}}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

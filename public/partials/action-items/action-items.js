@@ -274,10 +274,10 @@ app.controller('ActionItemsCtrl',
                 done: 1
             },
             overview: {
-                completed: 59,
-                pending: 36,
-                upcoming: 41,
-                total: 136
+                completed: 5,
+                pending: 3,
+                upcoming: 5,
+                total: 13
             },
             assignedMe: {
                 green: {
@@ -296,256 +296,294 @@ app.controller('ActionItemsCtrl',
             pendingList: [
                 {
                     flag: 'red',
-                    name: "Main Inspection",
-                    type: "Inspection Type",
+                    name: "Fuel Gas Piping",
+                    type: "City",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "Ben Veromen",
+                        company: ""
                     },
                     responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
-                    },
-                    status: "scheduled",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
-                },
-                {
-                    flag: 'orange',
-                    name: "First Floor",
-                    type: "Inspection Type",
-                    inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
-                    },
-                    responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
-                    },
-                    status: "Needs to be ordered",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
-                },
-                {
-                    flag: 'orange',
-                    name: "Lobby",
-                    type: "Inspection Type",
-                    inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
-                    },
-                    responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        name: "Shane Rappleye",
+                        company: "Arlington Gas Pipe Inc."
                     },
                     status: "Ready for Reinspection",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
+                    documents: 3,
+                    date_completion: "Aug 11, 2015 / Aug 18, 2015",
+                    order_by_date: "Aug 5, 2015",
+                    next_inspection: "Aug 5, 2015",
                     date_completed: "Aug 23, 2015"
                 },
                 {
                     flag: 'orange',
-                    name: "Plumbing",
-                    type: "Inspection Type",
+                    name: "Framing",
+                    type: "Owner",
                     inspector: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        company: ""
+                    },
+                    responsible: {
+                        name: "Dan Bonker",
+                        company: "Sage Creek Framing Co."
+                    },
+                    status: "Action Required",
+                    documents: 1,
+                    date_completion: "Aug 19, 2015 / Aug 23, 2015",
+                    order_by_date: "Aug 18, 2015",
+                    next_inspection: "Aug 20, 2015",
+                    date_completed: "Aug 23, 2015"
+                },
+                {
+                    flag: 'green',
+                    name: "4-Way Inspection",
+                    type: "City",
+                    inspector: {
+                        name: "Mike Montgomery",
+                        company: ""
                     },
                     responsible: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        company: "Synergy Construction"
                     },
-                    status: "Inspection Complete",
+                    status: "Action Required",
                     documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
+                    date_completion: "Aug 25, 2015 / Aug 29, 2015",
+                    order_by_date: "Aug 21, 2015",
+                    next_inspection: "Aug 25, 2015",
                     date_completed: "Aug 23, 2015"
                 }
             ],
             upcomingList: [
                 {
-                    flag: 'orange',
-                    name: "Structure Inspection",
-                    type: "Inspection Type",
+                    flag: 'green',
+                    name: "Insulation",
+                    type: "City",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "Ben Veromen",
+                        company: ""
                     },
                     responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        name: "Dave Gebo",
+                        company: ""
                     },
                     status: "Scheduled",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    documents: "-",
+                    date_completion: "Sep 11, 2015 / Sep 12, 2015",
+                    order_by_date: "Sep 9, 2015",
+                    next_inspection: "-",
+                    date_completed: "-"
                 },
                 {
                     flag: 'green',
-                    name: "Work",
-                    type: "Inspection Type",
+                    name: "Drywall",
+                    type: "Owner",
                     inspector: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        company: ""
                     },
                     responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        name: "Dave Musgrove",
+                        company: ""
                     },
-                    status: "Ready for Reinspection",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    status: "Scheduled",
+                    documents: "-",
+                    date_completion: "Oct 5, 2015 / Oct 10, 2015",
+                    order_by_date: "Sep 30, 2015",
+                    next_inspection: "-",
+                    date_completed: "-"
                 },
                 {
                     flag: 'green',
-                    name: "Power",
-                    type: "Inspection Type",
+                    name: "Plumbing Final",
+                    type: "City",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "William Wallance",
+                        company: ""
                     },
                     responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        name: "John Steel",
+                        company: ""
                     },
-                    status: "Ready for Reinspection",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    status: "Needs to be Ordered",
+                    documents: "-",
+                    date_completion: "Oct 5, 2015 / Oct 11, 2015",
+                    order_by_date: "Oct 1, 2015",
+                    next_inspection: "-",
+                    date_completed: "-"
+                },
+                {
+                    flag: 'green',
+                    name: "Mechanical Final",
+                    type: "City",
+                    inspector: {
+                        name: "Ben Veromen",
+                        company: ""
+                    },
+                    responsible: {
+                        name: "Dave Gebo",
+                        company: ""
+                    },
+                    status: "Needs to be Ordered",
+                    documents: "-",
+                    date_completion: "-",
+                    order_by_date: "-",
+                    next_inspection: "-",
+                    date_completed: "-"
+                },
+                {
+                    flag: 'green',
+                    name: "Building Final",
+                    type: "Final",
+                    inspector: {
+                        name: "Jill Scott",
+                        company: ""
+                    },
+                    responsible: {
+                        name: "Mike Hunter",
+                        company: ""
+                    },
+                    status: "Needs to be Ordered",
+                    documents: "-",
+                    date_completion: "-",
+                    order_by_date: "-",
+                    next_inspection: "-",
+                    date_completed: "-"
                 }
             ],
             completedList: [
                 {
                     flag: 'completed',
-                    name: "Heat and Cooling",
-                    type: "Inspection Type",
+                    name: "Mechanical Rough In",
+                    type: "City",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "Ben Veromen",
+                        company: ""
                     },
                     responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        name: "Mary Beroset",
+                        company: ""
                     },
                     status: "Inspection Complete",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    documents: 3,
+                    date_completion: "Jul 16, 2015 / Jul 21, 2015",
+                    order_by_date: "Jul 9, 2015",
+                    next_inspection: "Jul 21, 2015",
+                    date_completed: "4 of 4"
                 },
                 {
                     flag: 'completed',
-                    name: "Air Ducts",
-                    type: "Inspection Type",
+                    name: "Plumbing Rough In",
+                    type: "City",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "Ben Veromen",
+                        company: ""
                     },
                     responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        name: "Mike Riley",
+                        company: ""
                     },
                     status: "Inspection Complete",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    documents: 1,
+                    date_completion: "Jun 24, 2015 / Jun 30, 2015",
+                    order_by_date: "Jun 21, 2015",
+                    next_inspection: "Jun 25, 2015",
+                    date_completed: "11 of 11"
                 },
                 {
                     flag: 'completed',
-                    name: "Workers",
-                    type: "Inspection Type",
+                    name: "Roof Sheating & Shearwall",
+                    type: "Owner",
                     inspector: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        company: ""
                     },
                     responsible: {
+                        name: "Mike Bearnson",
+                        company: ""
+                    },
+                    status: "Inspection Complete",
+                    documents: 1,
+                    date_completion: "Apr 13, 2015 / Apr 15, 2015",
+                    order_by_date: "Apr 2, 2015",
+                    next_inspection: "Apr 14, 2015",
+                    date_completed: "2 of 2"
+                },
+                {
+                    flag: 'completed',
+                    name: "Underfloor",
+                    type: "Owner",
+                    inspector: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        company: ""
+                    },
+                    responsible: {
+                        name: "Jim White",
+                        company: ""
                     },
                     status: "Inspection Complete",
                     documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    date_completion: "Apr 5, 2015 / Apr 7, 2015",
+                    order_by_date: "Mar 30, 2015",
+                    next_inspection: "Apr 7, 2015",
+                    date_completed: "3 of 3"
+                },
+                {
+                    flag: 'completed',
+                    name: "Footing & Foundation",
+                    type: "Bank",
+                    inspector: {
+                        name: "Jill Scott",
+                        company: ""
+                    },
+                    responsible: {
+                        name: "Earnie Rutland",
+                        company: ""
+                    },
+                    status: "Inspection Complete",
+                    documents: 1,
+                    date_completion: "Feb 20, 2015 / Feb 30, 2015",
+                    order_by_date: "Feb 19, 2015",
+                    next_inspection: "Feb 27, 2015",
+                    date_completed: "9 of 9"
                 }
             ],
             draftsList: [
                 {
                     flag: 'edit',
-                    name: "Heat and Cooling",
-                    type: "Inspection Type",
+                    name: "4-Way",
+                    type: "",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "",
+                        company: ""
                     },
                     responsible: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        company: "Synergy Construction"
                     },
-                    status: "Inspection Complete",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    status: "Draft",
+                    documents: 1,
+                    date_completion: "-",
+                    order_by_date: "Aug 21, 2015",
+                    next_inspection: "-",
+                    date_completed: "-"
                 },
                 {
                     flag: 'edit',
-                    name: "Air Ducts",
-                    type: "Inspection Type",
+                    name: "Main Water Line",
+                    type: "City",
                     inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
+                        name: "William Wallance",
+                        company: ""
                     },
                     responsible: {
                         name: "Bruce Wayne",
-                        company: "ABC Inc."
+                        company: "Synergy Construction"
                     },
-                    status: "Inspection Complete",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
-                },
-                {
-                    flag: 'edit',
-                    name: "Workers",
-                    type: "Inspection Type",
-                    inspector: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc"
-                    },
-                    responsible: {
-                        name: "Bruce Wayne",
-                        company: "ABC Inc."
-                    },
-                    status: "Inspection Complete",
-                    documents: 2,
-                    date_completion: "May 23, 2015 / Jun 12 2015",
-                    order_by_date: "Aug 23, 2015",
-                    next_inspection: "Aug 23, 2015",
-                    date_completed: "Aug 23, 2015"
+                    status: "Draft",
+                    documents: "-",
+                    date_completion: "-",
+                    order_by_date: "-",
+                    next_inspection: "-",
+                    date_completed: "-"
                 }
             ]
         };

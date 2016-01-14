@@ -119,6 +119,22 @@ app.controller('FinancialsBankdrawCtrl',
                 documents: 1,
                 pay_applications: 27
 
+            },
+            {
+                submission_date: 'Aug 17, 2015',
+                draw_project: {
+                    name: 'Wilmington 47 Draw #7',
+                    type: ''
+                },
+                submitted_by: 'Beth Wiseman',
+                bank_draw_amount: {
+                    name: 'World Bank',
+                    value: 181266.84
+                },
+                status: 'Pending Approval',
+                documents: 3,
+                pay_applications: 11
+
             }
         ];
     }]);

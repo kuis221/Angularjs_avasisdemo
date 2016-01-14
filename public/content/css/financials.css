@@ -27,7 +27,7 @@
 }
 
 .table-financial-main {
-    font-family: "AvenirNextLTPro-Regular";
+    font-family: "AvenirNextLTPro-Medium";
 }
 
 .table-financial-main span {
@@ -39,13 +39,10 @@
 }
 
 .table-financial-main.table.hidden-optional-columns thead tr th.optional-columns,
+.table-financial-main.table.hidden-optional-columns tfoot tr td.optional-columns,
 .table-financial-main.table.hidden-optional-columns tbody tr td.optional-columns {
     display: none;
 }
-.table-financial-main.table tbody tr td {
-    font-size: 11px;
-}
-
 .table-financial-main.table tbody tr td:not(:first-child) {
     border-left: 1px solid #eee;
 }

@@ -1,0 +1,71 @@
+﻿<div class="row pt20" id="payment-details">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">Payee</th>
+                    <th>Project & Roles</th>
+                    <th>Pay App/Invoice</th>
+                    <th>Payment Amount Requested</th>
+                    <th>Payment Form</th>
+                    <th>Payment Amount Approved</th>
+                    <th>Comments</th>
+                    <th width="150px">Payment Reference #</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in paymentDetails">
+                    <td>
+                        <span ng-if="item.role">
+                            <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
+                            <div ng-if="!item.avatar" class="no-avatar">{{item.contact | initials}}</div>
+                        </span>
+                        <div ng-if="!item.role" class="no-avatar">
+                            {{item.contact[0]}}
+                        </div>
+                    </td>
+                    <td style="padding-left: 0">
+                        <div class="sub-title text-primary">{{item.contact}}</div>
+                        <small>{{item.company_name}}</small>
+                        <ul class="list-inline text-muted">
+                            <li><i class="fa fa-envelope"></i></li>
+                            <li><i class="fa fa-comments"></i></li>
+                            <li><i class="fa fa-phone"></i>  <span class="font-regular small">{{item.phone_number}}</span></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="text-muted">{{item.project_name}}</div>
+                        <div>{{item.role}}</div>
+                    </td>
+                    <td class="text-muted font-regular"><span class="label label-info">{{item.invoice}}</span></td>
+                    <td class="text-muted font-regular">{{item.requested_amount | currency}}</td>
+                    <td class="text-muted font-regular">{{item.payment_form}}</td>
+                    <td>
+                        <input type="text" ng-model="item.approved_amount" ui-money-mask class="form-control input-lg label-default">
+                    </td>
+                    <td>
+                        <input type="text" ng-model="item.comment" class="form-control input-lg label-default" placeholder="Enter any additional details...">
+                    </td>
+                    <td>
+                        <input type="text" ng-model="item.payment_reference" class="form-control input-lg label-default">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <td colspan="1">
+                        <div class="text-muted">Total</div>
+                        {{total_requested_payment_amount | currency}}
+                    </td>
+                    <td colspan="4">
+                        <div class="checkbox checkbox-inline">
+                            <input type="checkbox" ng-click="" ng-model="isCheckedAll">
+                            <label>Pay all amount as required</label>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

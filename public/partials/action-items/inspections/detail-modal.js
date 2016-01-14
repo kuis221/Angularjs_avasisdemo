@@ -2,10 +2,10 @@ app.controller('InspectionDetailCtrl',
     ['$scope', '$state', '$uibModalInstance', function($scope, $state, $uibModalInstance) {
 
         $scope.userList = [
-            { name: 'Eric Hoffman', company: 'Abc Inc.'},
-            { name: 'Sam Smith', company: 'Flora Corp'},
-            { name: 'Kimball W. Frank', company: 'Flora Corp'},
-            { name: 'Bob Jones', company: 'Flora Corp'}
+            { name: 'Bruce Wayne', company: 'Synergy Construction'},
+            { name: 'Mike Montgomery', company: 'Summit County Inspectors'},
+            { name: 'Christine Spendlove', company: 'Spendlove Plumbing'},
+            { name: 'Mike Riley', company: 'Canyon River Electric'}
         ];
 
         $scope.photoList = [
@@ -25,22 +25,22 @@ app.controller('InspectionDetailCtrl',
 
         $scope.commentList = [
             {
-                photo: 'assets/img/avasisteam/iris.jpg',
-                name: 'Judy Simmons',
-                content: 'Concrete to be poured tomorrow as soon as crew shows up',
-                date: 'June 23, 2015  2:45pm'
+                photo: 'assets/img/avasisteam/mike.jpg',
+                name: 'Mike Montgomery',
+                content: 'No problem, I will be back on site to perform the inspection on the 21st. Please let me know if something will prevent you from being ready by then. See you soon.',
+                date: 'Aug 17, 2015  1:17pm'
             },
             {
                 photo: 'assets/img/avasisteam/bruce.jpg',
-                name: 'Eric Hoffman',
-                content: 'Hi Judy!  I was thinking that we should get together on Tuesday and discuss the bid that came from Hoffman & Hoffman',
-                date: 'June 23, 2015  2:45pm'
+                name: 'Bruce Wayne',
+                content: 'My apologies Mike. We will be ready by the 20th.',
+                date: 'Aug 17, 2015  8:45pm'
             },
             {
-                photo: 'assets/img/avasisteam/iris.jpg',
-                name: 'Judy Simmons',
-                content: 'Concrete to be poured tomorrow as soon as crew shows up',
-                date: 'June 23, 2015  2:45pm'
+                photo: 'assets/img/avasisteam/mike.jpg',
+                name: 'Mike Montgomery',
+                content: 'Hi Bruce, I stopped by the site this afternoon to start the 4-way. Wilmington 47 is close, but not quite ready for the inspection.',
+                date: 'Aug 16, 2015  4:30pm'
             }
         ]
 

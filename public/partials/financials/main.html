@@ -65,8 +65,24 @@
                     <td>{{row.payments_made | currency:'$':0}}</td>
                     <td>{{row.cash_required_to_complete | currency:'$':0}}</td>
                 </tr>
-                
             </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td class="optional-columns">{{(data | sumBy:'est_budget') | currency:'$':0}}</td>
+                    <td class="optional-columns">{{(data | sumBy:'under_contract') | currency:'$':0}}</td>
+                    <td class="optional-columns">{{(data | sumBy:'approved_purchase_orders') | currency:'$':0}}</td>
+                    <td class="optional-columns">{{(data | sumBy:'approved_change_orders') | currency:'$':0}}</td>
+                    <td class="optional-columns">{{(data | sumBy:'direct_costs') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'working_budget') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'pending_purchase_orders') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'pending_change_orders') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'unbudgeted_costs') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'est_cost_at_completion') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'payments_made') | currency:'$':0}}</td>
+                    <td>{{(data | sumBy:'cash_required_to_complete') | currency:'$':0}}</td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </div>

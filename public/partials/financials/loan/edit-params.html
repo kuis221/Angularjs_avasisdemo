@@ -5,15 +5,15 @@
     <div class="row no-margin normal-row border-bottom">
         <div class="pull-left loan-detail">
             <div>Type of Project</div>
-            <span>Multi Unit</span>
+            <span>Residential - Single Unit</span>
         </div>
         <div class="pull-left loan-detail">
             <div>Square Footage</div>
-            <span>4,567</span>
+            <span>9,788</span>
         </div>
         <div class="pull-left loan-detail">
             <div>Start Date</div>
-            <span>Aug 23, 2015</span>
+            <span>Jan 14, 2015</span>
         </div>
     </div>
     <div class="row no-margin mt20">
@@ -22,11 +22,11 @@
             <div class="row no-margin border-bottom">
                 <div class="pull-left loan-info-input long">
                    <p>Loan Account Number</p>
-                   <input type="text" class="form-control">
+                   <input type="text" class="form-control" value="2015098403">
                 </div>
                 <div class="pull-left loan-info-input long">
                    <p>Construction Loan Amount</p>
-                   <input class="form-control" type="text" placeholder="$" ng-model="loanAmount" ui-money-mask="0"/>
+                   <input class="form-control" type="text" placeholder="$" ng-model="loanAmount" ui-money-mask="0" />
                 </div>
                 <div class="pull-left loan-info-input medium">
                    <p>Loan Duration</p>
@@ -88,7 +88,7 @@
             <div class="row no-margin border-bottom normal-row">
                 <p class="pull-left">Subcontractor Credit Check</p>
                 <div class="pull-right loan-check-input" ng-show="checkCredit">
-                    <input type="text" class="form-control" placeholder="550">
+                    <input type="text" class="form-control" placeholder="600">
                 </div>
                 <div class="pull-right">
                     <ui-rec-switch ng-model="checkCredit" />
@@ -123,19 +123,19 @@
     <div class="row no-margin mt20">
         <div class="pull-left loan-info-input long">
            <p>Owner Name*</p>
-           <input type="text" class="form-control">
+           <input type="text" class="form-control" value="Jane Smith">
         </div>
         <div class="pull-left loan-info-input long">
            <p>Owner Email*</p>
-           <input type="text" class="form-control">
+           <input type="text" class="form-control" value="jane.smith@gmail.com">
         </div>
         <div class="pull-left loan-info-input long">
            <p>General Contractor Name</p>
-           <input type="text" class="form-control">
+           <input type="text" class="form-control" value="Bruce Wayne">
         </div>
         <div class="pull-left loan-info-input long">
            <p>General Contractor Email</p>
-           <input type="text" class="form-control">
+           <input type="text" class="form-control" value="bruce@synergyconstruction.com">
         </div>
     </div>
 

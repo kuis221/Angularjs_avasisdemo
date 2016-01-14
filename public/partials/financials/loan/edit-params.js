@@ -23,16 +23,20 @@ app.controller('LoanEditParamsCtrl' ,
             }, 400);
         }
 
+        $scope.loanAmount = 2860509.00;
+        $scope.loanTerm = 24;
+        $scope.rate = 4.675;
+
         $scope.haveInterest = true;
         $scope.upload = false;
         $scope.checkCredit = true;
-        $scope.drawApproval = false;
+        $scope.drawApproval = true;
         $scope.proofSupplierPayment = false;
         $scope.subBackgrdCheck = false;
-        $scope.subJudgeCheck = false;
-        $scope.subVerificationLicense = false;
-        $scope.subVerificationIsurance = false;
-        $scope.photos = false;
+        $scope.subJudgeCheck = true;
+        $scope.subVerificationLicense = true;
+        $scope.subVerificationIsurance = true;
+        $scope.photos = true;
 
         $scope.appendMonth = function() {
             if (!_.isUndefined($scope.loanTerm) && $scope.loanTerm != '') {
