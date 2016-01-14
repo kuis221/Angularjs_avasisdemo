@@ -39,6 +39,7 @@
 }
 
 .table-financial-main.table.hidden-optional-columns thead tr th.optional-columns,
+.table-financial-main.table.hidden-optional-columns tfoot tr td.optional-columns,
 .table-financial-main.table.hidden-optional-columns tbody tr td.optional-columns {
     display: none;
 }
