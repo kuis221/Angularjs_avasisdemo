@@ -55,186 +55,384 @@ app.controller('ProjectFlagAlertsCtrl',
             {
                 month: 'Aug',
                 day: 23,
-                ticket: 'SOW#908',
+                ticket: 'TSK#1247',
                 category: 'Task',
-                title: 'Measure and Mark the Wall',
-                name: 'Bob Jones',
-                avatar: "assets/img/1.png"
+                title: 'Confirm Progress on Fireplace',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
             },
             {
                 month: 'Jun',
                 day: 14,
-                ticket: 'RFI#145',
-                category: 'RFI',
-                title: 'Measure and Mark the Wall',
-                name: 'Eric Hoffman',
-                avatar: "assets/img/2.png"
+                ticket: 'TSK#1234',
+                category: 'Task',
+                title: 'Need Stairs Ready for Floor Lights',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
             },
             {
                 month: 'Dec',
                 day: 6,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'David Hunter',
-                avatar: "assets/img/3.png"
+                ticket: 'RFI#1244',
+                category: 'RFI',
+                title: 'Garage Cemement Finish',
+                name: 'Jane Smith',
+                avatar: "assets/img/avasisteam/jane.jpg"
             },
             {
                 month: 'Jun',
                 day: 14,
-                ticket: 'SOW#908',
-                category: 'Task',
-                title: 'Measure and Mark the Wall',
-                name: 'Sam Kovac',
-                avatar: "assets/img/4.png"
+                ticket: 'RFI#1222',
+                category: 'RFI',
+                title: 'Exposed Roof Section',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
             },
             {
                 month: 'Aug',
                 day: 23,
-                ticket: 'RFI#145',
-                category: 'RFI',
-                title: 'Measure and Mark the Wall',
-                name: 'Mike Meyer',
-                avatar: "assets/img/1.png"
+                ticket: 'SOW#1008',
+                category: 'Scope of Work',
+                title: 'Rough Electrical',
+                name: 'Mike Riley',
+                avatar: "assets/img/avasisteam/mike.jpg"
             },
             {
                 month: 'Jun',
                 day: 14,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'Eric Hoffman',
-                avatar: "assets/img/2.png"
+                ticket: 'PRO#1005',
+                category: 'Procurement',
+                title: 'Owner to Select Kitchen Cabinets',
+                name: 'Jane Smith',
+                avatar: "assets/img/avasisteam/jane.jpg"
             },
             {
                 month: 'Dec',
                 day: 6,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'Bob Jones',
-                avatar: "assets/img/3.png"
+                ticket: 'SOW#1012',
+                category: 'Scope of Work',
+                title: 'Framing',
+                name: 'Dan Bonker',
+                avatar: "assets/img/avasisteam/dan.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1249',
+                category: 'Task',
+                title: 'Close Garage Roof',
+                name: 'Mike Hunter',
+                avatar: "assets/img/avasisteam/mike.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1252',
+                category: 'Task',
+                title: 'Finish Cosing in Roof',
+                name: 'Dave Gebo',
+                avatar: "assets/img/avasisteam/gebo.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1435',
+                category: 'Task',
+                title: 'Submit Invoice for Additional Lumber',
+                name: 'Dave Gebo',
+                avatar: "assets/img/avasisteam/gebo.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1534',
+                category: 'Task',
+                title: 'Discuss Ventilation Options',
+                name: 'Dave Musgrove',
+                avatar: "assets/img/avasisteam/dave.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1008',
+                category: 'Procurement',
+                title: 'Main Floor Fireplace',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1018',
+                category: 'Procurement',
+                title: 'Air Ducts',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1210',
+                category: 'Procurement',
+                title: 'Piping',
+                name: 'Beth Wiseman',
+                avatar: "assets/img/avasisteam/beth.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1150',
+                category: 'Procurement',
+                title: 'Interior Doors',
+                name: 'Jane Smith',
+                avatar: "assets/img/avasisteam/jane.jpg"
             }
         ];
         $scope.mediumPriority = [
             {
                 month: 'Aug',
                 day: 23,
-                ticket: 'SOW#908',
+                ticket: 'TSK#1322',
                 category: 'Task',
-                title: 'Measure and Mark the Wall',
-                name: 'Bob Jones',
-                avatar: "assets/img/1.png"
+                title: 'Decision on Ventilation',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
             },
             {
                 month: 'Jun',
                 day: 14,
-                ticket: 'RFI#145',
-                category: 'RFI',
-                title: 'Measure and Mark the Wall',
-                name: 'Eric Hoffman',
-                avatar: "assets/img/2.png"
+                ticket: 'TSK#1123',
+                category: 'Task',
+                title: 'Electrical Overview',
+                name: 'Mike Riley',
+                avatar: "assets/img/avasisteam/mike.jpg"
             },
             {
                 month: 'Dec',
                 day: 6,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'David Hunter',
-                avatar: "assets/img/3.png"
+                ticket: 'TSK#1776',
+                category: 'Task',
+                title: 'Confirm Completion of Dry-In',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
             },
             {
                 month: 'Jun',
                 day: 14,
-                ticket: 'SOW#908',
+                ticket: 'TSK#1987',
                 category: 'Task',
-                title: 'Measure and Mark the Wall',
-                name: 'Sam Kovac',
-                avatar: "assets/img/4.png"
+                title: 'Contact Inspector to Set Up 4-Way',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
             },
             {
                 month: 'Aug',
                 day: 23,
-                ticket: 'RFI#145',
-                category: 'RFI',
-                title: 'Measure and Mark the Wall',
-                name: 'Mike Meyer',
-                avatar: "assets/img/1.png"
-            },
-            {
-                month: 'Jun',
-                day: 14,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'Eric Hoffman',
-                avatar: "assets/img/2.png"
-            },
-            {
-                month: 'Dec',
-                day: 6,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'Bob Jones',
-                avatar: "assets/img/3.png"
-            },
-            {
-                month: 'Jun',
-                day: 14,
-                ticket: 'RFI#145',
-                category: 'RFI',
-                title: 'Measure and Mark the Wall',
-                name: 'Eric Hoffman',
-                avatar: "assets/img/4.png"
-            },
-            {
-                month: 'Dec',
-                day: 6,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'David Hunter',
-                avatar: "assets/img/1.png"
-            },
-            {
-                month: 'Jun',
-                day: 14,
-                ticket: 'SOW#908',
+                ticket: 'TSK#1787',
                 category: 'Task',
-                title: 'Measure and Mark the Wall',
-                name: 'Sam Kovac',
-                avatar: "assets/img/2.png"
+                title: 'Install Fireplace',
+                name: 'Dave Musgrove',
+                avatar: "assets/img/avasisteam/dave.jpg"
+            },
+            {
+                month: 'Jun',
+                day: 14,
+                ticket: 'TSK#2112',
+                category: 'Task',
+                title: 'Walk-Through w/Designer',
+                name: 'Mike Riley',
+                avatar: "assets/img/avasisteam/mike.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1334',
+                category: 'Task',
+                title: 'Complete Revisions from Walk-Through',
+                name: 'Mike Riley',
+                avatar: "assets/img/avasisteam/mike.jpg"
+            },
+            {
+                month: 'Jun',
+                day: 14,
+                ticket: 'TSK#1664',
+                category: 'Task',
+                title: 'Complete Fireplace Install',
+                name: 'Dave Musgrove',
+                avatar: "assets/img/avasisteam/dave.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1032',
+                category: 'Procurement',
+                title: 'Excavation Backhoe',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Jun',
+                day: 14,
+                ticket: 'PRO#1028',
+                category: 'Procurement',
+                title: 'Decorative Base Boards',
+                name: 'Earnie Rutlan',
+                avatar: "assets/img/avasisteam/iris.jpg"
             }
         ];
         $scope.lowPriority = [
             {
                 month: 'Aug',
                 day: 23,
-                ticket: 'SOW#908',
-                category: 'Task',
-                title: 'Measure and Mark the Wall',
-                name: 'Bob Jones',
-                avatar: "assets/img/1.png"
+                ticket: 'SOW#1019',
+                category: 'Scope of Work',
+                title: 'Roof Dry-In',
+                name: 'Dave Gebo',
+                avatar: "assets/img/avasisteam/dave.jpg"
             },
             {
                 month: 'Jun',
                 day: 14,
-                ticket: 'RFI#145',
-                category: 'RFI',
-                title: 'Measure and Mark the Wall',
-                name: 'Eric Hoffman',
-                avatar: "assets/img/2.png"
+                ticket: 'SOW#1023',
+                category: 'Scope of Work',
+                title: 'Rough HAVC',
+                name: 'Dave Musgrove',
+                avatar: "assets/img/avasisteam/dave.jpg"
             },
             {
                 month: 'Dec',
                 day: 6,
-                ticket: 'BID#725',
-                category: 'Payment Application',
-                title: 'Measure and Mark the Wall',
-                name: 'David Hunter',
-                avatar: "assets/img/3.png"
+                ticket: 'RFI#1187',
+                category: 'RFI',
+                title: 'Hardwood Floor',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'RFI#1301',
+                category: 'RFI',
+                title: 'Door Hings',
+                name: 'Jim White',
+                avatar: "assets/img/avasisteam/jim.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'SOW#1024',
+                category: 'Scope of Work',
+                title: 'Plumbing',
+                name: 'Christine Spendlove',
+                avatar: "assets/img/user_3.png"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1767',
+                category: 'Task',
+                title: 'Ready for Facia Install',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1444',
+                category: 'Task',
+                title: 'Contact Plumber for Install',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'RFI#1098',
+                category: 'RFI',
+                title: 'Insulation Question',
+                name: 'Mike Bearnson',
+                avatar: "assets/img/avasisteam/mike.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'RFI#1315',
+                category: 'RFI',
+                title: 'Fire Sprinkler Materials',
+                name: 'Beth Wiseman',
+                avatar: "assets/img/avasisteam/beth.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1992',
+                category: 'Task',
+                title: 'Clean Job Site',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1929',
+                category: 'Task',
+                title: 'Identify Electrical Requirements w/Designer',
+                name: 'Mary Beroset',
+                avatar: "assets/img/avasisteam/mary.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#1229',
+                category: 'Task',
+                title: 'Verify Additional Needs',
+                name: 'Dan Bonker',
+                avatar: "assets/img/avasisteam/dan.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'TSK#2113',
+                category: 'Task',
+                title: 'Follow Up on Fireplace Install',
+                name: 'Christine Peters',
+                avatar: "assets/img/avasisteam/peters.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1034',
+                category: 'Procurement',
+                title: 'Interior Door Hardware',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1067',
+                category: 'Procurement',
+                title: 'Kitchen Cabinets',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1209',
+                category: 'Procurement',
+                title: 'Paint Primer',
+                name: 'Bruce Wayne',
+                avatar: "assets/img/avasisteam/bruce.jpg"
+            },
+            {
+                month: 'Dec',
+                day: 6,
+                ticket: 'PRO#1254',
+                category: 'Procurement',
+                title: 'Drywall',
+                name: 'Beth Wiseman',
+                avatar: "assets/img/avasisteam/beth.jpg"
             }
         ];
 
