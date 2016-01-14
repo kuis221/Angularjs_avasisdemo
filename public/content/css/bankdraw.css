@@ -33,3 +33,6 @@
         .bankdraw .top .detail .pull-right table tr > td:first-child {
           text-align: right;
           font-size: 12px; }
+
+table.table-middle-aligned tbody > tr > td {
+  vertical-align: middle; }

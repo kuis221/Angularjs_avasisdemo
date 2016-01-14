@@ -1,122 +1,44 @@
-<div id="payment-applications">
-    <table class="table">
-        <tr>
-            <td width="360">
-                <div class="filters">
-                    <div class="pl10">
-                        <div class="checkbox checkbox-inline">
-                            <input type="checkbox" ng-click="checkAll()" ng-model="isCheckedAll">
-                            <label>&nbsp;</label>
-                        </div>
-                        <span class="text-muted">Filter By</span>
-                    </div>
-                    <div class="inline-block" uib-dropdown dropdown-append-to-body="true" auto-close="outsideClick">
-                        <a tabindex="0" class="text-primary sub-title" uib-dropdown-toggle>Date Range</a>
-                        <div class="dropdown-menu-left chevron-down-menu" uib-dropdown-menu style="width: 530px">
-                            <div class="p20 row">
-                                <div class="col-sm-6">
-                                    <ui-date-field ng-model="dateRange.min" max-date="dateRange.max" placeholder="Start Date"></ui-date-field>
-                                </div>
-                                <div class="pl0 col-sm-6">
-                                    <ui-date-field ng-model="dateRange.max" min-date="dateRange.min" placeholder="End Date"></ui-date-field>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block" uib-dropdown auto-close="outsideClick">
-                        <a tabindex="0" class="text-primary sub-title" uib-dropdown-toggle>Amount Range</a>
-                        <div uib-dropdown-menu style="width: 400px;" ng-cloak class="p20 uib-dropdown-menu dropdown-menu-left chevron-down-menu">
-                            <rzslider rz-slider-model="amountRange.min"
-                                      rz-slider-high="amountRange.max"
-                                      rz-slider-options="amountRange.options">
-                            </rzslider>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-responsive" slim-scroll box-height="600px">
-                    <table class="table" id="application-list">
-                        <tbody>
-                            <tr ng-repeat="application in payment_applications | rangeFilter:'amount':amountRange.min:amountRange.max | dateRangeFilter:'date':dateRange.min:dateRange.max">
-                                <td class="middle-align pl5">
-                                    <div class="checkbox checkbox-inline">
-                                        <input type="checkbox" ng-model="application.checked">
-                                        <label>&nbsp;</label>
-                                    </div>
-                                </td>
-                                <td class="data">
-                                    <div>
-                                        <span class="sub-title text-primary">{{application.company_name}}</span>
-                                        <span class="pull-right">{{application.date}}</span>
-                                    </div>
-                                    <div>{{application.project_name}}</div>
-                                    <span class="amount font-regular">{{application.amount | currency}}</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </td>
-            <td class="border-left">
-                <div class="application-summary">
-                    <div class="table-responsive">
-                        <div class="title">Summary of Selected Pay Applications</div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Info</th>
-                                    <th width="150px">Sched / Est<br /> Completion Date</th>
-                                    <th>Construction</th>
-                                    <th>SOW</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="application in payment_applications | filter: {checked: true}">
-                                    <td width="200px">
-                                        <div>
-                                            <div class="text-primary">{{application.contact}}</div>
-                                            <small>{{application.company_name}}</small>
-                                            <ul class="list-inline text-muted">
-                                                <li><i class="fa fa-envelope"></i></li>
-                                                <li><i class="fa fa-comments"></i></li>
-                                                <li><i class="fa fa-phone"></i>  <small>{{application.phone_number}}</small></li>
-                                            </ul>
-                                        </div>
-                                        <div class="mt10">
-                                            <small>{{application.project_name}}</small>
-                                            <p>{{application.date}}</p>
-                                        </div>
-                                    </td>
-                                    <td width="150px">
-                                        <span class="small text-success">sched</span>
-                                        <p class="subtitle">{{application.scheduled_at}}</p>
-                                        <span class="small text-success">est</span>
-                                        <p class="sub-title">{{application.estimated_at}}</p>
-                                    </td>
-                                    <td>
-                                        <span class="small text-success">completed</span>
-                                        <p class="sub-title">{{numberToPercentage(application.completed)}}</p>
-                                        <span class="small text-success">cost</span>
-                                        <p class="sub-title">{{numberToCurrency(application.cost)}}</p>
-                                    </td>
-                                    <td>
-                                        <small class="text-muted">{{application.sow}}</small>
-                                    </td>
-                                    <td>
-                                        <div class="sub-title">{{application.amount | currency}}</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="clearfix mt20">
-                            <div class="pull-right">
-                                <div>total</div>
-                                <div class="amount">{{checkedTotal() | currency}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
+<table class="table table-middle-aligned">
+    <tr>
+        <td>Pay Application Name & ID</td>
+        <td>Payee</td>
+        <td>Scope of Work</td>
+        <td>Amount</td>
+        <td>Documents</td>
+        <td>
+            Status 
+            <a ng-click="" class="text-primary"> Approve All</a>
+        </td>
+        <td>Comments</td>
+    </tr>
+    <tr ng-repeat="application in paymentApplications">
+        <td>
+            <div class="text-primary">{{application.project_name}}</div>
+            <div class="small">{{application.application_id}}</div>
+        </td>
+        <td>
+            <div class="text-primary">{{application.contact}}</div>
+            <div class="small">{{application.company_name}}</div>
+            <ul class="list-inline text-muted small">
+                <li><i class="fa fa-envelope"></i></li>
+                <li><i class="fa fa-comments"></i></li>
+                <li><i class="fa fa-phone"></i>  <small>{{application.phone_number}}</small></li>
+            </ul>
+        </td>
+        <td class="text-primary">
+            {{application.sow}}
+        </td>
+        <td class="text-medium text-muted">
+            {{application.amount | currency}}
+        </td>
+        <td class="text-primary">
+            2 Documents
+        </td>
+        <td>
+            <ui-select ng-select="changeOption()" selected-item="applicant.status" placeholder="Choose" options="statusOptions"></ui-select><br>
+        </td>
+        <td style="vertical-align: top">
+            <input type="text" ng-model="application.comment" placeholder="Enter any additional details" class="form-control input-lg label-default">
+        </td>
+    </tr>
+</table>
