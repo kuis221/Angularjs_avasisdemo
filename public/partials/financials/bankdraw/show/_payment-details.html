@@ -1,0 +1,79 @@
+﻿<div class="row pt20" id="payment-details">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">Payment Application Initiator</th>
+                    <th>Project & Roles</th>
+                    <th>Payment Application</th>
+                    <th>Split Payments</th>
+                    <th>Payment Amount</th>
+                    <th>Payee</th>
+                    <th>Payment Form</th>
+                    <th>Variance</th>
+                    <th>Adjustment Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in payment_details">
+                    <td>
+                        <span ng-if="item.role">
+                            <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
+                            <div ng-if="!item.avatar" class="no-avatar">{{item.contact | initials}}</div>
+                        </span>
+                        <div ng-if="!item.role" class="no-avatar">
+                            {{item.contact[0]}}
+                        </div>
+                    </td>
+                    <td style="padding-left: 0">
+                        <div class="sub-title text-primary">{{item.contact}}</div>
+                        <small>{{item.company_name}}</small>
+                        <ul class="list-inline text-muted">
+                            <li><i class="fa fa-envelope"></i></li>
+                            <li><i class="fa fa-comments"></i></li>
+                            <li><i class="fa fa-phone"></i>  <span class="font-regular small">{{item.phone_number}}</span></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="text-muted">{{item.project_name}}</div>
+                        <div>{{item.role}}</div>
+                    </td>
+                    <td class="text-muted font-regular">{{item.payment_application | currency}}</td>
+                    <td>
+                        <div class="btn-group" uib-dropdown>
+                            <button type="button" class="btn round" uib-dropdown-toggle>
+                              <small class="text-danger">{{item.split_payment}} <span class="fa fa-angle-down"></span></small>
+                            </button>
+                            <ul class="uib-dropdown-menu" role="menu" style="min-width: 100px">
+                                <li role="menuitem"><a class="text-danger" ng-click="">No</a></li>
+                                <li role="menuitem"><a class="text-success" ng-click="">Yes</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="text-primary">{{item.payment_amount | currency}}</td>
+                    <td class="text-primary">{{item.company_name}}</td>
+                    <td class="text-muted font-regular">{{item.payment_form}}</td>
+                    <td class="text-danger">{{item.varience | currency}}</td>
+                    <td class="text-muted font-regular">{{item.description}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2">
+                        <div class="text-muted">Total</div>
+                        {{total_payment_application | currency}}
+                    </td>
+                    <td colspan="3">
+                        <div class="text-muted">Total</div>
+                        <span class="text-primary">{{total_payment_amount | currency}}<span>
+                    </td>
+                    <td colspan="2">
+                        <div class="text-muted">Total</div>
+                        <div class="text-danger">{{total_varience | currency}}</div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

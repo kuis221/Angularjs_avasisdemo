@@ -1,0 +1,74 @@
+<div class="row pt20 pb10">
+    <div class="col-md-2">
+        <div class="text-muted">Project</div>
+        <div class="text-primary sub-title">Commodo Ligular Fermentum</div>
+    </div>
+    <div class="col-md-3">
+        <div class="text-muted">General Contractor Name</div>
+        <div class="text-muted heading font-medium">Wells Fargo</div>
+        <div class="text-gray-lighter small font-regular">123 Street, San Diego CA, 92110</div>
+    </div>
+    <div class="col-md-2">
+        <div class="text-muted">Contact Info</div>
+        <div class="text-muted heading font-medium">Joe Sloan</div>
+        <div class="text-gray-light small">
+            <ul class="list-inline text-muted">
+                <li><i class="fa fa-envelope"></i></li>
+                <li><i class="fa fa-comments"></i></li>
+                <li><i class="fa fa-phone"></i>  <small>{{application.phone_number}}</small></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="text-muted">Date Submitted</div>
+        <div class="text-muted heading font-medium">Aug 23, 2015</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-9">
+        <table class="table text-muted">
+            <tr>
+                <td>Estimated Cost at Completion</td>
+                <td class="heading">{{1000000 | currency}}</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Construction Loan Amount</td>
+                <td class="heading">{{9000 | currency}}</td>
+                <td><span class="heading">90%</span> of the Cost at Completion</td>
+            </tr>
+            <tr>
+                <td>Loan Drawn to Date <small>not including pending</small></td>
+                <td class="heading">{{9000 | currency}}</td>
+                <td><span class="heading">50%</span> of the Construction Loan Amount</td>
+            </tr>
+            <tr>
+                <td>Total Non Loan Payments to Date</td>
+                <td class="heading">{{9000 | currency}}</td>
+                <td><span class="heading">4%</span> of the Cost at Completion</td>
+            </tr>
+            <tr>
+                <td>Amount of this Draw Request</td>
+                <td class="heading">{{9000 | currency}}</td>
+                <td><span class="heading">22%</span> of the Construction Loan Amount</td>
+            </tr>
+            <tr>
+                <td>% of Project Paid</td>
+                <td rowspan="2">
+                    <div ui-arc-chart rect-width="100" rect-height="100" radius="30" pen-width="6" chart-data="percentChartData"></div>        
+                </td>
+                <td><span class="heading text-primary">75%</span></td>
+            </tr>
+            <tr>
+                <td class="no-borders">% of Project Completed</td>
+                <td class="no-borders"><span class="heading text-success">50%</span></td>
+            </tr>
+            <tr>
+                <td>Estimated Cash Required to Complete</td>
+                <td class="heading">{{9000 | currency}}</td>
+                <td><span class="heading">32%</span> of the Cost at Completion</td>
+            </tr>
+        </table>
+    </div>
+</div>

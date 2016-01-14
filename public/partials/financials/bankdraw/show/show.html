@@ -1,0 +1,36 @@
+<div class="bankdraw-inner-page">
+    <div ng-include="'partials/financials/bankdraw/show/_top.html'"></div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div ng-include="'partials/financials/bankdraw/show/_steps.html'"></div>
+
+                <div ng-if="currentStep=='summary'" ng-include="'partials/financials/bankdraw/show/_summary.html'"></div>
+                <div ng-if="currentStep=='payment-application'" ng-include="'partials/financials/bankdraw/show/_payment-application.html'"></div>
+                <div ng-if="currentStep=='compliance'" ng-include="'partials/financials/bankdraw/show/_compliance.html'"></div>
+                <div ng-if="currentStep=='payment-details'" ng-include="'partials/financials/bankdraw/show/_payment-details.html'"></div>
+                <div ng-if="currentStep=='draw-details'" ng-include="'partials/financials/bankdraw/show/_draw-details.html'"></div>
+            </div>
+        </div>
+        <div class="text-right">
+            <a class="btn btn-lg btn-primary">
+                Actions <i class="fa fa-angle-down pl10" style="font-size: 17px;"></i>
+            </a>
+        </div>
+    </div>
+    <div class="bids-package-wrapper">
+        <div class="row wrapper wrapper-content animated fadeInRight bp-tabs-section" style="background: #eee">
+            <div class="bp-tabs-content">
+                <uib-tabset>
+                    <uib-tab heading="Comments">
+                        <div ng-include="'partials/bids/package/comments.html'"></div>
+                    </uib-tab>
+                    <uib-tab heading="Access">Access</uib-tab>
+                    <uib-tab heading="Activity">Activity</uib-tab>
+                    <uib-tab heading="Attachments">Attachments</uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</div>

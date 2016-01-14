@@ -67,7 +67,7 @@
                 <tr ng-repeat="row in bankdraws">
                     <td class="submission-date">{{ row.submission_date }}</td>
                     <td class="draw-project">
-                        <span class="text-primary">{{row.draw_project.name}}</span><br>
+                        <a class="text-primary" ui-sref="bankdraw.show({id: $index+1})">{{row.draw_project.name}}</a><br>
                         <span class="text-muted">{{row.draw_project.type}}</span>
                     </td>
                     <td class="text-primary submitted-by">{{row.submitted_by}}</td>

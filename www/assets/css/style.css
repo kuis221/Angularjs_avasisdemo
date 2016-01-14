@@ -3620,7 +3620,16 @@ table.tablebankTopRight tr td p {
     pointer-events: none;
 }
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot::after {
-    background-color: #FFF !important;
+    background-color: #fff;
+}
+.bs-clickable-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: initial;
+}
+.bs-clickable-wizard > .bs-wizard-step.disabled:hover > .bs-wizard-dot {
+    background: #f6cece none repeat scroll 0 0;
+}
+.bs-clickable-wizard > .bs-wizard-step.disabled:hover > .bs-wizard-dot::after {
+    background: #e25c5c none repeat scroll 0 0;
 }
 
 /*-------------------------- END Form Wizard --------------------------*/
