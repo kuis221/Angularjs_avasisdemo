@@ -79,10 +79,11 @@
                         <div class="label"
                             ng-class="{'label-success': row.status == 'Approved - Payment Complete',
                                        'label-warning': row.status == 'Returned With Comments',
+                                       'label-warning': row.status == 'Pending Approval',
                                        'label-danger': row.status == 'Not Yet Submitted'}">{{row.status}}</div>
                     </td>
-                    <td class="text-primary documents">3 Documents</td>
-                    <td class="text-primary pay-application">5 Pay Applications</td>
+                    <td class="text-primary documents">{{row.documents}} Documents</td>
+                    <td class="text-primary pay-application">{{row.pay_applications}} Pay Applications</td>
                 </tr>
             </tbody>
         </table>
