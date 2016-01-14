@@ -33,24 +33,24 @@
                     <td ></td>
                     <td>
                         <div class="text-muted">Total</div>
-                        {{total_scheduled_value | currency}}
+                        {{(drawDetails | sumBy:'scheduled_value') | currency}}
                     </td>
                     <td>
                         <div class="text-muted">Total</div>
-                        {{total_reallocations | currency}}
+                        {{(drawDetails | sumBy: 'reallocations') | currency}}
                     </td>
                     <td>
                         <div class="text-muted">Total</div>
-                        {{total_updated_budget | currency}}
+                        {{(drawDetails | sumBy: 'updated_budget') | currency}}
                     </td>
 
                     <td>
                         <div class="text-muted">Total</div>
-                        {{total_disbursed_to_date | currency}}
+                        {{(drawDetails | sumBy: 'disbursed_to_date') | currency}}
                     </td>
                     <td>
                         <div class="text-muted">Total</div>
-                        {{total_this_draw | currency}}
+                        {{(drawDetails | sumBy: 'this_draw') | currency}}
                     </td>
                     <td>
                         <div class="text-muted">Avg.</div>
@@ -58,7 +58,7 @@
                     </td>
                     <td>
                         <div class="text-muted">Total</div>
-                        {{total_balance_to_complete | currency}}
+                        {{(drawDetails | sumBy: 'balance_to_complete') | currency}}
                     </td>
                 </tr>
             </tfoot>
