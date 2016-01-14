@@ -73,12 +73,72 @@
                     <div class="text-muted font-regular">
                         <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
                             <i class="fa fa-plus pr10"></i>
-                            <span class="text-gray division add-budget" ng-click="">Add Budget Estimate</span>
+                            <span class="text-gray division add-budget" ng-click="showBudgetAdditionModal()">Add Budget Estimate</span>
                         </div>
                     </div>
                 </div>
             </li>
         </ol>
+    </script>
 
+    <!-- Budget Addition Modal Template -->
+    <script type="text/ng-template" id="budget-addition-modal.html">
+        <div class="modal-header clearfix">
+            <button type="button" class="close" ng-click="cancel()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <h3>Add Budget Estimate</h3>
+            <hr/>
+            <div class="row">
+                <div class="col-md-5 form-group">
+                    <label>Division</label>
+                    <ui-select options="divisions" selected-item="divisions[0]"></ui-select>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label>Cost Code</label>
+                    <ui-select options="costCodes" selected-item="costCodes[0]"></ui-select>
+                </div>
+                <div class="col-md-4 form-group">
+                    <label>Scope of Work</label>
+                    <ui-select options="sows" selected-item="sows[0]"></ui-select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label>Labour</label>
+                            <input class="form-control" type="text" placeholder="$" ui-money-mask="2" ng-model="labor"/>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Materials</label>
+                            <input class="form-control" type="text" placeholder="$" ui-money-mask="2" ng-model="materials"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <label>Equipment</label>
+                            <input class="form-control" type="text" placeholder="$" ui-money-mask="2" ng-model="equipment"/>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label>Misc</label>
+                            <input class="form-control" type="text" placeholder="$" ui-money-mask="2" ng-model="misc"/>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <span class="total-title">Total</span>
+                            <span class="total-value">{{ total | currency: '$': 2}}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr/>
+            <div class="text-right">
+                <button type="button" class="btn btn-cancel btn-lg" ng-click="cancel()">Delete Estimate</button>
+                <button type="button" class="btn btn-primary btn-lg" ng-click="ok()">Add Estimate</button>
+            </div>
+        </div>
     </script>
 </div>

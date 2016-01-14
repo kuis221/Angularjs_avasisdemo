@@ -1,0 +1,51 @@
+.buget-addition-modal .modal-dialog {
+    .modal-content {
+        @media(min-width: 992px) {
+            width: 800px;
+        }
+
+        .modal-body {
+            padding: 25px 20px 20px;
+
+            input {
+                height: 51px;
+                padding: 15px;
+                border: 1px solid #eee;
+                font-family: AvenirNextLTPro-Regular;
+
+                &:hover,
+                &:active {
+                    background-color: #f9f9f9;
+                    border: 1px solid #eee;
+                }
+
+            }
+
+            h3 {
+                font-family: AvenirNextLTPro-Regular;
+                font-size: 20px;
+            }
+
+            hr {
+                margin-top: 5px;
+            }
+
+            .btn-cancel {
+                color: #4a4a4a;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            span.total-title {
+                color: #8b8b8b;
+                display: block;
+                text-transform: uppercase;
+                @media(min-width: 992px) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

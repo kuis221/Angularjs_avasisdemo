@@ -1,0 +1,30 @@
+@media (min-width: 992px) {
+  .buget-addition-modal .modal-dialog .modal-content {
+    width: 800px; } }
+
+.buget-addition-modal .modal-dialog .modal-content .modal-body {
+  padding: 25px 20px 20px; }
+  .buget-addition-modal .modal-dialog .modal-content .modal-body input {
+    height: 51px;
+    padding: 15px;
+    border: 1px solid #eee;
+    font-family: AvenirNextLTPro-Regular; }
+    .buget-addition-modal .modal-dialog .modal-content .modal-body input:hover, .buget-addition-modal .modal-dialog .modal-content .modal-body input:active {
+      background-color: #f9f9f9;
+      border: 1px solid #eee; }
+  .buget-addition-modal .modal-dialog .modal-content .modal-body h3 {
+    font-family: AvenirNextLTPro-Regular;
+    font-size: 20px; }
+  .buget-addition-modal .modal-dialog .modal-content .modal-body hr {
+    margin-top: 5px; }
+  .buget-addition-modal .modal-dialog .modal-content .modal-body .btn-cancel {
+    color: #4a4a4a; }
+    .buget-addition-modal .modal-dialog .modal-content .modal-body .btn-cancel:hover {
+      color: #fff; }
+  .buget-addition-modal .modal-dialog .modal-content .modal-body span.total-title {
+    color: #8b8b8b;
+    display: block;
+    text-transform: uppercase; }
+    @media (min-width: 992px) {
+      .buget-addition-modal .modal-dialog .modal-content .modal-body span.total-title {
+        margin-top: 30px; } }
