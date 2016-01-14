@@ -79,7 +79,8 @@
   .flag-alert-content-result .low-priority .hdingTopBox {
     background-color: #79c485; }
   .flag-alert-content-result .icon .avatar {
-    width: 40px; }
+    width: 40px;
+    border-radius: 50%; }
   .flag-alert-content-result table.priority tbody tr td {
     vertical-align: middle; }
     .flag-alert-content-result table.priority tbody tr td .month {
