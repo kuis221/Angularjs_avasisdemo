@@ -3577,9 +3577,17 @@ table.tablebankTopRight tr td p {
 }
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot.active {
     background: #f6cece none repeat scroll 0 0;
+    width: 36px;
+    height: 36px;
+    margin-left: -16px;
+    margin-top: -16px;
 }
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot.active::after {
     background: #e25c5c none repeat scroll 0 0;
+    height: 26px;
+    width: 26px;
+    left: 5px;
+    top: 5px;
 }
 .bs-wizard > .bs-wizard-step > .progress {
     position: relative;
