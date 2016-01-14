@@ -3,7 +3,7 @@ app.controller('BankDrawNewCtrl',
         $scope.currentStep = 'bankdraw.payment-application';
         $scope.steps = [{
             state: 'bankdraw.new.payment-application',
-            name: 'Payment Applications & Invoice'
+            name: 'Payment Applications & Invoices'
         },
         {
             state: 'bankdraw.new.compliance',
