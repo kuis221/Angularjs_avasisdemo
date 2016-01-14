@@ -1,0 +1,62 @@
+<div class="notifications-bar"  ng-show="isShowNotifyBar">
+    <section class="header" ng-class="{'nounread-notifications': unreads == 0}">
+        <span class="close-bar" ng-click="hideNotificationsBar()">
+            Close <i class="fa fa-caret-right"></i>
+        </span>
+        <span class="title">
+            Notifications
+            <span class="badge-white">{{unreads}}</span>
+        </span>
+    </section>
+
+    <section class="body"  slim-scroll box-height="1000">
+        <ul>
+            <li ng-repeat="item in notifications" ng-class="{'unread-notification': !item.isRead}" ng-click="select(item.id)">
+                <div class="marker" ng-if="!item.isRead"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img ng-show="item.flag == 'danger'" src="assets/img/red_icon.png">
+                                <img ng-show="item.flag == 'warning'" src="assets/img/yellow _icon.png">
+                                <img ng-show="item.flag == 'success'" src="assets/img/flag_green.png">
+                            </td>
+                            <td class="desc">
+                                <div ng-include="'payment-application.html'" ng-if="item.type == 'payment application'"></div>
+                                <div ng-include="'task.html'" ng-if="item.type == 'task'"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span class="pull-left date">
+                                    {{item.date}}<div class="circle"></div>{{item.time}}
+                                </span>
+                                <a class="pull-right mark-unread" ng-click="markUnread(item.id, $event)" ng-show="item.isRead">
+                                    Mark Unread
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </section>
+
+    <section class="footer">
+        View All Notifications
+    </section>
+
+    <script type="text/ng-template" id="payment-application.html">
+        Payment Application&nbsp;
+        <span class="primary-bold">{{item.application}}</span>&nbsp;
+        has been approved by&nbsp;
+        <span class="primary-bold">{{item.approver}}</span>
+    </script>
+
+    <script type="text/ng-template" id="task.html">
+        <span class="primary-bold">{{item.assigner}}</span>&nbsp;
+        assigned you an&nbsp;
+        <span class="primary-bold">{{item.task}}</span>
+    </script>
+</div>

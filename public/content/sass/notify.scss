@@ -1,0 +1,145 @@
+.notifications-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 335px;
+    border-left: 1px solid #d6d6d6;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+    .header {
+        padding: 18px 20px;
+        background-color: #e25c5c;
+        color: #fff;
+
+        &.nounread-notifications {
+            background-color: #fff;
+            color: #2a2d33;
+
+            .badge-white {
+                display: none;
+            }
+        }
+
+        .close-bar {
+            font-family: AvenirNextLTPro-Demi;
+            font-size: 12.5px;
+            margin-right: 45px;
+            cursor: pointer;
+
+            i {
+                margin-left: 7px;
+            }
+        }
+
+        .title {
+            font-family: AvenirNextLTPro-Medium;
+            font-size: 18px;
+
+            .badge-white {
+                color: #e25c5c;
+                font-family: AvenirNextLTPro-Medium;
+                font-size: 11px;
+                font-weight: 600;
+                padding-bottom: 4px;
+                padding-left: 6px;
+                padding-right: 6px;
+                min-width: 10px;
+                padding: 3px 7px;
+                vertical-align: middle;
+                border-radius: 10px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .body {
+        height: 500px;
+
+        ul li {
+            position: relative;
+            display: block;
+            border-top: 1px solid #eee;
+            padding: 20px;
+            ;
+
+            &.unread-notification {
+                background-color: #ebf6fb;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            table {
+                tbody {
+                    tr {
+                        &:first-child {
+                            td {
+                                padding-bottom: 20px;
+                            }
+                        }
+                        td {
+                            color: #4a4a4a;
+                            vertical-align: top;
+                        }
+
+                        td:last-child {
+                            padding-left: 20px;
+                        }
+
+                        td.desc {
+                            font-family: AvenirNextLTPro-Regular;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+            }
+
+            span.primary-bold {
+                font-family: AvenirNextLTPro-Demi;
+                color: #3aabd5;
+            }
+
+            span.date {
+                color: #8b8b8b;
+                font-size: 10px;
+            }
+
+            a.mark-unread {
+                color: #3aabd5;
+                font-size: 10px;
+            }
+
+            div.circle {
+                display: inline-block;
+                &::before {
+                    color: #8b8b8b;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    content: "\00B7";
+                }
+            }
+        }
+
+        .marker {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 8px;
+            background-color: #3aabd5;
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    .footer {
+        color: #3aabd5;
+        padding: 20px;
+        border-top: 1px solid #eee;
+        text-align: center;
+    }
+}

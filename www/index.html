@@ -59,6 +59,7 @@
     <link href="content/css/rfi.css" rel="stylesheet">
     <link href="content/css/purchase-order.css" rel="stylesheet">
     <link href="content/css/punch-item.css" rel="stylesheet">
+    <link href="content/css/notify.css" rel="stylesheet">
 
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 
@@ -74,6 +75,8 @@
             <div ng-include="'partials/shared/topnav/topnav.html'" ng-hide="isHeaderHidden"></div>
             <ui-view></ui-view>
         </div>
+
+        <div ng-include="'partials/shared/notification/notify.html'"></div>
     </div>
 
     <!-- Mainly scripts -->

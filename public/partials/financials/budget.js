@@ -60,6 +60,7 @@ app.controller('FinancialsBudgetCtrl',
                     status: '',
                     cpsf: 13.46,
                     percent_of_project: 8,
+                    depth: 3,
                     children: [{
                         id: _.uniqueId(),
                         labor: 123,

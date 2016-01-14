@@ -65,3 +65,8 @@
     width: 100%; }
     .table-tree > div > div {
       display: table-cell; }
+
+span.add-budget {
+  font-family: AvenirNextLTPro-Demi;
+  font-size: 14px !important;
+  color: #3aabd5; }

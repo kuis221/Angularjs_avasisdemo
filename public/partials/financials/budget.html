@@ -68,6 +68,17 @@
         </div>
         <ol ui-tree-nodes ng-model="item.children" ng-class="{hidden: collapsed}">
             <li ng-repeat="item in item.children" has-child="{{item.children!=null}}" data-collapsed="true" ui-tree-node ng-include="'budget-item-template.html'"></li>
+            <li data-collapsed="true" ui-tree-node ng-if="item.depth == 3">
+                <div ui-tree-handle class="tree-node tree-node-content table-tree">
+                    <div class="text-muted font-regular">
+                        <div data-nodrag ng-click="toggle(this)" class="text-primary font-semibold">
+                            <i class="fa fa-plus pr10"></i>
+                            <span class="text-gray division add-budget" ng-click="">Add Budget Estimate</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ol>
+
     </script>
 </div>

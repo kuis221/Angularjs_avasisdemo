@@ -14,7 +14,8 @@
             </form>
         </div>
         <ul class="nav navbar-top-links navbar-right">
-            <li class="light-blue">
+
+            <li class="light-blue" ng-class="{'border-right': unreads == 0}">
                 <div class="dropdown">
                     <a href="" class="dropdown-toggle text-primary" data-toggle="dropdown">
                         <img alt="Jason's Photo" src="assets/img/bruce-wayne.png" class="img-circle nav-user-photo">
@@ -32,12 +33,16 @@
                 </div>
             </li>
 
-            <li class="orange">
+            <li class="unreads" ng-click="showNotificationsBar()" ng-if="unreads > 0">
                 <a href="#">
                     <i class="ace-icon fa fa-bell icon-animated-bell"></i>
-                    <span class="badge badge-important">8</span>
+                    <span class="badge badge-important">{{unreads}}</span>
                 </a>
-
+            </li>
+            <li class="nounreads" ng-click="showNotificationsBar()" ng-if="unreads == 0">
+                <a href="#">
+                    <i class="ace-icon fa fa-bell-o icon-animated-bell"></i>
+                </a>
             </li>
         </ul>
 

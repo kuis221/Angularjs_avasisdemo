@@ -1,0 +1,92 @@
+.notifications-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 335px;
+  border-left: 1px solid #d6d6d6;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+  .notifications-bar .header {
+    padding: 18px 20px;
+    background-color: #e25c5c;
+    color: #fff; }
+    .notifications-bar .header.nounread-notifications {
+      background-color: #fff;
+      color: #2a2d33; }
+      .notifications-bar .header.nounread-notifications .badge-white {
+        display: none; }
+    .notifications-bar .header .close-bar {
+      font-family: AvenirNextLTPro-Demi;
+      font-size: 12.5px;
+      margin-right: 45px;
+      cursor: pointer; }
+      .notifications-bar .header .close-bar i {
+        margin-left: 7px; }
+    .notifications-bar .header .title {
+      font-family: AvenirNextLTPro-Medium;
+      font-size: 18px; }
+      .notifications-bar .header .title .badge-white {
+        color: #e25c5c;
+        font-family: AvenirNextLTPro-Medium;
+        font-size: 11px;
+        font-weight: 600;
+        padding-bottom: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
+        min-width: 10px;
+        padding: 3px 7px;
+        vertical-align: middle;
+        border-radius: 10px;
+        margin-left: 10px; }
+  .notifications-bar .body {
+    height: 500px; }
+    .notifications-bar .body ul li {
+      position: relative;
+      display: block;
+      border-top: 1px solid #eee;
+      padding: 20px; }
+      .notifications-bar .body ul li.unread-notification {
+        background-color: #ebf6fb; }
+      .notifications-bar .body ul li img {
+        width: 20px;
+        height: 20px; }
+      .notifications-bar .body ul li table tbody tr:first-child td {
+        padding-bottom: 20px; }
+      .notifications-bar .body ul li table tbody tr td {
+        color: #4a4a4a;
+        vertical-align: top; }
+      .notifications-bar .body ul li table tbody tr td:last-child {
+        padding-left: 20px; }
+      .notifications-bar .body ul li table tbody tr td.desc {
+        font-family: AvenirNextLTPro-Regular;
+        font-size: 12px; }
+      .notifications-bar .body ul li span.primary-bold {
+        font-family: AvenirNextLTPro-Demi;
+        color: #3aabd5; }
+      .notifications-bar .body ul li span.date {
+        color: #8b8b8b;
+        font-size: 10px; }
+      .notifications-bar .body ul li a.mark-unread {
+        color: #3aabd5;
+        font-size: 10px; }
+      .notifications-bar .body ul li div.circle {
+        display: inline-block; }
+        .notifications-bar .body ul li div.circle::before {
+          color: #8b8b8b;
+          margin-left: 10px;
+          margin-right: 10px;
+          content: "\00B7"; }
+    .notifications-bar .body .marker {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-radius: 8px;
+      background-color: #3aabd5;
+      width: 8px;
+      height: 8px; }
+  .notifications-bar .footer {
+    color: #3aabd5;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    text-align: center; }

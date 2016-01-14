@@ -116,7 +116,7 @@ h6 {font-size: 10px;}
 
 
 /*==================================================
-                                               MAIN MENU BAR LEFT
+                MAIN MENU BAR LEFT
 ==================================================*/
 
 .posRelative {position: relative;}
@@ -136,10 +136,7 @@ h6 {font-size: 10px;}
 /*******TOP MENU*******/
 .nav-header {border: 1px solid #171c24;}
 .navbar-default {background-color: #2a2d33; border-color: #2f4050;}
-.navbar-top-links {text-align:right;}
-@media (min-width: 768px) {
-    .navbar-top-links li:last-child { margin-right: 14px;}
-}
+.navbar-top-links {text-align:right; margin-right: 0;}
 .navbar-top-links li {display: inline-block;}
 .navbar-top-links li a { padding: 11px 10px; min-height: 50px; }
 .navbar-top-links .light-blue { padding-right: 15px; }
@@ -161,8 +158,11 @@ h6 {font-size: 10px;}
 .nav-header .text-muted { color: #8095a8;}
 
 .minimalize-styl-2 { padding: 4px 12px; margin: 14px 5px 5px 14px;  font-size: 14px; float: left;}
-.orange { font-size: 24px; background-color: #e25c5c;padding: 0 0 4px;}
-.orange a i.ace-icon {  left: 12px; position: relative;}
+.unreads { font-size: 24px; background-color: #e25c5c; padding: 0 0 4px;}
+.unreads a i.ace-icon {left: 16px; position: relative;}
+.nounreads { font-size: 24px; background: #fff; padding: 0 0 4px;}
+.nounreads a { margin-right: 27px; color: #8b8b8b !important;}
+.nounreads a i.ace-icon {left: 16px; position: relative;}
 .navbar-form-custom {float: left; height: 50px;  padding: 0; width: 200px; display: inline-table; margin-left: 11px;}
 .navbar-form-custom .form-group {margin-bottom: 0;}
 .navbar-form-custom .form-control { background: none repeat scroll 0 0 rgba(0, 0, 0, 0);  border: medium none; font-size: 14px; height: 60px; margin: 0;  z-index: 2000; }
@@ -3325,7 +3325,7 @@ button.dim:active:before {
     padding-left: 6px;
     padding-right: 6px;
     text-shadow: none;
-    right: 14px;
+    right: 8px;
     text-align: center;
     top: -12px;
     position: relative;

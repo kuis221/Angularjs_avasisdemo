@@ -14,12 +14,6 @@ var app = angular.module('avasis',
         'slick'
     ]);
 
-app.controller('AppCtrl', [
-    '$scope', function ($scope) {
-
-    }
-]);
-
 app.config(['$locationProvider', function ($locationProvider) {
     $locationProvider.hashPrefix('!');
 }]);
@@ -611,7 +605,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
 }]);
 
-app.run (["$rootScope", function($rootScope) {
+app.run (['$rootScope', function($rootScope) {
     $rootScope.$on('$stateChangeSuccess', function(e, to) {
         if (!_.isUndefined(to.data)) {
             $rootScope.isHeaderHidden = to.data.isHeaderHidden;
@@ -620,5 +614,58 @@ app.run (["$rootScope", function($rootScope) {
         }
 
         $rootScope.pageName = to.data.pageName;
+        $rootScope.isShowNotifyBar = false;
     });
 }]);
+
+app.controller('AppCtrl',
+    ['$scope', '$rootScope', function ($scope, $rootScope) {
+
+        // Notifications
+        $rootScope.isShowNotifyBar = false;
+
+        $scope.$watch('notifications', function(n, o) {
+            $scope.unreads = _.size(_.filter(n, function(item) {return !item.isRead}));
+        }, true);
+
+        $scope.notifications = [
+            {id: _.uniqueId(), flag: 'danger', type: 'task', assigner: 'Sloan Urry', task: 'RFI-Kitchen Cabinets Color', date: 'June 23, 2015', time: '1:17pm', isRead: false},
+            {id: _.uniqueId(), flag: 'warning', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: false},
+            {id: _.uniqueId(), flag: 'warning', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: false},
+            {id: _.uniqueId(), flag: 'danger', type: 'task', assigner: 'Sloan Urry', task: 'RFI-Kitchen Cabinets Color', date: 'June 23, 2015', time: '1:17pm', isRead: true},
+            {id: _.uniqueId(), flag: 'success', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true},
+            {id: _.uniqueId(), flag: 'warning', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true},
+            {id: _.uniqueId(), flag: 'success', type: 'task', assigner: 'Sloan Urry', task: 'RFI-Kitchen Cabinets Color', date: 'June 23, 2015', time: '1:17pm', isRead: true},
+            {id: _.uniqueId(), flag: 'success', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true},
+            {id: _.uniqueId(), flag: 'success', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true},
+            {id: _.uniqueId(), flag: 'danger', type: 'task', assigner: 'Sloan Urry', task: 'RFI-Kitchen Cabinets Color', date: 'June 23, 2015', time: '1:17pm', isRead: true},
+            {id: _.uniqueId(), flag: 'warning', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true},
+            {id: _.uniqueId(), flag: 'warning', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true},
+            {id: _.uniqueId(), flag: 'warning', type: 'payment application', application: 'Enclave 14 - Cabinets', approver: 'Geordy Bishop', date: 'June 21, 2015', time: '1:17', isRead: true}
+        ];
+
+        $scope.showNotificationsBar = function() {
+            $rootScope.isShowNotifyBar = true;
+        };
+
+        $scope.hideNotificationsBar =function() {
+            $rootScope.isShowNotifyBar = false;
+        }
+
+        $scope.markUnread = function(id, e) {
+            var idx = _.findIndex($scope.notifications, function(n) {return n.id == id});
+            var notification = $scope.notifications[idx];
+            notification.isRead = false;
+            e.stopPropagation();
+            e.preventDefault();
+        };
+
+        $scope.select = function(id) {
+            var idx = _.findIndex($scope.notifications, function(n) {return n.id == id});
+            var notification = $scope.notifications[idx];
+            if (!notification.isRead) {
+                notification.isRead = true;
+            }
+        };
+    }]);
+
