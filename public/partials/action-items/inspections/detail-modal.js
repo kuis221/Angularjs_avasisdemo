@@ -3,7 +3,7 @@ app.controller('InspectionDetailCtrl',
 
         $scope.userList = [
             { name: 'Bruce Wayne', company: 'Synergy Construction'},
-            { name: 'Mike Montgomery', company: 'Summit Country Inspectors'},
+            { name: 'Mike Montgomery', company: 'Summit County Inspectors'},
             { name: 'Christine Spendlove', company: 'Spendlove Plumbing'},
             { name: 'Mike Riley', company: 'Canyon River Electric'}
         ];

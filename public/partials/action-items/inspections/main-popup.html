@@ -7,25 +7,30 @@
             </div>
         </div>
         <div class="pull-left aii-page-title">
-            <div class="row no-margin">
+            <div class="row no-margin overview">
                 <div class="col-md-6">
-                    <h2 class="heading">Inspection Name Here</h2>
-                    <p class="aii-heading-subtitle">Project Title Label</p>
+                    <h2 class="heading">4-Way Inspection</h2>
+                    <ul class="topSubtitle">
+                        <li>
+                            <a href="#">Wilmington 47<i class="ace-icon fa fa-angle-down"></i></a>
+                        </li>
+                        <li><span>47 Wilmington Ave<br /> Arlington, VA 90125</span></li>
+                    </ul>
                 </div>
                 <div class="col-md-6 aii-head-info">
                     <div class="row no-margin">
                         <table class="pull-right">
                             <tr>
                                 <td class="item-title">INSPECTION#</td>
-                                <td><span class="label label-black">INS1393</span></td>
+                                <td><span class="label label-black">INS1012</span></td>
                             </tr>
                             <tr>
                                 <td class="item-title">DATE INITIATED</td>
-                                <td class="item-value">8/23/14</td>
+                                <td class="item-value">8/1/15</td>
                             </tr>
                             <tr>
                                 <td class="item-title">INITIATED BY</td>
-                                <td class="item-value">Eric Hoffman</td>
+                                <td class="item-value">Bruce Wayne</td>
                             </tr>
                             <tr>
                                 <td class="item-title">STATUS</td>
@@ -61,11 +66,11 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="item-title">Type Of Inspection</p>
-                                            <span class="item-value">Ornare Gras</span>
+                                            <span class="item-value">City</span>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-title">Inspection Date</p>
-                                            <span class="item-value">Aug 23, 2015</span>
+                                            <span class="item-value">Aug 25, 2015</span>
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +79,7 @@
                                         <div class="col-sm-12">
                                             <p class="item-title">Inspector<i class="fa fa-pencil"></i></p>
                                             <div>
-                                                <span class="item-value">Erik Hoffman</span>
+                                                <span class="item-value">Mike Montgomery</span>
                                                 <ul class="breadcrumbv22x">
                                                     <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-comments"></i></a></li>
@@ -89,7 +94,7 @@
                                         <div class="col-sm-12">
                                             <p class="item-title">Company<i class="fa fa-pencil"></i></p>
                                             <div>
-                                                <span class="item-value">Flora Corp</span>
+                                                <span class="item-value">Summit County Inspectors</span>
                                                 <ul class="breadcrumbv22x">
                                                     <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861-569-6688</a></li>
@@ -111,7 +116,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <span class="col-sm-6 item-value">3 of 12 Completed</span>
+                                        <span class="col-sm-6 item-value">0 of 15 Completed</span>
                                     </div>
                                 </div>
                             </div>
@@ -161,11 +166,11 @@
                                         {{item.dueDate}}
                                     </td>
                                     <td class="col-responsible">
-                                        <span class="text-primary">Bob Jones</span>
+                                        <span class="text-primary">{{ item.responsible.name }}</span>
                                         <ul class="breadcrumbv22x">
                                             <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                                             <li><a href="#"><i class="fa fa-comments"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;861-569-6688</a></li>
+                                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;{{ item.responsible.phone }}</a></li>
                                         </ul>
                                     </td>
                                     <td class="col-text">
@@ -246,7 +251,7 @@
                                         {{ item.location }}
                                     </td>
                                     <td class="col-status">
-                                        <div class="text-success approve-status">Approved By</div>
+                                        <div class="text-success approve-status">Action Required</div>
                                         <div class="approve-name">{{ item.approveName }}</div>
                                         <div class="text-success approve-date">{{ item.approveDate }}</div>
                                     </td>
