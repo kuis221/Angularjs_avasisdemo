@@ -1,0 +1,44 @@
+<table class="table table-middle-aligned">
+    <tr>
+        <td>Pay Application Name & ID</td>
+        <td>Payee</td>
+        <td>Scope of Work</td>
+        <td>Amount</td>
+        <td>Documents</td>
+        <td>
+            Status 
+            <a ng-click="" class="text-primary"> Approve All</a>
+        </td>
+        <td>Comments</td>
+    </tr>
+    <tr ng-repeat="application in paymentApplications">
+        <td>
+            <div class="text-primary">{{application.project_name}}</div>
+            <div class="small">{{application.application_id}}</div>
+        </td>
+        <td>
+            <div class="text-primary">{{application.contact}}</div>
+            <div class="small">{{application.company_name}}</div>
+            <ul class="list-inline text-muted small">
+                <li><i class="fa fa-envelope"></i></li>
+                <li><i class="fa fa-comments"></i></li>
+                <li><i class="fa fa-phone"></i>  <small>{{application.phone_number}}</small></li>
+            </ul>
+        </td>
+        <td class="text-primary">
+            {{application.sow}}
+        </td>
+        <td class="text-medium text-muted">
+            {{application.amount | currency}}
+        </td>
+        <td class="text-primary">
+            2 Documents
+        </td>
+        <td>
+            <ui-select ng-select="changeOption()" selected-item="applicant.status" placeholder="Choose" options="statusOptions"></ui-select><br>
+        </td>
+        <td style="vertical-align: top">
+            <input type="text" ng-model="application.comment" placeholder="Enter any additional details" class="form-control input-lg label-default">
+        </td>
+    </tr>
+</table>

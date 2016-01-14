@@ -67,7 +67,7 @@
                 <tr ng-repeat="row in bankdraws">
                     <td class="submission-date">{{ row.submission_date }}</td>
                     <td class="draw-project">
-                        <span class="text-primary">{{row.draw_project.name}}</span><br>
+                        <a class="text-primary" ui-sref="bankdraw.show({id: $index+1})">{{row.draw_project.name}}</a><br>
                         <span class="text-muted">{{row.draw_project.type}}</span>
                     </td>
                     <td class="text-primary submitted-by">{{row.submitted_by}}</td>
@@ -79,10 +79,11 @@
                         <div class="label"
                             ng-class="{'label-success': row.status == 'Approved - Payment Complete',
                                        'label-warning': row.status == 'Returned With Comments',
+                                       'label-warning': row.status == 'Pending Approval',
                                        'label-danger': row.status == 'Not Yet Submitted'}">{{row.status}}</div>
                     </td>
-                    <td class="text-primary documents">3 Documents</td>
-                    <td class="text-primary pay-application">5 Pay Applications</td>
+                    <td class="text-primary documents">{{row.documents}} Documents</td>
+                    <td class="text-primary pay-application">{{row.pay_applications}} Pay Applications</td>
                 </tr>
             </tbody>
         </table>

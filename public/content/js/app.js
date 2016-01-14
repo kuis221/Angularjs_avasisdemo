@@ -110,59 +110,73 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('bankdraw', {
             url: '/financials/bankdraw',
             abstract: true,
-            controller: "BankDrawCtrl",
-            templateUrl: 'partials/financials/bank-draw/main.html',
+            template: '<ui-view></ui-view>',
+        })
+        .state('bankdraw.new', {
+            url: '/new',
+            abstract: true,
+            controller: "BankDrawNewCtrl",
+            templateUrl: 'partials/financials/bankdraw/new/main.html',
             data: {
                 isHeaderHidden: true,
                 pageName: 'New Bank Draw Request'
             }
         })
-        .state('bankdraw.payment-application', {
+        .state('bankdraw.new.payment-application', {
             url: '/payment-application',
-            templateUrl: "partials/financials/bank-draw/payment-application.html",
+            templateUrl: "partials/financials/bankdraw/new/payment-application.html",
             controller: "BankDrawPaymentApplicationCtrl",
             data: {
                 isHeaderHidden: true
             }
         })
-        .state('bankdraw.draw-details', {
+        .state('bankdraw.new.draw-details', {
             url: '/draw-details',
-            templateUrl: "partials/financials/bank-draw/draw-details.html",
+            templateUrl: "partials/financials/bankdraw/new/draw-details.html",
             controller: "BankDrawDrawDetailsCtrl",
             data: {
                 isHeaderHidden: true
             }
         })
-        .state('bankdraw.compliance', {
+        .state('bankdraw.new.compliance', {
             url: '/compliance',
-            templateUrl: "partials/financials/bank-draw/compliance.html",
+            templateUrl: "partials/financials/bankdraw/new/compliance.html",
             controller: "BankDrawComplianceCtrl",
             data: {
                 isHeaderHidden: true
             }
         })
-        .state('bankdraw.documents', {
+        .state('bankdraw.new.documents', {
             url: '/documents',
-            templateUrl: "partials/financials/bank-draw/documents.html",
+            templateUrl: "partials/financials/bankdraw/new/documents.html",
             controller: "BankDrawDocumentsCtrl",
             data: {
                 isHeaderHidden: true
             }
         })
-        .state('bankdraw.payment-details', {
+        .state('bankdraw.new.payment-details', {
             url: '/payment-details',
-            templateUrl: "partials/financials/bank-draw/payment-details.html",
+            templateUrl: "partials/financials/bankdraw/new/payment-details.html",
             controller: "BankDrawPaymentDetailsCtrl",
             data: {
                 isHeaderHidden: true
             }
         })
-        .state('bankdraw.finalize', {
+        .state('bankdraw.new.finalize', {
             url: '/finalize',
-            templateUrl: "partials/financials/bank-draw/finalize.html",
+            templateUrl: "partials/financials/bankdraw/new/finalize.html",
             controller: "BankDrawFinalizeCtrl",
             data: {
                 isHeaderHidden: true
+            }
+        })
+        .state('bankdraw.show', {
+            url: '/:id',
+            controller: "BankDrawShowCtrl",
+            templateUrl: 'partials/financials/bankdraw/show/show.html',
+            data: {
+                isHeaderHidden: true,
+                pageName: 'New Bank Draw Request'
             }
         })
         .state('team-members', {

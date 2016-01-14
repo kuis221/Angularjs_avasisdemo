@@ -1,4 +1,4 @@
-.bankdraw-initiate {
+.bankdraw {
     .title {
         font-size: 17px;
         line-height: 30px;
@@ -42,4 +42,8 @@
             }
         }
     }
+}
+
+table.table-middle-aligned tbody > tr > td {
+    vertical-align: middle;
 }
