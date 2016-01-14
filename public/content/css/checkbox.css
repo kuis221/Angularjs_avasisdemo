@@ -39,6 +39,7 @@
 .checkbox input[type="radio"] {
   opacity: 0;
   z-index: 1;
+  cursor: pointer;
 }
 .checkbox input[type="checkbox"]:focus + label::before,
 .checkbox input[type="radio"]:focus + label::before {

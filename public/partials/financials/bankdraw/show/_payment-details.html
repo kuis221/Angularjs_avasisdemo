@@ -37,11 +37,11 @@
                         <div class="text-muted">{{item.project_name}}</div>
                         <div>{{item.role}}</div>
                     </td>
-                    <td class="text-muted font-regular"><span class="label label-info">PO #1023{{item.invoice}}</span></td>
-                    <td class="text-muted font-regular">{{item.payment_amount | currency}}</td>
+                    <td class="text-muted font-regular"><span class="label label-info">{{item.invoice}}</span></td>
+                    <td class="text-muted font-regular">{{item.requested_amount | currency}}</td>
                     <td class="text-muted font-regular">{{item.payment_form}}</td>
                     <td>
-                        <input type="text" ng-model="item.approved_amount" class="form-control input-lg label-default">
+                        <input type="text" ng-model="item.approved_amount" ui-money-mask class="form-control input-lg label-default">
                     </td>
                     <td>
                         <input type="text" ng-model="item.comment" class="form-control input-lg label-default" placeholder="Enter any additional details...">
@@ -53,18 +53,16 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="3"></td>
-                    <td colspan="2">
+                    <td colspan="4"></td>
+                    <td colspan="1">
                         <div class="text-muted">Total</div>
-                        {{total_payment_application | currency}}
+                        {{total_requested_payment_amount | currency}}
                     </td>
-                    <td colspan="3">
-                        <div class="text-muted">Total</div>
-                        <span class="text-primary">{{total_payment_amount | currency}}<span>
-                    </td>
-                    <td colspan="2">
-                        <div class="text-muted">Total</div>
-                        <div class="text-danger">{{total_varience | currency}}</div>
+                    <td colspan="4">
+                        <div class="checkbox checkbox-inline">
+                            <input type="checkbox" ng-click="" ng-model="isCheckedAll">
+                            <label>Pay all amount as required</label>
+                        </div>
                     </td>
                 </tr>
             </tfoot>
