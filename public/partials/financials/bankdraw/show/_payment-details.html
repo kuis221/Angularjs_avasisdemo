@@ -3,19 +3,18 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="2">Payment Application Initiator</th>
+                    <th colspan="2">Payee</th>
                     <th>Project & Roles</th>
-                    <th>Payment Application</th>
-                    <th>Split Payments</th>
-                    <th>Payment Amount</th>
-                    <th>Payee</th>
+                    <th>Pay App/Invoice</th>
+                    <th>Payment Amount Requested</th>
                     <th>Payment Form</th>
-                    <th>Variance</th>
-                    <th>Adjustment Description</th>
+                    <th>Payment Amount Approved</th>
+                    <th>Comments</th>
+                    <th width="150px">Payment Reference #</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in payment_details">
+                <tr ng-repeat="item in paymentDetails">
                     <td>
                         <span ng-if="item.role">
                             <img ng-if="item.avatar" width="40px" ng-src="{{item.avatar}}" class="img-circle" alt="image">
@@ -38,23 +37,18 @@
                         <div class="text-muted">{{item.project_name}}</div>
                         <div>{{item.role}}</div>
                     </td>
-                    <td class="text-muted font-regular">{{item.payment_application | currency}}</td>
-                    <td>
-                        <div class="btn-group" uib-dropdown>
-                            <button type="button" class="btn round" uib-dropdown-toggle>
-                              <small class="text-danger">{{item.split_payment}} <span class="fa fa-angle-down"></span></small>
-                            </button>
-                            <ul class="uib-dropdown-menu" role="menu" style="min-width: 100px">
-                                <li role="menuitem"><a class="text-danger" ng-click="">No</a></li>
-                                <li role="menuitem"><a class="text-success" ng-click="">Yes</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td class="text-primary">{{item.payment_amount | currency}}</td>
-                    <td class="text-primary">{{item.company_name}}</td>
+                    <td class="text-muted font-regular"><span class="label label-info">PO #1023{{item.invoice}}</span></td>
+                    <td class="text-muted font-regular">{{item.payment_amount | currency}}</td>
                     <td class="text-muted font-regular">{{item.payment_form}}</td>
-                    <td class="text-danger">{{item.varience | currency}}</td>
-                    <td class="text-muted font-regular">{{item.description}}</td>
+                    <td>
+                        <input type="text" ng-model="item.approved_amount" class="form-control input-lg label-default">
+                    </td>
+                    <td>
+                        <input type="text" ng-model="item.comment" class="form-control input-lg label-default" placeholder="Enter any additional details...">
+                    </td>
+                    <td>
+                        <input type="text" ng-model="item.payment_reference" class="form-control input-lg label-default">
+                    </td>
                 </tr>
             </tbody>
             <tfoot>
