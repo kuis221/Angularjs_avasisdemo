@@ -2,27 +2,6 @@ app.controller('LoanCtrl' ,
     ['$scope', '$state', '$stateParams', '$timeout', '$uibModal', function ($scope, $state, $stateParams, $timeout, $uibModal) {
         $scope.$parent.setCurrentTab($state.current.name);
 
-        if ($stateParams.initialize) {
-            $timeout(function() {
-                $scope.$parent.stats = {
-                    estimated: 52,
-                    contractual: 30,
-                    direct: 12,
-                    pending: 0,
-                    unbudgeted: 0,
-                    amount: {
-                        total: ' -',
-                        funds_disbursed: ' -',
-                        est_budget: ' -',
-                        contractual: ' -',
-                        direct: ' -',
-                        pending: ' -',
-                        unbudgeted: ' -'
-                    }
-                };
-            }, 400);
-        }
-
         $scope.sows = [
             {
                 id: 1,

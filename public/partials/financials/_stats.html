@@ -3,19 +3,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="pull-left prj-pr-m" id="financial-chart-container1">
-                    <div id="financial-chart"></div>
-                    <div class="chart-data">
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="32" />
-                            <input type="hidden" class="color" value="#79c485" />
-                        </div>
-                        <div class="arc">
-                            <span class="text"></span>
-                            <input type="hidden" class="percent" value="64" />
-                            <input type="hidden" class="color" value="#3aabd5" />
-                        </div>
-                    </div>
+                    <div ui-arc-chart rect-width="200" rect-height="200" radius="30" pen-width="10" chart-data="financialChartData"></div>
                 </div>
             </div>
             <div class="col-md-8 bordermiddle">
@@ -63,94 +51,29 @@
                 <div class="right1">
                     <span class="label label-primary">&nbsp;</span>
                     <span>Estimated Budget</span>
-                    <h2>52% ${{stats.amount.est_budget}}</h2>
+                    <h2>{{stats.estimated}}% ${{stats.amount.est_budget}}</h2>
 
                     <span class="label label-warning">&nbsp;</span>
                     <span>Contractual Buy Out</span>
-                    <h2>30% ${{stats.amount.contractual}}</h2>
+                    <h2>{{stats.contractual}}% ${{stats.amount.contractual}}</h2>
 
                     <span class="label label-success">&nbsp;</span>
                     <span>Direct Costs</span>
-                    <h2>12% ${{stats.amount.direct}}</h2>
+                    <h2>{{stats.direct}}% ${{stats.amount.direct}}</h2>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-4">
                 <div class="right1">
                     <span class="label label-danger">&nbsp;</span>
                     <span>Pending Costs</span>
-                    <h2>0% ${{stats.amount.pending}}</h2>
+                    <h2>{{stats.pending}}% ${{stats.amount.pending}}</h2>
 
                     <span class="label label-info">&nbsp;</span>
                     <span>Unbudgeted Costs</span>
-                    <h2>0% ${{stats.amount.unbudgeted}}</h2>
+                    <h2>{{stats.unbudgeted}}% ${{stats.amount.unbudgeted}}</h2>
 
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script>
-var financial_chart = {
-    init: function (width, height, radius, pen_width) {
-        this.diagram(width, height, radius, pen_width);
-    },
-    random: function (l, u) {
-        return Math.floor((Math.random() * (u - l + 1)) + l);
-    },
-    diagram: function (width, height, radius, pen_width) {
-        var display = '';
-        var width = width,
-            height = height,
-            radius = radius,
-            pen_width = pen_width;
-
-        $('#financial-chart-container1 .chart-data').find('.arc').each(function (i) {
-            var t = $(this);
-            display += t.find('.percent').val() + "%\n";
-        });
-
-        var r = Raphael('financial-chart', width, height),
-            rad = radius,
-            defaultText = '%',
-            param = {stroke: "#fff", "stroke-width": pen_width};
-            speed = 250;
-
-        // r.circle(width/2, height/2, p).attr({ stroke: 'none', fill: '#FFF' });
-
-        var title = r.text(width / 2, height / 2, defaultText).attr({
-            font: '14px Arial',
-            fill: '#000'
-        }).toFront();
-
-        title.attr({ text: display });
-
-        r.customAttributes.arc = function (value, color, rad) {
-            var v = 3.6 * value,
-                alpha = v == 360 ? 359.99 : v,
-                a = (90 - alpha) * Math.PI / 180,
-                b = 90 * Math.PI / 180,
-                sx = width / 2 + rad * Math.cos(b),
-                sy = height / 2  - rad * Math.sin(b),
-                x = width / 2 + rad * Math.cos(a),
-                y = height / 2 - rad * Math.sin(a),
-                path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-            return { path: path }
-        }
-
-        $('#financial-chart-container1 .chart-data').find('.arc').each(function (i) {
-            var t = $(this),
-                color = t.find('.color').val(),
-                value = t.find('.percent').val(),
-                text = t.find('.text').text();
-
-            rad += pen_width;
-            var z = r.path().attr(param).attr({ arc: [0, color, rad]});
-            z.animate({arc: [value, color, rad], 'stroke': color}, 1000, ">");
-        });
-    }
-}
-
-$(document).ready(function() {
-    financial_chart.init(200, 200, 30, 10);
-});
-</script>

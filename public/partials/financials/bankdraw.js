@@ -3,26 +3,6 @@ app.controller('FinancialsBankdrawCtrl',
 
         $scope.$parent.setCurrentTab($state.current.name);
 
-        // Stats
-        $timeout(function(){
-            $scope.$parent.stats = {
-                estimated: 52,
-                contractual: 30,
-                direct: 12,
-                pending: 0,
-                unbudgeted: 0,
-                amount: {
-                    total: '2,788,284.48',
-                    funds_disbursed: '903,347.67',
-                    est_budget: '1,451,937',
-                    contractual: '829,181.07',
-                    direct: '322,166.41',
-                    pending: ' -',
-                    unbudgeted: ' -'
-                }
-            };
-        }, 300);
-        
         $scope.bankdraws = [
             {
                 submission_date: 'Feb 15, 2015',

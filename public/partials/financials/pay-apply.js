@@ -10,27 +10,6 @@ app.controller('PayApplyCtrl' ,
             },
         ];
         
-        if ($stateParams.initialize) {
-            $timeout(function() {
-                $scope.$parent.stats = {
-                    estimated: 52,
-                    contractual: 30,
-                    direct: 12,
-                    pending: 0,
-                    unbudgeted: 0,
-                    amount: {
-                        total: ' -',
-                        funds_disbursed: ' -',
-                        est_budget: ' -',
-                        contractual: ' -',
-                        direct: ' -',
-                        pending: ' -',
-                        unbudgeted: ' -'
-                    }
-                };
-            }, 400);
-        }
-
         $scope.applies = {
             listRequiredByMe: [
                     {flag: 'red', title: 'Confirm Progress on Fireplace', type: "Secure Ledger Board", due_date: '8/16/2015', responsible: {name: 'Bruce Wayne', company: 'ABC Inc'},initiator: {name: 'Bruce Wayne', company: 'ABC Inc'}, sow: ['Fireplace Install'].join(", "), amount: 56678, status: ['In Process', 0]},
